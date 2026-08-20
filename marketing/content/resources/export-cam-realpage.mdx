@@ -1,0 +1,276 @@
+---
+title: "How to Export CAM Data from RealPage Commercial"
+description: "Step-by-step guide to exporting operating expense and tenant billing data from RealPage Commercial. Covers report navigation, export formats, GL exports, recovery reports, and how to prepare RealPage data for CAM reconciliation."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 75
+faq:
+  - q: "What reports do I need from RealPage for CAM reconciliation?"
+    a: "You need three core reports: (1) the Operating Expense Summary or Recovery Reconciliation report from the Commercial module, (2) the General Ledger Detail report for the reconciliation year filtered to recoverable expense accounts, and (3) the Rent Roll or Lease Abstract showing tenant square footage and lease terms. If available, also pull the Tenant Billing Detail to verify estimate charges billed during the year."
+  - q: "Does RealPage export to CSV?"
+    a: "RealPage supports Excel and PDF export from most report screens. Direct CSV export is available in some modules but not all. The standard workflow is to export to Excel, then save as CSV from Excel. RealPage's Excel exports include report headers and subtotal rows that should be removed before importing into external tools."
+---
+
+<Alert type="info" title="Quick Answer">
+To export CAM data from RealPage Commercial, pull three reports: **Recovery Reconciliation** (Commercial > Recovery Analysis), **GL Detail** (Accounting > General Ledger > Transaction Detail), and **Rent Roll** (Commercial > Lease Reports > Rent Roll). Export each to Excel, remove report headers and subtotal rows, and save as CSV. RealPage's export formatting requires more cleanup than Yardi or MRI, but the underlying data is the same.
+</Alert>
+
+RealPage Commercial (formerly RealPage OneSite Commercial, and before that, Propertyware Commercial for some product lines) handles operating expense recovery through its Commercial module. The platform has gone through several acquisitions and interface updates, which means the exact navigation paths can vary depending on your RealPage version and configuration. This guide covers the core exports you need and the most common navigation patterns.
+
+## Before You Start
+
+### Know Your RealPage Product
+
+RealPage's commercial property management suite includes multiple products that may be branded differently depending on when your organization adopted the platform:
+
+| Product Name | Common Usage | Recovery Module |
+|-------------|-------------|-----------------|
+| RealPage Commercial | Institutional owners, REITs | Full recovery module with reconciliation |
+| RealPage OneSite Commercial | Mid-market operators | Recovery features vary by license tier |
+| Propertyware Commercial | Smaller portfolios | Limited recovery. May require manual reconciliation. |
+
+This guide focuses on **RealPage Commercial** with the full recovery module. If you are on OneSite or Propertyware, the GL and rent roll exports work similarly, but recovery-specific reports may not be available.
+
+### Required Permissions
+
+| Export | Required Role | Notes |
+|--------|--------------|-------|
+| Recovery Reconciliation | Recovery Manager or Property Accountant | Access varies by license tier |
+| GL Detail | GL Reporter or Accountant | Standard accounting role |
+| Rent Roll | Lease Administrator or Property Manager | Read-only access is sufficient |
+| Tenant Billing Detail | AR Reporter | Accounts receivable reporting role |
+
+## Export 1: Recovery Reconciliation Report
+
+The Recovery Reconciliation report shows actual expenses versus estimated billings for each tenant and each expense pool. This is the starting point for any CAM reconciliation.
+
+<Steps>
+  <Step title="Navigate to Recovery Analysis">
+    Go to **Commercial > Recovery Analysis** (or **Commercial > Recovery > Reconciliation** depending on your interface version). If you cannot find the menu item, use the search function and type "Recovery". RealPage's search indexes all available reports.
+  </Step>
+  <Step title="Select the property">
+    Choose the property from the property selector. RealPage uses a hierarchy of portfolio > property > building for multi-building campuses. Select at the property level for a single-building reconciliation or at the building level for campus properties.
+  </Step>
+  <Step title="Set the reconciliation period">
+    Enter the start and end dates: January 1 through December 31 of the reconciliation year. RealPage may also accept period selections (Period 1-12). Use whichever input method is available in your version.
+  </Step>
+  <Step title="Select expense categories">
+    Choose the recovery pools to include: CAM, Real Estate Tax, Insurance, and Management Fee are the standard categories. Select **All** to include everything, or pick individual pools if you want to reconcile them separately.
+  </Step>
+  <Step title="Set detail level to Maximum">
+    Under report options, select the highest detail level available. You want to see individual GL accounts within each recovery pool, not just pool totals. RealPage may label this "Detail," "Account Detail," or "Maximum Detail" depending on the version.
+  </Step>
+  <Step title="Generate the report">
+    Click **Run** or **Generate**. Depending on property size, the report may take 15-45 seconds.
+  </Step>
+  <Step title="Export to Excel">
+    In the report viewer, click the **Export** button (or the Excel icon in the toolbar). Select **Excel** format. RealPage generates an .xlsx file.
+  </Step>
+  <Step title="Clean up and save as CSV">
+    Open the Excel file. Remove the report header rows (property name, report date, report title, typically the first 3-5 rows) and any subtotal/grand total rows embedded in the data. Then save as **CSV (Comma delimited)**.
+  </Step>
+</Steps>
+
+**Key columns in the export:**
+
+| Column | Description |
+|--------|-------------|
+| Tenant ID | RealPage tenant identifier |
+| Tenant Name | Display name |
+| Suite/Unit | Space identifier |
+| Expense Pool | CAM, Tax, Insurance, etc. |
+| GL Account | Account number |
+| Account Description | Expense category name |
+| Actual Expense | Amount from GL postings |
+| Tenant Share % | Pro-rata percentage |
+| Tenant Share Amount | Allocated expense |
+| Estimated Billed | Amount invoiced as estimates |
+| Adjustment | Over/(under) billing (the reconciliation amount) |
+
+### Common Issues
+
+**Issue: Report shows "No Data" for some expense pools.**
+RealPage's recovery module only includes expense pools that are configured in the system. If a pool shows no data, either (a) no GL accounts are mapped to that pool, or (b) no transactions were posted to the mapped accounts during the period. Check the recovery setup under **Commercial > Recovery > Setup** or **Administration > Recovery Configuration**.
+
+**Issue: Tenant pro-rata shares do not sum to 100%.**
+This is normal if the building has vacant space. RealPage calculates pro-rata shares based on leased SF divided by total building SF. Vacant space is not allocated to any tenant. The unallocated percentage represents the landlord's share of expenses (or the portion covered by [gross-up](/resources/cam-gross-up-calculation-guide), if configured).
+
+**Issue: The report includes tenants from prior years.**
+RealPage may include historical tenants in the reconciliation if their leases overlapped with the reporting period. This is correct. Tenants who occupied space for any portion of the year owe their prorated share. Verify that the proration dates match actual move-in and move-out dates.
+
+## Export 2: General Ledger Detail
+
+The GL Detail export provides every transaction posted to your operating expense accounts. It is the line-item backup behind the recovery reconciliation.
+
+<Steps>
+  <Step title="Navigate to GL Transaction Detail">
+    Go to **Accounting > General Ledger > Transaction Detail** (or **Accounting > Reports > GL Detail**). The exact path varies by RealPage version.
+  </Step>
+  <Step title="Set entity and property">
+    Select the ownership entity (if applicable) and property. RealPage's entity structure varies by implementation. Some organizations post all expenses to a single entity; others use property-level entities.
+  </Step>
+  <Step title="Set date range">
+    Enter January 1 through December 31 of the reconciliation year. Include year-end adjustment periods if your accounting team uses them (some RealPage implementations support a Period 13 for adjustments).
+  </Step>
+  <Step title="Set account range">
+    Filter to your operating expense account range. Common ranges: 5000-5999, 6000-6999, or 7000-7999, depending on your chart of accounts structure. If unsure, export all accounts and filter in Excel.
+  </Step>
+  <Step title="Select all transaction types">
+    Include AP (accounts payable), JE (journal entries), and any other transaction sources. Do not filter by transaction type. You need the complete GL picture.
+  </Step>
+  <Step title="Run and export">
+    Generate the report and export to Excel. For large properties (5,000+ transactions), the export may take 1-2 minutes.
+  </Step>
+  <Step title="Clean and save as CSV">
+    Remove report headers and footers. Delete any subtotal rows embedded between account groups. Save as CSV.
+  </Step>
+</Steps>
+
+**Key columns:**
+
+| Column | Description |
+|--------|-------------|
+| Account Number | GL account |
+| Account Name | Account description |
+| Date | Transaction date |
+| Period | Posting period |
+| Source/Type | AP, JE, etc. |
+| Reference | Invoice or JE number |
+| Vendor | Vendor name (for AP transactions) |
+| Description | Transaction detail |
+| Debit | Debit amount |
+| Credit | Credit amount |
+
+### RealPage GL Export Tips
+
+1. **Check for accrual reversals.** RealPage's accrual module automatically reverses accruals in the following period. If you see matching debit/credit pairs at the start of the year, these are likely accrual reversals from the prior year. They should net to zero and are not duplicate expenses.
+2. **Verify account hierarchy.** RealPage uses parent-child account structures. The export may show both parent account totals and individual child account transactions. Remove the parent summary rows to avoid double-counting.
+3. **Look for allocation entries.** If your organization uses RealPage's cost allocation module to distribute shared expenses across properties, the allocation entries appear as journal entries in the GL. Verify that allocations are appropriate for CAM recovery. Not all allocated costs are recoverable.
+
+## Export 3: Rent Roll
+
+The Rent Roll provides the tenant roster, square footage, and lease terms needed for [pro-rata share calculation](/resources/pro-rata-share-calculation).
+
+<Steps>
+  <Step title="Navigate to Rent Roll">
+    Go to **Commercial > Lease Reports > Rent Roll** (or **Leasing > Reports > Rent Roll**).
+  </Step>
+  <Step title="Set property and date">
+    Select the property and set the **As Of** date to December 31 of the reconciliation year.
+  </Step>
+  <Step title="Include historical tenants">
+    Check the option to include **expired and terminated leases** within the reporting period. You need every tenant who occupied space during the reconciliation year, not just those who are current as of December 31.
+  </Step>
+  <Step title="Select columns">
+    Ensure the export includes Suite/Unit, Tenant Name, Tenant ID, Rentable Square Footage, Lease Start Date, Lease End Date, and Monthly Base Rent. Some RealPage versions allow column selection; others export a fixed set of fields.
+  </Step>
+  <Step title="Run and export">
+    Generate the report and export to Excel. Clean up headers and save as CSV.
+  </Step>
+</Steps>
+
+**Required columns for CapVeri import:**
+
+| Column | Required? | Notes |
+|--------|-----------|-------|
+| Suite/Unit | Yes | Space identifier - must match other exports |
+| Tenant Name | Yes | Tenant display name |
+| Tenant ID | Recommended | Unique identifier for cross-report matching |
+| Rentable SF | Yes | Per-lease square footage |
+| Lease Start | Yes | Commencement date |
+| Lease End | Yes | Expiration date |
+| Monthly Rent | Recommended | For revenue analysis |
+
+## Export 4: Tenant Billing Detail (Supplementary)
+
+The Tenant Billing Detail shows every charge invoiced to each tenant during the year. This includes base rent, estimate charges, and any manual adjustments.
+
+<Steps>
+  <Step title="Navigate to Billing History">
+    Go to **Commercial > AR > Billing History** (or **Accounts Receivable > Reports > Billing Detail**).
+  </Step>
+  <Step title="Set filters">
+    Select the property, set the date range to the full reconciliation year, and filter to recovery-related charge codes. RealPage charge codes vary by implementation. Look for codes that include "CAM," "TAX," "INS," "REC," or "EST" in the code or description.
+  </Step>
+  <Step title="Run and export">
+    Generate and export to Excel. Clean and save as CSV.
+  </Step>
+</Steps>
+
+This export verifies that estimate billings match the recovery reconciliation's "Estimated Billed" column. Discrepancies usually indicate mid-year estimate adjustments that were applied to some tenants but not others, or billing corrections that were posted outside the standard billing cycle.
+
+## RealPage-Specific Considerations
+
+### Recovery Module Configuration
+
+RealPage's recovery setup defines how expenses are allocated to tenants. Review the configuration before running the reconciliation:
+
+**Check these settings at Commercial > Recovery > Setup (or Administration > Recovery Configuration):**
+
+| Setting | What to Verify |
+|---------|----------------|
+| GL Account Mapping | All recoverable accounts are mapped to the correct expense pool |
+| Allocation Method | Pro-rata by SF, pro-rata by percentage, or fixed amount. Must match lease terms. |
+| Gross-Up | Threshold and occupancy method are set correctly per pool |
+| Excluded Tenants | Anchor tenants or tenants with flat-fee CAM should be excluded from pro-rata pools |
+| Cap Settings | Annual caps, base year references, cumulative vs non-cumulative |
+
+### Multi-Building Campus Properties
+
+RealPage handles campus properties (multiple buildings sharing common areas) differently than single-building properties. If your property is a campus:
+
+- **Shared expenses** may be allocated across buildings based on a configured allocation percentage
+- The **building-level denominator** may differ from the **campus-level denominator** depending on which expenses are building-specific versus campus-shared
+- Export at the **campus level** for shared expenses and at the **building level** for building-specific expenses, then combine in your reconciliation workbook
+
+### RealPage Data Quality Considerations
+
+RealPage's export formatting tends to require more cleanup than Yardi or MRI. Common issues to watch for:
+
+1. **Embedded subtotal rows.** RealPage inserts subtotal rows within the data for each account group, each tenant, or each period. These look like data rows but contain aggregate amounts. Delete them before import.
+2. **Multi-line descriptions.** Some transaction descriptions span multiple rows in the Excel export, which breaks CSV formatting. Look for rows with data only in the description column. These are continuation lines that need to be merged with the row above.
+3. **Date formatting inconsistency.** RealPage may export dates in different formats depending on the report (MM/DD/YYYY, YYYY-MM-DD, or text format). Standardize to a single format before import.
+4. **Blank rows between sections.** RealPage inserts blank rows between account groups or tenant sections. Remove all blank rows from the CSV.
+
+## Preparing RealPage Exports for CapVeri Import
+
+CapVeri accepts CSV files from RealPage. The import process requires more data cleanup than Yardi or MRI exports because of RealPage's formatting characteristics. Follow these steps:
+
+1. **Remove all header rows.** Delete the report title, date range, property name, and any other non-data rows at the top of the file. Keep only the column header row and the data rows.
+2. **Remove all subtotal and total rows.** Delete any rows that contain aggregate amounts. These include section subtotals, page totals, and grand totals.
+3. **Remove blank rows.** Delete all empty rows between data sections.
+4. **Standardize date formats.** Convert all date columns to YYYY-MM-DD or MM/DD/YYYY format. Be consistent across all exports.
+5. **Verify Tenant ID consistency.** Confirm that the Tenant ID in the rent roll matches the Tenant ID in the recovery reconciliation and billing detail. RealPage sometimes uses different identifiers in different modules (lease-level ID vs tenant-level ID vs billing-level ID).
+6. **Export one property per file.** This simplifies validation and troubleshooting during import.
+
+CapVeri's column mapper will prompt you to match RealPage column names during import. The mapper recognizes common RealPage column labels, but custom labels require manual matching on first import.
+
+For a general overview of export workflows across property management systems, see the [export guide](/resources/export-guide).
+
+---
+
+## Related Resources
+
+- [How to Export from Yardi, MRI, AppFolio & RealPage](/resources/export-guide): Overview of all PM system exports
+- [How to Export CAM Data from Yardi Voyager](/resources/export-cam-yardi-voyager): Detailed Yardi export guide
+- [How to Export CAM Data from MRI Software](/resources/export-cam-mri): Detailed MRI export guide
+- [Data Migration Off Excel](/resources/data-migration-off-excel): Moving from spreadsheets to structured reconciliation
+
+<CTABox
+  title="Import Your RealPage Data"
+  description="Export your recovery reports, GL detail, and rent roll from RealPage. Upload to CapVeri and get reconciliation checks, expense classification, and variance flags. The column mapper handles RealPage's formatting for you."
+  utmContent="u_cta"
+  buttonText="Start Free Trial"
+/>
+
+<FAQSection items={[
+  { q: "What reports do I need from RealPage for CAM reconciliation?", a: "You need three core reports: (1) the Operating Expense Summary or Recovery Reconciliation report from the Commercial module, (2) the General Ledger Detail report for the reconciliation year filtered to recoverable expense accounts, and (3) the Rent Roll or Lease Abstract showing tenant square footage and lease terms. If available, also pull the Tenant Billing Detail to verify estimate charges billed during the year." },
+  { q: "Does RealPage export to CSV?", a: "RealPage supports Excel and PDF export from most report screens. Direct CSV export is available in some modules but not all. The standard workflow is to export to Excel, then save as CSV from Excel. RealPage's Excel exports include report headers and subtotal rows that should be removed before importing into external tools." }
+]} />
+
+## Sources
+
+1. [RealPage - Commercial Property Management](https://www.realpage.com/commercial/commercial-property-management/)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

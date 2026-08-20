@@ -1,0 +1,11 @@
+Suite Number,Square Feet,Occupant,Lease Commencement,Lease Expiry,Monthly Base Rent,Share Percentage
+A-101,1500,Acme Corporation,1/1/2024,12/31/2026,3500.00,5.23%
+A-102,2000,Beta Industries,3/15/2023,3/14/2026,4200.00,6.98%
+A-103,1000,,,,0.00,3.49%
+B-201,2500,Gamma LLC,6/1/2024,5/31/2027,5000.00,8.72%
+B-202,1800,Delta Corp,9/1/2023,8/31/2025,3800.00,6.28%
+B-203,1200,,,,0.00,4.19%
+C-301,3000,Epsilon Inc,1/1/2022,12/31/2024,6500.00,10.47%
+C-302,2200,Zeta Partners,4/1/2024,3/31/2029,4800.00,7.68%
+C-303,1500,,,,0.00,5.23%
+C-304,2000,Theta Holdings,7/1/2023,6/30/2028,4400.00,6.98%

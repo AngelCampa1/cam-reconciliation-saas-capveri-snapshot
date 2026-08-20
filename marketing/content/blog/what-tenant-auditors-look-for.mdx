@@ -1,0 +1,111 @@
+---
+title: "What Tenant Auditors Look For (And How to Fix It First)"
+description: "The 7 highest-frequency findings from tenant CAM audits and how landlords can catch each one before the auditor does."
+excerpt: "Tenant audit firms often find at least one overcharge in the statements they review. Here's exactly what they check and how to beat them to it."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "cre-finops"
+faq:
+  - q: "What is the average amount recovered in a tenant CAM audit?"
+    a: "Tenant audit firms typically recover $0.50–$2.00 per square foot per year. For a 10,000 SF tenant, that's $5,000–$20,000 per audit year. Multi-year lookback audits covering 3–5 years can yield $15,000–$100,000."
+  - q: "What percentage of CAM audits find errors?"
+    a: "Tenant audit firms commonly report finding some overcharge in a large share of the audits they run. The high finding rate is partly selection bias (tenants tend to audit only when they suspect a problem), but it also reflects real error rates in manual reconciliation processes."
+---
+
+Tenant audit firms have one job: find money your reconciliation left on the table. They work on contingency (typically 25–40% of recovered amounts), so they're incentivized to look hard.
+
+After reviewing hundreds of reconciliation disputes, a clear pattern emerges. Tenant auditors check the same seven items every time. If you review these before sending your statements, you'll eliminate the majority of findings.
+
+## 1. CapEx Coded as OpEx
+
+**What they look for:** Any expense over $5,000 that should be capitalized. Roof replacements, HVAC system installs, parking lot resurfacing, elevator modernizations.
+
+**How they find it:** Sort the GL by dollar amount. Review the top 50 entries. Check vendor invoices for keywords: "replace," "install," "new," "upgrade."
+
+**Dollar impact:** $10,000–$200,000 per finding, depending on the project. A $150,000 roof replacement coded to R&M inflates CAM by each tenant's pro-rata share of $150K.
+
+**How to fix it first:** Apply the IRS BAR test (Betterment, Adaptation, Restoration) to every entry over $5,000. If it makes the asset better, adapts it to a new use, or restores it after significant damage, it's CapEx. Routine maintenance that keeps the asset in its current condition is OpEx.
+
+## 2. Gross-Up on Fixed Expenses
+
+**What they look for:** Property taxes and insurance that were adjusted for occupancy. These are fixed costs. They don't change with occupancy. Grossing them up overcharges tenants.
+
+**How they find it:** Compare total expenses before and after gross-up. If the gross-up amount includes tax and insurance GL accounts, it's wrong.
+
+**Dollar impact:** At 75% occupancy with a 95% threshold, improperly grossing up $400,000 in property taxes adds $106,667 to the recoverable pool, split across all tenants.
+
+**How to fix it first:** Verify your property management system's gross-up configuration. In Yardi, check the Recovery Pool Setup. Ensure only variable expense codes (6200-6290 range typically) are flagged for occupancy adjustment. Tax (6110) and insurance (6150) should be excluded.
+
+## 3. Management Fee Overstatement
+
+**What they look for:** Fee calculated on the wrong base. The lease might say "3% of net operating expenses," but the calculation uses gross (including taxes and insurance). Or an admin fee is charged on top of a management fee when the lease only allows one.
+
+**How they find it:** Read the management agreement. Read the lease. Compare the two bases. Recalculate.
+
+**Dollar impact:** On a $1M expense pool, the difference between 3% of gross ($30,000) and 3% of net ($18,000) is $12,000 per year.
+
+**How to fix it first:** For each property, document: (a) the lease-defined fee method, (b) the management agreement fee method, and (c) the actual calculation used. If these three don't match, you have a problem.
+
+## 4. Expenses Outside the Lease Definition
+
+**What they look for:** Line items that aren't recoverable under the specific lease's operating expense definition. Legal fees for landlord disputes, leasing commissions, tenant-specific work billed to the common pool, above-standard cleaning.
+
+**How they find it:** Map every GL account in the CAM pool to the lease's operating expense definition. Flag anything that doesn't map cleanly.
+
+**Dollar impact:** Varies widely. A $50,000 legal bill for a landlord-tenant dispute that landed in the CAM pool is entirely non-recoverable.
+
+**How to fix it first:** Build an exclusion matrix (a spreadsheet mapping each GL account to "recoverable" or "excluded" per the lease definition). Review it annually as new accounts are added.
+
+## 5. Pro-Rata Share Errors
+
+**What they look for:** Wrong numerator (tenant SF doesn't match lease), wrong denominator (total building SF is outdated or excludes/includes anchor space incorrectly), or failure to prorate for partial-year occupancy.
+
+**How they find it:** Pull the lease exhibit showing tenant premises. Compare to the rent roll. Check the BOMA certificate. Recalculate the share.
+
+**Dollar impact:** A 1% pro-rata share error on a $1.5M expense pool is $15,000 per year. On a 10-year lease, that compounds to $150,000+.
+
+**How to fix it first:** Reconcile the rent roll against each lease annually. Verify building SF against the current BOMA measurement (especially if BOMA 2024 remeasurement occurred). Check that anchor exclusions match the lease terms for each inline tenant.
+
+## 6. CAM Cap Violations
+
+**What they look for:** Year-over-year increases that exceed the lease cap. Cumulative cap carry-forward amounts that weren't tracked. Caps applied to the wrong expense base.
+
+**How they find it:** Pull the prior year's reconciliation statement. Calculate the allowed increase. Compare.
+
+**Dollar impact:** A 5% non-cumulative cap on a $200,000 expense base limits the increase to $10,000. If actual expenses increased $25,000, the tenant's cap saves them $15,000, but only if you apply it correctly.
+
+**How to fix it first:** Maintain a cap tracking schedule for every tenant with a cap provision. For cumulative caps, track the unused carry-forward balance year over year. This is where Excel fails most spectacularly. One formula error propagates through every subsequent year.
+
+## 7. Base Year Anomalies
+
+**What they look for:** Base years with artificially low expenses (construction period, vacancy, one-time credits) that inflate every subsequent year's excess charges.
+
+**How they find it:** Review the base year reconciliation. Compare it to adjacent years. Flag categories that were significantly below normal.
+
+**Dollar impact:** A base year suppressed by $50,000 (due to a tax protest refund or construction discount) adds $50,000 to the tenant's excess charges every year for the lease term.
+
+**How to fix it first:** Review base year expenses for anomalies at lease signing. If the base year includes unusual items (tax refunds, insurance credits, deferred maintenance), document them. Consider whether the lease allows base year normalization.
+
+## The Pattern
+
+Notice the pattern: every finding comes from either (a) a configuration error in the property management system, (b) a lease interpretation mistake, or (c) a failure to track something over time. Software platforms like [CAMAudit.io](https://www.camaudit.io) replicate these detection steps automatically and surface overcharges in minutes.
+
+None of these are math errors. The formulas are usually right. The inputs are wrong.
+
+CapVeri catches all seven categories by comparing your GL data against your lease terms. It flags the exact line items an auditor would find, with dollar amounts, before your statements go out.
+
+The cost of running CapVeri on a property is a fraction of what a tenant auditor recovers. And the auditor works for the tenant. CapVeri works for you.
+
+## Related Resources
+
+- [Tenant Audit Defense Playbook](/resources/tenant-audit-defense-playbook): What to do when you get the audit notice
+- [Self-Audit CAM Billing](/resources/self-audit-cam-billing): 10-point internal review checklist
+- [CapEx Detection in CAM](/resources/capex-detection-cam): Finding #1 in detail
+- [Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide): Finding #2 in detail
+
+## Sources
+
+1. [RIW - Audit rights and restrictions](https://www.riw.com/2024/09/four-strategies-to-understand-and-defend-against-poor-audit-rights-and-restrictions/)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

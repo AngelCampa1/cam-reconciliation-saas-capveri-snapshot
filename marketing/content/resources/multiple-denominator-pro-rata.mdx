@@ -1,0 +1,191 @@
+---
+title: "Managing Multiple Denominators in One Building: When Leases Define the Pro-Rata Share Differently"
+description: "Different leases in the same building can define the denominator as total building SF, rentable SF, occupied SF, or leaseable SF. Here is how to manage multiple denominators in one reconciliation without over-recovering or under-recovering."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 61
+faq:
+  - q: "Can different tenants in the same building have different pro-rata share denominators?"
+    a: "Yes. If leases were signed at different times or negotiated by different parties, the denominator definition can vary. One lease might define the tenant's share as their RSF divided by total building rentable SF (150,000 SF). Another might use occupied SF (135,000 SF). A third might use leaseable SF (145,000 SF). Each definition produces a different pro-rata share for the same tenant space, and the landlord must track and apply the correct denominator for each lease."
+  - q: "What happens if a landlord uses the wrong denominator for a tenant's pro-rata share?"
+    a: "Using the wrong denominator changes the tenant's pro-rata share and every dollar amount on their reconciliation statement. A 10,000 SF tenant with a denominator of 150,000 SF has a 6.67% share. The same tenant with a denominator of 135,000 SF (occupied only) has a 7.41% share. On a $600,000 expense pool, that is a $4,440 annual difference. Over a 10-year lease, the cumulative error is $44,400 - enough to trigger a tenant audit and a refund demand."
+---
+
+<Alert type="info" title="Quick Answer">
+When leases in the same building define the pro-rata share denominator differently (total SF, rentable SF, occupied SF, leaseable SF), each tenant's reconciliation must use the denominator their lease specifies. Using a single denominator for all tenants is simpler but produces billing errors for every tenant whose lease defines it differently.
+</Alert>
+
+## The Four Common Denominators
+
+Commercial leases use four primary definitions for the denominator in the pro-rata share calculation. Each one produces a different share for the same tenant space.
+
+### Total Building Square Footage
+
+The largest possible denominator. Includes all rentable space, common areas, mechanical rooms, and sometimes parking structures. This produces the smallest pro-rata share for each tenant. Some older leases use "gross building area" or "total building area" interchangeably.
+
+### Rentable Square Footage (RSF)
+
+The most common denominator in modern leases. RSF includes each tenant's usable area plus their allocated share of common areas, measured under BOMA standards. Common areas themselves are distributed across tenants, not counted separately in the denominator.
+
+### Leaseable Square Footage
+
+Space that can be leased to tenants, excluding mechanical rooms, elevator shafts, and permanent common areas. Leaseable SF is smaller than total building SF but larger than occupied SF. It represents the total space the landlord could theoretically lease.
+
+### Occupied Square Footage
+
+Only space currently occupied by paying tenants. This is the smallest typical denominator and produces the largest pro-rata shares. When a 15,000 SF suite is vacant, it drops out of the denominator, concentrating costs on remaining tenants.
+
+## The Mathematical Impact
+
+Consider a 10,000 RSF tenant in a building with these measurements:
+
+| Denominator Definition | Square Footage | Tenant's Pro-Rata Share | Annual CAM (on $600K pool) |
+|----------------------|---------------|----------------------|--------------------------|
+| Total Building SF | 165,000 | 6.06% | $36,364 |
+| Rentable SF | 150,000 | 6.67% | $40,000 |
+| Leaseable SF | 145,000 | 6.90% | $41,379 |
+| Occupied SF (90% occ.) | 135,000 | 7.41% | $44,444 |
+
+Same tenant, same space, same expense pool. The denominator choice alone creates an $8,080 annual spread between the lowest and highest share. Over a 10-year lease, that is $80,800.
+
+The occupied SF denominator is particularly volatile. When occupancy drops from 90% to 75%, the same tenant's share jumps:
+
+| Occupancy | Occupied SF | Tenant Share | Annual CAM | Change from 90% |
+|-----------|------------|-------------|------------|-----------------|
+| 95% | 142,500 | 7.02% | $42,105 | -$2,339 |
+| 90% | 135,000 | 7.41% | $44,444 | baseline |
+| 85% | 127,500 | 7.84% | $47,059 | +$2,614 |
+| 80% | 120,000 | 8.33% | $50,000 | +$5,556 |
+| 75% | 112,500 | 8.89% | $53,333 | +$8,889 |
+
+A 15-percentage-point drop in occupancy increases this tenant's CAM bill by $8,889 (a 20% increase) with zero change in actual expenses. This is why tenants with occupied-SF denominators are the first to dispute when occupancy declines.
+
+## Why Multiple Denominators Exist in One Building
+
+This is not a theoretical problem. It happens in nearly every building with more than 10 tenants. The causes:
+
+**Leases signed in different decades.** A lease signed in 2005 might reference "gross leaseable area." A lease signed in 2020 in the same building references "rentable square footage as measured under BOMA 2017." Same concept, different number.
+
+**Different attorneys, different language.** One tenant's attorney defined the denominator as "the total rentable area of the Building." Another defined it as "the total square footage of all space leased or available for lease." Both sound similar. They produce different numbers.
+
+**BOMA standard transitions.** A building re-measured under BOMA 2017 or BOMA 2024 will have a different RSF than it had under the prior standard. Tenants whose leases reference the old standard may argue their denominator should not change.
+
+**Lease-specific occupancy provisions.** Some leases say the denominator is total RSF "or occupied RSF, whichever is greater." Others say occupied RSF with no floor. Some specify a minimum occupancy assumption (e.g., "the denominator shall be calculated as if the building is at least 95% occupied").
+
+## Managing Multiple Denominators in One Reconciliation
+
+### Step 1: Abstract Every Denominator Definition
+
+Pull the exact denominator language from every active lease. Do not paraphrase. The difference between "total rentable area of the Building" and "total rentable area of all space in the Building leased or held for lease" matters. The first includes vacant space; the second arguably does not.
+
+Create a denominator reference table:
+
+| Tenant | Lease Section | Denominator Language | Interpreted Denominator | SF Value |
+|--------|-------------|---------------------|----------------------|----------|
+| Tenant A | Section 4.2(a) | "total rentable area of the Building" | Rentable SF | 150,000 |
+| Tenant B | Exhibit C, para 3 | "total square footage of all occupied premises" | Occupied SF | 135,000 |
+| Tenant C | Section 5.1 | "gross leaseable area" | Leaseable SF | 145,000 |
+| Tenant D | Section 4.2(a) | "total rentable area of the Building" | Rentable SF | 150,000 |
+| Tenant E | Amendment 2, para 7 | "rentable area, adjusted to 95% minimum occupancy" | RSF with floor | 150,000* |
+
+*Tenant E's denominator is 150,000 RSF when occupancy is at or above 95%. When occupancy drops below 95%, the denominator is 142,500 SF (95% of 150,000). The lease imposes a floor.
+
+### Step 2: Calculate Each Tenant's Share Individually
+
+You cannot run one pro-rata share calculation for the building. Each tenant's share must be calculated using their specific denominator:
+
+| Tenant | Tenant RSF | Denominator | Pro-Rata Share |
+|--------|-----------|------------|---------------|
+| A | 10,000 | 150,000 (RSF) | 6.67% |
+| B | 12,000 | 135,000 (Occupied) | 8.89% |
+| C | 8,000 | 145,000 (Leaseable) | 5.52% |
+| D | 15,000 | 150,000 (RSF) | 10.00% |
+| E | 20,000 | 142,500 (RSF w/ floor) | 14.04% |
+
+### Step 3: Check for Over-Recovery
+
+Here is the critical validation. When different tenants have different denominators, the sum of all pro-rata shares will not equal 100%. It might exceed 100%, which means the landlord is recovering more than the total expense pool. That is an over-recovery that violates most leases and invites litigation.
+
+Add up the allocated amounts:
+
+| Tenant | Share | Allocation (on $600K) |
+|--------|-------|----------------------|
+| A | 6.67% | $40,000 |
+| B | 8.89% | $53,333 |
+| C | 5.52% | $33,103 |
+| D | 10.00% | $60,000 |
+| E | 14.04% | $84,211 |
+| Remaining tenants | Various | $340,000 |
+| **Total allocated** | | **$610,648** |
+
+Total allocated exceeds the $600,000 expense pool by $10,648. The landlord is over-recovering.
+
+This over-recovery is not fraud. It is a mathematical consequence of using smaller denominators (occupied SF, leaseable SF) for some tenants while the expense pool reflects the whole building. But most leases include a provision that the landlord cannot recover more than actual expenses, and tenant auditors check this.
+
+### Step 4: Apply Recovery Caps
+
+When total allocated recovery exceeds total expenses, the landlord must either:
+
+1. **Cap total recovery at actual expenses** and pro-rate the reduction across tenants, or
+2. **Apply each tenant's lease-specific cap** (some leases cap the tenant's share at their pro-rata portion of actual expenses), or
+3. **Absorb the gap** on tenants with larger denominators (who are under-allocated relative to the pool)
+
+The correct approach depends on the lease language. Most institutional leases include a "landlord shall not recover more than 100% of actual expenses" provision. This effectively creates a ceiling on total recovery that the controller must enforce across the mixed-denominator portfolio.
+
+## Validation Checks
+
+Run these checks on every reconciliation where multiple denominators exist:
+
+**Sum-of-shares test.** Add all tenant pro-rata shares. If the sum exceeds 100% of any single denominator definition, investigate. The shares should not sum to more than 100% of the largest denominator (total building SF).
+
+**Total recovery test.** Sum all tenant allocations. Compare to total recoverable expenses. If allocations exceed expenses, you have an over-recovery problem.
+
+**Denominator consistency test.** For each tenant, verify the denominator used in the reconciliation matches the denominator defined in the lease. This catches copy-paste errors where one tenant's denominator was accidentally applied to another.
+
+**Year-over-year denominator test.** Compare each tenant's denominator to the prior year. If it changed, verify the change is supported by a re-measurement, occupancy change, or lease amendment.
+
+**Vacancy absorption test.** For tenants on occupied-SF denominators, verify that vacant space costs are being absorbed by the landlord (or allocated per the lease terms) rather than shifted to remaining tenants beyond what their lease allows.
+
+## The Gross-Up Interaction
+
+Multiple denominators interact with gross-up calculations in ways that create additional complexity. If the building is at 80% occupancy and you gross up variable expenses to 95%, the grossed-up expense pool is larger than actual expenses. Tenants on occupied-SF denominators are already paying a larger share because the denominator is smaller. Applying a gross-up to those tenants can result in double-counting the vacancy impact.
+
+The solution: apply the gross-up at the pool level, then allocate using each tenant's lease-specific denominator. Do not gross up the denominator separately from the expense pool. The gross-up adjusts what was spent; the denominator determines how it is shared.
+
+## Documentation Requirements
+
+When your building has multiple denominators, your reconciliation package needs to document:
+
+1. **The denominator definition** for each tenant, with the lease clause reference
+2. **The current SF value** for each denominator type, with the measurement source
+3. **The per-tenant calculation** showing the specific denominator used
+4. **The total recovery validation** proving the landlord did not over-recover
+5. **Any adjustments** made to prevent over-recovery, with the methodology
+
+This documentation is what saves you when the tenant auditor asks why Tenant B's share is 8.89% while Tenant D's is 10.00% even though Tenant D has 3,000 more square feet. The answer is the denominator, but you need to show the work.
+
+<CTABox
+  title="Validate Your Denominator Calculations"
+  description="Upload your GL export and lease roster. CapVeri tracks per-tenant denominators, calculates individual pro-rata shares, runs the over-recovery validation, and flags any tenant whose denominator does not match the lease definition."
+  utmContent="u_cta"
+  buttonText="Start Free Trial"
+/>
+
+<FAQSection items={[
+  { q: "Can different tenants in the same building have different pro-rata share denominators?", a: "Yes. If leases were signed at different times or negotiated by different parties, the denominator definition can vary. One lease might define the tenant's share as their RSF divided by total building rentable SF (150,000 SF). Another might use occupied SF (135,000 SF). A third might use leaseable SF (145,000 SF). Each definition produces a different pro-rata share for the same tenant space, and the landlord must track and apply the correct denominator for each lease." },
+  { q: "What happens if a landlord uses the wrong denominator for a tenant's pro-rata share?", a: "Using the wrong denominator changes the tenant's pro-rata share and every dollar amount on their reconciliation statement. A 10,000 SF tenant with a denominator of 150,000 SF has a 6.67% share. The same tenant with a denominator of 135,000 SF (occupied only) has a 7.41% share. On a $600,000 expense pool, that is a $4,440 annual difference. Over a 10-year lease, the cumulative error is $44,400 - enough to trigger a tenant audit and a refund demand." }
+]} />
+
+## Related Resources
+
+- [Why Did My Tenant's Pro-Rata Share Change?](/resources/denominator-change-guide)
+- [Pro-Rata Share Calculation for CAM Reconciliation](/resources/pro-rata-share-calculation)
+- [CAM Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide)
+- [Denominator Drift: The Silent Revenue Leak](/resources/denominator-drift)
+
+## Sources
+
+1. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)
+2. [CapVeri Sources & Research - BOMA 2024 methodology](/sources#boma-2024)

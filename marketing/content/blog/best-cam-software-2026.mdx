@@ -1,0 +1,183 @@
+---
+title: "CAM Reconciliation Software for Landlords: 2026 Review"
+description: "Compare CAM reconciliation software for landlords in 2026: Yardi, MRI, RealPage, Excel, outsourced firms, and CapVeri's verification layer."
+excerpt: "Compare CAM reconciliation software for landlords in 2026: Yardi, MRI, RealPage, Excel, outsourced firms, and CapVeri's verification layer."
+datePublished: "2026-03-21"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "cre-finops"
+faq:
+  - q: "What is the best CAM reconciliation software for landlords?"
+    a: "The best CAM reconciliation software depends on portfolio size and process maturity. Yardi, MRI, and RealPage work well as property management systems when lease configuration is clean. CapVeri is best when landlords want an independent verification layer that checks ERP exports against lease terms before statements go out."
+  - q: "Should landlords replace Yardi or MRI to improve CAM reconciliation?"
+    a: "Usually no. Replacing the property management system is expensive and disruptive. Most landlords get faster improvement by keeping Yardi or MRI as the system of record and adding a CAM-specific verification workflow for gross-up, caps, exclusions, pro-rata shares, and audit trail checks."
+  - q: "When does Excel stop working for CAM reconciliation?"
+    a: "Excel usually stops working when the portfolio grows beyond a few buildings, lease structures vary by tenant, or the original spreadsheet owner is no longer the person running reconciliation. The risk is not only formula error. It is version control, missing lease amendments, and inconsistent treatment across tenants."
+---
+
+Every year the same question comes up in CRE finance: what software are you using for CAM reconciliation? The answers in 2026 are the same as they were in 2019 (Yardi, MRI, Excel, or a consultant), plus a new category of purpose-built audit tools that sit on top of the existing stack.
+
+This review covers all four categories honestly. Each has a place, depending on portfolio size, lease complexity, and staff capacity. The goal is to help you find which approach fits your situation, not to sell you on any particular one.
+
+---
+
+## What We're Evaluating
+
+CAM reconciliation involves more than arithmetic. The evaluation criteria below reflect where software typically fails in practice:
+
+| Criterion                       | What It Measures                                                                           |
+| ------------------------------- | ------------------------------------------------------------------------------------------ |
+| Calculation accuracy            | Gross-up, pro-rata share, cap enforcement, exclusions: correct results, not just formulas |
+| Audit trail                     | Can you reproduce every number in the output and trace it to a source document?            |
+| Source system compatibility     | Does it work with the data formats your accounting team already uses?                      |
+| Cap enforcement                 | Does it correctly handle cumulative caps, gross caps, and base-year caps?                  |
+| Compliance support              | Does it produce documentation that satisfies lease audit rights provisions?                |
+| Time to complete reconciliation | How many hours does a single building's reconciliation take?                               |
+| Cost                            | Total cost including implementation, training, and annual fees                             |
+
+One note on "calculation accuracy": every tool will produce a number. The question is whether it produces the correct number given each tenant's lease terms. That distinction is where most failures occur.
+
+---
+
+## Category 1: Property Management Suites (Yardi, MRI, RealPage)
+
+The major property management platforms (Yardi Voyager, MRI Commercial Management, and RealPage) all include CAM reconciliation modules. These modules are mature, integrated with GL data, and used by most institutional landlords in the United States.
+
+**What they get right:**
+
+- **GL integration**: The reconciliation pulls directly from the general ledger. No manual data import. Expense data is current and complete.
+- **Rent roll integration**: Tenant RSF, lease dates, and pro-rata share percentages are already in the system. No separate data entry.
+- **Estimate management**: Monthly CAM estimates and adjustments are tracked in the same system as the reconciliation. Year-end comparison is automated.
+- **Scale**: These systems handle portfolios from 50 buildings to 5,000. Performance does not degrade at scale.
+
+**Where they fall short for CAM specifically:**
+
+The CAM modules in all three platforms require accurate configuration to produce accurate output. "Configuration" means that someone has correctly entered the lease-level parameters (exclusion categories, gross-up target occupancy, cap type and base year, denominator definition) for every tenant.
+
+In practice, this configuration is frequently incomplete. Lease abstracts are entered at execution and not updated when amendments change the terms. Gross-up parameters are entered with the default settings rather than the lease-specific terms. Caps are configured as simple annual caps when the lease specifies a cumulative cap with a different base year.
+
+The platform does not know the configuration is wrong. It calculates correctly given the inputs it has received. The error is invisible until a tenant audits the reconciliation and finds that the gross-up was applied at 95% occupancy when their lease specifies 90%, or that the cap was calculated on a gross basis when the lease specifies a net basis.
+
+**Best for:** Institutional portfolios with dedicated lease administration staff who maintain lease abstracts in the platform with discipline.
+
+**Not for:** Mid-market portfolios (5 to 50 buildings) where lease administration is handled by the property manager or a small accounting team without dedicated abstraction resources.
+
+---
+
+## Category 2: Excel and Manual Process
+
+Approximately 60 to 65 percent of mid-market landlords (those with portfolios in the 5 to 50 building range) run CAM reconciliation in Excel. This is not a failure of sophistication. For small portfolios with straightforward lease structures, Excel is adequate.
+
+**What Excel gets right:**
+
+- **Transparency**: Every formula is visible and auditable. There is no black-box calculation.
+- **Flexibility**: You can handle any lease structure, including unusual cap structures and custom exclusion lists, without waiting for a software vendor to support the feature.
+- **No implementation cost**: The tool is already there.
+- **Audit trail**: A well-maintained Excel model with change tracking is defensible in a tenant audit.
+
+**Where Excel fails:**
+
+- **No version control by default**: A reconciliation workbook modified over three years by four people, with no version history, is a litigation risk.
+- **No lease abstract integration**: The lease parameters (exclusions, cap, gross-up) are entered manually each year. Manual entry is error-prone. A formula that worked correctly in 2023 may produce an incorrect result in 2026 if someone changed the exclusion list without updating the formula.
+- **No cross-lease consistency checking**: Excel cannot tell you that you applied a different denominator definition to two tenants whose leases specify the same definition.
+- **Time**: A 30-tenant reconciliation in Excel takes 80 to 120 hours per building for an experienced controller. That does not scale.
+
+**Best for:** Portfolios with 1 to 5 buildings, straightforward NNN or modified gross leases, and a controller who built the model and maintains it personally.
+
+**Not for:** Portfolios where the original model builder has left, where lease structures vary significantly across tenants, or where you have experienced a formal tenant audit in the last three years.
+
+---
+
+## Category 3: Outsourced CAM Reconciliation Consultants
+
+Outsourced reconciliation (where a third-party CPA firm or lease audit firm performs the annual reconciliation) is the approach used by some landlords who lack internal accounting capacity and by others who view the cost as insurance against dispute liability.
+
+**What outsourcing gets right:**
+
+- **Expertise on demand**: A specialized firm that does nothing but CAM reconciliation knows the common error patterns and lease structures.
+- **Independence**: An outsourced reconciliation carries credibility with tenants that an internal reconciliation may not, particularly after a prior dispute.
+- **Scalability**: You can outsource one building or fifty without building internal staff.
+
+**Where outsourcing falls short:**
+
+- **Cost**: Specialized CAM reconciliation firms typically charge $3,000 to $8,000 per building per year for a full reconciliation engagement. For a 20-building portfolio, that is $60,000 to $160,000 annually.
+- **Timeline**: Outsourced firms operate on their schedule, not yours. Engagement kickoff to final statement delivery frequently takes 90 to 120 days. That is the entire delivery window for many leases.
+- **Context loss**: The outsourced firm does not know your tenant relationships, your specific dispute history, or the verbal understandings that exist alongside the written lease terms. These gaps create errors.
+- **Not scalable as a recurring model**: The economics of outsourcing CAM reconciliation only work as a one-time engagement. Using it year after year at $5,000 per building does not scale.
+
+**Best for:** One-time validation of an existing reconciliation, post-dispute reconciliation where independence is required, or a landlord transitioning from Excel who needs a baseline reconciliation to establish internal processes.
+
+**Not for:** Ongoing annual reconciliation in a portfolio of more than 10 buildings.
+
+---
+
+## Category 4: Purpose-Built CAM Reconciliation Software (CapVeri)
+
+A newer category: software built specifically to audit and validate CAM reconciliations for landlords, rather than to replace the property management system.
+
+CapVeri sits alongside Yardi or MRI. It does not replace them. It reads CSV or PDF exports from the existing system and checks the reconciliation output against the lease terms. The purpose is verification, not replacement.
+
+**What this approach gets right:**
+
+- **Source system compatibility**: It [works with Yardi via CSV export](/blog/cam-software-works-with-yardi) and accepts MRI and RealPage data exports the same way. No API integration required. No ERP migration.
+- **Lease-level validation**: Instead of recalculating from scratch, it checks whether the output from the existing system is consistent with the lease terms. It flags gross-up applied to fixed expenses, management fee calculated on the wrong base, and denominators inconsistent with the lease definition.
+- **Audit trail documentation**: The output is a reconciliation package with the full calculation methodology documented, designed to satisfy the documentation requirements of a tenant audit request.
+- **Speed**: A single building reconciliation audit runs in minutes against uploaded GL data.
+- **Cost**: CapVeri uses the Reconcile subscription generated from the current plan-tier configuration, with pricing based on rentable unit count. The pricing page is the source of truth for current Reconcile terms.
+
+**Where this approach has limits:**
+
+- It does not replace a property management system. If you do not have Yardi, MRI, or an equivalent GL, CapVeri is not a substitute.
+- It does not manage the ongoing leasing workflow (tenant communication, estimate management, payment tracking). Those remain in the property management system.
+- It is a verification and documentation tool, not a calculation engine for first-time reconciliations from raw data.
+
+**Best for:** Landlords who use Yardi, MRI, or MRI equivalents and want to verify the output before statements go out, without hiring an outsourced firm or adding headcount.
+
+**Not for:** Landlords who need a full property management platform or who are building a reconciliation from scratch without an existing GL system.
+
+---
+
+## Evaluation Summary
+
+|                             | Yardi/MRI/RealPage             | Excel                         | Outsourced       | CapVeri                    |
+| --------------------------- | ------------------------------ | ----------------------------- | ---------------- | -------------------------- |
+| Calculation accuracy        | High (if configured correctly) | High (if model is maintained) | High             | High (against lease terms) |
+| Audit trail                 | Strong                         | Moderate                      | Strong           | Strong                     |
+| Source system compatibility | Native                         | Native                        | Any              | Yardi/MRI exports          |
+| Cap enforcement             | Yes (with configuration)       | Manual                        | Yes              | Yes (verification)         |
+| Compliance documentation    | Moderate                       | Manual                        | Strong           | Strong                     |
+| Time to complete            | Low (after setup)              | 80–120 hrs/building           | 90–120 days      | Minutes (audit run)        |
+| Annual cost                 | $30K-$200K+                    | Near zero                     | $3K-$8K/building | Self-serve subscription     |
+
+---
+
+## How to Choose: 3 Questions
+
+**1. Do you have a property management system with CAM module data?**
+
+If yes: the question is whether the configuration is accurate and whether you can verify the output. A purpose-built audit tool adds that verification. If no: start with the property management platform decision before evaluating reconciliation-specific tools.
+
+**2. Have you experienced a formal tenant audit in the last 24 months?**
+
+If yes: your current process produced an output that a tenant believed was worth auditing. That is a signal to change the process. Either improve configuration discipline in your existing system or add a verification layer.
+
+**3. What is the all-in cost of a disputed reconciliation at your portfolio?**
+
+A contested CAM reconciliation (legal fees, accounting time, delayed collections, and any adjustment) typically costs $15,000 to $40,000 to resolve. Compare that cost to the cost of prevention at your current portfolio size. If one prevented dispute per year pays for the tool, the economics are clear.
+
+---
+
+## Related Articles
+
+- [CAM Software Comparison Hub](/resources/cam-software-comparison-hub)
+- [CAM Software Evaluation Checklist](/resources/cam-software-evaluation-checklist)
+- [Build vs. Buy: CAM Reconciliation Tools](/resources/cam-build-vs-buy)
+- [Limits of AI in CAM reconciliation](/resources/ai-cam-reconciliation-limits): What AI can and cannot do in CAM workflows
+- [CapVeri vs. Yardi CAM Module](/vs/yardi)
+- [CAM Reconciliation in Excel: When It Works and When It Doesn't](/vs/excel)
+
+## Sources
+
+1. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

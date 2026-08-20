@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="capveri-icon-title">
+  <title id="capveri-icon-title">CapVeri</title>
+  <defs>
+    <linearGradient id="capveri-teal" x1="42" y1="55" x2="174" y2="164" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F8E8A"/>
+      <stop offset="1" stop-color="#04716E"/>
+    </linearGradient>
+    <linearGradient id="capveri-ink" x1="95" y1="31" x2="155" y2="207" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#23313A"/>
+      <stop offset="1" stop-color="#111820"/>
+    </linearGradient>
+    <linearGradient id="capveri-gold" x1="84" y1="151" x2="151" y2="205" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9B75B"/>
+      <stop offset="1" stop-color="#AF8D32"/>
+    </linearGradient>
+  </defs>
+  <path d="M49 166a83 83 0 0 1 20-88v34a57 57 0 0 0-6 54H49Z" fill="url(#capveri-teal)"/>
+  <path d="M190 126a83 83 0 0 1-151 76l12-9a67 67 0 0 0 126-52l13-15Z" fill="url(#capveri-ink)"/>
+  <path d="M70 96 111 72v86l-41 23V96Z" fill="url(#capveri-teal)"/>
+  <path d="M119 48 161 24v109l-42 33V48Z" fill="url(#capveri-ink)"/>
+  <path d="M168 76 209 100v54l-41 25V76Z" fill="url(#capveri-teal)"/>
+  <path d="M86 180h24v25H86v-25Zm33-14h24v39h-24v-39Zm33-23h24v62h-24v-62Z" fill="url(#capveri-gold)"/>
+  <path d="m87 153 41 38 74-82 11 9-84 95-58-50 16-10Z" fill="url(#capveri-teal)"/>
+  <path d="m92 151 36 33 70-77 8 7-78 88-48-42 12-9Z" fill="#FFFFFF"/>
+  <path d="m92 151 36 33 70-77 8 7-78 88-48-42 12-9Z" fill="url(#capveri-teal)"/>
+</svg>

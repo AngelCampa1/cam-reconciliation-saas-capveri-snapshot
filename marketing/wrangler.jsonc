@@ -1,0 +1,50 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "capveri-marketing",
+  "compatibility_date": "2026-06-12",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "nodejs_compat_populate_process_env",
+    "global_fetch_strictly_public"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "capveri-marketing"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "AI_SDR_NONCE_DB",
+      "database_name": "capveri-ai-sdr-nonces",
+      "database_id": "REPLACE_WITH_CREATED_D1_ID",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "NEXT_PUBLIC_API_URL": "https://api.capveri.com",
+    "NEXT_PUBLIC_SITE_URL": "https://www.capveri.com",
+    "NEXT_PUBLIC_APP_URL": "https://app.capveri.com",
+    "NEXT_PUBLIC_POSTHOG_KEY": "phc_REPLACE_WITH_POSTHOG_PROJECT_KEY",
+    "NEXT_PUBLIC_POSTHOG_HOST": "https://us.i.posthog.com",
+    "NEXT_PUBLIC_AI_SDR_WORKER_URL": "https://ventora-ai-sdr-worker.REPLACE_WITH_ACCOUNT_SUBDOMAIN.workers.dev"
+  },
+  "routes": [
+    {
+      "pattern": "www.capveri.com/*",
+      "zone_id": "REPLACE_WITH_ZONE_ID"
+    },
+    {
+      "pattern": "capveri.com/*",
+      "zone_id": "REPLACE_WITH_ZONE_ID"
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "lastUpdated": "2026-05-08",
+  "topics": [
+    {
+      "slug": "method-a-vs-method-b",
+      "title": "BOMA Method A vs Method B Floor Allocation",
+      "description": "How the two BOMA measurement methods differ in allocating shared floor areas to tenants, and when each method produces a higher or lower rentable area for a given suite.",
+      "comparison2017vs2024": "The 2024 standard retains both methods but adds clearer guidance on when each is appropriate. Method A remains the default for single-tenant floors. Method B is now explicitly recommended for multi-tenant floors with significant shared corridors and restrooms. The 2024 update also clarifies that the choice of method should be consistent across all floors in a building.",
+      "methodology": "Method A allocates floor common areas to a single dominant tenant (or equally when no dominant tenant exists). It is simpler but can produce inequitable results on multi-tenant floors. Method B allocates floor common areas proportionally based on each tenant's usable area as a percentage of total usable area on the floor. This produces more equitable allocations on floors with multiple tenants of varying sizes.",
+      "workedExample": "A 20,000 SF floor has 2,000 SF of common area (corridors, restrooms, electrical). Tenant A has 12,000 SF usable, Tenant B has 6,000 SF usable. Under Method A (if Tenant A is dominant), Tenant A gets all 2,000 SF allocated. Their rentable is 14,000 SF. Under Method B, Tenant A gets 12,000/18,000 \u00d7 2,000 = 1,333 SF (rentable 13,333 SF), and Tenant B gets 6,000/18,000 \u00d7 2,000 = 667 SF (rentable 6,667 SF).",
+      "commonErrors": [
+        "Using Method A on a multi-tenant floor, unfairly burdening the largest tenant",
+        "Switching methods between lease renewals without adjusting the rentable area in the lease",
+        "Applying different methods to different floors in the same building",
+        "Confusing floor common area allocation (Method A/B) with building common area allocation"
+      ],
+      "financialImpact": "The difference between Method A and Method B can change a tenant's rentable area by 2-5% on a multi-tenant floor. For a 10,000 SF tenant paying $40/SF, a 3% difference represents $12,000 per year in additional rent and CAM charges.",
+      "leaseImplications": "Leases should specify which BOMA method is used for measurement. When leases reference 'BOMA standard' without specifying the method, disputes arise at renewal. Landlords should ensure consistency between the measurement method in the lease and the method used for CAM allocation.",
+      "notes": "Method A vs Method B is the most common source of BOMA measurement disputes in multi-tenant office buildings. The choice of method directly affects rentable square footage, which in turn affects both base rent and pro-rata CAM share calculations.",
+      "relatedResources": [
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/boma-2024-changes"
+      ],
+      "relatedTools": [
+        "/tools/boma-2024-calculator",
+        "/tools/boma-remeasurement-impact"
+      ]
+    },
+    {
+      "slug": "non-allocated-tenant-areas",
+      "title": "Non-Allocated Tenant Areas in BOMA 2024",
+      "description": "Understanding areas within a tenant's demised space that are excluded from usable area calculations under BOMA 2024, including structural columns, shaft enclosures, and building system penetrations.",
+      "comparison2017vs2024": "BOMA 2024 provides more explicit guidance on non-allocated areas within tenant spaces. The 2017 standard was ambiguous about column enclosures and small shaft penetrations, leading to inconsistent measurement practices. The 2024 update establishes clearer thresholds for when an element is measured as a penetration vs. included in usable area.",
+      "methodology": "Non-allocated tenant areas are physical elements within a tenant's demised premises that reduce usable area. These include structural columns and their enclosures, building system shafts passing through the suite, and fire stair enclosures. The BOMA standard defines minimum size thresholds: penetrations below a certain size may be included in usable area to simplify measurement.",
+      "workedExample": "A tenant suite has a gross interior area of 5,000 SF. It contains two structural columns with enclosures totaling 24 SF and one mechanical shaft of 16 SF. Usable area = 5,000 - 24 - 16 = 4,960 SF. However, if the shaft is below the BOMA threshold (varies by standard version), it may be included in usable area, yielding 4,976 SF.",
+      "commonErrors": [
+        "Including structural columns in usable area (overstates tenant's space)",
+        "Failing to remeasure after building system retrofits that add new shaft penetrations",
+        "Inconsistent treatment of column enclosures vs. freestanding columns",
+        "Not accounting for irregularly shaped column enclosures"
+      ],
+      "financialImpact": "Non-allocated areas typically represent 1-3% of a tenant's gross interior area. For a 20,000 SF tenant at $50/SF, a 2% difference in usable area affects base rent by $20,000 annually plus proportional CAM impact.",
+      "leaseImplications": "Leases should specify the BOMA standard version and whether the rentable area stated in the lease is subject to remeasurement. Tenants with measurement verification rights should confirm that non-allocated areas have been properly deducted from usable area before calculating rentable area.",
+      "notes": "Non-allocated tenant areas are often overlooked during initial lease negotiations but become critical during remeasurement disputes or when building systems are upgraded (adding or enlarging shafts).",
+      "relatedResources": [
+        "/blog/boma-2024-changes",
+        "/resources/boma/boma-2024-adoption-roadmap"
+      ],
+      "relatedTools": [
+        "/tools/boma-2024-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "outdoor-amenity-space",
+      "title": "Outdoor Amenity Space Classification Under BOMA 2024",
+      "description": "How BOMA 2024 introduces formal classification of outdoor amenity areas such as rooftop terraces, balconies, and covered patios, and their impact on rentable area calculations.",
+      "comparison2017vs2024": "This is one of the most significant changes in BOMA 2024. The 2017 standard did not formally address outdoor amenity spaces, leading to inconsistent treatment across the industry. BOMA 2024 creates a new classification for outdoor amenity space with specific measurement rules, allowing landlords to include these areas in rentable calculations at defined ratios.",
+      "methodology": "BOMA 2024 allows outdoor amenity space to be measured and included in building rentable area at a discount factor determined by the landlord (commonly 50-75% of indoor equivalent). The space must be accessible to building occupants, maintained by the landlord, and meet minimum quality standards. Exclusive-use outdoor spaces (tenant balconies) are allocated to the specific tenant; shared outdoor spaces (rooftop terraces) are allocated as building common area.",
+      "workedExample": "A building has a 3,000 SF rooftop terrace and 500 SF of exclusive tenant balconies on the 10th floor. At a 60% discount factor: rooftop contributes 1,800 SF to building common area (allocated to all tenants via load factor), and the 10th-floor balcony contributes 300 SF to that tenant's usable area. Total outdoor contribution to building rentable: 2,100 SF.",
+      "commonErrors": [
+        "Applying indoor measurement rates (100%) to outdoor space",
+        "Including uncovered, unimproved outdoor areas that don't meet BOMA quality standards",
+        "Failing to disclose the discount factor used for outdoor space to tenants",
+        "Double-counting outdoor space in both building common area and tenant usable area"
+      ],
+      "financialImpact": "Outdoor amenity space inclusion can increase building rentable area by 2-8%, directly increasing every tenant's rentable area through the load factor. For a 200,000 SF building adding 5,000 SF of outdoor amenity at 60%, the building rentable increases by 3,000 SF, a 1.5% increase in all tenants' rent and CAM obligations.",
+      "leaseImplications": "New leases should explicitly address whether outdoor amenity space is included in the building's rentable area calculation and at what discount factor. Existing leases that reference a specific BOMA version may need amendments to incorporate the 2024 outdoor amenity provisions.",
+      "notes": "Outdoor amenity space classification is driving significant re-measurement activity in urban office markets where rooftop terraces and balconies have become competitive differentiators. Landlords must balance the revenue benefit of including outdoor space in rentable area against tenant pushback on paying for outdoor square footage.",
+      "relatedResources": [
+        "/blog/boma-2024-changes",
+        "/resources/boma/boma-2024-adoption-roadmap"
+      ],
+      "relatedTools": [
+        "/tools/boma-2024-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "storage-area-classification",
+      "title": "Storage Area Classification and Measurement",
+      "description": "How BOMA standards classify storage areas in commercial buildings, including in-suite storage, building storage rooms, and below-grade storage, and their treatment in rentable area calculations.",
+      "comparison2017vs2024": "BOMA 2024 refines storage area classification by distinguishing between tenant-exclusive storage within a suite (included in usable area), assigned storage outside the suite (allocated as a supplemental area), and building storage rooms (building common area). The 2017 standard was less precise about assigned storage outside a tenant's premises.",
+      "methodology": "In-suite storage closets and rooms are measured as part of the tenant's usable area at full value. Assigned storage rooms outside the tenant's suite (e.g., basement storage cages) are measured separately and may be included in the tenant's rentable area as a supplemental allocation. Building storage rooms serving the building's operation (cleaning supplies, maintenance equipment) are classified as building common area.",
+      "workedExample": "A tenant has 5,000 SF usable area including a 100 SF in-suite storage closet. They also have an assigned 200 SF basement storage cage. The in-suite storage is already in the 5,000 SF usable. The basement cage adds 200 SF as a supplemental allocation. If the building load factor is 1.15, the tenant's total rentable = (5,000 \u00d7 1.15) + 200 = 5,950 SF.",
+      "commonErrors": [
+        "Measuring assigned storage at the building load factor instead of at actual size",
+        "Classifying building maintenance storage as assignable to tenants",
+        "Failing to include in-suite storage in usable area measurements",
+        "Inconsistent treatment of storage mezzanines in warehouse/industrial buildings"
+      ],
+      "financialImpact": "Storage area misclassification typically affects 1-2% of a tenant's rentable area. The larger financial impact comes from whether storage rent is charged at full office rates or discounted storage rates, a difference that can be $15-30/SF in urban markets.",
+      "leaseImplications": "Leases should clearly define which storage areas are included in the premises, whether storage is measured separately or included in the suite's usable area, and the rental rate applicable to storage space. CAM reconciliation should specify whether storage areas are included in the tenant's pro-rata share denominator.",
+      "notes": "Storage area disputes are increasing as landlords convert underutilized basement and mechanical spaces into revenue-generating storage. The classification of these converted spaces (as tenant usable, supplemental, or building common) has direct rent and CAM implications.",
+      "relatedResources": [
+        "/blog/boma-2024-changes",
+        "/resources/boma/boma-2024-adoption-roadmap"
+      ],
+      "relatedTools": [
+        "/tools/boma-2024-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "single-tenant-floor",
+      "title": "Single-Tenant Floor Measurement",
+      "description": "BOMA measurement methodology for floors occupied by a single tenant, including treatment of floor common areas, corridors, and restrooms that become part of the tenant's usable area.",
+      "comparison2017vs2024": "BOMA 2024 maintains the principle that on a single-tenant floor, the entire floor becomes the tenant's usable area (excluding vertical penetrations and building common areas). The 2024 update adds guidance on partial-floor tenants who expand to take the entire floor, specifically addressing when and how remeasurement should occur.",
+      "methodology": "On a single-tenant floor, the tenant's usable area equals the entire floor area minus major vertical penetrations (elevator shafts, stairwells, mechanical shafts) and any building common areas on the floor (shared mechanical rooms). Corridors, restrooms, and electrical closets that would be floor common area on a multi-tenant floor become part of the single tenant's usable area. The floor common area factor becomes 1.0 (no floor-level allocation needed).",
+      "workedExample": "A floor has 22,000 SF gross area. Vertical penetrations total 1,500 SF (two elevator shafts, two stairwells, mechanical shaft). Building common area on the floor is 500 SF (shared electrical switchgear room). Single-tenant usable area = 22,000 - 1,500 - 500 = 20,000 SF. With a building common area load factor of 1.12, rentable = 20,000 \u00d7 1.12 = 22,400 SF.",
+      "commonErrors": [
+        "Deducting corridors and restrooms as floor common area on a single-tenant floor",
+        "Failing to remeasure when a floor converts from multi-tenant to single-tenant",
+        "Treating fire stair vestibules inconsistently between single and multi-tenant floors",
+        "Not adjusting the building load factor when floor common areas shift from shared to tenant-exclusive"
+      ],
+      "financialImpact": "Converting from multi-tenant to single-tenant measurement typically increases a tenant's usable area by 10-15% (the former floor common areas). However, the tenant is now paying for these corridors and restrooms as part of their usable area rather than through the load factor, so the net financial impact depends on the building's specific load factor structure.",
+      "leaseImplications": "Leases for single-tenant floors should specify that measurement follows the BOMA single-tenant floor methodology. If a tenant later gives back part of the floor, the lease should address remeasurement provisions and how the floor will be reclassified under multi-tenant methodology.",
+      "notes": "Single-tenant floor measurement is straightforward in concept but problematic in practice when floors transition between single and multi-tenant occupancy. The shift can change usable areas by 10-15%, triggering rent adjustments that surprise both landlords and tenants.",
+      "relatedResources": [
+        "/blog/boma-2024-changes",
+        "/resources/boma/boma-2024-adoption-roadmap"
+      ],
+      "relatedTools": [
+        "/tools/boma-2024-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "multi-tenant-floor",
+      "title": "Multi-Tenant Floor Measurement",
+      "description": "BOMA measurement rules for floors with multiple tenants, including floor common area identification, allocation methods, and the relationship between usable and rentable area.",
+      "comparison2017vs2024": "BOMA 2024 strengthens the guidance on floor common area identification, particularly for floors where one tenant occupies the majority of the space. The 2024 standard clarifies that even when one tenant has 80%+ of a floor, if there is more than one tenant, multi-tenant floor measurement rules apply (unless the minority tenant's space is classified differently).",
+      "methodology": "On a multi-tenant floor, areas outside any tenant's demised premises but within the floor's boundaries (excluding vertical penetrations) are classified as floor common areas. These include corridors, shared restrooms, electrical/telecom closets, and shared pantries. Floor common areas are allocated to each tenant using Method A or Method B, increasing their usable area to arrive at floor usable area. The building common area load factor is then applied to arrive at rentable area.",
+      "workedExample": "A 20,000 SF floor (after deducting 1,500 SF vertical penetrations = 18,500 SF floor area) has three tenants: A (8,000 SF usable), B (5,000 SF usable), C (3,000 SF usable), plus 2,500 SF floor common area. Under Method B: A's allocation = 8,000/16,000 \u00d7 2,500 = 1,250 SF. A's floor rentable = (8,000 + 1,250) \u00d7 building load factor 1.12 = 10,360 SF.",
+      "commonErrors": [
+        "Omitting floor common areas from the allocation (understating tenant rentable areas)",
+        "Using inconsistent methods (A vs B) across different floors",
+        "Failing to reclassify floor common areas when a tenant expands or vacates",
+        "Including vertical penetrations in the floor common area pool"
+      ],
+      "financialImpact": "Floor common area allocation typically adds 10-18% to a tenant's usable area on a multi-tenant floor. Choosing Method A vs Method B can shift 2-5% of rentable area between tenants on the same floor, creating winners and losers among co-tenants.",
+      "leaseImplications": "Multi-tenant floor leases must specify the BOMA method (A or B) used for floor common area allocation. The lease should also address what happens when the floor configuration changes. If a tenant expands or a new tenant is added, will the remaining tenants' areas be remeasured?",
+      "notes": "Multi-tenant floor measurement is where most BOMA disputes originate. The interaction between floor common area allocation (Method A/B) and building common area allocation (load factor) creates a two-tier system that many property managers and tenants find confusing.",
+      "relatedResources": [
+        "/blog/boma-2024-changes",
+        "/resources/boma/boma-2024-adoption-roadmap"
+      ],
+      "relatedTools": [
+        "/tools/boma-2024-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "major-vertical-penetrations",
+      "title": "Major Vertical Penetrations (MVPs)",
+      "description": "Defining and measuring major vertical penetrations (elevator shafts, stairwells, mechanical shafts, and other floor openings) and their impact on usable and rentable area calculations.",
+      "comparison2017vs2024": "BOMA 2024 refines the definition of major vertical penetrations by adding a minimum size threshold and addressing multi-story atria more explicitly. The 2017 standard included all vertical penetrations regardless of size. The 2024 update establishes that very small penetrations (below a defined threshold) may be included in floor area to simplify measurement, while large atria require special treatment.",
+      "methodology": "Major vertical penetrations are openings in a floor that serve more than one floor of the building: elevator shafts, stairwells, mechanical/electrical shafts, and multi-story atria. MVPs are deducted from gross area on every floor they penetrate. They are not included in any tenant's usable area, floor common area, or building common area. The effect is that MVPs reduce the total building rentable area, increasing the cost per SF for all tenants.",
+      "workedExample": "A 25-story building has a typical floor of 22,000 SF gross. MVPs on each floor total 2,000 SF (4 elevator shafts at 200 SF each, 2 stairwells at 300 SF each, mechanical/electrical shafts at 200 SF). Floor area available for allocation = 22,000 - 2,000 = 20,000 SF per floor. Over 25 floors, MVPs remove 50,000 SF from the building's total area.",
+      "commonErrors": [
+        "Including elevator lobbies as MVPs (lobbies are floor common area, not penetrations)",
+        "Failing to deduct MVPs on floors where they are enclosed within a tenant's suite",
+        "Inconsistent treatment of escalator openings vs. elevator shafts",
+        "Not adjusting MVP measurements after elevator modernization changes shaft sizes"
+      ],
+      "financialImpact": "MVPs typically account for 8-12% of a building's gross area. Incorrect MVP measurement directly affects the building's total rentable area and every tenant's load factor. A 500 SF MVP measurement error in a 200,000 SF building changes every tenant's rentable area and annual rent.",
+      "leaseImplications": "Leases rarely address MVPs directly, but they affect tenants indirectly through the building's load factor and total rentable area. Tenants with remeasurement rights should verify MVP calculations, particularly in older buildings where shaft sizes may have been modified over time.",
+      "notes": "Major vertical penetrations are the most objective BOMA measurement: they are physical openings that can be measured precisely. Despite this, MVP disputes arise when buildings are renovated (elevator modernization, new mechanical shafts) or when atria are added or modified.",
+      "relatedResources": [
+        "/blog/boma-2024-changes",
+        "/resources/boma/boma-2024-adoption-roadmap"
+      ],
+      "relatedTools": [
+        "/tools/boma-2024-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "common-area-factor",
+      "title": "Common Area Factor (CAF) Explained",
+      "description": "Understanding the common area factor (the ratio between rentable and usable area), how it is calculated at both the floor and building levels, and its impact on tenant costs.",
+      "methodology": "The common area factor is the multiplier that converts usable area to rentable area. It has two components: the floor common area factor (allocating shared floor spaces like corridors and restrooms) and the building common area factor (allocating shared building spaces like lobbies, management offices, and mechanical rooms). Total CAF = floor CAF \u00d7 building CAF. A building with a 15% CAF means tenants pay for 15% more space than they exclusively occupy.",
+      "comparison2017vs2024": "BOMA 2024 maintains the two-tier common area factor structure but adds transparency requirements. The 2024 standard recommends that landlords disclose both the floor-level and building-level components of the CAF, rather than presenting only the combined factor. This helps tenants understand what they are paying for.",
+      "workedExample": "Building common areas total 15,000 SF in a 200,000 SF building (after MVP deductions). Building CAF = 200,000 / (200,000 - 15,000) = 1.081. On a multi-tenant floor, floor common area is 2,000 SF out of 18,500 SF floor area. Floor CAF = 18,500 / (18,500 - 2,000) = 1.121. A tenant with 5,000 SF usable has rentable = 5,000 \u00d7 1.121 \u00d7 1.081 = 6,059 SF. Combined CAF = 6,059 / 5,000 = 1.212 (21.2% add-on).",
+      "commonErrors": [
+        "Presenting a single blended CAF without breaking out floor vs. building components",
+        "Using different CAFs for existing tenants vs. new tenants in the same building",
+        "Failing to update the CAF when building common areas change (lobby renovation, new fitness center)",
+        "Applying the building CAF to areas that already include floor common area allocation"
+      ],
+      "financialImpact": "Each 1% change in common area factor changes every tenant's rent proportionally. In a building with $50/SF rent, a 1% CAF increase costs tenants $0.50/SF annually. For a 10,000 SF tenant, that is $5,000/year. Across a 200,000 SF building, a 1% CAF change represents $100,000 in annual revenue shift.",
+      "leaseImplications": "Leases should state the rentable area, reference the BOMA standard version used, and ideally disclose the building's current common area factor. Some leases cap the CAF or specify that the CAF cannot increase beyond a stated percentage during the lease term. This protects tenants from landlord renovations that increase common areas.",
+      "notes": "The common area factor is the single most important number in BOMA measurement from a financial perspective. It determines how much of the building's shared spaces each tenant pays for and is the primary mechanism through which landlords recover the cost of lobbies, fitness centers, conference centers, and other shared amenities.",
+      "relatedResources": [
+        "/blog/boma-2024-changes",
+        "/resources/boma/boma-2024-adoption-roadmap"
+      ],
+      "relatedTools": [
+        "/tools/boma-2024-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "load-factor-calculation",
+      "title": "Load Factor Calculation Step-by-Step",
+      "description": "A detailed walkthrough of how to calculate the load factor (also called the add-on factor or R/U ratio) for a commercial building, from gross area through usable to rentable.",
+      "comparison2017vs2024": "The calculation methodology is essentially unchanged between 2017 and 2024. The 2024 standard adds clarity on the sequence of calculations and addresses edge cases (outdoor amenity space, storage areas) that were not covered in 2017. The fundamental formula (rentable = usable \u00d7 load factor) remains the same.",
+      "methodology": "Step 1: Start with building gross area. Step 2: Deduct major vertical penetrations to get building floor area. Step 3: Identify building common areas (lobbies, management offices, mechanical rooms). Step 4: Identify floor common areas (corridors, restrooms, electrical closets). Step 5: Calculate usable area for each tenant (demised premises minus non-allocated areas). Step 6: Allocate floor common areas using Method A or B. Step 7: Apply building common area factor. Step 8: Rentable = usable \u00d7 floor load \u00d7 building load. The combined load factor is the R/U ratio.",
+      "workedExample": "Building gross: 250,000 SF. MVPs: 25,000 SF. Building floor area: 225,000 SF. Building common areas: 15,000 SF. Total floor area for tenants: 210,000 SF. Building load factor: 225,000/210,000 = 1.0714. Tenant on a multi-tenant floor: usable = 8,000 SF, floor common allocation (Method B) = 1,200 SF. Floor rentable = 9,200 SF. Building rentable = 9,200 \u00d7 1.0714 = 9,857 SF. Tenant's load factor = 9,857/8,000 = 1.232 (23.2% add-on).",
+      "commonErrors": [
+        "Calculating the load factor differently for different tenants in the same building",
+        "Confusing the building load factor with the combined (floor + building) load factor",
+        "Applying the load factor to areas that are already at rentable (double-loading)",
+        "Not recalculating when building common areas change"
+      ],
+      "financialImpact": "The load factor directly determines the gap between what a tenant uses and what they pay for. In major urban markets with load factors of 1.25-1.35, tenants pay for 25-35% more space than they exclusively occupy. A tenant considering 10,000 SF usable in a building with a 1.30 load factor will pay rent on 13,000 SF.",
+      "leaseImplications": "Leases should state the rentable area (not usable) for rent calculation purposes and reference the measurement standard. Tenants negotiating leases should compare load factors across competing buildings to understand the true cost of space. A building offering $45/SF with a 1.15 load factor may be cheaper than one offering $42/SF with a 1.30 load factor.",
+      "notes": "Load factor is the metric that allows apples-to-apples comparison between buildings. Real estate brokers and tenants should always evaluate space on a usable-SF basis (dividing total rent by usable area) to compare true occupancy costs across buildings with different load factors.",
+      "relatedResources": [
+        "/blog/boma-2024-changes",
+        "/resources/boma/boma-2024-adoption-roadmap"
+      ],
+      "relatedTools": [
+        "/tools/boma-2024-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "rentable-vs-usable",
+      "title": "Rentable vs Usable Area: What Tenants Actually Pay For",
+      "description": "The fundamental distinction between usable and rentable area under BOMA standards: what each term means, how they relate to each other, and why the difference matters for rent and CAM calculations.",
+      "comparison2017vs2024": "The core definitions are consistent between 2017 and 2024. Usable area remains the space within a tenant's demised premises available for their exclusive use. Rentable area remains usable area plus allocations of shared spaces. The 2024 standard refines edge cases (outdoor amenity space, storage) but the fundamental relationship is unchanged.",
+      "methodology": "Usable area is the space within a tenant's walls, minus non-allocated areas (columns, shafts). It represents the space the tenant can actually furnish and occupy. Rentable area is usable area plus the tenant's proportional share of floor common areas and building common areas. The difference between rentable and usable represents the tenant's share of lobbies, corridors, restrooms, mechanical rooms, and other shared spaces. Rent is charged on rentable area. CAM pro-rata share is calculated on rentable area.",
+      "workedExample": "Tenant leases a suite measured at 4,500 SF usable. The floor common area allocation (Method B) adds 600 SF. The building common area load factor of 1.08 is applied. Rentable = (4,500 + 600) \u00d7 1.08 = 5,508 SF. The tenant exclusively uses 4,500 SF but pays rent on 5,508 SF, a 22.4% premium. At $55/SF, the tenant pays $302,940/year rent on 5,508 SF instead of $247,500 on 4,500 SF.",
+      "commonErrors": [
+        "Quoting usable area to prospective tenants but billing rent on rentable area without clear disclosure",
+        "Using usable area for CAM pro-rata share calculations (should be rentable)",
+        "Confusing 'carpetable' area with BOMA usable area",
+        "Failing to distinguish between 'rentable' as a BOMA measurement term and 'rentable' as a market availability term"
+      ],
+      "financialImpact": "The gap between usable and rentable typically ranges from 15-35% in office buildings. For a 10,000 SF usable tenant at $50/SF, a load factor of 1.20 vs 1.30 represents $50,000/year in additional rent. This is the single largest measurement-related financial variable in commercial leasing.",
+      "leaseImplications": "Every commercial lease should clearly state whether the premises area is usable or rentable, reference the BOMA standard version used for measurement, and specify whether the area is subject to remeasurement. Tenants should always calculate their effective rent per usable SF to compare different lease proposals accurately.",
+      "notes": "The rentable vs usable distinction is the most fundamental concept in commercial real estate measurement. Misunderstanding this distinction leads to more tenant disputes and lease negotiation breakdowns than any other measurement issue. Landlords who transparently explain the load factor build trust with sophisticated tenants.",
+      "relatedResources": [
+        "/blog/boma-2024-changes",
+        "/resources/boma/boma-2024-adoption-roadmap"
+      ],
+      "relatedTools": [
+        "/tools/boma-2024-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "boma-2024-adoption-roadmap",
+      "title": "BOMA 2024 Standard Adoption Roadmap for Landlords",
+      "description": "A practical guide for property owners and managers transitioning from BOMA 2017 to the 2024 standard, including timeline considerations, lease implications, and implementation steps.",
+      "comparison2017vs2024": "Key changes in BOMA 2024 include: formal outdoor amenity space classification, refined storage area treatment, updated non-allocated area thresholds, enhanced transparency requirements for common area factors, and new guidance on data center and life sciences measurement. The 2024 standard is backward-compatible. Buildings measured under 2017 do not need immediate remeasurement unless triggered by lease terms or renovation.",
+      "methodology": "Adoption follows a phased approach. Phase 1: Inventory all leases to identify which reference a specific BOMA version vs. 'current BOMA standard.' Phase 2: Assess financial impact by estimating how 2024 changes affect building and tenant rentable areas. Phase 3: Engage a certified BOMA measurer to produce a 2024-compliant measurement. Phase 4: Communicate changes to tenants with adequate notice. Phase 5: Update property management software with new measurements. Phase 6: Amend leases at renewal to reference BOMA 2024.",
+      "workedExample": "A 300,000 SF office building measured under BOMA 2017. Adding a 4,000 SF rooftop terrace (at 60% = 2,400 SF) and reclassifying 1,000 SF of previously unmeasured storage increases building rentable to 303,400 SF. This increases the building load factor from 1.18 to 1.19, adding approximately 1% to every tenant's rentable area. For 200,000 SF of occupied space at $50/SF, this represents $100,000 in additional annual rent across all tenants.",
+      "commonErrors": [
+        "Adopting BOMA 2024 mid-lease without tenant consent or lease authority",
+        "Assuming all existing leases automatically reference the 'current' BOMA standard",
+        "Failing to disclose the financial impact of remeasurement to existing tenants",
+        "Adopting 2024 for new tenants while keeping existing tenants on 2017, creating inconsistent measurements in the same building"
+      ],
+      "financialImpact": "The financial impact of transitioning to BOMA 2024 varies by building. Buildings with significant outdoor amenity space or storage areas see the largest increases (1-3% in total rentable area). Buildings without these features may see minimal change. The transition cost (professional remeasurement) typically ranges from $0.03-0.08/SF.",
+      "leaseImplications": "Landlords cannot unilaterally change the measurement standard referenced in an existing lease. Transition should occur at lease renewal or through negotiated amendments. New leases should reference BOMA 2024 specifically (not 'current BOMA standard') to avoid future ambiguity. Tenants with remeasurement rights should specify which BOMA version governs remeasurement.",
+      "notes": "BOMA 2024 adoption is an opportunity for landlords to increase building rentable area (and revenue) through outdoor amenity space and storage reclassification. However, aggressive adoption without transparent tenant communication creates dispute risk. The recommended approach is gradual adoption at lease renewal events.",
+      "relatedResources": [
+        "/blog/boma-2024-changes",
+        "/resources/boma/boma-2024-adoption-roadmap"
+      ],
+      "relatedTools": [
+        "/tools/boma-2024-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "lobby-allocation",
+      "title": "Lobby Area Measurement and Allocation",
+      "description": "How building lobby areas are classified and allocated under BOMA standards, including ground-floor lobbies, elevator lobbies on upper floors, and the distinction between building common area and tenant-accessible amenity space.",
+      "comparison2017vs2024": "BOMA 2024 provides more nuanced lobby classification. The 2017 standard treated all lobby areas as building common area. The 2024 update distinguishes between functional lobbies (reception, elevator waiting, security checkpoint) which remain building common area, and amenity lobbies (lounge seating, coffee bar, collaborative space) which may be classified differently if they serve a dual function.",
+      "methodology": "Ground-floor lobbies are classified as building common area. They serve all occupants and visitors regardless of floor. The entire lobby area (reception, security desk, elevator waiting area, circulation paths) is included in the building common area pool and allocated to all tenants through the building load factor. Upper-floor elevator lobbies on multi-tenant floors are classified as floor common area and allocated only to tenants on that floor. On single-tenant floors, the elevator lobby becomes part of the tenant's usable area.",
+      "workedExample": "A building has a 5,000 SF ground-floor lobby and 200 SF elevator lobbies on each of 20 upper floors (10 multi-tenant, 10 single-tenant). Building common area includes the 5,000 SF lobby. The 10 multi-tenant floors each have 200 SF of floor common area (elevator lobbies). The 10 single-tenant floors include their 200 SF elevator lobbies in tenant usable area. Total lobby-related area: 5,000 SF building common + 2,000 SF floor common + 2,000 SF in tenant usable = 9,000 SF total.",
+      "commonErrors": [
+        "Classifying upper-floor elevator lobbies as building common area instead of floor common area",
+        "Including lobby retail space (caf\u00d7\u00a9, newsstand) in building common area when it is separately leased",
+        "Failing to reclassify elevator lobbies when a floor converts from multi-tenant to single-tenant",
+        "Double-counting lobby circulation areas that also serve as building corridors"
+      ],
+      "financialImpact": "Lobby size directly affects the building load factor. A 5,000 SF lobby in a 200,000 SF building contributes 2.5% to the load factor. Renovating a lobby from 3,000 SF to 6,000 SF (adding a lounge, fitness preview, etc.) increases the load factor by 1.5%, costing every tenant approximately $0.75/SF at $50/SF base rent.",
+      "leaseImplications": "Leases should address lobby renovation scenarios. Many landlords include provisions allowing lobby expansion with corresponding load factor increases. Tenants should negotiate caps on building common area increases to protect against lobby expansions that increase their costs without benefiting their operations.",
+      "notes": "Lobby allocation has become increasingly controversial as landlords invest heavily in 'amenitized' lobbies to compete for tenants. Converting functional lobby space into hospitality-style amenity areas increases building common area and the load factor, effectively passing renovation costs to all tenants through higher rentable areas.",
+      "relatedResources": [
+        "/blog/boma-2024-changes",
+        "/resources/boma/boma-2024-adoption-roadmap"
+      ],
+      "relatedTools": [
+        "/tools/boma-2024-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    }
+  ]
+}

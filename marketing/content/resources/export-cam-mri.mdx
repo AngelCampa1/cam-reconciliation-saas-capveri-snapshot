@@ -1,0 +1,178 @@
+---
+title: "How to Export CAM Data from MRI Software"
+description: "The MRI export workflow for CAM reconciliation: Recovery Reconciliation, GL Transaction Detail, rent roll, and billing support, plus the checks that prevent incomplete MRI exports."
+datePublished: "2026-03-17"
+dateModified: "2026-04-17"
+author: "Angel Campa"
+buttonText: "Read export guide"
+order: 74
+faq:
+  - q: "What MRI reports do I need for CAM reconciliation?"
+    a: "The core stack is Recovery Reconciliation, GL Transaction Detail, and the rent roll. Tenant Billing History is the main support export when you need invoice-level estimate detail."
+  - q: "Why do MRI reconciliation exports fail even when the report runs correctly?"
+    a: "Because the report can run correctly and still be operationally incomplete. The common causes are missing period-13 adjustments, incorrect entity selection, summary-level recovery output, and missing tenant identifiers across files."
+---
+
+<Alert type="info" title="Quick Answer">
+For MRI, export **Recovery Reconciliation**, **GL Transaction Detail**, and the **rent roll** for the same entity, property, and reconciliation period. If totals still do not tie, the first places to inspect are entity selection, adjustment periods, and recovery setup, not the cap formula.
+</Alert>
+
+MRI is strong once the setup is right, but it is less forgiving than Yardi when entity structure, recovery mappings, or period logic drift. This page is the operator playbook for getting a complete export set before you start testing math.
+
+## The MRI Export Stack
+
+| Report | Why you need it | Typical menu path |
+|---|---|---|
+| Recovery Reconciliation | Shows each tenant's recovery result by pool. | Commercial -> Recovery -> Reconciliation |
+| GL Transaction Detail | Shows the transactions feeding recoverable expenses. | General Ledger -> Reports -> Transaction Detail |
+| Rent Roll | Confirms tenant roster, SF, and lease timing. | Commercial -> Reporting -> Rent Roll |
+| Tenant Billing History | Supports estimate-billing validation. | Commercial -> AR -> Billing History |
+
+The first three are the minimum viable export package.
+
+## Before You Export
+
+Check these first:
+
+1. Which **entity** actually holds the operating expenses?
+2. Which **property** is tied to the reconciliation?
+3. Does your close process use **period 13 or 14** adjustments?
+4. Are the relevant recovery types mapped to the right GL accounts?
+
+If those answers are fuzzy, the export set will be fuzzy too.
+
+## Export 1: Recovery Reconciliation
+
+Use this to see MRI's tenant-level recovery result.
+
+<Steps>
+  <Step title="Open the reconciliation report">Go to Commercial -> Recovery -> Reconciliation.</Step>
+  <Step title="Choose entity and property carefully">Select the legal entity and property combination that actually owns the recovery setup and expense activity.</Step>
+  <Step title="Use the full reconciliation period">Set the year or period range to the exact lease or fiscal year you are reconciling.</Step>
+  <Step title="Run detail output">Use detail mode so tenant, recovery type, account, and variance support remain visible.</Step>
+  <Step title="Export to CSV or Excel">MRI CSV output is usually clean, but verify that the report is not summary-only before you move on.</Step>
+</Steps>
+
+**What to check immediately**
+
+- Recovery type and tenant columns are visible.
+- Actual, billed, and variance amounts exist.
+- The entity and property are the right ones.
+- Detail rows are present for account-level review.
+
+## Export 2: GL Transaction Detail
+
+This is the line-item proof behind the recovery totals.
+
+<Steps>
+  <Step title="Open GL Transaction Detail">Go to General Ledger -> Reports -> Transaction Detail.</Step>
+  <Step title="Set the exact period range">Match the same year or period range used in the recovery export.</Step>
+  <Step title="Include all recoverable operating accounts">Do not rely on stale saved account filters without checking the chart of accounts first.</Step>
+  <Step title="Include transaction-level detail">The file should preserve account number, date, source, reference, and amount.</Step>
+  <Step title="Decide whether period 13 or 14 belongs">If your accounting team uses adjustment periods, include them when those adjustments belong in the reconciliation year.</Step>
+</Steps>
+
+**What to check immediately**
+
+- Account numbers are visible.
+- Journal entries are not missing.
+- Adjustment periods are included when applicable.
+- Totals broadly agree with the same-period financials.
+
+## Export 3: Rent Roll
+
+This file defines the tenant denominator side of the reconciliation.
+
+<Steps>
+  <Step title="Open the rent roll">Go to Commercial -> Reporting -> Rent Roll.</Step>
+  <Step title="Use the correct as-of date">For year-end reconciliation, use year-end unless you intentionally need a mid-year snapshot.</Step>
+  <Step title="Keep tenant identifiers">Include suite, tenant ID, tenant name, rentable SF, and lease dates.</Step>
+  <Step title="Include partial-year context">If tenants moved in or out during the year, make sure the report setup still preserves the relevant lease history.</Step>
+</Steps>
+
+**What to check immediately**
+
+- Tenant ID exists and is stable.
+- Rentable SF exists for the expected leases.
+- Suites line up with the recovery file.
+- Lease timing reflects partial-year occupancy correctly.
+
+## When to Use Tenant Billing History
+
+Use Tenant Billing History when you need to answer:
+
+- what estimate charges were actually invoiced;
+- whether a mid-year estimate change reached the tenant;
+- whether the billed side of the reconciliation moved even though the recovery report did not.
+
+It is the support file, not the primary reconciliation file, but it becomes critical during disputes.
+
+## What Goes Wrong in Practice
+
+### 1. Wrong entity, right property
+
+The property is correct, but the expenses live in a different entity or management-company structure. The report runs. The totals are still wrong.
+
+### 2. Period 13 adjustments are omitted
+
+The GL export looks complete through period 12, but year-end adjustments posted in period 13 never make it into the file.
+
+### 3. Recovery output is too summarized
+
+MRI summary output can make a report look polished while stripping out the very detail you need to classify or defend a variance.
+
+### 4. Tenant ID is missing
+
+Name-only matching becomes fragile fast when tenant naming is inconsistent across leasing, billing, and recovery views.
+
+### 5. Recovery setup drifted
+
+The report is only as good as the mapping behind it. If an account was added mid-year and never tied to the right recovery type, MRI is calculating from an incomplete pool.
+
+## The QA Sequence That Saves Time
+
+Run these checks in order:
+
+1. verify entity and property selection;
+2. verify GL totals against the same-period financials;
+3. verify period-13 or 14 treatment;
+4. verify detail-level recovery output;
+5. verify tenant ID and rentable SF in the rent roll.
+
+Only after those pass should you move into gross-up, caps, or allocation disputes.
+
+## MRI Export Checklist
+
+- Same entity on all files
+- Same property on all files
+- Same reconciliation period on all files
+- Detail-level recovery output
+- Transaction-level GL detail
+- Tenant ID and suite included on the rent roll
+- Adjustment periods handled intentionally
+
+If one item is unresolved, fix the export set before you trust the reconciliation math.
+
+## Related Resources
+
+- [CAM Export Guide](/resources/export-guide)
+- [How to Export CAM Reconciliation Data from Yardi Voyager](/resources/export-cam-yardi-voyager)
+- [CAM Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide)
+- [Pro Rata Share Calculation Guide](/resources/pro-rata-share-calculation)
+
+<CTABox
+  title="Validate the MRI export set before you send statements"
+  description="Upload MRI recovery, GL, and rent-roll files to CapVeri. The platform checks the export set, matches the files together, and flags the setup gaps that create false reconciliation variance."
+  utmContent="u_cta"
+  buttonText="Start Free Trial"
+/>
+
+<FAQSection items={[
+  { q: "What MRI reports do I need for CAM reconciliation?", a: "The core stack is Recovery Reconciliation, GL Transaction Detail, and the rent roll. Tenant Billing History is the main support export when you need invoice-level estimate detail." },
+  { q: "Why do MRI reconciliation exports fail even when the report runs correctly?", a: "Because the report can run correctly and still be operationally incomplete. The common causes are missing period-13 adjustments, incorrect entity selection, summary-level recovery output, and missing tenant identifiers across files." }
+]} />
+
+## Sources
+
+1. [MRI Software - Property Management](https://www.mrisoftware.com/products/mri-property-management/)
+2. [CapVeri Sources & Research - MRI public procurement pricing](/sources#mri-gcloud-pricing)

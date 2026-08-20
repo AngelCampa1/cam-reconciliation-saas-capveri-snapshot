@@ -1,0 +1,292 @@
+---
+title: "CAM Reconciliation Template: The 8 Sections Every Defensible Reconciliation Must Have"
+description: "What a proper CAM reconciliation template must include, and why most Excel templates fail. The 8 required sections for a defensible reconciliation, what each prevents, and how to get CapVeri's downloadable Excel template."
+datePublished: "2026-03-21"
+dateModified: "2026-03-21"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 102
+faq:
+  - q: "What should a CAM reconciliation template include?"
+    a: "A complete CAM reconciliation template requires eight sections: a property and period header, an expense pool summary organized by GL account, an exclusion log documenting every removed expense with lease clause references, a gross-up worksheet separating variable from fixed expenses, a denominator reconciliation verifying building square footage, a per-tenant calculation sheet with pro-rata share and true-up amount, a cap structure verification worksheet, and an audit trail log. Templates missing any of these sections create documentation gaps that tenant auditors exploit."
+  - q: "Can I use an Excel template for CAM reconciliation?"
+    a: "Excel can handle the math of CAM reconciliation, but standard Excel templates have four structural failures: no exclusion tracking tied to lease clauses, no gross-up audit trail showing which accounts were classified as variable vs. fixed, no cap enforcement that validates against each tenant's specific lease language, and no version control. A formula error introduced in February is undetectable by March. For portfolios under five properties with simple lease structures, Excel is workable with discipline. Above that threshold, the error rate climbs faster than the time savings justify."
+  - q: "What is a gross-up worksheet in a CAM reconciliation template?"
+    a: "A gross-up worksheet is the section of the reconciliation template that documents the adjustment of variable expenses to reflect a stabilized occupancy level. It shows: the monthly occupancy rate for each month of the fiscal year, the variable expense total for the year, the gross-up target percentage (from the lease, typically 90–95%), and the adjusted expense total. The worksheet must clearly identify which GL accounts were classified as variable (eligible for gross-up) and which were classified as fixed (not eligible). A gross-up applied without this documentation cannot be defended in a dispute."
+---
+
+## Why the Template Is the Starting Point
+
+CAM reconciliation errors are almost never arithmetic errors. The math is simple. The errors are structural: the wrong expenses in the pool, the wrong denominator in the share calculation, a gross-up applied to the wrong accounts, a cap that should have triggered but did not. These are documentation and process failures, not calculation failures.
+
+A proper reconciliation template prevents structural errors by building the right sequence of steps into the document itself. Each section validates the next. The exclusion log feeds into the expense pool. The gross-up worksheet feeds into the pool total. The denominator reconciliation feeds into every tenant's pro-rata share. If any section is missing, the errors it was designed to prevent go undetected until a tenant auditor finds them.
+
+This guide describes what every section of a defensible CAM reconciliation template must contain, what error each prevents, and what the most common failure mode looks like when that section is skipped.
+
+CapVeri provides a downloadable CAM reconciliation template in Excel format. [Download the template](/tools/cam-reconciliation-template) and we'll send it to you immediately.
+
+---
+
+## The 8 Required Sections
+
+| # | Section | What It Contains | Error It Prevents |
+|---|---|---|---|
+| 1 | Property and period header | Property name, fiscal year, total GLA/RSF, BOMA standard, preparer | Wrong building data applied to calculations |
+| 2 | Expense pool summary | GL account → expense category → recoverable amount | Miscoded expenses and missing line items |
+| 3 | Exclusion log | Removed items, removal reason, lease clause reference | Non-recoverable expenses passed through to tenants |
+| 4 | Gross-up worksheet | Variable vs. fixed classification, monthly occupancy, target %, adjusted total | Gross-up applied to fixed costs or without documentation |
+| 5 | Denominator reconciliation | Certified RSF vs. system RSF, BOMA standard, mid-year changes | Systemic pro-rata errors across entire rent roll |
+| 6 | Per-tenant calculation sheet | Pro-rata share, estimates paid, overage/underage per tenant | Incorrect tenant billing based on wrong lease terms |
+| 7 | Cap structure verification | Cap type, base year amount, cap %, ceiling, actual billed | Cap not applied or applied with wrong method |
+| 8 | Audit trail log | Who changed what, when, and with what authorization | Undocumented adjustments that look like errors in a dispute |
+
+---
+
+## Section 1: Property and Period Header
+
+The header is not administrative formality. It is the source of truth for every calculation that follows.
+
+**Required fields:**
+
+- Property name and address
+- Fiscal year start and end dates (e.g., January 1, 2025 – December 31, 2025)
+- Total rentable square footage (GLA/RSF) used in this reconciliation
+- BOMA measurement standard the building is certified under (1996, 2010, 2017, or 2024)
+- Date of most recent BOMA measurement certification
+- Preparer name, reviewer name, and approval sign-off
+
+**Why it matters:** If the header shows 90,000 SF GLA and the certified BOMA measurement certificate says 85,000 SF, every pro-rata share in the reconciliation is wrong by 5.9%. A tenant auditor who pulls the BOMA certificate will find this in the first 30 minutes. The header forces the preparer to confirm these numbers before any calculations run.
+
+---
+
+## Section 2: Expense Pool Summary
+
+The expense pool summary is the bridge between the raw GL and the recoverable expense total. It does not just list expenses. It organizes them by GL account, maps each account to an expense category, and identifies the recoverable amount for each.
+
+**Required structure:**
+
+```
+GL Account | Account Description | Annual Total | Recoverable? | Recoverable Amount | Notes
+6110       | Day Janitorial      | $98,000      | Yes          | $98,000            |
+6115       | Janitorial Supplies | $12,400      | Yes          | $12,400            |
+6210       | HVAC Maintenance    | $38,500      | Yes          | $38,500            |
+6310       | Roof Replacement    | $140,000     | No (CapEx)   | $0                 | See exclusion log, line 3
+6420       | Property Tax        | $387,000     | Yes          | $387,000           |
+```
+
+**Why this format matters:** Mapping from GL account to expense category is where most expense pool errors originate. A roof replacement coded to "Building Maintenance" instead of "Capital Improvements" looks recoverable until someone checks the vendor invoice. The expense pool summary forces the preparer to make an explicit recoverable/non-recoverable determination for every GL account, not just the obvious ones.
+
+**What most Excel templates miss:** They sum expenses by category without showing the underlying GL accounts. The category total is visible but the composition is not. A tenant auditor who requests GL detail will immediately see accounts in the pool that should have been excluded, and the template gives them no way to see that the exclusion decision was made deliberately.
+
+---
+
+## Section 3: Exclusion Log
+
+The exclusion log documents every expense that was removed from the recoverable pool and why. This is the single most overlooked section in most reconciliation templates. It is also the most valuable one when a tenant challenges the calculation.
+
+**Required fields for each exclusion:**
+
+- GL account number and description
+- Annual amount excluded
+- Reason for exclusion (CapEx, landlord-only cost, above-standard service, anchor carve-out, etc.)
+- Lease clause reference that authorizes the exclusion (e.g., "Section 7.3(b): Capital Expenditures excluded")
+- Preparer initials
+
+**Example log entries:**
+
+| GL Account | Description | Amount Excluded | Reason | Lease Reference |
+|---|---|---|---|---|
+| 6310 | Roof replacement | $140,000 | CapEx - useful life > 3 years | Section 7.3(b) |
+| 6715 | CEO parking | $18,000 | Landlord-only cost | Section 7.3(f) |
+| 6820 | Anchor tenant HVAC upgrade | $32,000 | Anchor exclusion per Exhibit C | Exhibit C, Section 2 |
+
+**The dispute this prevents:** Without an exclusion log, a tenant who sees that the GL total is $2,240,000 but the recoverable pool is $2,061,200 will ask what happened to the $178,800 difference. Without a documented exclusion log, the answer requires reconstructing the decision-making from emails and memory. With a log, the answer is a single document.
+
+---
+
+## Section 4: Gross-Up Worksheet
+
+The gross-up worksheet is the most technically complex section of the reconciliation template, and the one most likely to be executed incorrectly in an ad hoc spreadsheet.
+
+**What it must show:**
+
+1. **Variable/fixed classification table:** Every GL account classified as variable (eligible for gross-up) or fixed (not eligible). This classification drives the gross-up calculation. It must be explicit and documented, not embedded in a formula.
+
+2. **Monthly occupancy table:** Actual occupancy percentage for each month of the fiscal year. This is the source data for the gross-up adjustment; it must come from the rent roll, not from an estimate.
+
+3. **Gross-up calculation:** The variable expense total adjusted to the target occupancy percentage from the lease. Standard formula: Grossed-Up Amount = Variable Expenses / Average Actual Occupancy × Target Occupancy %.
+
+4. **Fixed expense passthrough:** The fixed expense total, carried through without adjustment.
+
+5. **Adjusted pool total:** Variable (grossed up) + Fixed = total recoverable expenses after gross-up.
+
+**Example:**
+
+| | Variable Expenses | Fixed Expenses |
+|---|---|---|
+| Annual total (GL) | $892,000 | $1,169,200 |
+| Average actual occupancy | 88% | N/A |
+| Gross-up target (per lease Section 8.4) | 95% | N/A |
+| Adjusted amount | $963,841 | $1,169,200 |
+| **Adjusted pool total** | **$2,133,041** | |
+
+The gross-up increased the pool by $71,841, the difference between expenses at 88% occupancy and what they would have been at 95%. This adjustment is contractually required by the gross-up clause. It is also the adjustment most frequently challenged if the worksheet does not show the variable/fixed classification clearly.
+
+<Alert type="warning" title="Gross-Up on Fixed Expenses Is Indefensible">
+Applying gross-up to property taxes, insurance premiums, or management fees is the most common gross-up error, and the most damaging one in a dispute. These expenses do not scale with occupancy. A tenant auditor who sees gross-up applied to the tax line will flag the entire gross-up calculation as suspect, extending the dispute timeline significantly. The classification table in the gross-up worksheet is your documentation that you applied the adjustment correctly.
+</Alert>
+
+---
+
+## Section 5: Denominator Reconciliation
+
+The denominator is the building's total rentable square footage used in every tenant's pro-rata share calculation. A wrong denominator creates a systemic error. It is not a one-tenant mistake. It is a whole-building mistake that affects every line of every statement.
+
+**Required components:**
+
+- **BOMA-certified RSF:** The building's total rentable area as certified under the applicable BOMA standard. Source: the measurement certificate.
+- **System RSF:** The square footage currently loaded in the property management system.
+- **Reconciliation:** If these two numbers differ, document why and which one is correct for this reconciliation.
+- **Mid-year changes:** If any tenant expanded, contracted, or vacated during the year, document the effective date and the resulting change to the denominator (for leases where the denominator changes with occupancy).
+- **Lease-specific denominators:** If any tenant's lease defines a non-standard denominator (e.g., total GLA excluding anchor space), document it here and carry it into that tenant's per-tenant sheet.
+
+**The BOMA standard matters:** A building measured under BOMA 1996 will show different RSF than the same building measured under BOMA 2017. If the lease cites "BOMA 2010" and the landlord uses BOMA 2024 measurements, the denominator is wrong for that tenant. See [BOMA 2024 Implementation Guide](/resources/boma-2024-implementation-guide) for the specifics of each standard.
+
+---
+
+## Section 6: Per-Tenant Calculation Sheet
+
+This is the section that generates the actual true-up amount for each tenant. Every tenant in the building gets their own calculation, because no two tenants have identical lease terms.
+
+**Required fields per tenant:**
+
+| Field | Source |
+|---|---|
+| Tenant name and suite | Rent roll |
+| Lease period (start/end dates) | Lease abstract |
+| Tenant RSF | Lease abstract / measurement certificate |
+| Denominator (lease-defined) | Denominator reconciliation sheet |
+| Pro-rata share % | Tenant RSF / Denominator |
+| Recoverable expense pool | Expense pool summary (after gross-up) |
+| Tenant-specific exclusions | Exclusion log (tenant-specific carve-outs) |
+| Net recoverable pool for this tenant | Pool minus tenant-specific exclusions |
+| Tenant's allocated share | Net pool × pro-rata % |
+| Cap ceiling (if applicable) | Cap structure verification sheet |
+| Billed controllable amount | Lower of actual share and cap ceiling |
+| Admin/management fee | Per lease clause (% of allocated share) |
+| Total tenant obligation | Sum of above |
+| Estimates paid YTD | Billing system records |
+| **True-up (or credit)** | Obligation minus estimates |
+
+Mid-year occupancy changes require time-weighting. A tenant who occupied 10,000 SF from January through June, then expanded to 12,500 SF from July through December, does not get a flat 10,000 SF or 12,500 SF applied to the full year. The calculation uses 10,000 SF for six months and 12,500 SF for six months, weighted accordingly. Many spreadsheet templates apply the year-end square footage to the full year, which is a lease violation that audit firms find in the first 30 minutes of any review.
+
+---
+
+## Section 7: Cap Structure Verification
+
+CAM expense caps are among the most lease-specific provisions in any reconciliation. Cumulative vs. non-cumulative, base year, cap percentage, what counts as controllable: all of these vary by tenant. A template that does not have a dedicated cap verification section will apply a single cap logic across all tenants, which is almost certainly wrong for at least some of them.
+
+**Required fields:**
+
+- Tenant name
+- Cap type (cumulative or non-cumulative)
+- Base year (the year from which the cap is calculated)
+- Base year controllable CAM amount
+- Cap percentage per year
+- Current year cap ceiling (calculated)
+- Current year actual controllable CAM amount
+- Billed amount (lower of ceiling and actual)
+- Expenses excluded from cap (taxes, insurance, and other uncontrollables per lease)
+
+**Cumulative vs. non-cumulative: the key distinction:**
+
+A non-cumulative 5% cap resets each year against the prior year's actual. If prior-year controllable CAM was $100,000, the ceiling this year is $105,000, regardless of what happened in prior years.
+
+A cumulative cap compounds from the base year. If the base year controllable CAM was $90,000 with a 5% cumulative cap, the ceiling in year five is $90,000 × (1.05)^5 = $114,866.
+
+These produce materially different results. Applying non-cumulative logic to a cumulative cap understates what the landlord can bill. Applying cumulative logic to a non-cumulative cap overbills the tenant and is recoverable in a dispute.
+
+For the full treatment, see [Cumulative vs. Non-Cumulative CAM Caps](/resources/cumulative-vs-non-cumulative-cam-caps).
+
+---
+
+## Section 8: Audit Trail Log
+
+The audit trail log is the section that separates a professional reconciliation from a spreadsheet exercise. It documents every material change made to the reconciliation after the initial draft: who made the change, when, what the prior value was, and what authorization supported the change.
+
+**Required fields:**
+
+| Date | Preparer | Change Description | Prior Value | New Value | Authorization |
+|---|---|---|---|---|---|
+| 2026-02-14 | J. Huang | Removed HVAC compressor from pool (CapEx) | $2,201,200 | $2,061,200 | CFO email 2/14/26 |
+| 2026-02-22 | J. Huang | Corrected BOMA denominator (2010 std, not 2017) | 90,000 SF | 85,000 SF | BOMA cert on file |
+| 2026-03-05 | R. Patel | Applied Tenant C cumulative cap (year 3) | $28,400 | $24,866 | Lease Section 9.2 |
+
+**Why this matters in a dispute:** A tenant auditor who reviews the reconciliation file will look for unexplained adjustments. If the pool total changed between the first draft and the final statement, they will ask why. Without an audit trail, "we corrected an error" is the only available answer, and it invites scrutiny of every other number in the reconciliation. With a log, the change is documented, authorized, and traceable.
+
+---
+
+## Why Most Excel Templates Fail
+
+Standard Excel templates (the kind available for download across the internet) share four structural failures that make them unsuitable for portfolios with more than a handful of tenants or complex lease provisions.
+
+**1. No exclusion tracking.** A typical Excel template has a single cell for "total recoverable expenses." There is no GL-to-pool bridge and no documentation of what was removed. The final number is correct (or not), but the path from GL to pool is invisible.
+
+**2. No gross-up audit trail.** Excel templates often apply the gross-up adjustment as a formula: `=B12/AverageOccupancy*TargetOccupancy`. The formula result is visible, but the variable/fixed classification that should precede it does not exist as a separate step. When the result is challenged, there is no documentation showing which accounts were classified as variable.
+
+**3. No cap enforcement.** Most templates have a field for "CAM cap" but no formula that validates the cap against each tenant's specific lease terms. The controller manually enters a cap amount, if they remember to. The template does not prompt them, does not validate the calculation, and does not flag tenants for whom a cap should apply.
+
+**4. No version control.** Spreadsheets change. Formulas break. A value entered in cell C47 in February gets overwritten in March when the GL is updated. Excel has no native audit trail. The final version of the reconciliation may not match what was calculated two weeks earlier, and there is no way to detect the difference.
+
+These are not Excel limitations. They are template design failures. A well-engineered Excel workbook can address all four. But it requires deliberate architecture, not a downloaded generic template.
+
+---
+
+## Template vs. Platform: When the Difference Matters
+
+A template (even a well-designed one) is a tool that requires disciplined execution by the person using it. The template does not know if you skipped the exclusion log. It does not enforce the gross-up classification. It does not pull the cap language from the lease and verify the calculation against it.
+
+A reconciliation platform automates the enforcement. CapVeri ingests the GL export, maps accounts to expense categories using your chart of accounts, flags potential CapEx for review, runs the gross-up with the variable/fixed classification documented, pulls the denominator from the certified measurement, and applies the cap logic from each tenant's lease abstract. Every section above is generated from source data, not populated manually.
+
+The practical difference: a template reduces errors when executed correctly. A platform prevents the errors that occur when execution is rushed, when the preparer is unfamiliar with a specific lease provision, or when the portfolio is too large for a single controller to review every detail.
+
+For the comparison of building vs. buying a reconciliation system, see [CAM Build vs. Buy](/resources/cam-build-vs-buy). For migrating off Excel, see [Data Migration Off Excel](/resources/data-migration-off-excel).
+
+---
+
+## Getting the Template
+
+CapVeri provides a downloadable CAM reconciliation template in Excel format. [Download the template](/tools/cam-reconciliation-template) and we'll send it to you immediately.
+
+The template includes all eight sections described above, with structured worksheets for the exclusion log, gross-up classification, denominator reconciliation, per-tenant calculation (with cap verification built in), and audit trail log. It works for single properties and can be replicated across a portfolio.
+
+<Alert type="info" title="Template Included in All CapVeri Plans">
+If you are already using CapVeri, the reconciliation template is included, along with automated GL ingestion, lease abstract parsing, and per-tenant statement generation. The downloadable Excel template is for teams that want to run the process manually before evaluating a platform.
+</Alert>
+
+<FAQSection items={[
+  { q: "What should a CAM reconciliation template include?", a: "A complete CAM reconciliation template requires eight sections: a property and period header, an expense pool summary organized by GL account, an exclusion log documenting every removed expense with lease clause references, a gross-up worksheet separating variable from fixed expenses, a denominator reconciliation verifying building square footage, a per-tenant calculation sheet with pro-rata share and true-up amount, a cap structure verification worksheet, and an audit trail log. Templates missing any of these sections create documentation gaps that tenant auditors exploit." },
+  { q: "Can I use an Excel template for CAM reconciliation?", a: "Excel can handle the math of CAM reconciliation, but standard Excel templates have four structural failures: no exclusion tracking tied to lease clauses, no gross-up audit trail showing which accounts were classified as variable vs. fixed, no cap enforcement that validates against each tenant's specific lease language, and no version control. A formula error introduced in February is undetectable by March. For portfolios under five properties with simple lease structures, Excel is workable with discipline. Above that threshold, the error rate climbs faster than the time savings justify." },
+  { q: "What is a gross-up worksheet in a CAM reconciliation template?", a: "A gross-up worksheet is the section of the reconciliation template that documents the adjustment of variable expenses to reflect a stabilized occupancy level. It shows: the monthly occupancy rate for each month of the fiscal year, the variable expense total for the year, the gross-up target percentage (from the lease, typically 90–95%), and the adjusted expense total. The worksheet must clearly identify which GL accounts were classified as variable (eligible for gross-up) and which were classified as fixed (not eligible). A gross-up applied without this documentation cannot be defended in a dispute." }
+]} />
+
+<CTABox
+  title="Get the CAM Reconciliation Template"
+  description="Download CapVeri's CAM reconciliation template in Excel. All 8 sections: built-in gross-up worksheet, exclusion log, cap verification, and audit trail. Or upload your GL and let CapVeri run the reconciliation automatically."
+  utmContent="u_cta"
+  buttonText="Start Free Trial"
+/>
+
+## Related Resources
+
+- [Data Migration Off Excel](/resources/data-migration-off-excel) - Moving from spreadsheets to a reconciliation platform
+- [Year-End Close Checklist](/resources/year-end-close-checklist-cam) - GL close process before reconciliation begins
+- [CAM Pre-Send Checklist](/resources/cam-pre-send-packet-checklist) - 12-point QA before statements go to tenants
+- [Defensible Reconciliation Package](/resources/defensible-reconciliation-package) - Documentation to include with reconciliation statements
+- [CAM Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide) - Full variable/fixed classification methodology
+
+## Sources
+
+1. BOMA floor measurement standards - [BOMA International](https://boma.org/boma-standards/)
+2. IREM CAM reconciliation methodology - [IREM Oregon (PDF)](https://iremoregon.org/images/meeting/021820/irem_cam_recs_art_or_science_pres.pdf)
+3. IREM income/expense analysis - [IREM](https://www.irem.org/resources/by-type/income-expense-analysis)

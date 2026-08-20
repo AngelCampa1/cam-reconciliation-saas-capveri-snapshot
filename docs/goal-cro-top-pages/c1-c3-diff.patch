@@ -1,0 +1,168 @@
+diff --git a/frontend/src/pages/auth/RegisterPage.tsx b/frontend/src/pages/auth/RegisterPage.tsx
+index 0ce684cc..a53117a5 100644
+--- a/frontend/src/pages/auth/RegisterPage.tsx
++++ b/frontend/src/pages/auth/RegisterPage.tsx
+@@ -10,7 +10,7 @@ import { Link, useNavigate } from 'react-router-dom'
+ import { useForm, Controller } from 'react-hook-form'
+ import { zodResolver } from '@hookform/resolvers/zod'
+ import { z } from 'zod'
+-import { Eye, EyeOff, AlertCircle, Loader2 } from 'lucide-react'
++import { Eye, EyeOff, AlertCircle, Loader2, Check, Circle } from 'lucide-react'
+ import { cn } from '@/lib/utils'
+ import { useAuth } from '@/hooks/useAuth'
+ import { startDefaultTrial } from '@/lib/billing/startDefaultTrial'
+@@ -107,7 +107,7 @@ export function RegisterPage() {
+           header={
+             <AuthCardHeader
+               logo={<AuthLogo size="lg" />}
+-              title="Create your account"
++              title="Create your free account"
+               subtitle="Just an email and a password to get started."
+             />
+           }
+@@ -240,12 +240,50 @@ export function RegisterPage() {
+                   {errors.password.message}
+                 </p>
+               )}
+-              {passwordFocused && !password && (
+-                <ul className="mt-2 text-xs text-muted-foreground space-y-1">
+-                  <li>At least 8 characters</li>
+-                  <li>One uppercase letter (A-Z)</li>
+-                  <li>One lowercase letter (a-z)</li>
+-                  <li>One number (0-9)</li>
++              {(passwordFocused || password.length > 0) && (
++                <ul
++                  className="mt-2 space-y-1 text-xs"
++                  aria-label="Password requirements"
++                >
++                  {[
++                    {
++                      ok: password.length >= 8,
++                      label: 'At least 8 characters',
++                    },
++                    {
++                      ok: /[A-Z]/.test(password),
++                      label: 'One uppercase letter (A-Z)',
++                    },
++                    {
++                      ok: /[a-z]/.test(password),
++                      label: 'One lowercase letter (a-z)',
++                    },
++                    { ok: /[0-9]/.test(password), label: 'One number (0-9)' },
++                  ].map((rule) => (
++                    <li
++                      key={rule.label}
++                      className={cn(
++                        'flex items-center gap-1.5',
++                        rule.ok ? 'text-success' : 'text-muted-foreground'
++                      )}
++                    >
++                      {rule.ok ? (
++                        <Check
++                          className="h-3.5 w-3.5 shrink-0"
++                          aria-hidden="true"
++                        />
++                      ) : (
++                        <Circle
++                          className="h-3.5 w-3.5 shrink-0"
++                          aria-hidden="true"
++                        />
++                      )}
++                      <span>{rule.label}</span>
++                      <span className="sr-only">
++                        {rule.ok ? 'met' : 'not met'}
++                      </span>
++                    </li>
++                  ))}
+                 </ul>
+               )}
+               {password.length > 0 && (
+diff --git a/marketing/src/components/PricingContent.tsx b/marketing/src/components/PricingContent.tsx
+index 1b125249..e442ad42 100644
+--- a/marketing/src/components/PricingContent.tsx
++++ b/marketing/src/components/PricingContent.tsx
+@@ -150,12 +150,12 @@ export function PricingContent() {
+     <div className="container mx-auto px-4 py-16 pb-24 sm:px-6 lg:px-8">
+       <div className="mb-10 text-center">
+         <h1 className="mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
+-          Priced for the cost of one CAM error
++          Start free. Pay only when you keep it.
+         </h1>
+         <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+-          Start with one building. Prove the process on your own exports. Expand
+-          when you are ready. CapVeri verifies CAM reconciliations from your
+-          exports. It does not replace your property management system.
++          Start with one building. Test it on your own files. Add more when you
++          are ready. CapVeri checks your CAM math before tenants get billed. Keep
++          your current property system.
+         </p>
+         {activeCode && activeLabel ? (
+           <p className="mx-auto mt-3 max-w-2xl text-sm font-semibold text-primary">
+diff --git a/marketing/src/components/landing/HeroSection.tsx b/marketing/src/components/landing/HeroSection.tsx
+index de212ae4..ac145e9e 100644
+--- a/marketing/src/components/landing/HeroSection.tsx
++++ b/marketing/src/components/landing/HeroSection.tsx
+@@ -64,7 +64,7 @@ export function HeroSection({ className }: HeroSectionProps) {
+                   href="#how-it-works"
+                   onClick={() =>
+                     trackMarketingEvent("cta_clicked", {
+-                      button_text: "See how it works",
++                      button_text: "See the workflow",
+                       location: "hero_secondary",
+                     })
+                   }
+@@ -76,8 +76,8 @@ export function HeroSection({ className }: HeroSectionProps) {
+
+             <p className="mt-3 flex flex-wrap items-center justify-start gap-x-4 gap-y-1 text-xs text-muted-foreground sm:justify-start">
+               <span className="flex items-center gap-1">
+-                <ShieldCheck className="h-3 w-3 text-success" /> First audit
+-                free
++                <ShieldCheck className="h-3 w-3 text-success" /> First
++                reconciliation free
+               </span>
+               <span className="flex items-center gap-1">
+                 <ShieldCheck className="h-3 w-3 text-success" /> No credit card
+diff --git a/marketing/src/components/landing/SocialProofStrip.tsx b/marketing/src/components/landing/SocialProofStrip.tsx
+index 45f1ae36..5dbed553 100644
+--- a/marketing/src/components/landing/SocialProofStrip.tsx
++++ b/marketing/src/components/landing/SocialProofStrip.tsx
+@@ -12,28 +12,27 @@ import { cn } from "@/lib/utils";
+
+ const trustPoints = [
+   {
+-    icon: Building2,
+-    title: "Built for commercial landlords",
++    icon: ShieldCheck,
++    title: "Catches errors both ways",
+     description:
+-      "Supports property managers, controllers, asset managers, and CRE finance teams.",
++      "We find where you over-billed and where you under-billed.",
+   },
+   {
+-    icon: FileSpreadsheet,
+-    title: "Works from existing exports",
++    icon: Workflow,
++    title: "Math you can trace",
+     description:
+-      "Starts with GL, rent roll, recovery, and lease files instead of a system replacement.",
++      "Fixed rules do the math, not AI. Every number ties back to your files.",
+   },
+   {
+-    icon: Workflow,
+-    title: "Deterministic calculation workflow",
+-    description:
+-      "Keeps CAM math traceable from source data through tenant-ready support.",
++    icon: Building2,
++    title: "Built on BOMA 2024",
++    description: "Our CAM math follows the BOMA 2024 standard.",
+   },
+   {
+-    icon: ShieldCheck,
+-    title: "Reviewable audit record",
++    icon: FileSpreadsheet,
++    title: "No new system needed",
+     description:
+-      "Preserves inputs, mappings, exceptions, adjustments, and exported packets.",
++      "Keep Yardi or MRI. Upload a file you already export.",
+   },
+ ];

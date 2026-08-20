@@ -1,0 +1,153 @@
+---
+title: "What AI Can and Cannot Do in CAM Reconciliation"
+description: "AI helps extract CAM data and flag anomalies. But lease judgment, financial math, and final sign-off need deterministic systems and human review."
+datePublished: "2026-03-17"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 76
+faq:
+  - q: "Should I use AI to calculate CAM reconciliation charges?"
+    a: "No. AI language models produce probabilistic outputs - they may generate a different answer on two runs with identical inputs. CAM calculations must be deterministic and reproducible so they survive tenant audits and legal challenges. Use AI for extraction and classification tasks, then route the verified data into a deterministic calculation engine for the math."
+  - q: "How does CapVeri use AI in the CAM reconciliation workflow?"
+    a: "CapVeri uses AI for three specific tasks: extracting data from PDFs and lease documents, classifying GL line items into expense categories, and flagging anomalies in year-over-year expense patterns. Every AI-generated extraction requires human verification before it enters the calculation pipeline. The calculations themselves run on a deterministic Python engine using exact Decimal arithmetic."
+---
+
+## Where AI Helps and Where It Hurts
+
+Property controllers are fielding more vendor pitches for "AI-powered CAM reconciliation" than ever. Some of these tools are genuinely useful. Others are dangerous. The difference comes down to one question: is the AI doing extraction or calculation?
+
+That distinction matters because the consequences of getting it wrong are not theoretical. A tenant's auditor who cannot reproduce your reconciliation math has grounds for a dispute. A court that cannot trace your calculation methodology has grounds to void the charge. An AI model that produces a different number on Tuesday than it did on Monday gives both of them exactly what they need.
+
+This article maps out where AI adds real value in the CAM workflow, where it creates risk, and how to build a system that uses each tool for what it does well.
+
+## Where AI Adds Real Value
+
+### 1. PDF and Document Extraction
+
+The highest-value AI application in CAM reconciliation is reading documents that were never designed to be read by software.
+
+A 180-page commercial lease contains the CAM provisions you need - buried in Section 8.3, cross-referenced in Exhibit D, and modified by an amendment signed three years after execution. AI can help extract candidate fields from that document, but the output still needs a reviewer who understands the lease.
+
+The same applies to vendor invoices, property tax bills, insurance certificates, and utility statements. AI reads the PDF, extracts the relevant fields (amount, date, vendor, GL category), and presents them for human verification.
+
+**Practical example:** A 12-property portfolio can generate thousands of vendor invoices per year. AI extraction turns those invoices into structured fields faster than manual entry. But the workflow should still route low-confidence fields, unusual vendors, and recoverability-sensitive charges to human review before anything reaches a tenant statement.
+
+### 2. Pattern Recognition and GL Classification
+
+Every property management system exports GL data in its own format. Yardi account 5110 might be "Janitorial Services" for one management company and "Building Cleaning - Common Area" for another. MRI uses a completely different chart of accounts.
+
+AI classification maps incoming GL codes to standardized expense categories based on the account description, historical patterns, and the amounts involved. It handles the 90% of entries that are straightforward and flags the 10% that need human judgment.
+
+| Scenario | Manual Approach | AI-Assisted Approach |
+|----------|----------------|---------------------|
+| New property onboarding | Manual chart-of-account review | Review AI suggestions and resolve exceptions |
+| Quarterly GL import | Line-by-line classification | Review flagged categories and unusual amounts |
+| Cross-system migration | Manual remapping between ERP exports | Verify suggested mappings before import |
+
+### 3. Anomaly Detection
+
+AI is effective at identifying patterns that humans miss in large datasets. Year-over-year expense spikes, unusual vendor payment patterns, duplicate invoice detection, and seasonal anomalies all benefit from statistical pattern recognition.
+
+Consider a building where janitorial costs increased sharply year over year. A human reviewing hundreds of GL line items might catch it. AI flags the spike, then compares it with related categories such as groundskeeping or security to show whether the increase looks isolated or tied to a scope change.
+
+**What anomaly detection catches:**
+- Year-over-year expense increases exceeding 15% without a corresponding explanation
+- Duplicate invoices from the same vendor within 30 days
+- Expense categories that suddenly appear or disappear
+- Seasonal patterns that break from historical norms (e.g., HVAC costs spiking in February)
+- Pro-rata share calculations that don't match the lease square footage
+
+A 200,000 SF office building may have dozens of line items worth a second look each year. AI detection surfaces candidates more consistently than a manual scan. A human then decides which are actual errors versus explainable changes.
+
+## Where AI Creates Risk
+
+### 1. Financial Math
+
+This is the bright line. AI should never perform the actual CAM calculation.
+
+The reason is not that AI gets the math wrong every time. The problem is that a language model response is not a calculation ledger. If the system cannot prove every formula, input, intermediate step, and rounding decision, the reconciliation cannot be defended.
+
+A gross-up calculation on a $2.1M expense pool at 73.4% occupancy with a 95% gross-up cap has one correct methodology under the lease. A deterministic engine applies that methodology the same way every time. An LLM may produce a plausible-looking number without the calculation ledger needed to defend it.
+
+When a tenant's auditor asks to see the gross-up methodology, "the AI calculated it" is not an answer that survives a deposition.
+
+**The math that must be deterministic:**
+- Gross-up calculations (occupancy adjustment)
+- Pro-rata share allocation (SF numerator / SF denominator)
+- Expense cap application (cumulative and non-cumulative)
+- Base year stop calculations
+- Administrative fee computations
+- Year-end true-up settlement amounts
+
+### 2. Lease Interpretation
+
+A lease clause that reads "Tenant shall pay its proportionate share of Operating Expenses, excluding capital expenditures with a useful life in excess of five years" requires legal and business judgment to apply. What counts as a capital expenditure? Who determines useful life? Does a roof repair with a 7-year useful life qualify as recoverable?
+
+AI can extract that clause from the lease document. It should not decide what it means. Lease interpretation involves context, precedent, negotiation history, and sometimes litigation risk assessment. These are human calls.
+
+**Real-world example:** A tenant's lease excludes "structural repairs." The building needs $85,000 in parking garage waterproofing. Is the parking deck structural? In some jurisdictions, yes. In others, it depends on the specific work performed. An AI model will give you a confident-sounding answer. But it is not practicing law, and treating its output as a legal determination is a liability trap.
+
+### 3. Sign-Off Authority
+
+No AI system should authorize the release of a CAM reconciliation statement to tenants. The sign-off decision involves:
+
+- Verifying that the calculation matches the lease terms (human judgment)
+- Confirming that exclusions are properly applied (legal interpretation)
+- Deciding whether to adjust borderline items in the tenant's favor (business judgment)
+- Approving the timing of delivery relative to lease deadlines (risk management)
+
+These decisions carry financial and legal consequences. They require a human who can be held accountable.
+
+## CapVeri: AI for Extraction, Deterministic Code for Math
+
+CapVeri was built on the principle that AI and deterministic calculation each have a role. Mixing them up creates the exact problems that CAM reconciliation platforms are supposed to solve.
+
+The workflow separates cleanly into four stages:
+
+**Stage 1 - AI Extraction:** Lease documents, vendor invoices, and GL exports are processed by AI to pull out structured data. OCR reads scanned documents. Classification models map GL codes to expense categories. The output is structured data fields, not calculations.
+
+**Stage 2 - Human Verification:** Every AI-extracted value goes to a human reviewer before entering the calculation pipeline. A controller confirms the lease square footage, checks that expense categories are properly mapped, and verifies that extracted cap provisions match the actual lease language.
+
+**Stage 3 - Deterministic Calculation:** The verified data feeds into a Python calculation engine using exact Decimal arithmetic. Gross-up, pro-rata share, expense caps, base year stops, and settlement amounts are all computed deterministically. The same inputs produce the same outputs every time, with a full step-by-step calculation ledger.
+
+**Stage 4 - Audit Trail Storage:** Every calculation, every input, and every intermediate step is stored and retrievable. Three years from now, when a tenant's auditor asks how you arrived at their $47,312 CAM charge, you can reproduce the entire calculation path.
+
+| Stage | Technology | Why |
+|-------|-----------|-----|
+| Extraction | AI (OCR + classification) | Speed and scale on unstructured documents |
+| Verification | Human review | Judgment, context, accountability |
+| Calculation | Deterministic Python engine | Reproducibility, audit defensibility |
+| Storage | Immutable audit trail | Long-term retrievability for disputes |
+
+## How to Evaluate AI Claims from Vendors
+
+When a CAM software vendor says "AI-powered reconciliation," ask these three questions:
+
+**1. Does the AI perform the actual calculation, or just the extraction?**
+If the AI performs the calculation, ask for the reproducibility guarantee. Can you run the same inputs twice and get the identical result? If not, the audit trail is broken.
+
+**2. Is there a human verification step before extracted data enters the calculation?**
+AI extraction without human verification means you are trusting a probabilistic model to correctly interpret every lease clause, every GL code, and every invoice amount. That is the wrong control structure for tenant billing. Extraction errors are manageable when a human reviews the output. They become dangerous when they feed directly into billing.
+
+**3. Can you export the full calculation ledger?**
+A defensible reconciliation requires a step-by-step ledger showing every input, every formula applied, and every intermediate result. If the platform produces only a final number and a summary, you cannot defend it in a dispute.
+
+## The Bottom Line
+
+AI is not the problem in CAM reconciliation. Misapplied AI is. The technology works well for extraction, classification, and anomaly detection. It has no business performing financial calculations that must be reproducible, auditable, and legally defensible.
+
+Controllers who get this right process reconciliations faster, catch more errors, and produce cleaner statements than their peers. Those who hand the entire workflow to an AI model will discover the problem the first time a tenant's auditor asks to see the math.
+
+## Related Resources
+
+- [Deterministic vs. AI CAM Reconciliation](/resources/deterministic-vs-ai-cam) - Deep dive on why probabilistic math fails in finance
+- [CAM Software Evaluation Checklist](/resources/cam-software-evaluation-checklist) - What to ask vendors
+- [Defensible Reconciliation Package](/resources/defensible-reconciliation-package) - Building an audit-proof statement
+- [Top 15 CAM Billing Errors](/resources/top-15-cam-billing-errors) - The mistakes AI detection catches
+
+## Sources
+
+1. [NIST - Artificial Intelligence Risk Management Framework (AI RMF 1.0)](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10)
+2. [IBM - Document processing](https://www.ibm.com/products/cloud-pak-for-business-automation/document-processing)
+3. [ACL Anthology - XFINBENCH: Benchmarking LLMs in Complex Financial Problem Solving and Reasoning](https://aclanthology.org/2025.findings-acl.457.pdf)

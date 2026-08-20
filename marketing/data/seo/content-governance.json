@@ -1,0 +1,50 @@
+{
+  "retainedSoftwareGuideSlugs": [
+    "yardi-voyager",
+    "yardi-breeze",
+    "mri-software",
+    "realpage",
+    "entrata",
+    "sage-intacct",
+    "appfolio"
+  ],
+  "retainedComparisonSlugs": [
+    "yardi",
+    "mri",
+    "sage-intacct",
+    "buildium",
+    "appfolio",
+    "realpage",
+    "visual-lease",
+    "excel",
+    "tenant-auditors",
+    "cam-consultants",
+    "manual-reconciliation",
+    "outsourced-cam",
+    "property-accounting-software"
+  ],
+  "demotedBlogSlugs": [
+    "what-is-cam-reconciliation"
+  ],
+  "demotedResourceSlugs": [
+    "what-is-cam-reconciliation",
+    "cam-presend-checklist",
+    "state-by-state-cam-disclosure",
+    "tenant-auditor-guide"
+  ],
+  "retainedGlossaryTermSlugs": [
+    "cam-reconciliation",
+    "gross-up-clause",
+    "pro-rata-share",
+    "base-year",
+    "cam-cap",
+    "admin-fee",
+    "recovery-ratio",
+    "r-u-ratio",
+    "recovery-code",
+    "charge-code",
+    "true-up",
+    "usable-vs-rentable-area",
+    "cumulative-cap"
+  ]
+}

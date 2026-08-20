@@ -1,0 +1,122 @@
+---
+title: "Mid-Year Tenant Move-In: How to Calculate Pro-Rata CAM Charges"
+description: "How to calculate pro-rata CAM charges for tenants who move in mid-year. Date-specific proration, denominator updates, and estimate adjustments for partial-year occupancy."
+excerpt: "A tenant moving in on June 15 doesn't owe a full year of CAM. Calculating the correct pro-rata amount requires four distinct steps most ERPs get wrong."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "Does a mid-year move-in tenant owe CAM for the months before they occupied the space?"
+    a: "No. A tenant's CAM obligation begins on the commencement date specified in their lease (typically the rent commencement date or the possession date, whichever triggers CAM obligations). They owe only for the days they were actually in occupancy during the calendar year."
+  - q: "How do I update the pro-rata denominator when a tenant moves in mid-year?"
+    a: "If your CAM pool uses an occupancy-based denominator (total occupied square footage), you need to add the new tenant's square footage to the denominator starting from their commencement date. This affects every other tenant's pro-rata share for the period after the move-in. Most ERPs handle this automatically if the lease setup is correct, but always verify."
+  - q: "Does a mid-year move-in tenant receive a full-year reconciliation at year-end?"
+    a: "They receive a reconciliation covering only their occupancy period. The reconciliation compares their actual CAM obligation for that partial year against the estimated CAM they paid during the same period. The estimated amount should have been pro-rated when it was billed. If it wasn't, that's a separate error to correct."
+---
+
+When a tenant signs a lease and takes possession on June 15, they don't owe CAM for January through June 14. But calculating exactly what they do owe, and making sure your ERP reflects it correctly, involves four steps that are each more complicated than they appear.
+
+Most ERP systems handle pro-rata move-ins imperfectly. They may charge a full month's estimate in the first month, use the wrong commencement date, or fail to update the denominator. Understanding the correct process lets you audit your system's output and catch errors before statements go out.
+
+## The Pro-Rata Calculation for Mid-Year Move-In
+
+The fundamental formula is simple:
+
+**Tenant's Annual CAM Obligation = Full-Year CAM Obligation × (Days in Occupancy / Days in Year)**
+
+A tenant occupying 5,000 SF in a building where full-year CAM would be $12,000 for their space, moving in June 15, has 200 days of occupancy in a 365-day year. Their CAM obligation is:
+
+$12,000 × (200 / 365) = $6,575.34
+
+That's the number you're working toward. The four steps below are how you get there correctly.
+
+## Step 1: Determine the Commencement Date
+
+The commencement date for CAM purposes is not always the same as the lease execution date, the rent commencement date, or the possession date. It's whichever date the lease specifies as the start of CAM obligations.
+
+Most leases use one of three triggers:
+- **Possession date**: The date the tenant received keys and access to the space
+- **Rent commencement date**: The date the lease specifies rent begins, which may be after a free-rent period
+- **Lease commencement date**: The date the lease term formally begins
+
+Check the lease language specifically. A tenant with a free-rent period may start paying base rent on month 4, but their CAM obligations often begin on the possession date (month 1). Getting this wrong means you either underbill CAM during the free-rent period or overbill after it ends.
+
+Document your commencement date determination with the specific lease clause and date. This is the most frequently disputed element in a mid-year move-in calculation.
+
+## Step 2: Calculate Days in Occupancy for the Year
+
+Once you have the confirmed commencement date, calculate days in occupancy by counting from that date through December 31 (or the end of your CAM year, if different from the calendar year).
+
+For June 15 commencement in a calendar year: June 15 through December 31 = 200 days.
+
+Common errors here:
+- Including June 15 vs. excluding June 15 (whether you count the commencement date itself depends on lease language; most count it)
+- Using calendar months instead of actual days (using 6.5 months is less precise and creates rounding disputes)
+- Using the wrong CAM year end date (some leases use a fiscal year)
+
+Always use actual day counts, not months. The difference between 6 months and 184 actual days can be material over larger CAM amounts.
+
+## Step 3: Update the Pro-Rata Denominator
+
+If your CAM pool uses a fixed denominator (typically total rentable area of the building or the pool), a mid-year move-in may not require a denominator update. The new tenant's square footage was already included in total rentable area.
+
+However, if your leases use an **occupancy-based denominator** (total occupied square footage, or some variant), you need to add the new tenant's square footage starting from their commencement date. This has two effects:
+
+1. The new tenant's pro-rata share is calculated using the updated (larger) denominator
+2. All other tenants' pro-rata shares decrease slightly starting on the commencement date, because the denominator grew
+
+In practice, most property managers use a blended approach: they update the denominator at year-end when calculating actual CAM for the reconciliation, using weighted-average occupancy. Your ERP should handle this, but verify that it's capturing the correct dates.
+
+If you use gross-up instead of or in addition to occupancy-based denominators, see Step 4 for the interaction.
+
+## Step 4: Calculate the CAM Estimate for the Partial Year
+
+When a tenant moves in mid-year, you need to bill them CAM estimates for the remainder of the year. This estimated amount should reflect:
+
+1. **Only the months/days remaining in the CAM year** (not the full-year estimate)
+2. **The correct pro-rata share** (based on their SF relative to the denominator in effect at move-in)
+3. **The annualized expense total** (your estimate should be based on the full-year projected expenses, then pro-rated)
+
+A common error: billing the new tenant the same monthly estimate as an existing tenant without adjusting for the partial year. This results in over-collection when you reconcile.
+
+Example: If full-year estimated CAM is $12,000 ($1,000/month), and the tenant moves in June 15, you should bill approximately $2,054 for the remainder of June (15 days x $1,000/30.4 days) plus $6,000 for July through December, not $7,000 (7 full months).
+
+## Year-End Reconciliation for Mid-Year Tenants
+
+At reconciliation, you compare actual CAM expenses against the estimated amounts billed, but only for the tenant's occupancy period.
+
+The reconciliation calculation:
+1. Determine actual CAM expenses for the full year
+2. Calculate the tenant's pro-rata share of actual expenses for the full year
+3. Pro-rate that share for their occupancy period (days in occupancy / days in year)
+4. Subtract estimated amounts billed during their occupancy period
+5. The difference is the reconciliation amount owed or credited
+
+The year-end reconciliation should not include any CAM expenses from before the tenant moved in. Even if the pool accrued expenses in January that benefit the tenant's space (general building maintenance, for example), the tenant's obligation begins on their commencement date.
+
+## Common Errors in Mid-Year Move-In Calculations
+
+**Using the wrong commencement date.** The lease execution date, the possession date, and the rent commencement date are three different things. Always verify which date triggers CAM obligations.
+
+**Forgetting the denominator update.** If your leases use occupancy-based denominators, failing to update the denominator when a new tenant moves in overstates your gross-up calculation and understates all tenants' pro-rata shares.
+
+**Applying a full-year estimate.** Billing a mid-year tenant the same monthly estimate as full-year tenants without flagging the partial-year start creates a reconciliation error that's tedious to unwind at year-end.
+
+**Rounding month instead of using actual days.** Using "6.5 months" instead of actual day counts introduces systematic rounding errors that compound across large tenant populations.
+
+**Failing to document the commencement date determination.** When the tenant questions the calculation, you need the specific lease clause and date on record.
+
+---
+
+## Related Resources
+
+- [Pro-Rata Calculator](/tools/pro-rata-calculator)
+- [New Tenant Onboarding Workflow](/cam-reconciliation-guide)
+- [Mid-Year Tenant Move-Out Reconciliation](/blog/mid-year-tenant-move-out-reconciliation)
+
+## Sources
+
+1. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)
+2. [CapVeri Sources & Research - BOMA 2024 methodology](/sources#boma-2024)

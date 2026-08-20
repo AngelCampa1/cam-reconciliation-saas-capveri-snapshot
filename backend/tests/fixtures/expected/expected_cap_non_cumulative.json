@@ -1,0 +1,55 @@
+{
+  "scenario": "cap_non_cumulative",
+  "description": "Non-cumulative cap - unused capacity lost each year",
+  "cap_type": "non_cumulative",
+  "cap_rate": 0.05,
+  "base_year_expenses": 100000.0,
+  "years": [
+    {
+      "year": 1,
+      "actual_expenses": 100000.0,
+      "prior_year_actual": null,
+      "cap_calculation": "Base year - no cap applied",
+      "max_allowed": 100000.0,
+      "billable_amount": 100000.0,
+      "unused_capacity": 0.0,
+      "note": "Base year establishes starting point"
+    },
+    {
+      "year": 2,
+      "actual_expenses": 107000.0,
+      "prior_year_actual": 100000.0,
+      "cap_calculation": "100000 * 1.05 = 105000",
+      "max_allowed": 105000.0,
+      "billable_amount": 105000.0,
+      "unused_capacity": 0.0,
+      "note": "Capped at 5% increase. Excess $2000 absorbed by landlord."
+    },
+    {
+      "year": 3,
+      "actual_expenses": 106000.0,
+      "prior_year_billable": 105000.0,
+      "cap_calculation": "105000 * 1.05 = 110250",
+      "max_allowed": 110250.0,
+      "billable_amount": 106000.0,
+      "unused_capacity": 4250.0,
+      "note": "Under cap. Unused capacity of $4250 is LOST (non-cumulative)."
+    },
+    {
+      "year": 4,
+      "actual_expenses": 114480.0,
+      "prior_year_billable": 106000.0,
+      "cap_calculation": "106000 * 1.05 = 111300",
+      "max_allowed": 111300.0,
+      "billable_amount": 111300.0,
+      "unused_capacity": 0.0,
+      "note": "Capped at 5% increase. Year 3 unused capacity does NOT carry forward."
+    }
+  ],
+  "summary": {
+    "total_actual": 427480.0,
+    "total_billable": 422300.0,
+    "total_landlord_absorbed": 5180.0,
+    "total_unused_lost": 4250.0
+  }
+}

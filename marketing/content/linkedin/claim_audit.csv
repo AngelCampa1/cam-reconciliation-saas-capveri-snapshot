@@ -1,0 +1,300 @@
+claim_id,post_file,claim_text,claim_type,attributed_source,needs_verification,is_illustrative
+0001,2026-05-12-0700-erp-workarounds-002.md,Your Yardi GL export doesn't balance.,vendor-product,,yes,no
+0002,2026-05-12-0700-erp-workarounds-002.md,Yardi can filter exports in ways that look identical on the surface but exclude late-posted accruals.,vendor-product,,yes,no
+0003,2026-05-12-0700-erp-workarounds-002.md,None of this requires opening a support ticket with Yardi.,vendor-product,,yes,no
+0004,2026-05-12-0800-war-stories-003.md,"Cell A44, a $142,000 annual insurance premium. fell through the gap.",dollar-figure,,no,no
+0005,2026-05-12-0900-anti-integration-004.md,Yardi's standard GL detail export.,vendor-product,,yes,no
+0006,2026-05-12-1100-industry-news-006.md,"""A 12% property tax increase on a building where taxes are 35% of the CAM pool moves total tenant charges by over 4% before any other expense changes.""",percentage,,no,no
+0007,2026-05-12-1100-industry-news-006.md,"Harris County (Houston) assessments are up 10-14% per Harris Central Appraisal District data, Chicago-area townships are seeing 12-18% per Cook County Assessor filings, and similar increases are being reported nationally per CBRE and JLL market reports.",industry-stat,Harris Central Appraisal District,yes,no
+0008,2026-05-12-1200-cam-math-007.md,"Seven CAM reconciliation errors cause the majority of the $15,000-$30,000 per-property recovery gap modeled across typical commercial portfolios.",dollar-figure,,no,no
+0009,2026-05-12-1300-erp-workarounds-008.md,"If Yardi shows 5.26% and the lease says 5.00%, the field is using occupied area instead of total building RSF.",vendor-product,,yes,no
+0010,2026-05-12-1400-war-stories-009.md,"A meaningful share of tenants find discrepancies on their own, without hiring a professional auditor (according to JLL 2023 research via PredictAP). - In California, SB 1103. effective January 2025. authorizes treble damages for willful overbilling against qualifying small-business tenants.",legal-regulatory,JLL 2023,yes,no
+0011,2026-05-12-1400-war-stories-009.md,"If a court finds the overbilling was willful, the landlord owes three times the overcharge plus attorney's fees. - Four steps before every statement goes out: GL scrub to remove non-recoverable expenses; separate fixed and variable pools before applying any gross-up; flag any expense category growi…",percentage,,no,no
+0012,2026-05-12-1400-war-stories-009.md,"""40% of reconciliations: material errors"" (over point 3)",percentage,,no,no
+0013,2026-05-12-1400-war-stories-009.md,"""California: treble damages"" (over SB 1103 point)",legal-regulatory,,yes,no
+0014,2026-05-12-1500-cam-math-010.md,"The BOMA standard exclusions are a starting point: CapEx, leasing commissions, tenant improvement costs, landlord-only costs, and management fees above the lease cap.",industry-stat,,yes,no
+0015,2026-05-12-1500-cam-math-010.md,"Thirty percent of all CAM disputes trace back to CapEx inclusions, according to BOMA research.",industry-stat,BOMA,yes,no
+0016,2026-05-12-1700-founder-012.md,BOMA 2024 vs. older measurement standards.,industry-stat,,yes,no
+0017,2026-05-12-2000-engagement-015.md,"Remeasurements, new leases on the floor, and BOMA methodology changes all affect the denominator.",industry-stat,,yes,no
+0018,2026-05-13-0600-cam-math-016.md,"Affiliated manager relationships (where the property management company is a related party) create additional exposure: if the market rate for the service is 3% and the landlord charges 5% to an entity they own, tenant auditors treat the 2-point spread as non-recoverable overhead.",percentage,,no,no
+0019,2026-05-13-0700-erp-workarounds-017.md,Six fields in Yardi's recovery pool setup drive 90% of CAM calculation errors.,vendor-product,,yes,no
+0020,2026-05-13-0900-anti-integration-019.md,"Purpose-built CAM software for the same portfolio typically costs $5,000-$25,000 per year based on publicly listed pricing from major CAM reconciliation software vendors.",dollar-figure,,no,no
+0021,2026-05-13-0900-anti-integration-019.md,"Raymond Panko's spreadsheet error research (published via EuSpRIG) found errors in 88% of corporate spreadsheet models, with formula cells as the primary failure point.",industry-stat,EuSpRIG,yes,no
+0022,2026-05-13-1100-industry-news-021.md,California's SB 1103 has been in effect for 14 months.,legal-regulatory,,yes,no
+0023,2026-05-13-1100-industry-news-021.md,SB 1103 raised the cost of those errors in California.,legal-regulatory,,yes,no
+0024,2026-05-13-1300-erp-workarounds-023.md,"On $500,000 of variable expenses, the difference between Physical and Economic occupancy in Yardi can be $82,500 in grossed-up pool total. billed directly to remaining tenants.",vendor-product,,yes,no
+0025,2026-05-13-1400-war-stories-024.md,California under SB 1103 requires a specific demand sequence before treble damages apply to qualifying small-business tenants.,legal-regulatory,,yes,no
+0026,2026-05-13-1500-cam-math-025.md,5 CAM reconciliation best practices from BOMA,industry-stat,,yes,no
+0027,2026-05-13-1500-cam-math-025.md,BOMA standards specify economic occupancy for the gross-up calculation.,industry-stat,,yes,no
+0028,2026-05-13-1500-cam-math-025.md,Check it against the most recent BOMA-certified measurement before calculations start.,industry-stat,,yes,no
+0029,2026-05-13-1500-cam-math-025.md,BOMA's standard expense definitions provide the classification framework.,industry-stat,,yes,no
+0030,2026-05-13-1600-anti-integration-026.md,"A formula error that produced a $5,000 variance in 2015 produces a $12,000 variance now because the expense pool is larger.",dollar-figure,,yes,no
+0031,2026-05-13-1700-founder-027.md,A tenant signs a lease in 2021 with a 5% cumulative cap and a base year of 2020.,percentage,,yes,no
+0032,2026-05-13-1800-cam-math-028.md,"BOMA 2024 changed how outdoor amenity spaces, rooftop terraces, and single-tenant mechanical areas are measured.",industry-stat,,yes,no
+0033,2026-05-13-1800-cam-math-028.md,QUESTION: Where is your portfolio on BOMA 2024 adoption?,industry-stat,,yes,no
+0034,2026-05-14-0600-cam-math-031.md,"A building that goes from 200,000 SF to 212,000 SF under BOMA 2024 didn't add a single square foot of new construction.",industry-stat,,yes,no
+0035,2026-05-14-0600-cam-math-031.md,"That 12,000 SF increase comes from outdoor amenity spaces. rooftop terraces, courtyards, tenant patios. that prior BOMA standards excluded from rentable area.",industry-stat,,yes,no
+0036,2026-05-14-0700-erp-workarounds-032.md,"Re-measured buildings, BOMA updates, space reconfigurations, none of these update automatically.",industry-stat,,yes,no
+0037,2026-05-14-0700-erp-workarounds-032.md,"A $50,000 property tax bill grossed up at 50% occupancy adds $50,000 in phantom charges.",percentage,,no,no
+0038,2026-05-14-0700-erp-workarounds-032.md,"G2 reviews of Yardi Commercial Management note that executing custom lease caveats requires extensive, costly support.",vendor-product,,yes,no
+0039,2026-05-14-0700-erp-workarounds-032.md,An independent calculation layer reads your GL export and applies lease terms directly. not Yardi's configuration.,vendor-product,,yes,no
+0040,2026-05-14-0800-war-stories-033.md,"FASB ASC 842 put variable CAM charges on tenant balance sheets,.",legal-regulatory,,yes,no
+0041,2026-05-14-0800-war-stories-033.md,SB 1103 in California raised the financial upside of finding errors for small-business tenants.,legal-regulatory,,yes,no
+0042,2026-05-14-0900-anti-integration-034.md,"At a 6% cap rate, it costs you $833,333 in property value. because NOI is capitalized.",percentage,,no,no
+0043,2026-05-14-0900-anti-integration-034.md,"A $100,000 error at a 5% cap rate destroys $2,000,000.",percentage,,no,no
+0044,2026-05-14-0900-anti-integration-034.md,"In a typical reconciliation cycle: 40% on data gathering, 25% on lease interpretation, 15% on actual calculation, 10% on quality review, 10% on statement generation and delivery.",percentage,,no,no
+0045,2026-05-14-1100-industry-news-036.md,"""FASB ASC 842 didn't just change lease accounting.",legal-regulatory,,yes,no
+0046,2026-05-14-1100-industry-news-036.md,ASC 842 requires tenants to capitalize operating leases on their balance sheets.,legal-regulatory,,yes,no
+0047,2026-05-14-1100-industry-news-036.md,"Their CPAs now scrutinize every CAM reconciliation to correctly separate fixed from variable components. - Before ASC 842, CAM overbilling was an income statement issue for the tenant.",legal-regulatory,,yes,no
+0048,2026-05-14-1100-industry-news-036.md,"After ASC 842, a miscalculated fixed versus variable split can distort the tenant's balance sheet.",legal-regulatory,,yes,no
+0049,2026-05-14-1100-industry-news-036.md,That changes how seriously their finance team treats a disputed statement. - Audit request volume increased after ASC 842 adoption.,legal-regulatory,,yes,no
+0050,2026-05-14-1100-industry-news-036.md,"Under ASC 842, tenants need reliable CAM estimates for their monthly accruals.",legal-regulatory,,yes,no
+0051,2026-05-14-1100-industry-news-036.md,"""Audit request volume rose after ASC 842 adoption"" (over point 3)",legal-regulatory,,yes,no
+0052,2026-05-14-1600-anti-integration-041.md,"For a 20-property office portfolio with $38M in recoverable expenses and an 87% recovery ratio against an industry benchmark of 92%, the gap is $1.9M per year.",percentage,,no,no
+0053,2026-05-14-1700-founder-042.md,"Up to 3.5% of operating expense recoveries by property type, per BOMA EER and IREM Income/Expense Analysis benchmarks.",industry-stat,BOMA EER and IREM Income,yes,no
+0054,2026-05-15-0600-cam-math-046.md,"""28% of tenants find CAM errors without retaining a professional auditor.""",percentage,,no,no
+0055,2026-05-15-0600-cam-math-046.md,"According to JLL 2023 research via PredictAP, that's the number that should change how property controllers approach pre-send review.",industry-stat,JLL 2023,yes,no
+0056,2026-05-15-0700-erp-workarounds-047.md,"Export the tenant roster from MRI with Share Type, Floor, and RSF columns.",vendor-product,,yes,no
+0057,2026-05-15-0900-anti-integration-049.md,"For a 15-property portfolio, a typical cycle looks like this: 20-25% waiting for GL close and data gathering, 25-30% manual ERP-vs-lease verification, 20-25% rework from errors discovered late in the process, 15-20% statement drafting, 10-15% review and approval.",percentage,,no,no
+0058,2026-05-15-1100-industry-news-051.md,National office vacancy hit 22.4% in Q1 2026,percentage,,yes,no
+0059,2026-05-15-1100-industry-news-051.md,"At 22.4% national vacancy, many buildings are operating well below gross-up thresholds.",percentage,,no,no
+0060,2026-05-15-1300-erp-workarounds-053.md,"When a lease renews and the CAM cap resets, RealPage requires a manual update to the base year in the lease record.",vendor-product,,yes,no
+0061,2026-05-15-1300-erp-workarounds-053.md,"Properties with both residential and commercial tenants in the same RealPage database risk residential-specific GL accounts being mapped to commercial CAM pools. amenity costs, apartment maintenance, residential common area expenses.",vendor-product,,yes,no
+0062,2026-05-15-1600-anti-integration-056.md,"At a 5% cost of capital, that's $2,500 per month in carrying cost.",percentage,,no,no
+0063,2026-05-15-1600-anti-integration-056.md,SB 1103 requires landlords to respond to qualified small-business tenant documentation requests within 30 days.,legal-regulatory,,yes,no
+0064,2026-05-15-1600-anti-integration-056.md,"The average invoice cycle takes 9.2 days from receipt to posting, according to PredictAP.",industry-stat,PredictAP,yes,no
+0065,2026-05-15-1600-anti-integration-056.md,What automation changes: the 9.2-day invoice cycle compresses to 3.1 days with automated OCR coding (PredictAP data).,industry-stat,,yes,no
+0066,2026-05-15-1700-founder-057.md,"But the gap between what's owed and what's actually collected runs up to 3.5% by property type, per BOMA EER and IREM Income/Expense Analysis benchmarks.",industry-stat,BOMA EER and IREM Income,yes,no
+0067,2026-05-15-1800-cam-math-058.md,"A clean, current matrix answers 80% of audit questions before they become disputes.",percentage,,no,no
+0068,2026-05-15-1900-product-059.md,"You export your GL from whatever system you're using: Yardi, MRI, AppFolio, or Excel.",vendor-product,,yes,no
+0069,2026-05-16-0700-cam-math-061.md,"""Property insurance increased $0.31/SF ($13,200 total) due to policy renewal in March 2025 at market rates"" is an explanation.",dollar-figure,,yes,no
+0070,2026-05-16-1130-anti-integration-064.md,"At 5% cost of capital, that's real carrying cost.",percentage,,no,no
+0071,2026-05-16-1130-anti-integration-064.md,And the California layer: SB 1103 allows qualifying small-business tenants to request documentation.,legal-regulatory,,yes,no
+0072,2026-05-16-1300-cam-math-065.md,"""Insurance premiums for commercial properties increased 15-25% in 2024 per Marsh and Lockton commercial market reports.",industry-stat,Marsh and Lockton,yes,no
+0073,2026-05-16-1430-war-stories-066.md,"At a 6% cap rate, every $1 of stabilized NOI is worth $16.67 in asset value.",percentage,,no,no
+0074,2026-05-16-1430-war-stories-066.md,"A 3-8 point improvement in recovery ratio on a $2M expense pool represents $60,000-$160,000 in annual NOI and $1-2.7 million in value at a 6% cap rate.",percentage,,no,no
+0075,2026-05-16-1900-anti-integration-069.md,Inputs: BOMA EER recovery gap benchmarks; tenant audit firm published contingency rates.),industry-stat,,yes,no
+0076,2026-05-17-0830-war-stories-072.md,"A 5-percentage-point recovery ratio gap on a $3M expense base is $150,000 in annual underrecovery, which is $2.5M in suppressed asset value at a 6% cap rate.",percentage,,no,no
+0077,2026-05-17-1130-anti-integration-074.md,"Per IREM compensation survey data and Robert Half Real Estate & Property salary guides, approximate market ranges by level:",industry-stat,IREM,yes,no
+0078,2026-05-17-1130-anti-integration-074.md,"""$45,000 in recovered expenses"" = ""$750,000 in property value at a 6% cap rate."" Speaking ownership's language.",percentage,,no,no
+0079,2026-05-17-1600-cam-math-077.md,"On a 10-tenant inline strip center with a 40,000 SF anchor shortfall: the landlord absorbs $80,000 per year in unrecovered CAM from the anchor vacancy alone.",dollar-figure,,no,no
+0080,2026-05-17-1900-anti-integration-079.md,"Raymond Panko's spreadsheet error research (published via EuSpRIG) found errors in 88% of corporate spreadsheet models, with formula cells as the primary failure point.",industry-stat,EuSpRIG,yes,no
+0081,2026-05-18-0700-erp-workarounds-082.md,"""Integrates with Yardi"" covers a spectrum from ""your property manager exports a CSV"" to ""18 months of IT work, API credentials, firewall rules, and ongoing maintenance every time Yardi updates their API.""",vendor-product,,yes,no
+0082,2026-05-18-0800-war-stories-083.md,"""The most common CAM billing error. gross-up applied to fixed expenses like property taxes and insurance. consistently ranks as one of the most common findings in tenant audit engagements, with dollar impacts that typically range from $20,000 to $150,000 per occurrence depending on building size an…",dollar-figure,,no,no
+0083,2026-05-18-1000-cam-math-085.md,"Over three years, at a pro-rata share of 10% and normal expense growth, that normalization error produces $79,571 in overbilling for a single tenant.",percentage,,no,no
+0084,2026-05-18-1100-industry-news-086.md,"In Miami and Tampa, property insurance costs increased 25-35% in 2025 per Marsh and Lockton Sun Belt commercial market reports.",industry-stat,Marsh and Lockton Sun Belt,yes,no
+0085,2026-05-18-1300-erp-workarounds-088.md,"They want to trust their CAM output. - Replacing Yardi requires data migration, 12-18 months of implementation, retraining, and $500K-$2M+ for a mid-market portfolio.",vendor-product,,yes,no
+0086,2026-05-18-1300-erp-workarounds-088.md,"They require a layer that sits alongside Yardi. - The workflow: export GL from Yardi (standard report, same one you run for month-end close), upload to independent reconciliation software, compare outputs.",vendor-product,,yes,no
+0087,2026-05-18-1500-cam-math-090.md,A flat 3% estimate increase every year is not a forecast.,percentage,,no,no
+0088,2026-05-18-1500-cam-math-090.md,Insurance premiums in commercial real estate have risen 8-15% annually since 2023.,percentage,,yes,no
+0089,2026-05-18-1500-cam-math-090.md,A flat 3% forecast against 12% actual insurance growth creates a 9-point variance in just one line item.,percentage,,no,no
+0090,2026-05-18-1500-cam-math-090.md,"A 15% or more year-over-year increase in any single category should trigger a mid-year estimate adjustment, not a wait-and-see approach until the true-up.",percentage,,no,no
+0091,2026-05-18-1700-founder-092.md,"BOMA EER and IREM Income/Expense Analysis benchmarks put CAM recovery leakage at up to 3.5% of the total operating expense recovery pool, varying by property type.",industry-stat,,yes,no
+0092,2026-05-18-1700-founder-092.md,"If the denominator used in the allocation calculation doesn't match the current lease exhibit (remeasurement, BOMA methodology change, new tenants on the floor), every tenant on that floor is receiving an incorrect allocation.",industry-stat,,yes,no
+0093,2026-05-19-0600-cam-math-096.md,"BOMA 2024 adoption is a 6 to 12-month process, not a system update.",industry-stat,,yes,no
+0094,2026-05-19-0600-cam-math-096.md,"Three decisions before the system update: review lease language (does each tenant's lease say ""BOMA standards as amended"" or does it reference a specific version?), run dual measurements (you need both BOMA 2017 and BOMA 2024 numbers to show tenants the before-and-after), and model the recovery imp…",industry-stat,,yes,no
+0095,2026-05-19-0700-erp-workarounds-097.md,"When the lease is amended and the gross-up threshold changes from 95% to 90%, Yardi continues using 95% until someone manually updates the configuration.",vendor-product,,yes,no
+0096,2026-05-19-0700-erp-workarounds-097.md,"A 200,000 SF building adding three new sub-accounts can lose $43,200 per year in unrecovered expenses $720,000 in property value at a 6% cap rate.",percentage,,no,no
+0097,2026-05-19-0700-erp-workarounds-097.md,Export Yardi's recovery detail.,vendor-product,,yes,no
+0098,2026-05-19-1000-cam-math-100.md,"A 100,000 SF Class A office building remeasured under BOMA 2024 gains 4,800 RSF without a single square foot of new construction.",industry-stat,,yes,no
+0099,2026-05-19-1000-cam-math-100.md,"At a 6.5% cap rate, that $47,000 translates to $723,000 in lost property value.",percentage,,no,no
+0100,2026-05-19-1100-industry-news-101.md,"""Dallas-Fort Worth absorbed more than 150 million square feet of new industrial space between 2020 and 2025, per CBRE Dallas market research.",industry-stat,CBRE Dallas,yes,no
+0101,2026-05-19-1100-industry-news-101.md,"Property tax increases of 8-11% are projected for 2026, per Dallas Central Appraisal District estimates.",percentage,Dallas Central Appraisal District,yes,no
+0102,2026-05-19-1100-industry-news-101.md,"Hail damage insurance premiums in North Texas have risen sharply since 2022, with some carriers reporting 15-30% increases per renewal cycle.""",percentage,,yes,no
+0103,2026-05-19-1200-cam-math-102.md,"A $1.1M expense pool losing $11,000 for every percentage point of recovery shortfall - and most controllers can't tell you their recovery ratio without running a new report.",dollar-figure,,no,no
+0104,2026-05-19-1200-cam-math-102.md,"Benchmarks: NNN office 85-95%, retail 80-90%, industrial 90-98%.",percentage,,no,no
+0105,2026-05-19-1200-cam-math-102.md,"At a 6% cap rate, one point of recovery is worth $183,333 in property value.",percentage,,no,no
+0106,2026-05-19-1300-erp-workarounds-103.md,"A Yardi export that ""looks right"" still fails reconciliation.",vendor-product,,yes,no
+0107,2026-05-19-1300-erp-workarounds-103.md,"Yardi exports fail in the setup layer, not the math layer.",vendor-product,,yes,no
+0108,2026-05-19-1300-erp-workarounds-103.md,"The three exports that cover a complete CAM reconciliation: Recovery Analysis (what Yardi thinks each tenant owes, by pool), General Ledger Analytics (the expense detail feeding those pools), and Rent Roll with Lease Charges (tenant roster, square footage, lease timing).",vendor-product,,yes,no
+0109,2026-05-19-1500-cam-math-105.md,"Forty percent of manual CAM reconciliations contain material errors, according to BOMA industry research.",industry-stat,BOMA,yes,no
+0110,2026-05-19-1600-anti-integration-106.md,"Cost for a mid-market portfolio: $500,000 to $2M.",dollar-figure,,no,no
+0111,2026-05-19-1600-anti-integration-106.md,"When a lease is amended and the gross-up threshold changes from 95% to 90%, Yardi continues using 95% until someone manually updates the configuration.",vendor-product,,yes,no
+0112,2026-05-19-1600-anti-integration-106.md,The workflow: export GL data from Yardi as CSV (the same export your property accountant already produces for year-end close).,vendor-product,,yes,no
+0113,2026-05-19-1600-anti-integration-106.md,They typically charge 20-40% of the amount they recover for the tenant.,percentage,,no,no
+0114,2026-05-19-1700-founder-107.md,"It reads your GL data and recalculates from the lease terms, using BOMA 2024 standards.",industry-stat,,yes,no
+0115,2026-05-20-0600-cam-math-111.md,"A BOMA remeasurement in 2019 that reduced certified GLA from 90,000 SF to 85,000 SF, with the system still using 90,000 SF, understates every tenant's share by 5.9%.",industry-stat,,yes,no
+0116,2026-05-20-0700-erp-workarounds-112.md,MRI can run a reconciliation export correctly and still be operationally incomplete.,vendor-product,,yes,no
+0117,2026-05-20-0700-erp-workarounds-112.md,"The three core exports for a complete MRI reconciliation: Recovery Reconciliation (what MRI thinks each tenant owes, by recovery type), GL Transaction Detail (the line-item transactions feeding the recovery totals), and Rent Roll (tenant roster, square footage, lease timing).",vendor-product,,yes,no
+0118,2026-05-20-0700-erp-workarounds-112.md,"MRI is calculating from an incomplete pool, and the report gives no indication that anything is missing.",vendor-product,,yes,no
+0119,2026-05-20-0800-war-stories-113.md,"Based on BOMA EER and IREM Income/Expense Analysis benchmarks, typical annual leakage by property type runs:",industry-stat,,yes,no
+0120,2026-05-20-0800-war-stories-113.md,"At a 6% cap rate: $500,000 in suppressed asset value.",percentage,,no,no
+0121,2026-05-20-0800-war-stories-113.md,At a 6% cap rate: $1.46M in suppressed asset value.,percentage,,no,no
+0122,2026-05-20-1000-cam-math-115.md,"When the denominator shifts, every tenant's share recalculates. even if their own space and the total expense pool stay exactly the same. - Five things move the denominator: BOMA remeasurement under a new standard, an anchor tenant vacating or arriving, a tenant starting or stopping self-maintenanc…",industry-stat,,yes,no
+0123,2026-05-20-1000-cam-math-115.md,"That's a 29% increase in their CAM bill from nothing except a vacancy event they didn't cause. - Document every denominator change: what changed, the old and new values, per-tenant impact, effective date, and the supporting measurement certificate or lease event.",percentage,,no,no
+0124,2026-05-20-1100-industry-news-116.md,Houston's office vacancy rate is 26.5%.,percentage,,no,no
+0125,2026-05-20-1100-industry-news-116.md,"At 26.5% vacancy, the multiplier is nearly 1.3x, which makes this error more expensive than in any other major market.",percentage,,no,no
+0126,2026-05-20-1200-cam-math-117.md,"Year 2: BOMA remeasurement adds 3,200 SF.",industry-stat,,yes,no
+0127,2026-05-20-1300-erp-workarounds-118.md,"""RealPage's export formatting requires more cleanup than Yardi or MRI.",vendor-product,,yes,no
+0128,2026-05-20-1500-cam-math-120.md,A 10% vacancy forces remaining tenants to absorb costs from empty space they have nothing to do with.,percentage,,no,no
+0129,2026-05-20-1500-cam-math-120.md,"A BOMA remeasurement that reduced certified GLA from 90,000 SF to 85,000 SF in 2019, with the system still using 90,000 SF. that understates every tenant's share by 5.9% for the next five years.",industry-stat,,yes,no
+0130,2026-05-20-1600-anti-integration-121.md,Raymond Panko's spreadsheet error research (published via EuSpRIG) found errors in 88% of corporate spreadsheet models -- with formula cells being the primary failure point.,industry-stat,EuSpRIG,yes,no
+0131,2026-05-21-0600-cam-math-126.md,"A 55% year-over-year increase almost always signals a capital project (compressor replacement, rooftop unit overhaul) that was coded to operating maintenance rather than CapEx.",percentage,,no,no
+0132,2026-05-21-0700-erp-workarounds-127.md,Gross-up disabled for a building at 78% occupancy: landlord absorbs all vacancy cost variance.,percentage,,no,no
+0133,2026-05-21-0900-anti-integration-129.md,ASC 842 raised documentation standards.,legal-regulatory,,yes,no
+0134,2026-05-21-1100-industry-news-131.md,Property tax is typically 25-40% of the total CAM pool.,percentage,,no,no
+0135,2026-05-21-1100-industry-news-131.md,"""Property tax: 25-40% of CAM pool"" (over intro)",percentage,,no,no
+0136,2026-05-21-1300-erp-workarounds-133.md,"""The Yardi export doesn't balance"" does not mean the Yardi calculation is wrong.",vendor-product,,yes,no
+0137,2026-05-21-1300-erp-workarounds-133.md,"When a Yardi GL export fails to tie to the financial statements, teams often jump straight into tenant-level analysis.",vendor-product,,yes,no
+0138,2026-05-21-1400-war-stories-134.md,"Cell A44, a $142,000 annual insurance premium. was excluded from the sum.",dollar-figure,,no,no
+0139,2026-05-21-1600-anti-integration-136.md,Raymond Panko's spreadsheet error research (published via EuSpRIG) found errors in 88% of corporate spreadsheet models.,industry-stat,EuSpRIG,yes,no
+0140,2026-05-21-1700-founder-137.md,"The expectation going in was that errors would be concentrated in complex lease structures: large portfolios, sophisticated tenants with detailed negotiated exclusions, unusual BOMA methodology variations.",industry-stat,,yes,no
+0141,2026-05-21-1800-cam-math-138.md,"A BOMA remeasurement had reduced each building's certified GLA, but the update never made it into the system's lease flags.",industry-stat,,yes,no
+0142,2026-05-22-0700-erp-workarounds-142.md,"Yardi processes CAM calculations through five configuration layers in sequence: recovery pool, charge code, lease setup, billing setup, and manual overrides.",vendor-product,,yes,no
+0143,2026-05-22-0800-war-stories-143.md,"In California, SB 1103 added a multiplier.",legal-regulatory,,yes,no
+0144,2026-05-22-0800-war-stories-143.md,"The four steps that address the most common causes before statements go out: scrub the GL to remove non-recoverable expenses; separate fixed and variable pools before applying any gross-up; flag any expense category with year-over-year growth above 5-10%; and run the gross-up factor, denominator, c…",percentage,,no,no
+0145,2026-05-22-0900-anti-integration-144.md,"For a 20-property office portfolio with $38M in recoverable expenses and an 87% recovery ratio, the gap to an 92% benchmark is $1.9M per year.",percentage,,no,no
+0146,2026-05-22-1200-cam-math-147.md,"Three years of audit exposure, seven tenants who each held the same exclusion, at a 12% average pro-rata share.",percentage,,no,no
+0147,2026-05-22-1200-cam-math-147.md,The controller who had set up the CAM pool in Yardi in 2019 had mapped a corporate accounting category that included both operating management costs and debt service allocations.,vendor-product,,yes,no
+0148,2026-05-22-1300-erp-workarounds-148.md,Six fields in the Yardi recovery pool setup control 90% of the CAM calculation.,vendor-product,,yes,no
+0149,2026-05-22-1600-anti-integration-151.md,"For a typical 15-property portfolio, the time distribution looks like this: waiting for GL close and data gathering (20-25%), manual ERP-vs-lease verification (25-30%), rework from errors discovered late (20-25%), statement drafting and formatting (15-20%), review and approval (10-15%).",percentage,,no,no
+0150,2026-05-23-0830-war-stories-157.md,California: SB 1103 requires a specific demand sequence before treble damages attach for qualifying small-business tenants.,legal-regulatory,,yes,no
+0151,2026-05-23-1000-cam-math-158.md,The tenant's pro-rata share of the office portion of the building: 8.5%.,percentage,,no,no
+0152,2026-05-23-1130-anti-integration-159.md,"For a typical 15-property portfolio, 65-80% of reconciliation time goes to three categories that have nothing to do with headcount: waiting for GL close and data gathering, manual ERP-versus-lease verification, and rework from errors discovered late in the process.",percentage,,no,no
+0153,2026-05-23-1130-anti-integration-159.md,California SB 1103 sets an 18-month hard limit from the date of the tenant's written request.,legal-regulatory,,yes,no
+0154,2026-05-23-1300-cam-math-160.md,"A reconciliation that follows BOMA standards can be explained and defended in the same language tenants, their auditors, and courts use.",industry-stat,,yes,no
+0155,2026-05-23-1300-cam-math-160.md,A reconciliation that deviates from BOMA requires justification.,industry-stat,,yes,no
+0156,2026-05-23-1430-war-stories-161.md,"Contingency fees of 30-50% of recoveries, a majority finding rate across engagements, and technology that reduced the cost of doing an audit. these are the conditions that sustain a professional services market.",percentage,,no,no
+0157,2026-05-23-1430-war-stories-161.md,"They are initiated because ASC 842 made CPAs look at CAM statements, because a lease is expiring and the tenant is doing a full cost review, or because another tenant in the building mentioned they had found errors.",legal-regulatory,,yes,no
+0158,2026-05-23-1600-cam-math-162.md,"The firm's auditor had found that the building had been re-measured under BOMA 2024 in 2023, increasing total certified RSF from 182,000 to 188,400.",industry-stat,,yes,no
+0159,2026-05-23-1600-cam-math-162.md,Surprised the controller: two other tenants in the building had leases executed after the BOMA 2024 re-measurement.,industry-stat,,yes,no
+0160,2026-05-23-1600-cam-math-162.md,The building was simultaneously overbilling some tenants and underbilling others. using the same wrong denominator. because the BOMA 2024 update had never been reconciled against what was in the billing system.,industry-stat,,yes,no
+0161,2026-05-23-1600-cam-math-162.md,BOMA 2024 reclassified outdoor amenity spaces as rentable SF and eliminated load factors on balconies and rooftop terraces.,industry-stat,,yes,no
+0162,2026-05-23-1600-cam-math-162.md,The net effect across a typical building: 2 to 5% RSF increase.,percentage,,no,no
+0163,2026-05-23-1600-cam-math-162.md,"When mixed-vintage leases exist in the same building. some under BOMA 2017, some under BOMA 2024. document which denominator applies to which tenant and run the math separately.",industry-stat,,yes,no
+0164,2026-05-23-1730-founder-163.md,BOMA 2024 standards.,industry-stat,,yes,no
+0165,2026-05-23-1900-anti-integration-164.md,"At a 5% cost of capital, that is $2,500 in carrying cost.",percentage,,no,no
+0166,2026-05-23-1900-anti-integration-164.md,California SB 1103,legal-regulatory,,yes,no
+0167,2026-05-23-1900-anti-integration-164.md,California's SB 1103 sets an 18-month hard limit from the date of the tenant's written request.,legal-regulatory,,yes,no
+0168,2026-05-23-2030-engagement-165.md,A take worth examining: BOMA measurement standards are overkill for most commercial leases.,industry-stat,,yes,no
+0169,2026-05-23-2030-engagement-165.md,"The argument goes: most tenants aren't going to audit the floor plan measurement, and remeasuring to BOMA 2024 creates more disputes than it resolves.",industry-stat,,yes,no
+0170,2026-05-23-2030-engagement-165.md,"If those measurements were done to older standards, and a new tenant's space was measured to BOMA 2024, the denominator is inconsistent.",industry-stat,,yes,no
+0171,2026-05-23-2030-engagement-165.md,BOMA 2024 consistency is not about precision for its own sake.,industry-stat,,yes,no
+0172,2026-05-24-0700-cam-math-166.md,The building's asset manager had been pushing to adopt BOMA 2024 for two years.,industry-stat,,yes,no
+0173,2026-05-24-0700-cam-math-166.md,"When the re-measurement came back under BOMA 2024, the certified RSF was 223,800 SF.",industry-stat,,yes,no
+0174,2026-05-24-0700-cam-math-166.md,"For tenants with renewal options that referenced ""BOMA standards as amended,"" the new denominator applied on renewal.",industry-stat,,yes,no
+0175,2026-05-24-0700-cam-math-166.md,"For tenants with leases that said ""measured in accordance with BOMA standards as of the lease commencement date,"" the old denominator still applied.",industry-stat,,yes,no
+0176,2026-05-24-0700-cam-math-166.md,"The building ended up with three measurement cohorts: original-standard tenants (still on 210,000 SF), renewal tenants who had signed under BOMA 2024 language (using 223,800 SF), and two new tenants who had never been on the old standard.",industry-stat,,yes,no
+0177,2026-05-24-0700-cam-math-166.md,"The net effect on any single tenant depended on whether their suite had been remeasured under BOMA 2024 (which some had, for the terrace-adjacent floors), how large their suite was, and whether they held BOMA-2017-locked or BOMA-as-amended language.",industry-stat,,yes,no
+0178,2026-05-24-0700-cam-math-166.md,BOMA 2024's outdoor measurement framework is not a checkbox.,industry-stat,,yes,no
+0179,2026-05-24-1430-war-stories-171.md,"A 60,000 SF office tenant, a 22% year-over-year CAM increase, and a documentation gap that turned a defensible single-year billing into a three-year gross-up dispute.",percentage,,no,no
+0180,2026-05-24-1430-war-stories-171.md,Their controller flags a 22% year-over-year increase in total CAM charges. significantly above what they expected based on their budgeted estimate.,percentage,,no,no
+0181,2026-05-24-1900-anti-integration-174.md,"A controller who can translate ""$45,000 in recovered operating expenses"" into ""$750,000 in property value at a 6% cap rate"" is speaking the language of ownership.",percentage,,no,no
+0182,2026-05-24-2030-engagement-175.md,"Commercial landlords miss up to 3.5% of operating expense recoveries every year, per BOMA EER and IREM Income/Expense Analysis benchmarks.",industry-stat,BOMA EER and IREM Income,yes,no
+0183,2026-05-25-0900-anti-integration-179.md,Studies find error rates of 1-5% in cells containing formulas.,percentage,,no,no
+0184,2026-05-25-0900-anti-integration-179.md,"When that institutional knowledge leaves, the typical cost: 2-4 weeks of delayed statements plus $5,000-$15,000 in consultant fees to reconstruct the process.",dollar-figure,,no,no
+0185,2026-05-25-1000-cam-math-180.md,"The 20% vacancy lowered the actual bill by $22,500.",percentage,,no,no
+0186,2026-05-25-1000-cam-math-180.md,But That reduction doesn't belong to the 80% of tenants who are present.,percentage,,no,no
+0187,2026-05-25-1100-industry-news-181.md,IREM operating expense benchmarks give property managers a reference point that most of them underuse.,industry-stat,,yes,no
+0188,2026-05-25-1100-industry-news-181.md,The practical use of IREM benchmarks in reconciliation is a two-step process.,industry-stat,,yes,no
+0189,2026-05-25-1100-industry-news-181.md,"A building within the IREM range overall can still have a property tax line that's 40% above comparable buildings, which will generate a tenant question during reconciliation season.",industry-stat,,yes,no
+0190,2026-05-25-1300-erp-workarounds-183.md,Re-measurement after a renovation or BOMA standard update requires a manual update before the pro-rata calculation runs. - Fourth: gross-up applied to the full expense pool instead of variable expenses only.,industry-stat,,yes,no
+0191,2026-05-25-1300-erp-workarounds-183.md,"""BOMA re-measurement?"" (over SF frozen point)",industry-stat,,yes,no
+0192,2026-05-25-1800-cam-math-188.md,"An analyst working on five properties simultaneously, pulling GL exports that all look similar because they come from the same Yardi instance.",vendor-product,,yes,no
+0193,2026-05-26-0600-cam-math-191.md,"Tenant B's lease: ""All CapEx as defined under GAAP excluded."" Not recoverable.",legal-regulatory,,yes,no
+0194,2026-05-26-0700-erp-workarounds-192.md,Property taxes and insurance premiums that default to Variable in a building at 80% occupancy produce a gross-up multiplier of 1.1875 applied to expenses that do not actually vary with occupancy.,percentage,,no,no
+0195,2026-05-26-0700-erp-workarounds-192.md,"If gross-up is set to 90% when leases say 95%, MRI produces the 90% result without flagging that the configuration diverges from the lease.",vendor-product,,yes,no
+0196,2026-05-26-0800-war-stories-193.md,"At a 6% cap rate, every $1 of annual NOI difference is worth $16.67 in asset value.",percentage,,no,no
+0197,2026-05-26-0900-anti-integration-194.md,That is the standard GAAP requires.,legal-regulatory,,yes,no
+0198,2026-05-26-1000-cam-math-195.md,Insurance premiums increased 8% at renewal.,percentage,,no,no
+0199,2026-05-26-1100-industry-news-196.md,"""A CAM expense per square foot that is 20% above BOMA or IREM benchmarks for the property type is not necessarily an overbilling.",industry-stat,,yes,no
+0200,2026-05-26-1200-cam-math-197.md,"Property taxes had been grossed up at a 95%/82% occupancy ratio, adding $7,200 to the pool.",percentage,,no,no
+0201,2026-05-26-1400-war-stories-199.md,"On a $3 million expense base, that 5-point gap is $150,000 per year in unrecovered cost. - At a 6% cap rate, $150,000 in annual NOI is $2.5 million in asset value.",percentage,,no,no
+0202,2026-05-26-1400-war-stories-199.md,"""$2.5M in suppressed value at 6% cap rate"" (over cap rate math)",percentage,,no,no
+0203,2026-05-26-1500-cam-math-200.md,More tenants. specifically in California. now have SB 1103 rights requiring 30-day landlord responses.,legal-regulatory,,yes,no
+0204,2026-05-26-1600-anti-integration-201.md,"AI extraction with human spot-checking reduces that to roughly 120 hours of review, saving $27,000 annually at $75 per hour fully loaded.",dollar-figure,,no,no
+0205,2026-05-26-1600-anti-integration-201.md,"AI can extract the clause that reads ""Tenant shall pay its proportionate share of Operating Expenses, excluding capital expenditures with a useful life in excess of five years."" It should not decide what that clause means when applied to $85,000 in parking garage waterproofing.",dollar-figure,,no,no
+0206,2026-05-26-1700-founder-202.md,BOMA denominators.,industry-stat,,yes,no
+0207,2026-05-26-2000-engagement-205.md,"The figure appears in BOMA EER and IREM Income/Expense Analysis benchmarks, which put typical leakage at up to 3.5% by property type.",industry-stat,,yes,no
+0208,2026-05-27-0600-cam-math-206.md,"The pool included $340,000 in property taxes and $87,000 in building insurance.",dollar-figure,,no,no
+0209,2026-05-27-0600-cam-math-206.md,"The incorrect base that had been used: $707,000. the full pool including property taxes and insurance.",dollar-figure,,no,no
+0210,2026-05-27-0900-anti-integration-209.md,"Tenant audit firms typically work on contingency, with contingency fee structures that typically run 20-40% of recovered amounts, per published tenant audit firm rate schedules.",percentage,,no,no
+0211,2026-05-27-1100-industry-news-211.md,"They verify that the CAM pool total matches the GL, that the gross-up factor is appropriate for the actual occupancy, that property taxes and insurance are excluded from the variable pool, and that the pro-rata shares sum to 100% of the denominator.",percentage,,no,no
+0212,2026-05-27-1200-cam-math-212.md,Insurance premiums increased 31% at renewal.,percentage,,no,no
+0213,2026-05-27-1300-erp-workarounds-213.md,At the other end: your property manager exports a CSV report from Yardi and uploads it.,vendor-product,,yes,no
+0214,2026-05-28-0600-cam-math-221.md,The standard remedy is base year normalization: gross up the actual base year expenses to what they would have been at stabilized occupancy (typically 95%).,percentage,,no,no
+0215,2026-05-28-0700-erp-workarounds-222.md,"What ""replace Yardi"" actually requires",vendor-product,,yes,no
+0216,2026-05-28-0700-erp-workarounds-222.md,Cost: $500K-$2M+ for mid-market portfolios.,dollar-figure,,no,no
+0217,2026-05-28-0700-erp-workarounds-222.md,Export GL detail from Yardi.,vendor-product,,yes,no
+0218,2026-05-28-0800-war-stories-223.md,Their CPA flagged the ASC 842 workpaper.,legal-regulatory,,yes,no
+0219,2026-05-28-0800-war-stories-223.md,"Second, the tenant's CPA flagged the CAM statement as part of ASC 842 lease accounting work.",legal-regulatory,,yes,no
+0220,2026-05-28-1100-industry-news-226.md,"""Based on IREM survey data on reconciliation workloads, a standard CAM reconciliation takes 8 to 15 analyst hours per building.",industry-stat,,yes,no
+0221,2026-05-28-1100-industry-news-226.md,"Based on IREM survey data on reconciliation workloads, the 8-15 hour range per building depends on complexity: number of leases, number of expense categories, whether the gross-up requires detailed occupancy documentation,.",industry-stat,,yes,no
+0222,2026-05-28-1200-cam-math-227.md,Per Bureau of Labor Statistics CPI data for building maintenance and services:,industry-stat,Bureau of Labor Statistics CPI,yes,no
+0223,2026-05-28-1200-cam-math-227.md,Janitorial: up 3.8% annually on average.,percentage,,no,no
+0224,2026-05-28-1200-cam-math-227.md,Repairs and maintenance: up 5.0% annually.,percentage,,no,no
+0225,2026-05-28-1200-cam-math-227.md,Insurance premiums: up 8-15% annually since 2023.,percentage,,yes,no
+0226,2026-05-28-1300-erp-workarounds-228.md,"On a 200,000 SF building with 15% vacancy, Physical and Economic occupancy can diverge by 4-5 percentage points. a $43,200 annual difference on a $600,000 variable expense pool.",percentage,,no,no
+0227,2026-05-28-1500-cam-math-230.md,Correct target from the lease. typically 95%.,percentage,,no,no
+0228,2026-05-28-1500-cam-math-230.md,Confirm the building RSF basis matches the BOMA standard cited in each tenant's lease.,industry-stat,,yes,no
+0229,2026-05-28-1600-anti-integration-231.md,ASC 842 and IFRS 16 raised the stakes for lease data accuracy.,legal-regulatory,,yes,no
+0230,2026-05-28-1800-cam-math-233.md,The following is an illustrative scenario based on a 12-property BOMA 2024 transition:,industry-stat,,yes,yes
+0231,2026-05-28-1800-cam-math-233.md,The asset management team had been planning the BOMA 2024 transition for eighteen months.,industry-stat,,yes,no
+0232,2026-05-28-1800-cam-math-233.md,"The plan: dual measurements under both BOMA 2017 and BOMA 2024, lease review by the legal team to identify which leases referenced ""BOMA standards as amended"" versus fixed-standard language, tenant notifications 90 days before any denominator change, and system updates to follow.",industry-stat,,yes,no
+0233,2026-05-28-1800-cam-math-233.md,The dual measurement phase ran two months longer than planned because the building measurement firm's BOMA 2024 methodology had to be verified. several outdoor amenity spaces that the firm initially excluded from the remeasurement qualified under the new standard's criteria.,industry-stat,,yes,no
+0234,2026-05-28-1800-cam-math-233.md,"By mid-Q2, the legal review had produced a result that surprised no one in retrospect: 40% of leases had language that permitted applying current BOMA standards.",industry-stat,,yes,no
+0235,2026-05-28-1800-cam-math-233.md,35% had language locking the measurement to the BOMA standard in effect at lease commencement.,industry-stat,,yes,no
+0236,2026-05-28-1800-cam-math-233.md,"The first property with BOMA 2024 denominators applied to eligible leases produced a denominator increase of 4.2% a 14,000 SF rooftop terrace and 4,800 SF of courtyard area that now qualified as rentable SF.",industry-stat,,yes,no
+0237,2026-05-28-1800-cam-math-233.md,"At a total project cost of roughly $27,000 across the four properties in the first phase, the BOMA 2024 implementation was within range of the $13,500-$39,500 per-property cost estimate in the guide.",industry-stat,,yes,no
+0238,2026-05-29-0600-cam-math-236.md,"On a 100,000 SF building, BOMA 2024 adds 4,800 SF of rentable area.",industry-stat,,yes,no
+0239,2026-05-29-0700-erp-workarounds-237.md,The Yardi Voyager export is not the hard part of CAM reconciliation.,vendor-product,,yes,no
+0240,2026-05-29-0700-erp-workarounds-237.md,"The five places exports break down: date range mismatch (accrual period doesn't match cash entries), entity filter too narrow (intercompany allocations don't appear), account scope incomplete (GL accounts added mid-year weren't included), format changes after a Yardi update (column order shifted, c…",vendor-product,,yes,no
+0241,2026-05-29-0700-erp-workarounds-237.md,"Exporting from Yardi in a way that captures the right data, with the right parameters, for the right period, from the right entities. that requires knowing exactly which failure modes apply to your installation.",vendor-product,,yes,no
+0242,2026-05-29-0900-anti-integration-239.md,"At a 6% cap rate, it costs $833,000 in asset value.",percentage,,no,no
+0243,2026-05-29-0900-anti-integration-239.md,"A systematic underbilling of $50,000 per year reduces NOI by $50,000, which reduces the property's implied value by $833,000 at a 6% cap rate.",percentage,,no,no
+0244,2026-05-29-0900-anti-integration-239.md,Raymond Panko's spreadsheet error research (published via EuSpRIG) found errors in 88% of corporate financial spreadsheet models. meaning 88% of professionally produced spreadsheets contain at least one error.,industry-stat,EuSpRIG,yes,no
+0245,2026-05-29-1000-cam-math-240.md,A portfolio where tenants don't audit but still have 40% of reconciliations containing material errors has a 0% dispute rate and a significant liability.,percentage,,no,no
+0246,2026-05-29-1100-industry-news-241.md,How to benchmark operating expenses against BOMA and IREM,industry-stat,,yes,no
+0247,2026-05-29-1100-industry-news-241.md,"BOMA Experience Exchange Report (EER): office, retail, industrial.",industry-stat,,yes,no
+0248,2026-05-29-1100-industry-news-241.md,IREM Income/Expense Analysis: multifamily and commercial.,industry-stat,,yes,no
+0249,2026-05-29-1100-industry-news-241.md,BOMA and IREM use standardized expense categories.,industry-stat,,yes,no
+0250,2026-05-29-1100-industry-news-241.md,A building above BOMA benchmarks is not automatically overcharging tenants.,industry-stat,,yes,no
+0251,2026-05-29-1100-industry-news-241.md,"But ""we're within BOMA benchmarks"" is a much easier conversation to have than ""we can't explain the variance.""",industry-stat,,yes,no
+0252,2026-05-29-1300-erp-workarounds-243.md,MRI's GL export for CAM reconciliation requires four specific reports to capture the full picture.,vendor-product,,yes,no
+0253,2026-05-29-1300-erp-workarounds-243.md,The MRI export procedure is well-documented.,vendor-product,,yes,no
+0254,2026-05-29-1400-war-stories-244.md,"For a retail property with $3.5M in operating expenses, running at 2.5% leakage. the midpoint of BOMA EER retail benchmarks. the under-recovery is $87,500 per year.",industry-stat,,yes,no
+0255,2026-05-29-1400-war-stories-244.md,"Per BOMA EER and IREM Income/Expense Analysis benchmarks, typical annual leakage by property type: retail 1.5-3.5%, office 1.0-2.5%, industrial 0.5-1.5%, medical office 2.0-3.5%.",industry-stat,BOMA EER and IREM Income,yes,no
+0256,2026-05-29-1400-war-stories-244.md,"At a 6% cap rate, the owner is suppressing $1.46M in asset value annually. not from market conditions, but from a reconciliation that doesn't reflect what the lease permits.",percentage,,no,no
+0257,2026-05-29-1600-anti-integration-246.md,"For a 20-property portfolio with $2M in annual operating expenses across properties, systematic underbilling or overbilling compounds year over year.",dollar-figure,,no,no
+0258,2026-05-29-1700-founder-247.md,BOMA methodology changes between lease generations.,industry-stat,,yes,no
+0259,2026-05-29-1700-founder-247.md,"If the denominator for an existing tenant was set under an older measurement standard and a new tenant on the same floor was measured under BOMA 2024, the pro-rata math is inconsistent.",industry-stat,,yes,no
+0260,2026-05-29-1900-product-249.md,"For most portfolios with CAM recovery leakage in the 1-3.5% range documented in BOMA EER and IREM benchmarks, the first run usually answers that.",industry-stat,,yes,no
+0261,2026-05-30-0700-cam-math-251.md,"A denominator change. from a BOMA remeasurement, an anchor departure, or a common area reclassification. shifts every tenant's pro-rata share simultaneously.",industry-stat,,yes,no
+0262,2026-05-30-0700-cam-math-251.md,"There are five denominator change triggers that require documentation: BOMA remeasurement, anchor departure or space reclassification, common area expansion, tenant expansion that changes the denominator pool, and BOMA standard update.",industry-stat,,yes,no
+0263,2026-05-30-1000-cam-math-253.md,"A BOMA remeasurement in 2022 had added 3,800 SF to the certified area.",industry-stat,,yes,no
+0264,2026-05-30-1000-cam-math-253.md,"The fix required rebuilding the denominator history from the BOMA remeasurement forward, reconciling each event against the certified measurement certificate and the lease amendments, and producing amended statements for the three years within the audit window.",industry-stat,,yes,no
+0265,2026-05-30-1000-cam-math-253.md,"The 3,300 SF discrepancy from the BOMA remeasurement alone would have been found in 2022.",industry-stat,,yes,no
+0266,2026-05-30-1900-anti-integration-259.md,"$100,000 in NOI = approximately $1-2 million in asset value at market cap rates.",dollar-figure,,no,no
+0267,2026-05-30-1900-anti-integration-259.md,Legal exposure: California SB 1103,legal-regulatory,,yes,no
+0268,2026-05-30-1900-anti-integration-259.md,California's SB 1103 imposes an 18-month deadline for delivering reconciliation statements to qualified commercial tenants.,legal-regulatory,,yes,no
+0269,2026-05-30-1900-anti-integration-259.md,"SB 1103 is California-specific, but similar audit window provisions exist in commercial leases across all markets.",legal-regulatory,,yes,no
+0270,2026-05-30-2030-engagement-260.md,"A non-cumulative cap limits the year-over-year increase in controllable CAM expenses to a fixed percentage, typically 5%.",percentage,,no,no
+0271,2026-05-31-0700-cam-math-261.md,"The year-over-year increase was 11.8% notable but not alarming, given the prior three years had averaged 4.2% annually.",percentage,,no,no
+0272,2026-05-31-0700-cam-math-261.md,"The janitorial line had increased 47% year over year. from $162,000 to $238,000.",percentage,,no,no
+0273,2026-05-31-0700-cam-math-261.md,A line item that jumped 47% year over year and wasn't investigated before the statement was sent is a potential dispute waiting on the tenant's review calendar.,percentage,,no,no
+0274,2026-05-31-0830-war-stories-262.md,"Cell A44. a $142,000 annual insurance premium. fell out of the sum.",dollar-figure,,no,no
+0275,2026-05-31-1130-anti-integration-264.md,California SB 1103 creates an 18-month hard deadline for delivering reconciliation statements to qualified commercial tenants.,legal-regulatory,,yes,no
+0276,2026-05-31-1430-war-stories-266.md,SB 1103 authorizes treble damages for willful overbilling against qualifying small-business tenants.,legal-regulatory,,yes,no
+0277,2026-05-31-1730-founder-268.md,"The recovery leakage documented in BOMA EER and IREM benchmarks (up to 3.5% by property type) is not an outlier. - The source is not fraud, bad software, or incompetent accounting.",industry-stat,,yes,no
+0278,2026-05-31-1730-founder-268.md,"""Up to 3.5% leakage (BOMA/IREM)"" (over point 1)",industry-stat,,yes,no
+0279,2026-06-01-0600-cam-math-271.md,"In modeled scenarios across typical portfolio sizes, the per-building recovery gap often runs $15,000-$30,000 per year. the difference between what a building should collect and what it actually collects, after netting over-billings and under-billings, represents money that flows neither to the lan…",dollar-figure,,no,no
+0280,2026-06-01-0600-cam-math-271.md,"Capitalized at a 6% cap rate, it's $5-10 million in understated portfolio value.",percentage,,no,no
+0281,2026-06-01-0700-erp-workarounds-272.md,"RealPage CAM exports arrive with four structural data issues that silently corrupt reconciliation totals: embedded subtotal rows, multi-line descriptions, inconsistent date formats, and blank separator rows.",vendor-product,,yes,no
+0282,2026-06-01-0700-erp-workarounds-272.md,The four cleanup steps that RealPage exports require before they're usable as source data for independent reconciliation:,vendor-product,,yes,no
+0283,2026-06-01-0700-erp-workarounds-272.md,This is the most common source of import errors from RealPage data.,vendor-product,,yes,no
+0284,2026-06-01-0700-erp-workarounds-272.md,"RealPage may export dates in different formats depending on the report: MM/DD/YYYY in the rent roll, YYYY-MM-DD in the GL detail, and text-formatted dates (March 31, 2025) in the recovery reconciliation.",vendor-product,,yes,no
+0285,2026-06-01-0700-erp-workarounds-272.md,"Once the column mapping is saved, subsequent exports from the same RealPage instance require the same cleanup but take less time.",vendor-product,,yes,no
+0286,2026-06-01-0900-anti-integration-274.md,"A property controller who can translate a $45,000 gross-up correction into $750,000 in property value at a 6% cap rate is not doing accounting anymore.",percentage,,no,no
+0287,2026-06-01-0900-anti-integration-274.md,"Per IREM and BOMA compensation surveys, approximate salary ranges:",industry-stat,IREM and BOMA,yes,no
+0288,2026-06-01-0900-anti-integration-274.md,"NOI impact translation: converting ""$45,000 in recovered operating expenses"" to ""$750,000 in property value at a 6% cap rate.""",percentage,,no,no
+0289,2026-06-01-0900-anti-integration-274.md,"According to MSCI Real Assets, U.S. commercial real estate represents approximately $20 trillion in assets.",industry-stat,MSCI Real Assets,yes,no
+0290,2026-06-01-0900-anti-integration-274.md,The controller who shows ownership that fixing configuration errors added $180K to NOI is not running reports.,dollar-figure,,no,no
+0291,2026-06-01-1100-industry-news-276.md,BOMA 2024 is now operative.,industry-stat,,yes,no
+0292,2026-06-01-1100-industry-news-276.md,SB 1103 is in its second year.,legal-regulatory,,yes,no
+0293,2026-06-01-1100-industry-news-276.md,Harris County assessment increases for 2025 run 10-18% per Dallas Central Appraisal District filings; Chicago-area townships are similar per Cook County Assessor data; Phoenix metro assessments are up sharply per Maricopa County Assessor records.,industry-stat,Dallas Central Appraisal District,yes,no
+0294,2026-06-01-1100-industry-news-276.md,Tax is typically 25-40% of the CAM pool.,percentage,,no,no
+0295,2026-06-01-1100-industry-news-276.md,"The 15-point checklist for the 2026 season includes: BOMA 2024 denominator verification, SB 1103 documentation requirements for California properties, and a property tax cover letter for markets with above-average assessment increases.",legal-regulatory,,yes,no
+0296,2026-06-01-1300-erp-workarounds-278.md,"In MRI, the chain runs: Expense Group → Recovery Pool → Charge Code → Lease Recovery → Tenant Billing.",vendor-product,,yes,no
+0297,2026-06-01-1400-war-stories-279.md,California's SB 1103 requires a specific sequence for treble damages to attach.,legal-regulatory,,yes,no
+0298,2026-06-01-1500-cam-math-280.md,"This is why BOMA exclusions, GAAP-defined CapEx, and above-market management fee provisions matter beyond the specific dollar amount.",legal-regulatory,,yes,no
+0299,2026-06-01-1500-cam-math-280.md,"If a lease says ""capital expenditures as defined under GAAP"" are excluded, any account that contains CapEx. even partially. needs to be cleaned before the pool is finalized.",legal-regulatory,,yes,no

@@ -1,0 +1,68 @@
+{
+  "framework": null,
+  "buildCommand": "npm run vercel-rollback-build",
+  "outputDirectory": ".vercel-rollback",
+  "ignoreCommand": "test -n \"$VERCEL_GIT_PREVIOUS_SHA\" && git fetch origin \"$VERCEL_GIT_PREVIOUS_SHA\" --depth=1 >/dev/null 2>&1 && git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- marketing/ || exit 1",
+  "redirects": [
+    {
+      "source": "/dashboard/:path*",
+      "has": [{ "type": "host", "value": "www.capveri.com" }],
+      "destination": "https://app.capveri.com/dashboard/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/auth/:path*",
+      "has": [{ "type": "host", "value": "www.capveri.com" }],
+      "destination": "https://app.capveri.com/auth/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/settings/:path*",
+      "has": [{ "type": "host", "value": "www.capveri.com" }],
+      "destination": "https://app.capveri.com/settings/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/properties/:path*",
+      "has": [{ "type": "host", "value": "www.capveri.com" }],
+      "destination": "https://app.capveri.com/properties/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/reconciliations/:path*",
+      "has": [{ "type": "host", "value": "www.capveri.com" }],
+      "destination": "https://app.capveri.com/reconciliations/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/admin/:path*",
+      "has": [{ "type": "host", "value": "www.capveri.com" }],
+      "destination": "https://app.capveri.com/admin/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/tenant/:path*",
+      "has": [{ "type": "host", "value": "www.capveri.com" }],
+      "destination": "https://app.capveri.com/tenant/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/organization/:path*",
+      "has": [{ "type": "host", "value": "www.capveri.com" }],
+      "destination": "https://app.capveri.com/organization/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/:path*",
+      "has": [{ "type": "host", "value": "www.capveri.com" }],
+      "destination": "https://app.capveri.com/portfolio/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)?",
+      "has": [{ "type": "host", "value": "capveri.com" }],
+      "destination": "https://www.capveri.com/$1",
+      "statusCode": 308
+    }
+  ]
+}

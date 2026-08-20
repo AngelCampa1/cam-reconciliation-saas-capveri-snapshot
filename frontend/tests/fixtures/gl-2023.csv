@@ -1,0 +1,13 @@
+Property,Account,Account Description,Debit,Credit,Period,Ref,Source,Trans Date
+Riverside Business Park,6000,Janitorial Services,2500.00,,202301,INV-2301,AP,2023-01-15
+Riverside Business Park,6100,Utilities - Electric,4200.00,,202301,INV-2302,AP,2023-01-20
+Riverside Business Park,6150,Utilities - Water,850.00,,202301,INV-2303,AP,2023-01-22
+Riverside Business Park,6200,Property Insurance,5400.00,,202301,INV-2304,AP,2023-01-10
+Riverside Business Park,6300,Property Taxes,12000.00,,202301,INV-2305,AP,2023-01-25
+Riverside Business Park,6400,Landscaping,1200.00,,202301,INV-2306,AP,2023-01-18
+Riverside Business Park,6000,Janitorial Services,2500.00,,202312,INV-2312,AP,2023-12-15
+Riverside Business Park,6100,Utilities - Electric,4800.00,,202312,INV-2313,AP,2023-12-20
+Riverside Business Park,6150,Utilities - Water,900.00,,202312,INV-2314,AP,2023-12-22
+Riverside Business Park,6200,Property Insurance,5400.00,,202312,INV-2315,AP,2023-12-10
+Riverside Business Park,6300,Property Taxes,12000.00,,202312,INV-2316,AP,2023-12-25
+Riverside Business Park,6400,Landscaping,1200.00,,202312,INV-2317,AP,2023-12-18

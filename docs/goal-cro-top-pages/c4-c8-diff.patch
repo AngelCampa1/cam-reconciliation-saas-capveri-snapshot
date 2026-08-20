@@ -1,0 +1,85 @@
+diff --git a/marketing/content/blog/yardi-cam-recovery-pool-setup.mdx b/marketing/content/blog/yardi-cam-recovery-pool-setup.mdx
+index c1efbf71..321eb90e 100644
+--- a/marketing/content/blog/yardi-cam-recovery-pool-setup.mdx
++++ b/marketing/content/blog/yardi-cam-recovery-pool-setup.mdx
+@@ -127,6 +127,13 @@ After reviewing these six fields, validate the output:
+
+ CapVeri automates this validation. Upload your Yardi export and your lease terms, and CapVeri checks every calculation against every lease, not just a sample of three.
+
++<CTABox
++  title="Check your Yardi CAM against every lease"
++  description="Upload your Yardi export and lease terms. CapVeri checks your CAM math against every lease. It flags the errors before tenants see them."
++  utmContent="yardi_recovery_pool_cta"
++  buttonText="Start free trial"
++/>
++
+ ## Related Resources
+
+ - [CAM Reconciliation Guide](/cam-reconciliation-guide): Complete step-by-step reconciliation process
+diff --git a/marketing/src/app/cam-charges/page.tsx b/marketing/src/app/cam-charges/page.tsx
+index 79740cac..71955b1d 100644
+--- a/marketing/src/app/cam-charges/page.tsx
++++ b/marketing/src/app/cam-charges/page.tsx
+@@ -263,11 +263,10 @@ export default function CamChargesPage() {
+               What Are CAM Charges and How Are They Calculated?
+             </h1>
+             <p className="text-xl text-muted-foreground mb-3 max-w-3xl">
+-              CAM charges are operating expense recoveries that commercial
+-              landlords bill to tenants under NNN and modified gross leases.
+-              They are reconciled annually against actual building expenses.
+-              This guide covers what&apos;s included, how to calculate tenant
+-              shares, and how to verify you&apos;re not overbilling.
++              CAM charges are what landlords bill tenants for shared building
++              costs. This guide shows what&apos;s included. You will learn how
++              to split costs by tenant. You will also see how to check for
++              overbilling.
+             </p>
+             {/* Definition block */}
+             <div className="rounded-lg border-l-4 border-primary bg-primary/5 p-4 mb-3 max-w-3xl">
+diff --git a/marketing/src/app/cam-reconciliation-guide/page.tsx b/marketing/src/app/cam-reconciliation-guide/page.tsx
+index c73ca383..3d31bbe6 100644
+--- a/marketing/src/app/cam-reconciliation-guide/page.tsx
++++ b/marketing/src/app/cam-reconciliation-guide/page.tsx
+@@ -407,7 +407,7 @@ export default async function CamReconciliationGuidePage() {
+                 href="/pricing"
+                 className="inline-flex items-center justify-center rounded-button bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+               >
+-                Free Reconciliation Review
++                Start free trial
+                 <ArrowRight className="h-4 w-4 ml-2" />
+               </Link>
+               <Link
+diff --git a/marketing/src/app/product-tour/page.tsx b/marketing/src/app/product-tour/page.tsx
+index 38df7c89..f5855a16 100644
+--- a/marketing/src/app/product-tour/page.tsx
++++ b/marketing/src/app/product-tour/page.tsx
+@@ -409,12 +409,12 @@ export default async function ProductTourPage() {
+       <section className="py-16 sm:py-20">
+         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+-            See a synthetic audit packet
++            See a sample audit packet
+           </h2>
+           <p className="mt-4 text-muted-foreground">
+-            Review a generated CapVeri packet with flagged exceptions,
+-            calculation context, and GL-to-lease traceability. No signup
+-            required.
++            See a sample CapVeri packet. It shows flagged issues and the math
++            behind each one. Every number ties back to the lease. No signup
++            needed.
+           </p>
+           <Button className="mt-8" size="lg" variant="outline" asChild>
+             <Link href="/sample-report">
+diff --git a/marketing/src/app/tools/cam-gross-up-calculator/CamGrossUpCalculatorClient.tsx b/marketing/src/app/tools/cam-gross-up-calculator/CamGrossUpCalculatorClient.tsx
+index 09368c38..7b179bb0 100644
+--- a/marketing/src/app/tools/cam-gross-up-calculator/CamGrossUpCalculatorClient.tsx
++++ b/marketing/src/app/tools/cam-gross-up-calculator/CamGrossUpCalculatorClient.tsx
+@@ -119,7 +119,7 @@ export function CamGrossUpCalculator() {
+               Free CAM Gross-Up Scenario Calculator
+             </h1>
+             <p className="mt-3 text-lg text-muted-foreground">
+-              Model gross-up expenses across occupancy thresholds. Download
++              See how gross-up changes your CAM at any occupancy. Download
+               free.
+             </p>
+             <div className="mt-6 max-w-2xl text-left text-sm text-muted-foreground bg-muted/50 rounded-lg p-4">

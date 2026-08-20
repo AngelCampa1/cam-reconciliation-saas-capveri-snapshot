@@ -1,0 +1,882 @@
+@import './generated/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 767px) {
+  html body [data-aics-root][data-aics-position='bottom-right'],
+  html body [data-aics-root][data-aics-position='bottom-left'] {
+    bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@layer base {
+  :root {
+    /* ========================================================================
+     * CapVeri LIGHT THEME
+     * Philosophy: "Audit-Ready Clarity"
+     * High contrast, paper-white surfaces, deep blue typography for trust.
+     *
+     * Color Psychology:
+     * - Sovereign Blue: Trust, stability, active revenue hunting
+     * - Revenue Gold: Wealth, value discovery, "found money"
+     * - Audit Slate: Precision, neutrality, reduced cognitive load
+     * ======================================================================== */
+
+    /* Primary - "CapVeri Navy" (Brand)
+     * Hex: #304476 - Deep navy blue from the brand logo
+     * Passes WCAG AA contrast with white foreground */
+    --primary: 223 42% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Soft gray for secondary actions */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    /* Destructive (for delete/remove actions) */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Semantic Colors - Accessible color choices */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 48 96% 10%;
+    --error: 0 84% 60%;
+    --error-foreground: 0 0% 100%;
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    /* F-287: dark "on-light" shades for colored text/icons sitting on white
+       or the tinted /5 alert wash. The DEFAULT semantic colors above are
+       mid-tone and fail WCAG AA for small text on light backgrounds
+       (e.g. --success at 12px ~ 3.33:1); these strong variants clear AA
+       (all >= 7:1 on white). NOTE: the *-foreground tokens are WHITE (for
+       text on a SOLID color fill) and cannot be reused here — hence a
+       separate token, mirroring how --warning-foreground is already a dark
+       on-light amber. */
+    --success-strong: 142 64% 24%;
+    --info-strong: 200 90% 28%;
+    --destructive-strong: 0 70% 35%;
+    /* True on-light amber for colored TEXT on white (e.g. mid-range
+       confidence). --warning-foreground (10% L) is too dark to read as
+       amber on white — it collapses to near-black — so it is only correct
+       on a solid/washed warning fill. This strong variant (~5.4:1 on white)
+       reads clearly amber while clearing WCAG AA for small text. */
+    --warning-strong: 32 95% 32%;
+
+    /* Neutrals / Background & Foreground */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    /* Muted (for subtle backgrounds and text) */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent (for highlights) */
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    /* UI Element Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Border & Input */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 223 42% 33%;
+
+    /* Overlay (for modals, dialogs, sheets) */
+    --overlay: 0 0% 0%;
+
+    /* ===========================
+     * BORDER RADIUS TOKENS
+     * Slightly squared (0.5rem) for "Financial Precision" aesthetic
+     * =========================== */
+    --radius: 0.5rem;
+
+    /* ===========================
+     * SHADOW TOKENS
+     * Subtle shadows for depth without being harsh
+     * =========================== */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md:
+      0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+    --shadow-lg:
+      0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
+    --shadow-card:
+      0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+    --shadow-glow: 0 0 0 3px hsl(var(--primary) / 0.2);
+    --shadow-card-hover:
+      0 20px 40px -8px rgb(0 0 0 / 0.12), 0 8px 16px -4px rgb(0 0 0 / 0.08);
+
+    /* ===========================
+     * TYPOGRAPHY TOKENS
+     * System font stack for optimal performance
+     * =========================== */
+    --font-sans:
+      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol';
+    --font-mono:
+      ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+      'Liberation Mono', monospace;
+
+    /* Font Sizes (rem values for accessibility) */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+
+    /* Line Heights */
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+
+    /* Font Weights */
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    /* ===========================
+     * SPACING SCALE (4px base unit)
+     * Financial precision spacing for data-dense interfaces
+     * =========================== */
+    --spacing-1: 0.25rem; /* 4px - Micro spacing (icon padding, tight gaps) */
+    --spacing-2: 0.5rem; /* 8px - Compact spacing (button padding vertical) */
+    --spacing-3: 0.75rem; /* 12px - Default gap (form fields) */
+    --spacing-4: 1rem; /* 16px - Standard spacing (card padding) */
+    --spacing-5: 1.25rem; /* 20px - Medium spacing (section gaps) */
+    --spacing-6: 1.5rem; /* 24px - Large spacing (card inner padding) */
+    --spacing-8: 2rem; /* 32px - XL spacing (page sections) */
+    --spacing-10: 2.5rem; /* 40px - 2XL spacing (major page divisions) */
+    --spacing-12: 3rem; /* 48px - Hero spacing (landing sections) */
+    --spacing-16: 4rem; /* 64px - Giant spacing (page top/bottom) */
+    --spacing-20: 5rem; /* 80px - Massive spacing (landing hero) */
+
+    /* ===========================
+     * OPACITY SCALE (Contrast-Safe)
+     * Pre-calculated opacity values that maintain WCAG AA contrast ratios.
+     * Use these semantic tokens instead of arbitrary opacity values to ensure
+     * consistent contrast across light and Light Themes.
+     *
+     * WCAG AA Requirements:
+     * - Normal text (< 18px): 4.5:1 contrast ratio
+     * - Large text (≥ 18px): 3:1 contrast ratio
+     * =========================== */
+    --opacity-full: 1; /* 100% - Primary text, critical content, headings */
+    --opacity-emphasis: 0.95; /* 95% - High-emphasis secondary text */
+    --opacity-high: 0.9; /* 90% - Standard secondary text (meets AA on most backgrounds) */
+    --opacity-medium: 0.85; /* 85% - Medium-emphasis text, captions */
+    --opacity-subtle: 0.75; /* 75% - Low-emphasis text, placeholders (use sparingly) */
+    --opacity-disabled: 0.4; /* 40% - Disabled states only (not for readable text) */
+    --opacity-decorative: 0.3; /* 30% - Decorative elements only (not for text) */
+
+    /* ===========================
+     * Z-INDEX LAYERING SYSTEM
+     * Semantic layer names for consistent stacking
+     * =========================== */
+    --z-base: 0; /* Default layer (most content) */
+    --z-sticky: 10; /* Sticky table headers, nav bars */
+    --z-fixed: 20; /* Fixed position elements (bottom nav) */
+    --z-overlay: 30; /* Backdrops, modal overlays */
+    --z-dropdown: 40; /* Dropdowns, select menus, popovers */
+    --z-modal: 50; /* Dialogs, sheets, alerts */
+    --z-toast: 60; /* Toast notifications (highest layer) */
+    --z-tooltip: 70; /* Tooltips (must appear over modals) */
+
+    /* ===========================
+     * ICON SIZING SCALE
+     * Aligns with typography scale for visual rhythm
+     * =========================== */
+    --icon-xs: 0.75rem; /* 12px - Small inline icons */
+    --icon-sm: 0.875rem; /* 14px - Compact UI icons */
+    --icon-base: 1rem; /* 16px - Default icon size */
+    --icon-lg: 1.25rem; /* 20px - Medium emphasis icons */
+    --icon-xl: 1.5rem; /* 24px - Large action icons */
+    --icon-2xl: 2rem; /* 32px - Hero/feature icons */
+
+    /* ===========================
+     * FORM INPUT STATE COLORS
+     * Extended states for rich form interactions
+     * =========================== */
+    --input-border-hover: hsl(var(--border-hover));
+    --input-border-disabled: hsl(var(--border-subtle));
+    --input-bg-disabled: hsl(var(--muted) / 0.3);
+    --input-text-disabled: hsl(var(--muted-foreground) / 0.5);
+    --input-border-error: hsl(var(--destructive));
+    --input-ring-error: hsl(var(--destructive) / 0.3);
+    --input-border-success: hsl(var(--success));
+    --input-ring-success: hsl(var(--success) / 0.3);
+    --input-border-readonly: hsl(var(--border-subtle));
+    --input-bg-readonly: hsl(var(--surface-sunken));
+
+    /* ===========================
+     * DATA TABLE TOKENS
+     * Granular control for financial data grids
+     * =========================== */
+    --table-border: hsl(var(--border-subtle));
+    --table-border-strong: hsl(var(--border-strong));
+    --table-header-bg: hsl(var(--muted) / 0.3);
+    --table-header-text: hsl(var(--muted-foreground));
+    --table-header-border: hsl(var(--border-subtle));
+    --table-row-bg: transparent;
+    --table-row-bg-hover: hsl(var(--muted) / 0.3);
+    --table-row-bg-selected: hsl(var(--primary) / 0.05);
+    --table-row-border: hsl(var(--border-subtle));
+    --table-row-border-selected: hsl(var(--primary) / 0.2);
+    --table-row-bg-even: transparent;
+    --table-row-bg-odd: hsl(var(--muted) / 0.15);
+    --table-cell-padding-x: var(--spacing-4); /* 16px */
+    --table-cell-padding-y: var(--spacing-3); /* 12px */
+    --table-footer-bg: hsl(var(--muted) / 0.5);
+    --table-footer-border: hsl(var(--border));
+
+    /* ===========================
+     * EXTENDED STATUS/BADGE COLORS
+     * Workflow state colors for reconciliation status
+     * =========================== */
+    --status-neutral: 215 16% 47%; /* Muted slate gray */
+    --status-neutral-foreground: 0 0% 100%;
+    --status-pending: 38 92% 50%; /* Amber (matches chart-2) */
+    --status-pending-foreground: 48 96% 10%;
+    --status-in-progress: 199 89% 48%; /* Info blue */
+    --status-in-progress-foreground: 0 0% 100%;
+    --status-draft: 215 16% 65%; /* Lighter slate */
+    --status-draft-foreground: 222 47% 11%;
+    --status-verified: 142 76% 36%; /* Success green */
+    --status-verified-foreground: 0 0% 100%;
+    --status-archived: 215 16% 40%; /* Dark slate */
+    --status-archived-foreground: 210 40% 98%;
+
+    /* ===========================
+     * CONTENT WIDTH CONSTRAINTS
+     * Semantic container max-widths for layout hierarchy
+     * =========================== */
+    --container-xs: 20rem; /* 320px - Narrow dialogs */
+    --container-sm: 28rem; /* 448px - Compact forms (max-w-md = 28rem) */
+    --container-md: 32rem; /* 512px - Standard forms (max-w-lg = 32rem) */
+    --container-lg: 42rem; /* 672px - Content pages (max-w-2xl = 42rem) */
+    --container-xl: 56rem; /* 896px - Settings pages (max-w-4xl = 56rem) */
+    --container-2xl: 72rem; /* 1152px - Dashboard (max-w-6xl = 72rem) */
+    --prose-width: 65ch; /* Optimal reading width (long-form content) */
+
+    /* ===========================
+     * RESPONSIVE BREAKPOINTS
+     * Exposed as CSS variables for container queries
+     * =========================== */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+
+    /* ===========================
+     * PROSE/LONG-FORM CONTENT TOKENS
+     * Typography for documentation and rich text
+     * =========================== */
+    --prose-body: hsl(var(--foreground));
+    --prose-headings: hsl(var(--foreground));
+    --prose-links: hsl(var(--primary));
+    --prose-code: hsl(var(--foreground));
+    --prose-code-bg: hsl(var(--muted));
+    --prose-p-margin: var(--spacing-4); /* 16px between paragraphs */
+    --prose-h2-margin: var(--spacing-6); /* 24px before h2 */
+
+    /* ========================================================================
+     * SEMANTIC DATA VISUALIZATION COLORS (LIGHT)
+     * Used for Charts: Leakage, Recovery, Occupancy
+     *
+     * Color Semantics:
+     * - Chart-1 (Emerald): Recovered Revenue - "Money captured"
+     * - Chart-2 (Amber): Leakage Found - "Revenue opportunity/gold nugget"
+     * - Chart-3 (Blue): Fixed Expenses - "Stable costs"
+     * - Chart-4 (Purple): Cap Rates/Projections
+     * - Chart-5 (Orange): Critical Alerts
+     * ======================================================================== */
+    --chart-1: 142 76% 36%; /* Emerald: Recovered Revenue */
+    --chart-2: 38 92% 50%; /* Amber: Leakage Found (Opportunity) */
+    --chart-3: 223 42% 33%; /* Navy: Fixed Expenses */
+    --chart-4: 262 83% 58%; /* Purple: Cap Rates/Projections */
+    --chart-5: 24 95% 53%; /* Orange: Critical Alerts */
+
+    /* ===========================
+     * ANIMATION TOKENS
+     * =========================== */
+    --transition-fast: 150ms;
+    --transition-normal: 200ms;
+    --transition-slow: 300ms;
+
+    /* ===========================
+     * REFINED CORPORATE DESIGN SYSTEM
+     * Premium aesthetic inspired by Stripe/Linear
+     * =========================== */
+
+    /* Primary Color Scale (for depth and visual hierarchy) - Navy Blue */
+    --primary-50: 223 35% 97%;
+    --primary-100: 223 38% 93%;
+    --primary-200: 223 40% 85%;
+    --primary-300: 223 42% 70%;
+    --primary-400: 223 42% 50%;
+    --primary-500: 223 42% 40%;
+    --primary-600: 223 42% 33%;
+    --primary-700: 223 45% 28%;
+    --primary-800: 223 48% 22%;
+    --primary-900: 223 50% 16%;
+    --primary-950: 223 55% 10%;
+
+    /* Elevation System (4 levels for visual depth) */
+    --elevation-0: none;
+    --elevation-1:
+      0 1px 2px 0 rgb(0 0 0 / 0.03), 0 1px 6px -1px rgb(0 0 0 / 0.02),
+      0 2px 4px 0 rgb(0 0 0 / 0.02);
+    --elevation-2:
+      0 2px 4px -1px rgb(0 0 0 / 0.04), 0 4px 6px -1px rgb(0 0 0 / 0.05),
+      0 0 0 1px rgb(0 0 0 / 0.02);
+    --elevation-3:
+      0 4px 8px -2px rgb(0 0 0 / 0.06), 0 10px 20px -5px rgb(0 0 0 / 0.08),
+      0 0 0 1px rgb(0 0 0 / 0.02);
+    --elevation-4:
+      0 8px 16px -4px rgb(0 0 0 / 0.08), 0 20px 40px -8px rgb(0 0 0 / 0.12),
+      0 0 0 1px rgb(0 0 0 / 0.02);
+
+    /* Colored Shadows (for primary buttons/elements) */
+    --elevation-primary-1:
+      0 1px 2px 0 hsl(223 42% 33% / 0.08),
+      0 2px 4px -1px hsl(223 42% 33% / 0.12);
+    --elevation-primary-2:
+      0 4px 12px -2px hsl(223 42% 33% / 0.2),
+      0 2px 4px -1px hsl(223 42% 33% / 0.08);
+
+    /* Surface System (subtle background variations) */
+    --surface-base: 0 0% 100%;
+    --surface-raised: 210 40% 99%;
+    --surface-sunken: 214 32% 97%;
+    --surface-overlay: 0 0% 100%;
+    --surface-hover: 214 32% 96%;
+    --surface-active: 214 32% 94%;
+    --surface-selected: 217 100% 97%;
+
+    /* Gradient Definitions */
+    --gradient-brand: linear-gradient(
+      135deg,
+      hsl(223 42% 40%) 0%,
+      hsl(223 50% 28%) 100%
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      hsl(0 0% 100%) 0%,
+      hsl(210 40% 98%) 100%
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(223 42% 38%) 0%,
+      hsl(223 45% 30%) 50%,
+      hsl(223 48% 25%) 100%
+    );
+    --gradient-mesh:
+      radial-gradient(
+        ellipse at 20% 0%,
+        hsl(223 42% 33% / 0.08) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 80% 100%,
+        hsl(42 62% 56% / 0.05) 0%,
+        transparent 50%
+      );
+
+    /* Glass-morphism Effects */
+    --glass-background: hsl(0 0% 100% / 0.8);
+    --glass-background-heavy: hsl(0 0% 100% / 0.92);
+    --glass-border: hsl(0 0% 100% / 0.2);
+    --blur-sm: 4px;
+    --blur-md: 8px;
+    --blur-lg: 16px;
+    --blur-xl: 24px;
+
+    /* Pattern Backgrounds */
+    --pattern-dots: radial-gradient(
+      circle,
+      hsl(214 32% 85%) 1px,
+      transparent 1px
+    );
+    --pattern-dots-size: 24px 24px;
+    --pattern-grid:
+      linear-gradient(hsl(214 32% 91%) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(214 32% 91%) 1px, transparent 1px);
+    --pattern-grid-size: 40px 40px;
+
+    /* Enhanced Focus Rings */
+    --ring-soft:
+      0 0 0 3px hsl(223 42% 33% / 0.12), 0 0 0 1px hsl(223 42% 33% / 0.24);
+    --ring-error:
+      0 0 0 3px hsl(0 84% 60% / 0.12), 0 0 0 1px hsl(0 84% 60% / 0.24);
+    --ring-success:
+      0 0 0 3px hsl(142 76% 36% / 0.12), 0 0 0 1px hsl(142 76% 36% / 0.24);
+
+    /* Refined Border Colors */
+    --border-subtle: 214 32% 94%;
+    --border-default: 214 32% 91%;
+    --border-strong: 214 32% 85%;
+    --border-hover: 214 32% 80%;
+
+    /* Easing Functions */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* Duration Refinements */
+    --duration-instant: 50ms;
+    --duration-fast: 100ms;
+    --duration-normal: 150ms;
+    --duration-slow: 250ms;
+    --duration-slower: 350ms;
+  }
+
+  /* ========================================================================
+   * CapVeri Light Theme
+   * Philosophy: "Deep Audit Focus"
+   * Optimized for low-light environments. Reduces "Financial Fatigue".
+   * Uses "Slate" (Blue-Grey) scale, NOT pure black/grey.
+   *
+   * Inspired by Linear's Light-Only Mode - creates a "cockpit" feel for operators.
+   * ======================================================================== */
+  /* ===========================
+   * BASE STYLES
+   * =========================== */
+
+  /* Apply border color to all elements */
+  *,
+  *::before,
+  *::after {
+    border-color: hsl(var(--border));
+  }
+
+  /* Body styles */
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans);
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: var(--leading-normal);
+  }
+
+  /* ===========================
+   * FOCUS STYLES (Accessibility)
+   * Visible focus indicators for all interactive elements
+   * =========================== */
+
+  /* Remove default focus outline and apply custom ring */
+  *:focus {
+    outline: none;
+  }
+
+  /* Visible focus ring for keyboard navigation */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Focus ring within variant (for components that need inner focus) */
+  .focus-within-ring:focus-within {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* ===========================
+   * INPUT FOCUS STYLES
+   * Clear focus indicators for form elements
+   * =========================== */
+
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 0;
+    border-color: hsl(var(--ring));
+  }
+
+  /* ===========================
+   * BUTTON HOVER/ACTIVE STATES
+   * Smooth transitions for interactive feedback
+   * =========================== */
+
+  button,
+  [role='button'] {
+    transition:
+      background-color var(--transition-fast) ease-in-out,
+      border-color var(--transition-fast) ease-in-out,
+      color var(--transition-fast) ease-in-out,
+      box-shadow var(--transition-fast) ease-in-out,
+      transform var(--transition-fast) ease-in-out;
+  }
+
+  /* Subtle press effect */
+  button:active:not(:disabled),
+  [role='button']:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+
+  /* ===========================
+   * LINK STYLES
+   * =========================== */
+
+  a {
+    color: hsl(var(--primary));
+    text-decoration: none;
+    transition: color var(--transition-fast) ease-in-out;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* ===========================
+   * SELECTION STYLES
+   * Brand-colored text selection
+   * =========================== */
+
+  ::selection {
+    background-color: hsl(var(--primary) / 0.2);
+    color: hsl(var(--foreground));
+  }
+
+  /* ===========================
+   * SCROLLBAR STYLES
+   * Subtle, professional scrollbars
+   * =========================== */
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground) / 0.3) hsl(var(--muted));
+  }
+}
+
+/* ===========================
+ * UTILITY CLASSES
+ * =========================== */
+
+/* ===========================
+ * REDUCED MOTION PREFERENCES
+ * Respect user accessibility settings
+ * =========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-pulse {
+    animation: none !important;
+    opacity: 0.5;
+  }
+
+  .animate-spin {
+    animation: none !important;
+  }
+}
+
+@layer utilities {
+  /* Transition utilities */
+  .transition-fast {
+    transition-duration: var(--transition-fast);
+  }
+
+  .transition-normal {
+    transition-duration: var(--transition-normal);
+  }
+
+  .transition-slow {
+    transition-duration: var(--transition-slow);
+  }
+
+  /* Card shadow utility */
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Focus ring utility (for custom components) */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  /* Skip link for accessibility */
+  .skip-link {
+    @apply sr-only focus-visible:not-sr-only focus-visible:absolute focus-visible:top-4 focus-visible:left-4 focus-visible:z-50 focus-visible:bg-background focus-visible:px-4 focus-visible:py-2 focus-visible:rounded-full focus-visible:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  /* Decorative mesh gradients for auth pages */
+  .bg-decorative-mesh-1 {
+    background: radial-gradient(
+      circle at 25% 25%,
+      hsl(var(--foreground) / 0.2) 0%,
+      transparent 50%
+    );
+  }
+
+  .bg-decorative-mesh-2 {
+    background: radial-gradient(
+      circle at 75% 75%,
+      hsl(var(--foreground) / 0.15) 0%,
+      transparent 50%
+    );
+  }
+
+  /* ===========================
+   * REFINED CORPORATE UTILITIES
+   * Premium aesthetic helper classes
+   * =========================== */
+
+  /* Glass Effect */
+  .glass {
+    background: var(--glass-background);
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+  }
+
+  .glass-heavy {
+    background: var(--glass-background-heavy);
+    backdrop-filter: blur(var(--blur-lg));
+    -webkit-backdrop-filter: blur(var(--blur-lg));
+  }
+
+  /* Pattern Backgrounds */
+  .bg-dots {
+    background-image: var(--pattern-dots);
+    background-size: var(--pattern-dots-size);
+  }
+
+  .bg-grid {
+    background-image: var(--pattern-grid);
+    background-size: var(--pattern-grid-size);
+  }
+
+  /* Card Elevation Variants */
+  .card-elevated {
+    box-shadow: var(--elevation-1);
+    transition: box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card-elevated:hover {
+    box-shadow: var(--elevation-2);
+  }
+
+  .card-interactive {
+    box-shadow: var(--elevation-1);
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card-interactive:hover {
+    box-shadow: var(--elevation-3);
+    transform: translateY(-2px);
+  }
+
+  .card-interactive:active {
+    box-shadow: var(--elevation-1);
+    transform: translateY(0);
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+
+  .hover-scale {
+    transition: transform 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+
+  /* Gradient Text */
+  .text-gradient-brand {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Enhanced Focus States */
+  .focus-ring-soft:focus-visible {
+    outline: none;
+    box-shadow: var(--ring-soft);
+  }
+
+  .focus-ring-error:focus-visible {
+    outline: none;
+    box-shadow: var(--ring-error);
+  }
+
+  .focus-ring-success:focus-visible {
+    outline: none;
+    box-shadow: var(--ring-success);
+  }
+
+  /* Surface Utilities */
+  .surface-raised {
+    background-color: hsl(var(--surface-raised));
+  }
+
+  .surface-sunken {
+    background-color: hsl(var(--surface-sunken));
+  }
+
+  .surface-selected {
+    background-color: hsl(var(--surface-selected));
+  }
+
+  /* Animation Utilities */
+  .animate-fade-in-up {
+    animation: fadeInUp 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted)) 0%,
+      hsl(var(--muted) / 0.5) 50%,
+      hsl(var(--muted)) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+}
+
+/* Additional Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  33% {
+    transform: translate(4%, -4%) scale(1.05);
+  }
+  66% {
+    transform: translate(-3%, 3%) scale(0.97);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+}
+@keyframes fade-in-up-scroll {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-on-scroll {
+  opacity: 0;
+}
+.animate-on-scroll.is-visible {
+  animation: fade-in-up-scroll 0.5s var(--ease-out-expo) forwards;
+}
+.animate-on-scroll[data-delay='100'].is-visible {
+  animation-delay: 100ms;
+}
+.animate-on-scroll[data-delay='200'].is-visible {
+  animation-delay: 200ms;
+}
+.animate-on-scroll[data-delay='300'].is-visible {
+  animation-delay: 300ms;
+}
+.animate-on-scroll[data-delay='400'].is-visible {
+  animation-delay: 400ms;
+}

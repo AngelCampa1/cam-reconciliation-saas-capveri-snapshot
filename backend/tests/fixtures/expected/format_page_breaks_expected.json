@@ -1,0 +1,13 @@
+{
+  "error_type": "format",
+  "description": "CSV with page breaks and repeated headers",
+  "parseable": true,
+  "expected_behavior": "Parser should detect and filter out page markers and repeated headers",
+  "expected_warnings": [
+    "Page break detected at row 3",
+    "Repeated header row detected and removed (row 6)"
+  ],
+  "expected_rows": 4,
+  "valid_rows": 4,
+  "invalid_rows": 0
+}

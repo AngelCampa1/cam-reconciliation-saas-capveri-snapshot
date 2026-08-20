@@ -1,0 +1,147 @@
+---
+title: "How to Fix CAM Calculation Errors in Yardi Voyager: Complete Guide"
+description: "CAM calculation errors in Yardi Voyager stem from five configuration layers. This guide walks through each layer, how to diagnose errors, and how to fix them before reconciliation statements go out."
+excerpt: "Fixing CAM calculation errors in Yardi Voyager requires understanding five configuration layers and checking them in the right order."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "In what order should I check Yardi Voyager CAM configuration layers when troubleshooting?"
+    a: "Always check in this order: (1) Recovery Pool: is it capturing the right expenses with the right gross-up settings? (2) Charge Code: is it linked to the correct recovery pool? (3) Lease Setup: are tenant RSF and pro-rata denominator correct? (4) Billing Setup: is billing frequency and estimate method configured correctly? (5) Manual Overrides: are there tenant-specific exceptions that may be overriding correct pool-level settings? Start at the pool level because errors there propagate to all tenants."
+  - q: "What is the fastest way to check if a Yardi CAM calculation is correct?"
+    a: "Pick your three largest tenants and calculate their expected CAM charges manually: (1) export total recoverable expenses from the GL for the period, (2) apply gross-up if occupancy is below threshold, (3) multiply by each tenant's pro-rata share from their lease. Compare to Yardi's calculated amount. If your manual calculation and Yardi agree within 1%, the configuration is likely correct. If they diverge, the error is in one of the five layers described in this guide."
+  - q: "How do I fix a Yardi CAM calculation without disrupting active billing?"
+    a: "Make configuration changes in this sequence: First, make the change in a test run or as a calculation preview. Do not post. Second, compare the new calculation against your manual calculation to confirm it's correct. Third, review the impact on all tenants in the pool, not just the one you were troubleshooting. Pool-level changes affect everyone. Fourth, once verified, apply the change to production and post. For mid-year corrections, document the correction date and reason in Yardi's notes field for the affected billing records."
+---
+
+CAM calculation errors in Yardi Voyager don't appear randomly. They originate in one of five configuration layers, and each layer has specific settings that can go wrong. When you approach troubleshooting systematically, starting at the pool level and working down to lease-level overrides, you find the error faster and fix it more reliably than by searching for it by intuition.
+
+## The 5 Configuration Layers
+
+Yardi Voyager processes CAM calculations through these layers in sequence:
+
+1. **Recovery Pool** → defines which expenses are recoverable and how gross-up applies
+2. **Charge Code** → links billing to the recovery pool and defines invoice presentation
+3. **Lease Setup** → defines each tenant's pro-rata share (numerator and denominator)
+4. **Billing Setup** → controls billing frequency and estimate calculation method
+5. **Manual Overrides** → tenant-specific exceptions that override pool or lease-level settings
+
+A correct output at each layer depends on the layer above being correct. This is why you check top-down: fixing Layer 3 when the error is in Layer 1 doesn't help.
+
+## Layer 1: Recovery Pool
+
+**Location in Yardi:** Administration > Setup > Recovery Pools
+
+The recovery pool is the foundation of every CAM calculation. It controls:
+
+- **Which GL accounts contribute to the recoverable expense total**
+- **Gross-up methodology** (Physical vs. Economic occupancy, threshold percentage)
+- **Variable vs. Fixed expense classification** (what gets grossed up)
+- **Exclusions** (management fee caps, excluded expense types)
+
+**Diagnostic check:** Export total expenses from the recovery pool for the reconciliation period. Independently export total operating expenses from the GL for the same period. Compare the totals. Any gap represents unmapped accounts, incorrect exclusions, or a date range mismatch.
+
+**Common Layer 1 errors:**
+- GL accounts added mid-year and not mapped to the pool
+- Fixed expenses classified as Variable, causing them to be grossed up incorrectly
+- Gross-up threshold set at 90% when leases specify 95%
+- Occupancy Type set to Physical instead of Economic (see [Yardi Recovery Pool Not Calculating Correctly](/blog/yardi-recovery-pool-not-calculating) for the full analysis of this issue)
+
+**Fix priority:** Pool-level errors must be resolved before checking any other layer. Every tenant in the pool is affected by a pool-level error.
+
+## Layer 2: Charge Code
+
+**Location in Yardi:** Administration > Setup > Charge Codes
+
+The charge code translates the recovery pool calculation into a billable line item on the tenant invoice. Key settings:
+
+- **Recovery Code field:** Must point to the recovery code linked to the correct pool. If blank, the charge code cannot pull from pool data.
+- **Billing Method:** Flat, Formula, or Recovery Pool. Must be set to Recovery Pool for automated CAM billing.
+- **GL Revenue Account:** Where tenant payments are posted. Should match your revenue chart of accounts.
+
+**Diagnostic check:** Open the charge code used for CAM billing. Confirm the Recovery Code field is populated and points to a code linked to the correct pool. Then open the recovery code itself and confirm it links to the correct recovery pool.
+
+**Common Layer 2 errors:**
+- Recovery Code field blank (breaks the link to pool calculation)
+- Recovery code points to the wrong pool (tenant billed from wrong expense pool)
+- Billing Method set to Flat (overrides pool calculation with a static amount)
+
+## Layer 3: Lease Setup
+
+**Location in Yardi:** Lease record > Recovery Billing tab
+
+This layer defines each tenant's individual calculation parameters:
+
+- **Tenant RSF (numerator):** The rentable square footage the tenant occupies
+- **Pro-rata denominator:** Building RSF, floor RSF, or custom denominator
+- **Denominator definition:** How the denominator is calculated (by lease clause, by occupancy)
+- **Recovery code assignment:** Which recovery code applies to this tenant (can override pool default)
+
+**Diagnostic check:** For any tenant, verify their pro-rata fraction. Tenant RSF ÷ Denominator should equal the percentage stated in their lease. If Yardi's calculation produces a different pro-rata share than what the lease specifies, the error is here.
+
+**Common Layer 3 errors:**
+- Denominator not updated after tenant expansion or contraction
+- Denominator type (occupied vs. total building) doesn't match lease definition
+- Tenant RSF not updated after space remeasurement
+- Wrong recovery code assigned at the lease level (overriding a correct pool default with an incorrect exception)
+
+## Layer 4: Billing Setup
+
+**Location in Yardi:** Lease record > Billing tab
+
+Billing setup controls how often the charge runs and how the estimated payment amount is calculated:
+
+- **Billing Frequency:** Monthly, quarterly, or annual. Must match lease payment schedule.
+- **Estimate Method:** How the monthly CAM estimate is calculated: prior year actuals, budget, or fixed amount.
+- **Reconciliation Settings:** Whether an annual true-up is calculated automatically or manually.
+
+**Diagnostic check:** For a billing problem (wrong amount, wrong frequency), check this layer. If the calculation is correct but the invoice amount is wrong, the estimate method is likely misconfigured.
+
+**Common Layer 4 errors:**
+- Estimate method set to Fixed and never updated after the first year
+- Billing frequency doesn't match lease (monthly vs. quarterly)
+- Reconciliation is set to Manual, so no automatic true-up is calculated, leading to annual manual reconciliation that may be forgotten or delayed
+
+## Layer 5: Manual Overrides
+
+**Location in Yardi:** Lease record > Recovery Billing > Overrides tab
+
+Manual overrides allow tenant-specific exceptions to pool-level or lease-level settings. They exist for legitimate reasons: tenants with non-standard lease terms that can't be handled by standard configuration. But they're also a source of errors when:
+
+- A temporary override was applied and never removed
+- An override was applied for the wrong reason and is producing an incorrect result
+- An override exists from a prior lease term and wasn't removed at renewal
+
+**Diagnostic check:** For any tenant whose calculation doesn't match expectations after checking layers 1-4, look here. An override at this layer will supersede all other configuration.
+
+**Common Layer 5 errors:**
+- Gross-up override applied to a tenant who no longer has a gross-up exclusion in their lease
+- Fixed CAM amount override from a prior lease term still active in the renewal
+- Incorrect cap override that bypasses the pool-level cap configuration
+
+## Systematic Validation Process
+
+After checking all five layers:
+
+1. Select your three test tenants: largest by square footage, smallest by square footage, and the tenant with the most complex lease terms
+2. Manually calculate each tenant's expected CAM charge using GL data and lease terms
+3. Compare your manual calculation to Yardi's output
+4. If they agree within 1%: configuration is likely correct for the pool as a whole
+5. If they diverge: trace the discrepancy through the five layers, starting with Layer 1
+
+Document every configuration change you make, when you made it, and why. Yardi's notes fields in the recovery pool and lease record are the appropriate place for this documentation. Audit trails matter for internal review and for tenant dispute responses.
+
+CapVeri independently recalculates every tenant's reconciliation from your Yardi GL export, flagging discrepancies against lease terms and identifying which configuration layer is responsible.
+
+## Related Resources
+
+- [Yardi CAM Recovery Pool Setup Guide](/resources/software/yardi-voyager/cam-setup)
+- [Yardi Recovery Pool Not Calculating Correctly](/blog/yardi-recovery-pool-not-calculating)
+- [CAM Gross-Up Calculation Guide](/tools/cam-gross-up-calculator)
+
+## Sources
+
+1. [Yardi - Voyager Commercial property management](https://www.yardi.com/products/yardi-voyager-commercial/)
+2. [CapVeri Sources & Research - Yardi interface program pricing](/sources#yardi-interface-program-pricing)

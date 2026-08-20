@@ -1,0 +1,364 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "capveri-api-dev",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-06-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "limits": {
+    "cpu_ms": 30000,
+  },
+  "vars": {
+    "ENVIRONMENT": "development",
+    "APP_VERSION": "0.1.0",
+    "APP_BASE_URL": "https://app.capveri.com",
+    "ADMIN_NOTIFICATION_EMAIL": "angel.campa@capveri.com",
+    "OPENROUTER_BASE_URL": "https://openrouter.ai/api/v1",
+    "OPENROUTER_APP_URL": "https://www.capveri.com",
+    "MARKETING_BASE_URL": "https://www.capveri.com",
+    "RESEND_FROM_ADDRESS": "Angel Campa <angel.campa@capveri.com>",
+    "POSTHOG_HOST": "https://us.i.posthog.com",
+    "STRIPE_80OFF_COUPON_ID": "80OFF",
+    "STRIPE_FREE_AUDIT_COUPON_OFFER_50": "FREEAUDIT50_ANNUAL",
+    "STRIPE_FREE_AUDIT_COUPON_OFFER_FREE": "FREEAUDIT100_ANNUAL",
+    "STRIPE_SAVE_OFFER_COUPON_ID_ANNUAL": "SAVE20_1INV_ANNUAL",
+    "EXTRACTION_PRIMARY_MODEL": "google/gemini-3.1-flash-lite",
+    "EXTRACTION_PRIMARY_FALLBACK": "google/gemini-3-flash-preview",
+    "EXTRACTION_PRIMARY_FALLBACK_2": "moonshotai/kimi-k2.6",
+    "EXTRACTION_SIBLING_MODEL": "google/gemini-3.1-flash-lite",
+    "EXTRACTION_SIBLING_FALLBACK": "google/gemini-3-flash-preview",
+    "EXTRACTION_SIBLING_FALLBACK_2": "openai/gpt-5.4-mini",
+    "EXTRACTION_JUDGE_MODEL": "z-ai/glm-5.1",
+    "EXTRACTION_JUDGE_FALLBACK": "openai/gpt-5.4-mini",
+    "EXTRACTION_JUDGE_FALLBACK_2": "moonshotai/kimi-k2.6",
+    "GAP_FILLER_MODEL": "google/gemini-3.1-flash-lite",
+    "GAP_FILLER_FALLBACK": "google/gemini-3-flash-preview",
+    "GAP_FILLER_FALLBACK_2": "moonshotai/kimi-k2.6",
+    "VALIDATION_REPROMPT_MODEL": "google/gemini-3.1-flash-lite",
+    "VALIDATION_REPROMPT_FALLBACK": "google/gemini-3-flash-preview",
+    "VALIDATION_REPROMPT_FALLBACK_2": "moonshotai/kimi-k2.6",
+    "CROSS_DOC_MODEL": "z-ai/glm-5.1",
+    "CROSS_DOC_FALLBACK": "openai/gpt-5.4-mini",
+    "CROSS_DOC_FALLBACK_2": "moonshotai/kimi-k2.6",
+    "GL_ANALYSIS_MODEL": "z-ai/glm-5.1",
+    "GL_ANALYSIS_FALLBACK": "openai/gpt-5.4-mini",
+    "GL_ANALYSIS_FALLBACK_2": "moonshotai/kimi-k2.6",
+    "POOL_MATCHING_MODEL": "moonshotai/kimi-k2.6",
+    "POOL_MATCHING_FALLBACK": "openai/gpt-5.4-mini",
+    "POOL_MATCHING_FALLBACK_2": "google/gemini-3-flash-preview",
+    "EXTRACTION_MAX_DOCUMENT_CHARS": "100000",
+  },
+  "r2_buckets": [
+    {
+      "binding": "DOCUMENTS_BUCKET",
+      "bucket_name": "capveri-documents-dev",
+    },
+    {
+      "binding": "LEAD_MAGNETS_BUCKET",
+      "bucket_name": "capveri-lead-magnets",
+    },
+    {
+      "binding": "REPORTS_BUCKET",
+      "bucket_name": "capveri-reports-dev",
+    },
+  ],
+  "queues": {
+    "producers": [
+      {
+        "binding": "EXTRACTION_QUEUE",
+        "queue": "capveri-extraction-dev",
+      },
+      {
+        "binding": "RECONCILIATION_QUEUE",
+        "queue": "capveri-reconciliation-dev",
+      },
+      {
+        "binding": "EXPORT_QUEUE",
+        "queue": "capveri-export-dev",
+      },
+      {
+        "binding": "EMAIL_QUEUE",
+        "queue": "capveri-email-dev",
+      },
+      {
+        "binding": "ANALYTICS_QUEUE",
+        "queue": "capveri-analytics-dev",
+      },
+    ],
+    "consumers": [
+      {
+        "queue": "capveri-extraction-dev",
+        "max_batch_size": 1,
+        "max_batch_timeout": 10,
+        "max_retries": 3,
+      },
+      {
+        "queue": "capveri-reconciliation-dev",
+        "max_batch_size": 1,
+        "max_batch_timeout": 10,
+        "max_retries": 3,
+      },
+    ],
+  },
+  // Hyperdrive bindings are added after the current Postgres provider is verified.
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "RATE_LIMITER",
+        "class_name": "RateLimiterDurableObject",
+      },
+      {
+        "name": "AI_CONTEXT_NONCES",
+        "class_name": "AiContextNonceDurableObject",
+      },
+    ],
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["RateLimiterDurableObject"],
+    },
+    {
+      "tag": "v2",
+      "new_sqlite_classes": ["AiContextNonceDurableObject"],
+    },
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+  },
+  "env": {
+    "staging": {
+      "name": "capveri-api-staging",
+      "vars": {
+        "ENVIRONMENT": "staging",
+        "APP_VERSION": "0.1.0",
+        "DB_ACCESS_MODE": "direct-postgres",
+        "DB_PRODUCTION_BOUNDARY": "direct-postgres",
+        "APP_BASE_URL": "https://app.capveri.com",
+        "ADMIN_NOTIFICATION_EMAIL": "angel.campa@capveri.com",
+        "OPENROUTER_BASE_URL": "https://openrouter.ai/api/v1",
+        "OPENROUTER_APP_URL": "https://www.capveri.com",
+        "MARKETING_BASE_URL": "https://www.capveri.com",
+        "RESEND_FROM_ADDRESS": "Angel Campa <angel.campa@capveri.com>",
+        "POSTHOG_HOST": "https://us.i.posthog.com",
+        "STRIPE_80OFF_COUPON_ID": "80OFF",
+        "STRIPE_FREE_AUDIT_COUPON_OFFER_50": "FREEAUDIT50_ANNUAL",
+        "STRIPE_FREE_AUDIT_COUPON_OFFER_FREE": "FREEAUDIT100_ANNUAL",
+        "STRIPE_SAVE_OFFER_COUPON_ID_ANNUAL": "SAVE20_1INV_ANNUAL",
+        "EXTRACTION_PRIMARY_MODEL": "google/gemini-3.1-flash-lite",
+        "EXTRACTION_PRIMARY_FALLBACK": "google/gemini-3-flash-preview",
+        "EXTRACTION_PRIMARY_FALLBACK_2": "moonshotai/kimi-k2.6",
+        "EXTRACTION_SIBLING_MODEL": "google/gemini-3.1-flash-lite",
+        "EXTRACTION_SIBLING_FALLBACK": "google/gemini-3-flash-preview",
+        "EXTRACTION_SIBLING_FALLBACK_2": "openai/gpt-5.4-mini",
+        "EXTRACTION_JUDGE_MODEL": "z-ai/glm-5.1",
+        "EXTRACTION_JUDGE_FALLBACK": "openai/gpt-5.4-mini",
+        "EXTRACTION_JUDGE_FALLBACK_2": "moonshotai/kimi-k2.6",
+        "GAP_FILLER_MODEL": "google/gemini-3.1-flash-lite",
+        "GAP_FILLER_FALLBACK": "google/gemini-3-flash-preview",
+        "GAP_FILLER_FALLBACK_2": "moonshotai/kimi-k2.6",
+        "VALIDATION_REPROMPT_MODEL": "google/gemini-3.1-flash-lite",
+        "VALIDATION_REPROMPT_FALLBACK": "google/gemini-3-flash-preview",
+        "VALIDATION_REPROMPT_FALLBACK_2": "moonshotai/kimi-k2.6",
+        "CROSS_DOC_MODEL": "z-ai/glm-5.1",
+        "CROSS_DOC_FALLBACK": "openai/gpt-5.4-mini",
+        "CROSS_DOC_FALLBACK_2": "moonshotai/kimi-k2.6",
+        "GL_ANALYSIS_MODEL": "z-ai/glm-5.1",
+        "GL_ANALYSIS_FALLBACK": "openai/gpt-5.4-mini",
+        "GL_ANALYSIS_FALLBACK_2": "moonshotai/kimi-k2.6",
+        "POOL_MATCHING_MODEL": "moonshotai/kimi-k2.6",
+        "POOL_MATCHING_FALLBACK": "openai/gpt-5.4-mini",
+        "POOL_MATCHING_FALLBACK_2": "google/gemini-3-flash-preview",
+        "EXTRACTION_MAX_DOCUMENT_CHARS": "100000",
+      },
+      "r2_buckets": [
+        {
+          "binding": "DOCUMENTS_BUCKET",
+          "bucket_name": "capveri-documents-staging",
+        },
+        {
+          "binding": "LEAD_MAGNETS_BUCKET",
+          "bucket_name": "capveri-lead-magnets",
+        },
+        {
+          "binding": "REPORTS_BUCKET",
+          "bucket_name": "capveri-reports-staging",
+        },
+      ],
+      "queues": {
+        "producers": [
+          {
+            "binding": "EXTRACTION_QUEUE",
+            "queue": "capveri-extraction-staging",
+          },
+          {
+            "binding": "RECONCILIATION_QUEUE",
+            "queue": "capveri-reconciliation-staging",
+          },
+          {
+            "binding": "EXPORT_QUEUE",
+            "queue": "capveri-export-staging",
+          },
+          {
+            "binding": "EMAIL_QUEUE",
+            "queue": "capveri-email-staging",
+          },
+          {
+            "binding": "ANALYTICS_QUEUE",
+            "queue": "capveri-analytics-staging",
+          },
+        ],
+        "consumers": [
+          {
+            "queue": "capveri-extraction-staging",
+            "max_batch_size": 1,
+            "max_batch_timeout": 10,
+            "max_retries": 3,
+          },
+          {
+            "queue": "capveri-reconciliation-staging",
+            "max_batch_size": 1,
+            "max_batch_timeout": 10,
+            "max_retries": 3,
+          },
+        ],
+      },
+      // Hyperdrive bindings are added after the current Postgres provider is verified.
+      "durable_objects": {
+        "bindings": [
+          {
+            "name": "RATE_LIMITER",
+            "class_name": "RateLimiterDurableObject",
+          },
+          {
+            "name": "AI_CONTEXT_NONCES",
+            "class_name": "AiContextNonceDurableObject",
+          },
+        ],
+      },
+    },
+    "production": {
+      "name": "capveri-api",
+      "routes": [
+        {
+          "pattern": "api.capveri.com/*",
+          "zone_id": "REPLACE_WITH_ZONE_ID",
+        },
+      ],
+      "vars": {
+        "ENVIRONMENT": "production",
+        "APP_VERSION": "0.1.0",
+        "DB_ACCESS_MODE": "direct-postgres",
+        "DB_PRODUCTION_BOUNDARY": "direct-postgres",
+        "APP_BASE_URL": "https://app.capveri.com",
+        "ADMIN_NOTIFICATION_EMAIL": "angel.campa@capveri.com",
+        "OPENROUTER_BASE_URL": "https://openrouter.ai/api/v1",
+        "OPENROUTER_APP_URL": "https://www.capveri.com",
+        "MARKETING_BASE_URL": "https://www.capveri.com",
+        "RESEND_FROM_ADDRESS": "Angel Campa <angel.campa@capveri.com>",
+        "POSTHOG_HOST": "https://us.i.posthog.com",
+        "STRIPE_80OFF_COUPON_ID": "80OFF",
+        "STRIPE_FREE_AUDIT_COUPON_OFFER_50": "FREEAUDIT50_ANNUAL",
+        "STRIPE_FREE_AUDIT_COUPON_OFFER_FREE": "FREEAUDIT100_ANNUAL",
+        "STRIPE_SAVE_OFFER_COUPON_ID_ANNUAL": "SAVE20_1INV_ANNUAL",
+        "EXTRACTION_PRIMARY_MODEL": "google/gemini-3.1-flash-lite",
+        "EXTRACTION_PRIMARY_FALLBACK": "google/gemini-3-flash-preview",
+        "EXTRACTION_PRIMARY_FALLBACK_2": "moonshotai/kimi-k2.6",
+        "EXTRACTION_SIBLING_MODEL": "google/gemini-3.1-flash-lite",
+        "EXTRACTION_SIBLING_FALLBACK": "google/gemini-3-flash-preview",
+        "EXTRACTION_SIBLING_FALLBACK_2": "openai/gpt-5.4-mini",
+        "EXTRACTION_JUDGE_MODEL": "z-ai/glm-5.1",
+        "EXTRACTION_JUDGE_FALLBACK": "openai/gpt-5.4-mini",
+        "EXTRACTION_JUDGE_FALLBACK_2": "moonshotai/kimi-k2.6",
+        "GAP_FILLER_MODEL": "google/gemini-3.1-flash-lite",
+        "GAP_FILLER_FALLBACK": "google/gemini-3-flash-preview",
+        "GAP_FILLER_FALLBACK_2": "moonshotai/kimi-k2.6",
+        "VALIDATION_REPROMPT_MODEL": "google/gemini-3.1-flash-lite",
+        "VALIDATION_REPROMPT_FALLBACK": "google/gemini-3-flash-preview",
+        "VALIDATION_REPROMPT_FALLBACK_2": "moonshotai/kimi-k2.6",
+        "CROSS_DOC_MODEL": "z-ai/glm-5.1",
+        "CROSS_DOC_FALLBACK": "openai/gpt-5.4-mini",
+        "CROSS_DOC_FALLBACK_2": "moonshotai/kimi-k2.6",
+        "GL_ANALYSIS_MODEL": "z-ai/glm-5.1",
+        "GL_ANALYSIS_FALLBACK": "openai/gpt-5.4-mini",
+        "GL_ANALYSIS_FALLBACK_2": "moonshotai/kimi-k2.6",
+        "POOL_MATCHING_MODEL": "moonshotai/kimi-k2.6",
+        "POOL_MATCHING_FALLBACK": "openai/gpt-5.4-mini",
+        "POOL_MATCHING_FALLBACK_2": "google/gemini-3-flash-preview",
+        "EXTRACTION_MAX_DOCUMENT_CHARS": "100000",
+      },
+      "r2_buckets": [
+        {
+          "binding": "DOCUMENTS_BUCKET",
+          "bucket_name": "capveri-documents",
+        },
+        {
+          "binding": "LEAD_MAGNETS_BUCKET",
+          "bucket_name": "capveri-lead-magnets",
+        },
+        {
+          "binding": "REPORTS_BUCKET",
+          "bucket_name": "capveri-reports",
+        },
+      ],
+      "queues": {
+        "producers": [
+          {
+            "binding": "EXTRACTION_QUEUE",
+            "queue": "capveri-extraction",
+          },
+          {
+            "binding": "RECONCILIATION_QUEUE",
+            "queue": "capveri-reconciliation",
+          },
+          {
+            "binding": "EXPORT_QUEUE",
+            "queue": "capveri-export",
+          },
+          {
+            "binding": "EMAIL_QUEUE",
+            "queue": "capveri-email",
+          },
+          {
+            "binding": "ANALYTICS_QUEUE",
+            "queue": "capveri-analytics",
+          },
+        ],
+        "consumers": [
+          {
+            "queue": "capveri-extraction",
+            "max_batch_size": 1,
+            "max_batch_timeout": 10,
+            "max_retries": 3,
+            "dead_letter_queue": "capveri-extraction-dlq",
+          },
+          {
+            "queue": "capveri-reconciliation",
+            "max_batch_size": 1,
+            "max_batch_timeout": 10,
+            "max_retries": 3,
+            "dead_letter_queue": "capveri-reconciliation-dlq",
+          },
+        ],
+      },
+      "hyperdrive": [
+        {
+          "binding": "HYPERDRIVE",
+          "id": "REPLACE_WITH_HYPERDRIVE_ID",
+        },
+      ],
+      "durable_objects": {
+        "bindings": [
+          {
+            "name": "RATE_LIMITER",
+            "class_name": "RateLimiterDurableObject",
+          },
+          {
+            "name": "AI_CONTEXT_NONCES",
+            "class_name": "AiContextNonceDurableObject",
+          },
+        ],
+      },
+    },
+  },
+}

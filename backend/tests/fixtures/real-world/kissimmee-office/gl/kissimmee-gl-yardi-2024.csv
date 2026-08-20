@@ -1,0 +1,87 @@
+Yardi Systems - General Ledger Detail
+Property: Kissimmee Office Condo (KISS-001)
+Report Period: 01/01/2024 - 12/31/2024
+Run Date: 01/05/2025
+
+PROPERTY,UNIT,ACCT,ACCT DESC,DATE,REF,DESCRIPTION,DEBIT,CREDIT,BALANCE
+KISS-001,,5110,Property Tax,03/31/2024,PT-2401,Q1 Property Tax,6000.00,0.00,6000.00
+KISS-001,,5110,Property Tax,06/30/2024,PT-2402,Q2 Property Tax,6000.00,0.00,12000.00
+KISS-001,,5110,Property Tax,09/30/2024,PT-2403,Q3 Property Tax,6000.00,0.00,18000.00
+KISS-001,,5110,Property Tax,12/31/2024,PT-2404,Q4 Property Tax,6000.00,0.00,24000.00
+KISS-001,,5200,Property Insurance,01/01/2024,INS-2401,Annual Property Insurance Premium,8000.00,0.00,8000.00
+KISS-001,,5300,Electric,01/31/2024,UT-2401,Monthly Electric - January,1300.00,0.00,1300.00
+KISS-001,,5300,Electric,02/29/2024,UT-2402,Monthly Electric - February,1250.00,0.00,2550.00
+KISS-001,,5300,Electric,03/31/2024,UT-2403,Monthly Electric - March,1350.00,0.00,3900.00
+KISS-001,,5300,Electric,04/30/2024,UT-2404,Monthly Electric - April,1500.00,0.00,5400.00
+KISS-001,,5300,Electric,05/31/2024,UT-2405,Monthly Electric - May,1650.00,0.00,7050.00
+KISS-001,,5300,Electric,06/30/2024,UT-2406,Monthly Electric - June,1800.00,0.00,8850.00
+KISS-001,,5300,Electric,07/31/2024,UT-2407,Monthly Electric - July,1900.00,0.00,10750.00
+KISS-001,,5300,Electric,08/31/2024,UT-2408,Monthly Electric - August,1850.00,0.00,12600.00
+KISS-001,,5300,Electric,09/30/2024,UT-2409,Monthly Electric - September,1700.00,0.00,14300.00
+KISS-001,,5300,Electric,10/31/2024,UT-2410,Monthly Electric - October,1500.00,0.00,15800.00
+KISS-001,,5300,Electric,11/30/2024,UT-2411,Monthly Electric - November,1200.00,0.00,17000.00
+KISS-001,,5300,Electric,12/31/2024,UT-2412,Monthly Electric - December,1000.00,0.00,18000.00
+KISS-001,,5310,Water/Sewer,01/31/2024,UT-2413,Monthly Water/Sewer - January,500.00,0.00,500.00
+KISS-001,,5310,Water/Sewer,02/29/2024,UT-2414,Monthly Water/Sewer - February,500.00,0.00,1000.00
+KISS-001,,5310,Water/Sewer,03/31/2024,UT-2415,Monthly Water/Sewer - March,500.00,0.00,1500.00
+KISS-001,,5310,Water/Sewer,04/30/2024,UT-2416,Monthly Water/Sewer - April,500.00,0.00,2000.00
+KISS-001,,5310,Water/Sewer,05/31/2024,UT-2417,Monthly Water/Sewer - May,500.00,0.00,2500.00
+KISS-001,,5310,Water/Sewer,06/30/2024,UT-2418,Monthly Water/Sewer - June,500.00,0.00,3000.00
+KISS-001,,5310,Water/Sewer,07/31/2024,UT-2419,Monthly Water/Sewer - July,500.00,0.00,3500.00
+KISS-001,,5310,Water/Sewer,08/31/2024,UT-2420,Monthly Water/Sewer - August,500.00,0.00,4000.00
+KISS-001,,5310,Water/Sewer,09/30/2024,UT-2421,Monthly Water/Sewer - September,500.00,0.00,4500.00
+KISS-001,,5310,Water/Sewer,10/31/2024,UT-2422,Monthly Water/Sewer - October,500.00,0.00,5000.00
+KISS-001,,5310,Water/Sewer,11/30/2024,UT-2423,Monthly Water/Sewer - November,500.00,0.00,5500.00
+KISS-001,,5310,Water/Sewer,12/31/2024,UT-2424,Monthly Water/Sewer - December,500.00,0.00,6000.00
+KISS-001,,5330,Trash Removal,01/31/2024,UT-2425,Monthly Trash Removal - January,400.00,0.00,400.00
+KISS-001,,5330,Trash Removal,02/29/2024,UT-2426,Monthly Trash Removal - February,400.00,0.00,800.00
+KISS-001,,5330,Trash Removal,03/31/2024,UT-2427,Monthly Trash Removal - March,400.00,0.00,1200.00
+KISS-001,,5330,Trash Removal,04/30/2024,UT-2428,Monthly Trash Removal - April,400.00,0.00,1600.00
+KISS-001,,5330,Trash Removal,05/31/2024,UT-2429,Monthly Trash Removal - May,400.00,0.00,2000.00
+KISS-001,,5330,Trash Removal,06/30/2024,UT-2430,Monthly Trash Removal - June,400.00,0.00,2400.00
+KISS-001,,5330,Trash Removal,07/31/2024,UT-2431,Monthly Trash Removal - July,400.00,0.00,2800.00
+KISS-001,,5330,Trash Removal,08/31/2024,UT-2432,Monthly Trash Removal - August,400.00,0.00,3200.00
+KISS-001,,5330,Trash Removal,09/30/2024,UT-2433,Monthly Trash Removal - September,400.00,0.00,3600.00
+KISS-001,,5330,Trash Removal,10/31/2024,UT-2434,Monthly Trash Removal - October,400.00,0.00,4000.00
+KISS-001,,5330,Trash Removal,11/30/2024,UT-2435,Monthly Trash Removal - November,400.00,0.00,4400.00
+KISS-001,,5330,Trash Removal,12/31/2024,UT-2436,Monthly Trash Removal - December,400.00,0.00,4800.00
+KISS-001,,5410,Landscaping,01/31/2024,LND-2401,Monthly Landscaping - January,800.00,0.00,800.00
+KISS-001,,5410,Landscaping,02/29/2024,LND-2402,Monthly Landscaping - February,800.00,0.00,1600.00
+KISS-001,,5410,Landscaping,03/31/2024,LND-2403,Monthly Landscaping - March,800.00,0.00,2400.00
+KISS-001,,5410,Landscaping,04/30/2024,LND-2404,Monthly Landscaping - April,800.00,0.00,3200.00
+KISS-001,,5410,Landscaping,05/31/2024,LND-2405,Monthly Landscaping - May,800.00,0.00,4000.00
+KISS-001,,5410,Landscaping,06/30/2024,LND-2406,Monthly Landscaping - June,800.00,0.00,4800.00
+KISS-001,,5410,Landscaping,07/31/2024,LND-2407,Monthly Landscaping - July,800.00,0.00,5600.00
+KISS-001,,5410,Landscaping,08/31/2024,LND-2408,Monthly Landscaping - August,800.00,0.00,6400.00
+KISS-001,,5410,Landscaping,09/30/2024,LND-2409,Monthly Landscaping - September,800.00,0.00,7200.00
+KISS-001,,5410,Landscaping,10/31/2024,LND-2410,Monthly Landscaping - October,800.00,0.00,8000.00
+KISS-001,,5410,Landscaping,11/30/2024,LND-2411,Monthly Landscaping - November,800.00,0.00,8800.00
+KISS-001,,5410,Landscaping,12/31/2024,LND-2412,Monthly Landscaping - December,800.00,0.00,9600.00
+KISS-001,,5500,Janitorial,01/31/2024,JAN-2401,Monthly Janitorial - January,1200.00,0.00,1200.00
+KISS-001,,5500,Janitorial,02/29/2024,JAN-2402,Monthly Janitorial - February,1200.00,0.00,2400.00
+KISS-001,,5500,Janitorial,03/31/2024,JAN-2403,Monthly Janitorial - March,1200.00,0.00,3600.00
+KISS-001,,5500,Janitorial,04/30/2024,JAN-2404,Monthly Janitorial - April,1200.00,0.00,4800.00
+KISS-001,,5500,Janitorial,05/31/2024,JAN-2405,Monthly Janitorial - May,1200.00,0.00,6000.00
+KISS-001,,5500,Janitorial,06/30/2024,JAN-2406,Monthly Janitorial - June,1200.00,0.00,7200.00
+KISS-001,,5500,Janitorial,07/31/2024,JAN-2407,Monthly Janitorial - July,1200.00,0.00,8400.00
+KISS-001,,5500,Janitorial,08/31/2024,JAN-2408,Monthly Janitorial - August,1200.00,0.00,9600.00
+KISS-001,,5500,Janitorial,09/30/2024,JAN-2409,Monthly Janitorial - September,1200.00,0.00,10800.00
+KISS-001,,5500,Janitorial,10/31/2024,JAN-2410,Monthly Janitorial - October,1200.00,0.00,12000.00
+KISS-001,,5500,Janitorial,11/30/2024,JAN-2411,Monthly Janitorial - November,1200.00,0.00,13200.00
+KISS-001,,5500,Janitorial,12/31/2024,JAN-2412,Monthly Janitorial - December,1200.00,0.00,14400.00
+KISS-001,,5550,HVAC Maintenance,03/31/2024,HVC-2401,Q1 HVAC Maintenance,1200.00,0.00,1200.00
+KISS-001,,5550,HVAC Maintenance,06/30/2024,HVC-2402,Q2 HVAC Maintenance,1200.00,0.00,2400.00
+KISS-001,,5550,HVAC Maintenance,09/30/2024,HVC-2403,Q3 HVAC Maintenance,1200.00,0.00,3600.00
+KISS-001,,5550,HVAC Maintenance,12/31/2024,HVC-2404,Q4 HVAC Maintenance,1200.00,0.00,4800.00
+KISS-001,,5600,Condo Association Assessment,01/31/2024,COA-2401,Monthly Condo Association - January,2250.00,0.00,2250.00
+KISS-001,,5600,Condo Association Assessment,02/29/2024,COA-2402,Monthly Condo Association - February,2250.00,0.00,4500.00
+KISS-001,,5600,Condo Association Assessment,03/31/2024,COA-2403,Monthly Condo Association - March,2250.00,0.00,6750.00
+KISS-001,,5600,Condo Association Assessment,04/30/2024,COA-2404,Monthly Condo Association - April,2250.00,0.00,9000.00
+KISS-001,,5600,Condo Association Assessment,05/31/2024,COA-2405,Monthly Condo Association - May,2250.00,0.00,11250.00
+KISS-001,,5600,Condo Association Assessment,06/30/2024,COA-2406,Monthly Condo Association - June,2250.00,0.00,13500.00
+KISS-001,,5600,Condo Association Assessment,07/31/2024,COA-2407,Monthly Condo Association - July,2250.00,0.00,15750.00
+KISS-001,,5600,Condo Association Assessment,08/31/2024,COA-2408,Monthly Condo Association - August,2250.00,0.00,18000.00
+KISS-001,,5600,Condo Association Assessment,09/30/2024,COA-2409,Monthly Condo Association - September,2250.00,0.00,20250.00
+KISS-001,,5600,Condo Association Assessment,10/31/2024,COA-2410,Monthly Condo Association - October,2250.00,0.00,22500.00
+KISS-001,,5600,Condo Association Assessment,11/30/2024,COA-2411,Monthly Condo Association - November,2250.00,0.00,24750.00
+KISS-001,,5600,Condo Association Assessment,12/31/2024,COA-2412,Monthly Condo Association - December,2250.00,0.00,27000.00

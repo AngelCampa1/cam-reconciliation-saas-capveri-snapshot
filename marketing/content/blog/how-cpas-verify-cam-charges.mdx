@@ -1,0 +1,129 @@
+---
+title: "How CPAs Verify CAM Charges: A Property Accountant's Checklist"
+description: "How CPAs and property accountants verify CAM reconciliation math. The 7-step verification process, key documents to review, and common errors that slip through ERP outputs."
+excerpt: "When a CPA reviews CAM reconciliation calculations, they follow a structured verification process that any landlord can adopt internally."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "Do landlords need a CPA to verify CAM reconciliations?"
+    a: "Not necessarily. The verification process is structured and learnable, and many property managers conduct thorough self-reviews without CPA involvement. CPAs bring independent verification, technical expertise on accounting classifications, and credibility when reconciliations are challenged. For portfolios with complex reconciliations or frequent tenant disputes, CPA review provides documentation value. For straightforward portfolios, a structured internal review using the same checklist is often sufficient."
+  - q: "How long does a CPA review of CAM reconciliation typically take?"
+    a: "For a single property with a standard reconciliation structure, a thorough CPA review typically takes 4–8 hours of professional time (roughly half a day per building). For complex multi-tenant properties with varied lease structures, cap provisions, and gross-up calculations, the review can extend to 2–3 days. Automated verification tools significantly reduce this time by completing the computational checks programmatically, leaving the CPA to focus on judgment calls and documentation review."
+---
+
+CPAs who review commercial real estate CAM reconciliations, whether working for landlords, investors, or as part of transaction due diligence, follow a structured verification process. That process is not proprietary or mysterious. It is a logical sequence of checks designed to ensure the numbers in the reconciliation statement are accurate, consistent with lease terms, and properly documented.
+
+Understanding this process helps landlords build reconciliations that withstand professional scrutiny and helps property managers identify where their current process has gaps.
+
+## Why CPAs Are Involved in CAM Verification
+
+CPAs enter CAM reconciliation workflows in several contexts:
+
+**Landlord internal review.** Larger portfolios with in-house accounting teams often have CPA controllers review reconciliations before statements go out. This is the most preventive application.
+
+**Investor due diligence.** When acquiring a commercial property, buyers' CPAs review historical CAM reconciliations as part of financial due diligence, assessing whether the existing recoveries are defensible and whether there's latent overpayment liability.
+
+**Dispute defense.** When a tenant audit finds errors, landlords sometimes retain CPAs to independently verify whether the findings are legitimate, to rebut specific claims, or to prepare for formal dispute proceedings. For background on the formal side of this process, see [commercial lease audit procedures](/blog/commercial-lease-audit-procedures).
+
+**Year-end audit.** As part of the financial statement audit for real estate entities, CPAs may verify that CAM receivables and liabilities on the balance sheet reflect accurate reconciliation calculations.
+
+## The 7-Step Verification Process
+
+### Step 1: Reconcile GL to Recovery Pool
+
+The first check is fundamental: do the expenses in the CAM pool match the general ledger?
+
+A CPA will pull the GL detail for all expense accounts feeding into the CAM pool and tie the total to the pool figure in the reconciliation. Any discrepancy requires explanation.
+
+Common discrepancies at this step:
+- Expenses coded to wrong GL accounts (not captured in the pool)
+- Non-property expenses inadvertently posted to property expense accounts (in the pool but shouldn't be)
+- Year-end accruals not reflected in the reconciliation (or accruals from prior year not reversed)
+- Intercompany allocations that inflate the pool total
+
+### Step 2: Verify Expense Categorization
+
+Each expense in the pool must be correctly categorized as fixed or variable for gross-up purposes, and as controllable or non-controllable for cap purposes.
+
+CPAs review the categorization methodology against prior-year treatment for consistency. Changing an expense category from fixed to variable from one year to the next can materially affect gross-up calculations and should be explicitly documented.
+
+They also flag any items that appear unusual for the expense category. For example: a large payment to a vendor not typically used for janitorial services appearing under "Janitorial."
+
+### Step 3: Test Gross-Up Calculation
+
+If the property is below the gross-up threshold, CPAs verify:
+
+1. **Occupancy rate used**: is it economic occupancy (correct) or physical occupancy (potentially incorrect)?
+2. **Expense eligibility**: are only variable expenses included in the gross-up calculation?
+3. **Arithmetic**: is the gross-up formula applied correctly? (Actual expenses ÷ actual occupancy × target occupancy)
+4. **Threshold trigger**: does the actual occupancy truly fall below the threshold, and has the threshold been correctly carried from the lease?
+
+The gross-up calculation is the single most frequently incorrect element of office property CAM reconciliations. CPAs treat it as high-risk and verify it independently.
+
+### Step 4: Verify Pro-Rata Denominators
+
+For each tenant, CPAs verify:
+
+1. **What the lease defines as the denominator**: building RSF, pool RSF, occupied RSF, or some defined subset
+2. **Whether the denominator used matches the lease definition**
+3. **Whether the tenant's RSF matches the lease-stated area**
+4. **Whether any mid-year occupancy changes (move-ins or move-outs) affected the denominator**
+
+Denominator errors, particularly using a different denominator than what the lease requires, are common and create systematic over or under-billing that affects every tenant in the pool.
+
+### Step 5: Test Cap Application
+
+For tenants with CAM expense caps, CPAs verify:
+
+1. **Cap type**: cumulative or non-cumulative
+2. **Cap scope**: controllable expenses only, or total CAM
+3. **Base year**: the correct year from which cap calculations begin
+4. **Arithmetic**: whether the cap is applied to the correct base and compounded correctly (for cumulative caps)
+5. **Carryforward tracking**: for cumulative caps, whether unused capacity from prior years is correctly carried
+
+Cap calculation errors are often invisible without an explicit verification step, because ERP systems may not flag when the cap is binding. They simply report the capped number without showing the uncapped calculation for comparison.
+
+### Step 6: Check Exclusions
+
+CPAs review the GL detail against each tenant's specific exclusion list, looking for items that should have been excluded from that tenant's pool calculation.
+
+This review is tenant-specific. What's excluded for one tenant may be recoverable from another. CPAs work through each tenant's exclusion list methodically.
+
+High-risk categories at this step:
+- Capital expenditures (any large vendor payment with no recurring counterpart in prior years)
+- Related-party transactions (management fees, affiliated service providers)
+- Non-property expenses (corporate overhead, executive compensation)
+- Financing costs
+
+### Step 7: Tie Out to Tenant Statements
+
+The final verification step ties the per-tenant calculation back to the statement that was actually issued.
+
+A CPA performs this verification independently, starting from the GL and pool calculation, computing the expected tenant statement amount, and comparing against what was actually sent. Any discrepancy requires explanation and may indicate an error in statement generation (data formatting, rounding, or a data transfer error from ERP to output).
+
+This step catches a specific category of errors: cases where the underlying calculation is correct, but the statement output contains errors due to ERP configuration, export problems, or manual adjustment errors.
+
+## Automated Verification vs. Manual Process
+
+Steps 1, 4, and 7 (GL reconciliation, denominator verification, and mathematical tie-out) are highly automatable. They are pure data comparison tasks with defined expected outcomes.
+
+Steps 2, 3, 5, and 6 (categorization, gross-up, cap, and exclusion checks) require both computation and judgment: understanding what the lease says, applying that to the expense data, and interpreting ambiguous cases.
+
+CapVeri automates the computational components of this process, running Steps 1, 3 (arithmetic), 4, 5 (arithmetic), and 7 against ERP data before statements are issued. This surfaces errors that would otherwise require hours of manual CPA verification, allowing professional review time to focus on the judgment-intensive steps.
+
+---
+
+## Related Resources
+
+- [CAM Reconciliation Audit Trail Guide](/blog/cam-reconciliation-audit-trail)
+- [CPA guide to CAM audits](/blog/cpa-guide-cam-reconciliation-audit): Comprehensive walkthrough of the CAM audit process from a CPA's perspective
+- [Pre-Send Audit Exposure Scorecard](/tools/audit-risk-scorecard)
+- [CapVeri vs. Tenant Auditors](/vs/tenant-auditors)
+
+## Sources
+
+1. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

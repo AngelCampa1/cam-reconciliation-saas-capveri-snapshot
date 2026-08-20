@@ -1,0 +1,482 @@
+{
+  "generated_date": "2025-12-30T10:42:41.561905",
+  "seed": 42,
+  "properties": [
+    {
+      "property_id": "PROP001",
+      "name": "Parkview Office Tower",
+      "class": "Class A Office",
+      "total_sqft": 100000,
+      "occupied_sqft": 95000,
+      "occupancy_rate": 0.95,
+      "num_tenants": 4,
+      "financial_terms": {
+        "base_year": 2024,
+        "cap_type": "cumulative",
+        "cap_rate": 0.05,
+        "gross_up_target": 0.95,
+        "admin_fee_percent": 0.15
+      },
+      "files": {
+        "gl_export": "yardi\\gl_export_prop001_2025.csv",
+        "rent_roll": "mri\\rent_roll_prop001.csv"
+      },
+      "tenants": [
+        {
+          "tenant_id": "PROP001-T01",
+          "company_name": "Rodriguez, Figueroa and Sanchez",
+          "suite": "100",
+          "rentable_sqft": 6238,
+          "usable_sqft": 5569,
+          "monthly_rent": 20158.78,
+          "lease_pdf": "leases\\lease_prop001-t01.pdf",
+          "expected_extraction": "expected\\lease_prop001-t01_expected.json",
+          "expected_reconciliation": {
+            "tenant_id": "PROP001-T01",
+            "tenant_name": "Rodriguez, Figueroa and Sanchez",
+            "property_id": "PROP001",
+            "property_name": "Parkview Office Tower",
+            "reconciliation_year": 2025,
+            "base_year": 2024,
+            "rentable_sqft": 6238,
+            "pro_rata_share": 0.06238,
+            "building_expenses": {
+              "base_year_total": 1000000.0,
+              "current_year_total": 1200000.0,
+              "expense_increase": 200000.0
+            },
+            "adjustments": {
+              "gross_up_applied": false,
+              "cap_applied": false,
+              "admin_fee": 30000.0
+            },
+            "tenant_billable": {
+              "amount": 14347.4,
+              "per_sqft": 2.3
+            }
+          }
+        },
+        {
+          "tenant_id": "PROP001-T02",
+          "company_name": "Doyle Ltd",
+          "suite": "200",
+          "rentable_sqft": 7074,
+          "usable_sqft": 6316,
+          "monthly_rent": 23535.91,
+          "lease_pdf": "leases\\lease_prop001-t02.pdf",
+          "expected_extraction": "expected\\lease_prop001-t02_expected.json",
+          "expected_reconciliation": {
+            "tenant_id": "PROP001-T02",
+            "tenant_name": "Doyle Ltd",
+            "property_id": "PROP001",
+            "property_name": "Parkview Office Tower",
+            "reconciliation_year": 2025,
+            "base_year": 2024,
+            "rentable_sqft": 7074,
+            "pro_rata_share": 0.07074,
+            "building_expenses": {
+              "base_year_total": 1000000.0,
+              "current_year_total": 1200000.0,
+              "expense_increase": 200000.0
+            },
+            "adjustments": {
+              "gross_up_applied": false,
+              "cap_applied": false,
+              "admin_fee": 30000.0
+            },
+            "tenant_billable": {
+              "amount": 16270.2,
+              "per_sqft": 2.3
+            }
+          }
+        },
+        {
+          "tenant_id": "PROP001-T03",
+          "company_name": "Mcclain, Miller and Henderson",
+          "suite": "300",
+          "rentable_sqft": 2828,
+          "usable_sqft": 2524,
+          "monthly_rent": 9185.52,
+          "lease_pdf": "leases\\lease_prop001-t03.pdf",
+          "expected_extraction": "expected\\lease_prop001-t03_expected.json",
+          "expected_reconciliation": {
+            "tenant_id": "PROP001-T03",
+            "tenant_name": "Mcclain, Miller and Henderson",
+            "property_id": "PROP001",
+            "property_name": "Parkview Office Tower",
+            "reconciliation_year": 2025,
+            "base_year": 2024,
+            "rentable_sqft": 2828,
+            "pro_rata_share": 0.02828,
+            "building_expenses": {
+              "base_year_total": 1000000.0,
+              "current_year_total": 1200000.0,
+              "expense_increase": 200000.0
+            },
+            "adjustments": {
+              "gross_up_applied": false,
+              "cap_applied": false,
+              "admin_fee": 30000.0
+            },
+            "tenant_billable": {
+              "amount": 6504.4,
+              "per_sqft": 2.3
+            }
+          }
+        },
+        {
+          "tenant_id": "PROP001-T04",
+          "company_name": "Davis and Sons",
+          "suite": "400",
+          "rentable_sqft": 78860,
+          "usable_sqft": 70410,
+          "monthly_rent": 254438.28,
+          "lease_pdf": "leases\\lease_prop001-t04.pdf",
+          "expected_extraction": "expected\\lease_prop001-t04_expected.json",
+          "expected_reconciliation": {
+            "tenant_id": "PROP001-T04",
+            "tenant_name": "Davis and Sons",
+            "property_id": "PROP001",
+            "property_name": "Parkview Office Tower",
+            "reconciliation_year": 2025,
+            "base_year": 2024,
+            "rentable_sqft": 78860,
+            "pro_rata_share": 0.7886,
+            "building_expenses": {
+              "base_year_total": 1000000.0,
+              "current_year_total": 1200000.0,
+              "expense_increase": 200000.0
+            },
+            "adjustments": {
+              "gross_up_applied": false,
+              "cap_applied": false,
+              "admin_fee": 30000.0
+            },
+            "tenant_billable": {
+              "amount": 181378.0,
+              "per_sqft": 2.3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "property_id": "PROP002",
+      "name": "Metro Business Center",
+      "class": "Class B Office",
+      "total_sqft": 75000,
+      "occupied_sqft": 69000,
+      "occupancy_rate": 0.92,
+      "num_tenants": 3,
+      "financial_terms": {
+        "base_year": 2024,
+        "cap_type": "non_cumulative",
+        "cap_rate": 0.04,
+        "gross_up_target": 0.92,
+        "admin_fee_percent": 0.12
+      },
+      "files": {
+        "gl_export": "yardi\\gl_export_prop002_2025.csv",
+        "rent_roll": "mri\\rent_roll_prop002.csv"
+      },
+      "tenants": [
+        {
+          "tenant_id": "PROP002-T01",
+          "company_name": "Guzman, Hoffman and Baldwin",
+          "suite": "100",
+          "rentable_sqft": 7067,
+          "usable_sqft": 6309,
+          "monthly_rent": 20167.6,
+          "lease_pdf": "leases\\lease_prop002-t01.pdf",
+          "expected_extraction": "expected\\lease_prop002-t01_expected.json",
+          "expected_reconciliation": {
+            "tenant_id": "PROP002-T01",
+            "tenant_name": "Guzman, Hoffman and Baldwin",
+            "property_id": "PROP002",
+            "property_name": "Metro Business Center",
+            "reconciliation_year": 2025,
+            "base_year": 2024,
+            "rentable_sqft": 7067,
+            "pro_rata_share": 0.09422666666666667,
+            "building_expenses": {
+              "base_year_total": 750000.0,
+              "current_year_total": 900000.0,
+              "expense_increase": 150000.0
+            },
+            "adjustments": {
+              "gross_up_applied": false,
+              "cap_applied": false,
+              "admin_fee": 18000.0
+            },
+            "tenant_billable": {
+              "amount": 15830.08,
+              "per_sqft": 2.24
+            }
+          }
+        },
+        {
+          "tenant_id": "PROP002-T02",
+          "company_name": "Gardner, Robinson and Lawrence",
+          "suite": "200",
+          "rentable_sqft": 1712,
+          "usable_sqft": 1528,
+          "monthly_rent": 4584.37,
+          "lease_pdf": "leases\\lease_prop002-t02.pdf",
+          "expected_extraction": "expected\\lease_prop002-t02_expected.json",
+          "expected_reconciliation": {
+            "tenant_id": "PROP002-T02",
+            "tenant_name": "Gardner, Robinson and Lawrence",
+            "property_id": "PROP002",
+            "property_name": "Metro Business Center",
+            "reconciliation_year": 2025,
+            "base_year": 2024,
+            "rentable_sqft": 1712,
+            "pro_rata_share": 0.022826666666666665,
+            "building_expenses": {
+              "base_year_total": 750000.0,
+              "current_year_total": 900000.0,
+              "expense_increase": 150000.0
+            },
+            "adjustments": {
+              "gross_up_applied": false,
+              "cap_applied": false,
+              "admin_fee": 18000.0
+            },
+            "tenant_billable": {
+              "amount": 3834.88,
+              "per_sqft": 2.24
+            }
+          }
+        },
+        {
+          "tenant_id": "PROP002-T03",
+          "company_name": "Blake and Sons",
+          "suite": "300",
+          "rentable_sqft": 60221,
+          "usable_sqft": 53768,
+          "monthly_rent": 141632.16,
+          "lease_pdf": "leases\\lease_prop002-t03.pdf",
+          "expected_extraction": "expected\\lease_prop002-t03_expected.json",
+          "expected_reconciliation": {
+            "tenant_id": "PROP002-T03",
+            "tenant_name": "Blake and Sons",
+            "property_id": "PROP002",
+            "property_name": "Metro Business Center",
+            "reconciliation_year": 2025,
+            "base_year": 2024,
+            "rentable_sqft": 60221,
+            "pro_rata_share": 0.8029466666666667,
+            "building_expenses": {
+              "base_year_total": 750000.0,
+              "current_year_total": 900000.0,
+              "expense_increase": 150000.0
+            },
+            "adjustments": {
+              "gross_up_applied": false,
+              "cap_applied": false,
+              "admin_fee": 18000.0
+            },
+            "tenant_billable": {
+              "amount": 134895.04,
+              "per_sqft": 2.24
+            }
+          }
+        }
+      ]
+    },
+    {
+      "property_id": "PROP003",
+      "name": "Harbor Industrial Park",
+      "class": "Industrial",
+      "total_sqft": 200000,
+      "occupied_sqft": 180000,
+      "occupancy_rate": 0.9,
+      "num_tenants": 5,
+      "financial_terms": {
+        "base_year": 2024,
+        "cap_type": "cumulative_compounding",
+        "cap_rate": 0.03,
+        "gross_up_target": 0.9,
+        "admin_fee_percent": 0.1
+      },
+      "files": {
+        "gl_export": "yardi\\gl_export_prop003_2025.csv",
+        "rent_roll": "mri\\rent_roll_prop003.csv"
+      },
+      "tenants": [
+        {
+          "tenant_id": "PROP003-T01",
+          "company_name": "Henderson, Ramirez and Lewis",
+          "suite": "100",
+          "rentable_sqft": 1767,
+          "usable_sqft": 1577,
+          "monthly_rent": 3202.56,
+          "lease_pdf": "leases\\lease_prop003-t01.pdf",
+          "expected_extraction": "expected\\lease_prop003-t01_expected.json",
+          "expected_reconciliation": {
+            "tenant_id": "PROP003-T01",
+            "tenant_name": "Henderson, Ramirez and Lewis",
+            "property_id": "PROP003",
+            "property_name": "Harbor Industrial Park",
+            "reconciliation_year": 2025,
+            "base_year": 2024,
+            "rentable_sqft": 1767,
+            "pro_rata_share": 0.008835,
+            "building_expenses": {
+              "base_year_total": 2000000.0,
+              "current_year_total": 2400000.0,
+              "expense_increase": 400000.0
+            },
+            "adjustments": {
+              "gross_up_applied": false,
+              "cap_applied": false,
+              "admin_fee": 40000.0
+            },
+            "tenant_billable": {
+              "amount": 3887.4,
+              "per_sqft": 2.2
+            }
+          }
+        },
+        {
+          "tenant_id": "PROP003-T02",
+          "company_name": "Garcia-James",
+          "suite": "200",
+          "rentable_sqft": 5139,
+          "usable_sqft": 4588,
+          "monthly_rent": 10627.52,
+          "lease_pdf": "leases\\lease_prop003-t02.pdf",
+          "expected_extraction": "expected\\lease_prop003-t02_expected.json",
+          "expected_reconciliation": {
+            "tenant_id": "PROP003-T02",
+            "tenant_name": "Garcia-James",
+            "property_id": "PROP003",
+            "property_name": "Harbor Industrial Park",
+            "reconciliation_year": 2025,
+            "base_year": 2024,
+            "rentable_sqft": 5139,
+            "pro_rata_share": 0.025695,
+            "building_expenses": {
+              "base_year_total": 2000000.0,
+              "current_year_total": 2400000.0,
+              "expense_increase": 400000.0
+            },
+            "adjustments": {
+              "gross_up_applied": false,
+              "cap_applied": false,
+              "admin_fee": 40000.0
+            },
+            "tenant_billable": {
+              "amount": 11305.8,
+              "per_sqft": 2.2
+            }
+          }
+        },
+        {
+          "tenant_id": "PROP003-T03",
+          "company_name": "Abbott-Munoz",
+          "suite": "300",
+          "rentable_sqft": 5597,
+          "usable_sqft": 4997,
+          "monthly_rent": 10070.26,
+          "lease_pdf": "leases\\lease_prop003-t03.pdf",
+          "expected_extraction": "expected\\lease_prop003-t03_expected.json",
+          "expected_reconciliation": {
+            "tenant_id": "PROP003-T03",
+            "tenant_name": "Abbott-Munoz",
+            "property_id": "PROP003",
+            "property_name": "Harbor Industrial Park",
+            "reconciliation_year": 2025,
+            "base_year": 2024,
+            "rentable_sqft": 5597,
+            "pro_rata_share": 0.027985,
+            "building_expenses": {
+              "base_year_total": 2000000.0,
+              "current_year_total": 2400000.0,
+              "expense_increase": 400000.0
+            },
+            "adjustments": {
+              "gross_up_applied": false,
+              "cap_applied": false,
+              "admin_fee": 40000.0
+            },
+            "tenant_billable": {
+              "amount": 12313.4,
+              "per_sqft": 2.2
+            }
+          }
+        },
+        {
+          "tenant_id": "PROP003-T04",
+          "company_name": "Blair PLC",
+          "suite": "400",
+          "rentable_sqft": 6323,
+          "usable_sqft": 5645,
+          "monthly_rent": 13494.65,
+          "lease_pdf": "leases\\lease_prop003-t04.pdf",
+          "expected_extraction": "expected\\lease_prop003-t04_expected.json",
+          "expected_reconciliation": {
+            "tenant_id": "PROP003-T04",
+            "tenant_name": "Blair PLC",
+            "property_id": "PROP003",
+            "property_name": "Harbor Industrial Park",
+            "reconciliation_year": 2025,
+            "base_year": 2024,
+            "rentable_sqft": 6323,
+            "pro_rata_share": 0.031615,
+            "building_expenses": {
+              "base_year_total": 2000000.0,
+              "current_year_total": 2400000.0,
+              "expense_increase": 400000.0
+            },
+            "adjustments": {
+              "gross_up_applied": false,
+              "cap_applied": false,
+              "admin_fee": 40000.0
+            },
+            "tenant_billable": {
+              "amount": 13910.6,
+              "per_sqft": 2.2
+            }
+          }
+        },
+        {
+          "tenant_id": "PROP003-T05",
+          "company_name": "Dudley Group",
+          "suite": "500",
+          "rentable_sqft": 161174,
+          "usable_sqft": 143905,
+          "monthly_rent": 313700.46,
+          "lease_pdf": "leases\\lease_prop003-t05.pdf",
+          "expected_extraction": "expected\\lease_prop003-t05_expected.json",
+          "expected_reconciliation": {
+            "tenant_id": "PROP003-T05",
+            "tenant_name": "Dudley Group",
+            "property_id": "PROP003",
+            "property_name": "Harbor Industrial Park",
+            "reconciliation_year": 2025,
+            "base_year": 2024,
+            "rentable_sqft": 161174,
+            "pro_rata_share": 0.80587,
+            "building_expenses": {
+              "base_year_total": 2000000.0,
+              "current_year_total": 2400000.0,
+              "expense_increase": 400000.0
+            },
+            "adjustments": {
+              "gross_up_applied": false,
+              "cap_applied": false,
+              "admin_fee": 40000.0
+            },
+            "tenant_billable": {
+              "amount": 354582.8,
+              "per_sqft": 2.2
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "total_tenants": 12,
+  "total_sqft": 375000
+}

@@ -1,0 +1,8 @@
+shots/
+.state-*.json
+# Throwaway per-cycle audit/verify scripts; the durable harness is shoot.cjs.
+*.cjs
+*.mjs
+!shoot.cjs
+# Local-only DB seed helpers used to populate surfaces for screenshots.
+*.sql

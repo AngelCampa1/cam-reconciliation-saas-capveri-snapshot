@@ -1,0 +1,20 @@
+gl_account,description,amount,recoverable,expense_pool
+5000,Janitorial Services,85000.00,true,CAM
+5001,Landscape Maintenance,42000.00,true,CAM
+5002,Security Services,68000.00,true,CAM
+5003,Parking Lot Maintenance,35000.00,true,CAM
+5004,Exterior Lighting,28000.00,true,CAM
+5005,Snow Removal,15000.00,true,CAM
+5006,Roof Repairs,22000.00,true,CAM
+5007,HVAC Maintenance,54000.00,true,CAM
+5008,Elevator Maintenance,18000.00,true,CAM
+5009,Common Area Utilities,63000.00,true,CAM
+5010,Property Management Fee,45000.00,true,CAM
+5011,Insurance,25000.00,true,CAM
+5099,Capital Improvements,50000.00,false,NON_RECOVERABLE
+total_cam_pool,,500000.00,,
+non_recoverable,,50000.00,,
+recoverable_pool,,450000.00,,
+actual_occupancy,,0.90,,
+gross_up_target,,0.95,,
+grossed_up_pool,,473684.21,,

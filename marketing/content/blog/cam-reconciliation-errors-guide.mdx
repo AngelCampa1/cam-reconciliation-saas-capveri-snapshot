@@ -1,0 +1,188 @@
+---
+title: "12 CAM Reconciliation Errors That Generate Tenant Disputes"
+description: "The 12 most common cam reconciliation errors: denominator drift, capex misclassification, management fee abuse, and more, with dollar impact examples and how to fix each one."
+excerpt: "CAM reconciliation errors fall into three types: wrong numbers in the pool, wrong math on the pool, and wrong pool size. Here are the 12 most expensive, how they happen, and how to catch them before the tenant does."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "What is denominator drift in CAM reconciliation?"
+    a: "Denominator drift happens when the total leasable area used to compute pro-rata shares changes year over year without a documented reason. Common causes: a lease modification changed the denominator definition; the accounting system was updated with incorrect square footage; an anchor tenant's exclusion was applied in prior years but not this year; or a building expansion added square footage that wasn't reflected in the denominator update. Because the denominator affects every tenant's share simultaneously, a small error compounds across the entire portfolio. A 5% denominator error on a $2M pool overbills tenants by $100,000 in aggregate."
+  - q: "How do I know if a capital expense was misclassified as operating?"
+    a: "The accounting treatment is the starting point but not the final word. An expense that was expensed (not capitalized) in the GL can still be a capital item for CAM exclusion purposes. Check the vendor, the invoice description, and the dollar amount. A $45,000 invoice from a roofing contractor described as 'commercial roof resurfacing' is likely capital regardless of how it was coded in the accounting system. Red flags: single large invoices from contractors (not ongoing service vendors), work described as 'replacement' or 'installation' rather than 'repair' or 'maintenance,' and expenses that appear once without a recurring prior-year equivalent."
+  - q: "What is management fee abuse in CAM billing?"
+    a: "Management fee abuse refers to landlords billing management fees above the lease cap, billing management fees on a base that includes excluded expenses, or billing management fees through a related-party contract at above-market rates. The most common form is simply not checking the cap. The lease says 3% of operating expenses, the actual management fee is 4.5%, and no one catches it. On a $1.5M operating expense pool, the difference is $22,500 per year, per property. At a portfolio of 10 properties, that's $225,000 in annual overbilling that persists as long as no one audits."
+  - q: "Can a landlord correct a CAM error after the statement is issued?"
+    a: "Yes, but the correction window is typically the same as the tenant's audit window: usually 12 months from statement delivery. If the landlord discovers they under-billed in year one, they can issue a corrected statement within that window and collect the difference. After the window closes, most courts won't enforce the landlord's correction claim if the tenant objects. For overcharges, the tenant can demand a credit or refund within their audit window. The practical takeaway: both parties have an interest in accurate statements delivered on time."
+  - q: "How does a gross-up error affect CAM billing?"
+    a: "A gross-up error typically results in overcharging tenants by applying the gross-up adjustment to fixed expenses (which shouldn't be grossed up) or by using the wrong occupancy denominator. If the actual occupancy was 75% but the landlord mistakenly used 70%, the gross-up multiplier is larger than it should be. Every expense in the variable pool is inflated by that error. A $600,000 variable expense pool at 75% occupancy grossed up to 95% is $760,000. At 70% occupancy it's $814,286, a $54,286 difference caused purely by a data entry mistake in the occupancy figure."
+---
+
+CAM reconciliation errors fall into three broad categories: wrong expenses in the pool (things that shouldn't be there), wrong calculations on the pool (math applied incorrectly), and wrong pool structure (denominator, gross-up basis, cap type). The 12 errors below cover all three, ranked roughly by how often they appear in disputes.
+
+---
+
+## Error 1: Capital Expenses in the Operating Pool
+
+**What happens**: A roofing contractor invoices $85,000 for a roof replacement. The accounts payable team codes it to "Building Maintenance" (Account 5300). It posts to the operating CAM pool. Nobody checks the underlying transaction at reconciliation time.
+
+**Dollar impact**: The full $85,000 is billed through to tenants as operating CAM. On a property with five tenants averaging 8% pro-rata shares, each tenant is overbilled roughly $6,800.
+
+**Why it happens**: The accounting system doesn't distinguish between a $400 drain repair and an $85,000 roof replacement in the same GL account. Catching it requires looking at the transaction, not just the account balance.
+
+**Fix**: Build a reconciliation step that reviews all single transactions above a threshold (typically $5,000–$10,000) in accounts that mix operating and capital expenses. Flag any invoices from contractors (not service vendors) for verification.
+
+This is one of the [top 15 CAM billing errors](/resources/top-15-cam-billing-errors) and appears in tenant audits more than any other category.
+
+---
+
+## Error 2: Denominator Drift
+
+**What happens**: The property's leasable area denominator changes year over year without a documented reason. In year 1, the denominator was 285,000 SF (excluding anchor tenant). In year 2, the accounting system was updated and the anchor's space was included - denominator became 340,000 SF. In year 3, a lease modification happened and the denominator dropped to 310,000 SF. No explanations were documented.
+
+**Dollar impact**: A denominator change from 285,000 to 310,000 SF reduces each tenant's pro-rata share by about 8.1%. On a $2M pool, every tenant's charge drops by a total of $162,000 (landlord under-recovers). A change in the other direction produces equivalent overbilling.
+
+**Why it happens**: The denominator lives in the lease abstract and sometimes also in the property management system. When those two don't match, whoever prepares the reconciliation may use one without checking the other.
+
+**Fix**: Document the denominator basis (the specific lease provision and the source data) in every annual reconciliation workbook. Flag any year-over-year change for sign-off by a senior property accountant.
+
+---
+
+## Error 3: Gross-Up Applied to Fixed Expenses
+
+**What happens**: The property runs at 72% occupancy, below the 90% gross-up threshold. The property accountant gross-ups the entire controllable expense pool, including the management fee (a flat 3% of revenues regardless of occupancy) and a fixed-price janitorial contract that doesn't change with building population.
+
+**Dollar impact**: The janitorial contract is $220,000/year. Grossed up from 72% to 90% actual occupancy: ($220,000 ÷ 0.72) × 0.90 = $275,000. The $55,000 difference was applied entirely to a fixed-price contract - there's no actual cost to recover.
+
+**Why it happens**: The gross-up clause says "variable expenses" but the definition of variable isn't always specified in the lease. Without an explicit analysis of which expenses scale with occupancy, accountants gross up everything.
+
+**Fix**: Build a variable/fixed classification for each controllable expense category. Management fee, fixed-price service contracts, and flat-rate utilities don't qualify as variable. Document the classification in the gross-up worksheet.
+
+See [CAM gross-up calculation guide](/resources/cam-gross-up-calculation-guide) for the correct methodology.
+
+---
+
+## Error 4: Management Fee Over the Lease Cap
+
+**What happens**: The lease caps management fees at 3% of operating expenses. Actual management fees billed by the third-party property manager are 4.5% of revenues (a different base than the lease uses). The reconciliation includes the full management fee without checking the cap.
+
+**Dollar impact**: $1,500,000 operating expense pool × 3% cap = $45,000 allowed. At 4.5% of revenues, the actual fee was $72,000. Overcharge: $27,000. Per lease, per year.
+
+**Why it happens**: The management fee is invoiced by a separate company (the property manager), not generated internally. No one compares it to the lease cap during the reconciliation.
+
+**Fix**: Add a mandatory cap check as a reconciliation step. Calculate the cap using the base defined in the lease (operating expenses, not revenues - they may differ), compare to the actual fee, and exclude the overage.
+
+---
+
+## Error 5: Wrong Cap Type Applied
+
+**What happens**: The lease has a cumulative CAM cap. The property accountant applies a fixed 5% annual cap instead, not realizing cumulative caps build a carryforward bank.
+
+**Dollar impact on cumulative cap misapplication**: In a year where controllable CAM is flat or decreasing, the cumulative cap creates a bank of "unused allowance" that can be applied in future years. If the accountant ignores this and applies a simple year-over-year cap, the landlord loses the carryforward - potentially $40,000–$80,000 in future billing rights.
+
+**Why it happens**: Lease caps are buried in complex lease language. "Cumulative" caps are less common than simple annual caps, so accountants unfamiliar with the lease may default to the simpler calculation.
+
+**Fix**: Document the cap type for each lease in the abstract. For cumulative caps, maintain a carryforward schedule by lease year.
+
+See [CAM cap types](/resources/cam-cap-types) for the difference between base year, fixed percentage, and cumulative caps.
+
+---
+
+## Error 6: Prior-Year Expense Double-Counting
+
+**What happens**: A large vendor invoice was accrued in December of year 1 and the cash payment posted in February of year 2. The year 1 accrual and the year 2 cash payment both appear in the GL. The reconciliation team doesn't remove the duplicate - the expense appears in both the year 1 and year 2 reconciliation pools.
+
+**Dollar impact**: A $40,000 landscaping contract that's double-counted in year 2 overbills tenants by $40,000. On a 200,000 SF property with a $1.2M total pool, that's 3.3% overbilling across all tenants.
+
+**Why it happens**: Year-end accruals are a normal part of GAAP accounting. The reconciliation process needs to reconcile accruals against actual cash payments.
+
+**Fix**: At the start of each reconciliation, request a list of prior-year accruals from the accounting team. Verify that the corresponding cash payments in the current year are offset against the prior-year accruals, not double-counted.
+
+---
+
+## Error 7: Insurance Allocation Error
+
+**What happens**: The landlord holds a portfolio property insurance policy covering 8 properties. The annual premium is $1,800,000. The premium is allocated to each property based on square footage, not insured value. The property being reconciled is a Class A office building (high replacement value per SF), but it's allocated the same dollar-per-SF as a flex/industrial property (much lower value).
+
+**Dollar impact**: If the correct allocation basis (insured value) would produce a $300,000 allocation to the Class A property and the square footage basis produced $220,000, tenants at the Class A property are underbilled. If the reverse is true, they're overbilled. The error can run either way depending on the property mix.
+
+**Why it happens**: Landlords often use the most convenient allocation method rather than the most accurate one. Square footage is easy. Insured values require pulling the insurance declarations page annually.
+
+**Fix**: Require insurance verification annually - pull the declarations page, confirm the insured value allocation basis matches what's billed to tenants.
+
+---
+
+## Error 8: Partial-Year Tenant Math
+
+**What happens**: A tenant commences their lease on July 1. They should pay 6/12 (50%) of their annual CAM for that year. The reconciliation applies their full annual pro-rata share to the full annual pool.
+
+**Dollar impact**: A tenant with a $24,000 annual CAM obligation is billed $24,000 instead of $12,000. Overcharge: $12,000.
+
+**Why it happens**: Property management systems sometimes calculate partial-year CAM automatically - but only if the commencement date is entered correctly. Manual reconciliations often miss this check entirely.
+
+**Fix**: Flag any tenant with a lease commencement or termination date that falls within the reconciliation year. Verify the partial-year calculation against the lease commencement date.
+
+---
+
+## Error 9: Anchor Exclusion Not Applied
+
+**What happens**: The lease for a 15,000 SF in-line retail tenant specifies that the denominator excludes any tenant over 30,000 SF with a directly negotiated CAM agreement. The 85,000 SF grocery anchor qualifies. The reconciliation uses total GLA (including the anchor) as the denominator.
+
+**Dollar impact**: Denominator with anchor: 420,000 SF → tenant's pro-rata share: 3.57%. Denominator excluding anchor (335,000 SF) → correct share: 4.48%. On a $1.8M pool, the difference is ($1.8M × 4.48%) − ($1.8M × 3.57%) = $80,640 − $64,260 = $16,380 annual underbilling to the correct tenant and simultaneous overbilling of the remaining tenants.
+
+**Why it happens**: Anchor exclusions are lease-specific. Without reviewing each lease's denominator definition, the accountant uses the system default (total GLA).
+
+**Fix**: Require denominator verification as a mandatory step in [CAM reconciliation checklist](/resources/cam-reconciliation-checklist-2026). Document the denominator basis for each tenant and flag any that differ from the building total.
+
+---
+
+## Error 10: Including Non-Recoverable Administrative Costs
+
+**What happens**: The property manager charges for their corporate compliance team's time, a shared CRM system subscription, and part of the regional VP's salary as "property management overhead." These get included in the management fee or as direct administrative charges.
+
+**Dollar impact**: $30,000 in non-property administrative costs in the pool × 5% average pro-rata share = $1,500 per tenant on average. Across 40 tenants: $60,000 in total overbilling.
+
+**Why it happens**: Property management companies have overhead. Allocating corporate overhead to individual properties is convenient but often not supportable under the lease.
+
+**Fix**: Review any administrative or overhead line items that don't have a clear property-level basis. Management fees are the approved vehicle for overhead recovery - items outside the management fee should have an invoice or contract tied to the specific property.
+
+---
+
+## Error 11: Gross-Up Occupancy Calculation Error
+
+**What happens**: The lease requires gross-up if average occupancy falls below 95%. The accountant calculates occupancy based on a point-in-time snapshot (December 31) rather than the average for the year. In a year where the building was 65% occupied in Q1 but filled to 90% by Q4, the December 31 snapshot shows 90% - no gross-up applied. The correct average is 80%, which would have triggered gross-up.
+
+**Dollar impact**: A $700,000 variable expense pool at 80% average occupancy grossed up to 95% threshold: ($700,000 ÷ 0.80) × 0.95 = $831,250. The landlord under-recovered $131,250.
+
+**Why it happens**: "Occupancy" isn't defined in the lease - or it's defined ambiguously. Tenants will argue for the average (lower, triggering gross-up at a lower level); landlords will argue for whatever calculation minimizes the gross-up.
+
+**Fix**: Read the lease's occupancy definition. If it says "average occupancy," calculate a monthly weighted average for the year. Document the calculation in the gross-up worksheet.
+
+---
+
+## Error 12: Security Deposit or Abatement Netting
+
+**What happens**: A tenant's security deposit was forfeited during the year and credited to property income. The property accountant nets this against the operating expense pool, reducing the billable CAM by $25,000. CAM is an expense recovery mechanism - it should only include actual operating expenses, not income offsets.
+
+**Dollar impact**: Reducing the CAM pool by $25,000 underbills all tenants proportionally. The security deposit forfeiture is landlord income, not an operating cost reduction.
+
+**Why it happens**: This is a bookkeeping error - credits to a property income account shouldn't net against expense accounts. It's more common in properties where a single bookkeeper handles both income and expense accounts without a review layer.
+
+**Fix**: Reconcile the CAM pool against gross operating expenses (before any income offsets). The pool should only reflect expenses, not income.
+
+---
+
+## How to Find These Errors Before the Tenant Does
+
+A variance analysis comparing this year's per-SF cost to last year's catches many of these errors before the statement goes out. Any category that moves more than 10% year-over-year warrants a look at the underlying transactions.
+
+See [CAM variance analysis](/resources/cam-variance-analysis) for a structured approach, and [CAM reconciliation best practices guide](/blog/cam-reconciliation-best-practices-guide) for the documentation standards that prevent these errors from recurring.
+
+For tenants who suspect these errors in a received statement, the [cam charges dispute process](/resources/cam-charges-dispute-process) covers how to formally pursue corrections.
+
+## Sources
+
+1. [Fiserv - Reconciliation whitepaper](https://www.fiserv.com/content/dam/fiserv-ent/archive-files/final-files/white-papers/Frontier-Reconciliation_whitepaper_1020.pdf)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

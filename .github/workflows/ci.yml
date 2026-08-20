@@ -1,0 +1,402 @@
+name: CI
+
+# CI disabled - manual trigger only
+# To re-enable automatic CI, uncomment the pull_request and push triggers below
+on:
+  workflow_dispatch:  # Manual trigger only
+  # pull_request:
+  #   branches: [main, master]
+  # push:
+  #   branches: [main, master]
+
+# Cancel in-progress runs for the same branch
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ============================================================
+  # Change Detection
+  # ============================================================
+  # Detects impacted projects so unrelated checks can be skipped.
+  detect-changes:
+    name: Detect Changed Areas
+    runs-on: ubuntu-latest
+    outputs:
+      backend: ${{ steps.detect.outputs.backend }}
+      frontend: ${{ steps.detect.outputs.frontend }}
+      marketing: ${{ steps.detect.outputs.marketing }}
+      api_client: ${{ steps.detect.outputs.api_client }}
+      benchmarks: ${{ steps.detect.outputs.benchmarks }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect changed files
+        id: detect
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            base="${{ github.event.pull_request.base.sha }}"
+          elif [[ "${{ github.event_name }}" == "push" ]]; then
+            base="${{ github.event.before }}"
+          else
+            default_branch="${{ github.event.repository.default_branch }}"
+            git fetch origin "${default_branch}" --depth=1
+            base="origin/${default_branch}"
+          fi
+
+          git diff --name-only "${base}"...HEAD > changed_files.txt
+
+          has_match() {
+            local pattern="$1"
+            grep -Eq "${pattern}" changed_files.txt
+          }
+
+          # Shared files affect multiple projects and should run all checks.
+          shared_pattern='^(AGENTS\.MD|CLAUDE\.md|CLAUDE\.MD|\.pre-commit-config\.yaml|\.github/workflows/ci\.yml|design-tokens\.json)$'
+          shared_changed=false
+          if has_match "${shared_pattern}"; then
+            shared_changed=true
+          fi
+
+          backend=false
+          if [[ "${shared_changed}" == "true" ]] || has_match '^backend/|^supabase/'; then
+            backend=true
+          fi
+
+          frontend=false
+          if [[ "${shared_changed}" == "true" ]] || has_match '^frontend/|^knowledge/|^marketing/|^scripts/generate-public-knowledge\.mjs|^scripts/check-public-knowledge\.mjs|^plan-tiers\.json'; then
+            frontend=true
+          fi
+
+          marketing=false
+          if [[ "${shared_changed}" == "true" ]] || has_match '^marketing/|^knowledge/|^scripts/generate-public-knowledge\.mjs|^scripts/generate-plan-tiers\.mjs|^plan-tiers\.json'; then
+            marketing=true
+          fi
+
+          api_client=false
+          if [[ "${shared_changed}" == "true" ]] || has_match '^frontend/openapi\.json$|^frontend/src/api/generated/|^backend/app/api/v1/|^backend/app/schemas/|^backend/app/models/'; then
+            api_client=true
+          fi
+
+          benchmarks=false
+          if [[ "${shared_changed}" == "true" ]] || has_match '^backend/tests/benchmarks/|^backend/app/services/(ingestion|extraction|calculation)/'; then
+            benchmarks=true
+          fi
+
+          echo "backend=${backend}" >> "${GITHUB_OUTPUT}"
+          echo "frontend=${frontend}" >> "${GITHUB_OUTPUT}"
+          echo "marketing=${marketing}" >> "${GITHUB_OUTPUT}"
+          echo "api_client=${api_client}" >> "${GITHUB_OUTPUT}"
+          echo "benchmarks=${benchmarks}" >> "${GITHUB_OUTPUT}"
+
+  # ============================================================
+  # API Client Sync Check
+  # ============================================================
+  # Ensures the generated API client matches the committed OpenAPI spec.
+  # This catches cases where:
+  #   - Backend API changed but client wasn't regenerated
+  #   - openapi.json was updated but generated files weren't
+  #   - Generated files were manually modified
+  api-client-check:
+    name: Check API Client Sync
+    runs-on: ubuntu-latest
+    needs: detect-changes
+    if: needs.detect-changes.outputs.api_client == 'true'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Regenerate API client from spec
+        working-directory: frontend
+        run: npm run generate-api-client
+
+      - name: Check for uncommitted changes
+        working-directory: frontend
+        run: |
+          if git diff --exit-code src/api/generated/; then
+            echo "✅ API client is in sync with OpenAPI spec!"
+          else
+            echo ""
+            echo "::error::API client is out of sync with the OpenAPI specification!"
+            echo ""
+            echo "========================================"
+            echo "  API CLIENT DRIFT DETECTED"
+            echo "========================================"
+            echo ""
+            echo "The generated API client differs from what's committed."
+            echo "This usually means one of the following:"
+            echo ""
+            echo "  1. The backend API changed but the client wasn't regenerated"
+            echo "  2. The openapi.json was updated but generated files weren't committed"
+            echo "  3. Generated files were manually modified (don't do this!)"
+            echo ""
+            echo "----------------------------------------"
+            echo "  HOW TO FIX"
+            echo "----------------------------------------"
+            echo ""
+            echo "Option A: If the backend API changed:"
+            echo "  1. Start the backend server:"
+            echo "     cd backend && uvicorn app.main:app --reload"
+            echo ""
+            echo "  2. Regenerate and save the spec:"
+            echo "     cd frontend && npm run generate-api-client:save"
+            echo ""
+            echo "  3. Commit all changes:"
+            echo "     git add frontend/openapi.json frontend/src/api/generated/"
+            echo "     git commit -m 'chore: regenerate API client'"
+            echo ""
+            echo "Option B: If only the generated files are stale:"
+            echo "  1. Regenerate from the existing spec:"
+            echo "     cd frontend && npm run generate-api-client"
+            echo ""
+            echo "  2. Commit the generated files:"
+            echo "     git add frontend/src/api/generated/"
+            echo "     git commit -m 'chore: regenerate API client'"
+            echo ""
+            echo "----------------------------------------"
+            echo "  DIFF DETAILS"
+            echo "----------------------------------------"
+            git diff src/api/generated/
+            echo ""
+            exit 1
+          fi
+
+  # ============================================================
+  # Frontend Tests
+  # ============================================================
+  frontend-tests:
+    name: Frontend Tests
+    runs-on: ubuntu-latest
+    needs: detect-changes
+    if: needs.detect-changes.outputs.frontend == 'true'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Check public knowledge drift
+        run: node scripts/check-public-knowledge.mjs
+
+      - name: Run type check
+        working-directory: frontend
+        run: npm run typecheck
+
+      - name: Run linter
+        working-directory: frontend
+        run: npm run lint
+
+      - name: Run tests with coverage
+        working-directory: frontend
+        run: npm run test:coverage
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: frontend-coverage
+          path: frontend/coverage/
+          retention-days: 7
+
+  # ============================================================
+  # Marketing Tests
+  # ============================================================
+  marketing-tests:
+    name: Marketing Tests
+    runs-on: ubuntu-latest
+    needs: detect-changes
+    if: needs.detect-changes.outputs.marketing == 'true'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: marketing/package-lock.json
+
+      - name: Install dependencies
+        working-directory: marketing
+        run: npm ci
+
+      - name: Run type check
+        working-directory: marketing
+        run: npm run typecheck
+
+      - name: Run linter
+        working-directory: marketing
+        run: npm run lint
+
+      - name: Run tests
+        working-directory: marketing
+        run: npm test
+
+  # ============================================================
+  # Backend Tests
+  # ============================================================
+  backend-tests:
+    name: Backend Tests
+    runs-on: ubuntu-latest
+    needs: detect-changes
+    if: needs.detect-changes.outputs.backend == 'true'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: backend/pyproject.toml
+
+      - name: Install dependencies
+        working-directory: backend
+        run: |
+          pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Check requirements.txt sync
+        run: python backend/scripts/sync_requirements.py --check
+
+      - name: Run linter (ruff)
+        working-directory: backend
+        run: ruff check app/ tests/
+
+      - name: Run type check (mypy)
+        working-directory: backend
+        run: mypy app/ --ignore-missing-imports
+        continue-on-error: true  # Allow mypy to fail initially
+
+      - name: Run tests with coverage
+        working-directory: backend
+        run: pytest --cov=app --cov-report=xml --cov-report=html -v
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: backend-coverage
+          path: backend/htmlcov/
+          retention-days: 7
+
+  # ============================================================
+  # Performance Benchmarks
+  # ============================================================
+  performance-benchmarks:
+    name: Performance Benchmarks
+    runs-on: ubuntu-latest
+    needs: detect-changes
+    if: needs.detect-changes.outputs.benchmarks == 'true'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: backend/pyproject.toml
+
+      - name: Install dependencies
+        working-directory: backend
+        run: |
+          pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Run performance benchmarks
+        working-directory: backend
+        run: |
+          echo "========================================="
+          echo "  Running Performance Benchmarks"
+          echo "========================================="
+          pytest tests/benchmarks/ -v -m benchmark --tb=short --no-cov
+          echo ""
+          echo "✅ All benchmarks passed!"
+
+      - name: Save benchmark results
+        if: always()
+        working-directory: backend
+        run: |
+          mkdir -p benchmark-results
+          pytest tests/benchmarks/test_ingestion_performance.py::test_benchmark_summary \
+            -v -m benchmark --tb=short --no-cov > benchmark-results/summary.txt 2>&1 || true
+
+      - name: Upload benchmark results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: benchmark-results
+          path: backend/benchmark-results/
+          retention-days: 30
+
+  # ============================================================
+  # All Checks Passed
+  # ============================================================
+  # This job runs after all other jobs complete successfully.
+  # It's a convenient merge gate for branch protection rules.
+  ci-success:
+    name: CI Success
+    runs-on: ubuntu-latest
+    needs: [detect-changes, api-client-check, frontend-tests, marketing-tests, backend-tests, performance-benchmarks]
+    if: always()
+
+    steps:
+      - name: Check all jobs passed
+        run: |
+          if [[ "${{ needs.api-client-check.result }}" != "success" && "${{ needs.api-client-check.result }}" != "skipped" ]]; then
+            echo "API client check failed"
+            exit 1
+          fi
+          if [[ "${{ needs.frontend-tests.result }}" != "success" && "${{ needs.frontend-tests.result }}" != "skipped" ]]; then
+            echo "Frontend tests failed"
+            exit 1
+          fi
+          if [[ "${{ needs.marketing-tests.result }}" != "success" && "${{ needs.marketing-tests.result }}" != "skipped" ]]; then
+            echo "Marketing tests failed"
+            exit 1
+          fi
+          if [[ "${{ needs.backend-tests.result }}" != "success" && "${{ needs.backend-tests.result }}" != "skipped" ]]; then
+            echo "Backend tests failed"
+            exit 1
+          fi
+          if [[ "${{ needs.performance-benchmarks.result }}" != "success" && "${{ needs.performance-benchmarks.result }}" != "skipped" ]]; then
+            echo "Performance benchmarks failed"
+            exit 1
+          fi
+          echo "✅ All CI checks passed!"

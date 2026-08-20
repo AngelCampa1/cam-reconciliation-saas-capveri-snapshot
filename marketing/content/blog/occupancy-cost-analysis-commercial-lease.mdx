@@ -1,0 +1,209 @@
+---
+title: "Occupancy Cost Analysis for Commercial Leases: Full Breakdown with Sensitivity Analysis"
+description: "How to calculate total occupancy cost for a commercial lease: base rent, CAM, taxes, insurance, fit-out amortization, and sensitivity analysis with real scenarios."
+excerpt: "Total occupancy cost analysis reveals what a lease actually costs, not what the rent roll shows. For a typical retail tenant, the difference is 40–70% above quoted rent."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "operations"
+audience: tenant
+faq:
+  - q: "What is total occupancy cost in commercial real estate?"
+    a: "Total occupancy cost is the sum of all costs a tenant incurs to occupy commercial space, including base rent, CAM charges, property taxes (pro-rata share), property insurance (pro-rata share), utility costs not included in CAM, and any amortized build-out or improvement costs borne by the tenant. Unlike the quoted rent figure in an LOI, total occupancy cost reflects what a tenant actually spends to occupy and operate from the space over the lease term. It's the correct metric for comparing locations and evaluating renewal versus relocation decisions."
+  - q: "How do you calculate occupancy cost as a percentage of revenue?"
+    a: "Occupancy cost ratio = total annual occupancy cost ÷ annual gross revenue × 100. For retail, this ratio is a critical benchmark. Most retailers target 8–12% occupancy cost as a percentage of gross sales. If a 3,000 SF coffee shop pays $156,000 in total occupancy costs and generates $1,040,000 in annual revenue, the occupancy cost ratio is 15%, above the target range for most food service concepts. This metric is more useful than rent per square foot alone because it accounts for both cost and revenue productivity."
+  - q: "What's the difference between occupancy cost and rent?"
+    a: "Rent (base rent specifically) is one component of occupancy cost. For a triple-net lease, occupancy cost also includes CAM, property taxes, and property insurance, all passed through to the tenant as additional rent. Depending on the building type and market, these add-ons can equal 30–80% of base rent. A $25/SF NNN office lease may carry $12–18/SF in additional occupancy charges, pushing true occupancy cost to $37–43/SF. Comparing leases on base rent alone consistently undervalues the cheaper-looking option or overvalues the expensive one."
+  - q: "How do you use sensitivity analysis in a commercial lease occupancy cost model?"
+    a: "Sensitivity analysis tests how your total occupancy cost changes under different assumptions for the most uncertain variables: typically CAM growth rate, property tax increases, and insurance premiums. Run three scenarios: base case (your best estimate), downside (aggressive growth in all cost components), and upside (conservative cost growth). The spread between downside and upside scenarios over a full lease term tells you how much financial risk you're accepting. Wide spreads indicate high-risk leases or buildings with volatile expense histories."
+  - q: "Should tenant improvement allowance be included in occupancy cost analysis?"
+    a: "Yes, but as an offset. The TI allowance is a landlord subsidy that reduces the tenant's net occupancy cost. A $50/SF TI allowance on a 5,000 SF space is $250,000 that the tenant doesn't have to fund from operations. When comparing two properties, subtract the TI allowance from total lease cost in the analysis. However, be precise: the TI allowance reduces up-front fit-out cost, but any improvements beyond the allowance are additional tenant cost that should be amortized over the lease term and included in the occupancy cost model."
+---
+
+A restaurant operator was evaluating two locations. Location A: $42/SF base rent, $14,000/month total invoiced costs. Location B: $38/SF base rent, $12,800/month total invoiced costs. They chose Location B, cheaper by $14,400/year on the rent comparison.
+
+What they didn't model: Location B had unaudited CAM at $11.80/SF versus Location A's $8.20/SF, both with uncapped controllable expenses. By year three, Location B's total occupancy cost exceeded Location A's by $19,600 annually. Over a 7-year term, the "cheaper" option cost $103,000 more.
+
+Occupancy cost analysis commercial lease modeling prevents exactly this. It's the only metric that captures total financial exposure: not just what you pay on the first day, but what you pay on the last.
+
+## The Complete Components of Commercial Occupancy Cost
+
+### Component 1: Base Rent
+
+Base rent is the fixed rent obligation per your lease, typically quoted as annual dollars per SF. For most leases, this escalates annually by a fixed percentage (3–4%) or by CPI.
+
+Model base rent year by year through lease expiration. The compounding effect is significant: a $25/SF starting rent at 3% annual escalation becomes $30.76/SF in year seven.
+
+### Component 2: CAM Charges
+
+CAM is typically the most variable and most disputed component of occupancy cost. It includes everything from janitorial to management fees to parking lot maintenance.
+
+For occupancy cost modeling, use three inputs:
+- Prior year actual CAM (from landlord's reconciliation statement)
+- Current year estimate
+- Projected growth rate based on controllable vs. non-controllable components
+
+Don't use a single blended growth rate. Controllable CAM (subject to cap) grows at a different rate than non-controllable CAM (taxes, insurance). Separating them gives you a more accurate model.
+
+See [what is included in CAM expenses](/resources/what-is-included-in-cam-expenses) for the full breakdown of what goes into the CAM pool.
+
+### Component 3: Property Taxes (Pro-Rata Share)
+
+Property taxes vary by jurisdiction and are driven by assessed value and millage rate. They're genuinely non-controllable. The landlord can't reduce them without appealing the assessment, and appeals take time.
+
+Request the current tax bill and calculate your pro-rata share directly. If the property was recently acquired or reappraised, note that the assessment may change significantly in the near term. See [state-by-state CAM disclosure](/resources/commercial-tenant-cam-disclosure-by-state) for jurisdiction-specific rules on tax recovery.
+
+### Component 4: Property Insurance
+
+The landlord's property insurance premium, allocated pro-rata. Typically the smallest of the four components in absolute terms, but can spike in markets with elevated catastrophic weather risk.
+
+### Component 5: Tenant-Paid Utilities (If Not in CAM)
+
+In some leases, tenants pay their own separately metered utilities in addition to the common area utility component in CAM. If your lease has a direct utility obligation, include it in the occupancy cost model.
+
+### Component 6: Amortized Tenant Improvement Costs
+
+If the landlord's TI allowance doesn't cover your full build-out, you're funding the gap. Amortize your net tenant improvement cost over the lease term and include the annual charge in your occupancy cost model.
+
+**Example:**
+- Gross fit-out cost: $180,000
+- TI allowance: $75,000
+- Net tenant cost: $105,000
+- Lease term: 7 years
+- Annual amortized occupancy cost: $105,000 ÷ 7 = $15,000/year
+- Per SF (5,000 SF): $3.00/SF/year
+
+This $3.00/SF amortized improvement cost is real occupancy cost. Excluding it from the model understates your true burden.
+
+## Building the Full Occupancy Cost Model
+
+Here's a complete model for a 4,000 SF retail tenant in a community center:
+
+**Year 1 baseline:**
+
+| Component | Per SF | Annual |
+|-----------|--------|--------|
+| Base rent | $28.00 | $112,000 |
+| CAM (controllable) | $6.80 | $27,200 |
+| CAM (non-controllable) | $3.40 | $13,600 |
+| Property taxes | $5.20 | $20,800 |
+| Property insurance | $0.90 | $3,600 |
+| Amortized TI | $2.50 | $10,000 |
+| **Total Year 1** | **$46.80** | **$187,200** |
+
+**7-Year projection (growth rates: base rent 3%, controllable CAM capped 4%, non-controllable CAM 3.5%, taxes 4.5%, insurance 5%, amortized TI flat):**
+
+| Year | Base Rent | CAM-C | CAM-NC | Taxes | Insurance | TI Amort | Total/SF | Annual |
+|------|----------|-------|--------|-------|-----------|----------|---------|--------|
+| 1 | $28.00 | $6.80 | $3.40 | $5.20 | $0.90 | $2.50 | $46.80 | $187,200 |
+| 2 | $28.84 | $7.07 | $3.52 | $5.43 | $0.95 | $2.50 | $48.31 | $193,240 |
+| 3 | $29.71 | $7.35 | $3.64 | $5.68 | $1.00 | $2.50 | $49.88 | $199,520 |
+| 4 | $30.60 | $7.64 | $3.77 | $5.93 | $1.05 | $2.50 | $51.49 | $205,960 |
+| 5 | $31.52 | $7.95 | $3.90 | $6.20 | $1.10 | $2.50 | $53.17 | $212,680 |
+| 6 | $32.47 | $8.27 | $4.04 | $6.48 | $1.16 | $2.50 | $54.92 | $219,680 |
+| 7 | $33.44 | $8.60 | $4.18 | $6.77 | $1.22 | $2.50 | $56.71 | $226,840 |
+| **7-Yr Total** | | | | | | | | **$1,445,120** |
+
+Over 7 years, this tenant pays $1.445 million in total occupancy cost. Base rent accounts for $858,000 (59% of the total). The remaining $587,000 is operating expense pass-throughs and amortized fit-out. That's real money flowing out in addition to the rent line.
+
+## Occupancy Cost Ratio: The Benchmark That Matters for Retailers
+
+For retail tenants, occupancy cost as a percentage of gross sales is the operational benchmark, not rent per SF. The ratio varies by concept:
+
+| Retail Category | Target Occupancy Cost Ratio |
+|----------------|-----------------------------|
+| Grocery / supermarket | 1–3% |
+| Full-service restaurant | 6–10% |
+| Quick-service restaurant | 8–12% |
+| Specialty apparel / boutique | 12–15% |
+| Fitness / gym | 10–16% |
+| Services (nail, beauty, pet) | 10–14% |
+
+If your occupancy cost ratio is above target, the location is financially stressed regardless of how much you like the traffic. A restaurant paying $156,000 in total occupancy costs on $1.1 million in annual gross sales is at 14.2%. That's workable if everything else runs lean, but precarious if food costs or labor costs spike.
+
+Model your occupancy cost ratio for each year of the lease. If rising costs push you above your target ratio in years four through seven, you'll know before signing that you need a stronger CAM cap or a rent concession.
+
+## Sensitivity Analysis: Three Scenarios
+
+Run three cost scenarios before committing:
+
+**Base case:** Your best estimates for all growth rates, using actual historical data where available.
+
+**Downside:** CAM grows at 150% of your base estimate; taxes increase at 5% annually; insurance increases 8% annually. This scenario tests what you pay if everything trends unfavorably.
+
+**Upside:** CAM grows at 50% of base estimate (cap provisions constrain growth); taxes flat (assessment frozen); insurance flat. This scenario shows best-case outcome.
+
+**Scenario comparison for our example (4,000 SF, 7-year):**
+
+| Scenario | 7-Year Total | vs. Base Case |
+|----------|-------------|---------------|
+| Upside | $1,312,400 | -$132,720 |
+| Base case | $1,445,120 | - |
+| Downside | $1,601,900 | +$156,780 |
+
+The spread between downside and upside is $289,480 over 7 years. That's the financial risk embedded in uncertain operating expenses. Leases with good CAM caps narrow this spread significantly.
+
+Now run the same analysis for the alternative property. If Building B has a wider downside/upside spread due to uncapped CAM and historically volatile expense reconciliations, that risk premium belongs in your comparison.
+
+## Comparing Locations on NPV of Total Occupancy Cost
+
+Net present value normalizes the timing of future cash flows. A $50,000 payment in year seven is worth less than $50,000 today.
+
+**NPV calculation:**
+- Discount rate: Your cost of capital (or hurdle rate for CRE decisions), typically 8–12%
+- Cash flows: Annual occupancy cost for each year
+- NPV: Sum of present values of all annual cash flows
+
+**Location comparison:**
+
+| Location | 7-Year Total | NPV at 10% | TI Allowance | Net NPV |
+|----------|-------------|-----------|-------------|---------|
+| Location A | $1,445,120 | $1,089,600 | $120,000 | $969,600 |
+| Location B | $1,398,000 | $1,055,200 | $80,000 | $975,200 |
+
+Location B has a lower total nominal cost but a worse net NPV once TI allowances are netted. That's before accounting for Location B's uncapped CAM, which creates higher downside risk in the sensitivity analysis.
+
+Location A is the better financial decision, even though the nominal 7-year cost is higher. The TI allowance and lower risk exposure make the difference.
+
+## The Gross-Up Impact on Your Occupancy Cost Model
+
+If the building is partially vacant, [gross-up provisions](/resources/gross-up-clause-commercial-lease) in the lease artificially inflate your CAM in the near term. Model this explicitly.
+
+If actual occupancy is 75% and the gross-up clause applies at 95%, your variable CAM is inflated by a factor of 1.267. On $35,000 in variable CAM at your pro-rata share, that's an additional $9,333 per year ($65,000 over 7 years) from a clause that many tenants overlook during lease review.
+
+See [gross-up clause lease explained](/blog/gross-up-clause-lease-explained) for the full calculation.
+
+## Building the Model vs. Using Tools
+
+You can build this in a spreadsheet with four component columns, growth rates, a 7-year projection, and an NPV formula. It takes about an hour to set up correctly.
+
+Alternatively, use purpose-built tools:
+- [Commercial lease cost calculator](/blog/commercial-lease-cost-calculator) for the full occupancy cost model
+- [CAM estimate forecaster](/tools/cam-estimate-forecaster) to project CAM specifically
+- [CAM cap calculator](/tools/cam-cap-calculator) to verify cap compliance year by year
+- [Pro-rata calculator](/tools/pro-rata-calculator) to confirm your share of the expense pool
+
+The tools don't replace the analysis. They speed up the calculation so you can run more scenarios in the time you have.
+
+## When to Commission a Professional Occupancy Cost Analysis
+
+For leases over $500,000 in total value or over 5,000 SF, a professional review of the occupancy cost model is worth the investment. A tenant rep broker or CRE finance consultant can:
+
+- Pull historical CAM data for the specific building from other tenants or industry sources
+- Review the landlord's expense history for patterns
+- Model the full occupancy cost with building-specific inputs
+- Identify lease provisions that create outsized risk
+
+The cost of a professional review (typically $2,000–$5,000) is trivial against a $1+ million lease obligation.
+
+For tenants approaching renewal, see [negotiating lease renewal CAM strategy](/blog/negotiating-lease-renewal-cam-strategy) and [lease renewal CAM negotiation](/blog/lease-renewal-cam-negotiation) for how occupancy cost analysis informs the renewal conversation.
+
+---
+
+*CapVeri gives landlords and property managers accurate CAM reconciliation. Clean, documented statements mean fewer disputes and faster resolutions for everyone. [See how it works](/pricing).*
+
+## Sources
+
+1. [BDO - Lease Audit Spotlight: Gross-Up Adjustments](https://www.bdo.com/insights/advisory/2020-lease-audit-spotlight-gain-clarity-on-gross-up-adjustments)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

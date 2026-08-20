@@ -1,0 +1,48 @@
+{
+  "lease_terms": {
+    "base_year": null,
+    "base_year_amount": null,
+    "gross_up_base_year": false,
+    "pro_rata_share": 0.6354,
+    "cap_type": "non_cumulative",
+    "cap_rate": 0.05,
+    "admin_fee_percent": 0.00,
+    "management_fee_percentage": 0.15,
+    "excluded_pools": [],
+    "accounting_basis": null
+  },
+  "premises": {
+    "rentable_sqft": 26905,
+    "usable_sqft": null,
+    "load_factor": null
+  },
+  "rent": {
+    "monthly_base_rent": 33631.25,
+    "annual_base_rent": 403575.00,
+    "psf_annual": 15.00
+  },
+  "dates": {
+    "execution_date": "2019-08-05",
+    "expiration_date": "2029-08-31"
+  },
+  "extraction_confidence": {
+    "base_year": "high",
+    "pro_rata_share": "high",
+    "cap_type": "high",
+    "cap_rate": "high",
+    "admin_fee_percent": "high",
+    "management_fee_percentage": "high",
+    "excluded_pools": "medium",
+    "accounting_basis": "low"
+  },
+  "notes": {
+    "pro_rata_share": "Initially 63.54% (§1.1(l)). First Amendment changes to 100% after Expansion Space Commencement Date. LLM may extract either value.",
+    "cap_type": "5% year-over-year cap on controllable expenses only (§4.3): 'Common Area Expenses (excluding non-controllable items such as utilities & security) in any year shall not be increased by more than five percent (5%) over the prior year's Common Area Expenses'. Non-controllable items are uncapped.",
+    "admin_fee_percent": "No add-on admin fee after the CAM subtotal is stated.",
+    "management_fee_percentage": "§23.5: 'the management fees which Landlord pays for the management of the Center in an amount not to exceed fifteen percent (15%) of the total of all other Common Area Expenses.' This is a cap on a management-fee component of Common Area Expenses, not a separate admin surcharge.",
+    "excluded_pools": "Capital is NOT excluded — it is included but amortized per GAAP (§23.5): 'to the extent that any item comprising a portion of Common Area Expenses is a capital expenditure, then such item shall be amortized over its useful life in accordance with generally accepted accounting principles.' LLM may reasonably extract [] or ['capital'].",
+    "accounting_basis": "Not explicitly stated in lease. GAAP reference in §23.5 is for capital amortization method only, not cash vs accrual basis.",
+    "premises": "Original premises: 26,905 sqft (§1.1(g)). After First Amendment expansion: 42,342 sqft (all leasable space). Note: GL/rent-roll CSV fixtures use synthetic values for parser format testing.",
+    "rent": "Original premises: $15.00 psf/yr (months 1-60), $16.00 psf/yr (months 61-120) per §1.1(j). Post-expansion: same rates applied to 42,342 sqft."
+  }
+}

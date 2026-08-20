@@ -1,0 +1,170 @@
+---
+title: "Base Year and Expense Stop CAM Leases: True-Up Guide for Landlords"
+description: "How base year and expense stop leases work, why base year normalization matters, and how to calculate and reconcile correctly."
+datePublished: "2026-03-21"
+dateModified: "2026-03-21"
+author: "Angel Campa"
+buttonText: "Read Guide"
+order: 96
+faq:
+  - q: "What is the difference between a base year and an expense stop?"
+    a: "A base year lease sets the tenant's expense participation threshold as the actual operating expenses incurred during a specific calendar or fiscal year - the base year. Each subsequent year, the tenant pays their pro-rata share of expenses above that base year figure. An expense stop lease sets a fixed per-square-foot dollar amount as the threshold, regardless of what expenses actually were in any given year. The economic effect is similar - the tenant pays increases above the threshold - but the base year amount floats with actual spending in the base year, while the expense stop is a hard-coded number. Expense stops are more predictable for landlords but less protective when actual base year expenses were higher than the negotiated stop."
+  - q: "What happens if the building was partially occupied during the base year?"
+    a: "If the building was partially occupied during the base year, actual expenses will understate what expenses would have been at a normal occupancy level. This creates a systematically low base year that generates inflated tenant excess charges in future years - tenants pay more than they would have under a properly normalized base. The standard remedy is base year normalization: grossing up actual base year expenses to reflect what they would have been at a stabilized occupancy level, typically 95%. The formula is: Normalized Base Year = Actual Base Year Expenses × (95% / Base Year Occupancy%). Without normalization, a building that was 70% occupied in the base year will generate phantom excess charges that tenants increasingly dispute as the lease matures."
+  - q: "Can a tenant audit the base year expenses?"
+    a: "In most commercial leases, audit rights extend to the reconciliation year expenses - but whether they extend to the base year itself depends on lease language. Many leases contain audit provisions limited to 'the lease year in question,' which tenants argue includes the base year if it affects the excess calculation. Landlords who did not normalize a low-occupancy base year are particularly vulnerable to base year audits, because the normalization failure is mathematically demonstrable from the building's historical occupancy records. Best practice is to document base year normalization methodology at lease execution and attach it to the lease as an exhibit."
+  - q: "How do you handle a base year reset on lease renewal?"
+    a: "When a lease renews with a new base year, the controller must establish the new base year amount as of the renewal effective date. This requires pulling actual operating expenses for the new base year period (typically the calendar year the renewal takes effect), applying normalization if the building was below stabilized occupancy, and updating every downstream calculation - tenant excess charge formula, year-end reconciliation template, and ERP system configuration. Failure to update the base year in the property management system is one of the most common causes of systematic overbilling in the year immediately following a lease renewal. Always generate a test reconciliation against the new base year figure before the renewal effective date."
+---
+
+_Updated: March 2026 · For property controllers and lease administrators_
+
+<Alert type="info" title="What this is">
+A base year lease is a commercial lease where the tenant pays their pro-rata share of increases in operating expenses above the expenses incurred during a defined base year period. This guide covers the mechanics of base year leases, expense stop structures, the critical importance of base year normalization, and how to avoid the overbilling that results from failing to gross up a low-occupancy base year.
+</Alert>
+
+## The Base Year Lease: Core Definition
+
+**A base year lease is a commercial lease where the tenant pays their pro-rata share of increases in operating expenses above the expenses incurred during a defined base year period.** The landlord absorbs all expenses up to the base year level and passes through only the excess.
+
+The fundamental excess charge formula is:
+
+```
+Tenant Excess Charge = (Actual Expenses - Base Year Expenses) × Tenant Pro-Rata Share
+```
+
+**Variables:**
+- `Tenant Excess Charge` - the dollar amount owed by the tenant in the reconciliation year above base
+- `Actual Expenses` - total operating expenses for the property in the current lease year
+- `Base Year Expenses` - total operating expenses for the property in the defined base year
+- `Tenant Pro-Rata Share` - the tenant's rentable square footage divided by the total rentable square footage in the denominator pool
+
+**Boundary condition:** The base year figure is fixed for the life of the lease unless the lease contains a renewal base year reset provision. A lease signed in 2020 with a 2020 base year uses 2020 actual expenses as the threshold indefinitely, even if the lease runs through 2030.
+
+---
+
+## Why Base Year Normalization Matters
+
+### The Normalization Problem
+
+If the base year occurred during a period when the building was partially occupied, actual operating expenses were artificially low. Vacant spaces require less janitorial service, lower utility consumption, and reduced maintenance activity. When occupancy increases in subsequent years, operating expenses increase. Not because costs are rising, but because the building is serving more tenants.
+
+A base year set during low-occupancy conditions creates a **systematically understated threshold**. Every dollar of expense increase attributable to higher occupancy gets passed to tenants as an "excess" charge, even though that expense increase is entirely predictable and was baked into the building's stabilization projections at the time of lease negotiation.
+
+Industry research indicates that base year normalization errors are among the top three most common sources of CAM overbilling disputes. A building at 70% occupancy in its base year can generate $18,000 or more in phantom excess charges per tenant over a 3-year lease horizon, without any actual cost escalation beyond what was anticipated.
+
+### The Normalization Formula
+
+The standard remedy is to gross up base year expenses to reflect what they would have been at a stabilized occupancy level:
+
+```
+Normalized Base Year = Actual Base Year Expenses × (95% / Base Year Occupancy%)
+```
+
+**Variables:**
+- `Normalized Base Year` - the adjusted base year expense figure used in the excess charge formula
+- `Actual Base Year Expenses` - the total operating expenses actually incurred during the base year
+- `95%` - the industry-standard stabilized occupancy level used for normalization (some leases specify a different percentage; always check)
+- `Base Year Occupancy%` - the actual average occupancy during the base year period
+
+**Boundary condition:** Normalization applies to **variable expenses only** (costs that scale with occupancy: janitorial, utilities, some maintenance categories). Fixed costs like property taxes, base insurance premiums, and fixed-fee contracts are not grossed up because they do not change with occupancy. Misapplying the gross-up formula to fixed expenses overstates the normalized base and under-charges tenants.
+
+---
+
+## Comparison: Base Year vs. Expense Stop vs. NNN
+
+| Feature | Base Year Lease | Expense Stop | Triple Net (NNN) |
+|---------|----------------|--------------|-----------------|
+| Threshold type | Actual expenses in a defined year | Fixed per-SF dollar amount | No threshold (tenant pays all expenses) |
+| Landlord exposure | Expenses up to base year level | Expenses up to the stop amount | None (operating risk fully on tenant) |
+| Tenant exposure | Pro-rata share of increases above base | Pro-rata share of expenses above stop | All operating expenses |
+| Normalization needed? | Yes (critical if base year was low-occupancy) | No (stop is a fixed number) | N/A |
+| Predictability for landlord | Moderate (base established, but increases variable) | High (stop is a known fixed number) | High (all costs passed to tenant) |
+| Predictability for tenant | Moderate | High | Low (tenant bears all expense risk) |
+| Common property type | Office, multi-tenant office | Office (older leases), retail | Retail, industrial, single-tenant |
+| Renewal complexity | High (base year may reset) | Low (renegotiate stop amount) | Low (adjust expense estimates) |
+
+---
+
+## Base Year Reset on Lease Renewal
+
+When a lease renews and the renewal agreement establishes a new base year, the following steps are required before the renewal effective date:
+
+<Steps>
+  <Step title="Pull actual expenses for the new base year period">
+    Obtain the GL detail for all operating expense accounts for the calendar or fiscal year designated as the new base year. Confirm that all accruals and year-end adjustments have been finalized before locking the base year figure.
+  </Step>
+  <Step title="Assess occupancy during the new base year">
+    If average building occupancy during the new base year was below the normalization threshold specified in the lease (typically 95%), apply the normalization formula to variable expenses before setting the base year amount.
+  </Step>
+  <Step title="Update the ERP system and lease abstract">
+    Enter the new base year figure in the property management system (Yardi, MRI, or equivalent). Update the lease abstract to reflect the new base year and effective date. Generate a test reconciliation for the first full year under the new base to verify the calculation before the first statement issues.
+  </Step>
+  <Step title="Confirm the expense pool definition carries forward">
+    Verify that the renewal agreement preserves the same expense inclusion/exclusion definitions as the original lease. Renewals that expand or contract the expense pool relative to the original lease require corresponding adjustments to the base year figure to maintain comparability.
+  </Step>
+</Steps>
+
+---
+
+## Worked Example: Low-Occupancy Base Year ($18,000+ Overbilling Over 3 Years)
+
+**Property:** 50,000 RSF office building, single tenant occupying 10,000 RSF (20% pro-rata share)
+
+**Scenario:** Base year was 2023. The building was 70% occupied during 2023 due to delayed lease-up. Actual base year operating expenses: $400,000. The landlord did not normalize the base year.
+
+**Normalized base year (what it should have been):**
+
+```
+$400,000 × (95% / 70%) = $400,000 × 1.357 = $542,857
+```
+
+The proper base year for this tenant's excess charge calculation should have been $542,857, not $400,000.
+
+**Overbilling calculation over 3 years (2024–2026):**
+
+Assume actual expenses grow to $520,000 in 2024, $535,000 in 2025, $550,000 in 2026.
+
+| Year | Actual Expenses | Unnormalized Base | Excess (Unnormalized) | Normalized Base | Excess (Normalized) | Overbilling |
+|------|----------------|-------------------|----------------------|----------------|---------------------|-------------|
+| 2024 | $520,000 | $400,000 | $120,000 | $542,857 | $0 (no excess) | $24,000 |
+| 2025 | $535,000 | $400,000 | $135,000 | $542,857 | $0 (no excess) | $27,000 |
+| 2026 | $550,000 | $400,000 | $150,000 | $542,857 | $7,143 | $28,571 |
+
+_Tenant's 20% pro-rata share applied to each excess figure._
+
+| Year | Tenant Billed (Unnormalized) | Tenant Should Owe (Normalized) | Overbilling |
+|------|------------------------------|-------------------------------|-------------|
+| 2024 | $24,000 | $0 | **$24,000** |
+| 2025 | $27,000 | $0 | **$27,000** |
+| 2026 | $30,000 | $1,429 | **$28,571** |
+| **Total** | **$81,000** | **$1,429** | **$79,571** |
+
+> In this example the overbilling exceeds $79,000 over 3 years, driven entirely by the failure to normalize the base year. A tenant who retains an auditor will identify this error from building occupancy records alone.
+
+---
+
+<FAQSection items={[
+  { q: "What is the difference between a base year and an expense stop?", a: "A base year lease sets the tenant's expense participation threshold as the actual operating expenses incurred during a specific calendar or fiscal year - the base year. Each subsequent year, the tenant pays their pro-rata share of expenses above that base year figure. An expense stop lease sets a fixed per-square-foot dollar amount as the threshold, regardless of what expenses actually were in any given year. The economic effect is similar - the tenant pays increases above the threshold - but the base year amount floats with actual spending in the base year, while the expense stop is a hard-coded number. Expense stops are more predictable for landlords but less protective when actual base year expenses were higher than the negotiated stop." },
+  { q: "What happens if the building was partially occupied during the base year?", a: "If the building was partially occupied during the base year, actual expenses will understate what expenses would have been at a normal occupancy level. This creates a systematically low base year that generates inflated tenant excess charges in future years - tenants pay more than they would have under a properly normalized base. The standard remedy is base year normalization: grossing up actual base year expenses to reflect what they would have been at a stabilized occupancy level, typically 95%. The formula is: Normalized Base Year = Actual Base Year Expenses × (95% / Base Year Occupancy%). Without normalization, a building that was 70% occupied in the base year will generate phantom excess charges that tenants increasingly dispute as the lease matures." },
+  { q: "Can a tenant audit the base year expenses?", a: "In most commercial leases, audit rights extend to the reconciliation year expenses - but whether they extend to the base year itself depends on lease language. Many leases contain audit provisions limited to 'the lease year in question,' which tenants argue includes the base year if it affects the excess calculation. Landlords who did not normalize a low-occupancy base year are particularly vulnerable to base year audits, because the normalization failure is mathematically demonstrable from the building's historical occupancy records. Best practice is to document base year normalization methodology at lease execution and attach it to the lease as an exhibit." },
+  { q: "How do you handle a base year reset on lease renewal?", a: "When a lease renews with a new base year, the controller must establish the new base year amount as of the renewal effective date. This requires pulling actual operating expenses for the new base year period (typically the calendar year the renewal takes effect), applying normalization if the building was below stabilized occupancy, and updating every downstream calculation - tenant excess charge formula, year-end reconciliation template, and ERP system configuration. Failure to update the base year in the property management system is one of the most common causes of systematic overbilling in the year immediately following a lease renewal. Always generate a test reconciliation against the new base year figure before the renewal effective date." }
+]} />
+
+<CTABox
+  title="Automate Base Year Normalization and True-Up Calculations"
+  description="Upload your Yardi or MRI export and CapVeri applies normalization formulas per lease, then flags base year configuration errors before they become tenant disputes."
+  utmContent="u_cta_base_year_expense_stop"
+  buttonText="Try the Base Year Escalation Tool"
+  href="/tools/base-year-escalation"
+/>
+
+Related: [Expense Stop vs. Base Year Deep Dive](/resources/expense-stop-vs-base-year) · [CAM Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide) · [Controllable vs. Non-Controllable Expenses](/resources/controllable-vs-non-controllable-expenses)
+
+## Sources
+
+1. BOMA International, _Experience Exchange Report_, 2024 - occupancy normalization benchmarks
+2. IREM, _Managing Income-Producing Properties_, 7th ed. - base year lease structure analysis
+3. Angel Campa, Founder of CapVeri - operational analysis from processing commercial lease portfolios with base year normalization errors
+4. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+5. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

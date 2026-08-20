@@ -1,0 +1,42 @@
+{
+  "lease_terms": {
+    "base_year": null,
+    "base_year_amount": null,
+    "gross_up_base_year": false,
+    "pro_rata_share": null,
+    "cap_type": "none",
+    "cap_rate": null,
+    "admin_fee_percent": 0.00,
+    "excluded_pools": ["capital", "other"],
+    "accounting_basis": "cash"
+  },
+  "premises": {
+    "rentable_sqft": 2450,
+    "usable_sqft": 2450,
+    "load_factor": 1.0
+  },
+  "rent": {
+    "monthly_base_rent": 4287.50,
+    "annual_base_rent": 51450.00,
+    "psf_annual": 21.00
+  },
+  "dates": {
+    "commencement_date": "2024-01-01",
+    "expiration_date": "2028-12-31"
+  },
+  "extraction_confidence": {
+    "base_year": "high",
+    "pro_rata_share": "low",
+    "cap_type": "high",
+    "cap_rate": "high",
+    "admin_fee_percent": "high",
+    "excluded_pools": "high",
+    "accounting_basis": "medium"
+  },
+  "notes": {
+    "pro_rata_share": "Not explicitly stated. The lease says 'Tenant's proportional share' and gives a CAM base rate of $7.350/sqft/year plus $1000/month, but it does not state a fixed percentage or denominator.",
+    "admin_fee_percent": "Explicitly excluded: 'shall not include...management fees' (line 215)",
+    "excluded_pools": "Extensive exclusion list: depreciation, capital expenses/improvements, moving/relocation costs, legal/collection costs, remodeling, roof/structural repairs, real estate commissions, management fees, executive salaries",
+    "accounting_basis": "Inferred from 'actual costs' language and small condo-association context"
+  }
+}

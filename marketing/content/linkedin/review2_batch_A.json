@@ -1,0 +1,307 @@
+{
+  "batch": "A2",
+  "posts_reviewed": 95,
+  "issues_found": 24,
+  "posts": [
+    {
+      "file": "2026-05-12-0800-war-stories-003.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 1 - Invented clients/testimonials",
+          "severity": "reject",
+          "excerpt": "Here is a scenario we see often: the error goes unnoticed for three years. The recovery ratio drops from 91% to 84%",
+          "fix": "Remove or replace the 'scenario we see often' framing. Either (a) label this explicitly as a modeled/illustrative scenario with no claim to real client experience, or (b) publish the story as a case study at a capveri.com/blog URL and set source_url to that post. The specific dollar figures ($82,000/yr gross-up overcharge, $247,000 total refunds) require a named 3rd-party source or illustrative label."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-12-1100-industry-news-006.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Property taxes are rising 8-15% in most major metros for 2026. Harris County (Houston) is up 10-14%. Chicago-area townships are seeing 12-18%",
+          "fix": "Cite named 3rd-party sources for each regional tax increase figure in the post body (e.g., county assessor data, JLL, CBRE, MSCI, or a named publication). Source_url points to a CapVeri blog, which is not sufficient per the truth policy. Alternatively, label the ranges as estimates with explicit source attribution inline."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-12-1200-cam-math-007.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Seven CAM reconciliation errors cause the majority of the $25,000 per-property leakage we see across commercial portfolios",
+          "fix": "The '$25,000 per-property leakage' figure uses 'we see' language implying client data without attribution. Either (a) trace this figure to a named 3rd-party benchmark (BOMA EER, IREM) cited in the post body, or (b) label as 'illustrative modeled estimate' and remove the 'we see' phrasing. Same fix needed in post 001 where the same figure appears."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-12-1400-war-stories-009.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "40% of reconciliations have material billing errors, according to industry data. 28% of tenants find discrepancies on their own, without hiring an auditor.",
+          "fix": "Both figures need named sources cited in the post body. The 28% figure is attributed elsewhere (post 046) to 'JLL 2023 research via PredictAP' - add that attribution here. The 40% figure needs a named source (e.g., tenant audit firm published data or BOMA). 'Industry data' is not an acceptable attribution."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-12-1600-anti-integration-011.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "the source data says this transition compresses reconciliation from eight weeks to three. with the same staff, catching errors before statements go out instead of after.",
+          "fix": "Remove or replace 'the source data says.' Either cite the specific named source (publication, study author, or organization) inline in the post, or label this as a modeled estimate. 'Source data' is not an acceptable attribution under the truth policy."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-13-0700-erp-workarounds-017.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Style Rule 9 - text-short over 300 words",
+          "severity": "revise",
+          "excerpt": "Six fields in Yardi's recovery pool setup drive 90% of CAM calculation errors. Most controllers have inherited their Yardi setup...",
+          "fix": "Post body is 306 words. Format is text-short (max 300 words). Trim by at least 7 words - the description of Field 2 (Occupancy Type) or Field 6 (Cap Configuration) can be condensed without losing the diagnostic value."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-13-0900-anti-integration-019.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Purpose-built CAM software for the same portfolio typically costs $5,000-$25,000 per year.",
+          "fix": "The $5,000-$25,000/year cost range for CAM software has no named 3rd-party source and is not labeled illustrative. The Panko/EuSpRIG citation later in the post is correctly attributed. Add a named source for the software cost range (e.g., G2 market data, vendor pricing pages cited by name) or label as 'approximate market range as of [year]' with a source."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-13-1600-anti-integration-026.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "65% of property controllers still use Excel for at least part of their CAM reconciliation.",
+          "fix": "Cite the named source for the 65% figure in the post body. Source_url points to a CapVeri blog, which does not constitute a named 3rd-party citation. If this stat originated from a survey (IREM, BOMA, Deloitte, etc.), name it inline. If it is a CapVeri estimate, label it as such."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-13-1900-product-029.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Style Rule 4 - Generic hook",
+          "severity": "revise",
+          "excerpt": "Before you sign up for anything, it's reasonable to want to know what the output actually looks like.",
+          "fix": "The opening line contains no number, dollar amount, building type, named system (Yardi/MRI/RealPage), named error type, or named regulation. Replace with a specific hook - for example: 'A CapVeri reconciliation report shows tenant-level findings from a $1.8M expense pool: which gross-up factors were wrong, which exclusions were missed, and the dollar amount of each.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-14-0800-war-stories-033.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Tenant audit firms have grown 40% since 2020. That number is not random.",
+          "fix": "Cite the named source for the 40% growth figure in the post body. The figure appears without any attribution (no named firm, publication, or organization). Add a source such as BOMA, IREM, or a named industry publication, or label as an estimate and source it."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-14-0900-anti-integration-034.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "60-80% finding rate reported in the industry...average tenant audit recovery runs $0.50-$2.00 per SF",
+          "fix": "Both figures need named sources cited in the post body. 'Reported in the industry' is not sufficient attribution. The $0.50-$2.00/SF recovery range needs a named source (e.g., a specific tenant audit firm's published data, BOMA, IREM, or JLL). Add named citations inline or label ranges as modeled estimates."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-14-1300-erp-workarounds-038.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Style Rule 9 - text-short over 300 words",
+          "severity": "revise",
+          "excerpt": "MRI's recovery billing module gives you more control over gross-up than most ERPs. Which means there are more ways to configure it wrong.",
+          "fix": "Post body is 310 words. Format is text-short (max 300 words). Trim by at least 11 words - the 'Anchor tenant denominator treatment' section or the final validation checklist paragraph can be condensed."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-14-1400-war-stories-039.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "The research on CAM audit outcomes shows settlements clustering between 50% and 75% of the initial claim.",
+          "fix": "Cite the specific named research source for this settlement range in the post body. 'The research' is not an acceptable attribution. Add the publication name, author, or organization (e.g., a specific tenant audit firm's published settlement data, or a named academic or industry study)."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-14-1600-anti-integration-041.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "At eight tenant audit requests per year, with 65% finding errors averaging $35,000, and settlements at 60% of findings, the current annual audit cost is $109,200.",
+          "fix": "These figures (8 audit requests/yr, 65% finding rate, $35K average finding, 60% settlement rate, $109,200 total) are presented as specific facts about a 20-property portfolio. None are attributed to a named source. Either label the entire paragraph as a 'modeled illustrative example' or cite named 3rd-party sources for each input assumption. The derived ROI figures (57:1 to 221:1) are similarly unattributed."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-15-0900-anti-integration-049.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Style Rule 4 - Generic hook",
+          "severity": "revise",
+          "excerpt": "Most property management teams assume slow CAM reconciliation means they need more staff or more hours.",
+          "fix": "The opening line contains no number, dollar amount, building type, named system, named error type, or named regulation. Replace with a specific hook that anchors the problem - for example: 'A 15-property portfolio running CAM reconciliation in Excel typically spends 65-80% of its total cycle time on waiting, re-checking, and rework - not on actual calculation.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-15-1200-cam-math-052.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Industry data suggests 3-8% of CAM pools contain misclassified transactions. On a $2 million base, that's $60,000 to $160,000 in potential dispute exposure.",
+          "fix": "Cite the named source for the 3-8% figure in the post body. 'Industry data' is not an acceptable attribution. Add a named citation (e.g., BOMA, IREM, a specific tenant audit firm, or PredictAP) or label as a modeled estimate."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-15-1900-product-059.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Style Rule 4 - Generic hook",
+          "severity": "revise",
+          "excerpt": "What CapVeri actually does, in plain terms.",
+          "fix": "The opening line has zero specifics. Replace with a hook that names the problem and context - for example: 'A Yardi or MRI GL export, one CSV upload, and CapVeri runs an independent CAM reconciliation against your lease terms - surfacing every gross-up, cap, or exclusion error before statements go out.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-16-0700-cam-math-065.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Insurance premiums increased 15-25% in 2024. Most CAM estimates didn't budget for it.",
+          "fix": "Cite a named 3rd-party source for the 15-25% insurance premium increase figure in the post body. Possible sources: Marsh, Lockton, Willis Towers Watson, or a named commercial insurance market report. Source_url points to a CapVeri blog, which is not sufficient."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-16-1130-anti-integration-064.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Style Rule 4 - Generic hook",
+          "severity": "revise",
+          "excerpt": "Late CAM reconciliation statements carry costs that most property management teams don't fully price.",
+          "fix": "The opening line contains no number, dollar amount, building type, named system, named error type, or named regulation. Replace with a specific hook - for example: 'A 20-building portfolio delivering CAM statements 90 days late is sitting on $300,000 in delayed receivables - and extending every tenant's audit window by three months.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-16-1900-anti-integration-069.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Recovered unmapped expenses (3% of pool): $360,000/year...Avoided overbilling liability: $150,000/year...Total estimated annual value: $573,250",
+          "fix": "The ROI table presents specific annual dollar values for a 30-building portfolio ($360K, $150K, $38,250, $25K) without labeling them as modeled estimates and without named source attribution for the input percentages. Add 'Modeled illustrative estimate - actual results vary by portfolio' below the table, or cite named sources for each input assumption (e.g., BOMA EER for recovery gap %, tenant audit firm data for overbilling liability)."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-17-0830-war-stories-072.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Style Rule 4 - Generic hook",
+          "severity": "revise",
+          "excerpt": "Institutional investors reviewing a portfolio for acquisition look at recovery ratios before they look at almost anything else.",
+          "fix": "The opening line contains no number, dollar amount, building type, named system, named error type, or named regulation. Replace with a specific hook - for example: 'A 5-percentage-point recovery gap on a $3M expense base is $150,000 in annual underrecovery - $2.5M in suppressed asset value at a 6% cap rate. That is a price negotiation, not a rounding error.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-17-1130-anti-integration-074.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Property Accountant (0-3 yrs): transaction processing, GL coding, basic reconciliation support. $55K-$75K...VP Property Financial Operations / CFO (12+ yrs)....$150K-$250K+",
+          "fix": "Salary ranges across the career ladder ($55K-$75K, $70K-$90K, $85K-$120K, $110K-$160K, $150K-$250K+) have no named source cited in the post body. Add a named compensation data source (e.g., BLS Occupational Employment Statistics, IREM Compensation Survey, BOMA salary data, or Robert Half Real Estate salary guide) or label ranges as approximate market estimates with a source."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-18-0800-war-stories-083.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "appears in more than 40% of audited reconciliations and carries a dollar impact of $20,000 to $150,000 per occurrence",
+          "fix": "This specific statistic (40%+ of audited reconciliations, $20K-$150K per occurrence) is sourced only to a CapVeri blog post (capveri.com/blog/top-15-cam-billing-errors). A CapVeri blog is not a named 3rd-party source. Either trace this to a named original source cited in the blog (and name it here), or label the figure as CapVeri's internal analysis based on [method/dataset]."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-18-1100-industry-news-086.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Truth Policy 2 - Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Phoenix added 95,000 residents. Nashville added 63,000. Austin added 48,000...property insurance increased 25-35% in 2025.",
+          "fix": "Specific population figures (95K, 63K, 48K) and the 25-35% Miami/Tampa insurance increase need named sources cited in the post body. Population data: cite U.S. Census Bureau or CBRE/JLL metro market reports by name. Insurance increase: cite Marsh, Lockton, AM Best, or a named commercial insurance market publication. Source_url to a CapVeri blog is not sufficient."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-18-2000-engagement-095.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Style Rule 4 - Generic hook",
+          "severity": "revise",
+          "excerpt": "Counterintuitive observation about tenant disputes: the tenants who never dispute anything are often not the ones you should feel best about.",
+          "fix": "The opening line contains no number, dollar amount, building type, named system, named error type, or named regulation. Replace or augment with specifics - for example: 'A tenant who quietly pays 5 years of CAM reconciliations, then hires an auditor in Year 6, is reviewing all five cycles simultaneously - every gross-up factor, every exclusion, every cap misapplication, compounded.'"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2102 @@
+[
+  {
+    "id": "linkedin-001",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-15T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The export stack comes before the workbook.</p><p>What to check comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports.</p><p>Match property, period, tenant, and charge codes before math starts.</p><p>Save the export list with the packet.</p><p>Close note: export, lease term, math, support.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-15-1000-export-stack-001.md"
+  },
+  {
+    "id": "x-001",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-15T14:00:00.000Z",
+    "type": "schedule",
+    "content": "The export stack comes before the workbook. A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports. Keep the math traceable.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-15-0900-export-stack-001.md"
+  },
+  {
+    "id": "linkedin-002",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-15T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Yardi CAM review starts with the file set.</p><p>A good CAM packet answers this before anyone asks:</p><p>Use detail-level output for the same property and period.</p><p>Recovery Analysis, GL Analytics, and Rent Roll with Lease Charges are core Yardi exports.</p><p>A summary report can hide the row that caused the charge.</p><p>Keep the source beside the charge.</p><p>The fix is boring. Save the support near the math.</p><p>Tie the source files before reviewing tenant shares.</p><p>#yardi #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-15-1200-yardi-exports-002.md"
+  },
+  {
+    "id": "x-002",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-15T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Reminder: A summary report can hide the row that caused the charge. Use detail-level output for the same property and period.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-15-1300-yardi-exports-002.md"
+  },
+  {
+    "id": "linkedin-003",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-16T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>MRI review needs the right period first.</p><p>This is a useful where it breaks question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Recovery Reconciliation, GL Transaction Detail, rent roll, and Tenant Billing History are safe MRI lanes.</p><p>Confirm entity, property, period, and tenant ID before export review.</p><p>One wrong period can make a clean statement look wrong.</p><p>Team note: make the next reviewer faster.</p><p>If the answer is no, the statement is early.</p><p>#mri #camreconciliation #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-15-1900-mri-period-003.md"
+  },
+  {
+    "id": "x-003",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-15T22:00:00.000Z",
+    "type": "schedule",
+    "content": "MRI review needs the right period first. Put the period check in the packet notes. Show the reviewer path.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-15-1700-mri-period-003.md"
+  },
+  {
+    "id": "linkedin-004",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-16T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Gross-up review starts with one split.</p><p>Why it matters: Variable expenses can be grossed up. Fixed costs need separate treatment.</p><p>Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor.</p><p>Grossing up fixed costs can overstate the recovery pool.</p><p>The packet should show the fixed and variable split.</p><p>Packet note: save the rule before the total.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #grossup #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-16-1000-variable-only-004.md"
+  },
+  {
+    "id": "x-004",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-16T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Reminder: Gross-up review starts with one split. Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor. Tie it before billing.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-16-0900-variable-only-004.md"
+  },
+  {
+    "id": "linkedin-005",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-16T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant share needs its denominator.</p><p>Where it breaks comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>Tenant RSF over the lease-defined denominator drives the CAM share.</p><p>Store lease denominator, building RSF, excluded area, component area, or usage support.</p><p>Keep the denominator source next to the charge.</p><p>Control note: prove the input before the output.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #prorata #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-16-1200-denominator-005.md"
+  },
+  {
+    "id": "x-005",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-16T18:00:00.000Z",
+    "type": "schedule",
+    "content": "A tenant share needs its denominator. Tenant RSF over the lease-defined denominator drives the CAM share. Store proof with the packet.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-16-1300-denominator-005.md"
+  },
+  {
+    "id": "linkedin-006",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-17T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A CAM cap is not just one percentage.</p><p>A good CAM packet answers this before anyone asks:</p><p>Read the cap base, cap rate, and controllable cost language.</p><p>Cumulative caps can bank unused capacity. Non-cumulative caps reset each year.</p><p>The wrong cap type can change several years of billing.</p><p>Owner note: show what changed since last run.</p><p>The fix is boring. Save the support near the math.</p><p>Write the cap rule before running the charge.</p><p>#camreconciliation #commercialrealestate #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-16-1900-cap-bank-006.md"
+  },
+  {
+    "id": "x-006",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-16T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Close rule: The wrong cap type can change several years of billing. Read the cap base, cap rate, and controllable cost language.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-16-1700-cap-bank-006.md"
+  },
+  {
+    "id": "linkedin-007",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-17T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Admin fees need a source row.</p><p>This is a useful where it breaks question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>The method, base, rate, cap interaction, and lease clause should be traceable.</p><p>Confirm whether the fee applies before or after exclusions.</p><p>A circular fee can make a clean pool look off.</p><p>File note: source, rule, amount, reviewer.</p><p>If the answer is no, the statement is early.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-17-1000-fee-base-007.md"
+  },
+  {
+    "id": "x-007",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-17T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Admin fees need a source row. Save the method with the calculation record. Save the source row.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-17-0900-fee-base-007.md"
+  },
+  {
+    "id": "linkedin-008",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-17T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM math has to run the same way twice.</p><p>How to close it: AI can help read documents. Deterministic rules should calculate dollars.</p><p>Humans verify extracted lease terms before they affect money.</p><p>A plausible answer is not enough for tenant billing.</p><p>Same inputs should produce the same answer.</p><p>Close note: export, lease term, math, support.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #crefinance #proptech</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-17-1200-same-inputs-008.md"
+  },
+  {
+    "id": "x-008",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-17T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Close rule: CAM math has to run the same way twice. Humans verify extracted lease terms before they affect money. Keep the math traceable.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-17-1300-same-inputs-008.md"
+  },
+  {
+    "id": "linkedin-009",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-18T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The packet should be ready before the tenant asks.</p><p>What to save comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together.</p><p>Review the support before the statement goes out.</p><p>A clean packet makes the answer faster.</p><p>Keep the source beside the charge.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-17-1900-pre-send-009.md"
+  },
+  {
+    "id": "x-009",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-17T22:00:00.000Z",
+    "type": "schedule",
+    "content": "The packet should be ready before the tenant asks. GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together. Name the lease rule.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-17-1700-pre-send-009.md"
+  },
+  {
+    "id": "linkedin-010",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-18T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant document request is an operations test.</p><p>A good CAM packet answers this before anyone asks:</p><p>Confirm what the lease allows before sending files.</p><p>The response should track lease audit rights, record scope, redactions, delivery, and follow-up.</p><p>A messy response can make a normal review feel adversarial.</p><p>Team note: make the next reviewer faster.</p><p>The fix is boring. Save the support near the math.</p><p>Keep the response factual and organized.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-18-1000-document-demand-010.md"
+  },
+  {
+    "id": "x-010",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-18T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Close rule: A messy response can make a normal review feel adversarial. Confirm what the lease allows before sending files.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-18-0900-document-demand-010.md"
+  },
+  {
+    "id": "linkedin-011",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-18T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>BOMA input changes need parallel proof.</p><p>This is a useful what to save question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Measurement inputs should be checked against the lease and source records.</p><p>Run old and new inputs side by side before billing changes.</p><p>A label alone does not prove the charge is right.</p><p>Packet note: save the rule before the total.</p><p>If the answer is no, the statement is early.</p><p>#boma #camreconciliation #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-18-1200-parallel-proof-011.md"
+  },
+  {
+    "id": "x-011",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-18T18:00:00.000Z",
+    "type": "schedule",
+    "content": "BOMA input changes need parallel proof. Show what changed and why it applies. Tie it before billing.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-18-1300-parallel-proof-011.md"
+  },
+  {
+    "id": "linkedin-012",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-19T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM leakage is usually a process problem.</p><p>The second review: Leakage can come from gross-up errors, missed cap adjustments, and pro-rata mistakes.</p><p>Compare lease terms to actual billings tenant by tenant.</p><p>Small missed rules can repeat across years.</p><p>Find the rule before changing the invoice.</p><p>Control note: prove the input before the output.</p><p>Question for the review team: where would you want proof first?</p><p>#camleakage #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-18-1900-recovery-gap-012.md"
+  },
+  {
+    "id": "x-012",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-18T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Watch item: CAM leakage is usually a process problem. Compare lease terms to actual billings tenant by tenant. Store proof with the packet.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-18-1700-recovery-gap-012.md"
+  },
+  {
+    "id": "linkedin-013",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-19T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The export stack comes before the workbook.</p><p>What to save comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports.</p><p>Match property, period, tenant, and charge codes before math starts.</p><p>Save the export list with the packet.</p><p>Owner note: show what changed since last run.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-19-1000-export-stack-013.md"
+  },
+  {
+    "id": "x-013",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-19T14:00:00.000Z",
+    "type": "schedule",
+    "content": "The export stack comes before the workbook. A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports. Check the input first.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-19-0900-export-stack-013.md"
+  },
+  {
+    "id": "linkedin-014",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-19T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Yardi CAM review starts with the file set.</p><p>A good CAM packet answers this before anyone asks:</p><p>Use detail-level output for the same property and period.</p><p>Recovery Analysis, GL Analytics, and Rent Roll with Lease Charges are core Yardi exports.</p><p>A summary report can hide the row that caused the charge.</p><p>File note: source, rule, amount, reviewer.</p><p>The fix is boring. Save the support near the math.</p><p>Tie the source files before reviewing tenant shares.</p><p>#yardi #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-19-1200-yardi-exports-014.md"
+  },
+  {
+    "id": "x-014",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-19T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Watch item: A summary report can hide the row that caused the charge. Use detail-level output for the same property and period.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-19-1300-yardi-exports-014.md"
+  },
+  {
+    "id": "linkedin-015",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-20T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>MRI review needs the right period first.</p><p>This is a useful before billing question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Recovery Reconciliation, GL Transaction Detail, rent roll, and Tenant Billing History are safe MRI lanes.</p><p>Confirm entity, property, period, and tenant ID before export review.</p><p>One wrong period can make a clean statement look wrong.</p><p>Close note: export, lease term, math, support.</p><p>If the answer is no, the statement is early.</p><p>#mri #camreconciliation #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-19-1900-mri-period-015.md"
+  },
+  {
+    "id": "x-015",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-19T22:00:00.000Z",
+    "type": "schedule",
+    "content": "MRI review needs the right period first. Put the period check in the packet notes. Keep the math traceable.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-19-1700-mri-period-015.md"
+  },
+  {
+    "id": "linkedin-016",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-20T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Gross-up review starts with one split.</p><p>The second review: Variable expenses can be grossed up. Fixed costs need separate treatment.</p><p>Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor.</p><p>Grossing up fixed costs can overstate the recovery pool.</p><p>The packet should show the fixed and variable split.</p><p>Keep the source beside the charge.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #grossup #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-20-1000-variable-only-016.md"
+  },
+  {
+    "id": "x-016",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-20T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Watch item: Gross-up review starts with one split. Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor. Name the lease rule.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-20-0900-variable-only-016.md"
+  },
+  {
+    "id": "linkedin-017",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-20T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant share needs its denominator.</p><p>Before billing comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>Tenant RSF over the lease-defined denominator drives the CAM share.</p><p>Store lease denominator, building RSF, excluded area, component area, or usage support.</p><p>Keep the denominator source next to the charge.</p><p>Team note: make the next reviewer faster.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #prorata #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-20-1200-denominator-017.md"
+  },
+  {
+    "id": "x-017",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-20T18:00:00.000Z",
+    "type": "schedule",
+    "content": "A tenant share needs its denominator. Tenant RSF over the lease-defined denominator drives the CAM share. Show the reviewer path.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-20-1300-denominator-017.md"
+  },
+  {
+    "id": "linkedin-018",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-21T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A CAM cap is not just one percentage.</p><p>A good CAM packet answers this before anyone asks:</p><p>Read the cap base, cap rate, and controllable cost language.</p><p>Cumulative caps can bank unused capacity. Non-cumulative caps reset each year.</p><p>The wrong cap type can change several years of billing.</p><p>Packet note: save the rule before the total.</p><p>The fix is boring. Save the support near the math.</p><p>Write the cap rule before running the charge.</p><p>#camreconciliation #commercialrealestate #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-20-1900-cap-bank-018.md"
+  },
+  {
+    "id": "x-018",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-20T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Check: The wrong cap type can change several years of billing. Read the cap base, cap rate, and controllable cost language.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-20-1700-cap-bank-018.md"
+  },
+  {
+    "id": "linkedin-019",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-21T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Admin fees need a source row.</p><p>This is a useful before billing question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>The method, base, rate, cap interaction, and lease clause should be traceable.</p><p>Confirm whether the fee applies before or after exclusions.</p><p>A circular fee can make a clean pool look off.</p><p>Control note: prove the input before the output.</p><p>If the answer is no, the statement is early.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-21-1000-fee-base-019.md"
+  },
+  {
+    "id": "x-019",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-21T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Admin fees need a source row. Save the method with the calculation record. Store proof with the packet.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-21-0900-fee-base-019.md"
+  },
+  {
+    "id": "linkedin-020",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-21T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM math has to run the same way twice.</p><p>What to check: AI can help read documents. Deterministic rules should calculate dollars.</p><p>Humans verify extracted lease terms before they affect money.</p><p>A plausible answer is not enough for tenant billing.</p><p>Same inputs should produce the same answer.</p><p>Owner note: show what changed since last run.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #crefinance #proptech</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-21-1200-same-inputs-020.md"
+  },
+  {
+    "id": "x-020",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-21T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Check: CAM math has to run the same way twice. Humans verify extracted lease terms before they affect money. Check the input first.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-21-1300-same-inputs-020.md"
+  },
+  {
+    "id": "linkedin-021",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-22T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The packet should be ready before the tenant asks.</p><p>Why it matters comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together.</p><p>Review the support before the statement goes out.</p><p>A clean packet makes the answer faster.</p><p>File note: source, rule, amount, reviewer.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-21-1900-pre-send-021.md"
+  },
+  {
+    "id": "x-021",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-21T22:00:00.000Z",
+    "type": "schedule",
+    "content": "The packet should be ready before the tenant asks. GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together. Save the source row.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-21-1700-pre-send-021.md"
+  },
+  {
+    "id": "linkedin-022",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-22T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant document request is an operations test.</p><p>A good CAM packet answers this before anyone asks:</p><p>Confirm what the lease allows before sending files.</p><p>The response should track lease audit rights, record scope, redactions, delivery, and follow-up.</p><p>A messy response can make a normal review feel adversarial.</p><p>Close note: export, lease term, math, support.</p><p>The fix is boring. Save the support near the math.</p><p>Keep the response factual and organized.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-22-1000-document-demand-022.md"
+  },
+  {
+    "id": "x-022",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-22T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Check: A messy response can make a normal review feel adversarial. Confirm what the lease allows before sending files.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-22-0900-document-demand-022.md"
+  },
+  {
+    "id": "linkedin-023",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-22T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>BOMA input changes need parallel proof.</p><p>This is a useful why it matters question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Measurement inputs should be checked against the lease and source records.</p><p>Run old and new inputs side by side before billing changes.</p><p>A label alone does not prove the charge is right.</p><p>Keep the source beside the charge.</p><p>If the answer is no, the statement is early.</p><p>#boma #camreconciliation #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-22-1200-parallel-proof-023.md"
+  },
+  {
+    "id": "x-023",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-22T18:00:00.000Z",
+    "type": "schedule",
+    "content": "BOMA input changes need parallel proof. Show what changed and why it applies. Name the lease rule.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-22-1300-parallel-proof-023.md"
+  },
+  {
+    "id": "linkedin-024",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-23T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM leakage is usually a process problem.</p><p>Where it breaks: Leakage can come from gross-up errors, missed cap adjustments, and pro-rata mistakes.</p><p>Compare lease terms to actual billings tenant by tenant.</p><p>Small missed rules can repeat across years.</p><p>Find the rule before changing the invoice.</p><p>Team note: make the next reviewer faster.</p><p>Question for the review team: where would you want proof first?</p><p>#camleakage #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-22-1900-recovery-gap-024.md"
+  },
+  {
+    "id": "x-024",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-22T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Packet note: CAM leakage is usually a process problem. Compare lease terms to actual billings tenant by tenant. Show the reviewer path.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-22-1700-recovery-gap-024.md"
+  },
+  {
+    "id": "linkedin-025",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-23T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The export stack comes before the workbook.</p><p>Why it matters comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports.</p><p>Match property, period, tenant, and charge codes before math starts.</p><p>Save the export list with the packet.</p><p>Packet note: save the rule before the total.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-23-1000-export-stack-025.md"
+  },
+  {
+    "id": "x-025",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-23T14:00:00.000Z",
+    "type": "schedule",
+    "content": "The export stack comes before the workbook. A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports. Tie it before billing.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-23-0900-export-stack-025.md"
+  },
+  {
+    "id": "linkedin-026",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-23T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Yardi CAM review starts with the file set.</p><p>A good CAM packet answers this before anyone asks:</p><p>Use detail-level output for the same property and period.</p><p>Recovery Analysis, GL Analytics, and Rent Roll with Lease Charges are core Yardi exports.</p><p>A summary report can hide the row that caused the charge.</p><p>Control note: prove the input before the output.</p><p>The fix is boring. Save the support near the math.</p><p>Tie the source files before reviewing tenant shares.</p><p>#yardi #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-23-1200-yardi-exports-026.md"
+  },
+  {
+    "id": "x-026",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-23T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Packet note: A summary report can hide the row that caused the charge. Use detail-level output for the same property and period.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-23-1300-yardi-exports-026.md"
+  },
+  {
+    "id": "linkedin-027",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-24T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>MRI review needs the right period first.</p><p>This is a useful how to close it question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Recovery Reconciliation, GL Transaction Detail, rent roll, and Tenant Billing History are safe MRI lanes.</p><p>Confirm entity, property, period, and tenant ID before export review.</p><p>One wrong period can make a clean statement look wrong.</p><p>Owner note: show what changed since last run.</p><p>If the answer is no, the statement is early.</p><p>#mri #camreconciliation #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-23-1900-mri-period-027.md"
+  },
+  {
+    "id": "x-027",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-23T22:00:00.000Z",
+    "type": "schedule",
+    "content": "MRI review needs the right period first. Put the period check in the packet notes. Check the input first.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-23-1700-mri-period-027.md"
+  },
+  {
+    "id": "linkedin-028",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-24T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Gross-up review starts with one split.</p><p>Where it breaks: Variable expenses can be grossed up. Fixed costs need separate treatment.</p><p>Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor.</p><p>Grossing up fixed costs can overstate the recovery pool.</p><p>The packet should show the fixed and variable split.</p><p>File note: source, rule, amount, reviewer.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #grossup #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-24-1000-variable-only-028.md"
+  },
+  {
+    "id": "x-028",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-24T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Packet note: Gross-up review starts with one split. Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor. Save the source row.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-24-0900-variable-only-028.md"
+  },
+  {
+    "id": "linkedin-029",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-24T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant share needs its denominator.</p><p>How to close it comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>Tenant RSF over the lease-defined denominator drives the CAM share.</p><p>Store lease denominator, building RSF, excluded area, component area, or usage support.</p><p>Keep the denominator source next to the charge.</p><p>Close note: export, lease term, math, support.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #prorata #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-24-1200-denominator-029.md"
+  },
+  {
+    "id": "x-029",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-24T18:00:00.000Z",
+    "type": "schedule",
+    "content": "A tenant share needs its denominator. Tenant RSF over the lease-defined denominator drives the CAM share. Keep the math traceable.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-24-1300-denominator-029.md"
+  },
+  {
+    "id": "linkedin-030",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-25T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A CAM cap is not just one percentage.</p><p>A good CAM packet answers this before anyone asks:</p><p>Read the cap base, cap rate, and controllable cost language.</p><p>Cumulative caps can bank unused capacity. Non-cumulative caps reset each year.</p><p>The wrong cap type can change several years of billing.</p><p>Keep the source beside the charge.</p><p>The fix is boring. Save the support near the math.</p><p>Write the cap rule before running the charge.</p><p>#camreconciliation #commercialrealestate #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-24-1900-cap-bank-030.md"
+  },
+  {
+    "id": "x-030",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-24T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Review: The wrong cap type can change several years of billing. Read the cap base, cap rate, and controllable cost language.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-24-1700-cap-bank-030.md"
+  },
+  {
+    "id": "linkedin-031",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-25T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Admin fees need a source row.</p><p>This is a useful how to close it question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>The method, base, rate, cap interaction, and lease clause should be traceable.</p><p>Confirm whether the fee applies before or after exclusions.</p><p>A circular fee can make a clean pool look off.</p><p>Team note: make the next reviewer faster.</p><p>If the answer is no, the statement is early.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-25-1000-fee-base-031.md"
+  },
+  {
+    "id": "x-031",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-25T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Admin fees need a source row. Save the method with the calculation record. Show the reviewer path.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-25-0900-fee-base-031.md"
+  },
+  {
+    "id": "linkedin-032",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-25T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM math has to run the same way twice.</p><p>What to save: AI can help read documents. Deterministic rules should calculate dollars.</p><p>Humans verify extracted lease terms before they affect money.</p><p>A plausible answer is not enough for tenant billing.</p><p>Same inputs should produce the same answer.</p><p>Packet note: save the rule before the total.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #crefinance #proptech</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-25-1200-same-inputs-032.md"
+  },
+  {
+    "id": "x-032",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-25T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Review: CAM math has to run the same way twice. Humans verify extracted lease terms before they affect money. Tie it before billing.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-25-1300-same-inputs-032.md"
+  },
+  {
+    "id": "linkedin-033",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-26T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The packet should be ready before the tenant asks.</p><p>The second review comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together.</p><p>Review the support before the statement goes out.</p><p>A clean packet makes the answer faster.</p><p>Control note: prove the input before the output.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-25-1900-pre-send-033.md"
+  },
+  {
+    "id": "x-033",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-25T22:00:00.000Z",
+    "type": "schedule",
+    "content": "The packet should be ready before the tenant asks. GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together. Store proof with the packet.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-25-1700-pre-send-033.md"
+  },
+  {
+    "id": "linkedin-034",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-26T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant document request is an operations test.</p><p>A good CAM packet answers this before anyone asks:</p><p>Confirm what the lease allows before sending files.</p><p>The response should track lease audit rights, record scope, redactions, delivery, and follow-up.</p><p>A messy response can make a normal review feel adversarial.</p><p>Owner note: show what changed since last run.</p><p>The fix is boring. Save the support near the math.</p><p>Keep the response factual and organized.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-26-1000-document-demand-034.md"
+  },
+  {
+    "id": "x-034",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-26T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Review: A messy response can make a normal review feel adversarial. Confirm what the lease allows before sending files.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-26-0900-document-demand-034.md"
+  },
+  {
+    "id": "linkedin-035",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-26T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>BOMA input changes need parallel proof.</p><p>This is a useful the second review question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Measurement inputs should be checked against the lease and source records.</p><p>Run old and new inputs side by side before billing changes.</p><p>A label alone does not prove the charge is right.</p><p>File note: source, rule, amount, reviewer.</p><p>If the answer is no, the statement is early.</p><p>#boma #camreconciliation #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-26-1200-parallel-proof-035.md"
+  },
+  {
+    "id": "x-035",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-26T18:00:00.000Z",
+    "type": "schedule",
+    "content": "BOMA input changes need parallel proof. Show what changed and why it applies. Save the source row.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-26-1300-parallel-proof-035.md"
+  },
+  {
+    "id": "linkedin-036",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-27T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM leakage is usually a process problem.</p><p>Before billing: Leakage can come from gross-up errors, missed cap adjustments, and pro-rata mistakes.</p><p>Compare lease terms to actual billings tenant by tenant.</p><p>Small missed rules can repeat across years.</p><p>Find the rule before changing the invoice.</p><p>Close note: export, lease term, math, support.</p><p>Question for the review team: where would you want proof first?</p><p>#camleakage #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-26-1900-recovery-gap-036.md"
+  },
+  {
+    "id": "x-036",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-26T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Before send: CAM leakage is usually a process problem. Compare lease terms to actual billings tenant by tenant. Keep the math traceable.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-26-1700-recovery-gap-036.md"
+  },
+  {
+    "id": "linkedin-037",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-27T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The export stack comes before the workbook.</p><p>The second review comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports.</p><p>Match property, period, tenant, and charge codes before math starts.</p><p>Save the export list with the packet.</p><p>Keep the source beside the charge.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-27-1000-export-stack-037.md"
+  },
+  {
+    "id": "x-037",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-27T14:00:00.000Z",
+    "type": "schedule",
+    "content": "The export stack comes before the workbook. A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports. Name the lease rule.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-27-0900-export-stack-037.md"
+  },
+  {
+    "id": "linkedin-038",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-27T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Yardi CAM review starts with the file set.</p><p>A good CAM packet answers this before anyone asks:</p><p>Use detail-level output for the same property and period.</p><p>Recovery Analysis, GL Analytics, and Rent Roll with Lease Charges are core Yardi exports.</p><p>A summary report can hide the row that caused the charge.</p><p>Team note: make the next reviewer faster.</p><p>The fix is boring. Save the support near the math.</p><p>Tie the source files before reviewing tenant shares.</p><p>#yardi #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-27-1200-yardi-exports-038.md"
+  },
+  {
+    "id": "x-038",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-27T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Before send: A summary report can hide the row that caused the charge. Use detail-level output for the same property and period.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-27-1300-yardi-exports-038.md"
+  },
+  {
+    "id": "linkedin-039",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-28T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>MRI review needs the right period first.</p><p>This is a useful what to check question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Recovery Reconciliation, GL Transaction Detail, rent roll, and Tenant Billing History are safe MRI lanes.</p><p>Confirm entity, property, period, and tenant ID before export review.</p><p>One wrong period can make a clean statement look wrong.</p><p>Packet note: save the rule before the total.</p><p>If the answer is no, the statement is early.</p><p>#mri #camreconciliation #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-27-1900-mri-period-039.md"
+  },
+  {
+    "id": "x-039",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-27T22:00:00.000Z",
+    "type": "schedule",
+    "content": "MRI review needs the right period first. Put the period check in the packet notes. Tie it before billing.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-27-1700-mri-period-039.md"
+  },
+  {
+    "id": "linkedin-040",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-28T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Gross-up review starts with one split.</p><p>Before billing: Variable expenses can be grossed up. Fixed costs need separate treatment.</p><p>Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor.</p><p>Grossing up fixed costs can overstate the recovery pool.</p><p>The packet should show the fixed and variable split.</p><p>Control note: prove the input before the output.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #grossup #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-28-1000-variable-only-040.md"
+  },
+  {
+    "id": "x-040",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-28T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Before send: Gross-up review starts with one split. Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor. Store proof with the packet.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-28-0900-variable-only-040.md"
+  },
+  {
+    "id": "linkedin-041",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-28T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant share needs its denominator.</p><p>What to check comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>Tenant RSF over the lease-defined denominator drives the CAM share.</p><p>Store lease denominator, building RSF, excluded area, component area, or usage support.</p><p>Keep the denominator source next to the charge.</p><p>Owner note: show what changed since last run.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #prorata #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-28-1200-denominator-041.md"
+  },
+  {
+    "id": "x-041",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-28T18:00:00.000Z",
+    "type": "schedule",
+    "content": "A tenant share needs its denominator. Tenant RSF over the lease-defined denominator drives the CAM share. Check the input first.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-28-1300-denominator-041.md"
+  },
+  {
+    "id": "linkedin-042",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-29T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A CAM cap is not just one percentage.</p><p>A good CAM packet answers this before anyone asks:</p><p>Read the cap base, cap rate, and controllable cost language.</p><p>Cumulative caps can bank unused capacity. Non-cumulative caps reset each year.</p><p>The wrong cap type can change several years of billing.</p><p>File note: source, rule, amount, reviewer.</p><p>The fix is boring. Save the support near the math.</p><p>Write the cap rule before running the charge.</p><p>#camreconciliation #commercialrealestate #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-28-1900-cap-bank-042.md"
+  },
+  {
+    "id": "x-042",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-28T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Reminder: The wrong cap type can change several years of billing. Read the cap base, cap rate, and controllable cost language.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-28-1700-cap-bank-042.md"
+  },
+  {
+    "id": "linkedin-043",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-29T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Admin fees need a source row.</p><p>This is a useful what to check question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>The method, base, rate, cap interaction, and lease clause should be traceable.</p><p>Confirm whether the fee applies before or after exclusions.</p><p>A circular fee can make a clean pool look off.</p><p>Close note: export, lease term, math, support.</p><p>If the answer is no, the statement is early.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-29-1000-fee-base-043.md"
+  },
+  {
+    "id": "x-043",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-29T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Admin fees need a source row. Save the method with the calculation record. Keep the math traceable.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-29-0900-fee-base-043.md"
+  },
+  {
+    "id": "linkedin-044",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-29T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM math has to run the same way twice.</p><p>Why it matters: AI can help read documents. Deterministic rules should calculate dollars.</p><p>Humans verify extracted lease terms before they affect money.</p><p>A plausible answer is not enough for tenant billing.</p><p>Same inputs should produce the same answer.</p><p>Keep the source beside the charge.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #crefinance #proptech</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-29-1200-same-inputs-044.md"
+  },
+  {
+    "id": "x-044",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-29T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Reminder: CAM math has to run the same way twice. Humans verify extracted lease terms before they affect money. Name the lease rule.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-29-1300-same-inputs-044.md"
+  },
+  {
+    "id": "linkedin-045",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-30T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The packet should be ready before the tenant asks.</p><p>Where it breaks comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together.</p><p>Review the support before the statement goes out.</p><p>A clean packet makes the answer faster.</p><p>Team note: make the next reviewer faster.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-29-1900-pre-send-045.md"
+  },
+  {
+    "id": "x-045",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-29T22:00:00.000Z",
+    "type": "schedule",
+    "content": "The packet should be ready before the tenant asks. GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together. Show the reviewer path.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-29-1700-pre-send-045.md"
+  },
+  {
+    "id": "linkedin-046",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-30T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant document request is an operations test.</p><p>A good CAM packet answers this before anyone asks:</p><p>Confirm what the lease allows before sending files.</p><p>The response should track lease audit rights, record scope, redactions, delivery, and follow-up.</p><p>A messy response can make a normal review feel adversarial.</p><p>Packet note: save the rule before the total.</p><p>The fix is boring. Save the support near the math.</p><p>Keep the response factual and organized.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-30-1000-document-demand-046.md"
+  },
+  {
+    "id": "x-046",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-30T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Reminder: A messy response can make a normal review feel adversarial. Confirm what the lease allows before sending files.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-30-0900-document-demand-046.md"
+  },
+  {
+    "id": "linkedin-047",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-06-30T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>BOMA input changes need parallel proof.</p><p>This is a useful where it breaks question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Measurement inputs should be checked against the lease and source records.</p><p>Run old and new inputs side by side before billing changes.</p><p>A label alone does not prove the charge is right.</p><p>Control note: prove the input before the output.</p><p>If the answer is no, the statement is early.</p><p>#boma #camreconciliation #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-30-1200-parallel-proof-047.md"
+  },
+  {
+    "id": "x-047",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-30T18:00:00.000Z",
+    "type": "schedule",
+    "content": "BOMA input changes need parallel proof. Show what changed and why it applies. Store proof with the packet.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-30-1300-parallel-proof-047.md"
+  },
+  {
+    "id": "linkedin-048",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-01T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM leakage is usually a process problem.</p><p>How to close it: Leakage can come from gross-up errors, missed cap adjustments, and pro-rata mistakes.</p><p>Compare lease terms to actual billings tenant by tenant.</p><p>Small missed rules can repeat across years.</p><p>Find the rule before changing the invoice.</p><p>Owner note: show what changed since last run.</p><p>Question for the review team: where would you want proof first?</p><p>#camleakage #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-06-30-1900-recovery-gap-048.md"
+  },
+  {
+    "id": "x-048",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-06-30T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Close rule: CAM leakage is usually a process problem. Compare lease terms to actual billings tenant by tenant. Check the input first.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-06-30-1700-recovery-gap-048.md"
+  },
+  {
+    "id": "linkedin-049",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-01T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The export stack comes before the workbook.</p><p>Where it breaks comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports.</p><p>Match property, period, tenant, and charge codes before math starts.</p><p>Save the export list with the packet.</p><p>File note: source, rule, amount, reviewer.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-01-1000-export-stack-049.md"
+  },
+  {
+    "id": "x-049",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-01T14:00:00.000Z",
+    "type": "schedule",
+    "content": "The export stack comes before the workbook. A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports. Save the source row.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-01-0900-export-stack-049.md"
+  },
+  {
+    "id": "linkedin-050",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-01T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Yardi CAM review starts with the file set.</p><p>A good CAM packet answers this before anyone asks:</p><p>Use detail-level output for the same property and period.</p><p>Recovery Analysis, GL Analytics, and Rent Roll with Lease Charges are core Yardi exports.</p><p>A summary report can hide the row that caused the charge.</p><p>Close note: export, lease term, math, support.</p><p>The fix is boring. Save the support near the math.</p><p>Tie the source files before reviewing tenant shares.</p><p>#yardi #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-01-1200-yardi-exports-050.md"
+  },
+  {
+    "id": "x-050",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-01T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Close rule: A summary report can hide the row that caused the charge. Use detail-level output for the same property and period.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-01-1300-yardi-exports-050.md"
+  },
+  {
+    "id": "linkedin-051",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-02T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>MRI review needs the right period first.</p><p>This is a useful what to save question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Recovery Reconciliation, GL Transaction Detail, rent roll, and Tenant Billing History are safe MRI lanes.</p><p>Confirm entity, property, period, and tenant ID before export review.</p><p>One wrong period can make a clean statement look wrong.</p><p>Keep the source beside the charge.</p><p>If the answer is no, the statement is early.</p><p>#mri #camreconciliation #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-01-1900-mri-period-051.md"
+  },
+  {
+    "id": "x-051",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-01T22:00:00.000Z",
+    "type": "schedule",
+    "content": "MRI review needs the right period first. Put the period check in the packet notes. Name the lease rule.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-01-1700-mri-period-051.md"
+  },
+  {
+    "id": "linkedin-052",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-02T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Gross-up review starts with one split.</p><p>How to close it: Variable expenses can be grossed up. Fixed costs need separate treatment.</p><p>Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor.</p><p>Grossing up fixed costs can overstate the recovery pool.</p><p>The packet should show the fixed and variable split.</p><p>Team note: make the next reviewer faster.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #grossup #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-02-1000-variable-only-052.md"
+  },
+  {
+    "id": "x-052",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-02T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Close rule: Gross-up review starts with one split. Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor. Show the reviewer path.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-02-0900-variable-only-052.md"
+  },
+  {
+    "id": "linkedin-053",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-02T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant share needs its denominator.</p><p>What to save comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>Tenant RSF over the lease-defined denominator drives the CAM share.</p><p>Store lease denominator, building RSF, excluded area, component area, or usage support.</p><p>Keep the denominator source next to the charge.</p><p>Packet note: save the rule before the total.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #prorata #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-02-1200-denominator-053.md"
+  },
+  {
+    "id": "x-053",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-02T18:00:00.000Z",
+    "type": "schedule",
+    "content": "A tenant share needs its denominator. Tenant RSF over the lease-defined denominator drives the CAM share. Tie it before billing.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-02-1300-denominator-053.md"
+  },
+  {
+    "id": "linkedin-054",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-03T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A CAM cap is not just one percentage.</p><p>A good CAM packet answers this before anyone asks:</p><p>Read the cap base, cap rate, and controllable cost language.</p><p>Cumulative caps can bank unused capacity. Non-cumulative caps reset each year.</p><p>The wrong cap type can change several years of billing.</p><p>Control note: prove the input before the output.</p><p>The fix is boring. Save the support near the math.</p><p>Write the cap rule before running the charge.</p><p>#camreconciliation #commercialrealestate #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-02-1900-cap-bank-054.md"
+  },
+  {
+    "id": "x-054",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-02T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Watch item: The wrong cap type can change several years of billing. Read the cap base, cap rate, and controllable cost language.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-02-1700-cap-bank-054.md"
+  },
+  {
+    "id": "linkedin-055",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-03T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Admin fees need a source row.</p><p>This is a useful what to save question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>The method, base, rate, cap interaction, and lease clause should be traceable.</p><p>Confirm whether the fee applies before or after exclusions.</p><p>A circular fee can make a clean pool look off.</p><p>Owner note: show what changed since last run.</p><p>If the answer is no, the statement is early.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-03-1000-fee-base-055.md"
+  },
+  {
+    "id": "x-055",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-03T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Admin fees need a source row. Save the method with the calculation record. Check the input first.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-03-0900-fee-base-055.md"
+  },
+  {
+    "id": "linkedin-056",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-03T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM math has to run the same way twice.</p><p>The second review: AI can help read documents. Deterministic rules should calculate dollars.</p><p>Humans verify extracted lease terms before they affect money.</p><p>A plausible answer is not enough for tenant billing.</p><p>Same inputs should produce the same answer.</p><p>File note: source, rule, amount, reviewer.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #crefinance #proptech</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-03-1200-same-inputs-056.md"
+  },
+  {
+    "id": "x-056",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-03T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Watch item: CAM math has to run the same way twice. Humans verify extracted lease terms before they affect money. Save the source row.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-03-1300-same-inputs-056.md"
+  },
+  {
+    "id": "linkedin-057",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-04T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The packet should be ready before the tenant asks.</p><p>Before billing comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together.</p><p>Review the support before the statement goes out.</p><p>A clean packet makes the answer faster.</p><p>Close note: export, lease term, math, support.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-03-1900-pre-send-057.md"
+  },
+  {
+    "id": "x-057",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-03T22:00:00.000Z",
+    "type": "schedule",
+    "content": "The packet should be ready before the tenant asks. GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together. Keep the math traceable.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-03-1700-pre-send-057.md"
+  },
+  {
+    "id": "linkedin-058",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-04T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant document request is an operations test.</p><p>A good CAM packet answers this before anyone asks:</p><p>Confirm what the lease allows before sending files.</p><p>The response should track lease audit rights, record scope, redactions, delivery, and follow-up.</p><p>A messy response can make a normal review feel adversarial.</p><p>Keep the source beside the charge.</p><p>The fix is boring. Save the support near the math.</p><p>Keep the response factual and organized.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-04-1000-document-demand-058.md"
+  },
+  {
+    "id": "x-058",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-04T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Watch item: A messy response can make a normal review feel adversarial. Confirm what the lease allows before sending files.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-04-0900-document-demand-058.md"
+  },
+  {
+    "id": "linkedin-059",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-04T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>BOMA input changes need parallel proof.</p><p>This is a useful before billing question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Measurement inputs should be checked against the lease and source records.</p><p>Run old and new inputs side by side before billing changes.</p><p>A label alone does not prove the charge is right.</p><p>Team note: make the next reviewer faster.</p><p>If the answer is no, the statement is early.</p><p>#boma #camreconciliation #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-04-1200-parallel-proof-059.md"
+  },
+  {
+    "id": "x-059",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-04T18:00:00.000Z",
+    "type": "schedule",
+    "content": "BOMA input changes need parallel proof. Show what changed and why it applies. Show the reviewer path.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-04-1300-parallel-proof-059.md"
+  },
+  {
+    "id": "linkedin-060",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-05T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM leakage is usually a process problem.</p><p>What to check: Leakage can come from gross-up errors, missed cap adjustments, and pro-rata mistakes.</p><p>Compare lease terms to actual billings tenant by tenant.</p><p>Small missed rules can repeat across years.</p><p>Find the rule before changing the invoice.</p><p>Packet note: save the rule before the total.</p><p>Question for the review team: where would you want proof first?</p><p>#camleakage #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-04-1900-recovery-gap-060.md"
+  },
+  {
+    "id": "x-060",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-04T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Check: CAM leakage is usually a process problem. Compare lease terms to actual billings tenant by tenant. Tie it before billing.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-04-1700-recovery-gap-060.md"
+  },
+  {
+    "id": "linkedin-061",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-05T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The export stack comes before the workbook.</p><p>Before billing comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports.</p><p>Match property, period, tenant, and charge codes before math starts.</p><p>Save the export list with the packet.</p><p>Control note: prove the input before the output.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-05-1000-export-stack-061.md"
+  },
+  {
+    "id": "x-061",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-05T14:00:00.000Z",
+    "type": "schedule",
+    "content": "The export stack comes before the workbook. A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports. Store proof with the packet.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-05-0900-export-stack-061.md"
+  },
+  {
+    "id": "linkedin-062",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-05T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Yardi CAM review starts with the file set.</p><p>A good CAM packet answers this before anyone asks:</p><p>Use detail-level output for the same property and period.</p><p>Recovery Analysis, GL Analytics, and Rent Roll with Lease Charges are core Yardi exports.</p><p>A summary report can hide the row that caused the charge.</p><p>Owner note: show what changed since last run.</p><p>The fix is boring. Save the support near the math.</p><p>Tie the source files before reviewing tenant shares.</p><p>#yardi #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-05-1200-yardi-exports-062.md"
+  },
+  {
+    "id": "x-062",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-05T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Check: A summary report can hide the row that caused the charge. Use detail-level output for the same property and period.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-05-1300-yardi-exports-062.md"
+  },
+  {
+    "id": "linkedin-063",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-06T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>MRI review needs the right period first.</p><p>This is a useful why it matters question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Recovery Reconciliation, GL Transaction Detail, rent roll, and Tenant Billing History are safe MRI lanes.</p><p>Confirm entity, property, period, and tenant ID before export review.</p><p>One wrong period can make a clean statement look wrong.</p><p>File note: source, rule, amount, reviewer.</p><p>If the answer is no, the statement is early.</p><p>#mri #camreconciliation #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-05-1900-mri-period-063.md"
+  },
+  {
+    "id": "x-063",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-05T22:00:00.000Z",
+    "type": "schedule",
+    "content": "MRI review needs the right period first. Put the period check in the packet notes. Save the source row.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-05-1700-mri-period-063.md"
+  },
+  {
+    "id": "linkedin-064",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-06T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Gross-up review starts with one split.</p><p>What to check: Variable expenses can be grossed up. Fixed costs need separate treatment.</p><p>Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor.</p><p>Grossing up fixed costs can overstate the recovery pool.</p><p>The packet should show the fixed and variable split.</p><p>Close note: export, lease term, math, support.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #grossup #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-06-1000-variable-only-064.md"
+  },
+  {
+    "id": "x-064",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-06T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Check: Gross-up review starts with one split. Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor. Keep the math traceable.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-06-0900-variable-only-064.md"
+  },
+  {
+    "id": "linkedin-065",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-06T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant share needs its denominator.</p><p>Why it matters comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>Tenant RSF over the lease-defined denominator drives the CAM share.</p><p>Store lease denominator, building RSF, excluded area, component area, or usage support.</p><p>Keep the denominator source next to the charge.</p><p>Keep the source beside the charge.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #prorata #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-06-1200-denominator-065.md"
+  },
+  {
+    "id": "x-065",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-06T18:00:00.000Z",
+    "type": "schedule",
+    "content": "A tenant share needs its denominator. Tenant RSF over the lease-defined denominator drives the CAM share. Name the lease rule.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-06-1300-denominator-065.md"
+  },
+  {
+    "id": "linkedin-066",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-07T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A CAM cap is not just one percentage.</p><p>A good CAM packet answers this before anyone asks:</p><p>Read the cap base, cap rate, and controllable cost language.</p><p>Cumulative caps can bank unused capacity. Non-cumulative caps reset each year.</p><p>The wrong cap type can change several years of billing.</p><p>Team note: make the next reviewer faster.</p><p>The fix is boring. Save the support near the math.</p><p>Write the cap rule before running the charge.</p><p>#camreconciliation #commercialrealestate #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-06-1900-cap-bank-066.md"
+  },
+  {
+    "id": "x-066",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-06T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Packet note: The wrong cap type can change several years of billing. Read the cap base, cap rate, and controllable cost language.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-06-1700-cap-bank-066.md"
+  },
+  {
+    "id": "linkedin-067",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-07T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Admin fees need a source row.</p><p>This is a useful why it matters question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>The method, base, rate, cap interaction, and lease clause should be traceable.</p><p>Confirm whether the fee applies before or after exclusions.</p><p>A circular fee can make a clean pool look off.</p><p>Packet note: save the rule before the total.</p><p>If the answer is no, the statement is early.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-07-1000-fee-base-067.md"
+  },
+  {
+    "id": "x-067",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-07T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Admin fees need a source row. Save the method with the calculation record. Tie it before billing.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-07-0900-fee-base-067.md"
+  },
+  {
+    "id": "linkedin-068",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-07T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM math has to run the same way twice.</p><p>Where it breaks: AI can help read documents. Deterministic rules should calculate dollars.</p><p>Humans verify extracted lease terms before they affect money.</p><p>A plausible answer is not enough for tenant billing.</p><p>Same inputs should produce the same answer.</p><p>Control note: prove the input before the output.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #crefinance #proptech</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-07-1200-same-inputs-068.md"
+  },
+  {
+    "id": "x-068",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-07T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Packet note: CAM math has to run the same way twice. Humans verify extracted lease terms before they affect money. Store proof with the packet.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-07-1300-same-inputs-068.md"
+  },
+  {
+    "id": "linkedin-069",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-08T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The packet should be ready before the tenant asks.</p><p>How to close it comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together.</p><p>Review the support before the statement goes out.</p><p>A clean packet makes the answer faster.</p><p>Owner note: show what changed since last run.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-07-1900-pre-send-069.md"
+  },
+  {
+    "id": "x-069",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-07T22:00:00.000Z",
+    "type": "schedule",
+    "content": "The packet should be ready before the tenant asks. GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together. Check the input first.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-07-1700-pre-send-069.md"
+  },
+  {
+    "id": "linkedin-070",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-08T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant document request is an operations test.</p><p>A good CAM packet answers this before anyone asks:</p><p>Confirm what the lease allows before sending files.</p><p>The response should track lease audit rights, record scope, redactions, delivery, and follow-up.</p><p>A messy response can make a normal review feel adversarial.</p><p>File note: source, rule, amount, reviewer.</p><p>The fix is boring. Save the support near the math.</p><p>Keep the response factual and organized.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-08-1000-document-demand-070.md"
+  },
+  {
+    "id": "x-070",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-08T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Packet note: A messy response can make a normal review feel adversarial. Confirm what the lease allows before sending files.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-08-0900-document-demand-070.md"
+  },
+  {
+    "id": "linkedin-071",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-08T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>BOMA input changes need parallel proof.</p><p>This is a useful how to close it question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Measurement inputs should be checked against the lease and source records.</p><p>Run old and new inputs side by side before billing changes.</p><p>A label alone does not prove the charge is right.</p><p>Close note: export, lease term, math, support.</p><p>If the answer is no, the statement is early.</p><p>#boma #camreconciliation #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-08-1200-parallel-proof-071.md"
+  },
+  {
+    "id": "x-071",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-08T18:00:00.000Z",
+    "type": "schedule",
+    "content": "BOMA input changes need parallel proof. Show what changed and why it applies. Keep the math traceable.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-08-1300-parallel-proof-071.md"
+  },
+  {
+    "id": "linkedin-072",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-09T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM leakage is usually a process problem.</p><p>What to save: Leakage can come from gross-up errors, missed cap adjustments, and pro-rata mistakes.</p><p>Compare lease terms to actual billings tenant by tenant.</p><p>Small missed rules can repeat across years.</p><p>Find the rule before changing the invoice.</p><p>Keep the source beside the charge.</p><p>Question for the review team: where would you want proof first?</p><p>#camleakage #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-08-1900-recovery-gap-072.md"
+  },
+  {
+    "id": "x-072",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-08T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Review: CAM leakage is usually a process problem. Compare lease terms to actual billings tenant by tenant. Name the lease rule.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-08-1700-recovery-gap-072.md"
+  },
+  {
+    "id": "linkedin-073",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-09T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The export stack comes before the workbook.</p><p>How to close it comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports.</p><p>Match property, period, tenant, and charge codes before math starts.</p><p>Save the export list with the packet.</p><p>Team note: make the next reviewer faster.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-09-1000-export-stack-073.md"
+  },
+  {
+    "id": "x-073",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-09T14:00:00.000Z",
+    "type": "schedule",
+    "content": "The export stack comes before the workbook. A CAM review can start from rent roll, full-year GL detail, and recovery or billing exports. Show the reviewer path.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-09-0900-export-stack-073.md"
+  },
+  {
+    "id": "linkedin-074",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-09T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Yardi CAM review starts with the file set.</p><p>A good CAM packet answers this before anyone asks:</p><p>Use detail-level output for the same property and period.</p><p>Recovery Analysis, GL Analytics, and Rent Roll with Lease Charges are core Yardi exports.</p><p>A summary report can hide the row that caused the charge.</p><p>Packet note: save the rule before the total.</p><p>The fix is boring. Save the support near the math.</p><p>Tie the source files before reviewing tenant shares.</p><p>#yardi #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-09-1200-yardi-exports-074.md"
+  },
+  {
+    "id": "x-074",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-09T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Review: A summary report can hide the row that caused the charge. Use detail-level output for the same property and period.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-09-1300-yardi-exports-074.md"
+  },
+  {
+    "id": "linkedin-075",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-10T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>MRI review needs the right period first.</p><p>This is a useful the second review question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Recovery Reconciliation, GL Transaction Detail, rent roll, and Tenant Billing History are safe MRI lanes.</p><p>Confirm entity, property, period, and tenant ID before export review.</p><p>One wrong period can make a clean statement look wrong.</p><p>Control note: prove the input before the output.</p><p>If the answer is no, the statement is early.</p><p>#mri #camreconciliation #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-09-1900-mri-period-075.md"
+  },
+  {
+    "id": "x-075",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-09T22:00:00.000Z",
+    "type": "schedule",
+    "content": "MRI review needs the right period first. Put the period check in the packet notes. Store proof with the packet.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-09-1700-mri-period-075.md"
+  },
+  {
+    "id": "linkedin-076",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-10T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Gross-up review starts with one split.</p><p>What to save: Variable expenses can be grossed up. Fixed costs need separate treatment.</p><p>Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor.</p><p>Grossing up fixed costs can overstate the recovery pool.</p><p>The packet should show the fixed and variable split.</p><p>Owner note: show what changed since last run.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #grossup #propertyaccounting</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-10-1000-variable-only-076.md"
+  },
+  {
+    "id": "x-076",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-10T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Review: Gross-up review starts with one split. Sort taxes, insurance, utilities, janitorial, and service costs before applying a factor. Check the input first.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-10-0900-variable-only-076.md"
+  },
+  {
+    "id": "linkedin-077",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-10T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant share needs its denominator.</p><p>The second review comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>Tenant RSF over the lease-defined denominator drives the CAM share.</p><p>Store lease denominator, building RSF, excluded area, component area, or usage support.</p><p>Keep the denominator source next to the charge.</p><p>File note: source, rule, amount, reviewer.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #prorata #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-10-1200-denominator-077.md"
+  },
+  {
+    "id": "x-077",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-10T18:00:00.000Z",
+    "type": "schedule",
+    "content": "A tenant share needs its denominator. Tenant RSF over the lease-defined denominator drives the CAM share. Save the source row.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-10-1300-denominator-077.md"
+  },
+  {
+    "id": "linkedin-078",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-11T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A CAM cap is not just one percentage.</p><p>A good CAM packet answers this before anyone asks:</p><p>Read the cap base, cap rate, and controllable cost language.</p><p>Cumulative caps can bank unused capacity. Non-cumulative caps reset each year.</p><p>The wrong cap type can change several years of billing.</p><p>Close note: export, lease term, math, support.</p><p>The fix is boring. Save the support near the math.</p><p>Write the cap rule before running the charge.</p><p>#camreconciliation #commercialrealestate #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-10-1900-cap-bank-078.md"
+  },
+  {
+    "id": "x-078",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-10T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Before send: The wrong cap type can change several years of billing. Read the cap base, cap rate, and controllable cost language.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-10-1700-cap-bank-078.md"
+  },
+  {
+    "id": "linkedin-079",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-11T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>Admin fees need a source row.</p><p>This is a useful the second review question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>The method, base, rate, cap interaction, and lease clause should be traceable.</p><p>Confirm whether the fee applies before or after exclusions.</p><p>A circular fee can make a clean pool look off.</p><p>Keep the source beside the charge.</p><p>If the answer is no, the statement is early.</p><p>#camreconciliation #propertyaccounting #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-11-1000-fee-base-079.md"
+  },
+  {
+    "id": "x-079",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-11T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Admin fees need a source row. Save the method with the calculation record. Name the lease rule.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-11-0900-fee-base-079.md"
+  },
+  {
+    "id": "linkedin-080",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-11T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM math has to run the same way twice.</p><p>Before billing: AI can help read documents. Deterministic rules should calculate dollars.</p><p>Humans verify extracted lease terms before they affect money.</p><p>A plausible answer is not enough for tenant billing.</p><p>Same inputs should produce the same answer.</p><p>Team note: make the next reviewer faster.</p><p>Question for the review team: where would you want proof first?</p><p>#camreconciliation #crefinance #proptech</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-11-1200-same-inputs-080.md"
+  },
+  {
+    "id": "x-080",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-11T18:00:00.000Z",
+    "type": "schedule",
+    "content": "Before send: CAM math has to run the same way twice. Humans verify extracted lease terms before they affect money. Show the reviewer path.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-11-1300-same-inputs-080.md"
+  },
+  {
+    "id": "linkedin-081",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-12T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>The packet should be ready before the tenant asks.</p><p>What to check comes before a bigger workbook.</p><p>The review needs a clear source trail.</p><p>GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together.</p><p>Review the support before the statement goes out.</p><p>A clean packet makes the answer faster.</p><p>Packet note: save the rule before the total.</p><p>That is the difference between a charge and a packet.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-11-1900-pre-send-081.md"
+  },
+  {
+    "id": "x-081",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-11T22:00:00.000Z",
+    "type": "schedule",
+    "content": "The packet should be ready before the tenant asks. GL, invoices, rent roll support, lease abstracts, worksheets, and fee support belong together. Tie it before billing.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-11-1700-pre-send-081.md"
+  },
+  {
+    "id": "linkedin-082",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-12T15:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>A tenant document request is an operations test.</p><p>A good CAM packet answers this before anyone asks:</p><p>Confirm what the lease allows before sending files.</p><p>The response should track lease audit rights, record scope, redactions, delivery, and follow-up.</p><p>A messy response can make a normal review feel adversarial.</p><p>Control note: prove the input before the output.</p><p>The fix is boring. Save the support near the math.</p><p>Keep the response factual and organized.</p><p>#camreconciliation #propertymanagement #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-12-1000-document-demand-082.md"
+  },
+  {
+    "id": "x-082",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-12T14:00:00.000Z",
+    "type": "schedule",
+    "content": "Before send: A messy response can make a normal review feel adversarial. Confirm what the lease allows before sending files.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-12-0900-document-demand-082.md"
+  },
+  {
+    "id": "linkedin-083",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-12T17:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>BOMA input changes need parallel proof.</p><p>This is a useful what to check question:</p><p>Can a second reviewer follow the source, the rule, and the math?</p><p>Measurement inputs should be checked against the lease and source records.</p><p>Run old and new inputs side by side before billing changes.</p><p>A label alone does not prove the charge is right.</p><p>Owner note: show what changed since last run.</p><p>If the answer is no, the statement is early.</p><p>#boma #camreconciliation #cre</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-12-1200-parallel-proof-083.md"
+  },
+  {
+    "id": "x-083",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-12T18:00:00.000Z",
+    "type": "schedule",
+    "content": "BOMA input changes need parallel proof. Show what changed and why it applies. Check the input first.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-12-1300-parallel-proof-083.md"
+  },
+  {
+    "id": "linkedin-084",
+    "platform": "linkedin",
+    "integrationId": "cmp1b2s2101fclj0yb8t0botq",
+    "date": "2026-07-13T00:00:00.000Z",
+    "type": "schedule",
+    "content": "<p>CAM leakage is usually a process problem.</p><p>Why it matters: Leakage can come from gross-up errors, missed cap adjustments, and pro-rata mistakes.</p><p>Compare lease terms to actual billings tenant by tenant.</p><p>Small missed rules can repeat across years.</p><p>Find the rule before changing the invoice.</p><p>File note: source, rule, amount, reviewer.</p><p>Question for the review team: where would you want proof first?</p><p>#camleakage #camreconciliation #crefinance</p>",
+    "settings": {
+      "__type": "linkedin-page",
+      "post_as_images_carousel": false
+    },
+    "sourcePath": "posts/linkedin/2026-07-12-1900-recovery-gap-084.md"
+  },
+  {
+    "id": "x-084",
+    "platform": "x",
+    "integrationId": "cmq5cu40400uxqp0y8ygzgjq4",
+    "date": "2026-07-12T22:00:00.000Z",
+    "type": "schedule",
+    "content": "Reminder: CAM leakage is usually a process problem. Compare lease terms to actual billings tenant by tenant. Save the source row.",
+    "settings": {
+      "who_can_reply_post": "everyone"
+    },
+    "sourcePath": "posts/x/2026-07-12-1700-recovery-gap-084.md"
+  }
+]

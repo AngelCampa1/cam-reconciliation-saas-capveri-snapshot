@@ -1,0 +1,455 @@
+{
+  "coreProduct": [
+    {
+      "title": "How It Works",
+      "path": "/product-tour",
+      "description": "Walk through the export-to-verification workflow before starting a trial."
+    },
+    {
+      "title": "Pricing",
+      "path": "/pricing",
+      "description": "Current package pricing is injected into the generated LLM artifacts from canonical publicKnowledge pricing facts."
+    },
+    {
+      "title": "Machine-Readable Pricing",
+      "path": "/pricing.md",
+      "description": "Plain-text pricing file for AI agents and crawlers, generated from current Reconcile unit-based pricing."
+    },
+    {
+      "title": "Start Free Trial",
+      "path": "/",
+      "description": "Run a first CAM audit without replacing Yardi or MRI and without API integrations."
+    }
+  ],
+  "educationalResources": [
+    {
+      "title": "What Are CAM Charges",
+      "path": "/cam-charges",
+      "description": "Definition, inclusions, exclusions, pro-rata share logic, and audit pitfalls."
+    },
+    {
+      "title": "CAM Reconciliation Guide",
+      "path": "/cam-reconciliation-guide",
+      "description": "The primary guide for the year-end CAM reconciliation process, deadlines, statements, and common errors."
+    },
+    {
+      "title": "How to Calculate CAM Charges",
+      "path": "/resources/how-to-calculate-cam-charges",
+      "description": "Step-by-step formula, worked examples, and core calculation logic."
+    },
+    {
+      "title": "CAM Reconciliation Example",
+      "path": "/resources/cam-reconciliation-example",
+      "description": "Worked example showing a full annual true-up across a multi-tenant property."
+    },
+    {
+      "title": "CAM Glossary",
+      "path": "/glossary",
+      "description": "Definitions for key CAM and CRE FinOps terms used across leases and reconciliations."
+    },
+    {
+      "title": "State CAM Compliance Guides",
+      "path": "/resources/states",
+      "description": "Jurisdiction-specific CAM disclosure, documentation, and timing considerations."
+    },
+    {
+      "title": "CAM Expense Categories",
+      "path": "/resources/expenses/landscaping",
+      "description": "Expense-category explainers covering recoverable, excluded, and controllable costs."
+    }
+  ],
+  "templates": [
+    {
+      "title": "CAM Reconciliation Template",
+      "path": "/tools/cam-reconciliation-template",
+      "description": "Template generator for pro-rata share, gross-up, cap, and statement prep."
+    },
+    {
+      "title": "Tenant CAM Statement Outline",
+      "path": "/resources/templates/cam-reconciliation-statement",
+      "description": "Sample annual statement structure for tenant delivery."
+    },
+    {
+      "title": "Landlord CAM Reconciliation Cover Letter",
+      "path": "/resources/templates/tenant-cam-reconciliation-letter",
+      "description": "Formal cover-letter template for issuing reconciliation statements."
+    },
+    {
+      "title": "CAM Dispute Response Template",
+      "path": "/resources/templates/cam-dispute-response-template",
+      "description": "Response template for handling tenant documentation and dispute requests."
+    }
+  ],
+  "freeTools": [
+    {
+      "title": "HCAD Tax Base Year Normalizer",
+      "path": "/tools/hcad-tax-normalizer",
+      "description": "Normalize Harris County tax impacts for base-year and recovery analysis."
+    },
+    {
+      "title": "BOMA 2024 Rentable Area Calculator",
+      "path": "/tools/boma-2024-calculator",
+      "description": "Estimate rentable area under ANSI/BOMA Z65.1-2024."
+    },
+    {
+      "title": "CAM Billing Error Estimator",
+      "path": "/tools/cam-billing-error-estimator",
+      "description": "Estimate yearly CAM billing errors across your portfolio."
+    },
+    {
+      "title": "CAM Gross-Up Calculator",
+      "path": "/tools/cam-gross-up-calculator",
+      "description": "Verify gross-up math against the lease-defined occupancy threshold."
+    },
+    {
+      "title": "Lease Abstract Matrix",
+      "path": "/tools/lease-abstract-matrix",
+      "description": "Compare lease-level CAM provisions across a portfolio."
+    },
+    {
+      "title": "Tenant Challenge Exposure Calculator",
+      "path": "/tools/cam-overcharge-calculator",
+      "description": "Estimate where CAM billing may overcharge tenants."
+    },
+    {
+      "title": "Fixed CAM vs Traditional Modeler",
+      "path": "/tools/fixed-cam-vs-traditional",
+      "description": "Compare traditional CAM reconciliation with fixed CAM structures."
+    },
+    {
+      "title": "Pre-Send Audit Exposure Quiz",
+      "path": "/tools/audit-risk-quiz",
+      "description": "Assess how exposed a reconciliation workflow is to tenant audits."
+    },
+    {
+      "title": "CAM Cap Calculator",
+      "path": "/tools/cam-cap-calculator",
+      "description": "Model cumulative and non-cumulative cap structures."
+    },
+    {
+      "title": "Pro-Rata Share Calculator",
+      "path": "/tools/pro-rata-calculator",
+      "description": "Calculate tenant proportionate share from rentable area inputs."
+    },
+    {
+      "title": "NOI Impact Calculator",
+      "path": "/tools/noi-impact-calculator",
+      "description": "Estimate value impact from corrected CAM recoveries."
+    },
+    {
+      "title": "CAM Reconciliation Template",
+      "path": "/tools/cam-reconciliation-template",
+      "description": "Download a worksheet with gross-up, cap tracking, and pro-rata tabs."
+    },
+    {
+      "title": "Reconciliation Statement Template",
+      "path": "/tools/reconciliation-statement-generator",
+      "description": "Download a statement template with disclosure support."
+    },
+    {
+      "title": "CAM Estimate Forecaster",
+      "path": "/tools/cam-estimate-forecaster",
+      "description": "Project next-year CAM estimates by expense category."
+    },
+    {
+      "title": "Recovery Gap Analyzer",
+      "path": "/tools/recovery-gap-analyzer",
+      "description": "Quantify recovery gaps and model NOI impact."
+    },
+    {
+      "title": "Admin Fee Calculator",
+      "path": "/tools/admin-fee-calculator",
+      "description": "Compare gross, net, and capped admin fee methods."
+    },
+    {
+      "title": "Base Year Escalation Calculator",
+      "path": "/tools/base-year-escalation",
+      "description": "Project excess expense obligations over a lease term."
+    },
+    {
+      "title": "SB 1103 Compliance Checker",
+      "path": "/tools/sb-1103-checker",
+      "description": "Assess California commercial lease disclosure risk."
+    },
+    {
+      "title": "BOMA Remeasurement Impact Calculator",
+      "path": "/tools/boma-remeasurement-impact",
+      "description": "Project NOI impact from BOMA 2017 to BOMA 2024 remeasurement."
+    },
+    {
+      "title": "Pre-Send Audit Exposure Scorecard",
+      "path": "/tools/audit-risk-scorecard",
+      "description": "Score tenant audit vulnerability by lease terms and billing complexity."
+    },
+    {
+      "title": "Cumulative Cap Bank Calculator",
+      "path": "/tools/cumulative-cap-bank-calculator",
+      "description": "Track cap carryovers across multiple reconciliation years."
+    },
+    {
+      "title": "CAM Recovery Ratio Worksheet",
+      "path": "/tools/cam-recovery-ratio-worksheet",
+      "description": "Review billed CAM against recoverable expenses."
+    },
+    {
+      "title": "Yardi Export Error Checklist",
+      "path": "/tools/yardi-export-qa-checklist",
+      "description": "Check Yardi export files before reconciliation."
+    },
+    {
+      "title": "MRI Recovery Billing Error Checklist",
+      "path": "/tools/mri-recovery-billing-qa-checklist",
+      "description": "Check MRI recovery billing exports before statements go out."
+    },
+    {
+      "title": "Audit Defense Packet Builder",
+      "path": "/tools/audit-defense-packet-builder",
+      "description": "Assemble the files needed for tenant audit response."
+    },
+    {
+      "title": "CAM Pre-Send Packet Checklist",
+      "path": "/tools/cam-pre-send-packet-checklist-download",
+      "description": "Download a checklist for statement review before delivery."
+    },
+    {
+      "title": "Tenant CAM Dispute Response Letter",
+      "path": "/tools/tenant-dispute-response-letter-template",
+      "description": "Draft a tenant dispute response letter from core facts."
+    },
+    {
+      "title": "Multi-State CAM Packet Review Checklist",
+      "path": "/tools/multi-state-cam-disclosure-matrix",
+      "description": "Compare state-level CAM disclosure requirements."
+    },
+    {
+      "title": "Property Tax Appeal Recovery Calculator",
+      "path": "/tools/property-tax-appeal-recovery-calculator",
+      "description": "Model tax appeal recovery impact for pass-through charges."
+    },
+    {
+      "title": "Lease Clause Extraction Matrix",
+      "path": "/tools/lease-clause-extraction-matrix",
+      "description": "Track lease clauses that affect CAM recovery."
+    }
+  ],
+  "comparisons": [
+    {
+      "title": "CapVeri vs Yardi",
+      "path": "/vs/yardi",
+      "description": "ERP output validation versus CAM reconciliation QA."
+    },
+    {
+      "title": "CapVeri vs MRI Software",
+      "path": "/vs/mri",
+      "description": "Independent reconciliation validation compared with MRI workflows."
+    },
+    {
+      "title": "CapVeri vs Sage Intacct",
+      "path": "/vs/sage-intacct",
+      "description": "CAM reconciliation validation compared with general ledger-centric accounting workflows."
+    },
+    {
+      "title": "CapVeri vs AppFolio",
+      "path": "/vs/appfolio",
+      "description": "CAM reconciliation depth compared with general property management software."
+    },
+    {
+      "title": "CapVeri vs Buildium",
+      "path": "/vs/buildium",
+      "description": "Validation tooling versus SMB-oriented property management software."
+    },
+    {
+      "title": "CapVeri vs RealPage",
+      "path": "/vs/realpage",
+      "description": "Independent CAM QA compared with RealPage expense recovery workflows."
+    },
+    {
+      "title": "CapVeri vs Visual Lease",
+      "path": "/vs/visual-lease",
+      "description": "CAM reconciliation validation compared with lease-accounting-first workflows."
+    },
+    {
+      "title": "CapVeri vs Excel",
+      "path": "/vs/excel",
+      "description": "Deterministic audit trails versus spreadsheet-based reconciliation."
+    },
+    {
+      "title": "CapVeri vs Tenant Auditors",
+      "path": "/vs/tenant-auditors",
+      "description": "Catching errors before a tenant-side audit firm does."
+    },
+    {
+      "title": "CapVeri vs CAM Consultants",
+      "path": "/vs/cam-consultants",
+      "description": "Purpose-built software compared with one-time CAM consulting engagements."
+    },
+    {
+      "title": "CapVeri vs Manual Reconciliation",
+      "path": "/vs/manual-reconciliation",
+      "description": "Automated verification compared with spreadsheet and manual CAM workflows."
+    },
+    {
+      "title": "CapVeri vs Outsourced CAM",
+      "path": "/vs/outsourced-cam",
+      "description": "In-house verification software compared with outsourced CAM reconciliation firms."
+    },
+    {
+      "title": "CapVeri vs Property Accounting Software",
+      "path": "/vs/property-accounting-software",
+      "description": "Dedicated CAM QA compared with general property accounting platforms."
+    }
+  ],
+  "keyPages": [
+    {
+      "title": "Pricing",
+      "path": "/pricing",
+      "description": "Current Reconcile pricing with unit-based annual totals, trial terms, and the first-year offer."
+    },
+    {
+      "title": "Pricing Markdown",
+      "path": "/pricing.md",
+      "description": "Machine-readable pricing summary for AI agents evaluating CAM reconciliation software."
+    },
+    {
+      "title": "Sample Report",
+      "path": "/sample-report",
+      "description": "Example reconciliation output with traceability and leakage detail."
+    },
+    {
+      "title": "Case Studies",
+      "path": "/case-studies",
+      "description": "Recovery scenarios and operational outcomes from CAM workflows."
+    },
+    {
+      "title": "ROI Calculator",
+      "path": "/roi",
+      "description": "Model the recovery value of fixing reconciliation errors."
+    },
+    {
+      "title": "Product Tour",
+      "path": "/product-tour",
+      "description": "Walk through the export-to-verification workflow before starting a trial."
+    },
+    {
+      "title": "Best CAM Reconciliation Software",
+      "path": "/best/cam-reconciliation-software",
+      "description": "Commercial buyer's guide comparing software options, proof assets, and next steps."
+    },
+    {
+      "title": "Alternatives Hub",
+      "path": "/alternatives",
+      "description": "Vendor-specific alternatives pages for Yardi, MRI, and AppFolio workflows."
+    },
+    {
+      "title": "Integrations Hub",
+      "path": "/integrations",
+      "description": "ERP export verification guides for Yardi, MRI, RealPage, and AppFolio."
+    },
+    {
+      "title": "Solutions Hub",
+      "path": "/solutions",
+      "description": "Use-case pages for year-end reconciliation, Yardi error detection, and recovery optimization."
+    },
+    {
+      "title": "Switch Hub",
+      "path": "/switch",
+      "description": "Migration guides for switching from Excel, outsourced CAM, and manual processes."
+    },
+    {
+      "title": "About",
+      "path": "/about",
+      "description": "Company background, positioning, and founder authority."
+    }
+  ],
+  "byRole": [
+    {
+      "title": "CAM Reconciliation by Role",
+      "path": "/for",
+      "description": "Role pages showing how CapVeri helps each member of a CRE finance and property management team."
+    },
+    {
+      "title": "For Property Controllers",
+      "path": "/for/property-controller",
+      "description": "CapVeri rechecks every building's gross-up, caps, and GL coding before statements go out."
+    },
+    {
+      "title": "For CFOs and Financial Controllers",
+      "path": "/for/cfo-financial-controller",
+      "description": "See portfolio CAM leakage and audit risk as a number before a tenant auditor finds it."
+    },
+    {
+      "title": "For Lease Administrators",
+      "path": "/for/lease-administrator",
+      "description": "Check that each reconciliation matches the tracked lease terms: exclusions, caps, and audit rights."
+    },
+    {
+      "title": "For Property Accountants",
+      "path": "/for/property-accountant",
+      "description": "Flag miscoded entries and CapEx in operating pools before year-end close."
+    },
+    {
+      "title": "For Asset Managers",
+      "path": "/for/asset-manager",
+      "description": "Quantify building-level CAM leakage and cap exposure that affect NOI before you buy or sell."
+    },
+    {
+      "title": "For Directors of Property Management",
+      "path": "/for/director-property-management",
+      "description": "Standardize CAM reconciliation across the team and scale without new headcount."
+    }
+  ],
+  "keyResources": [
+    {
+      "title": "Export Guide",
+      "path": "/resources/export-guide",
+      "description": "The three files property managers should pull before running reconciliation math."
+    },
+    {
+      "title": "CAM Gross-Up Calculation Guide",
+      "path": "/resources/cam-gross-up-calculation-guide",
+      "description": "The gross-up logic, threshold handling, and common error patterns."
+    },
+    {
+      "title": "Pro-Rata Share Calculation",
+      "path": "/resources/pro-rata-share-calculation",
+      "description": "Formula, denominator disputes, and BOMA 2024 measurement effects."
+    },
+    {
+      "title": "Tenant CAM Dispute Guide",
+      "path": "/resources/tenant-cam-dispute",
+      "description": "Landlord-side dispute workflow, documentation prep, and response timing."
+    },
+    {
+      "title": "CAM Pre-Send Checklist",
+      "path": "/resources/cam-pre-send-packet-checklist",
+      "description": "Operator checklist before statements go out."
+    },
+    {
+      "title": "GL Coding Guide",
+      "path": "/resources/gl-coding-guide",
+      "description": "GL classification guidance for recoverable versus non-recoverable expenses."
+    }
+  ],
+  "blogPosts": [
+    {
+      "title": "7 CAM Reconciliation Errors That Cost Landlords the Most",
+      "path": "/blog/cam-reconciliation-errors",
+      "description": "The highest-value error patterns to catch before statements ship."
+    },
+    {
+      "title": "CAM Numbers Don't Match Yardi?",
+      "path": "/blog/cam-numbers-not-matching-yardi",
+      "description": "Five root causes of Yardi-driven reconciliation variances."
+    },
+    {
+      "title": "CAM Reconciliation Deadlines",
+      "path": "/blog/cam-reconciliation-deadlines",
+      "description": "Timing risk, lease deadlines, and why late statements become collection problems."
+    },
+    {
+      "title": "CAM Reconciliation Audit Trail",
+      "path": "/blog/cam-reconciliation-audit-trail",
+      "description": "How landlords document a reconciliation so tenant disputes stay factual and defensible."
+    }
+  ]
+}

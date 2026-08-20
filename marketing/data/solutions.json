@@ -1,0 +1,303 @@
+{
+  "lastUpdated": "2026-03-26",
+  "solutions": [
+    {
+      "slug": "year-end-cam-reconciliation",
+      "name": "Automate Year-End CAM Reconciliation",
+      "metaTitle": "Automate Year-End CAM Reconciliation",
+      "metaDescription": "Cut your Q1 CAM reconciliation season from weeks to days. CapVeri automates GL mapping, gross-up calculations, and tenant share allocation across your portfolio.",
+      "headline": "Automate Year-End CAM Reconciliation",
+      "subheadline": "Q1 reconciliation season takes weeks of manual spreadsheet work. CapVeri cuts that to days, with every calculation traceable.",
+      "datePublished": "2026-03-26",
+      "dateModified": "2026-03-26",
+      "problem": {
+        "heading": "The Year-End Reconciliation Crunch Is Unsustainable",
+        "paragraphs": [
+          "Every January, property controllers face the same cycle: export GL data from Yardi or MRI, map hundreds of expense codes to CAM pools, calculate gross-ups for partially occupied buildings, apply administrative fees and caps, then allocate shares to dozens of tenants across multiple properties. A single building can take hours of spreadsheet work, and most portfolios have 20+ buildings that all need reconciliation before March deadlines.",
+          "The manual process is not just slow. It is error-prone. Misclassified GL codes, forgotten cap adjustments, and incorrect square footage inputs compound into billing errors. They erode tenant trust and leave recoverable dollars on the table. When tenants audit your statements and find mistakes, the cost in staff time, legal exposure, and relationship damage far exceeds the original error amount."
+        ]
+      },
+      "solution": {
+        "heading": "How CapVeri Automates Year-End Reconciliation",
+        "paragraphs": [
+          "CapVeri ingests your GL export files directly. No API integration or ERP configuration required. Our parser recognizes Yardi, MRI, and generic CSV formats automatically. It maps expense codes to standardized CAM pools using BOMA 2024 methodology. Within minutes of uploading, you have a clear view of every expense category, with automatic classification suggestions and flagged anomalies.",
+          "From there, CapVeri runs deterministic financial calculations: gross-up adjustments for vacancy, administrative fee application, cap enforcement per lease terms, and pro-rata tenant share allocation. Every calculation traces back to the source GL line. What used to take your team weeks of spreadsheet work now happens in an afternoon."
+        ]
+      },
+      "features": [
+        { "icon": "FileText", "title": "Automatic GL Mapping", "description": "Upload your Yardi or MRI GL export and CapVeri maps expense codes to BOMA-standard CAM pools automatically, flagging any codes that need manual review." },
+        { "icon": "Calculator", "title": "Deterministic Calculations", "description": "Gross-up, caps, admin fees, and tenant share allocation computed with full precision. No AI guesswork on financial math. Every number traces to a source." },
+        { "icon": "Shield", "title": "Audit-Ready Output", "description": "Generate tenant reconciliation statements with full calculation backup. Every figure links to the originating GL entry, making tenant audits straightforward." },
+        { "icon": "Clock", "title": "15-Minute Per Building", "description": "Spreadsheet work used to take hours per building. CapVeri does it in about 15 minutes. That includes review and approval time." }
+      ],
+      "metrics": [
+        { "value": "Minutes", "label": "Run a building reconciliation in one short session" },
+        { "value": "Mapped", "label": "GL codes matched to expense pools for your review" },
+        { "value": "Zero", "label": "Rounding errors in tenant share allocation" }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Export Your GL Data", "description": "Pull your year-end GL expense report from Yardi, MRI, or any system that exports CSV. No special configuration or custom reports needed." },
+        { "step": 2, "title": "Upload to CapVeri", "description": "Drag and drop your file. CapVeri auto-detects the format, parses columns, and maps expense codes to standardized CAM pools." },
+        { "step": 3, "title": "Review Flagged Items", "description": "CapVeri highlights anomalies, unrecognized codes, and year-over-year variances. Approve or reclassify with a single click." },
+        { "step": 4, "title": "Generate Reconciliation Statements", "description": "Run calculations, apply lease-specific caps and fees, and export tenant-ready reconciliation packages with full audit backup." }
+      ],
+      "faqs": [
+        { "question": "What GL export formats does CapVeri accept?", "answer": "CapVeri natively parses Yardi GL exports, MRI financial reports, and generic CSV/Excel files. If your system can export a spreadsheet of expenses with account codes, amounts, and dates, CapVeri can ingest it." },
+        { "question": "How does CapVeri handle buildings with different fiscal years?", "answer": "Each property in CapVeri can have its own reconciliation period. You can upload and reconcile properties independently, whether they follow calendar year, fiscal year, or lease-year timing." },
+        { "question": "Can I reconcile multiple buildings at once?", "answer": "Yes. Upload GL exports for your entire portfolio and CapVeri processes them in parallel. You can review and approve each building independently or batch-approve properties that pass automated validation checks." },
+        { "question": "What if my tenant's lease has a custom cap structure?", "answer": "CapVeri supports cumulative caps, compounding caps, CPI-based caps, and base-year stops. You configure each tenant's cap terms once, and they are applied automatically in every reconciliation cycle." },
+        { "question": "Is CapVeri a replacement for Yardi or MRI?", "answer": "No. CapVeri works alongside your existing property management system. You continue using Yardi or MRI for day-to-day operations and simply export your GL data to CapVeri for reconciliation. There is no migration, no integration project, and no disruption to your existing workflows." }
+      ],
+      "relatedSolutions": [
+        { "slug": "multi-property-cam", "title": "CAM Reconciliation Across Your Portfolio" },
+        { "slug": "yardi-cam-errors", "title": "Find & Fix CAM Errors in Yardi Exports" }
+      ],
+      "relatedResources": [
+        { "href": "/cam-reconciliation-guide", "title": "Year-End Reconciliation Workflow Guide" },
+        { "href": "/resources/cam-reconciliation-timeline-checklist", "title": "Q1 Reconciliation Season Calendar" },
+        { "href": "/resources/cam-pre-send-packet-checklist", "title": "CAM Reconciliation Checklist for Controllers" }
+      ],
+      "relatedTools": ["cam-reconciliation-calculator", "gross-up-calculator"],
+      "ctaHeading": "Finish Reconciliation Season in Days, Not Weeks",
+      "ctaDescription": "Upload your first GL export and see CapVeri run year-end CAM reconciliation. Free trial includes full calculation output for one building."
+    },
+    {
+      "slug": "multi-property-cam",
+      "name": "CAM Reconciliation Across Your Portfolio",
+      "metaTitle": "Multi-Property CAM Reconciliation Software",
+      "metaDescription": "Manage CAM reconciliation across 10, 50, or 500+ buildings from a single dashboard. CapVeri standardizes your process and catches errors at portfolio scale.",
+      "headline": "CAM Reconciliation Across Your Portfolio",
+      "subheadline": "One consistent, traceable reconciliation process for every building in your portfolio. Whether you manage 10 properties or 500.",
+      "datePublished": "2026-03-26",
+      "dateModified": "2026-03-26",
+      "problem": {
+        "heading": "Portfolio Scale Makes Manual Reconciliation Impossible",
+        "paragraphs": [
+          "When you manage a single building, CAM reconciliation is tedious but manageable. At 10+ properties, the process breaks down. Each building has different expense structures, different lease terms, different cap provisions, and often different property management systems. Controllers end up maintaining dozens of independent spreadsheets with inconsistent methods, making it hard to ensure accuracy or meet deadlines across the portfolio.",
+          "The real cost is not just time. It is the lack of visibility. Portfolio managers cannot easily compare CAM expenses across buildings, identify properties with abnormal cost trends, or verify that reconciliation methods are consistent. When a tenant at Building A gets different treatment than an identical lease at Building B, it creates legal exposure and undermines credibility with institutional tenants."
+        ]
+      },
+      "solution": {
+        "heading": "How CapVeri Standardizes Portfolio-Wide Reconciliation",
+        "paragraphs": [
+          "CapVeri gives you a single dashboard for every property in your portfolio. Upload GL exports from any combination of Yardi, MRI, or other systems, and each building gets the same BOMA 2024 aligned methodology. A mapping decision you make for one building automatically applies to similar codes in other buildings.",
+          "Portfolio-level reporting lets you compare CAM costs per square foot across buildings, spot outliers, and track year-over-year trends. When reconciliation season arrives, you can see exactly which buildings are complete, which need review, and which have flagged anomalies. All from one screen instead of chasing down spreadsheets from regional teams."
+        ]
+      },
+      "features": [
+        { "icon": "BarChart3", "title": "Portfolio Dashboard", "description": "View reconciliation status, expense trends, and recovery ratios across your entire portfolio from a single screen. Filter by region, property type, or management team." },
+        { "icon": "Zap", "title": "Consistent Methodology", "description": "Apply the same BOMA 2024 aligned classification and calculation rules across every building. No more inconsistent spreadsheet formulas between regional offices." },
+        { "icon": "Search", "title": "Cross-Property Anomaly Detection", "description": "CapVeri flags properties with expense patterns that deviate significantly from portfolio averages, helping you catch misclassifications and billing errors before tenants do." },
+        { "icon": "TrendingUp", "title": "Portfolio-Level Reporting", "description": "Generate CAM cost benchmarks, recovery ratio analysis, and year-over-year variance reports that roll up from property level to portfolio level automatically." }
+      ],
+      "metrics": [
+        { "value": "One screen", "label": "Track every building's reconciliation in one place" },
+        { "value": "Consistent", "label": "Same BOMA 2024 rules across every building" },
+        { "value": "Recovery", "label": "Surface recovery improvements across your portfolio" }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Onboard Your Portfolio", "description": "Add properties to CapVeri with basic details: square footage, building type, and tenant roster. No complex setup or data migration required." },
+        { "step": 2, "title": "Upload GL Exports in Bulk", "description": "Upload GL exports for multiple buildings at once. CapVeri auto-detects the source system format and processes each building in parallel." },
+        { "step": 3, "title": "Review Portfolio-Wide Flags", "description": "The portfolio dashboard highlights buildings with anomalies, incomplete data, or year-over-year variances that exceed your configured thresholds." },
+        { "step": 4, "title": "Approve and Generate Statements", "description": "Batch-approve buildings that pass validation, review flagged properties individually, and generate tenant reconciliation packages for the entire portfolio." }
+      ],
+      "faqs": [
+        { "question": "Can different buildings use different property management systems?", "answer": "Absolutely. Upload a Yardi export for one building and an MRI export for the next. CapVeri normalizes everything into a consistent format regardless of the source system." },
+        { "question": "How does CapVeri handle properties acquired mid-year?", "answer": "CapVeri supports pro-rata reconciliation periods. For acquired properties, you set the acquisition date and CapVeri automatically adjusts expense allocations and tenant shares for the partial year." },
+        { "question": "Can I delegate buildings to different team members?", "answer": "Yes. CapVeri supports role-based access so you can assign buildings to individual controllers while portfolio managers retain visibility across the entire portfolio." },
+        { "question": "What reporting is available at the portfolio level?", "answer": "Portfolio reports include CAM cost per SF by property type, recovery ratio trends, year-over-year expense variance analysis, reconciliation completion tracking, and anomaly summaries across all properties." }
+      ],
+      "relatedSolutions": [
+        { "slug": "year-end-cam-reconciliation", "title": "Automate Year-End CAM Reconciliation" },
+        { "slug": "cam-recovery-optimization", "title": "Maximize Your CAM Recovery Ratio" }
+      ],
+      "relatedResources": [
+        { "href": "/resources/software", "title": "Portfolio Manager CAM Guide" },
+        { "href": "/resources/expenses", "title": "Class A Office CAM Guide" },
+        { "href": "/resources/benchmarking-operating-expenses", "title": "How to Benchmark CAM Across Your Portfolio" }
+      ],
+      "relatedTools": ["cam-reconciliation-calculator", "occupancy-gross-up-calculator"],
+      "ctaHeading": "See Your Entire Portfolio in One Dashboard",
+      "ctaDescription": "Upload GL exports for your first few buildings and run portfolio-wide CAM reconciliation. Free trial includes full access to portfolio analytics."
+    },
+    {
+      "slug": "acquisition-due-diligence",
+      "name": "CAM Due Diligence for Property Acquisitions",
+      "metaTitle": "CAM Due Diligence for CRE Acquisitions",
+      "metaDescription": "Validate CAM recovery assumptions before closing. CapVeri analyzes historical GL data to identify billing errors, under-recovery, and cap exposure in acquisition targets.",
+      "headline": "CAM Due Diligence for Property Acquisitions",
+      "subheadline": "Verify CAM recovery assumptions before you close. CapVeri analyzes the seller's GL data to surface billing errors, under-recovery, and hidden cap exposure.",
+      "datePublished": "2026-03-26",
+      "dateModified": "2026-03-26",
+      "problem": {
+        "heading": "CAM Assumptions in Underwriting Are Often Wrong",
+        "paragraphs": [
+          "Acquisition teams build pro formas based on the seller's reported CAM recovery ratios, but those numbers are frequently unreliable. Sellers may have miscategorized expenses, missed gross-up adjustments, or failed to enforce caps correctly. That inflates or deflates the apparent recovery rate. Without digging into the actual GL data and lease terms, buyers inherit billing errors that directly impact NOI and asset valuation.",
+          "Traditional due diligence relies on sampling: review a handful of tenant reconciliation statements and spot-check a few expense categories. This approach misses systemic issues like incorrect BOMA methodology, inconsistent allocation bases, or expense codes that have drifted between recoverable and non-recoverable pools over time. The result is acquisition models built on assumptions that do not hold up once you take ownership."
+        ]
+      },
+      "solution": {
+        "heading": "How CapVeri Powers Acquisition CAM Diligence",
+        "paragraphs": [
+          "CapVeri lets you run an independent reconciliation on the acquisition target's GL data without needing access to their property management system. Request the seller's GL export for the past 2-3 years, upload it to CapVeri, and within hours you have a clear picture: what was spent, how it was classified, what should have been recovered, and where the gaps are.",
+          "The analysis goes beyond simple expense review. CapVeri compares the seller's implied recovery ratio against what the lease terms actually allow, identifies cap provisions that may compress future recoveries, and flags expense trends that suggest deferred maintenance or cost-shifting. Your acquisition team gets hard numbers for pricing negotiations and post-close budgeting."
+        ]
+      },
+      "features": [
+        { "icon": "Search", "title": "Independent Reconciliation", "description": "Run your own CAM reconciliation on the seller's GL data. Compare your results against the seller's reported numbers to identify discrepancies." },
+        { "icon": "AlertTriangle", "title": "Recovery Gap Analysis", "description": "CapVeri calculates the theoretical maximum recovery based on lease terms and compares it to actual billings, quantifying dollars left on the table." },
+        { "icon": "TrendingUp", "title": "Expense Trend Analysis", "description": "Review 2-3 years of expense data to spot abnormal trends: deferred maintenance cycles, one-time capital charges misclassified as operating, or cost categories growing faster than market benchmarks." },
+        { "icon": "Shield", "title": "Cap Exposure Modeling", "description": "Model how tenant cap provisions will affect future CAM recovery under your projected expense growth assumptions. Quantify cap exposure before you set your acquisition price." }
+      ],
+      "metrics": [
+        { "value": "Per SF", "label": "Surface hidden recovery gaps before you close" },
+        { "value": "24-48 hrs", "label": "Typical turnaround for a single-property analysis" },
+        { "value": "Pre-close", "label": "Check deals for material CAM misstatement" }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Request Seller's GL Export", "description": "As part of your standard diligence package, request the seller's GL expense detail for the past 2-3 years in CSV or Excel format." },
+        { "step": 2, "title": "Upload to CapVeri", "description": "Upload the GL data along with the rent roll and key lease abstracts. CapVeri maps expenses and builds an independent reconciliation model." },
+        { "step": 3, "title": "Review Diligence Report", "description": "CapVeri produces a diligence report showing recovery gaps, expense anomalies, cap exposure, and comparison against the seller's reported figures." },
+        { "step": 4, "title": "Negotiate with Data", "description": "Use the quantified recovery gaps and cap exposure projections in your pricing negotiations. Post-close, the same CapVeri setup becomes your ongoing reconciliation tool." }
+      ],
+      "faqs": [
+        { "question": "What data do I need from the seller?", "answer": "At minimum, you need the GL expense detail (CSV or Excel) for 2-3 years and the rent roll with square footage. Lease abstracts with cap and recovery provisions improve the analysis significantly." },
+        { "question": "How quickly can CapVeri produce a diligence report?", "answer": "For a single property, expect results within 24-48 hours of uploading complete data. The bulk of that time is human review of flagged items, not processing." },
+        { "question": "Can I use CapVeri for portfolio acquisitions?", "answer": "Yes. Upload GL data for every property in the acquisition and get a portfolio-level diligence summary alongside individual property reports. This is especially valuable for REIT-to-REIT transactions." },
+        { "question": "What happens after the acquisition closes?", "answer": "The reconciliation model you built during diligence becomes your ongoing reconciliation tool. There is no re-setup or data migration. Just upload the next period's GL export and continue." },
+        { "question": "Does CapVeri replace a commercial real estate attorney for due diligence?", "answer": "No. CapVeri handles the financial analysis of CAM expenses and recoveries. You still need legal counsel for lease interpretation, title review, and overall transaction structure. CapVeri gives your attorneys better data to work with." }
+      ],
+      "relatedSolutions": [
+        { "slug": "cam-recovery-optimization", "title": "Maximize Your CAM Recovery Ratio" },
+        { "slug": "multi-property-cam", "title": "CAM Reconciliation Across Your Portfolio" }
+      ],
+      "relatedResources": [
+        { "href": "/cam-reconciliation-guide", "title": "Acquisition Due Diligence Workflow" },
+        { "href": "/resources/recovery-ratio-analysis", "title": "CAM Recovery Ratio Calculator Guide" },
+        { "href": "/resources/export-guide", "title": "CAM Due Diligence Checklist for Buyers" }
+      ],
+      "relatedTools": ["cam-reconciliation-calculator", "recovery-ratio-calculator"],
+      "ctaHeading": "Validate CAM Assumptions Before You Close",
+      "ctaDescription": "Upload the seller's GL data and get an independent CAM recovery analysis within 48 hours. Free trial includes a full diligence report for one property."
+    },
+    {
+      "slug": "yardi-cam-errors",
+      "name": "Find & Fix CAM Errors in Yardi Exports",
+      "metaTitle": "Find & Fix CAM Errors in Yardi Exports",
+      "metaDescription": "Yardi CAM configuration drift causes billing errors that compound over time. CapVeri analyzes your Yardi GL exports to surface misclassified codes, incorrect pools, and allocation mistakes.",
+      "headline": "Find & Fix CAM Errors in Yardi Exports",
+      "subheadline": "Yardi is powerful, but CAM configuration drift creates billing errors that compound silently. CapVeri catches what Yardi's built-in reports miss.",
+      "datePublished": "2026-03-26",
+      "dateModified": "2026-03-26",
+      "problem": {
+        "heading": "Yardi Configuration Drift Creates Silent Billing Errors",
+        "paragraphs": [
+          "Yardi Voyager's CAM module is highly configurable, which is both its strength and its biggest risk. Over time, GL account mappings drift: new expense codes get added without proper pool assignments, chart of accounts restructuring breaks recovery group linkages, and staff turnover means the person who set up the original CAM configuration is long gone. The result is a system that runs calculations on incorrect inputs without any warning.",
+          "These errors are not obvious from Yardi's standard reports. A misclassified GL code might shift $50,000 from a recoverable pool to a non-recoverable one, silently reducing your CAM billings. Incorrect occupancy percentages in gross-up calculations, forgotten base year resets after lease renewals, and stale square footage figures all compound into material billing discrepancies. They only surface when a tenant hires an auditor. By that point you owe refunds plus interest."
+        ]
+      },
+      "solution": {
+        "heading": "How CapVeri Catches Yardi CAM Errors",
+        "paragraphs": [
+          "CapVeri works as an independent check on top of your Yardi data. Export your GL report from Yardi (the same export you already run for reconciliation) and upload it to CapVeri. Our parser understands Yardi's export format natively, including account segments, property codes, and GL descriptions. CapVeri then independently classifies every expense line and runs its own reconciliation calculation.",
+          "By comparing CapVeri's independent results against what Yardi produced, you immediately see discrepancies. Misclassified GL codes, incorrect pool assignments, gross-up errors, and cap calculation mistakes all show up as line-item variances. CapVeri does not replace Yardi. It gives you confidence that Yardi's output is correct, and when it is not, it tells you exactly where to look and what to fix."
+        ]
+      },
+      "features": [
+        { "icon": "FileText", "title": "Native Yardi GL Parsing", "description": "CapVeri understands Yardi Voyager export formats natively. Upload your standard GL expense report. No custom reports or special exports needed." },
+        { "icon": "AlertTriangle", "title": "Classification Variance Detection", "description": "Every GL code is independently classified against BOMA 2024 standards. Discrepancies between CapVeri's classification and Yardi's pool assignment are flagged automatically." },
+        { "icon": "Calculator", "title": "Calculation Cross-Check", "description": "CapVeri runs its own gross-up, cap, and allocation calculations and compares results against Yardi's output. Line-level variances pinpoint exactly where errors originate." },
+        { "icon": "CheckCircle", "title": "Error Resolution Tracking", "description": "Track which errors have been corrected in Yardi, which are accepted as immaterial, and which need escalation. Build an audit trail of your quality control process." }
+      ],
+      "metrics": [
+        { "value": "Detect", "label": "Flag material CAM misclassifications in Yardi exports" },
+        { "value": "ROI", "label": "Model your own building with the ROI calculator" },
+        { "value": "5 min", "label": "To upload and start Yardi GL analysis" }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Export from Yardi", "description": "Run your standard GL expense report from Yardi Voyager. Use the same export you already generate for reconciliation. No custom setup required." },
+        { "step": 2, "title": "Upload to CapVeri", "description": "Drag and drop the Yardi export. CapVeri auto-detects the format, parses account segments, and maps every GL code independently." },
+        { "step": 3, "title": "Review Variance Report", "description": "CapVeri highlights every line where its independent classification or calculation differs from what Yardi would produce. Each variance includes the dollar impact and recommended correction." },
+        { "step": 4, "title": "Fix in Yardi and Verify", "description": "Correct the identified issues in Yardi's CAM configuration. Re-export and re-upload to verify the fixes. CapVeri tracks resolution status across reconciliation cycles." }
+      ],
+      "faqs": [
+        { "question": "Does CapVeri connect directly to Yardi?", "answer": "No. There is no integration to set up. You export a CSV from Yardi and upload it. This means no IT involvement, no API credentials, and no risk to your Yardi instance. Setup takes minutes, not months." },
+        { "question": "Which Yardi versions are supported?", "answer": "CapVeri parses exports from Yardi Voyager (all current versions) and Yardi Breeze. If your Yardi instance can export a GL expense report to CSV or Excel, CapVeri can read it." },
+        { "question": "How often should I run the cross-check?", "answer": "We recommend running a cross-check quarterly during the fiscal year and as a final verification before issuing year-end reconciliation statements. Some clients run it monthly as part of their close process." },
+        { "question": "Will this catch errors in my Yardi base year setup?", "answer": "Yes. CapVeri flags tenants where the calculated base year amount does not align with what the lease terms specify, which is one of the most common and costly Yardi configuration errors." }
+      ],
+      "relatedSolutions": [
+        { "slug": "year-end-cam-reconciliation", "title": "Automate Year-End CAM Reconciliation" },
+        { "slug": "cam-recovery-optimization", "title": "Maximize Your CAM Recovery Ratio" }
+      ],
+      "relatedResources": [
+        { "href": "/vs/yardi", "title": "CapVeri vs Yardi for CAM Reconciliation" },
+        { "href": "/resources/software/yardi-voyager/cam-setup", "title": "Yardi Voyager CAM Setup Guide" },
+        { "href": "/blog/cam-numbers-not-matching-yardi", "title": "How to Audit Your Yardi CAM Configuration" }
+      ],
+      "relatedTools": ["cam-reconciliation-calculator", "gross-up-calculator"],
+      "ctaHeading": "Find Out What Yardi Is Getting Wrong",
+      "ctaDescription": "Upload your Yardi GL export and get an independent variance analysis in minutes. Free trial includes a full error report for one building."
+    },
+    {
+      "slug": "cam-recovery-optimization",
+      "name": "Maximize Your CAM Recovery Ratio",
+      "metaTitle": "Maximize CAM Recovery Ratio",
+      "metaDescription": "Identify and close CAM recovery gaps across your portfolio. CapVeri analyzes expense classifications, gross-up calculations, and lease terms to recover dollars you are leaving on the table.",
+      "headline": "Maximize Your CAM Recovery Ratio",
+      "subheadline": "Recovery ratios depend on your lease mix. Mixed portfolios often recover just 70-85%. CapVeri finds the gaps costing you money.",
+      "datePublished": "2026-03-26",
+      "dateModified": "2026-03-26",
+      "problem": {
+        "heading": "Revenue Leakage Hides in CAM Reconciliation Details",
+        "paragraphs": [
+          "CAM recovery leakage rarely comes from one big mistake. It builds from dozens of small issues: an expense code mapped to the wrong pool, a gross-up calculation using the wrong occupancy percentage, a tenant whose cap was not updated after a lease amendment, or administrative fees never applied because the lease clause was missed during setup. Each issue might cost $2,000-$10,000 per year per building, but across a portfolio they add up to hundreds of thousands in lost revenue.",
+          "The challenge is visibility. Standard ERP reports show you what you billed, not what you should have billed. Without an independent check of every expense classification, every calculation input, and every lease provision, there is no way to know whether your recovery ratio is leaving money on the table. Most controllers suspect gaps but lack the time to find them."
+        ]
+      },
+      "solution": {
+        "heading": "How CapVeri Identifies and Closes Recovery Gaps",
+        "paragraphs": [
+          "CapVeri calculates your theoretical maximum recovery: what you would bill if every eligible expense were correctly classified, every gross-up used accurate occupancy data, every cap were properly applied, and every administrative fee were charged per lease terms. It then compares this theoretical maximum against your actual billings to quantify the gap.",
+          "Each recovery gap is broken down by cause: misclassified expenses, incorrect gross-up inputs, missed administrative fees, or cap provisions that could be restructured at lease renewal. CapVeri sorts gaps by dollar impact so your team can focus on corrections that matter most. Over time, the platform tracks your recovery ratio trend and alerts you when new leakage appears."
+        ]
+      },
+      "features": [
+        { "icon": "TrendingUp", "title": "Recovery Gap Quantification", "description": "See the exact dollar amount you are under-recovering, broken down by building, expense category, and root cause. Prioritize corrections by financial impact." },
+        { "icon": "Calculator", "title": "Gross-Up Optimization", "description": "CapVeri verifies that occupancy percentages, vacancy exclusions, and gross-up thresholds are set correctly for every building. Incorrect inputs are the single largest source of recovery leakage." },
+        { "icon": "Search", "title": "Expense Classification Audit", "description": "Every GL code is reviewed against BOMA 2024 standards to ensure recoverable expenses are not sitting in non-recoverable pools, and vice versa." },
+        { "icon": "BarChart3", "title": "Recovery Trend Tracking", "description": "Monitor your portfolio recovery ratio over time. Set targets, track progress, and get alerts when a building's recovery drops below your threshold." }
+      ],
+      "metrics": [
+        { "value": "Per SF", "label": "Model recovery improvement with the ROI calculator" },
+        { "value": "Your max", "label": "Recover up to what your leases already allow" },
+        { "value": "4-6 weeks", "label": "Typical time to full recovery optimization" }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Baseline Your Portfolio", "description": "Upload GL exports and current reconciliation data for your portfolio. CapVeri calculates your current recovery ratio for each building and the portfolio overall." },
+        { "step": 2, "title": "Review Recovery Gap Report", "description": "CapVeri identifies every source of under-recovery: misclassified expenses, gross-up errors, missed fees, and cap miscalculations. Each gap includes the dollar impact and recommended fix." },
+        { "step": 3, "title": "Implement Corrections", "description": "Work through the prioritized list of corrections. Update classifications in your ERP, fix gross-up inputs, and ensure lease terms are properly reflected in your billing setup." },
+        { "step": 4, "title": "Monitor and Maintain", "description": "Re-upload GL exports periodically. CapVeri tracks your recovery ratio trend and alerts you if new leakage emerges from configuration changes or new expense codes." }
+      ],
+      "faqs": [
+        { "question": "What is a typical CAM recovery ratio?", "answer": "It depends on your lease structure. Full NNN leases recover 90% to 100%. Office properties with base-year structures recover 60% to 80%. Mixed portfolios often land between 70% and 85%. The gap between your ratio and your lease maximum is real money. CapVeri helps you recover it." },
+        { "question": "How quickly will I see results?", "answer": "The initial analysis takes 1-2 days per property. Most clients see their first recovery improvements within the current reconciliation cycle. Full optimization across a portfolio typically takes 4-6 weeks." },
+        { "question": "Does improving recovery require changing tenant lease terms?", "answer": "Usually not. Most recovery gaps come from internal errors: misclassified expenses, incorrect calculation inputs, or overlooked lease provisions that already entitle you to higher billings. You are recovering what your leases already allow." },
+        { "question": "Can I quantify recovery improvement for my CFO?", "answer": "Yes. CapVeri produces a recovery improvement report showing before and after recovery ratios, total dollar impact by building and portfolio, and the specific corrections that drove the improvement. This is designed for C-suite and investor reporting." },
+        { "question": "Will tenants push back on higher CAM billings?", "answer": "CapVeri ensures every billing is supported by accurate calculations and proper documentation. When billings increase because errors are corrected, the audit trail demonstrates that the new amounts are what the lease always entitled you to recover. This actually reduces dispute risk compared to sending out statements with known or suspected errors." }
+      ],
+      "relatedSolutions": [
+        { "slug": "multi-property-cam", "title": "CAM Reconciliation Across Your Portfolio" },
+        { "slug": "acquisition-due-diligence", "title": "CAM Due Diligence for Property Acquisitions" }
+      ],
+      "relatedResources": [
+        { "href": "/resources/recovery-ratio-analysis", "title": "CAM Recovery Ratio Calculator Guide" },
+        { "href": "/cam-charges", "title": "CAM Expense Category Deep Dive" },
+        { "href": "/resources/cam-pre-send-packet-checklist", "title": "5 Ways to Improve Your CAM Recovery Ratio" }
+      ],
+      "relatedTools": ["recovery-ratio-calculator", "cam-reconciliation-calculator"],
+      "ctaHeading": "Find Out How Much You Are Leaving on the Table",
+      "ctaDescription": "Upload your GL data and get a recovery gap analysis that quantifies exactly how much additional CAM revenue you could be collecting. Free trial includes a full report for one building."
+    }
+  ]
+}

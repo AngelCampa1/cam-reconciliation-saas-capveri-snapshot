@@ -1,0 +1,20 @@
+Yardi Voyager GL Detail Report
+Report Date: 12/31/2024
+Run by: System Administrator
+
+Property,Account Code,Account Description,Date,Debit,Credit
+Sunset Plaza,6000-100,Utilities - Electric,01/05/2024,1250.00,
+Sunset Plaza,6000-200,Utilities - Water,01/07/2024,450.50,
+Sunset Plaza,6100-000,Janitorial,01/10/2024,800.00,
+Sunset Plaza,6200-100,Repairs - HVAC,01/12/2024,2500.00,
+Sunset Plaza,6300-000,Property Insurance,01/15/2024,3500.00,
+Sunset Plaza,7000-000,Tenant Reimbursement,01/20/2024,,1500.00
+Sunset Plaza,6000-100,Utilities - Electric,02/05/2024,1300.00,
+Sunset Plaza,6100-000,Janitorial,02/10/2024,850.00,
+Sunset Plaza,6200-200,Repairs - Plumbing,02/18/2024,675.25,
+Sunset Plaza,6300-000,Property Insurance,02/15/2024,3500.00,
+Sunset Plaza,6400-000,Landscaping,02/22/2024,450.00,
+Sunset Plaza,6000-100,Utilities - Electric,03/05/2024,1150.00,
+Sunset Plaza,6100-000,Janitorial,03/10/2024,800.00,
+Sunset Plaza,7000-000,Tenant Reimbursement,03/25/2024,,800.00
+Sunset Plaza,6200-100,Repairs - HVAC,03/28/2024,1200.00,

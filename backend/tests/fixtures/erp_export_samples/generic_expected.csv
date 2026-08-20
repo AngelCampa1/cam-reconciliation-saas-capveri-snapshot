@@ -1,0 +1,2 @@
+Property Name,Unit Number,Tenant Name,Period Start,Period End,Total Operating Expenses,Total Tax Expenses,Total Insurance Expenses,Total Capital Expenses,Gross-Up Factor,Grossed Operating Expenses,Tenant Pro-Rata Share,Tenant Share Before Cap,Cap Applied,Tenant Share After Cap,Admin Fee,Total Recovery,Status,Finalized At
+Org A Building,Suite 101,Sample Tenant LLC,2024-01-01,2024-12-31,150000.00,45000.00,12000.00,8000.00,1.0526,157895.00,0.25,39473.75,1184.21,38289.54,5743.43,44032.97,draft,

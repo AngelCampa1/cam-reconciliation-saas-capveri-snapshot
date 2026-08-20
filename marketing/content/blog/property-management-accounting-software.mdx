@@ -1,0 +1,263 @@
+---
+title: "Property Management Accounting Software: What CRE Finance Teams Need"
+description: "What CRE finance teams need from property management accounting software: CAM reconciliation, GL export depth, ASC 842 compliance, and how to evaluate Yardi, MRI, and alternatives."
+excerpt: "Most property management accounting software is built for landlords. Tenant-side CRE finance teams have different requirements. GL export quality, CAM reconciliation workflow, and ASC 842 variable payment tracking are where the gaps show up."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "What should CRE finance teams look for in property management accounting software?"
+    a: "The critical capabilities for tenant-side CRE finance teams are: (1) lease abstraction and tracking: capturing fixed vs variable payment terms, renewal options, and CAM exclusion language from the lease; (2) ASC 842 compliance: ROU asset and lease liability amortization schedules, fixed vs variable payment classification, and year-end true-up journal entry support; (3) CAM reconciliation workflow: ability to import the landlord's annual reconciliation statement, match line items against lease exclusions, and generate an auditable variance report; (4) GL export: clean, chart-of-accounts-mapped exports that feed into NetSuite, Sage Intacct, or your ERP without manual rekeying; (5) multi-property portfolio views with lease expiration tracking and CAM budget-vs-actual reporting."
+  - q: "How does Yardi handle CAM reconciliation for tenants?"
+    a: "Yardi is primarily landlord software. Its CAM reconciliation module is designed to generate the landlord's statement, not to help tenants audit it. Yardi Voyager's tenant portal shows the CAM statement, but it doesn't provide tools for the tenant to verify pro-rata share calculations, check controllable expense caps, or flag excluded items. Tenant-side CRE finance teams typically export Yardi data as CSV and build their own reconciliation review in Excel or a dedicated CAM tool. The export format is reasonably consistent, which is why tools like CapVeri build direct Yardi CSV importers. You get the landlord's data in a structured format without manual reentry."
+  - q: "What's the difference between property management accounting software and lease accounting software?"
+    a: "Property management accounting software (Yardi, MRI, Buildium, AppFolio) is primarily designed to manage the landlord's workflow: rent rolls, work orders, tenant billing, AP/AR for the property, and CAM pool calculations. Lease accounting software (CoStar Lease, Accruent, Visual Lease, ProLease) is designed to manage the tenant's compliance obligations: ASC 842 ROU asset and lease liability tracking, IBR documentation, modification events, and disclosure report generation. CRE finance teams with large portfolios often need both: a property management system for operational data (if they manage any properties) and a lease accounting system for compliance. For teams that are purely tenants, a lease accounting system plus a dedicated CAM reconciliation tool covers most needs."
+  - q: "Can Excel handle ASC 842 compliance for a 50-lease portfolio?"
+    a: "Technically yes, practically no. A 50-lease portfolio means 50 amortization schedules, each with monthly entries for 36 to 120 months, plus modification events, reassessment triggers, and disclosure aggregation. The calculations aren't complex individually, but the maintenance burden is high: every rent escalation event, modification, or IBR reassessment requires updating the schedule and cascading the changes. Audit trails in Excel are poor. You can't easily show an auditor what changed and when. For portfolios of 10 or fewer leases with simple terms, Excel is defensible. Above that threshold, dedicated software pays for itself in audit hours avoided."
+  - q: "What GL export formats do property management accounting systems typically support?"
+    a: "Most enterprise property management platforms (Yardi, MRI, RealPage) export to CSV and support direct integration with major ERPs. Yardi has a native integration with NetSuite and Sage Intacct. MRI has its own GL module but also exports GAAP-formatted journals that import into most systems. The practical issue isn't format. It's chart of accounts mapping. Yardi's default GL structure rarely matches your company's COA, so you need a mapping layer. Smaller platforms (Buildium, AppFolio) export to CSV but don't have the GL sophistication of enterprise systems; you'll typically export to Excel and do the GL mapping manually."
+---
+
+The CRE finance team at a 200-property retail chain has a specific accounting software problem that doesn't match what most property management software vendors are selling: they're not the landlord. They're the tenant. Their job is to pay rent accurately, comply with ASC 842, review 200 CAM reconciliation statements per year, and keep the GL clean.
+
+Most **property management accounting software** is built for the landlord. It's designed to generate the rent roll, send the tenant invoices, calculate the CAM pool, and produce the reconciliation statement. All of that is useful to the landlord's team, and to the tenant's team as *inputs* to audit.
+
+This guide covers what CRE finance teams actually need when evaluating software for their function.
+
+## The Two Distinct Software Needs
+
+### 1. Lease Accounting Software (ASC 842 Compliance)
+
+Your ASC 842 obligation is the tenant's job. The landlord doesn't care about your ROU asset schedule. You need software that:
+
+- Stores lease terms (commencement, term, payment schedule, escalations, options)
+- Classifies each lease (operating vs finance) and documents the conclusion
+- Calculates and maintains the lease amortization schedule (ROU asset and liability)
+- Handles modification events (term extension, space reduction, rent change)
+- Generates the disclosure footnote (maturity table, weighted-average rate and term, lease cost by type)
+- Exports journal entries in your ERP's format
+
+The relevant standard: [ASC 842 lease accounting](/resources/asc-842-lease-accounting-guide). The comparison to IFRS: [US GAAP lease accounting guide](/resources/us-gaap-lease-accounting-guide).
+
+### 2. CAM Reconciliation Software
+
+This is a separate problem. Your landlord sends you a CAM reconciliation statement once a year. You need to:
+
+- Import the statement (from Yardi/MRI CSV exports or PDF)
+- Match each line to your lease's inclusion/exclusion list
+- Verify the pro-rata share calculation
+- Check whether controllable expense caps were applied
+- Flag items that should have been excluded (capital costs, management fee overages, non-permitted expenses)
+- Calculate what you actually owe vs what the landlord claims
+- Document the review for audit
+
+These two workflows are distinct, and very few single platforms do both well.
+
+---
+
+## The Landlord Software Ecosystem (and Why It Matters for Tenants)
+
+### Yardi Voyager / Yardi Breeze
+
+Yardi Voyager is the dominant enterprise property management platform for mid-to-large commercial landlords. If your landlords are institutional (REIT, private equity, large private), they're probably running on Yardi.
+
+**What this means for tenant-side teams:**
+- CAM reconciliation statements come in Yardi's format, usually a printed PDF or a Yardi-generated CSV
+- Yardi has a tenant portal that shows your ledger and statements, but no reconciliation audit tools for the tenant
+- Yardi GL exports are structured around the landlord's COA, so you'll need to remap to yours
+- CapVeri and other CAM tools have built Yardi CSV importers precisely because the format is consistent
+
+**Yardi's tenant portal strengths:** You can see your ledger balance, payment history, and open charges. You can download statements and payment confirmations.
+
+**Yardi's tenant portal gaps:** No line-item audit capability, no cap analysis, no flagging of excluded items. The tenant portal is a viewer, not an audit tool.
+
+### MRI Software
+
+MRI is Yardi's main enterprise competitor, particularly strong in office and mixed-use portfolios. Similar dynamic: MRI is landlord software, but MRI exports are reasonably structured for tenant import.
+
+MRI's CAM module calculates and distributes CAM charges across tenant pools. The outputs (the reconciliation statement) can be exported in formats that dedicated tenant-side tools can import.
+
+### RealPage
+
+RealPage is heavily used in multifamily residential but has a commercial leasing component. Less relevant for office/retail tenant teams.
+
+### Buildium and AppFolio
+
+Smaller-scale platforms used by smaller landlords. If your landlord uses one of these, expect less structured exports: often manual PDFs or spreadsheets. Your reconciliation workflow needs to handle unstructured input.
+
+---
+
+## What the Lease Accounting Software Market Looks Like
+
+### Enterprise Tier
+
+**CoStar Lease (formerly Lucernex)**: Strong in large retail portfolios. Good ASC 842 compliance engine, decent reporting. The link to CoStar's market data is a unique differentiator for lease administration.
+
+**Visual Lease**: Mid-market to enterprise. Strong compliance features, good audit trail, reasonable GL export. Popular among companies that adopted ASC 842 recently and needed something beyond Excel.
+
+**Accruent Lx Contracts**: More document management than pure lease accounting, but has ASC 842 modules. Better for companies with a mix of equipment and real estate leases.
+
+**ProLease**: Strong in office/retail CRE. Good disclosure reporting, modification handling, and IBR documentation workflow.
+
+**Nakisa Lease Administration**: Enterprise-grade, often implemented at large international companies. Strong IFRS 16 + ASC 842 dual-reporting capability.
+
+### Mid-Market
+
+**LeaseQuery**: Purpose-built for ASC 842 compliance. Clean UI, strong journal entry export to major ERPs. Good option for companies with 20–200 leases.
+
+**Lease Accelerator**: Strong on the fleet/equipment side, but handles CRE too. Good automation for modification events.
+
+**Occupier**: Newer entrant, strong UX, built for the tenant-centric workflow. Combines lease administration and CAM budget tracking in one platform.
+
+### The GL Export Question
+
+Every platform promises ERP integration. What actually matters:
+
+| ERP | Well-supported by | Gaps |
+|---|---|---|
+| NetSuite | Visual Lease, LeaseQuery, CoStar Lease native | Mapping layer often needed |
+| Sage Intacct | LeaseQuery, Visual Lease | Generally clean |
+| SAP | Nakisa, Accruent | Enterprise implementations; complex |
+| Oracle Financials | Nakisa, large systems | Complex; professional services required |
+| QuickBooks | Smaller tools; manual export for most | Enterprise platforms often over-engineered for QB users |
+
+The real question: does the software export **journal entries** in your ERP's format with your GL account codes, or does it export a report you then have to recode? The first is the standard. The second means you're creating a reconciliation problem downstream.
+
+---
+
+## CAM Reconciliation: Where Most Platforms Fall Short
+
+Lease accounting software tracks your obligations and generates your ASC 842 entries. It doesn't help you audit the landlord's CAM statement.
+
+### What You Need for CAM Audit
+
+1. **Import the landlord's statement**: Yardi CSV, MRI export, or PDF extraction
+2. **Line-item matching**: Map each GL line on the landlord's statement to your lease's inclusion/exclusion list
+3. **Cap analysis**: Apply [controllable expense cap](/resources/cam-cap-types) and flag any overages
+4. **Pro-rata share check**: Verify the denominator ([pro-rata share calculation](/resources/pro-rata-share-calculation))
+5. **Gross-up verification**: Confirm the occupancy-based [gross-up calculation](/resources/cam-gross-up-calculation-guide) if applicable
+6. **Variance report**: What did the landlord bill vs what you owe per the lease
+7. **Audit trail**: Documentation for your files and for dispute resolution
+
+None of the major lease accounting platforms do this well. Most assume you'll do the CAM audit in Excel.
+
+### The Excel Problem
+
+Most CRE finance teams run the CAM audit in Excel. The workflow typically looks like:
+
+1. Download the landlord's PDF or request the Yardi/MRI export
+2. Copy the data into a spreadsheet template
+3. Apply the lease's exclusion rules manually
+4. Calculate the pro-rata share
+5. Check the cap
+6. Produce a memo
+
+This works. For 5 leases, it's manageable. For 50 leases with reconciliation statements due in February and March of each year, it becomes a full-time job for 2 to 3 weeks. Errors happen under time pressure. [Overbilling](/blog/cam-overbilling-liability) goes undetected.
+
+---
+
+## The CRE FinOps Stack for Tenant-Side Teams
+
+A well-functioning CRE finance team typically runs a three-layer stack:
+
+**Layer 1: ERP** (NetSuite, Sage Intacct, SAP)
+- Source of truth for GL
+- Receives journal entries from lease accounting and CAM reconciliation tools
+- Owns AP workflow for lease payments
+
+**Layer 2: Lease Accounting Software** (Visual Lease, LeaseQuery, etc.)
+- ASC 842 ROU asset and lease liability amortization
+- Modification event tracking
+- Disclosure report generation
+- Exports monthly journal entries to ERP
+
+**Layer 3: CAM Reconciliation Tool** (CapVeri, Excel, or purpose-built)
+- Annual CAM statement import from Yardi/MRI
+- Line-item audit against lease terms
+- Cap and gross-up verification
+- True-up journal entry generation
+- Dispute documentation
+
+For teams with 10 or fewer leases, Excel handles Layer 3 adequately. Above that, the volume and complexity justify dedicated software.
+
+---
+
+## Evaluating Property Management Accounting Software: The Key Questions
+
+If you're evaluating a platform for your tenant-side CRE finance function, ask these:
+
+**ASC 842 Compliance:**
+- Does it classify leases and document the conclusion?
+- Does it handle lease modifications and reassessment events?
+- Does it generate the ASC 842 disclosure footnote in the required format?
+- Can I import historical leases with commencement dates before my adoption date?
+
+See [ASC 842 lease accounting guide](/resources/asc-842-lease-accounting-guide) for what "complete compliance" means.
+
+**CAM Reconciliation:**
+- Can I import a Yardi or MRI CSV export of the landlord's reconciliation?
+- Can I define the inclusion/exclusion rules from my lease at the property level?
+- Does it calculate and apply [controllable expense caps](/resources/cam-cap-types)?
+- Does it verify the [pro-rata share denominator](/resources/pro-rata-share-calculation)?
+- Does it generate a journal entry for the true-up?
+
+**GL Export:**
+- Does it map to my specific COA, or do I need to recode journal entries?
+- Can I export in a format my ERP accepts natively (e.g., NetSuite journal import format)?
+- Does it include the correct accounting periods and posting dates?
+
+**Audit Trail:**
+- Can I document the IBR determination and lease classification rationale?
+- Can I attach backup documents (lease amendments, CAM statements) at the record level?
+- Is there a user-level audit log showing who changed what and when?
+
+**Portfolio Scale:**
+- How does pricing scale? Per lease per month is common; verify total cost at your portfolio size.
+- Can I view a portfolio-level dashboard of lease expirations, upcoming true-ups, and CAM budget-vs-actual?
+
+---
+
+## Pricing Signals (What to Expect)
+
+Dedicated lease accounting software pricing is typically:
+
+- **SMB** (< 25 leases): $300–$600/month for SaaS tools like LeaseQuery or Occupier at entry tier
+- **Mid-market** (25–200 leases): $1,000–$3,000/month for mid-tier platforms
+- **Enterprise** (200+ leases): Custom pricing; often includes implementation services
+
+CAM reconciliation tools are typically priced per property or per reconciliation statement.
+
+CapVeri's pricing is built around workflow packages and active rentable-unit allowances. [Current pricing](/pricing) is generated from the plan-tier source of truth and rounded up to whole dollars for small-to-mid portfolios that need full Yardi/MRI import capability.
+
+---
+
+## The CRE FinOps Perspective
+
+Traditional property management software thinking puts the landlord at the center. CRE FinOps puts the tenant's financial performance at the center.
+
+The questions that matter: Is the CAM you're paying actually what the lease requires? Are the operating expense charges reasonable compared to benchmarks? Are you capturing all the credits due back from annual reconciliations? Is the gross-up calculation protecting you from subsidizing vacant space?
+
+Answering those questions requires software with a tenant-centric workflow: import the landlord's data, apply the tenant's lease terms, generate an auditable variance. That's a different problem from what Yardi or MRI are solving.
+
+For more on the software landscape, see our [CAM reconciliation software guide for 2026](/blog/cam-reconciliation-software-guide-2026) and the [best CAM software comparison](/blog/best-cam-software-2026). For the accounting mechanics that drive these workflows, see [operating lease accounting entries](/resources/operating-lease-accounting-entries) and the [CAM true-up accounting guide](/resources/cam-true-up).
+
+---
+
+## Related Resources
+
+- [ASC 842 Lease Accounting Guide](/resources/asc-842-lease-accounting-guide) - full compliance framework
+- [CAM Reconciliation Software Guide 2026](/blog/cam-reconciliation-software-guide-2026) - buyer's guide for CAM-specific tools
+- [Best CAM Software 2026](/blog/best-cam-software-2026) - platform comparison
+- [Operating Lease Accounting Entries](/resources/operating-lease-accounting-entries) - journal entry templates
+- [CAM Reconciliation Errors](/blog/cam-reconciliation-errors) - common billing mistakes to catch
+- [CAM Overbilling Liability](/blog/cam-overbilling-liability) - financial exposure from unchecked CAM
+- [CAM Reconciliation Template](/tools/cam-reconciliation-template) - start with this template
+- [NOI Impact Calculator](/tools/noi-impact-calculator) - model total occupancy cost
+- [What Is CRE FinOps](/resources/what-is-cre-finops) - the broader framework
+
+## Sources
+
+1. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

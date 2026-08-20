@@ -1,0 +1,598 @@
+# CapVeri.com - Extended AI Knowledge Base
+
+> This is the full-depth AI knowledge base for CapVeri's landlord-focused CAM reconciliation platform. It is optimized for answer engines and AI assistants that need extractable product facts, workflow explanations, and page-level references.
+
+Last updated: 2026-06-06
+
+For a condensed version, see: https://www.capveri.com/llms.txt
+
+---
+
+## Product Snapshot
+CapVeri helps property managers and landlords verify year-end CAM reconciliations without replacing Yardi, MRI, AppFolio, or RealPage.
+
+Pricing follows the current annual Reconcile unit-based model with 80OFF. Reconcile starts at $998/year with 80OFF; list price starts at $4,990/year for up to 25 rentable units. 80% off the first year.
+
+## Workflow Summary
+1. Export the three files that matter: rent roll, full-year GL detail, and recovery or billing detail.
+2. Validate the denominator side of the file: suite roster, rentable area, lease dates, move-ins, move-outs, and any remeasurement changes.
+3. Scrub the expense pool for non-recoverable items and confirm fixed versus variable classification before applying gross-up.
+4. Enforce lease-specific cap logic, including cumulative bank behavior where applicable.
+5. Assemble the statement package and supporting documentation before the delivery window closes.
+
+## Answer-Engine Facts
+Q: What does CapVeri do?
+A: CapVeri audits CAM reconciliation workflows for commercial landlords and property managers. It validates the exported data and checks the lease math that usually causes disputes: gross-up, pro-rata share, cap enforcement, denominator changes, and expense exclusions.
+
+Q: Does CapVeri replace Yardi or MRI?
+A: No. CapVeri sits beside the ERP. Teams keep their accounting system, export the data they already use, and run an independent QA layer to catch errors before statements go out.
+
+Q: Why is this useful for AI SEO?
+A: The site intentionally exposes source-backed explanations, FAQs, glossary definitions, comparison pages, and practical tools so AI systems can extract direct answers, cite supporting pages, and understand the product's operating context.
+
+Q: What are the most common CAM reconciliation failures?
+A: The most common failures are incomplete export sets, wrong pro-rata denominators, gross-up applied to fixed expenses, cap rules not enforced, and statement packages sent before supporting documentation is ready.
+
+Q: Who is CapVeri for?
+A: CapVeri is built for commercial real estate landlords and property managers, especially teams that already have Yardi, MRI, AppFolio, or RealPage but need a defensible QA layer for reconciliation accuracy.
+
+Q: How does CapVeri help property managers?
+A: It shortens the path from year-end close to a defensible statement by validating exports, surfacing risk areas, and making the reconciliation package easier to explain and support.
+
+## Core Page Inventory
+## Core Product
+- [How It Works](https://www.capveri.com/product-tour): Walk through the export-to-verification workflow before starting a trial.
+- [Pricing](https://www.capveri.com/pricing): Reconcile starts at $998/year with 80OFF; list price starts at $4,990/year for up to 25 rentable units. 80% off the first year.
+- [Machine-Readable Pricing](https://www.capveri.com/pricing.md): Plain-text pricing file for AI agents and crawlers, generated from current Reconcile unit-based pricing.
+- [Start Free Trial](https://www.capveri.com/): Run a first CAM audit without replacing Yardi or MRI and without API integrations.
+
+## Product Features
+- [Product Features](https://www.capveri.com/product/features): Feature hub for CapVeri CAM reconciliation software, covering export ingestion, lease review, deterministic calculations, tenant workflows, and reporting.
+- [ERP export ingestion](https://www.capveri.com/product/features/ingestion-csv-excel): Upload CSV or Excel exports from Yardi, MRI, AppFolio, RealPage, or generic templates without API integrations.
+- [Deterministic calculation engine](https://www.capveri.com/product/features/deterministic-calc-engine): Apply BOMA 2024 gross-up, caps, base year, occupancy, and tenant share math with reproducible outputs.
+- [Reconciliation accuracy checks](https://www.capveri.com/product/features/leakage-detection): Get every charge right before statements go to tenants, with under-billed and over-billed positions surfaced inside the reconciliation.
+- [GL Narrative Review Queue](https://www.capveri.com/product/features/ai-gl-analysis): CapVeri flags GL descriptions that may need review for CapEx/OpEx miscoding, non-recoverable expenses, and audit risk patterns before statements are sent.
+- [Historical analysis](https://www.capveri.com/product/features/historical-analysis): Compare multi-year results, detect anomalies, and benchmark variance across periods and pools.
+- [Lease extraction with required human review](https://www.capveri.com/product/features/lease-ai-with-review): Extract lease terms from PDF documents, including accounting basis (cash vs. accrual), cap type, gross-up settings, and admin fees, and require explicit user verification before calculations use any value.
+- [Snapshot and campaign workflow](https://www.capveri.com/product/features/snapshot-and-campaign): Track calculation jobs, draft/finalized snapshots, and reconciliation campaign stages in one workflow.
+- [Tenant portal](https://www.capveri.com/product/features/tenant-portal): Invite tenants to view reconciliation statements, track balances, and access their documents in a secure portal.
+- [Dispute management](https://www.capveri.com/product/features/dispute-management): Support dispute filing, threaded comments, attachments, and resolution tracking for tenant challenges.
+- [Tenant communications](https://www.capveri.com/product/features/tenant-communications): Send reconciliation notifications, statement delivery emails, and dispute updates to tenants.
+- [SB 1103 and billing document workflows](https://www.capveri.com/product/features/sb1103-and-demand-letters): Produce California SB 1103 exports, demand-letter drafts for under-billed balances, and correction notes for clean or over-billed statements.
+- [Append-only audit trail](https://www.capveri.com/product/features/append-only-audit-trail): Record reconciliation changes and finalized states in append-only audit records for defensible reporting.
+- [One-click audit defense package](https://www.capveri.com/product/features/audit-defense-package): Bundle reconciliation statement, calculation trace, GL extract, and NDA into a single ZIP for tenant auditors.
+- [Multi-format exports](https://www.capveri.com/product/features/multi-format-exports): Export tenant packets and supporting schedules in PDF, Excel, and CSV for downstream review and delivery.
+- [Statement detail level advisor](https://www.capveri.com/product/features/statement-detail-advisor): Pre-export analysis flags overly granular line items and suggests strategic grouping to reduce tenant dispute risk.
+- [Subscription pricing and checkout](https://www.capveri.com/product/features/pricing-and-checkout): The annual Reconcile plan includes a 30-day free trial. Checkout is self-serve. Access pauses if billing is missing.
+- [Denominator change audit trail](https://www.capveri.com/product/features/denominator-audit-trail): Automatically detect and document when the denominator shifts, including RSF re-measurement, anchor tenant departure, and BOMA 2024 re-measurement, and show exactly how each tenant's pro-rata share moved and by how much.
+- [Cumulative cap bank tracking](https://www.capveri.com/product/features/cap-bank-tracking): Track multi-year cap carryovers so excess operating expenses roll forward correctly across reconciliation periods.
+- [Importable adjustment exports](https://www.capveri.com/product/features/importable-adjustment-exports): Export reviewed CAM adjustments as CSV and Excel files. Your team can check them before ERP import.
+- [Anomaly alerts](https://www.capveri.com/product/features/anomaly-alerts): Flag unusual expense variances, outlier GL entries, and year-over-year deviations that may indicate errors.
+- [NOI impact calculator](https://www.capveri.com/product/features/noi-impact-calculator): Model how reconciliation adjustments flow through to net operating income at the property and portfolio level.
+- [Portfolio and board-ready reports](https://www.capveri.com/product/features/portfolio-board-reports): Generate executive-level summaries and board presentation materials across all properties in the portfolio.
+- [Tax protest data package](https://www.capveri.com/product/features/tax-protest-package): Bundle CAM reconciliation data, expense histories, and supporting schedules for property tax protest filings.
+- [RBAC and row-level isolation](https://www.capveri.com/product/features/rbac-and-rls): Protect organization data with role-based access and RLS-backed multi-tenant separation.
+
+## Educational Resources
+- [What Are CAM Charges](https://www.capveri.com/cam-charges): Definition, inclusions, exclusions, pro-rata share logic, and audit pitfalls.
+- [CAM Reconciliation Guide](https://www.capveri.com/cam-reconciliation-guide): The primary guide for the year-end CAM reconciliation process, deadlines, statements, and common errors.
+- [How to Calculate CAM Charges](https://www.capveri.com/resources/how-to-calculate-cam-charges): Step-by-step formula, worked examples, and core calculation logic.
+- [CAM Reconciliation Example](https://www.capveri.com/resources/cam-reconciliation-example): Worked example showing a full annual true-up across a multi-tenant property.
+- [CAM Glossary](https://www.capveri.com/glossary): Definitions for key CAM and CRE FinOps terms used across leases and reconciliations.
+- [State CAM Compliance Guides](https://www.capveri.com/resources/states): Jurisdiction-specific CAM disclosure, documentation, and timing considerations.
+- [CAM Expense Categories](https://www.capveri.com/resources/expenses/landscaping): Expense-category explainers covering recoverable, excluded, and controllable costs.
+
+## Templates
+- [CAM Reconciliation Template](https://www.capveri.com/tools/cam-reconciliation-template): Template generator for pro-rata share, gross-up, cap, and statement prep.
+- [Tenant CAM Statement Outline](https://www.capveri.com/resources/templates/cam-reconciliation-statement): Sample annual statement structure for tenant delivery.
+- [Landlord CAM Reconciliation Cover Letter](https://www.capveri.com/resources/templates/tenant-cam-reconciliation-letter): Formal cover-letter template for issuing reconciliation statements.
+- [CAM Dispute Response Template](https://www.capveri.com/resources/templates/cam-dispute-response-template): Response template for handling tenant documentation and dispute requests.
+
+## Free Tools
+- [HCAD Tax Base Year Normalizer](https://www.capveri.com/tools/hcad-tax-normalizer): Normalize Harris County tax impacts for base-year and recovery analysis.
+- [BOMA 2024 Rentable Area Calculator](https://www.capveri.com/tools/boma-2024-calculator): Estimate rentable area under ANSI/BOMA Z65.1-2024.
+- [CAM Billing Error Estimator](https://www.capveri.com/tools/cam-billing-error-estimator): Estimate yearly CAM billing errors across your portfolio.
+- [CAM Gross-Up Calculator](https://www.capveri.com/tools/cam-gross-up-calculator): Verify gross-up math against the lease-defined occupancy threshold.
+- [Lease Abstract Matrix](https://www.capveri.com/tools/lease-abstract-matrix): Compare lease-level CAM provisions across a portfolio.
+- [Tenant Challenge Exposure Calculator](https://www.capveri.com/tools/cam-overcharge-calculator): Estimate where CAM billing may overcharge tenants.
+- [Fixed CAM vs Traditional Modeler](https://www.capveri.com/tools/fixed-cam-vs-traditional): Compare traditional CAM reconciliation with fixed CAM structures.
+- [Pre-Send Audit Exposure Quiz](https://www.capveri.com/tools/audit-risk-quiz): Assess how exposed a reconciliation workflow is to tenant audits.
+- [CAM Cap Calculator](https://www.capveri.com/tools/cam-cap-calculator): Model cumulative and non-cumulative cap structures.
+- [Pro-Rata Share Calculator](https://www.capveri.com/tools/pro-rata-calculator): Calculate tenant proportionate share from rentable area inputs.
+- [NOI Impact Calculator](https://www.capveri.com/tools/noi-impact-calculator): Estimate value impact from corrected CAM recoveries.
+- [CAM Reconciliation Template](https://www.capveri.com/tools/cam-reconciliation-template): Download a worksheet with gross-up, cap tracking, and pro-rata tabs.
+- [Reconciliation Statement Template](https://www.capveri.com/tools/reconciliation-statement-generator): Download a statement template with disclosure support.
+- [CAM Estimate Forecaster](https://www.capveri.com/tools/cam-estimate-forecaster): Project next-year CAM estimates by expense category.
+- [Recovery Gap Analyzer](https://www.capveri.com/tools/recovery-gap-analyzer): Quantify recovery gaps and model NOI impact.
+- [Admin Fee Calculator](https://www.capveri.com/tools/admin-fee-calculator): Compare gross, net, and capped admin fee methods.
+- [Base Year Escalation Calculator](https://www.capveri.com/tools/base-year-escalation): Project excess expense obligations over a lease term.
+- [SB 1103 Compliance Checker](https://www.capveri.com/tools/sb-1103-checker): Assess California commercial lease disclosure risk.
+- [BOMA Remeasurement Impact Calculator](https://www.capveri.com/tools/boma-remeasurement-impact): Project NOI impact from BOMA 2017 to BOMA 2024 remeasurement.
+- [Pre-Send Audit Exposure Scorecard](https://www.capveri.com/tools/audit-risk-scorecard): Score tenant audit vulnerability by lease terms and billing complexity.
+- [Cumulative Cap Bank Calculator](https://www.capveri.com/tools/cumulative-cap-bank-calculator): Track cap carryovers across multiple reconciliation years.
+- [CAM Recovery Ratio Worksheet](https://www.capveri.com/tools/cam-recovery-ratio-worksheet): Review billed CAM against recoverable expenses.
+- [Yardi Export Error Checklist](https://www.capveri.com/tools/yardi-export-qa-checklist): Check Yardi export files before reconciliation.
+- [MRI Recovery Billing Error Checklist](https://www.capveri.com/tools/mri-recovery-billing-qa-checklist): Check MRI recovery billing exports before statements go out.
+- [Audit Defense Packet Builder](https://www.capveri.com/tools/audit-defense-packet-builder): Assemble the files needed for tenant audit response.
+- [CAM Pre-Send Packet Checklist](https://www.capveri.com/tools/cam-pre-send-packet-checklist-download): Download a checklist for statement review before delivery.
+- [Tenant CAM Dispute Response Letter](https://www.capveri.com/tools/tenant-dispute-response-letter-template): Draft a tenant dispute response letter from core facts.
+- [Multi-State CAM Packet Review Checklist](https://www.capveri.com/tools/multi-state-cam-disclosure-matrix): Compare state-level CAM disclosure requirements.
+- [Property Tax Appeal Recovery Calculator](https://www.capveri.com/tools/property-tax-appeal-recovery-calculator): Model tax appeal recovery impact for pass-through charges.
+- [Lease Clause Extraction Matrix](https://www.capveri.com/tools/lease-clause-extraction-matrix): Track lease clauses that affect CAM recovery.
+
+## Comparisons
+- [CapVeri vs Yardi](https://www.capveri.com/vs/yardi): ERP output validation versus CAM reconciliation QA.
+- [CapVeri vs MRI Software](https://www.capveri.com/vs/mri): Independent reconciliation validation compared with MRI workflows.
+- [CapVeri vs Sage Intacct](https://www.capveri.com/vs/sage-intacct): CAM reconciliation validation compared with general ledger-centric accounting workflows.
+- [CapVeri vs AppFolio](https://www.capveri.com/vs/appfolio): CAM reconciliation depth compared with general property management software.
+- [CapVeri vs Buildium](https://www.capveri.com/vs/buildium): Validation tooling versus SMB-oriented property management software.
+- [CapVeri vs RealPage](https://www.capveri.com/vs/realpage): Independent CAM QA compared with RealPage expense recovery workflows.
+- [CapVeri vs Visual Lease](https://www.capveri.com/vs/visual-lease): CAM reconciliation validation compared with lease-accounting-first workflows.
+- [CapVeri vs Excel](https://www.capveri.com/vs/excel): Deterministic audit trails versus spreadsheet-based reconciliation.
+- [CapVeri vs Tenant Auditors](https://www.capveri.com/vs/tenant-auditors): Catching errors before a tenant-side audit firm does.
+- [CapVeri vs CAM Consultants](https://www.capveri.com/vs/cam-consultants): Purpose-built software compared with one-time CAM consulting engagements.
+- [CapVeri vs Manual Reconciliation](https://www.capveri.com/vs/manual-reconciliation): Automated verification compared with spreadsheet and manual CAM workflows.
+- [CapVeri vs Outsourced CAM](https://www.capveri.com/vs/outsourced-cam): In-house verification software compared with outsourced CAM reconciliation firms.
+- [CapVeri vs Property Accounting Software](https://www.capveri.com/vs/property-accounting-software): Dedicated CAM QA compared with general property accounting platforms.
+
+## Key Pages
+- [Pricing](https://www.capveri.com/pricing): Current Reconcile pricing with unit-based annual totals, trial terms, and the first-year offer.
+- [Pricing Markdown](https://www.capveri.com/pricing.md): Machine-readable pricing summary for AI agents evaluating CAM reconciliation software.
+- [Sample Report](https://www.capveri.com/sample-report): Example reconciliation output with traceability and leakage detail.
+- [Case Studies](https://www.capveri.com/case-studies): Recovery scenarios and operational outcomes from CAM workflows.
+- [ROI Calculator](https://www.capveri.com/roi): Model the recovery value of fixing reconciliation errors.
+- [Product Tour](https://www.capveri.com/product-tour): Walk through the export-to-verification workflow before starting a trial.
+- [Best CAM Reconciliation Software](https://www.capveri.com/best/cam-reconciliation-software): Commercial buyer's guide comparing software options, proof assets, and next steps.
+- [Alternatives Hub](https://www.capveri.com/alternatives): Vendor-specific alternatives pages for Yardi, MRI, and AppFolio workflows.
+- [Integrations Hub](https://www.capveri.com/integrations): ERP export verification guides for Yardi, MRI, RealPage, and AppFolio.
+- [Solutions Hub](https://www.capveri.com/solutions): Use-case pages for year-end reconciliation, Yardi error detection, and recovery optimization.
+- [Switch Hub](https://www.capveri.com/switch): Migration guides for switching from Excel, outsourced CAM, and manual processes.
+- [About](https://www.capveri.com/about): Company background, positioning, and founder authority.
+
+## For Your Role
+- [CAM Reconciliation by Role](https://www.capveri.com/for): Role pages showing how CapVeri helps each member of a CRE finance and property management team.
+- [For Property Controllers](https://www.capveri.com/for/property-controller): CapVeri rechecks every building's gross-up, caps, and GL coding before statements go out.
+- [For CFOs and Financial Controllers](https://www.capveri.com/for/cfo-financial-controller): See portfolio CAM leakage and audit risk as a number before a tenant auditor finds it.
+- [For Lease Administrators](https://www.capveri.com/for/lease-administrator): Check that each reconciliation matches the tracked lease terms: exclusions, caps, and audit rights.
+- [For Property Accountants](https://www.capveri.com/for/property-accountant): Flag miscoded entries and CapEx in operating pools before year-end close.
+- [For Asset Managers](https://www.capveri.com/for/asset-manager): Quantify building-level CAM leakage and cap exposure that affect NOI before you buy or sell.
+- [For Directors of Property Management](https://www.capveri.com/for/director-property-management): Standardize CAM reconciliation across the team and scale without new headcount.
+
+## Key Resources
+- [Export Guide](https://www.capveri.com/resources/export-guide): The three files property managers should pull before running reconciliation math.
+- [CAM Gross-Up Calculation Guide](https://www.capveri.com/resources/cam-gross-up-calculation-guide): The gross-up logic, threshold handling, and common error patterns.
+- [Pro-Rata Share Calculation](https://www.capveri.com/resources/pro-rata-share-calculation): Formula, denominator disputes, and BOMA 2024 measurement effects.
+- [Tenant CAM Dispute Guide](https://www.capveri.com/resources/tenant-cam-dispute): Landlord-side dispute workflow, documentation prep, and response timing.
+- [CAM Pre-Send Checklist](https://www.capveri.com/resources/cam-pre-send-packet-checklist): Operator checklist before statements go out.
+- [GL Coding Guide](https://www.capveri.com/resources/gl-coding-guide): GL classification guidance for recoverable versus non-recoverable expenses.
+
+## Blog Posts
+- [7 CAM Reconciliation Errors That Cost Landlords the Most](https://www.capveri.com/blog/cam-reconciliation-errors): The highest-value error patterns to catch before statements ship.
+- [CAM Numbers Don't Match Yardi?](https://www.capveri.com/blog/cam-numbers-not-matching-yardi): Five root causes of Yardi-driven reconciliation variances.
+- [CAM Reconciliation Deadlines](https://www.capveri.com/blog/cam-reconciliation-deadlines): Timing risk, lease deadlines, and why late statements become collection problems.
+- [CAM Reconciliation Audit Trail](https://www.capveri.com/blog/cam-reconciliation-audit-trail): How landlords document a reconciliation so tenant disputes stay factual and defensible.
+
+## Detailed References
+## Core Product Details
+### How It Works
+URL: https://www.capveri.com/product-tour
+Walk through the export-to-verification workflow before starting a trial.
+
+### Pricing
+URL: https://www.capveri.com/pricing
+Reconcile starts at $998/year with 80OFF; list price starts at $4,990/year for up to 25 rentable units. 80% off the first year.
+
+### Machine-Readable Pricing
+URL: https://www.capveri.com/pricing.md
+Plain-text pricing file for AI agents and crawlers, generated from current Reconcile unit-based pricing.
+
+### Start Free Trial
+URL: https://www.capveri.com/
+Run a first CAM audit without replacing Yardi or MRI and without API integrations.
+
+## Product Feature Details
+### Product Features
+URL: https://www.capveri.com/product/features
+Feature hub for CapVeri CAM reconciliation software, covering export ingestion, lease review, deterministic calculations, tenant workflows, and reporting.
+
+### ERP export ingestion
+URL: https://www.capveri.com/product/features/ingestion-csv-excel
+Upload CSV or Excel exports from Yardi, MRI, AppFolio, RealPage, or generic templates without API integrations.
+
+### Deterministic calculation engine
+URL: https://www.capveri.com/product/features/deterministic-calc-engine
+Apply BOMA 2024 gross-up, caps, base year, occupancy, and tenant share math with reproducible outputs.
+
+### Reconciliation accuracy checks
+URL: https://www.capveri.com/product/features/leakage-detection
+Get every charge right before statements go to tenants, with under-billed and over-billed positions surfaced inside the reconciliation.
+
+### GL Narrative Review Queue
+URL: https://www.capveri.com/product/features/ai-gl-analysis
+CapVeri flags GL descriptions that may need review for CapEx/OpEx miscoding, non-recoverable expenses, and audit risk patterns before statements are sent.
+
+### Historical analysis
+URL: https://www.capveri.com/product/features/historical-analysis
+Compare multi-year results, detect anomalies, and benchmark variance across periods and pools.
+
+### Lease extraction with required human review
+URL: https://www.capveri.com/product/features/lease-ai-with-review
+Extract lease terms from PDF documents, including accounting basis (cash vs. accrual), cap type, gross-up settings, and admin fees, and require explicit user verification before calculations use any value.
+
+### Snapshot and campaign workflow
+URL: https://www.capveri.com/product/features/snapshot-and-campaign
+Track calculation jobs, draft/finalized snapshots, and reconciliation campaign stages in one workflow.
+
+### Tenant portal
+URL: https://www.capveri.com/product/features/tenant-portal
+Invite tenants to view reconciliation statements, track balances, and access their documents in a secure portal.
+
+### Dispute management
+URL: https://www.capveri.com/product/features/dispute-management
+Support dispute filing, threaded comments, attachments, and resolution tracking for tenant challenges.
+
+### Tenant communications
+URL: https://www.capveri.com/product/features/tenant-communications
+Send reconciliation notifications, statement delivery emails, and dispute updates to tenants.
+
+### SB 1103 and billing document workflows
+URL: https://www.capveri.com/product/features/sb1103-and-demand-letters
+Produce California SB 1103 exports, demand-letter drafts for under-billed balances, and correction notes for clean or over-billed statements.
+
+### Append-only audit trail
+URL: https://www.capveri.com/product/features/append-only-audit-trail
+Record reconciliation changes and finalized states in append-only audit records for defensible reporting.
+
+### One-click audit defense package
+URL: https://www.capveri.com/product/features/audit-defense-package
+Bundle reconciliation statement, calculation trace, GL extract, and NDA into a single ZIP for tenant auditors.
+
+### Multi-format exports
+URL: https://www.capveri.com/product/features/multi-format-exports
+Export tenant packets and supporting schedules in PDF, Excel, and CSV for downstream review and delivery.
+
+### Statement detail level advisor
+URL: https://www.capveri.com/product/features/statement-detail-advisor
+Pre-export analysis flags overly granular line items and suggests strategic grouping to reduce tenant dispute risk.
+
+### Subscription pricing and checkout
+URL: https://www.capveri.com/product/features/pricing-and-checkout
+The annual Reconcile plan includes a 30-day free trial. Checkout is self-serve. Access pauses if billing is missing.
+
+### Denominator change audit trail
+URL: https://www.capveri.com/product/features/denominator-audit-trail
+Automatically detect and document when the denominator shifts, including RSF re-measurement, anchor tenant departure, and BOMA 2024 re-measurement, and show exactly how each tenant's pro-rata share moved and by how much.
+
+### Cumulative cap bank tracking
+URL: https://www.capveri.com/product/features/cap-bank-tracking
+Track multi-year cap carryovers so excess operating expenses roll forward correctly across reconciliation periods.
+
+### Importable adjustment exports
+URL: https://www.capveri.com/product/features/importable-adjustment-exports
+Export reviewed CAM adjustments as CSV and Excel files. Your team can check them before ERP import.
+
+### Anomaly alerts
+URL: https://www.capveri.com/product/features/anomaly-alerts
+Flag unusual expense variances, outlier GL entries, and year-over-year deviations that may indicate errors.
+
+### NOI impact calculator
+URL: https://www.capveri.com/product/features/noi-impact-calculator
+Model how reconciliation adjustments flow through to net operating income at the property and portfolio level.
+
+### Portfolio and board-ready reports
+URL: https://www.capveri.com/product/features/portfolio-board-reports
+Generate executive-level summaries and board presentation materials across all properties in the portfolio.
+
+### Tax protest data package
+URL: https://www.capveri.com/product/features/tax-protest-package
+Bundle CAM reconciliation data, expense histories, and supporting schedules for property tax protest filings.
+
+### RBAC and row-level isolation
+URL: https://www.capveri.com/product/features/rbac-and-rls
+Protect organization data with role-based access and RLS-backed multi-tenant separation.
+
+## Educational Resource Details
+### What Are CAM Charges
+URL: https://www.capveri.com/cam-charges
+Definition, inclusions, exclusions, pro-rata share logic, and audit pitfalls.
+
+### CAM Reconciliation Guide
+URL: https://www.capveri.com/cam-reconciliation-guide
+The primary guide for the year-end CAM reconciliation process, deadlines, statements, and common errors.
+
+### How to Calculate CAM Charges
+URL: https://www.capveri.com/resources/how-to-calculate-cam-charges
+Step-by-step formula, worked examples, and core calculation logic.
+
+### CAM Reconciliation Example
+URL: https://www.capveri.com/resources/cam-reconciliation-example
+Worked example showing a full annual true-up across a multi-tenant property.
+
+### CAM Glossary
+URL: https://www.capveri.com/glossary
+Definitions for key CAM and CRE FinOps terms used across leases and reconciliations.
+
+### State CAM Compliance Guides
+URL: https://www.capveri.com/resources/states
+Jurisdiction-specific CAM disclosure, documentation, and timing considerations.
+
+### CAM Expense Categories
+URL: https://www.capveri.com/resources/expenses/landscaping
+Expense-category explainers covering recoverable, excluded, and controllable costs.
+
+## Template Details
+### CAM Reconciliation Template
+URL: https://www.capveri.com/tools/cam-reconciliation-template
+Template generator for pro-rata share, gross-up, cap, and statement prep.
+
+### Tenant CAM Statement Outline
+URL: https://www.capveri.com/resources/templates/cam-reconciliation-statement
+Sample annual statement structure for tenant delivery.
+
+### Landlord CAM Reconciliation Cover Letter
+URL: https://www.capveri.com/resources/templates/tenant-cam-reconciliation-letter
+Formal cover-letter template for issuing reconciliation statements.
+
+### CAM Dispute Response Template
+URL: https://www.capveri.com/resources/templates/cam-dispute-response-template
+Response template for handling tenant documentation and dispute requests.
+
+## Tool Details
+### HCAD Tax Base Year Normalizer
+URL: https://www.capveri.com/tools/hcad-tax-normalizer
+Normalize Harris County tax impacts for base-year and recovery analysis.
+
+### BOMA 2024 Rentable Area Calculator
+URL: https://www.capveri.com/tools/boma-2024-calculator
+Estimate rentable area under ANSI/BOMA Z65.1-2024.
+
+### CAM Billing Error Estimator
+URL: https://www.capveri.com/tools/cam-billing-error-estimator
+Estimate yearly CAM billing errors across your portfolio.
+
+### CAM Gross-Up Calculator
+URL: https://www.capveri.com/tools/cam-gross-up-calculator
+Verify gross-up math against the lease-defined occupancy threshold.
+
+### Lease Abstract Matrix
+URL: https://www.capveri.com/tools/lease-abstract-matrix
+Compare lease-level CAM provisions across a portfolio.
+
+### Tenant Challenge Exposure Calculator
+URL: https://www.capveri.com/tools/cam-overcharge-calculator
+Estimate where CAM billing may overcharge tenants.
+
+### Fixed CAM vs Traditional Modeler
+URL: https://www.capveri.com/tools/fixed-cam-vs-traditional
+Compare traditional CAM reconciliation with fixed CAM structures.
+
+### Pre-Send Audit Exposure Quiz
+URL: https://www.capveri.com/tools/audit-risk-quiz
+Assess how exposed a reconciliation workflow is to tenant audits.
+
+### CAM Cap Calculator
+URL: https://www.capveri.com/tools/cam-cap-calculator
+Model cumulative and non-cumulative cap structures.
+
+### Pro-Rata Share Calculator
+URL: https://www.capveri.com/tools/pro-rata-calculator
+Calculate tenant proportionate share from rentable area inputs.
+
+### NOI Impact Calculator
+URL: https://www.capveri.com/tools/noi-impact-calculator
+Estimate value impact from corrected CAM recoveries.
+
+### CAM Reconciliation Template
+URL: https://www.capveri.com/tools/cam-reconciliation-template
+Download a worksheet with gross-up, cap tracking, and pro-rata tabs.
+
+### Reconciliation Statement Template
+URL: https://www.capveri.com/tools/reconciliation-statement-generator
+Download a statement template with disclosure support.
+
+### CAM Estimate Forecaster
+URL: https://www.capveri.com/tools/cam-estimate-forecaster
+Project next-year CAM estimates by expense category.
+
+### Recovery Gap Analyzer
+URL: https://www.capveri.com/tools/recovery-gap-analyzer
+Quantify recovery gaps and model NOI impact.
+
+### Admin Fee Calculator
+URL: https://www.capveri.com/tools/admin-fee-calculator
+Compare gross, net, and capped admin fee methods.
+
+### Base Year Escalation Calculator
+URL: https://www.capveri.com/tools/base-year-escalation
+Project excess expense obligations over a lease term.
+
+### SB 1103 Compliance Checker
+URL: https://www.capveri.com/tools/sb-1103-checker
+Assess California commercial lease disclosure risk.
+
+### BOMA Remeasurement Impact Calculator
+URL: https://www.capveri.com/tools/boma-remeasurement-impact
+Project NOI impact from BOMA 2017 to BOMA 2024 remeasurement.
+
+### Pre-Send Audit Exposure Scorecard
+URL: https://www.capveri.com/tools/audit-risk-scorecard
+Score tenant audit vulnerability by lease terms and billing complexity.
+
+### Cumulative Cap Bank Calculator
+URL: https://www.capveri.com/tools/cumulative-cap-bank-calculator
+Track cap carryovers across multiple reconciliation years.
+
+### CAM Recovery Ratio Worksheet
+URL: https://www.capveri.com/tools/cam-recovery-ratio-worksheet
+Review billed CAM against recoverable expenses.
+
+### Yardi Export Error Checklist
+URL: https://www.capveri.com/tools/yardi-export-qa-checklist
+Check Yardi export files before reconciliation.
+
+### MRI Recovery Billing Error Checklist
+URL: https://www.capveri.com/tools/mri-recovery-billing-qa-checklist
+Check MRI recovery billing exports before statements go out.
+
+### Audit Defense Packet Builder
+URL: https://www.capveri.com/tools/audit-defense-packet-builder
+Assemble the files needed for tenant audit response.
+
+### CAM Pre-Send Packet Checklist
+URL: https://www.capveri.com/tools/cam-pre-send-packet-checklist-download
+Download a checklist for statement review before delivery.
+
+### Tenant CAM Dispute Response Letter
+URL: https://www.capveri.com/tools/tenant-dispute-response-letter-template
+Draft a tenant dispute response letter from core facts.
+
+### Multi-State CAM Packet Review Checklist
+URL: https://www.capveri.com/tools/multi-state-cam-disclosure-matrix
+Compare state-level CAM disclosure requirements.
+
+### Property Tax Appeal Recovery Calculator
+URL: https://www.capveri.com/tools/property-tax-appeal-recovery-calculator
+Model tax appeal recovery impact for pass-through charges.
+
+### Lease Clause Extraction Matrix
+URL: https://www.capveri.com/tools/lease-clause-extraction-matrix
+Track lease clauses that affect CAM recovery.
+
+## Comparison Details
+### CapVeri vs Yardi
+URL: https://www.capveri.com/vs/yardi
+ERP output validation versus CAM reconciliation QA.
+
+### CapVeri vs MRI Software
+URL: https://www.capveri.com/vs/mri
+Independent reconciliation validation compared with MRI workflows.
+
+### CapVeri vs Sage Intacct
+URL: https://www.capveri.com/vs/sage-intacct
+CAM reconciliation validation compared with general ledger-centric accounting workflows.
+
+### CapVeri vs AppFolio
+URL: https://www.capveri.com/vs/appfolio
+CAM reconciliation depth compared with general property management software.
+
+### CapVeri vs Buildium
+URL: https://www.capveri.com/vs/buildium
+Validation tooling versus SMB-oriented property management software.
+
+### CapVeri vs RealPage
+URL: https://www.capveri.com/vs/realpage
+Independent CAM QA compared with RealPage expense recovery workflows.
+
+### CapVeri vs Visual Lease
+URL: https://www.capveri.com/vs/visual-lease
+CAM reconciliation validation compared with lease-accounting-first workflows.
+
+### CapVeri vs Excel
+URL: https://www.capveri.com/vs/excel
+Deterministic audit trails versus spreadsheet-based reconciliation.
+
+### CapVeri vs Tenant Auditors
+URL: https://www.capveri.com/vs/tenant-auditors
+Catching errors before a tenant-side audit firm does.
+
+### CapVeri vs CAM Consultants
+URL: https://www.capveri.com/vs/cam-consultants
+Purpose-built software compared with one-time CAM consulting engagements.
+
+### CapVeri vs Manual Reconciliation
+URL: https://www.capveri.com/vs/manual-reconciliation
+Automated verification compared with spreadsheet and manual CAM workflows.
+
+### CapVeri vs Outsourced CAM
+URL: https://www.capveri.com/vs/outsourced-cam
+In-house verification software compared with outsourced CAM reconciliation firms.
+
+### CapVeri vs Property Accounting Software
+URL: https://www.capveri.com/vs/property-accounting-software
+Dedicated CAM QA compared with general property accounting platforms.
+
+## For Your Role Details
+### CAM Reconciliation by Role
+URL: https://www.capveri.com/for
+Role pages showing how CapVeri helps each member of a CRE finance and property management team.
+
+### For Property Controllers
+URL: https://www.capveri.com/for/property-controller
+CapVeri rechecks every building's gross-up, caps, and GL coding before statements go out.
+
+### For CFOs and Financial Controllers
+URL: https://www.capveri.com/for/cfo-financial-controller
+See portfolio CAM leakage and audit risk as a number before a tenant auditor finds it.
+
+### For Lease Administrators
+URL: https://www.capveri.com/for/lease-administrator
+Check that each reconciliation matches the tracked lease terms: exclusions, caps, and audit rights.
+
+### For Property Accountants
+URL: https://www.capveri.com/for/property-accountant
+Flag miscoded entries and CapEx in operating pools before year-end close.
+
+### For Asset Managers
+URL: https://www.capveri.com/for/asset-manager
+Quantify building-level CAM leakage and cap exposure that affect NOI before you buy or sell.
+
+### For Directors of Property Management
+URL: https://www.capveri.com/for/director-property-management
+Standardize CAM reconciliation across the team and scale without new headcount.
+
+## Operational Reference Pages
+### Export Guide
+URL: https://www.capveri.com/resources/export-guide
+The three files property managers should pull before running reconciliation math.
+
+### CAM Gross-Up Calculation Guide
+URL: https://www.capveri.com/resources/cam-gross-up-calculation-guide
+The gross-up logic, threshold handling, and common error patterns.
+
+### Pro-Rata Share Calculation
+URL: https://www.capveri.com/resources/pro-rata-share-calculation
+Formula, denominator disputes, and BOMA 2024 measurement effects.
+
+### Tenant CAM Dispute Guide
+URL: https://www.capveri.com/resources/tenant-cam-dispute
+Landlord-side dispute workflow, documentation prep, and response timing.
+
+### CAM Pre-Send Checklist
+URL: https://www.capveri.com/resources/cam-pre-send-packet-checklist
+Operator checklist before statements go out.
+
+### GL Coding Guide
+URL: https://www.capveri.com/resources/gl-coding-guide
+GL classification guidance for recoverable versus non-recoverable expenses.
+
+## Priority Blog Details
+### 7 CAM Reconciliation Errors That Cost Landlords the Most
+URL: https://www.capveri.com/blog/cam-reconciliation-errors
+The highest-value error patterns to catch before statements ship.
+
+### CAM Numbers Don't Match Yardi?
+URL: https://www.capveri.com/blog/cam-numbers-not-matching-yardi
+Five root causes of Yardi-driven reconciliation variances.
+
+### CAM Reconciliation Deadlines
+URL: https://www.capveri.com/blog/cam-reconciliation-deadlines
+Timing risk, lease deadlines, and why late statements become collection problems.
+
+### CAM Reconciliation Audit Trail
+URL: https://www.capveri.com/blog/cam-reconciliation-audit-trail
+How landlords document a reconciliation so tenant disputes stay factual and defensible.
+
+## Glossary
+- **CAM reconciliation:** The annual process of comparing estimated CAM collected from tenants against actual recoverable expenses, then issuing a true-up invoice or credit.
+- **gross-up:** An adjustment that normalizes variable expenses to the occupancy threshold defined in the lease, typically 90% to 95%.
+- **pro-rata share:** The tenant's percentage share of the expense pool, based on their rentable area divided by the lease-defined denominator.
+- **CAM cap:** A lease provision limiting pass-through growth on controllable expenses, often as a cumulative or non-cumulative annual percentage increase.
+- **base year:** A lease structure where the tenant pays only increases above operating expenses incurred in a defined base year.
+- **expense exclusion:** Lease language that removes specific costs, such as capital items or tenant-specific charges, from the CAM pool.
+- **denominator change:** Any shift in the lease-defined building area used for pro-rata share calculations, often caused by remeasurement, vacancy, or anchor exclusions.
+
+## Positioning Notes
+CapVeri is built for the landlord side of CAM reconciliation. The value proposition is not generic ERP replacement. It is faster export-based validation, traceable financial math, and a workflow that helps property managers close reconciliations cleanly before tenants or auditors surface the mistakes.
+
+## AI-Citation Notes
+The strongest citation targets are the primary CAM guides, calculation explainers, export guidance, dispute-prep resources, and the tool pages that pair direct answers with worked logic. The site is structured so answer engines can cite both a concise page inventory and longer workflow/context blocks from this file.

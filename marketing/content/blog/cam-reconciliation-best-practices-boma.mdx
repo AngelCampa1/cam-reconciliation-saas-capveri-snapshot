@@ -1,0 +1,127 @@
+---
+title: "CAM Reconciliation Best Practices: BOMA 2024 Standards Applied"
+description: "CAM reconciliation best practices aligned with BOMA 2024 standards. Gross-up methodology, rentable area measurement, expense categorization, and documentation practices."
+excerpt: "BOMA 2024 does more than govern how you measure space. It shapes gross-up calculations, pro-rata denominators, and how variable expenses are categorized."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "operations"
+faq:
+  - q: "Does BOMA 2024 change how gross-up is calculated?"
+    a: "BOMA 2024 changes don't directly prescribe a gross-up methodology. They update how rentable area is measured. But the changes to how outdoor amenity areas are measured affect the total rentable area figure, which is the denominator in pro-rata calculations. If your property includes outdoor amenity space that is now classifiable as rentable area under BOMA 2024, your denominators need updating, which flows through to every tenant's pro-rata share."
+  - q: "Is BOMA compliance legally required for CAM reconciliation?"
+    a: "Not automatically. BOMA standards are contractually binding only if your leases reference BOMA or specify BOMA-measured areas. However, many commercial leases include language like 'rentable area as defined by BOMA' or reference a BOMA-measured area from the original lease execution. Courts have also treated BOMA standards as industry benchmarks in CAM disputes. Verify whether your leases reference BOMA before applying the 2024 changes."
+  - q: "What's the most common BOMA violation in CAM reconciliation?"
+    a: "Using physical occupancy instead of economic occupancy for gross-up calculations. BOMA and most industry guidance treat gross-up as being based on economic occupancy (the occupancy level used to set rents and model cash flows) rather than physical occupancy, which is the percentage of space physically occupied at a point in time. Using physical occupancy for gross-up often produces a different (and typically lower) result than economic occupancy."
+---
+
+BOMA standards (the Building Owners and Managers Association's published methodologies for measuring rentable area and classifying operating expenses) represent the closest thing commercial real estate has to an industry standard for CAM reconciliation. Courts have referenced them, institutional investors expect compliance, and sophisticated tenants' auditors use them as a benchmark.
+
+The 2024 update to BOMA's measurement standards introduced changes relevant to how outdoor and amenity spaces are classified. These changes affect pro-rata denominators in some property types. More broadly, using BOMA standards as the foundation for CAM best practices produces reconciliations that are more defensible, more consistent, and more resistant to tenant audit challenges.
+
+## Why BOMA Standards Matter for CAM
+
+BOMA standards matter for three reasons:
+
+**Industry recognition.** BOMA's expense categorization methodology is widely understood by tenants, their auditors, and courts. A reconciliation that follows BOMA standards can be explained and defended in those terms. A reconciliation that deviates from BOMA requires justification.
+
+**Lease incorporation.** Many leases reference BOMA explicitly - for measurement, for occupancy definitions, for expense categorization. If your leases do, BOMA compliance is contractually required.
+
+**Legal precedent.** Courts have treated BOMA standards as evidence of industry practice in CAM disputes. Deviating from BOMA without specific lease language authorizing the deviation is a legal risk.
+
+## Best Practice 1: Separate Fixed and Variable Expenses Consistently
+
+The most foundational categorization in CAM reconciliation is separating fixed and variable expenses. This determination drives gross-up calculations, cap calculations, and (in some lease structures) which expenses are subject to controllable expense caps.
+
+**Fixed expenses** do not vary with occupancy:
+- Property taxes and insurance
+- Fixed management fees and administrative costs
+- Debt service (where recoverable)
+- Landscaping contract fees (fixed-price contracts)
+
+**Variable expenses** scale with occupancy and use:
+- Utilities (electricity, water, gas - scale with occupancy)
+- Janitorial and cleaning services
+- Security (if scaled to occupancy)
+- HVAC operations
+
+BOMA guidance consistently treats utilities, janitorial, and security as variable; taxes, insurance, and fixed contracts as fixed. Applying these categorizations consistently across every year's reconciliation prevents the kind of year-over-year inconsistency that triggers tenant disputes.
+
+Maintain a master expense categorization table that maps every recurring expense category to fixed or variable, updated annually. Apply it consistently across all tenants in the pool.
+
+## Best Practice 2: Use Economic Occupancy for Gross-Up
+
+Gross-up adjusts variable expenses upward to reflect what they would have been if the building were at the specified occupancy threshold (typically 90–95%). The occupancy figure used for this calculation matters significantly.
+
+**Physical occupancy** is the percentage of space physically occupied at a point in time. A building with a vacant suite in which no tenant is operating is physically vacant.
+
+**Economic occupancy** is the percentage of space occupied by paying tenants - tenants who have signed leases and are on the rent roll, whether or not they are physically in the space yet. A tenant with a signed lease paying rent counts as economically occupied even during buildout.
+
+BOMA guidance, and the position most defensible in disputes, uses economic occupancy for gross-up. This is because gross-up is designed to simulate full-occupancy expense levels for cost recovery purposes, and economic occupancy better represents the intended stabilized state of the property.
+
+If your ERP allows you to configure which occupancy figure to use for gross-up, select economic occupancy. Document this choice in your reconciliation methodology.
+
+## Best Practice 3: Pro-Rata Based on BOMA-Measured Rentable Area
+
+Pro-rata denominators should be based on BOMA-measured rentable area, not usable area, not leased area, and not assessed value. BOMA rentable area is the standard referenced in most commercial leases and is the figure most likely to match your tenants' lease-stated square footages.
+
+Under BOMA 2024, rentable area calculations for office buildings include a load factor (the tenant's share of common area) that converts usable area to rentable area. For retail properties, BOMA uses a different measurement approach.
+
+When BOMA 2024 changes affect outdoor amenity classification at your property, update your rentable area figures accordingly. This changes the denominator in every tenant's pro-rata calculation. Run a calculation preview before implementing to understand the financial impact.
+
+Keep a current BOMA measurement certification for your building on file. If it's more than 5 years old, consider a re-measurement, particularly if the building has undergone renovations or if BOMA standard updates (like 2024) affect your property type.
+
+## Best Practice 4: Document Every Calculation Step
+
+A best-practice CAM reconciliation is fully auditable: every number in every tenant's statement can be traced back to a specific source document.
+
+The documentation chain:
+1. **GL detail** → shows every expense in the pool with vendor, date, and amount
+2. **Pool calculation** → shows how GL totals feed into fixed/variable categorization and gross-up
+3. **Gross-up calculation** → shows threshold, eligible variable expenses, occupancy rate, grossed-up amounts
+4. **Per-tenant calculation** → shows pro-rata denominator, each tenant's SF, each tenant's share
+5. **Statement** → ties to the per-tenant calculation
+
+Each step should be independently verifiable. If a number in the tenant statement can't be traced back through the chain to a GL entry, you have a documentation gap.
+
+## Best Practice 5: Independent Verification Before Statements Go Out
+
+The best defense against tenant audit challenges is a self-audit before statements are issued. This should be a separate person (or separate review) from whoever prepared the reconciliation: a second set of eyes specifically looking for errors.
+
+The independent verification checklist:
+- Does the GL total match the pool total?
+- Are all fixed/variable categorizations consistent with prior years and the master categorization table?
+- Does the gross-up calculation use economic occupancy?
+- Does the pro-rata denominator match the current BOMA-measured rentable area?
+- Has the exclusion list been applied - are any excluded items in the pool?
+- Do any large or unusual expenses have supporting invoices on file?
+- Does the math in each tenant's statement tie out independently?
+
+CapVeri automates this verification process. Upload your GL export and CapVeri runs each of these checks against your lease terms before statements are finalized. No ERP integration needed.
+
+## BOMA 2024 Changes That Affect CAM
+
+The BOMA 2024 update introduced revised measurement standards for outdoor amenity areas (spaces like rooftop terraces, courtyard amenities, and outdoor common areas that are increasingly common in modern commercial buildings).
+
+Under BOMA 2024, certain outdoor amenity areas that serve building occupants can now be classified as rentable area, changing the measurement methodology for buildings with these features. The relevant impacts for CAM:
+
+- **Denominator update:** If outdoor amenity area is now classified as rentable area, the total RSF denominator increases, which slightly reduces each tenant's pro-rata share
+- **Expense inclusion:** If newly classified rentable area is maintained as a common area, the associated maintenance costs can be included in the CAM pool
+- **Lease language verification:** If your leases define denominator based on BOMA-measured RSF, verify whether the 2024 changes apply to your property type and use
+
+For most office and retail properties without significant outdoor amenity space, BOMA 2024 changes have minimal direct impact on existing reconciliation calculations.
+
+---
+
+## Related Resources
+- [CAM Reconciliation Guide](/cam-reconciliation-guide) - Complete step-by-step reconciliation process
+
+- [BOMA Standards Resource Guide](/resources/boma)
+- [CAM Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide)
+- [BOMA 2024 Calculator](/tools/boma-2024-calculator)
+
+## Sources
+
+1. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)
+2. [CapVeri Sources & Research - BOMA 2024 methodology](/sources#boma-2024)

@@ -1,0 +1,27 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "capveri-sunset-gone",
+  "main": "./capveri-gone-worker.js",
+  "compatibility_date": "2026-07-03",
+  "observability": {
+    "enabled": true
+  },
+  "routes": [
+    {
+      "pattern": "capveri.com/*",
+      "zone_id": "REPLACE_WITH_ZONE_ID"
+    },
+    {
+      "pattern": "www.capveri.com/*",
+      "zone_id": "REPLACE_WITH_ZONE_ID"
+    },
+    {
+      "pattern": "app.capveri.com/*",
+      "zone_id": "REPLACE_WITH_ZONE_ID"
+    },
+    {
+      "pattern": "api.capveri.com/*",
+      "zone_id": "REPLACE_WITH_ZONE_ID"
+    }
+  ]
+}

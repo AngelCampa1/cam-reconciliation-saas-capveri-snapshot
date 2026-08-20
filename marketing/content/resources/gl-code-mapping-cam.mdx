@@ -1,0 +1,188 @@
+---
+title: "GL Code Mapping for CAM Recovery: Building a Complete Chart of Accounts Mapping Table"
+description: "A standard chart of accounts mapped to CAM recoverable and non-recoverable categories. Which GL codes are recoverable, which are excluded, common mapping errors, and how to build a mapping table that survives tenant audits."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 65
+faq:
+  - q: "What is a GL-to-CAM mapping table?"
+    a: "A GL-to-CAM mapping table is a reference document that assigns every general ledger account code used in property accounting to a CAM recovery category: fully recoverable, partially recoverable, non-recoverable, or excluded. The mapping table is the bridge between the GL (where expenses are recorded) and the CAM reconciliation (where expenses are allocated to tenants). Without a mapping table, you are making recovery decisions ad hoc. Different people make different decisions on the same expense, and the reconciliation is indefensible in an audit."
+  - q: "How often should the GL mapping table be reviewed?"
+    a: "At minimum, annually before reconciliation season. Review whenever new GL accounts are created, when the chart of accounts is restructured, when a new property is acquired and onboarded, or when lease amendments change the list of recoverable expense categories. A mapping table that was correct two years ago may have gaps today if new accounts were added without updating the mapping."
+---
+
+Every CAM reconciliation starts with the same question: which GL accounts go into the recoverable pool? The answer should be documented in a mapping table: a line-by-line assignment of every GL account to a recovery category. In practice, most property accounting teams do not have one. They rely on tribal knowledge, prior-year templates, or the ERP's default recovery configuration, which may or may not match the lease terms.
+
+The result is predictable. Recoverable expenses get excluded because nobody mapped the new GL account. Non-recoverable expenses get included because someone assumed the account code "looked right." Capital expenditures flow into operating pools because the 1500-series account was mapped as recoverable during initial setup and nobody revisited it.
+
+A mapping table is not complex to build. It is tedious. That is why it does not get done. But the cost of not having one (measured in leakage, overbilling exposure, and audit defense hours) far exceeds the cost of spending a day building it.
+
+## Why Mapping Tables Matter
+
+### The Leakage Problem
+
+When a new GL account is created and not mapped to a recovery pool, the expense sits in the GL but never flows into the CAM reconciliation. The landlord paid the expense. The lease authorizes recovery. But the expense is invisible to the reconciliation process.
+
+This is the most common source of CAM leakage in portfolios that have undergone chart-of-accounts restructuring or ERP migration. A Yardi-to-MRI migration that adds 40 new GL accounts can create 40 potential leakage points if the mapping table is not rebuilt from scratch.
+
+### The Overbilling Problem
+
+The reverse is equally dangerous. When a non-recoverable account is mapped as recoverable (a capital improvement account coded into the operating pool, or a management company overhead account included in common area expenses), every tenant is overbilled. This is the #1 finding in forensic tenant audits and the #1 trigger for audit rights disputes.
+
+### The Consistency Problem
+
+Without a mapping table, recovery decisions are made by whoever is running the reconciliation. Person A includes GL 6810 (amortized capital improvements). Person B excludes it. Person A leaves. Person C has no idea what the prior treatment was. The reconciliation is different every year, and the landlord cannot explain why.
+
+## The Standard Mapping Table
+
+The following table covers the most common GL accounts in commercial property accounting, mapped to CAM recovery categories. Your chart of accounts will differ (account numbers vary by ERP and by company), but the expense categories and recovery logic are standard across the industry.
+
+### Fully Recoverable Operating Expenses
+
+These accounts pass through to tenants under a standard NNN or modified gross lease. They represent routine operating costs that maintain the property in its current condition.
+
+| GL Code | Account Name | Description | Recovery Basis |
+|---|---|---|---|
+| 6100 | R&M - General | General building repairs and maintenance | IRS §162 routine maintenance |
+| 6110 | R&M - Roof | Patching, flashing repair, gutter cleaning, minor leak repair | Routine maintenance safe harbor |
+| 6120 | R&M - HVAC | PM contracts, filter changes, coil cleaning, single-unit repairs | UOP doctrine: component of larger system |
+| 6130 | R&M - Plumbing | Pipe repair, fixture replacement, drain clearing | Routine maintenance |
+| 6140 | R&M - Electrical | Ballast replacement, outlet repair, panel maintenance | Routine maintenance |
+| 6150 | R&M - Elevator | Monthly service contract, annual inspection, minor repairs | Routine maintenance |
+| 6160 | R&M - Fire/Life Safety | Sprinkler inspection, alarm testing, extinguisher service | Code compliance maintenance |
+| 6200 | Janitorial Services | Common area cleaning, day porter, window washing | Standard CAM expense |
+| 6210 | Janitorial Supplies | Cleaning chemicals, paper goods, trash liners | Standard CAM expense |
+| 6300 | Landscaping | Mowing, seasonal planting, mulch, irrigation maintenance | Standard CAM expense |
+| 6310 | Snow/Ice Removal | Plowing, salting, ice management | Standard CAM expense (seasonal) |
+| 6400 | Security Services | Guard service, patrol, monitoring fees | Standard CAM expense |
+| 6500 | Utilities - Common Area | Electricity, gas, water for lobbies, corridors, parking | Uncontrollable; typically uncapped |
+| 6510 | Real Estate Taxes | Property tax, special assessments | Uncontrollable; pass-through |
+| 6520 | Property Insurance | Hazard, liability, umbrella premiums | Uncontrollable; pass-through |
+| 6600 | Management Fee | On-site or third-party management fee (3–5% of revenue) | Recoverable if lease permits; often capped |
+| 6610 | On-Site Personnel | Property manager, engineer, maintenance staff wages | Recoverable for on-site staff only |
+| 6620 | Administrative Fee | Flat or percentage-based admin charge | Check lease cap; common audit target |
+| 6700 | Pest Control | Quarterly service, emergency treatments | Standard CAM expense |
+| 6710 | Waste Removal | Dumpster service, recycling, compactor maintenance | Standard CAM expense |
+
+### Non-Recoverable Accounts
+
+These accounts must never flow into the CAM pool. They represent capital expenditures, landlord overhead, or tenant-specific costs.
+
+| GL Code | Account Name | Description | Why Non-Recoverable |
+|---|---|---|---|
+| 1500 | Building Improvements | Structural upgrades, major system replacements | IRS §263(a) capital; BOMA excluded |
+| 1510 | Roof Replacement | Full tear-off, new membrane, structural overhaul | Restoration of major component |
+| 1520 | HVAC Capital | Chiller replacement, full RTU swap, ductwork overhaul | Restoration of HVAC UOP |
+| 1530 | Parking Capital | Mill-and-overlay, full repave, structural repairs | Betterment/Restoration |
+| 1540 | Tenant Improvements | TI allowance, buildout costs, demising walls | Landlord leasing cost |
+| 7100 | Leasing Commissions | Broker fees, referral payments | Landlord leasing cost |
+| 7110 | Legal - Leasing | Lease drafting, negotiation legal fees | Landlord cost |
+| 7120 | Marketing/Advertising | Property marketing, broker events | Landlord cost |
+| 7200 | Corporate Overhead | Off-site management salaries, corporate IT | Double-dip risk with mgmt fee |
+| 7210 | Depreciation | Building and equipment depreciation | Non-cash; never recoverable |
+| 7220 | Interest Expense | Mortgage interest, loan fees | Landlord financing cost |
+| 7300 | Bad Debt | Tenant write-offs, uncollectible rent | Landlord risk; not operating expense |
+
+### Conditionally Recoverable Accounts
+
+These accounts require lease-specific review. The same expense can be recoverable or excluded depending on the lease language.
+
+| GL Code | Account Name | Recoverable If... | Non-Recoverable If... |
+|---|---|---|---|
+| 6810 | Amortized CapEx | Lease permits cost-saving capital amortization; BOMA EER exception | Lease silent on amortized capital; no cost-saving justification |
+| 6620 | Admin Fee | Lease specifies a percentage or dollar cap | Charging admin fee AND off-site management salaries (double-dip) |
+| 6650 | Legal - Property Operations | Lease enforcement, code compliance, property-level matters | Leasing disputes, landlord-tenant litigation, collection costs |
+| 6660 | Accounting/Audit | Property-level audit, CAM reconciliation preparation | Corporate accounting, tax preparation, ownership-level audit |
+| 6670 | Technology/Software | Lease explicitly includes "building technology" or "operating systems" | General corporate IT, ERP licenses, internal tools |
+| 6680 | Reserves | Lease permits reserve contributions with dollar or percentage cap | No lease language authorizing reserves; unlimited reserve accruals |
+
+## Common Mapping Errors
+
+### Error #1: New Accounts Not Mapped
+
+When the chart of accounts is restructured or a new GL account is created, the new account may not be added to the CAM recovery mapping. The expense posts to the GL, the property P&L looks correct, but the reconciliation never picks it up.
+
+**How to detect:** Run a list of all GL accounts with non-zero balances for the property. Compare against your mapping table. Any account with a balance that does not appear in the mapping table is a gap.
+
+**Real cost:** A property adds GL 6315 (Ice Management) as a subaccount under Snow Removal. The reconciliation template still references only 6310. The $18,000 in ice management costs never enter the CAM pool. On a 150,000 SF building, that is $0.12/SF in pure leakage, or $12,000+ in unrecovered expense if the building is 65% recoverable.
+
+### Error #2: Capital Accounts Mapped as Operating
+
+During initial ERP setup, someone maps GL 1520 (HVAC Capital) into the recoverable pool. For three years, every HVAC capital project flows into tenant billings. The cumulative overbilling exposure grows with each year.
+
+**How to detect:** Review all accounts in the 1000-series and 7000-series. None of these should be mapped as recoverable without explicit lease authorization and BOMA EER justification.
+
+### Error #3: Rollup Accounts Masking Detail
+
+Some charts of accounts use parent-child structures where GL 6100 (R&M General) is the parent of 6110 through 6160. If the mapping references only the parent account, detailed entries posted directly to child accounts may or may not flow through depending on the ERP's rollup configuration.
+
+**How to detect:** Map at the lowest level of the chart of accounts. If your ERP has 6110 through 6160 as distinct accounts, map each one individually. Do not rely on parent account rollups for recovery classification.
+
+### Error #4: Expense Pool Mismatch
+
+A retail center has two CAM pools: common area maintenance and tax/insurance. GL 6510 (Real Estate Taxes) should be in the tax/insurance pool, not the CAM pool. If it is mapped to the wrong pool, the tax pass-through calculation is wrong and the CAM cap calculation is also wrong because it includes an expense that should be uncapped.
+
+**How to detect:** For properties with multiple recovery pools, verify each GL account is assigned to the correct pool. Taxes and insurance are almost always in a separate uncapped pool.
+
+### Error #5: Controllable/Uncontrollable Misclassification
+
+Many leases distinguish between controllable expenses (subject to an annual cap, typically 3-5%) and uncontrollable expenses (taxes, insurance, utilities, passed through without cap). If a controllable expense is mapped as uncontrollable, it bypasses the cap. If an uncontrollable expense is mapped as controllable, it gets artificially capped.
+
+**How to detect:** Review your controllable/uncontrollable split against the lease language for your largest tenants. The lease definition of "controllable" varies. Some leases define it explicitly; others use exclusion lists.
+
+## Building the Mapping Table
+
+### Step 1: Export Your Chart of Accounts
+
+Pull every GL account used for the property in the past three years. Include account number, account name, and the most recent annual balance. This gives you the universe of accounts that need mapping.
+
+### Step 2: Classify Each Account
+
+For each account, assign one of four categories:
+- **R** - Fully recoverable
+- **NR** - Non-recoverable
+- **CR** - Conditionally recoverable (requires lease review)
+- **EX** - Excluded from all pools (owner expense)
+
+### Step 3: Assign to Recovery Pool
+
+For properties with multiple pools (CAM, tax/insurance, utility), assign each recoverable account to the correct pool. This determines which cap applies and how the expense is allocated.
+
+### Step 4: Map Controllable vs. Uncontrollable
+
+For each recoverable account, flag whether it is controllable (subject to annual cap) or uncontrollable (pass-through). This mapping drives the cap calculation.
+
+### Step 5: Document the Lease Basis
+
+For conditionally recoverable accounts, document which lease clause authorizes recovery. This is your audit defense. "GL 6810 is recoverable per Section 4.2(b)(iii): amortized cost-saving capital improvements" is defensible. "We've always included it" is not.
+
+### Step 6: Validate Against Prior Year
+
+Compare your new mapping table to the prior year's actual recovery. Account for any differences. If the prior year included an account your mapping excludes, determine whether the prior year was wrong or the mapping needs adjustment.
+
+## Maintaining the Mapping Table
+
+A mapping table is a living document. It needs updating when:
+
+- A new GL account is created
+- The chart of accounts is restructured
+- A property is acquired with a different GL structure
+- A lease amendment changes the recoverable expense list
+- A tenant audit challenges the inclusion or exclusion of a specific account
+- The ERP is migrated and account numbers change
+
+Assign ownership to one person, typically the property controller or senior accountant. Review the full mapping table annually before reconciliation season begins.
+
+## Related Resources
+
+- [GL Coding Guide](/resources/gl-coding-guide): Detailed recoverable vs. non-recoverable classification rules
+- [CapEx Detection in CAM](/resources/capex-detection-cam): Catching capital expenditures before they enter the pool
+- [What Is Included in CAM Expenses](/resources/what-is-included-in-cam-expenses): Standard CAM expense categories
+- [Recovery Ratio Analysis](/resources/recovery-ratio-analysis): Measuring how much you actually recover
+
+## Sources
+
+1. [Fiserv - Reconciliation whitepaper](https://www.fiserv.com/content/dam/fiserv-ent/archive-files/final-files/white-papers/Frontier-Reconciliation_whitepaper_1020.pdf)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

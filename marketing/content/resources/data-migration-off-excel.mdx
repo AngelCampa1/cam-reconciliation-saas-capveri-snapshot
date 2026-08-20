@@ -1,0 +1,276 @@
+---
+title: "Moving Off Excel: Data Migration for CAM Reconciliation"
+description: "How to extract historical CAM data from spreadsheets into structured systems. Covers data cleaning, what to preserve vs. rebuild, timeline and resource requirements, and common migration pitfalls."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 48
+faq:
+  - q: "How long does it take to migrate CAM data from Excel to software?"
+    a: "A single property with clean spreadsheets takes 2–4 hours. A 10-property portfolio with inconsistent formats takes 20–60 hours spread over 1–3 weeks. The main variable is data quality. Clean, consistent spreadsheets migrate fast; messy ones require significant cleanup."
+  - q: "Do I need to migrate all historical data, or can I start fresh?"
+    a: "You need at minimum the prior year's reconciliation data (for year-over-year comparison), current lease terms, and cumulative cap bank balances. Full historical migration is ideal for base year leases and trend analysis, but you can start with one year of history and backfill later."
+  - q: "What is the biggest risk in CAM data migration?"
+    a: "Losing cumulative cap bank balances. If the spreadsheet tracked a running balance of unused cap capacity, and that balance is not migrated to the new system, the tenant will be underbilled permanently. This is the one data point that cannot be reconstructed from GL exports alone."
+  - q: "Should I migrate during or after reconciliation season?"
+    a: "After. Run the current cycle on your existing spreadsheets, then migrate during Q2 or Q3 when there is no deadline pressure. This gives you time to clean data, validate the migration, and train staff before the next cycle begins."
+---
+
+## When Is the Right Time
+
+The answer is almost never "right now, in the middle of reconciliation." The best migration window is Q2 or Q3, after year-end reconciliation is complete and before the next cycle begins.
+
+Trying to migrate during reconciliation season creates two problems: you're under deadline pressure that doesn't allow for careful data cleaning, and you're trying to learn a new system while producing real statements. The result is usually a half-finished migration and a reconciliation done the old way anyway.
+
+Plan the migration for a quiet period. Budget 1–3 weeks of calendar time, with 20–60 hours of actual work depending on portfolio size and data quality.
+
+---
+
+## What You're Actually Migrating
+
+CAM reconciliation data lives in four places, and each requires different handling:
+
+### 1. GL Data (Expense History)
+
+**Source:** Your property management system (Yardi, MRI, RealPage), not your spreadsheets.
+
+**What to do:** Don't migrate GL data from spreadsheets. Pull fresh exports from the PM system. The GL in your PM system is the system of record. Your spreadsheets contain a processed, classified version of this data. It may include errors that you'd be importing into the new system.
+
+**What you need:** GL trial balance exports for the current year and at least one prior year. CSV or Excel format.
+
+### 2. Lease Terms
+
+**Source:** Lease abstracts, lease files, or the lease administration module in your PM system.
+
+**What to migrate:**
+- Tenant name and suite
+- Rentable square footage
+- Pro-rata share percentage (and the denominator used to calculate it)
+- Lease start and end dates
+- Expense recovery structure (NNN, modified gross, full-service gross)
+- Gross-up threshold (if applicable)
+- Cap provisions (type, rate, base year)
+- Excluded expense categories
+- Base year amount (if applicable)
+- Audit clause terms
+
+**How long:** 15–30 minutes per tenant if you have a clean lease abstract. 45–90 minutes per tenant if you're extracting from the lease document itself.
+
+For a 20-tenant building, budget 5–10 hours for lease setup.
+
+### 3. Historical Reconciliation Results
+
+**Source:** Your spreadsheets.
+
+**What to migrate:**
+- Prior year total recoverable expenses
+- Prior year tenant billings (estimates collected + true-up)
+- Prior year cap bank balances (critical; see below)
+- Prior year base year amounts
+
+**What not to migrate:**
+- Intermediate calculation cells from spreadsheets
+- Notes and comments embedded in cells
+- Conditional formatting or validation rules
+- Macros or VBA code
+
+You want the inputs and outputs of prior year reconciliations. The formulas in between get replaced by the new system's calculation engine.
+
+### 4. Tenant Estimate Schedules
+
+**Source:** Your PM system or current billing schedules.
+
+**What to migrate:**
+- Current monthly estimate amounts per tenant
+- Year-to-date estimates collected
+
+This data is needed to calculate the year-end true-up. It usually comes from the PM system's billing module, not from your reconciliation spreadsheets.
+
+---
+
+## The Critical Data Point: Cumulative Cap Banks
+
+If any of your leases have cumulative CAM caps, the cap bank balance is the single most important piece of data to migrate correctly. Here's why:
+
+A cumulative cap lets the landlord carry forward unused cap capacity. If the cap is 5% per year and actual expenses increase only 2%, the remaining 3% goes into the bank. Next year, the landlord can bill up to 5% plus the banked 3%.
+
+This running balance exists only in your spreadsheet (or your controller's memory). It is not in the GL. It is not in the PM system. If it is not migrated to the new system, the bank resets to zero, and you lose the ability to recover those banked amounts permanently.
+
+**How to verify the bank balance:**
+1. Go back to the first year the cap provision took effect
+2. For each year, calculate: cap allowance minus actual increase
+3. Sum the positive differences (years where actual was below cap)
+4. Subtract any draws (years where you used banked capacity)
+5. The result is the current bank balance
+
+If your spreadsheets don't have a clear bank balance, reconstruct it from the annual reconciliation history. This is tedious but necessary. A wrong bank balance compounds every year going forward.
+
+| Year | Cap Allowance | Actual Increase | Annual Bank Change | Running Balance |
+|---|---|---|---|---|
+| 2022 (base) | - | - | - | $0 |
+| 2023 | 5.0% | 3.2% | +1.8% | 1.8% |
+| 2024 | 5.0% | 7.1% | -2.1% (draw) | 0.0%* |
+| 2025 | 5.0% | 4.0% | +1.0% | 1.0% |
+
+*In 2024, actual exceeded the 5% annual cap by 2.1%. The 1.8% bank balance covered part of it. The remaining 0.3% was uncapped because the bank was insufficient. The tenant was billed at 5% + 1.8% = 6.8%, not the full 7.1%.*
+
+---
+
+## Data Cleaning Checklist
+
+Before importing anything, clean the source data. These are the most common issues.
+
+### Tenant Names
+
+Spreadsheets accumulate name variations: "ABC Corp", "ABC Corporation", "ABC Corp.", "A.B.C. Corp". Pick the canonical name (matching the lease) and standardize.
+
+### Square Footage
+
+Check that the square footage in your spreadsheet matches the lease and the rent roll. Discrepancies are common after remeasurements or suite reconfigurations that updated the PM system but not the reconciliation spreadsheet.
+
+### GL Account Numbers
+
+If your PM system renumbered GL accounts (common during software upgrades or chart of accounts restructuring), make sure your GL exports use the current account numbers, not the old ones from your spreadsheets.
+
+### Year Boundaries
+
+Verify that expense data aligns with the fiscal year. Accruals that cross year boundaries sometimes appear in the wrong period in spreadsheet exports.
+
+### Currency Formatting
+
+Strip currency symbols, commas, and any text formatting from numeric fields. A cell that displays "$12,400.00" but contains a text string instead of a number will fail on import.
+
+### Negative Numbers
+
+Check how negatives are represented. Some spreadsheets use parentheses, like (500), while import systems expect a minus sign: -500. Also watch for credits that should be negative but are entered as positive with a note.
+
+---
+
+## Migration Steps
+
+### Step 1: Inventory Your Data (1–2 Days)
+
+List every property, every spreadsheet file, and every data source. For each property, document:
+- How many tenants
+- How many years of historical data exist
+- Whether the spreadsheet has cumulative cap tracking
+- Whether there are base year provisions
+- Data quality (clean, moderate, needs significant cleanup)
+
+This inventory tells you how long the migration will take and where the risk areas are.
+
+### Step 2: Prioritize Properties (Half Day)
+
+Not every property needs to migrate at once. Prioritize:
+1. Properties with upcoming reconciliation deadlines
+2. Properties with the most lease complexity (gross-up, caps, base year)
+3. Properties with known spreadsheet problems (errors, key-person risk)
+
+Properties with simple NNN leases and clean spreadsheets can migrate last.
+
+### Step 3: Set Up Lease Terms (2–4 Days for 10 Properties)
+
+Enter or import lease terms for each tenant at each property. This is the most labor-intensive step but also the most valuable. Once lease terms are in the system, they persist and enforce themselves on every future reconciliation.
+
+Quality check: after entering lease terms, run a sanity check. Do all pro-rata shares for a building sum to approximately 100%? Does every tenant with a gross-up clause have a threshold entered? Does every tenant with a cap have a cap type (cumulative vs. non-cumulative) and rate?
+
+### Step 4: Import GL Data (1 Day for 10 Properties)
+
+Pull GL exports from your PM system. Import them into the new system. Map GL accounts to expense categories. Verify totals match.
+
+The first property takes the longest because you're establishing the GL mappings. Subsequent properties reuse the same mappings if they share a chart of accounts.
+
+### Step 5: Import Historical Reconciliation Data (1–2 Days)
+
+Enter prior year results: total expenses, tenant billings, cap bank balances, base year amounts. Verify each against your spreadsheet outputs.
+
+### Step 6: Run a Parallel Reconciliation (1–2 Days)
+
+Pick one property. Run the most recent year's reconciliation in both the old spreadsheet and the new system. Compare results tenant by tenant. Investigate any differences.
+
+Differences will exist. Some will be errors in your spreadsheet that the new system caught. Others will be setup issues in the new system (wrong lease term, missing exclusion). Resolve each one until the outputs match or you can explain the variance.
+
+### Step 7: Validate and Go Live (1 Day)
+
+After the parallel reconciliation confirms accuracy, import the remaining properties and mark the migration complete. Archive the spreadsheets (don't delete them; you may need them for reference during the first year).
+
+---
+
+## Common Pitfalls
+
+### Pitfall 1: Migrating Errors
+
+If your spreadsheet had a gross-up error for three years, and you import those three years of results into the new system, you've now migrated the error. The new system will use the wrong historical base for year-over-year comparisons.
+
+**Prevention:** Run the new system's validation on imported historical data. Any findings on prior years should be investigated and corrected before going live.
+
+### Pitfall 2: Incomplete Cap Bank Migration
+
+Discussed above, but worth repeating because the consequences are permanent. A missing cap bank balance cannot be recovered once you stop using the spreadsheet and lose the year-by-year history.
+
+**Prevention:** Reconstruct cap bank balances from first principles. Document the reconstruction. Save the documentation alongside the migrated data.
+
+### Pitfall 3: Trying to Migrate Everything at Once
+
+A 50-property migration done all at once is a project that takes weeks, involves multiple people, and competes with daily operations. Inevitably, quality suffers on the last 20 properties because the team is fatigued.
+
+**Prevention:** Migrate in batches of 5–10 properties. Validate each batch before starting the next. The first batch takes the longest; subsequent batches go faster as the team builds proficiency.
+
+### Pitfall 4: Skipping the Parallel Reconciliation
+
+"The numbers look right" is not validation. Running one property through both systems and comparing tenant-by-tenant is the only way to confirm the migration is accurate.
+
+**Prevention:** Make the parallel reconciliation a non-negotiable step. Budget time for it. It will surface setup issues that would otherwise become billing errors.
+
+### Pitfall 5: Migrating During Reconciliation Season
+
+Covered above, but teams keep trying it. The pressure of a real deadline forces shortcuts. Data cleaning gets skipped. Validation gets abbreviated. The team ends up running the reconciliation in the spreadsheet anyway because the new system "isn't ready."
+
+**Prevention:** Plan the migration for Q2 or Q3. No exceptions.
+
+---
+
+## Timeline Summary
+
+| Phase | Duration (10-Property Portfolio) | Effort |
+|---|---|---|
+| Data inventory | 1–2 days | 8–16 hours |
+| Property prioritization | Half day | 4 hours |
+| Lease term setup | 2–4 days | 20–40 hours |
+| GL import and mapping | 1 day | 8 hours |
+| Historical data import | 1–2 days | 8–16 hours |
+| Parallel reconciliation | 1–2 days | 8–16 hours |
+| Validation and go-live | 1 day | 4–8 hours |
+| **Total** | **7–12 business days** | **60–108 hours** |
+
+For a 25-property portfolio, multiply by roughly 2x. For 50 properties, plan on 3–4 weeks of calendar time with a dedicated migration team.
+
+---
+
+## How CapVeri Handles Migration
+
+CapVeri is built for the spreadsheet-to-software transition. The system accepts GL exports via CSV, the same files you already pull from Yardi, MRI, or RealPage. No API setup. No IT project.
+
+Lease terms are entered through a structured form that validates required fields: if a tenant has a cumulative cap, the system requires a cap rate and base year before it will run the reconciliation. This prevents the incomplete setup that causes billing errors.
+
+For historical data, CapVeri imports prior year reconciliation results and cap bank balances. The system validates imported data against its own calculation engine. If the prior year numbers don't reconcile, it flags the discrepancy so you can investigate before it propagates.
+
+The parallel reconciliation step is built into the workflow. CapVeri shows its calculation next to your spreadsheet's result, tenant by tenant, with variances highlighted. Every difference gets a finding that explains the root cause.
+
+Most teams complete their first property migration in under 4 hours. A 10-property portfolio is typically live within two weeks.
+
+---
+
+## Related Resources
+
+- [Build vs. Buy Analysis](/resources/cam-build-vs-buy): when to move off spreadsheets
+- [CAM Software Evaluation Checklist](/resources/cam-software-evaluation-checklist): 25 criteria for comparing solutions
+- [GL Coding Guide](/resources/gl-coding-guide): getting expense classifications right from the start
+- [CAM Expense Caps](/resources/cam-expense-caps): cumulative vs. non-cumulative cap mechanics
+- [CAM Reconciliation Timeline](/resources/cam-reconciliation-timeline-checklist): how the new process fits your calendar
+
+## Sources
+
+1. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

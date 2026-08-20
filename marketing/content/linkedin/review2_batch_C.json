@@ -1,0 +1,253 @@
+{
+  "batch": "C2",
+  "posts_reviewed": 95,
+  "issues_found": 19,
+  "posts": [
+    {
+      "file": "2026-05-27-0900-anti-integration-209.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "published fee structures in the 20-40% range of recovered amounts",
+          "fix": "Add a named third-party source for this fee range IN THE POST (e.g., cite a specific audit industry publication or tenant audit firm's published fee schedule), or label it 'industry-reported fee structures typically in the 20-40% range' and attribute it to a named source. No source is cited in this post."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-28-1700-founder-232.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Invented clients/testimonials",
+          "severity": "reject",
+          "excerpt": "A portfolio that relied on third-party consultants every two years still accumulated $72,000 in leakage between them.",
+          "fix": "This presents a specific dollar figure attributed to an unnamed client portfolio as a factual statement, with no source_url to a published capveri.com blog post containing this story, no named third-party source, and no 'illustrative scenario' label. Either (a) add source_url to a capveri.com blog post that publishes this story in full, or (b) reframe as an illustrative scenario with a label such as 'In a modeled scenario for a portfolio of this type...' and derive the number transparently."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-28-1800-cam-math-233.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Invented clients/testimonials",
+          "severity": "reject",
+          "excerpt": "The asset management team had been planning the BOMA 2024 transition for eighteen months. A 12-property office portfolio in two markets.",
+          "fix": "This is an unnamed client case study with specific figures (40%/35%/25% lease language split, 4.2% denominator increase, $62,000 pool addition, $27,000 total project cost) presented as a real historical account. No source_url points to a published capveri.com post with this story, and no 'illustrative scenario' label is present. Either publish the story at the source_url and verify figures, or add 'The following is an illustrative scenario modeled on a 12-property portfolio transition' at the start of the narrative."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-29-0900-anti-integration-239.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "reviewed by external auditors who find those errors 60-80% of the time",
+          "fix": "The 60-80% tenant audit finding rate is cited in this post without a named third-party source. Unlike post 136 (earlier batch) where EuSpRIG is cited alongside it, here only Panko/EuSpRIG is named (for spreadsheet errors), not for the audit finding rate. Add a named source for the 60-80% figure in this post, or remove the specific percentage and use 'in the majority of reconciliations they review' without a number."
+        },
+        {
+          "rule": "Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "typical fees in the 20-40% range of recovered amounts",
+          "fix": "Add a named third-party source for the 20-40% contingency fee range in this post, or remove the specific percentage and describe the fee structure in qualitative terms."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-29-1200-cam-math-242.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Invented clients/testimonials",
+          "severity": "reject",
+          "excerpt": "The property management company had been running CAM reconciliation manually for eleven years. Twenty-two properties.",
+          "fix": "Unnamed client story with specific figures ($31,000 settlement, $87,000 in dispute costs over five years, $44,400 in under-recovery) presented as real history. Source_url is capveri.com/resources/cam-reconciliation-cost but this is a resources page, not a published case study. Either publish the story at that URL with the client's authorization, or reframe as 'In an illustrative cost analysis for a 22-property portfolio:' and make clear the figures are modeled."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-29-1400-war-stories-244.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Invented clients/testimonials",
+          "severity": "reject",
+          "excerpt": "A retail property with $3.5M in operating expenses was under-recovering $87,500 per year for three years. No tenant ever complained.",
+          "fix": "This opening presents a specific unnamed retail property as a real case. No source_url to a capveri.com blog post containing this story, and no 'illustrative scenario' label. The BOMA/IREM citation in the middle of the post covers the leakage percentages but not this specific property anecdote. Reframe the opening as 'For a retail property with $3.5M in operating expenses running at 2.5% leakage (the midpoint of BOMA EER benchmarks), the under-recovery would be...' to make clear it is derived from cited benchmarks, not a real case."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-29-1600-anti-integration-246.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Invented clients/testimonials",
+          "severity": "reject",
+          "excerpt": "For a 20-property portfolio, the first independent lease-vs-ERP comparison identified $475,000 in recoverable income",
+          "fix": "The opening hook presents a specific dollar finding as a real event ('the first independent...comparison identified'), but the body later labels the same figure as coming from 'a modeled scenario using conservative portfolio assumptions.' The hook reads as an invented client result. Rewrite the opening to match the body's framing: 'In a modeled scenario for a 20-property portfolio using conservative assumptions, an independent lease-vs-ERP comparison would identify $475,000 in recoverable income.'"
+        },
+        {
+          "rule": "Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "if tenant auditors currently find errors in 60-80% of reconciliations they review",
+          "fix": "The 60-80% figure is cited without a named third-party source in this post. Add a named source (e.g., cite a specific industry publication) or remove the specific percentage."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-30-1000-cam-math-253.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Invented clients/testimonials",
+          "severity": "reject",
+          "excerpt": "The portfolio had 22 properties. The chief operating officer noticed that one building's CAM dispute rate was consistently higher.",
+          "fix": "Unnamed client story with specific settlement amounts ($44,200 total across three disputes) presented as real history. Source_url is capveri.com/resources/denominator-drift. No 'illustrative scenario' label. Either publish this as a named or anonymized case study at the source_url, or add 'The following is an illustrative scenario based on common denominator drift patterns:' at the start."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-30-1130-anti-integration-254.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "65-80% of CAM reconciliation time is not calculation time. It is waiting time, verification time, and rework time.",
+          "fix": "This specific percentage range has no named third-party source cited in the post and is not labeled as a modeled estimate or internal observation. Add a named source (e.g., cite an IREM survey, a specific time-motion study) or reframe as 'In our experience reviewing portfolio workflows, the majority of reconciliation cycle time...' without the specific percentage, or label it 'based on internal workflow analysis.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-30-1600-cam-math-257.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Invented clients/testimonials",
+          "severity": "reject",
+          "excerpt": "The tenant auditor had been at the building for three years without finding anything significant. Standard lease, straightforward CAM pool.",
+          "fix": "Unnamed client/building story with specific dollar amounts ($78,000 HVAC invoice, $10,920 tenant share, $11,200 credit) presented as real history. Source_url is capveri.com/resources/gl-analysis-explained, not a published case study. Add 'illustrative scenario' framing, or publish the story at a dedicated blog URL and verify the figures are from a real documented case."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-31-0700-cam-math-261.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Invented clients/testimonials",
+          "severity": "reject",
+          "excerpt": "The reconciliation had been running for six years without a tenant dispute. A Class A office building, 180,000 SF, 12 tenants.",
+          "fix": "Unnamed client story with specific figures ($162,000, $238,000 janitorial line, $24,000 equipment rental, $8,640 credit) presented as real history. Source_url is capveri.com/resources/cam-variance-analysis. No 'illustrative scenario' label. Reframe as an illustrative scenario or publish at a dedicated case-study URL."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-31-0830-war-stories-262.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Invented clients/testimonials",
+          "severity": "reject",
+          "excerpt": "One wrong cell reference. $247,000 in refunds. A major tenant who did not renew.",
+          "fix": "The opening hook and subsequent narrative ($142,000 insurance premium, $82,000/year overbilling over 3 years, $247,000 total refunds, 23% anchor non-renewal) are presented as a real case. Source_url is capveri.com/blog/cost-single-cam-error-case-study. If this is a real published case study accessible at that URL, it passes; if the URL does not lead to a published post with this specific story, label it as an illustrative scenario."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-31-1900-anti-integration-269.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "the estimated annual ROI from an independent CAM verification layer: $573,250",
+          "fix": "The post opens with this specific figure before the body labels it 'conservative portfolio modeling assumptions.' The hook reads as a standalone fact. While the body provides the modeling label, the opening sentence should also make clear this is a modeled estimate: rewrite the first sentence to 'Using conservative portfolio modeling assumptions for a 20-50 building portfolio, the estimated annual ROI...' to match the body's framing and avoid a misleading opening."
+        }
+      ]
+    },
+    {
+      "file": "2026-06-01-0600-cam-math-271.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "In portfolios we've reviewed, the per-building recovery gap often runs $15,000-$30,000 per year.",
+          "fix": "Specific dollar range attributed to 'portfolios we've reviewed' - this is internal CapVeri data with no source_url to a published blog post containing this finding, no named third-party source, and no 'illustrative scenario / modeled estimate' label. Either (a) add source_url to a capveri.com blog post or white paper that formally publishes this finding with methodology, or (b) reframe as 'In illustrative scenarios across portfolio sizes, per-building recovery gaps often model in the $15,000-$30,000 per year range.'"
+        },
+        {
+          "rule": "Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Tenant audit firms consistently report material discrepancies in the majority of reconciliation statements they review.",
+          "fix": "No named third-party source cited in this post for this claim. Add a named source (e.g., 'According to [publication]') or remove 'consistently report' and soften to 'Tenant audit firms typically find material discrepancies' without citing a rate."
+        }
+      ]
+    },
+    {
+      "file": "2026-06-01-0800-war-stories-273.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Tenant auditors find errors in 60-80% of the CAM reconciliations they review.",
+          "fix": "This specific percentage range is presented as a direct quote (in quotes) without a named third-party source in the post. The image brief also repeats '60-80% of tenant audits find errors.' Add a named source (e.g., 'According to [industry publication/survey]') for the 60-80% figure, or remove the specific percentage and use qualitative language such as 'in the majority of reconciliations.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-06-01-0900-anti-integration-274.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Technology automated the transactional work that used to consume 60% of a controller's time.",
+          "fix": "Specific percentage with no named third-party source cited in this slide and no 'modeled estimate' label. Add a named source (e.g., 'Per IREM operational survey data' or a specific study), or remove the specific percentage and use qualitative language such as 'the majority of a controller's transactional time.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-06-01-1100-industry-news-276.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Harris County, Chicago-area townships, and Phoenix all saw assessment increases in the 10-18% range.",
+          "fix": "Specific percentage range for property tax assessments in named jurisdictions with no named third-party source (no JLL, CBRE, county assessor report, or equivalent) cited IN THE POST. Add a named source (e.g., 'Per Harris County Appraisal District 2025 data' and equivalent for the other markets) or remove the specific percentage range and describe the increases as 'significant above-average increases' without a number."
+        }
+      ]
+    },
+    {
+      "file": "2026-06-01-1400-war-stories-279.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "CAM audit settlements cluster between 50% and 75% of the initial claim.",
+          "fix": "Specific settlement range with no named third-party source cited in the post. This is presented as outcome data ('visible in outcome data') but no study, survey, or publication is named. Add a named source, or reframe as 'In our experience reviewing CAM audit outcomes, settlements often land well below the initial claim' without the specific percentage range."
+        }
+      ]
+    },
+    {
+      "file": "2026-06-01-1600-anti-integration-281.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "Fabricated statistics",
+          "severity": "reject",
+          "excerpt": "Tenant audit firms find material discrepancies in 60-80% of the reconciliations they review. They work on contingency and charge 20-40% of recovered amounts.",
+          "fix": "Both the 60-80% finding rate and the 20-40% contingency fee range are specific percentages with no named third-party source cited in this post. For consistency with other posts in this batch that have the same issue, add a named source for both figures or remove the specific percentages. Note: this post repeats the same unsourced stat that appears in posts 239, 246, 273, and others - all need the same fix applied consistently."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+---
+title: "Property Tax Pass-Through Reconciliation: Assessments, Protests, and Proration"
+description: "Property taxes are often the largest single line item in CAM reconciliation. Learn how to handle tax proration at year-end, supplemental tax bills, protest refund distribution, assessment vs. payment year timing, special assessments, and tax abatement pass-throughs."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 56
+faq:
+  - q: "How are property taxes passed through to tenants in commercial leases?"
+    a: "Property taxes are passed through based on the lease structure. In NNN leases, tenants pay their pro-rata share of actual taxes. In modified gross or base-year leases, tenants pay their share of taxes exceeding a base-year amount. The landlord pays the tax bill directly and bills tenants through the CAM or operating expense reconciliation process. Most leases define the tax pass-through separately from other operating expenses because taxes are treated differently for caps, exclusions, and protest refund purposes."
+  - q: "Do landlords have to share property tax protest refunds with tenants?"
+    a: "In most cases, yes. If tenants paid their share of property taxes based on the original (pre-protest) assessment, and the landlord later receives a refund from a successful tax protest, the tenants are entitled to their proportionate share of that refund. Many leases explicitly require the landlord to credit protest refunds to tenants, net of the landlord's costs for filing the protest (attorney fees, consultant fees). Even when the lease is silent, failing to share refunds creates audit exposure and potential breach-of-lease claims."
+---
+
+## The Largest Line Item
+
+Property taxes represent 25-40% of total operating expenses on most commercial properties. On a building with $1.5M in operating expenses, the tax bill might be $450,000 to $600,000. Getting the tax pass-through wrong by even a small percentage has an outsized dollar impact compared to errors in janitorial or landscaping.
+
+Yet tax reconciliation is where many controllers make mistakes, not because the math is hard, but because the timing is complicated. Tax assessments, tax bills, tax payments, and tax protests operate on different calendars that rarely align with the lease year or the accounting year. A tax protest filed in 2024 for tax year 2023 that settles in 2026 with a refund check arriving in 2027 creates a four-year accounting chain that has to land correctly in each year's reconciliation.
+
+---
+
+## Assessment Year vs. Payment Year
+
+This is the single most common source of confusion in tax reconciliation. Different jurisdictions use different calendars, and the tax year does not always match the payment year.
+
+### Examples by Jurisdiction
+
+| Jurisdiction | Tax Year | Assessment Date | First Payment Due | Second Payment Due |
+|---|---|---|---|---|
+| Texas (Harris County) | Jan 1 - Dec 31 | Jan 1 | Jan 31 (full year) | - |
+| California (LA County) | Jul 1 - Jun 30 | Jan 1 | Nov 1 (1st installment) | Feb 1 (2nd installment) |
+| New York (NYC) | Jul 1 - Jun 30 | Jan 5 (tentative) | Jul 1 (quarterly) | Oct 1, Jan 1, Apr 1 |
+| Illinois (Cook County) | Jan 1 - Dec 31 | Jan 1 | Mar 1 (1st installment, estimated) | Aug 1 (2nd installment, actual) |
+| Florida (Miami-Dade) | Jan 1 - Dec 31 | Jan 1 | Nov 1 (with 4% discount) | Mar 31 (no discount) |
+
+**The reconciliation question:** Your lease says the tenant pays their share of "real estate taxes for the calendar year." In California, the tax year runs July to June. Which taxes belong in the 2025 calendar-year reconciliation?
+
+### Two Approaches
+
+**Accrual basis (recommended):** Allocate the tax expense to the period it covers, regardless of when the bill arrives or when the payment is made. For a California property, the 2025 calendar-year reconciliation includes the second half of the 2024-2025 tax year (Jan-Jun 2025) and the first half of the 2025-2026 tax year (Jul-Dec 2025).
+
+**Cash basis:** Include taxes paid during the calendar year. If the landlord pays the November 2025 installment (for Jul-Dec 2025) and the February 2026 installment (for Jan-Jun 2026), the 2025 reconciliation on a cash basis includes only the November payment.
+
+**Which is correct?** The lease controls. If the lease says "taxes levied for the calendar year," use the accrual method. If the lease says "taxes paid during the calendar year," use the cash method. If the lease is ambiguous, accrual basis better matches the economic reality and is the standard under GAAP.
+
+### Proration Example
+
+**Property:** 150,000 SF office building in Los Angeles
+**2025-2026 tax year (Jul 1, 2025 - Jun 30, 2026):** $520,000
+**2024-2025 tax year (Jul 1, 2024 - Jun 30, 2025):** $480,000
+**Calendar year 2025 reconciliation (accrual basis):**
+
+| Period | Tax Year | Annual Tax | Months | Prorated Amount |
+|---|---|---|---|---|
+| Jan 1 - Jun 30, 2025 | 2024-2025 | $480,000 | 6 of 12 | $240,000 |
+| Jul 1 - Dec 31, 2025 | 2025-2026 | $520,000 | 6 of 12 | $260,000 |
+| **Calendar Year 2025 Total** | | | | **$500,000** |
+
+The $500,000 blended amount is what appears on the 2025 reconciliation statement. Not $480,000 (prior year) and not $520,000 (new year). The blended number.
+
+---
+
+## Supplemental Tax Bills
+
+Supplemental tax bills are triggered by a change in ownership or completion of new construction. The assessor revalues the property and issues a supplemental bill for the difference between the old assessment and the new assessment, prorated for the portion of the tax year remaining after the reassessment event.
+
+### How Supplemental Bills Work
+
+**Example:** A property in California is purchased on October 15, 2025. The prior assessment was $20M. The new assessment (based on the purchase price) is $28M.
+
+| | Prior | New | Difference |
+|---|---|---|---|
+| Assessed value | $20,000,000 | $28,000,000 | $8,000,000 |
+| Tax rate | 1.1% | 1.1% | - |
+| Annual tax | $220,000 | $308,000 | $88,000 |
+| Supplemental period (Oct 15 - Jun 30 = 259 days / 365) | | | $62,466 |
+
+The landlord receives a supplemental bill for $62,466 covering the period from the reassessment trigger date to the end of the current tax year.
+
+### Reconciliation Treatment
+
+**Is the supplemental bill recoverable?** Typically yes, if the lease defines taxes to include "all real estate taxes, assessments, and supplemental taxes levied against the Property." If the lease was negotiated before the acquisition and does not mention supplemental taxes, the tenant may argue the supplemental bill is a consequence of the landlord's purchase decision, not an operating expense.
+
+**Timing:** The supplemental bill may not arrive until 6-12 months after the triggering event. A property purchased in October 2025 might not receive the supplemental bill until mid-2026. At that point, the 2025 reconciliation has already been sent. This becomes a late-invoice situation requiring an amended statement or supplemental billing.
+
+**Proration for calendar-year reconciliation:** If the supplemental period straddles two calendar years, prorate the supplemental bill across both years. In the example above, the October 15 - December 31 portion ($19,726) belongs in the 2025 reconciliation. The January 1 - June 30 portion ($42,740) belongs in 2026.
+
+---
+
+## Tax Protest Refunds
+
+Tax protests (also called tax appeals) are filed when the landlord believes the assessed value is too high. If the protest succeeds, the assessor reduces the value and the landlord receives a refund for the overpayment. This refund must be distributed to tenants who paid their share of the original, higher tax bill.
+
+### The Refund Timeline
+
+1. **Year 1:** Landlord pays taxes based on the assessed value and bills tenants in the reconciliation
+2. **Year 1 or 2:** Landlord files a tax protest
+3. **Year 2 or 3:** Protest is heard and decided
+4. **Year 2, 3, or 4:** Refund check arrives
+
+This multi-year lag creates accounting complexity. The tenant who occupied 15,000 SF in Year 1 may have downsized to 10,000 SF or vacated entirely by the time the refund arrives.
+
+### Refund Calculation
+
+**Example:** A property's 2024 tax bill was $400,000. The landlord filed a protest and won a 12% reduction.
+
+| | Original | Post-Protest | Refund |
+|---|---|---|---|
+| Assessed value | $32,000,000 | $28,160,000 | - |
+| Tax rate | 1.25% | 1.25% | - |
+| Annual tax | $400,000 | $352,000 | $48,000 |
+| Protest attorney fees | - | - | ($8,500) |
+| **Net refund to distribute** | | | **$39,500** |
+
+### Distributing the Refund
+
+Distribute the net refund (after protest costs) based on each tenant's pro-rata share during the tax year that was protested, not their current share.
+
+| Tenant | SF in 2024 | Pro-Rata Share | Refund Credit |
+|---|---|---|---|
+| Tenant A | 25,000 | 16.67% | $6,584 |
+| Tenant B | 40,000 | 26.67% | $10,533 |
+| Tenant C | 18,000 | 12.00% | $4,740 |
+| Tenant D (vacated 2025) | 15,000 | 10.00% | $3,950 |
+| Vacant / Landlord | 52,000 | 34.67% | $13,693 |
+| **Total** | **150,000** | **100%** | **$39,500** |
+
+Note that Tenant D vacated in 2025 but is still entitled to their share of the 2024 refund. The landlord needs to issue a credit or refund check to the former tenant.
+
+### Protest Cost Recovery
+
+Most leases permit the landlord to deduct the cost of filing the tax protest from the refund before distributing the net amount to tenants. The rationale is straightforward: the tenants benefit from the reduced assessment, so they should share in the cost of obtaining it.
+
+However, some leases are silent on protest cost recovery. In that case, the landlord should still deduct reasonable protest costs, but document the deduction clearly. An $8,500 attorney fee against a $48,000 refund (17.7%) is reasonable. A $25,000 fee against a $48,000 refund (52%) will draw objections.
+
+**Best practice:** Include protest cost recovery language in all new leases. For existing leases that are silent, disclose the deduction on the refund credit memo so tenants can see the gross refund, the protest costs, and their net credit.
+
+---
+
+## Special Assessments
+
+Special assessments are charges levied by a government entity for specific improvements: road widening, sewer upgrades, business improvement districts (BIDs), streetscape improvements, and similar projects.
+
+### Recoverability
+
+The recoverability of special assessments depends on two factors.
+
+**Duration of the benefit.** If the assessment funds a one-time improvement with a multi-year useful life (new sidewalks, sewer line replacement), some leases classify it as a capital expenditure and exclude it from operating expenses. If the assessment funds ongoing services (BID security patrols, BID landscaping), it is treated as an operating expense and is generally recoverable.
+
+**Lease language.** Look for specific inclusion or exclusion language:
+
+- Included: "Taxes shall include all general and special assessments, BID charges, and any other governmental charges levied against the Property."
+- Excluded: "Taxes shall not include special assessments for capital improvements that benefit the Property beyond the Lease Term."
+
+### BID Assessments
+
+Business Improvement District assessments deserve special attention because they are annual, recurring, and fund services (cleaning, security, marketing) that directly benefit tenants. BID assessments are almost always recoverable, and tenants rarely dispute them if the services are visible and valuable.
+
+**Example:** A property in a downtown BID pays an annual assessment of $45,000 ($0.30/SF on a 150,000 SF building). The BID provides daily sidewalk cleaning, supplemental security from 6 PM to midnight, and holiday decorations. These services would cost the landlord $60,000-$80,000 if contracted independently. The BID assessment is a bargain, and framing it that way in tenant communication prevents disputes.
+
+---
+
+## Tax Abatement Handling
+
+Some properties receive tax abatements (reduced assessments or tax credits) from local government incentive programs. These create a reconciliation question: does the tenant benefit from the abatement, or does the landlord keep the savings?
+
+### Lease Language Controls
+
+**Landlord-favorable (tenant pays full freight):** "Taxes shall be calculated without regard to any tax abatement, exemption, or incentive program." The tenant pays their share of what the taxes would have been without the abatement. The landlord keeps the abatement savings.
+
+**Tenant-favorable (tenant pays actual):** "Taxes shall mean the actual real estate taxes payable by Landlord for the Property." The tenant pays their share of the actual (reduced) tax bill. The abatement savings are shared proportionally.
+
+**Most common (neutral):** The lease does not mention abatements. In this case, most practitioners pass through the actual tax bill (including the abatement benefit) because the lease says "taxes levied" or "taxes payable," and the actual amount payable is the abated amount.
+
+### Example
+
+| | Without Abatement | With Abatement |
+|---|---|---|
+| Assessed value | $30,000,000 | $30,000,000 |
+| Tax rate | 1.5% | 1.5% |
+| Gross tax | $450,000 | $450,000 |
+| Abatement (50% for 10 years) | - | ($225,000) |
+| Net tax payable | $450,000 | $225,000 |
+| Tenant share (10%) | $45,000 | $22,500 |
+
+The $22,500 difference per tenant is significant. Landlords negotiating new leases on abated properties should include language preserving the right to bill based on the unabated assessment.
+
+### Abatement Expiration
+
+When a tax abatement expires, the tax bill can double or triple overnight. A 10-year, 50% abatement expiring in 2026 means the 2026 tax bill jumps from $225,000 to $450,000. Tenants who have been paying based on the abated amount see their tax pass-through double.
+
+**Best practice:** Begin communicating the upcoming abatement expiration to tenants 12-18 months in advance. Include the projected tax increase in the next year's estimate forecast. A $225,000 increase showing up without warning in the reconciliation is a guaranteed dispute trigger.
+
+---
+
+## Multi-Parcel Properties
+
+Some commercial properties sit on multiple tax parcels. Each parcel has its own assessed value and tax bill. The reconciliation must aggregate all parcels into a single property-level tax expense.
+
+**Common issue:** Parcels are reassessed in different years. Parcel A is reassessed in 2024 and jumps 15%. Parcel B is not reassessed until 2025. The 2024 reconciliation shows a tax increase, and the 2025 reconciliation shows another increase. Tenants see two consecutive years of tax increases and assume something is wrong.
+
+**Solution:** Maintain a parcel-level breakdown in your reconciliation workpapers. When tenants question the increase, you can show which parcel was reassessed and when. Aggregate the total for the statement, but keep the parcel detail for audit defense.
+
+---
+
+## How CapVeri Handles Tax Reconciliation
+
+CapVeri tracks tax data at the parcel level and automatically prorates across fiscal and calendar years. When a protest is filed, the system tracks the original assessment, the protested value, and the outcome. If the protest succeeds, CapVeri calculates the refund distribution based on each tenant's share during the protested tax year, nets out the protest costs, and generates credit memos.
+
+For properties with tax abatements, CapVeri maintains both the gross and net tax amounts and applies the correct figure based on each tenant's lease language.
+
+---
+
+## Related Resources
+
+- [CAM Estimate Forecasting](/resources/cam-estimate-forecasting): Projecting property taxes for next year's estimates
+- [What Is Included in CAM Expenses](/resources/what-is-included-in-cam-expenses): Full operating expense classification guide
+- [Pro-Rata Share Calculation](/resources/pro-rata-share-calculation): How tenant shares are calculated for tax pass-throughs
+- [Harris County Gross-Up](/resources/harris-county-gross-up): Texas-specific tax and gross-up guidance
+
+## Sources
+
+1. [IRS Publication 527 - Residential Rental Property](https://www.irs.gov/publications/p527)
+2. [Harris County Appraisal District - Reappraisal resources](https://hcad.org/hcad-resources/reappraisal/)

@@ -1,0 +1,118 @@
+---
+title: "How to Automate CAM Reconciliation Without Replacing Yardi"
+description: "You don't have to replace Yardi to automate CAM reconciliation. Learn how property management teams use CSV exports and independent verification to catch errors and save weeks of Q1 work, without touching Yardi's configuration."
+excerpt: "Replacing Yardi to fix CAM reconciliation problems is the wrong answer. Here's how to automate reconciliation validation without disrupting your ERP."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "Can I automate CAM reconciliation without changing my ERP?"
+    a: "Yes. CAM reconciliation automation doesn't require replacing your ERP. Most ERPs (Yardi, MRI, AppFolio) can export GL data as CSV. Independent reconciliation software reads this export, applies the lease-term calculations independently, and flags discrepancies without accessing or modifying your ERP. Your Yardi or MRI configuration stays exactly as is."
+  - q: "How do you reconcile CAM without integrating your ERP?"
+    a: "You process your ERP's CSV exports rather than connecting via API. This approach doesn't require IT involvement, ERP credentials, or implementation consultants. You export the same GL report you already produce, upload it to the reconciliation tool, and get an independent calculation. No Yardi access, no MRI API, no implementation project."
+  - q: "Why would I want independent CAM reconciliation software if I already have Yardi?"
+    a: "Yardi reconciles what you've told it to reconcile, based on your recovery pool configuration. It doesn't check whether that configuration matches your current lease terms. An independent tool reads your GL export and your lease terms separately, recalculates from scratch, and flags differences. It's an auditor for your ERP's output, not a replacement for the ERP itself."
+---
+
+The most common mistake property management teams make when their CAM reconciliation process is broken: assuming they need to replace or radically change their ERP to fix it.
+
+They don't.
+
+Most CAM reconciliation problems aren't ERP problems. They're validation problems. Yardi or MRI is calculating exactly what it's configured to calculate. The question is whether that configuration still matches what 47 lease agreements actually say.
+
+## Why ERPs Don't Self-Audit
+
+Your ERP has no knowledge of your lease terms. It has knowledge of what you've entered into its recovery pool configuration. When a lease is amended and the gross-up threshold changes from 95% to 90%, Yardi continues using 95% until someone manually updates the configuration. Yardi doesn't know the lease changed.
+
+This is the core problem that an independent verification layer solves, and it doesn't require touching Yardi at all.
+
+## The No-Integration Workflow
+
+The most practical approach to CAM reconciliation automation for mid-market property management companies:
+
+**Step 1: Export your GL data as CSV**
+
+Every major ERP can produce a GL export in CSV or Excel format. Yardi has a standard GL export report. MRI has equivalent functionality. AppFolio, RealPage, and Sage Intacct all export GL data. This is the same export your property accountant already produces for year-end close.
+
+No API credentials. No IT department. No implementation project. One CSV file.
+
+**Step 2: Upload to independent reconciliation software**
+
+Upload the CSV to a tool that recalculates independently of your ERP configuration. The tool reads the raw GL data. It doesn't inherit your ERP's recovery pool configuration, your occupancy type settings, or your gross-up thresholds.
+
+**Step 3: Apply lease terms from the software's lease library**
+
+Enter (or upload) each tenant's CAM-related lease terms: gross-up threshold, cap type and percentage, exclusion list, pro-rata denominator definition. This is the authoritative source (the lease), not the ERP configuration.
+
+**Step 4: Review discrepancies before statements go out**
+
+The software compares its independent calculation to your ERP's output. Any difference is flagged with:
+- The specific tenant
+- The specific calculation element (gross-up, cap, pro-rata share)
+- The dollar amount of the discrepancy
+- The lease clause that supports the independent calculation
+
+**Step 5: Correct the underlying ERP configuration (or adjust statements)**
+
+For each discrepancy, you have a choice: update Yardi's configuration to match the lease, or generate corrected statements directly from the independent calculation. In most cases, correcting the ERP configuration is the right long-term fix.
+
+## What Changes, What Stays the Same
+
+**What stays the same:**
+- Your Yardi or MRI instance, exactly as configured
+- Your GL account structure
+- Your existing reconciliation workflow
+- Your IT setup (no integrations, no credentials shared)
+
+**What changes:**
+- You have an independent check before statements go out, not after tenants dispute
+- Q1 reconciliation time shifts from calculation-heavy to review-and-approval
+- ERP configuration errors are caught before they become tenant disputes
+
+## The "IT Director Objection" Handled
+
+IT directors are right to resist ERP integrations. They require security review, API key management, dependency tracking, and they create ongoing maintenance burden when the ERP vendor upgrades or changes API structure.
+
+CSV exports have none of these problems. A CSV file is a CSV file: no authentication, no API contracts, no integration points. Your IT director can review the data flow in 15 minutes and has nothing to maintain.
+
+## What This Looks Like for a 30-Building Portfolio
+
+Before this file-based approach:
+- 6–8 weeks of Q1 reconciliation work
+- 3–4 property controllers manually reconciling each building
+- Errors discovered by tenants (Tango Analytics, Visual Lease) after statements are sent
+
+After:
+- Controller exports GL from Yardi (same export they already produce)
+- Uploads to independent reconciliation software (30 minutes per building)
+- Reviews flagged discrepancies (1–2 hours per building instead of 10–20)
+- Approves or adjusts statements
+- Total time: 1–2 weeks of focused review instead of 6–8 weeks of building from scratch
+
+The savings come from eliminating the manual calculation work, not from replacing the ERP.
+
+## The Cost of Not Doing This
+
+Tenant auditors (Tango Analytics, Visual Lease, LeaseQuery) are hired on contingency to find these exact discrepancies. They typically charge 20–40% of the amount they recover for the tenant. On a $15,000 error, that's $3,000–$6,000 to the tenant's auditor, plus the credit or refund to the tenant, plus the damaged relationship.
+
+The independent verification approach (using CSV exports from your existing ERP) costs a fraction of what one disputed reconciliation costs in staff time, legal review, and tenant relations.
+
+## Getting Started
+
+The simplest starting point: pick your most complex building and run its GL export through independent reconciliation software. Use the discrepancies found (or not found) to decide whether the workflow is worth extending to your full portfolio.
+
+CapVeri processes GL exports from Yardi, MRI, AppFolio, RealPage, and any ERP that can produce a CSV. 30-day free trial, no credit card required. No ERP integration, no implementation project, no IT involvement.
+
+## Related Resources
+
+- [How to Export GL Data from Yardi, MRI, AppFolio](/resources/export-guide): Step-by-step export guides for major ERPs
+- [What Yardi CAM Reconciliation Catches vs. What It Misses](/blog/cam-numbers-not-matching-yardi): Specific Yardi calculation blind spots
+- [CAM Reconciliation Software Comparison](/blog/cam-reconciliation-software-comparison-2026): How different tools approach the problem
+- [CapVeri vs. Yardi for CAM Reconciliation](/vs/yardi): File-based vs. ERP-native reconciliation
+
+## Sources
+
+1. [Yardi: Voyager Commercial property management](https://www.yardi.com/products/yardi-voyager-commercial/)
+2. [CapVeri Sources & Research: Yardi interface program pricing](/sources#yardi-interface-program-pricing)

@@ -1,0 +1,105 @@
+---
+title: "CAM Estimate vs. CAM Reconciliation: What Is the Difference?"
+description: "CAM estimates are monthly escrows set at year-start. CAM reconciliation is the year-end true-up against actual expenses. Here is how both work and what happens when they diverge."
+datePublished: "2026-02-27"
+dateModified: "2026-02-27"
+author: "Angel Campa"
+buttonText: "True Up Your Numbers"
+order: 21
+faq:
+  - q: "What is the difference between a CAM estimate and CAM reconciliation?"
+    a: "A CAM estimate is a prospective monthly charge set at the start of the fiscal year, based on prior-year actuals and projected costs. CAM reconciliation is the retrospective year-end process that compares the total of those monthly estimates against what the landlord actually spent. The difference either becomes a bill to the tenant or a credit."
+  - q: "When are CAM estimates set?"
+    a: "CAM estimates are typically set 30 to 60 days before the start of the new lease year, per IREM guidance. Landlords review the prior year general ledger, apply inflation indices, and factor in anticipated vendor contracts to arrive at a monthly figure for each tenant."
+  - q: "What happens if my CAM estimate was too low?"
+    a: "If the estimate was too low, the reconciliation produces an underpayment. The tenant receives a lump-sum bill for the difference between what was collected and their actual pro-rata share of expenses. Stale estimates that haven't been touched in years can make that bill substantial."
+  - q: "How is the CAM reconciliation true-up calculated?"
+    a: "The standard formula is: Adjusted Expense Pool multiplied by the tenant's pro-rata share, minus the total estimated billings collected during the year. A positive result is money the tenant owes; a negative result is a credit owed to the tenant."
+---
+
+<Alert type="info" title="Quick Answer">
+CAM estimates are prospective monthly charges set at the start of each lease year, based on projected costs. CAM reconciliation is the year-end true-up that compares those monthly billings against what the landlord actually spent. The difference either becomes a lump-sum bill to the tenant or a credit.
+</Alert>
+
+<TwoColumnCard
+  left={{
+    title: "CAM Estimate",
+    items: [
+      "Prospective: set at the start of the fiscal year",
+      "Based on prior-year actuals plus inflation and projected vendor contracts",
+      "Billed as monthly installments folded into rent",
+      "A best guess"
+    ]
+  }}
+  right={{
+    title: "CAM Reconciliation",
+    items: [
+      "Retrospective: performed after year-end",
+      "Compares the sum of 12 monthly estimates against actual pro-rata share",
+      "Results in a lump-sum bill or a rent credit",
+      "The final answer"
+    ]
+  }}
+/>
+
+Sources: Tango Analytics, J.P. Morgan commercial real estate research.
+
+Most lease disputes begin not with the reconciliation itself, but with the gap between what tenants expected to pay and what the year-end statement demands. Understanding how estimates are set, and how the reconciliation corrects them, can prevent a lot of that friction before it becomes a formal dispute.
+
+For background on [what CAM reconciliation is and how the process works](/resources/common-area-maintenance-reconciliation-explained), that guide covers the full cycle from lease language to settlement.
+
+## How CAM Estimates Are Set
+
+Landlords typically set estimates 30 to 60 days before the new lease year begins, in line with IREM guidance on budget timelines. The process is clear in concept: take last year's actual expenses from the general ledger, apply relevant inflation indices (CPI for labor-heavy line items, local utility rate changes for energy), and factor in any anticipated vendor contract changes for the coming year.
+
+The result is a monthly dollar figure per tenant, calculated as their pro-rata share of the projected total pool. That figure is written into an annual reconciliation budget and billed monthly, usually as a line item alongside base rent.
+
+Best practice calls for reviewing estimates against the actual run rate at mid-year. If expenses are tracking well above or below projection, landlords can issue a revised estimate rather than letting the gap grow. Most leases permit this. Few landlords do it proactively.
+
+## How Reconciliation Corrects the Estimate
+
+Once the year closes, the landlord compiles actual expenses from the GL, applies any lease-required adjustments (gross-up for occupancy, cap calculations, exclusions), and arrives at the adjusted expense pool. The formula from IREM Oregon is direct:
+
+**Adjusted Pool x Pro-Rata Share - Estimated Billings Collected = Net Due**
+
+A positive result means the tenant underpaid relative to actual expenses. The landlord issues a true-up bill. A negative result means the tenant overpaid; the landlord issues a credit, typically applied to the next month's rent or refunded directly depending on lease terms.
+
+For a checklist of what to review before sending that statement, see [the CAM pre-send checklist](/resources/cam-pre-send-packet-checklist). For the most common calculation errors that distort the reconciliation result, [CAM reconciliation errors](/blog/cam-reconciliation-errors) covers the high-frequency failure modes.
+
+## What Happens When Estimates Are Badly Wrong
+
+<Alert type="warning" title="The Cash Flow Shock Problem">
+Stale estimates create a quiet compounding problem. Tenants pay their monthly line item without concern, then open a year-end statement with an unexpected four- or five-figure bill. Tango Analytics describes this as "significant negative variances" that cause cash flow shocks for tenants. PredictAP data shows dispute rates spike to 15 to 25 percent when lump-sum true-ups are large relative to the monthly estimate. The reconciliation math is correct; the problem is that the estimate drifted too far from reality for too long.
+</Alert>
+
+The pattern accelerates in inflationary environments. Insurance premiums rise mid-contract. Landscaping and snow removal vendors reprice. Utility rates change quarterly. Landlords who lock in an estimate at January and never revisit it absorb none of that in monthly billing; all of it lands in the year-end true-up.
+
+## Why This Matters to Landlords, Not Just Tenants
+
+The framing of estimate-versus-reconciliation often centers on tenant exposure, but the landlord's position matters too.
+
+Systematically low estimates mean the landlord is financing tenant operations interest-free across the lease year. Actual expenses are incurred and paid by the landlord, but reimbursement does not arrive until reconciliation settlement, which can be 90 to 120 days after year-end. On a large portfolio, this timing gap is real working capital sitting on the table.
+
+Systematically high estimates create the opposite problem. Tenants who overpay throughout the year are owed credits at reconciliation. Beyond that, chronic overestimation is a direct path to overbilling exposure. In jurisdictions with commercial lease transparency statutes, including California SB 1103 protections for smaller tenants, overcharges carry legal risk beyond the credit itself. For a full treatment of that exposure, see [CAM overbilling liability](/blog/cam-overbilling-liability).
+
+Annual estimate reviews tied to actual mid-year spend fix this. It is not a complex process. It is a discipline problem, and one that software can address by flagging projected-versus-actual variance before it compounds into a year-end dispute.
+
+<CTABox
+  title="Catch Estimate Drift Before Year-End"
+  description="CapVeri compares your projected expense pool against actual GL data and flags variances before they turn into disputed true-up bills."
+  utmContent="u_cta"
+  buttonText="True Up Your Numbers"
+/>
+
+<FAQSection items={[
+  { q: "What is the difference between a CAM estimate and CAM reconciliation?", a: "A CAM estimate is a prospective monthly charge set at the start of the fiscal year, based on prior-year actuals and projected costs. CAM reconciliation is the retrospective year-end process that compares the total of those monthly estimates against what the landlord actually spent. The difference either becomes a bill to the tenant or a credit." },
+  { q: "When are CAM estimates set?", a: "CAM estimates are typically set 30 to 60 days before the start of the new lease year, per IREM guidance. Landlords review the prior year general ledger, apply inflation indices, and factor in anticipated vendor contracts to arrive at a monthly figure for each tenant." },
+  { q: "What happens if my CAM estimate was too low?", a: "If the estimate was too low, the reconciliation produces an underpayment. The tenant receives a lump-sum bill for the difference between what was collected and their actual pro-rata share of expenses. Stale estimates that haven't been touched in years can make that bill substantial." },
+  { q: "How is the CAM reconciliation true-up calculated?", a: "The standard formula is: Adjusted Expense Pool multiplied by the tenant's pro-rata share, minus the total estimated billings collected during the year. A positive result is money the tenant owes; a negative result is a credit owed to the tenant." }
+]} />
+
+## Sources
+
+1. LeaseRef - CAM Reconciliation Process and Template - [LeaseRef](https://www.leaseref.com/cam-reconciliation-and-template/)
+2. [Fiserv - Reconciliation whitepaper](https://www.fiserv.com/content/dam/fiserv-ent/archive-files/final-files/white-papers/Frontier-Reconciliation_whitepaper_1020.pdf)
+3. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

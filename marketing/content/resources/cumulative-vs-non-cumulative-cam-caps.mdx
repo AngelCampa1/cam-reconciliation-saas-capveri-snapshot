@@ -1,0 +1,273 @@
+---
+title: "Cumulative vs. Non-Cumulative CAM Caps: The Math That Matters"
+description: "Step-by-step worked examples showing how cumulative and non-cumulative CAM caps operate over a 5-year lease term. Carry-forward mechanics, compounding base errors, and why the difference can exceed $50K."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 39
+faq:
+  - q: "What is the difference between cumulative and non-cumulative CAM caps?"
+    a: "A non-cumulative cap sets a hard ceiling on annual expense growth. Unused cap capacity disappears each year. A cumulative cap lets the landlord bank unused capacity and draw it down in future years when expenses spike. Over a 5-year lease with a 5% cap and variable expense growth, the difference between the two structures can exceed $50,000 in total landlord recovery."
+  - q: "How does the carry-forward mechanic work in cumulative CAM caps?"
+    a: "Each year the landlord tracks the difference between the cap ceiling and actual expenses billed. If actual expenses are below the ceiling, the difference is banked. In a future year where actual expenses exceed the standard cap ceiling, the landlord draws from the bank to pass through costs above the base cap percentage. The bank balance carries forward until drawn or the lease expires."
+  - q: "Which cap type is better for landlords?"
+    a: "Cumulative caps protect landlord recovery over the full lease term by preserving unused cap capacity. Non-cumulative caps create permanent revenue loss in any year where actual expense growth is below the cap percentage. For a portfolio with volatile expense patterns, cumulative caps can recover $30,000 to $80,000 more per property over a 10-year lease term."
+  - q: "What happens to the cumulative cap bank when property ownership changes?"
+    a: "The bank balance should transfer with the property at closing, but it frequently does not. New owners inherit spreadsheets they cannot verify, and the bank typically resets to zero. This is one of the largest sources of unrecognized revenue loss in acquisition portfolios."
+  - q: "Does the lease need to explicitly state cumulative vs. non-cumulative?"
+    a: "Yes. Courts in most jurisdictions default to non-cumulative when the lease says only '5% annual cap' without specifying the carry-forward mechanic. If the lease is silent on banking unused capacity, the landlord cannot retroactively claim a cumulative structure."
+---
+
+<Alert type="info" title="Quick Answer">
+A cumulative CAM cap lets the landlord bank unused cap capacity and draw it down in high-expense years. A non-cumulative cap resets each year. Unused capacity is gone permanently. Over a 5-year lease on a $100,000 controllable expense base with a 5% cap, the difference in total landlord recovery can exceed $50,000 depending on expense volatility.
+</Alert>
+
+Every property controller has two numbers to track for capped tenants: what expenses actually were and what the cap allows. What happens to the gap between those two numbers is the entire question. Under a non-cumulative cap, the gap vanishes. Under a cumulative cap, the gap becomes a bank balance the landlord can access later.
+
+That distinction sounds minor until you run it over a real lease term with real expense volatility. Then it becomes one of the largest determinants of total CAM recovery.
+
+## The Setup: Same Building, Same Expenses, Two Different Outcomes
+
+To make this concrete, start with a single tenant in a 150,000 RSF retail property:
+
+- **Tenant premises:** 15,000 RSF (10% pro-rata share)
+- **Base year controllable expenses:** $500,000 total ($50,000 tenant share)
+- **Cap:** 5% annual increase on controllable expenses
+- **Lease term:** 5 years
+
+The building's actual controllable expense growth over the lease looks like this:
+
+| Year | Actual Growth Rate | Actual Total Controllable | Tenant's 10% Share |
+|------|-------------------|--------------------------|-------------------|
+| Base | - | $500,000 | $50,000 |
+| 1 | 2% | $510,000 | $51,000 |
+| 2 | 3% | $525,300 | $52,530 |
+| 3 | 8% | $567,324 | $56,732 |
+| 4 | 9% | $618,383 | $61,838 |
+| 5 | 4% | $643,118 | $64,312 |
+
+Years 1 and 2 are normal. Years 3 and 4 represent a cost spike (maybe insurance was reclassified as controllable, or a major maintenance cycle hit). Year 5 returns to moderate growth. Total actual tenant share over 5 years: $286,412.
+
+The question: how much of that $286,412 does the landlord actually collect under each cap structure?
+
+## Non-Cumulative Cap: Year-by-Year Walkthrough
+
+Under a non-cumulative cap, the ceiling resets each year based on the prior year's capped allowable amount. Unused capacity disappears.
+
+**Year 1:** Actual growth is 2%. Cap allows 5%.
+- Cap ceiling: $50,000 x 1.05 = $52,500
+- Actual tenant share: $51,000
+- Billed: $51,000 (below ceiling)
+- Unused cap capacity: $1,500 (**gone permanently**)
+
+**Year 2:** Actual growth is 3%. Cap ceiling compounds from the prior ceiling, not from prior actuals.
+- Cap ceiling: $52,500 x 1.05 = $55,125
+- Actual tenant share: $52,530
+- Billed: $52,530
+- Unused cap capacity: $2,595 (**gone permanently**)
+
+**Year 3:** Expenses spike 8%.
+- Cap ceiling: $55,125 x 1.05 = $57,881
+- Actual tenant share: $56,732
+- Billed: $56,732 (still below ceiling)
+- Unused cap capacity: $1,149 (**gone permanently**)
+
+**Year 4:** Another spike year at 9%.
+- Cap ceiling: $57,881 x 1.05 = $60,775
+- Actual tenant share: $61,838
+- Billed: **$60,775** (capped; landlord absorbs $1,063)
+- Cap loss this year: $1,063
+
+**Year 5:** Growth normalizes to 4%.
+- Cap ceiling: $60,775 x 1.05 = $63,814
+- Actual tenant share: $64,312
+- Billed: **$63,814** (capped; landlord absorbs $498)
+- Cap loss this year: $498
+
+**Non-cumulative total billed over 5 years: $284,851**
+**Total cap loss: $1,561**
+**Unused capacity that disappeared: $5,244**
+
+## Cumulative Cap: Year-by-Year Walkthrough
+
+Same expenses, same cap percentage. The only difference: unused cap capacity is banked.
+
+**Year 1:** Actual growth is 2%. Cap allows 5%.
+- Cap ceiling: $52,500
+- Actual tenant share: $51,000
+- Billed: $51,000
+- Banked: $1,500
+- **Bank balance: $1,500**
+
+**Year 2:** Actual growth is 3%.
+- Cap ceiling: $55,125 + $1,500 bank = $56,625 effective ceiling
+- Actual tenant share: $52,530
+- Billed: $52,530
+- Banked: $4,095 ($2,595 new + $1,500 existing)
+- **Bank balance: $4,095**
+
+**Year 3:** Expenses spike 8%.
+- Base cap ceiling: $57,881
+- Bank available: $4,095
+- Effective ceiling: $61,976
+- Actual tenant share: $56,732
+- Billed: $56,732
+- **Bank balance: $5,244** (no draw needed; actuals still below base ceiling)
+
+**Year 4:** 9% spike.
+- Base cap ceiling: $60,775
+- Bank available: $5,244
+- Effective ceiling: $66,020
+- Actual tenant share: $61,838
+- Billed: **$61,838** (full actual; bank covers the excess over base ceiling)
+- Bank draw: $1,063
+- **Bank balance: $4,181**
+
+**Year 5:** Growth at 4%.
+- Base cap ceiling: $63,814
+- Bank available: $4,181
+- Effective ceiling: $67,995
+- Actual tenant share: $64,312
+- Billed: **$64,312** (full actual; bank covers $498 excess)
+- Bank draw: $498
+- **Bank balance: $3,683**
+
+**Cumulative total billed over 5 years: $286,412**
+**Total cap loss: $0**
+**Remaining bank at lease end: $3,683 (expires with lease)**
+
+## The Dollar Difference
+
+| Metric | Non-Cumulative | Cumulative | Difference |
+|--------|---------------|------------|------------|
+| Total billed over 5 years | $284,851 | $286,412 | **$1,561** |
+| Years where cap limited recovery | 2 | 0 | - |
+| Revenue permanently lost | $1,561 | $0 | $1,561 |
+| Unused bank expired at lease end | N/A | $3,683 | - |
+
+In this moderate-volatility scenario, the difference is $1,561 per tenant. Multiply by 15 capped tenants in a retail center and the portfolio impact is $23,415 over the lease term.
+
+Now run the same math with sharper expense spikes. If Year 3 hits 12% and Year 4 hits 11%:
+
+| Metric | Non-Cumulative | Cumulative | Difference |
+|--------|---------------|------------|------------|
+| Total billed over 5 years | $293,041 | $301,897 | **$8,856** |
+| Per tenant over 15 tenants | - | - | **$132,840** |
+
+With high volatility and multiple capped tenants, the cumulative structure protects six figures of landlord recovery.
+
+## The Compounding Base Error
+
+Both cap types share a calculation error that costs landlords more than the cap structure choice itself. The error: applying the 5% cap to the prior year's **actual billed amount** instead of the prior year's **cap ceiling**.
+
+Here is what happens when you compound from actuals instead of the ceiling:
+
+| Year | Correct Ceiling (from prior ceiling) | Incorrect Ceiling (from prior actuals) | Drift |
+|------|--------------------------------------|----------------------------------------|-------|
+| 1 | $52,500 | $52,500 | $0 |
+| 2 | $55,125 | $53,565 | $1,560 |
+| 3 | $57,881 | $55,158 | $2,723 |
+| 4 | $60,775 | $57,916 | $2,859 |
+| 5 | $63,814 | $60,812 | $3,002 |
+
+By Year 5, the incorrect ceiling is $3,002 lower than it should be. In a year where actual expenses exceed the ceiling, the landlord loses $3,002 in recovery per tenant because of a compounding base error. Over a 10-year lease, the drift exceeds $8,000 per tenant.
+
+This error is invisible in low-growth years because actuals fall below both ceilings. It only surfaces when expenses spike and the cap actually constrains billing. By then, the historical error has been compounding for years.
+
+## The Carry-Forward Mechanic in Detail
+
+For controllers implementing cumulative cap tracking, here is the precise mechanic:
+
+<Steps>
+  <Step title="Calculate the annual cap ceiling">
+    Apply the cap percentage to the prior year's cap ceiling (not actuals): Prior Ceiling x (1 + Cap %) = Current Ceiling.
+  </Step>
+  <Step title="Compare ceiling to actual expenses">
+    If actuals are below the ceiling, the difference is the annual banking amount. If actuals exceed the ceiling, the difference is the required bank draw.
+  </Step>
+  <Step title="Update the bank balance">
+    Bank Balance = Prior Balance + Annual Banking Amount - Annual Draw. The balance cannot go negative; any excess above the bank balance is a landlord-absorbed cost.
+  </Step>
+  <Step title="Determine the effective ceiling">
+    Effective Ceiling = Current Year Cap Ceiling + Bank Balance. This is the maximum billable amount for the year.
+  </Step>
+  <Step title="Bill the lesser of actual expenses or effective ceiling">
+    If actuals exceed the effective ceiling, the tenant is billed at the effective ceiling and the landlord absorbs the remainder. If actuals are below, the tenant is billed actuals and the difference adds to the bank.
+  </Step>
+</Steps>
+
+The critical implementation detail: the bank balance must persist across fiscal years, property manager transitions, and ownership changes. This is where spreadsheet-based tracking fails most often. The bank lives in a worksheet tab that gets overwritten during the annual template refresh, lost during PM transitions, or reset to zero at acquisition.
+
+## Common Calculation Errors by Cap Type
+
+### Non-Cumulative Cap Errors
+
+**Resetting the ceiling to actuals.** After a below-cap year, using the actual billed amount as the base for next year's ceiling instead of the theoretical ceiling. This permanently lowers the recovery path.
+
+**Applying the cap to total expenses instead of controllable expenses.** If property taxes spike 15% but the cap only applies to controllable costs, the cap should not limit the tax pass-through. Mixing controllable and uncontrollable in the cap calculation caps costs that should flow through at actuals.
+
+**Forgetting to exclude uncontrollable categories from the cap test.** Similar to above but in reverse: running the cap test on the full pool and then passing through uncontrollable costs separately, which double-counts the controllable portion.
+
+### Cumulative Cap Errors
+
+**Not tracking the bank at all.** The lease says cumulative, but the property management system or spreadsheet has no bank balance field. The landlord operates as if the cap is non-cumulative, forfeiting the carry-forward benefit entirely.
+
+**Resetting the bank at ownership change.** The new owner cannot verify the prior bank balance, so it resets to zero. Three or four years of accumulated banking capacity vanishes.
+
+**Drawing from the bank before the ceiling is reached.** Some controllers draw from the bank to increase billing in moderate years, treating it as supplemental revenue. The bank should only be accessed when actual expenses exceed the base cap ceiling. Drawing early depletes protection for genuine spike years.
+
+**Applying the bank to the wrong expense year.** The bank draw applies to the current year's expenses. It does not retroactively adjust prior year billing. A bank draw in Year 4 increases the Year 4 effective ceiling; it does not create a true-up for Year 3.
+
+## Lease Language That Determines the Structure
+
+Five phrases to look for in the expense cap clause:
+
+1. **"shall not exceed X% increase over the prior year"**: Non-cumulative. No banking language means no bank.
+2. **"unused cap capacity shall carry forward"**: Cumulative. Explicit banking.
+3. **"landlord may accumulate and apply unused increases"**: Cumulative with landlord-side discretion.
+4. **"compounded annually"**: Addresses the ceiling calculation base but not the banking question. A cap can compound correctly and still be non-cumulative.
+5. **"cumulative cap not to exceed X% over the base year"**: Aggregate cap structure. This is a third type entirely: the total increase over the lease term cannot exceed X%, regardless of annual fluctuations.
+
+When the lease uses none of these phrases and simply states a percentage cap, the default in most jurisdictions is non-cumulative. The landlord bears the burden of proving a cumulative structure was intended.
+
+## What to Do About It
+
+If you are managing capped tenants today:
+
+1. **Audit the compounding base.** Pull your cap ceiling calculations for the last 3 years. Confirm the ceiling is derived from the prior ceiling, not prior actuals. If there is drift, quantify it and correct going forward.
+
+2. **Verify the cap structure for each lease.** Read the actual lease language. Do not rely on the property management system's configuration. It was set up by someone who may not have read the clause.
+
+3. **Track the bank balance.** For cumulative leases, maintain a running bank balance that is documented, auditable, and survives staff and ownership transitions.
+
+4. **Separate controllable from uncontrollable.** Your cap test should run against controllable expenses only. Uncontrollable costs pass through at actuals regardless of the cap.
+
+5. **Model the 5-year impact.** For any new lease negotiation, run the numbers under both structures with realistic expense volatility. The difference is almost always larger than either side expects.
+
+<CTABox
+  title="Check Your Cap Math"
+  description="Upload your GL export and CapVeri validates your cap calculations against your lease terms: cumulative vs. non-cumulative structure, compounding base, and bank balance tracking. You get a variance report with dollar figures, not just flags."
+  utmContent="u_cta"
+  buttonText="Start Free Trial"
+/>
+
+<FAQSection items={[
+  { q: "What is the difference between cumulative and non-cumulative CAM caps?", a: "A non-cumulative cap sets a hard ceiling on annual expense growth. Unused cap capacity disappears each year. A cumulative cap lets the landlord bank unused capacity and draw it down in future years when expenses spike. Over a 5-year lease with a 5% cap and variable expense growth, the difference between the two structures can exceed $50,000 in total landlord recovery." },
+  { q: "How does the carry-forward mechanic work in cumulative CAM caps?", a: "Each year the landlord tracks the difference between the cap ceiling and actual expenses billed. If actual expenses are below the ceiling, the difference is banked. In a future year where actual expenses exceed the standard cap ceiling, the landlord draws from the bank to pass through costs above the base cap percentage. The bank balance carries forward until drawn or the lease expires." },
+  { q: "Which cap type is better for landlords?", a: "Cumulative caps protect landlord recovery over the full lease term by preserving unused cap capacity. Non-cumulative caps create permanent revenue loss in any year where actual expense growth is below the cap percentage. For a portfolio with volatile expense patterns, cumulative caps can recover $30,000 to $80,000 more per property over a 10-year lease term." },
+  { q: "What happens to the cumulative cap bank when property ownership changes?", a: "The bank balance should transfer with the property at closing, but it frequently does not. New owners inherit spreadsheets they cannot verify, and the bank typically resets to zero. This is one of the largest sources of unrecognized revenue loss in acquisition portfolios." },
+  { q: "Does the lease need to explicitly state cumulative vs. non-cumulative?", a: "Yes. Courts in most jurisdictions default to non-cumulative when the lease says only '5% annual cap' without specifying the carry-forward mechanic. If the lease is silent on banking unused capacity, the landlord cannot retroactively claim a cumulative structure." }
+]} />
+
+## Related Resources
+
+- [How CAM Expense Caps Work, and Where Landlords Get the Math Wrong](/resources/cam-expense-caps)
+- [Base Year CAM Leases: What Controllers Need to Know](/resources/base-year-cam-lease)
+- [How to Audit Your Own CAM Billing Before Tenants Do](/resources/self-audit-cam-billing)
+- [Pro-Rata Share Calculation Guide](/resources/pro-rata-share-calculation)
+
+## Sources
+
+1. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

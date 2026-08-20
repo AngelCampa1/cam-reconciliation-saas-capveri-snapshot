@@ -1,0 +1,133 @@
+---
+title: "MRI Recovery Billing Gross-Up Errors: The 5 Most Common Mistakes"
+description: "MRI Software recovery billing producing wrong gross-up amounts? These five configuration mistakes cause most MRI CAM gross-up errors, with steps to find and fix each one."
+excerpt: "MRI's recovery billing module gives precise control over gross-up calculations. That also means more ways to configure it wrong. Here are the five mistakes that cause most errors."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "How does MRI Software calculate gross-up for CAM reconciliation?"
+    a: "MRI uses Share Type settings to control how expenses are allocated and grossed up. The Share Type determines whether expenses are allocated on a pro-rata basis, whether gross-up applies (and at what threshold), and which occupancy calculation method is used. Each expense pool can have its own Share Type, allowing different gross-up configurations for different expense categories."
+  - q: "What is Share Type in MRI recovery billing?"
+    a: "Share Type in MRI defines the allocation methodology for a recovery expense pool. Common Share Types include: 'Pro Rata' (tenant's RSF / total RSF), 'Gross Up Pro Rata' (pro-rata with variable expense gross-up), and 'Fixed' (flat dollar amount). The Share Type also controls whether gross-up is calculated at the building level, floor level, or individual lease level."
+  - q: "Why does my MRI gross-up calculation differ between building-level and floor-level share types?"
+    a: "Building-level share types calculate occupancy across the entire building. Floor-level share types calculate occupancy only for the floor where the tenant is located. For buildings where occupancy varies significantly by floor (for example, a nearly full lower portion and a vacant upper portion), floor-level gross-up is more accurate but more complex to configure."
+---
+
+MRI Software's recovery billing module is more granular than most other property management systems. That makes it both more capable and more error-prone. The Share Type system gives MRI users precise control over gross-up methodology, but it requires careful configuration to match lease terms.
+
+These five mistakes account for the majority of MRI CAM gross-up errors.
+
+## Mistake 1: Building-Level vs. Floor-Level Share Type Mismatch
+
+**Where:** Recovery Pool Setup → Share Type field
+
+**MRI Share Type options:**
+- **Building:** Calculates occupancy and gross-up across the entire building
+- **Floor:** Calculates occupancy only for the floor where each tenant is located
+- **Lease:** Calculates based on individual lease terms (most granular)
+
+**The problem:** Building-level and floor-level Share Types produce different gross-up results when occupancy varies by floor. In a 10-story office building where floors 1-5 are fully leased and floors 6-10 are 50% vacant:
+- Building-level occupancy: 75%
+- Floor-level occupancy for floors 1–5: 100%
+- Floor-level occupancy for floors 6–10: 50%
+
+Tenants on floors 1-5 with a floor-level Share Type are not grossed up (their floor is 100% occupied). Tenants on those same floors with a building-level Share Type are grossed up as if the building is at 75%. That is a significant difference.
+
+**How to check:** Review each tenant's Share Type. Then review your lease terms for how gross-up should be calculated. If the lease says "based on building occupancy," use Building-level. If it specifies floor-level, use Floor.
+
+**Note:** Many leases don't specify. In that case, building-level is standard practice. Check what was represented to each tenant at lease signing.
+
+## Mistake 2: Variable/Fixed Expense Split Not Configured in Pool Setup
+
+**Where:** Recovery Pool Setup → Expense Type flags for each GL account
+
+**MRI requires explicit designation of each expense as Variable (occupancy-dependent) or Fixed (not occupancy-dependent).** Without this configuration, the system can't apply gross-up correctly to only the variable portion.
+
+**Default behavior:** New expense categories in MRI often default to Variable. This means any newly created GL account (including capital expenditures) gets added to the variable pool and grossed up until explicitly changed.
+
+**What commonly gets wrong:**
+- Property taxes flagged as Variable: taxes are fixed regardless of occupancy
+- Insurance premiums flagged as Variable: insurance doesn't change with occupancy
+- Capital improvement expenses flagged as Variable: CapEx should not be in the pool at all
+- Management fees flagged as Fixed: management fees are typically percentage-based, which makes them variable
+
+**How to audit:** Export the expense type configuration for all GL accounts in the recovery pool. Review each account's Variable/Fixed designation. Any account that doesn't vary with occupancy should be Fixed.
+
+**Impact:** If $100,000 in fixed expenses (taxes, insurance) are incorrectly flagged as Variable in a building running at 80% occupancy with a 95% gross-up threshold, the gross-up multiplier of 1.1875 overstates expenses by $18,750, which is charged to tenants who have no obligation to pay it.
+
+## Mistake 3: Gross-Up Threshold Not Matching Lease Terms
+
+**Where:** Recovery Pool Setup → Gross-Up Occupancy % field
+
+**MRI allows a single gross-up threshold per recovery pool,** but your leases may specify different thresholds for different tenants.
+
+**Common scenario:**
+- Large anchor tenant (10+ year lease, negotiated 90% threshold): Pool-level 95% threshold overcharges them
+- Standard small tenant (95% threshold in lease): Pool-level 95% is correct
+- New tenant (no gross-up clause): Any threshold in the pool charges them for gross-up they don't owe
+
+**MRI's solution:** Tenant-level overrides. Each tenant can have a recovery billing override that supersedes the pool-level configuration. However, these overrides must be manually configured for every affected tenant.
+
+**How to audit:**
+1. Pull every lease with a gross-up clause
+2. Extract the gross-up threshold from each lease
+3. Compare to the pool-level threshold in MRI
+4. For any tenant where the threshold differs, verify that a tenant-level override exists with the correct value
+5. For tenants without gross-up clauses, verify that gross-up is disabled at the tenant level
+
+## Mistake 4: Occupancy Calculation Period Mismatch
+
+**Where:** Recovery Pool Setup → Occupancy Period Type
+
+**MRI uses occupancy data from a defined period to calculate gross-up.** The period can be:
+- **Year-end snapshot:** Occupancy on December 31 of the reconciliation year
+- **Average:** Average occupancy across the reconciliation period
+- **Custom:** User-defined occupancy percentage
+
+**The problem:** Year-end snapshot occupancy can be misleading when a building had significant tenancy changes during the year. A tenant who vacated in October causes the building to show lower occupancy at December 31 than it maintained for most of the year.
+
+**Why it matters:** Using year-end snapshot when the building had mid-year vacancies produces a higher gross-up multiplier than the full-year weighted average would justify. This overstates the expense pool for remaining tenants.
+
+**Standard practice:** Average occupancy across the reconciliation period is more defensible for gross-up calculations and better reflects the actual operating experience of the building. Most leases that specify gross-up methodology call for an annual average.
+
+**How to check:** Compare the occupancy figure MRI is using for gross-up to the actual weighted average occupancy for the year. If they differ by more than 3-5 percentage points, review which period type is configured and whether it matches lease requirements.
+
+## Mistake 5: Recovery Pool Hierarchy Errors in Multi-Building Portfolios
+
+**Where:** Recovery Pool Setup → Property Assignment / Building Assignment
+
+**MRI supports hierarchical recovery pools:** a pool can be configured at the building level, the property level, or across a portfolio. In multi-building portfolios, cross-building expense allocation is a frequent source of errors.
+
+**The problem:** Shared expenses (management office, common area maintenance covering multiple buildings) need to be allocated across buildings correctly. If a shared maintenance pool is assigned to the wrong buildings, tenants in Building A pay for expenses from Building B's operating costs.
+
+**Also common:** In a multi-building campus or mixed-use development, the recovery pool boundaries may not match the lease boundaries. A retail tenant's lease may specify "Building 1 only" while the recovery pool includes expenses from a shared parking structure across both buildings.
+
+**How to audit:**
+1. List every recovery pool in your MRI setup
+2. For each pool, identify which buildings and properties contribute to it
+3. Compare to lease definitions: what boundaries does each tenant's lease specify?
+4. Any mismatch between pool boundaries and lease boundaries is an error
+
+---
+
+## Independent Verification
+
+MRI's recovery billing module will not self-report these errors. If you configure gross-up at 90% when leases say 95%, MRI calculates exactly what you told it to calculate. It doesn't know your leases say something different.
+
+CapVeri provides independent verification. Upload your MRI GL export and lease terms, and CapVeri recalculates each tenant's reconciliation using the lease terms, not the MRI configuration. Discrepancies between what MRI produced and what the lease requires are flagged with the specific clause and the dollar impact.
+
+## Related Resources
+- [CAM Reconciliation Guide](/cam-reconciliation-guide): complete step-by-step reconciliation process
+
+- [MRI Software CAM Setup Guide](/resources/software/mri-software/cam-setup): configuration walkthrough for MRI recovery billing
+- [Gross-Up Clause Explained](/resources/gross-up-clause-commercial-lease): how gross-up clauses work in commercial leases
+- [CAM Gross-Up Calculator](/tools/cam-gross-up-calculator): model gross-up scenarios at different occupancy thresholds
+- [Yardi vs. MRI for CAM Reconciliation](/vs/mri): how CapVeri compares to MRI's built-in reconciliation module
+
+## Sources
+
+1. [MRI Software - Property Management](https://www.mrisoftware.com/products/mri-property-management/)
+2. [CapVeri Sources & Research - MRI public procurement pricing](/sources#mri-gcloud-pricing)

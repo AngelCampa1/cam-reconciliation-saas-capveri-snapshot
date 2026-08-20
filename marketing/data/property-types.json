@@ -1,0 +1,922 @@
+{
+  "lastUpdated": "2026-03-17",
+  "propertyTypes": [
+    {
+      "slug": "class-a-office",
+      "name": "Class A Office",
+      "typicalCamPools": [
+        "Janitorial",
+        "Utilities (common area)",
+        "HVAC maintenance",
+        "Elevator maintenance",
+        "Security",
+        "Landscaping",
+        "Management fees",
+        "Insurance",
+        "Property taxes"
+      ],
+      "standardExclusions": [
+        "Tenant improvements",
+        "Leasing commissions",
+        "Capital improvements (roof, HVAC replacement)",
+        "Above-standard cleaning",
+        "Executive suite amenities"
+      ],
+      "commonLeaseStructures": [
+        "Full-service gross",
+        "Modified gross with base year",
+        "NNN (less common for Class A)"
+      ],
+      "grossUpApplicability": "Highly relevant. Class A office buildings frequently operate below 95% occupancy. Variable expenses (janitorial, utilities, management fees) should be grossed up. Fixed expenses (taxes, insurance) pass through at actuals.",
+      "benchmarkCamPerSF": {
+        "low": 10.0,
+        "high": 18.0,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Grossing up insurance (a fixed cost)",
+        "Including lobby renovation CapEx in operating expenses",
+        "Miscalculating the load factor after floor reconfiguration"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.1-2024 (Office Buildings)",
+        "Method B for multi-tenant floors"
+      ],
+      "notes": "Class A office is the most common property type for CAM disputes due to high per-SF charges, sophisticated tenants, and complex gross-up mechanics.",
+      "relatedResources": [
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/resources/lease-clauses/gross-up-clause",
+        "/blog/boma-2024-changes"
+      ],
+      "relatedTools": [
+        "/tools/boma-2024-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "class-b-office",
+      "name": "Class B Office",
+      "typicalCamPools": [
+        "Janitorial",
+        "Utilities (common area)",
+        "HVAC maintenance",
+        "Elevator maintenance",
+        "Landscaping",
+        "Management fees",
+        "Insurance",
+        "Property taxes"
+      ],
+      "standardExclusions": [
+        "Tenant improvements",
+        "Leasing commissions",
+        "Capital expenditures",
+        "Structural repairs"
+      ],
+      "commonLeaseStructures": [
+        "Modified gross",
+        "NNN",
+        "Full-service gross with expense stops"
+      ],
+      "grossUpApplicability": "Very relevant. Class B buildings often have higher vacancy rates than Class A, making gross-up calculations critical. Variable operating expenses should be adjusted to reflect a standard occupancy level (typically 90-95%).",
+      "benchmarkCamPerSF": {
+        "low": 7.0,
+        "high": 13.0,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Failing to gross up variable expenses when occupancy drops below 85%",
+        "Including capital repairs disguised as maintenance",
+        "Inconsistent base-year calculations across different tenants"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.1-2024 (Office Buildings)",
+        "Method A or B depending on floor configuration"
+      ],
+      "notes": "Class B offices have wider variance in CAM charges due to building age and condition. Older buildings may have deferred maintenance that landlords attempt to pass through as operating expenses.",
+      "relatedResources": [
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "suburban-office",
+      "name": "Suburban Office",
+      "typicalCamPools": [
+        "Janitorial",
+        "Landscaping",
+        "Parking lot maintenance",
+        "Utilities (common area)",
+        "HVAC maintenance",
+        "Security",
+        "Management fees",
+        "Insurance",
+        "Property taxes",
+        "Snow/ice removal"
+      ],
+      "standardExclusions": [
+        "Tenant improvements",
+        "Leasing commissions",
+        "Capital replacements",
+        "Above-standard cleaning"
+      ],
+      "commonLeaseStructures": [
+        "Modified gross with base year",
+        "NNN",
+        "Full-service gross with expense stops"
+      ],
+      "grossUpApplicability": "Relevant. Suburban office parks often experience occupancy swings as anchor tenants relocate. Parking lot and landscaping costs are significant shared costs that should be evaluated for gross-up treatment.",
+      "benchmarkCamPerSF": {
+        "low": 5.5,
+        "high": 11.0,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Allocating parking lot costs to tenants without parking rights",
+        "Including costs for vacant building in a multi-building campus",
+        "Improperly charging single-tenant building expenses to multi-tenant pool"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.1-2024 (Office Buildings)",
+        "Campus allocation methods for multi-building complexes"
+      ],
+      "notes": "Suburban office CAM is complicated by campus-style properties where shared costs must be allocated across multiple buildings, each with potentially different occupancy levels.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "neighborhood-retail",
+      "name": "Neighborhood Retail Center",
+      "typicalCamPools": [
+        "Parking lot maintenance",
+        "Landscaping",
+        "Lighting (common area)",
+        "Security",
+        "Signage maintenance",
+        "Management fees",
+        "Insurance",
+        "Property taxes",
+        "Trash removal",
+        "Snow/ice removal"
+      ],
+      "standardExclusions": [
+        "Anchor tenant exclusive costs",
+        "Pad site expenses",
+        "Capital improvements",
+        "Leasing commissions",
+        "Landlord's legal fees"
+      ],
+      "commonLeaseStructures": [
+        "NNN (most common)",
+        "Modified gross for smaller tenants"
+      ],
+      "grossUpApplicability": "Moderately relevant. Neighborhood centers often have lower vacancy but may have anchor tenants with capped CAM contributions, shifting costs to smaller in-line tenants.",
+      "benchmarkCamPerSF": {
+        "low": 4.0,
+        "high": 9.0,
+        "source": "ICSC / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Failing to account for anchor tenant CAM caps when calculating in-line tenant shares",
+        "Including pad site costs in the shared CAM pool",
+        "Double-counting property taxes already billed directly to ground-lease tenants"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.5 (Retail Buildings)",
+        "GLA vs. common area measurement"
+      ],
+      "notes": "Neighborhood retail centers have unique CAM dynamics because anchor tenants (grocery, pharmacy) typically negotiate CAM caps or fixed CAM rates, leaving smaller tenants exposed to a disproportionate share of cost increases.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "power-center",
+      "name": "Power Center",
+      "typicalCamPools": [
+        "Parking lot maintenance",
+        "Landscaping",
+        "Security",
+        "Lighting (common area)",
+        "Management fees",
+        "Insurance",
+        "Property taxes",
+        "Signage maintenance",
+        "Stormwater management"
+      ],
+      "standardExclusions": [
+        "Capital improvements",
+        "Leasing commissions",
+        "Pad site expenses",
+        "Individual tenant signage",
+        "Above-standard maintenance for big-box tenants"
+      ],
+      "commonLeaseStructures": [
+        "NNN",
+        "NNN with fixed CAM (for anchors)",
+        "Hybrid CAM with controllable expense caps"
+      ],
+      "grossUpApplicability": "Less relevant for the overall center. Power centers are typically fully leased. However, when a big-box space goes dark, gross-up mechanics become critical for remaining tenants.",
+      "benchmarkCamPerSF": {
+        "low": 3.0,
+        "high": 7.0,
+        "source": "ICSC / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Passing through dark-store maintenance costs when the anchor's lease makes them responsible",
+        "Incorrect pro-rata calculation when big-box tenants have exclusive parking areas",
+        "Including capital parking lot resurfacing as a maintenance expense"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.5 (Retail Buildings)",
+        "GLA measurement for large-format retail"
+      ],
+      "notes": "Power centers feature big-box retailers (Home Depot, Target, Best Buy) with substantial negotiating leverage. Anchor leases often include CAM caps, co-tenancy clauses, and exclusive-use provisions that complicate reconciliation.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "lifestyle-center",
+      "name": "Lifestyle Center",
+      "typicalCamPools": [
+        "Landscaping (premium)",
+        "Security",
+        "Marketing/promotions fund",
+        "Parking (surface and structured)",
+        "Lighting",
+        "Common area amenities",
+        "Management fees",
+        "Insurance",
+        "Property taxes",
+        "Event programming"
+      ],
+      "standardExclusions": [
+        "Capital improvements",
+        "Leasing commissions",
+        "Individual tenant build-out",
+        "Anchor-specific costs",
+        "Developer overhead"
+      ],
+      "commonLeaseStructures": [
+        "NNN with marketing fund contribution",
+        "Modified gross with percentage rent",
+        "Hybrid CAM with controllable caps"
+      ],
+      "grossUpApplicability": "Relevant. Lifestyle centers have higher turnover in smaller boutique spaces. Variable expenses for common amenity areas (fountains, event spaces, premium landscaping) should be evaluated for gross-up when occupancy drops.",
+      "benchmarkCamPerSF": {
+        "low": 8.0,
+        "high": 16.0,
+        "source": "ICSC / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Commingling marketing fund and CAM charges",
+        "Including capital improvements to common amenities as operating expenses",
+        "Incorrect allocation of structured parking costs to tenants without allocated spaces"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.5 (Retail Buildings)",
+        "Mixed-use measurement methods when office or residential is present"
+      ],
+      "notes": "Lifestyle centers command premium CAM charges due to high-end common area maintenance (water features, premium hardscaping, event spaces). Tenants often dispute whether these amenity costs should be recoverable operating expenses or landlord capital.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "strip-mall",
+      "name": "Strip Mall",
+      "typicalCamPools": [
+        "Parking lot maintenance",
+        "Landscaping (basic)",
+        "Lighting",
+        "Insurance",
+        "Property taxes",
+        "Trash removal",
+        "Snow/ice removal",
+        "Management fees"
+      ],
+      "standardExclusions": [
+        "Capital improvements",
+        "Leasing commissions",
+        "Roof replacement",
+        "Structural repairs"
+      ],
+      "commonLeaseStructures": [
+        "NNN (most common)",
+        "Fixed CAM with annual escalation"
+      ],
+      "grossUpApplicability": "Limited. Strip malls have lower total CAM and fewer variable expenses. However, when a strip mall has high vacancy, remaining tenants may dispute paying for the entire parking lot and lighting.",
+      "benchmarkCamPerSF": {
+        "low": 2.5,
+        "high": 6.0,
+        "source": "ICSC / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Including roof repairs as maintenance instead of capital",
+        "Charging tenants for vacant-suite utilities (if landlord leaves lights on)",
+        "Overstating management fees as a percentage of a small CAM pool"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.5 (Retail Buildings)"
+      ],
+      "notes": "Strip malls are typically simpler CAM environments but disputes arise around deferred maintenance. Landlords may attempt to pass through years of neglected parking lot or roof work as operating expenses rather than capital.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "warehouse-distribution",
+      "name": "Warehouse / Distribution",
+      "typicalCamPools": [
+        "Parking/truck court maintenance",
+        "Landscaping (minimal)",
+        "Security (fencing, cameras)",
+        "Insurance",
+        "Property taxes",
+        "Stormwater management",
+        "Fire suppression system maintenance",
+        "Management fees"
+      ],
+      "standardExclusions": [
+        "Tenant-specific dock equipment",
+        "Capital improvements",
+        "Leasing commissions",
+        "Tenant racking systems"
+      ],
+      "commonLeaseStructures": [
+        "NNN (dominant)",
+        "Absolute NNN for single-tenant"
+      ],
+      "grossUpApplicability": "Low. Most warehouse/distribution buildings are single-tenant or have very few tenants. In multi-tenant configurations, gross-up may apply to shared truck court and parking maintenance.",
+      "benchmarkCamPerSF": {
+        "low": 1.5,
+        "high": 4.0,
+        "source": "NAIOP / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Charging single-tenant buildings for common area management fees",
+        "Including truck court damage caused by one tenant in the shared CAM pool",
+        "Misclassifying HVAC office-area costs in a largely un-air-conditioned warehouse"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.2-2012 (Industrial Buildings)",
+        "Warehouse measurement including mezzanines"
+      ],
+      "notes": "Warehouse and distribution CAM is typically straightforward due to NNN lease structures and minimal common areas. Disputes most often arise around property tax pass-throughs after reassessment and insurance allocation.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "manufacturing",
+      "name": "Manufacturing Facility",
+      "typicalCamPools": [
+        "Parking maintenance",
+        "Security",
+        "Insurance",
+        "Property taxes",
+        "Fire/life safety systems",
+        "Environmental compliance (shared)",
+        "Management fees"
+      ],
+      "standardExclusions": [
+        "Tenant process equipment",
+        "Environmental remediation (tenant-caused)",
+        "Capital improvements",
+        "Specialized utility infrastructure"
+      ],
+      "commonLeaseStructures": [
+        "NNN (single-tenant dominant)",
+        "Absolute NNN with tenant responsible for all maintenance"
+      ],
+      "grossUpApplicability": "Rarely applicable. Most manufacturing facilities are single-tenant. In multi-tenant flex/manufacturing parks, gross-up may apply to shared infrastructure costs.",
+      "benchmarkCamPerSF": {
+        "low": 1.0,
+        "high": 3.5,
+        "source": "NAIOP / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Misallocating environmental compliance costs to tenants not generating the contamination",
+        "Including specialized utility infrastructure as common area costs",
+        "Charging manufacturing tenants for office-standard common area maintenance"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.2-2012 (Industrial Buildings)"
+      ],
+      "notes": "Manufacturing facility CAM is typically minimal because most leases are absolute NNN with the tenant responsible for virtually all operating costs. Disputes center on environmental liability allocation and shared utility infrastructure.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "flex-industrial",
+      "name": "Flex Industrial",
+      "typicalCamPools": [
+        "Parking lot maintenance",
+        "Landscaping",
+        "Security",
+        "Common area utilities",
+        "HVAC (office portion)",
+        "Insurance",
+        "Property taxes",
+        "Management fees",
+        "Trash removal"
+      ],
+      "standardExclusions": [
+        "Capital improvements",
+        "Leasing commissions",
+        "Tenant-specific equipment",
+        "Warehouse-only utility costs"
+      ],
+      "commonLeaseStructures": [
+        "NNN",
+        "Modified gross",
+        "Industrial gross"
+      ],
+      "grossUpApplicability": "Moderately relevant. Flex buildings often have varying occupancy across units. Variable expenses for shared parking, landscaping, and common-area HVAC should be grossed up when below standard occupancy.",
+      "benchmarkCamPerSF": {
+        "low": 2.5,
+        "high": 6.5,
+        "source": "NAIOP / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Averaging HVAC costs across warehouse and office tenants despite vastly different usage",
+        "Inconsistent allocation between flex suites of different sizes",
+        "Including dock-area costs in CAM for tenants with no dock access"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.2-2012 (Industrial Buildings)",
+        "Mixed office/warehouse measurement"
+      ],
+      "notes": "Flex industrial creates unique CAM challenges because tenants range from office-heavy (70/30 office-to-warehouse) to warehouse-heavy (10/90). Allocating HVAC, janitorial, and utility costs fairly across these different configurations is the primary dispute driver.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "medical-office",
+      "name": "Medical Office Building (MOB)",
+      "typicalCamPools": [
+        "Janitorial (medical-grade)",
+        "HVAC maintenance (enhanced)",
+        "Elevator maintenance",
+        "Security",
+        "Utilities (common area)",
+        "Medical waste management (shared)",
+        "Insurance",
+        "Property taxes",
+        "Management fees",
+        "Parking maintenance"
+      ],
+      "standardExclusions": [
+        "Tenant-specific medical equipment",
+        "Individual suite build-out",
+        "Capital improvements",
+        "Leasing commissions",
+        "Tenant medical waste (individual)"
+      ],
+      "commonLeaseStructures": [
+        "Modified gross",
+        "Full-service gross with base year",
+        "NNN (less common)"
+      ],
+      "grossUpApplicability": "Relevant. MOBs near hospitals may have uneven occupancy as practices consolidate. Higher-spec HVAC and janitorial standards mean variable expenses are higher per SF and should be grossed up at standard occupancy.",
+      "benchmarkCamPerSF": {
+        "low": 9.0,
+        "high": 17.0,
+        "source": "Revista / BOMA Medical Office 2024"
+      },
+      "commonBillingErrors": [
+        "Passing through medical-grade HVAC costs to non-medical tenants in mixed buildings",
+        "Including after-hours HVAC charges in base CAM rather than billing individually",
+        "Misallocating parking structure costs between medical and non-medical tenants"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.1-2024 (Office Buildings)",
+        "Special provisions for medical suites requiring higher ventilation"
+      ],
+      "notes": "Medical office buildings command premium CAM charges due to enhanced HVAC (fresh air requirements, negative pressure rooms), medical-grade janitorial services, and specialized common areas (waiting rooms, imaging suites). After-hours usage is a frequent billing dispute.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "hospital-campus",
+      "name": "Hospital Campus",
+      "typicalCamPools": [
+        "Landscaping (campus-wide)",
+        "Security (24/7)",
+        "Parking (surface and structured)",
+        "Utilities (campus infrastructure)",
+        "Roads and pedestrian paths",
+        "Wayfinding/signage",
+        "Insurance",
+        "Property taxes",
+        "Management fees"
+      ],
+      "standardExclusions": [
+        "Clinical equipment",
+        "Patient care costs",
+        "Individual building capital",
+        "Hospital-specific regulatory compliance",
+        "Research facility costs"
+      ],
+      "commonLeaseStructures": [
+        "Ground lease with campus CAM overlay",
+        "Modified gross with campus charge",
+        "Full-service with allocation formula"
+      ],
+      "grossUpApplicability": "Complex. Hospital campuses have a mix of fully-occupied hospital buildings and variably-occupied MOBs and retail spaces. Each building type may require separate gross-up treatment within a unified campus CAM framework.",
+      "benchmarkCamPerSF": {
+        "low": 6.0,
+        "high": 14.0,
+        "source": "Revista / BOMA Medical Office 2024"
+      },
+      "commonBillingErrors": [
+        "Allocating campus security costs equally despite 24/7 hospital vs. daytime-only MOB usage",
+        "Including hospital-specific infrastructure (helipad, emergency power) in shared campus CAM",
+        "Misallocating structured parking between hospital visitors and MOB patients"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.1-2024 (Office Buildings)",
+        "Campus measurement and allocation methods"
+      ],
+      "notes": "Hospital campus CAM is among the most complex property types because the campus serves multiple constituencies (hospital, outpatient clinics, MOBs, retail, research) with fundamentally different operating patterns and cost profiles.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "mixed-use-vertical",
+      "name": "Mixed-Use Vertical",
+      "typicalCamPools": [
+        "Lobby/common area maintenance",
+        "Elevator maintenance",
+        "Security",
+        "Utilities (common area)",
+        "HVAC (shared systems)",
+        "Landscaping",
+        "Parking (shared)",
+        "Insurance",
+        "Property taxes",
+        "Management fees"
+      ],
+      "standardExclusions": [
+        "Residential amenity costs (pool, gym)",
+        "Capital improvements",
+        "Leasing commissions",
+        "Use-specific regulatory costs"
+      ],
+      "commonLeaseStructures": [
+        "NNN for retail",
+        "Full-service gross for office",
+        "Separate residential CAM structure"
+      ],
+      "grossUpApplicability": "Highly relevant and complex. Each use type (retail, office, residential) may have different occupancy levels requiring separate gross-up calculations. Shared building systems must be allocated across uses with distinct cost drivers.",
+      "benchmarkCamPerSF": {
+        "low": 8.0,
+        "high": 20.0,
+        "source": "BOMA EER / ULI 2024"
+      },
+      "commonBillingErrors": [
+        "Allocating residential amenity costs (pool, rooftop) to commercial tenants",
+        "Using a single load factor across retail and office floors",
+        "Failing to separate elevator costs between freight (retail) and passenger (office) usage",
+        "Incorrect vertical penetration calculations in mixed-use towers"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.1-2024 (Office Buildings)",
+        "ANSI/BOMA Z65.4 (Multi-Unit Residential)",
+        "Mixed-use allocation guidance"
+      ],
+      "notes": "Mixed-use vertical buildings (retail podium, office mid-rise, residential tower) present the most challenging CAM scenarios. Each use type generates different costs, operates on different schedules, and has different lease structures. The allocation methodology must be defensible across all three use types.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "mixed-use-horizontal",
+      "name": "Mixed-Use Horizontal",
+      "typicalCamPools": [
+        "Parking (shared surface/structured)",
+        "Landscaping",
+        "Security",
+        "Common area lighting",
+        "Stormwater management",
+        "Wayfinding/signage",
+        "Insurance",
+        "Property taxes",
+        "Management fees"
+      ],
+      "standardExclusions": [
+        "Building-specific costs",
+        "Capital improvements",
+        "Leasing commissions",
+        "Residential HOA costs",
+        "Individual building maintenance"
+      ],
+      "commonLeaseStructures": [
+        "Master association CAM for shared areas",
+        "NNN for retail buildings",
+        "Full-service for office buildings",
+        "Separate residential assessment"
+      ],
+      "grossUpApplicability": "Moderately relevant. Horizontal mixed-use typically has building-level and campus-level CAM. Gross-up applies to campus-level shared costs when individual buildings or phases are not yet occupied.",
+      "benchmarkCamPerSF": {
+        "low": 3.0,
+        "high": 10.0,
+        "source": "BOMA EER / ULI 2024"
+      },
+      "commonBillingErrors": [
+        "Double-charging tenants for building-level and campus-level versions of the same expense",
+        "Allocating phase-2 infrastructure costs to phase-1 tenants",
+        "Incorrect pro-rata shares when campus square footage changes as new buildings deliver"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.1-2024 (Office Buildings)",
+        "ANSI/BOMA Z65.5 (Retail Buildings)",
+        "Campus allocation methods"
+      ],
+      "notes": "Horizontal mixed-use developments (separate buildings for office, retail, residential around shared amenities) require two tiers of CAM: building-level operating expenses and campus-level shared costs. Phased development adds complexity as the denominator for pro-rata calculations changes.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "life-sciences",
+      "name": "Life Sciences / Lab",
+      "typicalCamPools": [
+        "HVAC maintenance (lab-grade)",
+        "Utilities (high-intensity)",
+        "Janitorial (cleanroom/lab)",
+        "Security",
+        "Environmental compliance",
+        "Fire/life safety systems",
+        "Insurance",
+        "Property taxes",
+        "Management fees",
+        "Shared lab infrastructure"
+      ],
+      "standardExclusions": [
+        "Tenant lab equipment",
+        "Tenant-specific environmental permits",
+        "Capital improvements",
+        "Leasing commissions",
+        "Research-specific waste disposal"
+      ],
+      "commonLeaseStructures": [
+        "NNN (most common)",
+        "Modified gross with high base year",
+        "NNN with infrastructure surcharge"
+      ],
+      "grossUpApplicability": "Relevant but complex. Life sciences buildings have high fixed infrastructure costs (backup power, chilled water, ventilation) that may not vary linearly with occupancy. Gross-up formulas must account for infrastructure that runs regardless of occupancy.",
+      "benchmarkCamPerSF": {
+        "low": 15.0,
+        "high": 35.0,
+        "source": "CBRE Life Sciences / JLL 2024"
+      },
+      "commonBillingErrors": [
+        "Passing through lab infrastructure costs to office-only tenants in mixed lab/office buildings",
+        "Including tenant-caused environmental remediation in shared CAM",
+        "Misallocating utility costs between labs running 24/7 and standard office spaces"
+      ],
+      "relevantBomaStandards": [
+        "ANSI/BOMA Z65.1-2024 (Office Buildings)",
+        "Lab measurement including vivarium and cleanroom classifications"
+      ],
+      "notes": "Life sciences buildings have the highest CAM per SF of any property type due to intensive HVAC, utility, and infrastructure requirements. Lab spaces typically consume 3-5x the energy of standard office space, making utility allocation the primary dispute driver.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors",
+        "/resources/cam-reconciliation-life-sciences"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "data-center",
+      "name": "Data Center",
+      "typicalCamPools": [
+        "Security (24/7 multi-layer)",
+        "Insurance (specialized)",
+        "Property taxes",
+        "Common area power infrastructure",
+        "Cooling system maintenance (shared)",
+        "Fire suppression maintenance",
+        "Landscaping (perimeter)",
+        "Management fees"
+      ],
+      "standardExclusions": [
+        "Tenant power consumption (individually metered)",
+        "Tenant-specific equipment",
+        "Capital improvements",
+        "Leasing commissions",
+        "Tenant cooling beyond allocated capacity"
+      ],
+      "commonLeaseStructures": [
+        "NNN with power pass-through",
+        "Colocation gross with power metering",
+        "Powered shell NNN"
+      ],
+      "grossUpApplicability": "Limited for traditional CAM. Data centers bill most costs directly based on power consumption (kW) and cabinet/cage footprint rather than square footage. Shared infrastructure costs may be grossed up in multi-tenant facilities.",
+      "benchmarkCamPerSF": {
+        "low": 12.0,
+        "high": 30.0,
+        "source": "Cushman & Wakefield Data Center 2024"
+      },
+      "commonBillingErrors": [
+        "Allocating shared cooling costs by square footage instead of power draw",
+        "Including PUE (Power Usage Effectiveness) losses in tenant pass-throughs without disclosure",
+        "Mischarging redundant power infrastructure (N+1, 2N) as operating expense vs. capital"
+      ],
+      "relevantBomaStandards": [
+        "No specific BOMA data center standard. Typically measured by raised-floor square footage or power capacity."
+      ],
+      "notes": "Data center CAM is fundamentally different from other property types because the primary cost driver is power and cooling, not square footage. Most costs are billed based on committed power (per kW) rather than traditional pro-rata SF allocation.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "self-storage",
+      "name": "Self-Storage",
+      "typicalCamPools": [
+        "Security (cameras, gate systems)",
+        "Insurance",
+        "Property taxes",
+        "Parking/driveway maintenance",
+        "Lighting",
+        "Landscaping (minimal)",
+        "Management fees",
+        "Pest control"
+      ],
+      "standardExclusions": [
+        "Climate-control unit-specific costs",
+        "Capital improvements",
+        "Marketing/advertising",
+        "Bad debt"
+      ],
+      "commonLeaseStructures": [
+        "Gross lease (most common: tenants pay a flat rate)",
+        "Modified gross with insurance pass-through"
+      ],
+      "grossUpApplicability": "Not applicable in the traditional sense. Self-storage facilities use gross leases where operating costs are embedded in the rental rate. There is no separate CAM reconciliation for individual storage tenants.",
+      "benchmarkCamPerSF": {
+        "low": 2.0,
+        "high": 5.0,
+        "source": "Self Storage Association / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Not applicable. Self-storage tenants do not receive CAM reconciliation statements.",
+        "For ground-leased self-storage sites, errors arise in the property tax pass-through to the ground tenant"
+      ],
+      "relevantBomaStandards": [
+        "No specific BOMA self-storage standard. Measured by net rentable SF of individual units."
+      ],
+      "notes": "Self-storage is included for completeness. Traditional CAM reconciliation does not apply because tenants pay an all-inclusive rental rate. However, for self-storage facilities on ground leases or within mixed-use developments, CAM allocation at the campus level does apply.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "ground-lease",
+      "name": "Ground Lease",
+      "typicalCamPools": [
+        "Property taxes (land only)",
+        "Insurance (land/infrastructure)",
+        "Common area maintenance (roads, utilities, drainage)",
+        "Landscaping",
+        "Security (perimeter)",
+        "Management fees"
+      ],
+      "standardExclusions": [
+        "Building-level expenses (tenant's responsibility)",
+        "Capital improvements to tenant-owned buildings",
+        "Tenant's insurance",
+        "Building maintenance"
+      ],
+      "commonLeaseStructures": [
+        "Absolute NNN ground lease",
+        "Ground lease with CAM overlay for shared infrastructure",
+        "Ground lease with percentage rent"
+      ],
+      "grossUpApplicability": "Limited. Ground leases typically have few shared variable expenses. When multiple ground tenants share infrastructure (roads, drainage, utilities), those costs may be subject to gross-up if parcels are undeveloped.",
+      "benchmarkCamPerSF": {
+        "low": 0.5,
+        "high": 3.0,
+        "source": "Varies widely by location and infrastructure"
+      },
+      "commonBillingErrors": [
+        "Charging ground tenants for improvements to landlord-retained parcels",
+        "Including building-level property taxes in ground lease CAM (should be tenant's direct obligation)",
+        "Misallocating shared infrastructure costs when new parcels are developed"
+      ],
+      "relevantBomaStandards": [
+        "No specific BOMA ground lease standard. Land area measured by survey."
+      ],
+      "notes": "Ground leases separate land ownership from building ownership, creating a unique CAM dynamic. The ground landlord is responsible for shared infrastructure (roads, utilities, drainage) while tenants own and maintain their buildings. CAM disputes center on infrastructure cost allocation and property tax assessment splits.",
+      "relatedResources": [
+        "/resources/expenses/administrative-overhead",
+        "/resources/boma/boma-2024-adoption-roadmap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    }
+  ]
+}

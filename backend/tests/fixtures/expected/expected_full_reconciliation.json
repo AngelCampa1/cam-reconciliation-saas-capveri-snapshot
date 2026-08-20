@@ -1,0 +1,69 @@
+{
+  "scenario": "full_reconciliation",
+  "description": "Complete reconciliation with all adjustments",
+  "property_details": {
+    "name": "Metroplex Office Tower",
+    "total_square_feet": 80000
+  },
+  "tenant_details": {
+    "name": "Acme Corporation",
+    "suite": "401",
+    "rentable_sqft": 2500,
+    "pro_rata_share": 0.0312
+  },
+  "lease_terms": {
+    "base_year": 2024,
+    "cap_type": "cumulative",
+    "cap_rate": 0.05,
+    "gross_up_target": 0.95,
+    "admin_fee_percent": 0.15
+  },
+  "year_2025_calculation": {
+    "step_1_raw_expenses": {
+      "variable_expenses": 120000.0,
+      "fixed_expenses": 80000.0,
+      "total": 200000.0
+    },
+    "step_2_gross_up": {
+      "actual_occupancy": 0.88,
+      "target_occupancy": 0.95,
+      "gross_up_factor": 1.079545,
+      "grossed_variable": 129545.45,
+      "fixed_unchanged": 80000.0,
+      "total_after_grossup": 209545.45
+    },
+    "step_3_cap_application": {
+      "base_year_expenses": 200000.0,
+      "cumulative_max_year1": 210000.0,
+      "proposed_amount": 209545.45,
+      "capped_amount": 209545.45,
+      "note": "Within cap limit"
+    },
+    "step_4_base_year_adjustment": {
+      "base_year_total": 200000.0,
+      "current_year_total": 209545.45,
+      "increase_over_base": 9545.45
+    },
+    "step_5_admin_fee": {
+      "expense_increase": 9545.45,
+      "admin_fee_rate": 0.15,
+      "admin_fee_amount": 1431.82,
+      "total_with_admin": 10977.27
+    },
+    "step_6_pro_rata_share": {
+      "total_recoverable_pool": 10977.27,
+      "pro_rata_share": 0.0312,
+      "tenant_share": 342.49
+    }
+  },
+  "expected_output": {
+    "total_building_expenses": 200000.0,
+    "total_after_grossup": 209545.45,
+    "total_after_cap": 209545.45,
+    "increase_over_base": 9545.45,
+    "admin_fee": 1431.82,
+    "total_recoverable": 10977.27,
+    "tenant_billable_amount": 342.49,
+    "per_sqft_charge": 0.14
+  }
+}

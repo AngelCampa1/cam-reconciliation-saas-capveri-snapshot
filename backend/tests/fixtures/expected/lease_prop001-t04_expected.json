@@ -1,0 +1,32 @@
+{
+  "lease_terms": {
+    "base_year": 2024,
+    "pro_rata_share": 0.7886,
+    "cap_type": "cumulative",
+    "cap_rate": 0.05,
+    "gross_up_target": 0.95,
+    "admin_fee_percent": 0.15
+  },
+  "premises": {
+    "rentable_sqft": 78860,
+    "usable_sqft": 2250,
+    "load_factor": 1.1111
+  },
+  "rent": {
+    "monthly_base_rent": 254438.28,
+    "annual_base_rent": 3053259.36,
+    "psf_annual": 38.71746588891707
+  },
+  "dates": {
+    "commencement_date": "2025-01-01",
+    "expiration_date": "2029-12-31"
+  },
+  "extraction_confidence": {
+    "base_year": "high",
+    "pro_rata_share": "high",
+    "cap_type": "high",
+    "cap_rate": "high",
+    "gross_up_target": "high",
+    "admin_fee_percent": "high"
+  }
+}

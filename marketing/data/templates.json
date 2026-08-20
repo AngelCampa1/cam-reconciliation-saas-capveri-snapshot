@@ -1,0 +1,440 @@
+{
+  "lastUpdated": "2026-03-21",
+  "templates": [
+    {
+      "slug": "cam-reconciliation-statement",
+      "name": "CAM Reconciliation Statement",
+      "headline": "Tenant CAM Statement Outline",
+      "metaTitle": "Tenant CAM Statement Outline (Free Download)",
+      "metaDescription": "Download a free CAM reconciliation statement template. Pre-formatted with recoverable expense summary, pro-rata share calculation, gross-up section, and true-up amount. Excel and PDF formats.",
+      "description": "The standard template for the annual reconciliation statement sent to tenants. Covers the full reconciliation from GL expenses to per-tenant true-up amounts.",
+      "format": "Excel",
+      "sections": [
+        "Reconciliation period header (property, tenant, lease reference)",
+        "Recoverable expense summary by GL category",
+        "Non-recoverable exclusion detail with lease section references",
+        "Gross-up calculation (fixed vs. variable split)",
+        "Pro-rata share calculation with denominator definition",
+        "CAM cap comparison (prior year vs. current)",
+        "Estimated payments received summary",
+        "True-up balance due or credit"
+      ],
+      "useCase": "Property controllers and landlords sending annual reconciliation statements to NNN and modified gross tenants.",
+      "keyFeatures": [
+        "Pre-built gross-up formula (variable expenses only)",
+        "Cumulative and non-cumulative cap comparison",
+        "California SB 1103 disclosure support for eligible leases",
+        "Works with Yardi, MRI, and any ERP GL export"
+      ],
+      "faqs": [
+        {
+          "q": "What should a CAM reconciliation statement template include?",
+          "a": "A complete CAM reconciliation statement template includes: a header with property name, tenant name, lease reference, and reconciliation period; a recoverable expense summary with GL codes and exclusions; a gross-up calculation section; a pro-rata share calculation; a CAM cap comparison; estimated payment summary; and the final true-up balance."
+        },
+        {
+          "q": "Can I use this template with data from Yardi or MRI?",
+          "a": "Yes. Export your GL report as a CSV or Excel from Yardi, MRI, AppFolio, or any ERP, then paste the expense totals into the template. CapVeri's online reconciliation generator also accepts GL exports directly for fully automated calculation."
+        },
+        {
+          "q": "Is this template compliant with SB 1103 in California?",
+          "a": "The template includes California SB 1103 disclosure support for eligible commercial leases, with expense line item formatting and allocation-basis documentation fields for customer and counsel review."
+        }
+      ],
+      "relatedTools": ["reconciliation-statement-generator", "cam-gross-up-calculator", "pro-rata-calculator", "cam-cap-calculator"],
+      "relatedResources": [
+        "/resources/cam-reconciliation-example",
+        "/resources/how-to-calculate-cam-charges",
+        "/cam-reconciliation-guide"
+      ],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "cam-reconciliation-excel",
+      "name": "CAM Reconciliation Excel Template",
+      "headline": "CAM Reconciliation Excel Template (Free Download)",
+      "metaTitle": "Free CAM Reconciliation Excel Template with Formulas",
+      "metaDescription": "Download a free CAM reconciliation Excel template with pre-built formulas for pro-rata share, gross-up, and CAM cap calculations. Works with any ERP GL export.",
+      "description": "An Excel spreadsheet with all CAM reconciliation formulas pre-built: pro-rata share, gross-up, cumulative and non-cumulative cap tracking, and true-up calculation.",
+      "format": "Excel",
+      "sections": [
+        "Input sheet: building info, occupancy, gross-up threshold",
+        "GL expense import tab (paste from any ERP export)",
+        "Expense categorization and exclusion worksheet",
+        "Gross-up calculation formula tab",
+        "Tenant roster with lease terms (SF, cap %, denominator)",
+        "Per-tenant CAM calculation worksheet",
+        "Summary tab: true-up amounts by tenant",
+        "Prior year comparison for cap validation"
+      ],
+      "useCase": "Property accountants who want Excel-based reconciliation with professional formulas and don't yet use dedicated reconciliation software.",
+      "keyFeatures": [
+        "Gross-up formula pre-configured (variable expenses only)",
+        "Supports up to 20 tenants",
+        "Cumulative cap carry-forward logic built in",
+        "Input validation to prevent formula errors"
+      ],
+      "faqs": [
+        {
+          "q": "What formulas are included in the CAM reconciliation Excel template?",
+          "a": "The template includes pre-built formulas for: pro-rata share calculation (tenant SF / denominator SF), gross-up (variable expenses / actual occupancy % x threshold %), cumulative CAM cap with carry-forward logic, non-cumulative cap ceiling calculation, and true-up (annual obligation minus estimated payments received)."
+        },
+        {
+          "q": "How many tenants does the Excel template support?",
+          "a": "The standard template supports up to 20 tenants. Each tenant has a row in the tenant roster tab with their leased SF, denominator definition, gross-up threshold, and cap percentage. For larger portfolios, CapVeri's software handles unlimited tenants from a single GL import."
+        },
+        {
+          "q": "Can I calculate CAM reconciliation in Excel?",
+          "a": "Yes. Excel is the most common tool for CAM reconciliation at small to mid-size portfolios. The main risks are formula errors (especially in gross-up and cap calculations) and manual data entry mistakes from copying GL data. CapVeri's automated reconciliation eliminates these risks by importing GL data directly."
+        }
+      ],
+      "relatedTools": ["reconciliation-statement-generator", "cam-gross-up-calculator", "cam-cap-calculator"],
+      "relatedResources": [
+        "/resources/cam-reconciliation-example",
+        "/resources/how-to-calculate-cam-charges",
+        "/tools/cam-reconciliation-template"
+      ],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "cam-reconciliation-checklist",
+      "name": "CAM Reconciliation Checklist",
+      "headline": "CAM Reconciliation Checklist Template",
+      "metaTitle": "CAM Reconciliation Checklist Template (Free)",
+      "metaDescription": "Free CAM reconciliation checklist for commercial landlords. 35-step checklist covering GL data collection, expense categorization, gross-up, cap verification, tenant notification, and audit response.",
+      "description": "A comprehensive checklist covering every step of the CAM reconciliation process: from GL data collection to final tenant statement delivery and dispute response.",
+      "format": "PDF",
+      "sections": [
+        "Pre-reconciliation data gathering (GL, lease abstracts, rent roll)",
+        "Expense categorization and exclusion review",
+        "Gross-up verification",
+        "Pro-rata denominator validation",
+        "CAM cap calculation and prior year comparison",
+        "Reconciliation statement preparation",
+        "Tenant notification and delivery",
+        "True-up payment tracking",
+        "Audit response preparation"
+      ],
+      "useCase": "Property managers and controllers who want a systematic process to ensure nothing is missed during annual CAM reconciliation.",
+      "keyFeatures": [
+        "35-step complete process checklist",
+        "Separate sections for each phase of reconciliation",
+        "Tenant communication timeline",
+        "Audit response protocol included"
+      ],
+      "faqs": [
+        {
+          "q": "What should be on a CAM reconciliation checklist?",
+          "a": "A complete CAM reconciliation checklist should cover: (1) data gathering: GL export, lease abstracts, rent roll, and prior year reconciliation; (2) expense review: categorization, exclusions, gross-up calculation; (3) calculations: pro-rata share and cap verification; (4) statement preparation: formatting and disclosure fields; (5) tenant delivery: timing, method, and certified mail if required; (6) payment tracking: true-up collection and credit issuance."
+        },
+        {
+          "q": "When should a CAM reconciliation be completed?",
+          "a": "Most commercial leases require CAM reconciliation within 90-120 days after the fiscal year end. For calendar-year leases, the reconciliation is typically due by March 31 or April 30 of the following year. Some leases specify shorter windows. Always verify the exact deadline in the lease."
+        },
+        {
+          "q": "How do I use a CAM reconciliation checklist?",
+          "a": "Work through the checklist sequentially before, during, and after the reconciliation process. Start with data gathering (GL export, lease abstracts, prior year reconciliation), then move through expense categorization, calculation verification (gross-up, pro-rata, caps), and finally statement preparation and delivery. Check off each item as completed and note any items that need follow-up."
+        }
+      ],
+      "relatedTools": ["audit-risk-quiz", "sb-1103-checker", "reconciliation-statement-generator"],
+      "relatedResources": [
+        "/cam-reconciliation-guide",
+        "/resources/cam-reconciliation-example",
+        "/resources/workflows"
+      ],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "tenant-cam-reconciliation-letter",
+      "name": "Landlord CAM Reconciliation Cover Letter",
+      "headline": "Landlord CAM Reconciliation Cover Letter",
+      "metaTitle": "Landlord CAM Reconciliation Cover Letter",
+      "metaDescription": "Download a CAM reconciliation letter template for landlords. Cover letter for the annual reconciliation statement. Explains the true-up amount, payment deadline, and tenant audit rights.",
+      "description": "The cover letter that accompanies the annual CAM reconciliation statement, explaining the true-up amount, requesting payment (or issuing a credit), and disclosing tenant audit rights.",
+      "format": "Word",
+      "sections": [
+        "Greeting and reconciliation period reference",
+        "Summary of actual vs. estimated expenses",
+        "True-up amount and basis for calculation",
+        "Payment instructions and due date",
+        "Tenant audit rights disclosure",
+        "Supporting documentation reference",
+        "Contact information for questions"
+      ],
+      "useCase": "Landlords and property managers sending the annual reconciliation statement to tenants with a professional cover letter.",
+      "keyFeatures": [
+        "Professional, legally neutral language",
+        "Placeholder fields for property, tenant, and amount data",
+        "Separate variants for balance due vs. credit scenarios",
+        "SB 1103 tenant rights disclosure language included"
+      ],
+      "faqs": [
+        {
+          "q": "What should a tenant CAM reconciliation letter include?",
+          "a": "A tenant CAM reconciliation letter should include: the reconciliation period, a summary of total actual expenses vs. the tenant's estimated payments, the net true-up amount (balance due or credit), a clear payment due date, the method for requesting a copy of supporting records, tenant audit rights and the audit request deadline, and landlord contact information."
+        },
+        {
+          "q": "How should a landlord send a CAM reconciliation letter?",
+          "a": "Most leases specify the required delivery method, typically certified mail or email to the address in the lease notice provisions. For California leases subject to SB 1103, delivery method and timing requirements are more specific. Always verify the lease's notice provisions before sending."
+        },
+        {
+          "q": "Does a tenant have the right to audit CAM charges?",
+          "a": "Most commercial leases grant tenants an audit right, typically a window of 12-36 months from receiving the reconciliation statement. Some states have statutory audit rights regardless of lease language. The reconciliation letter should reference the applicable audit rights and deadlines."
+        }
+      ],
+      "relatedTools": ["reconciliation-statement-generator", "sb-1103-checker"],
+      "relatedResources": [
+        "/resources/cam-dispute",
+        "/resources/commercial-tenant-cam-disclosure-by-state",
+        "/cam-reconciliation-guide"
+      ],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "cam-reconciliation-california",
+      "name": "California CAM Packet Starter",
+      "headline": "CAM Reconciliation Template for California (SB 1103)",
+      "metaTitle": "California CAM Packet Starter with SB 1103 Support",
+      "metaDescription": "Free California CAM reconciliation template that meets SB 1103 disclosure requirements. Includes expense line item format, small business tenant provisions, and required allocation basis documentation.",
+      "description": "A California-specific CAM reconciliation statement template that meets SB 1103 transparency requirements for commercial leases with qualified small business tenants.",
+      "format": "Excel",
+      "sections": [
+        "SB 1103 tenant classification check",
+        "Expense line item disclosure (required by SB 1103)",
+        "Allocation basis documentation per expense category",
+        "Pro-rata share calculation with denominator definition",
+        "Gross-up calculation (where applicable)",
+        "True-up calculation",
+        "Tenant audit rights notice (SB 1103 language)"
+      ],
+      "useCase": "California landlords with commercial leases subject to SB 1103 (qualified small business tenants, leases entered after January 1, 2025).",
+      "keyFeatures": [
+        "Built for SB 1103 response workflows",
+        "Expense-level disclosure format required by statute",
+        "Allocation basis documentation for each expense category",
+        "Tenant audit rights notice with correct statutory language"
+      ],
+      "faqs": [
+        {
+          "q": "What CAM disclosure does SB 1103 require in California?",
+          "a": "SB 1103 requires landlords to provide qualified small business tenants with an itemized list of actual operating expenses by category, the basis for allocating expenses, and documentation of how the tenant's pro-rata share was calculated. The reconciliation statement must be sent within 90 days after the fiscal year end."
+        },
+        {
+          "q": "Which leases are subject to SB 1103 in California?",
+          "a": "SB 1103 applies to new commercial leases entered on or after January 1, 2025 with 'qualified commercial tenants' - primarily small businesses with fewer than 5 employees and monthly gross receipts under $2.5 million, as well as microenterprise and nonprofit tenants meeting specific criteria."
+        }
+      ],
+      "relatedTools": ["sb-1103-checker", "reconciliation-statement-generator"],
+      "relatedResources": [
+        "/resources/commercial-tenant-cam-disclosure-by-state",
+        "/cam-reconciliation-guide",
+        "/resources/cam-reconciliation-example"
+      ],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "cam-reconciliation-texas",
+      "name": "Texas CAM Packet Starter",
+      "headline": "CAM Reconciliation Template for Texas Properties",
+      "metaTitle": "Texas CAM Packet Starter: HCAD & Property Tax",
+      "metaDescription": "Free Texas CAM reconciliation template for commercial landlords. Includes HCAD property tax normalization, ARB protest adjustment, and Texas-specific expense recovery guidance.",
+      "description": "A Texas-specific CAM reconciliation template that accounts for HCAD (Harris County Appraisal District) property tax dynamics, including ARB protest adjustments and base year normalization.",
+      "format": "Excel",
+      "sections": [
+        "HCAD tax base year normalization section",
+        "ARB protest credit/adjustment tracking",
+        "Property tax recovery calculation",
+        "Standard CAM expense categories (Texas market rates)",
+        "Pro-rata share and gross-up calculation",
+        "True-up statement"
+      ],
+      "useCase": "Texas landlords, especially in the Houston market, where HCAD property tax appeals frequently affect CAM recoveries.",
+      "keyFeatures": [
+        "HCAD tax normalization built in",
+        "ARB protest outcome tracking",
+        "Texas market CAM benchmarks as reference",
+        "No statutory reconciliation requirements. Flexible format."
+      ],
+      "faqs": [
+        {
+          "q": "Does Texas have specific CAM reconciliation requirements?",
+          "a": "Texas does not have a statute governing CAM reconciliation timing or disclosure requirements like California's SB 1103. CAM rights and obligations are governed entirely by the lease agreement. However, HCAD property tax dynamics (ARB protests, assessment adjustments) significantly affect property tax recovery in Texas and require specific handling in the reconciliation."
+        },
+        {
+          "q": "How does an HCAD ARB protest affect CAM charges?",
+          "a": "If a landlord wins a property tax protest through HCAD's Appraisal Review Board, the resulting tax savings affect the CAM pool. The HCAD Tax Normalizer helps landlords calculate the exact additional recovery they can bill to tenants based on the ARB outcome and any applicable lease caps."
+        }
+      ],
+      "relatedTools": ["hcad-tax-normalizer", "reconciliation-statement-generator", "pro-rata-calculator"],
+      "relatedResources": [
+        "/resources/commercial-tenant-cam-disclosure-by-state",
+        "/resources",
+        "/cam-reconciliation-guide"
+      ],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "cam-reconciliation-florida",
+      "name": "Florida CAM Packet Starter",
+      "headline": "CAM Reconciliation Template for Florida Commercial Leases",
+      "metaTitle": "Florida CAM Packet Starter",
+      "metaDescription": "Free Florida CAM reconciliation template for commercial landlords. Includes non-cumulative cap tracking, Florida insurance cost adjustments, and hurricane damage reserve considerations.",
+      "description": "A Florida-specific CAM reconciliation template that accounts for Florida market dynamics: non-cumulative CAM caps (common in Florida NNN leases), high insurance costs, and hurricane reserve provisions.",
+      "format": "Excel",
+      "sections": [
+        "Florida insurance cost documentation",
+        "Hurricane reserve provision handling",
+        "Non-cumulative cap calculation and tracking",
+        "Standard CAM expense categories (Florida market)",
+        "Pro-rata share calculation",
+        "True-up statement"
+      ],
+      "useCase": "Florida landlords, particularly for retail and strip center properties with NNN leases that include non-cumulative CAM caps.",
+      "keyFeatures": [
+        "Non-cumulative cap logic pre-built",
+        "Florida insurance cost tracking (windstorm, flood)",
+        "Hurricane reserve documentation section",
+        "Florida market CAM rate benchmarks as reference"
+      ],
+      "faqs": [
+        {
+          "q": "Are CAM caps common in Florida commercial leases?",
+          "a": "Yes. Non-cumulative CAM caps (typically 3-5%) are common in Florida retail and strip center NNN leases. The cap limits year-over-year increases in tenant CAM obligations regardless of actual expense growth. Florida's high insurance costs and occasional hurricane impacts can drive expense spikes that make cap provisions particularly significant."
+        },
+        {
+          "q": "Does Florida have specific CAM reconciliation laws?",
+          "a": "Florida does not have a general statute governing CAM reconciliation requirements for commercial leases. The rights and obligations are lease-driven. However, Florida landlords must comply with general property law requirements and any specific provisions in the lease regarding notice, audit rights, and reconciliation timing."
+        }
+      ],
+      "relatedTools": ["cam-cap-calculator", "reconciliation-statement-generator"],
+      "relatedResources": [
+        "/resources/commercial-tenant-cam-disclosure-by-state",
+        "/resources/cam-reconciliation-example",
+        "/cam-reconciliation-guide"
+      ],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "nnn-lease-cam-reconciliation",
+      "name": "NNN Lease CAM Reconciliation Template",
+      "headline": "NNN Lease CAM Reconciliation Template",
+      "metaTitle": "Triple Net (NNN) Lease CAM Reconciliation Template",
+      "metaDescription": "Free CAM reconciliation template for NNN (triple net) leases. Includes gross-up calculation, expense pool with pass-through categories, and per-tenant true-up. Covers all 3 Ns.",
+      "description": "A reconciliation template specifically for NNN (triple net) leases, covering the three expense pass-throughs: property taxes, insurance, and common area maintenance, with gross-up and cap provisions.",
+      "format": "Excel",
+      "sections": [
+        "Three-N expense summary: taxes, insurance, CAM",
+        "Property tax pass-through (100% recoverable in NNN)",
+        "Insurance pass-through (100% recoverable in NNN)",
+        "CAM expense pool with gross-up",
+        "Pro-rata share and denominator section",
+        "CAM cap comparison (if applicable)",
+        "Combined NNN true-up per tenant"
+      ],
+      "useCase": "Landlords reconciling NNN leases where all three pass-through components (taxes, insurance, CAM) must be reconciled together.",
+      "keyFeatures": [
+        "All three NNN pass-through categories in one template",
+        "Gross-up for CAM variable expenses",
+        "CAM cap section (common in NNN retail leases)",
+        "Works for single-tenant and multi-tenant NNN properties"
+      ],
+      "faqs": [
+        {
+          "q": "Do NNN leases require annual reconciliation?",
+          "a": "Yes. Triple net leases require annual reconciliation because tenants pay estimated monthly amounts throughout the year. At year-end, actual property taxes, insurance premiums, and operating expenses are compared to estimates, and the difference is reconciled as a true-up payment or credit."
+        },
+        {
+          "q": "What's the difference between NNN and NN reconciliation?",
+          "a": "In a triple net (NNN) lease, tenants are responsible for all three pass-throughs: property taxes, insurance, and CAM. In a double net (NN) lease, tenants pay property taxes and insurance, but the landlord typically covers CAM. The reconciliation scope differs accordingly: NNN reconciliations include all three categories, NN reconciliations typically cover only taxes and insurance."
+        }
+      ],
+      "relatedTools": ["cam-gross-up-calculator", "pro-rata-calculator", "cam-cap-calculator"],
+      "relatedResources": [
+        "/resources/lease-types/nnn-lease/cam-guide",
+        "/resources/cam-reconciliation-example",
+        "/resources/how-to-calculate-cam-charges"
+      ],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "cam-dispute-response-template",
+      "name": "CAM Dispute Response Template",
+      "headline": "CAM Dispute Response Letter Template for Landlords",
+      "metaTitle": "CAM Dispute Response Template: Landlord Defense Letter",
+      "metaDescription": "Free CAM dispute response template for landlords. Professionally respond to tenant CAM audit findings, demand letters, and reconciliation disputes with a structured, legally neutral letter.",
+      "description": "A template for landlords responding to tenant CAM audit findings or dispute letters. Covers acknowledgment of the dispute, documentation request response, calculation explanation, and resolution pathways.",
+      "format": "Word",
+      "sections": [
+        "Acknowledgment of tenant's dispute or audit findings",
+        "Factual summary of the landlord's reconciliation methodology",
+        "Response to each specific dispute item",
+        "Supporting documentation references",
+        "Resolution offer (credit, payment plan, or denial with explanation)",
+        "Audit right deadlines and process"
+      ],
+      "useCase": "Landlords responding to tenant CAM audit demand letters, reconciliation disputes, or requests for documentation.",
+      "keyFeatures": [
+        "Professional, legally neutral language",
+        "Item-by-item dispute response format",
+        "Documentation attachment checklist",
+        "Separate variants for full response, partial concession, and denial"
+      ],
+      "faqs": [
+        {
+          "q": "How should a landlord respond to a tenant CAM dispute?",
+          "a": "A landlord should respond to a CAM dispute in writing within the timeframe specified in the lease. The response should: acknowledge receipt of the dispute, address each disputed item with a specific explanation and supporting documentation reference, offer to provide the GL detail and invoices the tenant is entitled to under the audit clause, and state a clear resolution timeline."
+        },
+        {
+          "q": "What documentation should a landlord provide in a CAM dispute?",
+          "a": "In a CAM dispute, landlords should be prepared to provide: the full GL expense detail for the reconciliation period, invoices for significant expense items, the lease abstract showing the reconciliation methodology, prior year reconciliation comparisons, and documentation of any gross-up calculations or cap applications."
+        }
+      ],
+      "relatedTools": ["audit-risk-scorecard", "reconciliation-statement-generator"],
+      "relatedResources": [
+        "/resources/cam-dispute",
+        "/cam-reconciliation-guide",
+        "/resources/cam-reconciliation-example"
+      ],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "cam-estimate-letter",
+      "name": "CAM Estimate / Budget Letter",
+      "headline": "Annual CAM Estimate Letter Template",
+      "metaTitle": "Annual CAM Estimate Letter Template for Landlords",
+      "metaDescription": "Free template for the annual CAM estimate letter sent to tenants at the start of each year. Sets the new monthly CAM estimate, explains the calculation basis, and references the prior year reconciliation.",
+      "description": "The letter landlords send to tenants at the beginning of each lease year setting the new monthly CAM estimate. Often required by the lease at least 30 days before the lease year begins.",
+      "format": "Word",
+      "sections": [
+        "New monthly CAM estimate amount",
+        "Basis for the estimate (prior year actuals + projected increases)",
+        "Effective date for new monthly amount",
+        "Prior year reconciliation reference",
+        "CAM cap notation (if applicable)"
+      ],
+      "useCase": "Landlords who must notify tenants of annual CAM estimate adjustments under lease provisions requiring advance notice.",
+      "keyFeatures": [
+        "Legally neutral, professional language",
+        "Placeholder fields for all variable amounts",
+        "Companion to the reconciliation statement template",
+        "CAP notation section for leases with annual escalation limits"
+      ],
+      "faqs": [
+        {
+          "q": "When must a landlord send the annual CAM estimate letter?",
+          "a": "Most leases require the landlord to send the annual CAM estimate letter at least 30-60 days before the start of the new lease year. The letter sets the new monthly CAM payment amount for the upcoming year. Check the lease's specific notice requirements. Some leases allow landlords to continue charging the prior year's estimate until a new letter is sent."
+        },
+        {
+          "q": "How is the CAM estimate calculated?",
+          "a": "The CAM estimate is typically calculated by taking the prior year's actual recoverable expenses, adding a projected increase based on known or expected expense changes (CPI, contract renewals, etc.), and dividing by 12 to get the monthly estimate. The estimate should reflect a reasonable projection of actual expenses to minimize large true-ups."
+        }
+      ],
+      "relatedTools": ["cam-estimate-forecaster", "reconciliation-statement-generator"],
+      "relatedResources": [
+        "/cam-reconciliation-guide",
+        "/resources/cam-reconciliation-example",
+        "/resources/workflows"
+      ],
+      "lastUpdated": "2026-03-21"
+    }
+  ]
+}

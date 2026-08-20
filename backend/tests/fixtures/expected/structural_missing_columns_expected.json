@@ -1,0 +1,12 @@
+{
+  "error_type": "structural",
+  "description": "CSV with rows missing required values",
+  "parseable": true,
+  "expected_behavior": "Parser should accept file and filter out rows with missing values",
+  "expected_warnings": [
+    "Excluded 2 rows with missing required data"
+  ],
+  "expected_rows": 2,
+  "valid_rows": 2,
+  "invalid_rows": 2
+}

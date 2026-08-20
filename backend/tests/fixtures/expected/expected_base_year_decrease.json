@@ -1,0 +1,32 @@
+{
+  "scenario": "base_year_decrease",
+  "description": "Current year expenses below base year (zero charge)",
+  "inputs": {
+    "base_year_expenses": 100000.0,
+    "current_year_expenses": 95000.0,
+    "pro_rata_share": 0.0312
+  },
+  "calculation_steps": [
+    {
+      "step": 1,
+      "description": "Calculate expense change",
+      "formula": "current_expenses - base_expenses",
+      "calculation": "95000.00 - 100000.00 = -5000.00",
+      "result": -5000.0
+    },
+    {
+      "step": 2,
+      "description": "Apply zero floor (no credits)",
+      "formula": "max(expense_change * pro_rata_share, 0)",
+      "calculation": "max(-156.00, 0) = 0.00",
+      "result": 0.0,
+      "note": "Base year stop - tenant does not get credit for decreases"
+    }
+  ],
+  "expected_output": {
+    "expense_change": -5000.0,
+    "tenant_share": 0.0,
+    "base_year_expenses": 100000.0,
+    "current_year_expenses": 95000.0
+  }
+}

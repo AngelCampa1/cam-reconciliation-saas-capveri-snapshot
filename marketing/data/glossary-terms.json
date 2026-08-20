@@ -1,0 +1,777 @@
+{
+  "lastUpdated": "2026-03-18",
+  "terms": [
+    {
+      "slug": "cam-reconciliation",
+      "term": "CAM Reconciliation",
+      "shortDefinition": "The annual process of comparing estimated CAM charges collected from tenants against actual operating expenses incurred, resulting in a credit or balance due.",
+      "definition": "CAM reconciliation is the annual process by which a landlord compares estimated Common Area Maintenance charges collected from tenants during the year against actual operating expenses incurred. Tenants receive a reconciliation statement showing the variance (either a credit or a balance due) based on their pro-rata share of actual costs. Accurate reconciliation requires matching GL-level expense data against lease-specific billing rules including caps, exclusions, and gross-up provisions. Errors in this process are the leading cause of tenant disputes and audit findings in commercial real estate.",
+      "relatedTerms": [
+        "pro-rata-share",
+        "gross-up-clause",
+        "cam-cap",
+        "reconciliation-statement",
+        "recovery-ratio"
+      ],
+      "relatedResources": [
+        "/resources/cam-reconciliation-timeline-checklist"
+      ],
+      "category": "core-concepts"
+    },
+    {
+      "slug": "gross-up-clause",
+      "term": "Gross-Up Clause",
+      "shortDefinition": "A lease provision requiring landlords to adjust variable operating expenses to reflect what they would have been if the building were at a defined occupancy threshold.",
+      "definition": "A gross-up clause requires landlords to adjust variable operating expenses to reflect what they would have been if the building were fully occupied, typically at 85%, 90%, or 95%. This prevents tenants in partially occupied buildings from subsidizing vacant space by paying a disproportionate share of variable costs. BOMA 2024 defines the methodology for calculating gross-up adjustments in multi-tenant commercial buildings. The gross-up calculation applies only to variable expenses. Fixed costs like property taxes and insurance are excluded. Incorrect gross-up thresholds or applying gross-up to fixed expenses are among the most common CAM billing errors. Property managers can extract the exact occupancy threshold from lease PDFs before reconciliation using <a href=\"https://www.lextract.io\" target=\"_blank\" rel=\"noopener noreferrer\">lextract.io</a>.",
+      "relatedTerms": [
+        "cam-reconciliation",
+        "recovery-ratio",
+        "denominator",
+        "absorption"
+      ],
+      "relatedResources": [
+        "/resources/gross-up-optimization"
+      ],
+      "category": "calculations"
+    },
+    {
+      "slug": "base-year",
+      "term": "Base Year",
+      "shortDefinition": "A reference year established in a lease against which future operating expenses are compared, with tenants paying only the increase above base year levels.",
+      "definition": "The base year is a reference year established in a lease against which future operating expenses are compared. In a base-year lease, tenants pay only the increase in operating expenses above the base year level, making the landlord responsible for costs up to that threshold. Base year selection is critical because an abnormally low base year increases tenant obligations while a high base year reduces recovery potential. Base year drift (when the base year is applied inconsistently across lease renewals or amendments) is one of the most common sources of CAM billing errors and tenant disputes. To avoid drift across a portfolio, lease admins can extract base year values and base year amounts from lease PDFs at scale using <a href=\"https://www.lextract.io\" target=\"_blank\" rel=\"noopener noreferrer\">lextract.io</a>.",
+      "relatedTerms": [
+        "expense-stop",
+        "operating-expense-escalation",
+        "modified-gross-lease"
+      ],
+      "relatedResources": [
+        "/resources/expense-stop-vs-base-year"
+      ],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "pro-rata-share",
+      "term": "Pro-Rata Share",
+      "shortDefinition": "A tenant's proportionate share of building operating expenses, calculated as their leased square footage divided by the total leasable area defined in the lease.",
+      "definition": "A tenant's pro-rata share is the fraction of total building operating expenses they are obligated to pay, calculated as their leased square footage divided by the total leasable area (or denominator as defined in the lease). This percentage determines how much of each recoverable expense category the tenant must reimburse. Incorrect denominator calculations (especially when vacancies are excluded, anchor tenants have separate arrangements, or new space is added mid-year) frequently produce over- or under-billing. Pro-rata share calculations must be recalculated whenever the denominator changes due to remeasurement, expansion, or BOMA standard updates. Because the denominator definition varies by lease, property managers should extract each tenant's pro-rata share and denominator clause directly from lease PDFs. Tools like <a href=\"https://www.lextract.io\" target=\"_blank\" rel=\"noopener noreferrer\">lextract.io</a> can pull these fields from entire lease portfolios in minutes.",
+      "relatedTerms": [
+        "denominator",
+        "anchor-exclusion",
+        "usable-vs-rentable-area",
+        "r-u-ratio"
+      ],
+      "relatedResources": [
+        "/resources/multiple-denominator-pro-rata"
+      ],
+      "category": "calculations"
+    },
+    {
+      "slug": "cam-cap",
+      "term": "CAM Cap",
+      "shortDefinition": "A lease provision limiting the annual increase in controllable operating expenses a landlord can pass through to tenants, expressed as a percentage.",
+      "definition": "A CAM cap limits the annual increase in controllable operating expenses a landlord can pass through to tenants, expressed as a percentage of the prior year's charges. Caps may be cumulative (unused cap allowance carries forward to future years) or non-cumulative (unused cap is forfeited each year). Non-cumulative caps strongly favor landlords because a single year of low expenses does not create a larger allowance in subsequent years. Failing to apply caps correctly (or misclassifying non-controllable expenses as controllable to circumvent the cap) is a common dispute trigger in tenant audits. Before running reconciliation, property managers should confirm the exact cap structure (percentage, cumulative vs. non-cumulative, and which expense categories it applies to) directly from the lease document. <a href=\"https://www.lextract.io\" target=\"_blank\" rel=\"noopener noreferrer\">lextract.io</a> extracts CAM cap provisions as structured fields from commercial lease PDFs.",
+      "relatedTerms": [
+        "cumulative-cap",
+        "non-cumulative-cap",
+        "controllable-vs-non-controllable-expenses",
+        "operating-expense-escalation"
+      ],
+      "relatedResources": [
+        "/resources/cumulative-vs-non-cumulative-cam-caps"
+      ],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "expense-stop",
+      "term": "Expense Stop",
+      "shortDefinition": "A fixed dollar threshold above which tenants begin to share operating expenses, common in gross and modified gross leases.",
+      "definition": "An expense stop is a dollar threshold above which tenants begin to share operating expenses. Unlike a base year, which references actual historical costs, an expense stop is typically a fixed dollar amount per square foot negotiated at lease signing. Below the stop, the landlord bears all operating costs; above it, tenants pay their pro-rata share of the excess. Expense stops are common in gross and modified gross leases and require careful tracking because the stop amount remains fixed while actual expenses increase annually. Landlords must ensure their billing systems correctly compare current-year expenses against the contractual stop amount rather than prior-year actuals. Expense stops come from the lease. Extract yours with <a href=\"https://www.lextract.io\" target=\"_blank\" rel=\"noopener noreferrer\">Lextract.io</a>.",
+      "relatedTerms": [
+        "base-year",
+        "modified-gross-lease",
+        "operating-expense-pass-through"
+      ],
+      "relatedResources": [
+        "/resources/expense-stop-vs-base-year"
+      ],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "boma-2024",
+      "term": "BOMA 2024",
+      "shortDefinition": "The current ANSI/BOMA standard for measuring rentable area in commercial buildings, including updated provisions for outdoor areas and amenity spaces.",
+      "definition": "BOMA 2024 (ANSI/BOMA Z65.1-2024) is the current standard for measuring rentable area in commercial buildings, published by the Building Owners and Managers Association. It defines floor measurement methodology, gross-up calculation procedures, and common area allocation rules used across the commercial real estate industry. Updated from the 2017 standard, BOMA 2024 includes new provisions for measuring outdoor tenant areas and amenity spaces that can change a building's total rentable area. Adopting the new standard can affect load factors, pro-rata shares, and ultimately every tenant's CAM obligation, making remeasurement a significant financial event for both landlords and tenants.",
+      "relatedTerms": [
+        "usable-vs-rentable-area",
+        "load-factor",
+        "common-area-factor",
+        "r-u-ratio"
+      ],
+      "relatedResources": [
+        "/resources/boma-2024-implementation-guide",
+        "/resources/boma-2024-noi-impact"
+      ],
+      "category": "compliance"
+    },
+    {
+      "slug": "nnn-lease",
+      "term": "NNN Lease / Triple Net Lease",
+      "shortDefinition": "A lease structure requiring tenants to pay base rent plus their proportionate share of property taxes, insurance, and common area maintenance.",
+      "definition": "A triple net lease (NNN) requires tenants to pay base rent plus their proportionate share of three categories of operating expenses: property taxes, building insurance, and common area maintenance. NNN leases shift the majority of operating cost risk from the landlord to the tenant and are the standard structure for commercial office, retail, and industrial properties. The annual reconciliation of these three expense categories is the core of CAM reconciliation. Because NNN leases pass through substantially all operating expenses, the accuracy of expense classification, allocation methodology, and billing calculations directly determines whether the landlord recovers what the lease entitles them to. NNN lease abstractions extract all 126 fields including CAM definitions. Use <a href=\"https://www.lextract.io\" target=\"_blank\" rel=\"noopener noreferrer\">Lextract.io</a>.",
+      "relatedTerms": [
+        "cam-reconciliation",
+        "operating-expense-pass-through",
+        "modified-gross-lease",
+        "operating-expense-pass-through"
+      ],
+      "relatedResources": [],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "operating-expense-exclusions",
+      "term": "Operating Expense Exclusions",
+      "shortDefinition": "Lease provisions specifying categories of expenses that tenants are not obligated to reimburse as part of CAM charges.",
+      "definition": "Operating expense exclusions are lease provisions specifying categories of expenses that tenants are not obligated to reimburse as part of CAM. Common exclusions include capital improvements, leasing commissions, management fees above a capped percentage, marketing costs, and expenses benefiting only specific tenants. Including excluded expenses in CAM pools (whether through intentional overcharging or GL miscoding) is the most frequently disputed billing error uncovered in tenant audits. Landlords must maintain accurate GL code mapping and regularly review expense classifications to ensure excluded costs are not inadvertently passed through to tenants. Accurately identifying each lease's exclusion list before reconciliation begins is essential; property managers can extract exclusion clauses from lease PDFs at scale using <a href=\"https://www.lextract.io\" target=\"_blank\" rel=\"noopener noreferrer\">lextract.io</a>. CAMAudit.io detects when landlords bill excluded expenses as CAM. <a href=\"https://www.camaudit.io\" target=\"_blank\" rel=\"noopener noreferrer\">CAMAudit.io</a>.",
+      "relatedTerms": [
+        "capital-vs-operating-expense",
+        "admin-fee",
+        "cam-pool",
+        "charge-code"
+      ],
+      "relatedResources": [
+        "/resources/lease-exclusions-cam-billing"
+      ],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "controllable-vs-non-controllable-expenses",
+      "term": "Controllable vs Non-Controllable Expenses",
+      "shortDefinition": "The classification of operating expenses into those the landlord can influence (controllable) and those outside direct control (non-controllable), critical for CAM cap calculations.",
+      "definition": "Controllable expenses are operating costs the landlord can influence, such as management fees, janitorial services, landscaping, and security. Non-controllable expenses are costs outside the landlord's direct control, including property taxes, insurance premiums, and utility rates set by providers. CAM cap provisions typically apply only to controllable expenses, making the classification financially significant. Misclassifying expenses between these categories can invalidate cap calculations and expose landlords to audit findings. The specific categorization of each expense as controllable or non-controllable should be defined in the lease, though many leases leave this classification ambiguous.",
+      "relatedTerms": [
+        "cam-cap",
+        "operating-expense-escalation",
+        "cam-pool"
+      ],
+      "relatedResources": [
+        "/resources/controllable-vs-non-controllable-expenses"
+      ],
+      "category": "calculations"
+    },
+    {
+      "slug": "sb-1103",
+      "term": "SB 1103",
+      "shortDefinition": "California legislation effective January 2025 extending commercial tenant protections including CAM reconciliation statement requirements and itemized expense disclosures.",
+      "definition": "California SB 1103, effective January 1, 2025, extends commercial tenant protections to qualifying small commercial tenants. It requires landlords to provide CAM reconciliation statements within a defined timeframe, deliver itemized expense breakdowns, and supply supporting documentation upon tenant request. The law establishes specific formatting and content requirements for reconciliation statements that go beyond typical lease obligations. Landlords who fail to comply face potential rent disputes, regulatory penalties, and weakened positions in tenant audit proceedings. SB 1103 represents the most significant state-level CAM compliance legislation in the United States.",
+      "relatedTerms": [
+        "reconciliation-statement",
+        "audit-period",
+        "operating-expense-exclusions"
+      ],
+      "relatedResources": [],
+      "category": "compliance"
+    },
+    {
+      "slug": "capital-vs-operating-expense",
+      "term": "Capital vs Operating Expense",
+      "shortDefinition": "The distinction between capital improvements that extend asset life (non-recoverable) and routine operating costs (recoverable through CAM).",
+      "definition": "Capital expenses (CapEx) are improvements that extend the useful life of the asset or add value: roof replacements, HVAC system installations, parking lot reconstruction, and structural upgrades. Operating expenses (OpEx) are routine costs of building operation: janitorial, landscaping, lighting, and minor repairs. Most NNN leases prohibit landlords from recovering capital expenditures through CAM, making the classification financially critical. The distinction is not always clear-cut, particularly for items like major repairs that extend useful life but are not improvements. Misclassifying CapEx as OpEx inflates recoverable expenses and is one of the top findings in tenant audits. Tenants who suspect CapEx has been improperly included in their CAM charges can analyze their reconciliation statement using <a href=\"https://www.camaudit.io\" target=\"_blank\" rel=\"noopener noreferrer\">camaudit.io</a> to identify and document potential overcharges before requesting a formal audit.",
+      "relatedTerms": [
+        "operating-expense-exclusions",
+        "cam-pool",
+        "charge-code"
+      ],
+      "relatedResources": [
+        "/resources/catch-capex-before-tenants"
+      ],
+      "category": "financial-analysis"
+    },
+    {
+      "slug": "admin-fee",
+      "term": "Admin Fee",
+      "shortDefinition": "A percentage added to recoverable operating expenses to cover property management overhead, typically ranging from 3% to 15% of total CAM charges.",
+      "definition": "An admin fee (also called a management fee or administrative charge) is a percentage the landlord adds to recoverable operating expenses to cover overhead associated with managing the property. Typical admin fees range from 3% to 15% of total CAM charges, with the percentage varying by market, property type, and lease negotiation. Some leases cap the admin fee at a specific percentage, while others exclude it from CAM cap calculations entirely, a distinction that frequently causes billing disputes. The calculation method (fee on total expenses vs. fee on recoverable expenses only) and whether the fee itself is subject to the CAM cap must be clearly defined in the lease and correctly implemented in the billing system.",
+      "relatedTerms": [
+        "management-fee",
+        "cam-cap",
+        "operating-expense-exclusions"
+      ],
+      "relatedResources": [
+        "/resources/admin-fee-calculation-methods"
+      ],
+      "category": "calculations"
+    },
+    {
+      "slug": "audit-period",
+      "term": "Audit Period",
+      "shortDefinition": "The contractual window during which a tenant may exercise their right to review a landlord's books and records relating to operating expenses.",
+      "definition": "The audit period is the window of time during which a tenant may exercise their right to review a landlord's books and records relating to operating expenses. Most commercial leases specify a 12- to 24-month lookback period from the date the reconciliation statement is delivered. If the landlord fails to provide a timely reconciliation statement, some lease clauses extend or reset the audit window, creating open-ended exposure. The audit period is a critical risk management consideration for landlords. Once the period expires, tenants generally lose the right to challenge that year's charges. Maintaining organized documentation and delivering timely statements is the best defense against audit risk. Tenants who want to exercise their audit rights can use <a href=\"https://www.camaudit.io\" target=\"_blank\" rel=\"noopener noreferrer\">camaudit.io</a> to review reconciliation statements and flag potential overcharges before engaging a CPA auditor.",
+      "relatedTerms": [
+        "reconciliation-statement",
+        "sb-1103",
+        "cam-reconciliation"
+      ],
+      "relatedResources": [
+        "/resources/tenant-audit-defense-playbook",
+        "/resources/operating-expense-audit-rights-landlord"
+      ],
+      "category": "compliance"
+    },
+    {
+      "slug": "recovery-ratio",
+      "term": "Recovery Ratio",
+      "shortDefinition": "The percentage of total operating expenses a landlord actually recovers from tenants through CAM charges, with values below 100% indicating CAM leakage.",
+      "definition": "The recovery ratio measures the percentage of total operating expenses a landlord actually recovers from tenants through CAM charges. A recovery ratio of 100% means the landlord has recovered every dollar of recoverable expense; ratios below 100% indicate CAM leakage (the landlord is absorbing costs that should be passed through). Common causes of low recovery ratios include gross-up errors, missed cap escalators, excluded expenses inadvertently omitted from billings, and denominator miscalculations. Tracking recovery ratios by property, expense category, and time period is a key financial metric for property controllers and asset managers evaluating operational efficiency. An abnormal recovery ratio is a red flag. Check yours with <a href=\"https://www.camaudit.io\" target=\"_blank\" rel=\"noopener noreferrer\">CAMAudit.io</a>.",
+      "relatedTerms": [
+        "cam-reconciliation",
+        "gross-up-clause",
+        "denominator",
+        "cam-pool"
+      ],
+      "relatedResources": [
+        "/resources/recovery-ratio-analysis"
+      ],
+      "category": "financial-analysis"
+    },
+    {
+      "slug": "load-factor",
+      "term": "Load Factor",
+      "shortDefinition": "The ratio of a building's total rentable area to its total usable area, accounting for common areas allocated proportionally to tenants.",
+      "definition": "The load factor (also called the add-on factor or R/U ratio) is the ratio of a building's total rentable area to its total usable area. It accounts for common areas like lobbies, hallways, restrooms, and mechanical rooms that are allocated proportionally to all tenants. A load factor of 1.15 means tenants pay rent and CAM on 15% more space than they physically occupy. Load factors vary significantly by building class, age, and design. Class A office buildings typically have higher load factors than industrial properties. BOMA 2024's inclusion of outdoor amenity areas can increase a building's load factor, affecting every tenant's financial obligation.",
+      "relatedTerms": [
+        "r-u-ratio",
+        "usable-vs-rentable-area",
+        "common-area-factor",
+        "boma-2024"
+      ],
+      "relatedResources": [],
+      "category": "calculations"
+    },
+    {
+      "slug": "reconciliation-statement",
+      "term": "Reconciliation Statement",
+      "shortDefinition": "The annual document landlords send tenants comparing estimated CAM charges collected during the year against actual operating expenses, showing credits or balances due.",
+      "definition": "A reconciliation statement is the annual document landlords send to tenants comparing estimated CAM charges collected during the year against actual operating expenses incurred. It shows the variance (either a credit owed to the tenant or an additional balance due) along with an itemized breakdown of expense categories and the tenant's pro-rata share calculations. The statement is both a billing document and a compliance artifact that tenants use to verify charges. Under California's SB 1103 and similar state laws, reconciliation statements must include specific disclosures and be delivered within defined timeframes. Late or inaccurate statements can extend tenant audit rights and undermine landlord credibility in dispute proceedings. Tenants can verify their reconciliation statement against 14 detection rules at <a href=\"https://www.camaudit.io\" target=\"_blank\" rel=\"noopener noreferrer\">CAMAudit.io</a>.",
+      "relatedTerms": [
+        "cam-reconciliation",
+        "audit-period",
+        "sb-1103",
+        "true-up"
+      ],
+      "relatedResources": [
+        "/resources/defensible-reconciliation-package"
+      ],
+      "category": "core-concepts"
+    },
+    {
+      "slug": "operating-expense-pass-through",
+      "term": "Operating Expense Pass-Through",
+      "shortDefinition": "The mechanism by which landlords recover building operating costs from tenants based on the lease structure and expense classification.",
+      "definition": "An operating expense pass-through is the mechanism by which landlords recover building operating costs from tenants. In NNN leases, substantially all operating expenses are passed through to tenants based on their pro-rata share. In gross or modified gross leases, only expenses exceeding an expense stop or base year amount are passed through. The accuracy of pass-through calculations (including correct expense classification, proper application of exclusions, and accurate pro-rata share computation) directly determines whether the landlord recovers what the lease entitles them to. Pass-through errors compound annually and can result in significant cumulative financial impact across a multi-tenant portfolio.",
+      "relatedTerms": [
+        "nnn-lease",
+        "expense-stop",
+        "base-year",
+        "pro-rata-share"
+      ],
+      "relatedResources": [],
+      "category": "core-concepts"
+    },
+    {
+      "slug": "modified-gross-lease",
+      "term": "Modified Gross Lease",
+      "shortDefinition": "A hybrid lease structure where tenants pay base rent including some operating expenses, while other categories are passed through separately.",
+      "definition": "A modified gross lease is a hybrid structure where tenants pay a base rent that includes some operating expenses, while other expense categories are passed through separately. The specific split varies by lease. For example, the landlord may cover insurance and taxes within the base rent while passing through utilities, janitorial, and CAM. Modified gross leases require careful tracking of which expenses fall on each side of the split, as miscategorization directly affects both landlord recovery and tenant billing accuracy. These leases are common in office and medical office properties where landlords want to offer competitive gross rents while maintaining pass-through rights on volatile expense categories. Extract gross lease conversion terms automatically with <a href=\"https://www.lextract.io\" target=\"_blank\" rel=\"noopener noreferrer\">Lextract.io</a>.",
+      "relatedTerms": [
+        "nnn-lease",
+        "expense-stop",
+        "base-year",
+        "operating-expense-pass-through"
+      ],
+      "relatedResources": [],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "anchor-exclusion",
+      "term": "Anchor Exclusion",
+      "shortDefinition": "A lease provision removing a large anchor tenant from the pro-rata share denominator, preventing their space from diluting other tenants' CAM obligations.",
+      "definition": "An anchor exclusion removes a large tenant (the anchor) from the pro-rata share denominator used to calculate other tenants' CAM obligations. Without the exclusion, the anchor's space would be included in the total leasable area, reducing every other tenant's share and potentially leaving the landlord under-recovered on CAM. Anchor exclusions are common in retail properties where a department store or grocery tenant occupies a significant portion of the building and has separately negotiated CAM terms. Implementing anchor exclusions correctly requires maintaining separate denominators for different tenant groups and ensuring the billing system applies the right denominator to each lease. Anchor tenant exclusions are lease-defined. Abstract yours with <a href=\"https://www.lextract.io\" target=\"_blank\" rel=\"noopener noreferrer\">Lextract.io</a>.",
+      "relatedTerms": [
+        "pro-rata-share",
+        "denominator",
+        "cam-pool"
+      ],
+      "relatedResources": [],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "common-area-factor",
+      "term": "Common Area Factor",
+      "shortDefinition": "The percentage of a building's total area dedicated to shared spaces such as lobbies, corridors, restrooms, and mechanical rooms.",
+      "definition": "The common area factor is the percentage of a building's total area dedicated to shared spaces: lobbies, corridors, restrooms, mechanical rooms, and loading areas. It determines how much common area cost is allocated to each tenant's pro-rata share and directly influences the building's load factor. A higher common area factor means tenants effectively pay for more shared space relative to their exclusive-use area. The common area factor varies significantly by property type and building design: modern Class A office buildings with extensive amenity areas have higher factors than single-story industrial properties. BOMA 2024 standards define how common area is measured and how it is allocated across different floor levels.",
+      "relatedTerms": [
+        "load-factor",
+        "usable-vs-rentable-area",
+        "boma-2024",
+        "r-u-ratio"
+      ],
+      "relatedResources": [],
+      "category": "calculations"
+    },
+    {
+      "slug": "usable-vs-rentable-area",
+      "term": "Usable vs Rentable Area",
+      "shortDefinition": "Usable area is the tenant's exclusive space; rentable area adds a proportional allocation of common areas, forming the basis for rent and CAM calculations.",
+      "definition": "Usable area is the space a tenant exclusively occupies (their office suite, retail bay, or warehouse space). Rentable area adds a proportional allocation of common areas (lobbies, hallways, restrooms, mechanical rooms) to the usable area, creating the figure on which rent and CAM charges are calculated. Tenants always pay rent and CAM based on rentable area, not usable area, which means the load factor markup directly affects their financial obligation. The ratio between rentable and usable area (the R/U ratio or load factor) typically ranges from 1.10 to 1.20 in office buildings. BOMA 2024 expanded the definition of rentable area to include qualifying outdoor spaces, potentially changing a building's total rentable square footage.",
+      "relatedTerms": [
+        "load-factor",
+        "r-u-ratio",
+        "boma-2024",
+        "common-area-factor"
+      ],
+      "relatedResources": [],
+      "category": "calculations"
+    },
+    {
+      "slug": "cre-finops",
+      "term": "CRE FinOps",
+      "shortDefinition": "Commercial Real Estate Financial Operations: the discipline of applying visibility, optimization, and accountability principles to CRE financial processes like CAM reconciliation.",
+      "definition": "CRE FinOps (Commercial Real Estate Financial Operations) applies the principles of cloud FinOps principles (visibility, optimization, and accountability for financial operations) to commercial real estate. It encompasses CAM reconciliation, expense recovery optimization, lease financial compliance, and data-driven property financial management. The CRE FinOps approach treats property financial operations as a continuous improvement discipline rather than a once-a-year accounting exercise. Key metrics include recovery ratios, reconciliation cycle times, error rates, and audit exposure. CapVeri coined the term to describe the emerging category of purpose-built tools for CRE financial operations.",
+      "relatedTerms": [
+        "cam-reconciliation",
+        "recovery-ratio"
+      ],
+      "relatedResources": [],
+      "category": "core-concepts"
+    },
+    {
+      "slug": "percentage-rent",
+      "term": "Percentage Rent",
+      "shortDefinition": "Additional rent paid by retail tenants based on a percentage of gross sales exceeding a defined breakpoint, common in retail leases.",
+      "definition": "Percentage rent is additional rent paid by retail tenants calculated as a percentage of their gross sales exceeding a defined breakpoint (natural or artificial). The breakpoint is the sales threshold above which the percentage rent obligation kicks in. Percentage rent is distinct from CAM charges but interacts with CAM reconciliation in retail properties because both require accurate tracking of tenant-specific financial data. Some leases offset percentage rent against CAM charges or include percentage rent calculations in the overall tenant billing reconciliation. Property controllers must ensure their billing systems handle percentage rent and CAM as separate but coordinated billing streams.",
+      "relatedTerms": [
+        "nnn-lease",
+        "modified-gross-lease",
+        "billing-cycle"
+      ],
+      "relatedResources": [
+        "/resources/percentage-rent-cam-interaction"
+      ],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "base-building",
+      "term": "Base Building",
+      "shortDefinition": "The core structural and mechanical systems of a commercial building that exist before any tenant improvements, defining the landlord's maintenance obligations.",
+      "definition": "Base building refers to the core structural and mechanical systems of a commercial building that exist before any tenant-specific improvements are made. This includes the building shell, HVAC systems, elevators, electrical distribution, plumbing risers, fire protection, and common area finishes. Base building components define the landlord's primary maintenance and capital expenditure obligations. Expenses related to base building maintenance and repair are typically recoverable through CAM, while base building capital replacements are generally excluded from operating expense recovery. The distinction between base building maintenance (recoverable) and base building capital improvement (non-recoverable) is a frequent source of CAM disputes.",
+      "relatedTerms": [
+        "capital-vs-operating-expense",
+        "building-standard",
+        "tenant-improvement-allowance"
+      ],
+      "relatedResources": [],
+      "category": "property-management"
+    },
+    {
+      "slug": "building-standard",
+      "term": "Building Standard",
+      "shortDefinition": "The specifications and finishes a landlord provides as part of the standard tenant build-out, above which tenants bear additional costs.",
+      "definition": "Building standard refers to the specifications, materials, and finishes that a landlord provides as part of the standard tenant build-out in a commercial property. This includes items like ceiling tiles, lighting fixtures, flooring, HVAC distribution, and electrical outlets at defined densities. Improvements beyond building standard are the tenant's financial responsibility, either paid directly or deducted from their tenant improvement allowance. Building standard specifications affect CAM reconciliation because maintenance of building-standard components is typically a recoverable operating expense, while maintenance of above-standard tenant improvements may be charged back to the specific tenant. Clear documentation of building standard specifications prevents disputes about which maintenance costs are properly included in CAM pools.",
+      "relatedTerms": [
+        "base-building",
+        "tenant-improvement-allowance"
+      ],
+      "relatedResources": [],
+      "category": "property-management"
+    },
+    {
+      "slug": "tenant-improvement-allowance",
+      "term": "Tenant Improvement Allowance (TIA)",
+      "shortDefinition": "A landlord-funded allowance for tenant build-out of leased space, typically expressed as a dollar amount per rentable square foot.",
+      "definition": "A tenant improvement allowance (TIA) is a dollar amount the landlord contributes toward the tenant's build-out of their leased space, typically expressed per rentable square foot. The TIA covers construction costs for partitions, flooring, finishes, and specialized installations required by the tenant. While the TIA itself is a leasing cost and not recoverable through CAM, the ongoing maintenance of improvements funded by the TIA can create CAM billing complexity. If tenant improvements include above-standard HVAC or electrical systems, the incremental maintenance and energy costs may need to be charged directly to that tenant rather than included in the shared CAM pool. Property controllers must track which improvements were funded by the TIA versus tenant-funded to ensure correct expense allocation.",
+      "relatedTerms": [
+        "building-standard",
+        "base-building",
+        "operating-expense-exclusions"
+      ],
+      "relatedResources": [],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "floor-area-ratio",
+      "term": "Floor Area Ratio (FAR)",
+      "shortDefinition": "The ratio of a building's total floor area to the size of the land parcel it occupies, used in zoning and development analysis.",
+      "definition": "Floor area ratio (FAR) is the ratio of a building's total floor area to the total area of the land parcel on which it sits. A FAR of 2.0 means the building's total floor area is twice the land area, achievable through multi-story construction. FAR is primarily a zoning and development metric that determines maximum allowable building density, but it has indirect CAM implications. Properties with higher FARs typically have more complex common area configurations, higher load factors, and more tenants sharing operating expenses. Understanding a property's FAR helps property controllers contextualize the building's common area factor and anticipate the complexity of multi-tenant expense allocation.",
+      "relatedTerms": [
+        "common-area-factor",
+        "load-factor",
+        "usable-vs-rentable-area"
+      ],
+      "relatedResources": [],
+      "category": "property-management"
+    },
+    {
+      "slug": "estoppel-certificate",
+      "term": "Estoppel Certificate",
+      "shortDefinition": "A signed tenant statement confirming key lease terms, rent amounts, and the absence of landlord defaults. Required during property sales and refinancing.",
+      "definition": "An estoppel certificate is a signed document in which a tenant confirms the current terms of their lease, including rent amounts, CAM obligations, security deposits, and whether the landlord is in default. Estoppel certificates are required during property sales, refinancing, and loan underwriting to verify that lease terms match the landlord's representations. From a CAM reconciliation perspective, estoppel certificates are important because they confirm the tenant's understanding of their expense obligations, pro-rata share, and any outstanding disputes. Discrepancies between estoppel responses and the landlord's records often surface CAM billing issues that should be resolved before a transaction closes.",
+      "relatedTerms": [
+        "snda",
+        "cam-reconciliation"
+      ],
+      "relatedResources": [],
+      "category": "compliance"
+    },
+    {
+      "slug": "snda",
+      "term": "SNDA (Subordination, Non-Disturbance, and Attornment)",
+      "shortDefinition": "A three-party agreement between landlord, tenant, and lender establishing lease priority rights and tenant protections in the event of foreclosure.",
+      "definition": "An SNDA (Subordination, Non-Disturbance, and Attornment) is a three-party agreement among a landlord, tenant, and the landlord's lender that addresses the relationship between the lease and the mortgage. Subordination means the lease is junior to the mortgage; non-disturbance assures the tenant their lease will survive a foreclosure; and attornment means the tenant agrees to recognize the new owner as landlord. SNDAs are relevant to CAM reconciliation during property ownership transitions because they establish whether existing CAM terms, prepaid estimates, and reconciliation obligations transfer to the new owner. Property controllers must ensure that mid-year ownership changes preserve accurate CAM accounting and that reconciliation statements correctly reflect expenses under both the prior and current ownership periods.",
+      "relatedTerms": [
+        "estoppel-certificate",
+        "cam-reconciliation"
+      ],
+      "relatedResources": [],
+      "category": "compliance"
+    },
+    {
+      "slug": "letter-of-intent",
+      "term": "Letter of Intent (LOI)",
+      "shortDefinition": "A non-binding document outlining proposed lease terms including rent, CAM structure, and expense obligations before a formal lease is drafted.",
+      "definition": "A letter of intent (LOI) is a preliminary, typically non-binding document that outlines the proposed terms of a commercial lease before a formal lease agreement is drafted. The LOI specifies key economic terms including base rent, lease term, tenant improvement allowance, and the CAM/expense structure (NNN, modified gross, or gross with expense stop). From a CAM perspective, the LOI stage is where critical expense terms are first negotiated: cap provisions, exclusion lists, admin fee percentages, and audit rights. Property controllers and asset managers should review LOIs before execution to ensure the proposed CAM terms are operationally feasible and will not create billing complexity that undermines recovery ratios.",
+      "relatedTerms": [
+        "nnn-lease",
+        "modified-gross-lease",
+        "cam-cap",
+        "admin-fee"
+      ],
+      "relatedResources": [],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "rent-commencement-date",
+      "term": "Rent Commencement Date",
+      "shortDefinition": "The date on which a tenant's obligation to pay rent and CAM charges begins, which may differ from the lease commencement or possession date.",
+      "definition": "The rent commencement date is the date on which a tenant's obligation to pay rent and operating expense charges (including CAM) begins. It may differ from the lease commencement date or the possession date, particularly when the landlord provides a free rent period or when tenant build-out takes longer than expected. For CAM reconciliation purposes, the rent commencement date determines when the tenant enters the CAM pool and begins accruing pro-rata share obligations. Mid-year rent commencement requires prorating the tenant's annual CAM estimate and can complicate the year-end reconciliation calculation. Billing systems must correctly handle partial-year tenants to avoid over- or under-billing in the first occupancy year.",
+      "relatedTerms": [
+        "free-rent-abatement",
+        "billing-cycle",
+        "pro-rata-share"
+      ],
+      "relatedResources": [],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "free-rent-abatement",
+      "term": "Free Rent / Abatement",
+      "shortDefinition": "A lease concession where the tenant is excused from paying base rent for a defined period, though CAM obligations may or may not be included.",
+      "definition": "Free rent (also called rent abatement) is a lease concession where the tenant is excused from paying base rent for a defined period, typically at the beginning of the lease term. Whether the free rent period also abates CAM charges and operating expense pass-throughs depends on the specific lease language. Some leases abate only base rent while requiring CAM payments from day one, while others abate all charges. This distinction is critical for CAM reconciliation because it determines when the tenant enters the expense recovery pool. If CAM is abated during the free rent period, the landlord absorbs those costs, reducing the recovery ratio. Property controllers must read the abatement clause carefully to configure billing systems correctly for the initial lease period.",
+      "relatedTerms": [
+        "rent-commencement-date",
+        "billing-cycle",
+        "recovery-ratio"
+      ],
+      "relatedResources": [],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "holdover-tenant",
+      "term": "Holdover Tenant",
+      "shortDefinition": "A tenant who remains in possession of leased space after their lease expires, typically subject to increased rent and continued CAM obligations.",
+      "definition": "A holdover tenant is a tenant who remains in possession of their leased space after the lease term has expired without executing a renewal or extension. Most commercial leases impose a holdover penalty (typically 125% to 200% of the final month's rent) and may convert the tenancy to a month-to-month arrangement. For CAM reconciliation, holdover tenants present billing challenges because their lease terms (including CAM caps, exclusions, and pro-rata share calculations) may be ambiguous during the holdover period. Some leases specify that all CAM terms continue during holdover, while others are silent. Property controllers must determine whether to continue billing under the expired lease terms or adjust based on holdover provisions, and ensure the tenant remains in the CAM pool until they vacate.",
+      "relatedTerms": [
+        "billing-cycle",
+        "cam-reconciliation",
+        "pro-rata-share"
+      ],
+      "relatedResources": [],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "right-of-first-refusal",
+      "term": "Right of First Refusal (ROFR)",
+      "shortDefinition": "A lease provision giving a tenant the right to match any offer the landlord receives from a third party for adjacent or additional space.",
+      "definition": "A right of first refusal (ROFR) gives a tenant the right to match any bona fide offer the landlord receives from a third party for specified additional space, typically adjacent suites or expansion areas. If the tenant exercises their ROFR, they lease the additional space on the same terms offered by the third party. From a CAM perspective, ROFR exercises change the tenant's leased square footage mid-lease, which affects their pro-rata share calculation and may trigger denominator adjustments across the building. Property controllers must update billing configurations promptly when a ROFR is exercised to ensure accurate CAM calculations for both the expanding tenant and all other tenants whose pro-rata shares may shift as a result.",
+      "relatedTerms": [
+        "pro-rata-share",
+        "denominator",
+        "billing-cycle"
+      ],
+      "relatedResources": [],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "assignment-and-subletting",
+      "term": "Assignment and Subletting",
+      "shortDefinition": "Lease provisions governing a tenant's right to transfer their lease obligations to another party (assignment) or sublease space to a subtenant.",
+      "definition": "Assignment and subletting clauses govern a tenant's right to transfer their lease to another party. An assignment transfers the entire lease interest to a new tenant, while a sublease allows the original tenant to lease part or all of their space to a subtenant while retaining their obligations to the landlord. For CAM reconciliation, assignments require updating the tenant record and billing configuration to reflect the new occupant, while subleases typically do not change the CAM billing relationship because the original tenant remains responsible to the landlord. However, if the sublease involves a partial space subdivision, it may affect how above-standard expenses are allocated. Landlord consent is almost always required, and lease assignment provisions may include profit-sharing requirements on sublease income.",
+      "relatedTerms": [
+        "pro-rata-share",
+        "cam-reconciliation"
+      ],
+      "relatedResources": [],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "co-tenancy-clause",
+      "term": "Co-Tenancy Clause",
+      "shortDefinition": "A retail lease provision that conditions a tenant's rent or occupancy obligations on the presence of specified co-tenants or minimum occupancy levels.",
+      "definition": "A co-tenancy clause is a provision in a retail lease that ties a tenant's obligations to the presence of other tenants in the property. Typical co-tenancy clauses require that a specified anchor tenant be open and operating, or that a minimum percentage of the property be leased and occupied. If the co-tenancy condition fails, the tenant may have the right to pay reduced rent (often percentage rent only), terminate the lease, or cease operations while maintaining the lease. Co-tenancy failures affect CAM reconciliation because reduced occupancy changes the denominator for pro-rata share calculations, and tenants paying reduced rent may have corresponding CAM adjustments. Property controllers must monitor co-tenancy conditions and adjust billing configurations when triggers are activated.",
+      "relatedTerms": [
+        "anchor-exclusion",
+        "percentage-rent",
+        "denominator"
+      ],
+      "relatedResources": [],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "exclusive-use-clause",
+      "term": "Exclusive Use Clause",
+      "shortDefinition": "A lease provision granting a tenant the exclusive right to operate a specific type of business within the property, common in retail centers.",
+      "definition": "An exclusive use clause grants a tenant the exclusive right to operate a specific type of business within the property, for example, the sole right to operate a coffee shop, pharmacy, or fitness center. Violations of exclusive use clauses can give the affected tenant remedies including rent reduction, lease termination, or damages. While exclusive use clauses do not directly affect CAM calculations, they have indirect financial implications: if a tenant exercises a remedy that reduces their rent or triggers a lease termination, the resulting vacancy affects the building's occupancy rate, gross-up calculations, and pro-rata share denominators. Property controllers should be aware of exclusive use provisions when onboarding new tenants whose business type might create conflicts.",
+      "relatedTerms": [
+        "co-tenancy-clause",
+        "gross-up-clause",
+        "denominator"
+      ],
+      "relatedResources": [],
+      "category": "lease-structures"
+    },
+    {
+      "slug": "force-majeure",
+      "term": "Force Majeure",
+      "shortDefinition": "A lease provision excusing performance obligations due to extraordinary events beyond either party's control, such as natural disasters or pandemics.",
+      "definition": "Force majeure is a lease provision that excuses one or both parties from performing lease obligations when extraordinary events beyond their control prevent performance: natural disasters, pandemics, government orders, wars, or labor strikes. In the CAM context, force majeure events can affect operating expenses (emergency repairs, increased cleaning costs, insurance claims) and tenant payment obligations simultaneously. The COVID-19 pandemic highlighted force majeure implications for CAM reconciliation as building operating expenses shifted dramatically while some tenants invoked force majeure to suspend rent and CAM payments. Property controllers must track whether force majeure claims affect CAM payment timing, and ensure that extraordinary expenses incurred during force majeure events are correctly classified as recoverable or non-recoverable based on lease terms.",
+      "relatedTerms": [
+        "cam-reconciliation",
+        "operating-expense-exclusions"
+      ],
+      "relatedResources": [],
+      "category": "compliance"
+    },
+    {
+      "slug": "operating-expense-escalation",
+      "term": "Operating Expense Escalation",
+      "shortDefinition": "The annual increase mechanism in a lease that adjusts a tenant's operating expense obligations, often tied to CPI, a fixed percentage, or actual expense growth.",
+      "definition": "Operating expense escalation is the mechanism by which a tenant's operating expense obligations increase over the lease term. Escalations may be structured as fixed annual percentage increases, CPI-based adjustments, or pass-throughs of actual expense growth above a base year or expense stop. The escalation structure directly affects how much operating expense risk is borne by the landlord versus the tenant. Fixed escalations provide predictability but may not keep pace with actual expense growth, creating under-recovery for the landlord. CPI-based escalations track inflation but may diverge from property-specific expense trends. Actual expense pass-throughs transfer the most risk to tenants but require accurate reconciliation. Property controllers must implement the correct escalation method for each lease to avoid systematic billing errors.",
+      "relatedTerms": [
+        "base-year",
+        "expense-stop",
+        "cam-cap",
+        "controllable-vs-non-controllable-expenses"
+      ],
+      "relatedResources": [],
+      "category": "calculations"
+    },
+    {
+      "slug": "r-u-ratio",
+      "term": "R/U Ratio",
+      "shortDefinition": "The ratio of rentable area to usable area in a commercial building, used to quantify the common area markup tenants pay beyond their exclusive-use space.",
+      "definition": "The R/U ratio (rentable-to-usable ratio) quantifies the relationship between a building's rentable area and its usable area. It is calculated by dividing total rentable square footage by total usable square footage. An R/U ratio of 1.15 means that for every 1,000 usable square feet a tenant occupies, they are billed on 1,150 rentable square feet. The additional 150 square feet represent their proportional share of common areas. The R/U ratio is functionally equivalent to the load factor and is determined by BOMA measurement standards. Changes in measurement methodology (such as BOMA 2024's treatment of outdoor amenity spaces) can alter a building's R/U ratio, affecting every tenant's rental and CAM obligations. Property controllers should recalculate R/U ratios when buildings are remeasured or BOMA standards are updated.",
+      "relatedTerms": [
+        "load-factor",
+        "usable-vs-rentable-area",
+        "boma-2024",
+        "common-area-factor"
+      ],
+      "relatedResources": [],
+      "category": "calculations"
+    },
+    {
+      "slug": "tenant-in-common",
+      "term": "Tenant-in-Common (TIC)",
+      "shortDefinition": "A form of co-ownership where multiple parties hold undivided interests in a property, each responsible for their share of operating expenses.",
+      "definition": "A tenant-in-common (TIC) arrangement is a form of property co-ownership where two or more parties hold undivided fractional interests in the same property. Each co-owner has the right to use the entire property and is responsible for their proportionate share of operating expenses, property taxes, and maintenance costs. TIC structures add complexity to CAM reconciliation because operating expenses must be allocated not only to tenants but also among co-owners based on their ownership percentages. The TIC agreement typically specifies how expenses are shared, who manages the property, and how decisions about capital improvements are made. Property controllers managing TIC properties must maintain separate accounting for each co-owner's share of expenses while still producing accurate tenant-facing reconciliation statements.",
+      "relatedTerms": [
+        "pro-rata-share",
+        "cam-reconciliation"
+      ],
+      "relatedResources": [],
+      "category": "property-management"
+    },
+    {
+      "slug": "lien-waiver",
+      "term": "Lien Waiver",
+      "shortDefinition": "A document in which a contractor or supplier relinquishes their right to file a mechanic's lien against the property upon receiving payment.",
+      "definition": "A lien waiver is a legal document in which a contractor, subcontractor, or material supplier relinquishes their right to file a mechanic's lien against the property upon receiving payment for work performed or materials delivered. Lien waivers are collected during construction and renovation projects to protect the property from encumbrances. In the CAM context, lien waivers are relevant when operating expenses include maintenance, repair, or improvement work performed by outside contractors. Property controllers should ensure lien waivers are obtained for significant vendor payments included in CAM pools, particularly for capital-adjacent maintenance work that might be challenged by tenants during an audit. Proper lien waiver documentation strengthens the landlord's position when defending the recoverability of contested expenses.",
+      "relatedTerms": [
+        "mechanics-lien",
+        "capital-vs-operating-expense"
+      ],
+      "relatedResources": [],
+      "category": "compliance"
+    },
+    {
+      "slug": "mechanics-lien",
+      "term": "Mechanic's Lien",
+      "shortDefinition": "A statutory claim against a property filed by an unpaid contractor or supplier, which can cloud title and complicate property transactions.",
+      "definition": "A mechanic's lien is a statutory claim filed against a property by a contractor, subcontractor, or material supplier who has not been paid for work performed or materials delivered. The lien attaches to the property itself, not the property owner personally, and must be satisfied before the property can be sold or refinanced with clear title. Mechanic's liens are relevant to CAM administration because building maintenance and repair work (much of which flows through CAM expense pools) involves contractors who have lien rights. If a landlord disputes or delays payment to a vendor whose services are billed through CAM, the resulting lien creates legal and financial complications for the property. Tenant auditors may also question whether expenses associated with lien disputes are properly recoverable through CAM.",
+      "relatedTerms": [
+        "lien-waiver",
+        "capital-vs-operating-expense"
+      ],
+      "relatedResources": [],
+      "category": "compliance"
+    },
+    {
+      "slug": "subordination-agreement",
+      "term": "Subordination Agreement",
+      "shortDefinition": "A legal document establishing the priority of a mortgage over a lease, typically paired with non-disturbance protections for the tenant.",
+      "definition": "A subordination agreement is a legal document that establishes the priority of one interest over another, most commonly the priority of a lender's mortgage over a tenant's lease. When a landlord finances or refinances a property, the lender typically requires tenants to subordinate their leases to the new mortgage, meaning the mortgage takes priority in the event of default and foreclosure. Subordination agreements are usually paired with non-disturbance protections (forming the SNDA) to assure tenants their leases will survive a foreclosure. From a CAM perspective, subordination agreements matter during ownership transitions because they affect whether existing CAM terms, prepaid estimates, and reconciliation obligations remain enforceable under new ownership. Property controllers should verify that CAM provisions are preserved when subordination agreements are executed.",
+      "relatedTerms": [
+        "snda",
+        "estoppel-certificate"
+      ],
+      "relatedResources": [],
+      "category": "compliance"
+    },
+    {
+      "slug": "cam-pool",
+      "term": "CAM Pool",
+      "shortDefinition": "The defined set of operating expense GL codes and categories that are aggregated for allocation to tenants through CAM reconciliation.",
+      "definition": "A CAM pool is the defined set of operating expense accounts (typically mapped to GL codes) that are aggregated and allocated to tenants through the CAM reconciliation process. The pool includes recoverable expenses like janitorial, landscaping, security, common area utilities, and maintenance, while excluding non-recoverable items like capital improvements, leasing commissions, and above-cap management fees. Properly configuring CAM pools in the billing system (including correct GL code mapping, expense classification, and exclusion rules) is foundational to accurate CAM reconciliation. Many billing errors originate from CAM pool misconfiguration, such as including non-recoverable expenses, omitting recoverable ones, or failing to update the pool when GL codes are restructured. Tenants can audit their landlord's CAM pool allocation with <a href=\"https://www.camaudit.io\" target=\"_blank\" rel=\"noopener noreferrer\">CAMAudit.io</a>.",
+      "relatedTerms": [
+        "charge-code",
+        "recovery-code",
+        "charge-code",
+        "operating-expense-exclusions"
+      ],
+      "relatedResources": [
+        "/resources/gl-code-mapping-cam"
+      ],
+      "category": "property-management"
+    },
+    {
+      "slug": "recovery-code",
+      "term": "Recovery Code",
+      "shortDefinition": "A billing system code that maps GL expense accounts to the appropriate CAM recovery pool and allocation method for tenant billing.",
+      "definition": "A recovery code is a configuration element in property management billing systems (such as Yardi Voyager or MRI) that maps general ledger expense accounts to the appropriate CAM recovery pool and allocation method. Recovery codes determine which expenses are included in tenant billings, how they are categorized on reconciliation statements, and which allocation methodology (pro-rata share, direct charge, or custom split) applies. Incorrect recovery code configuration is one of the most common root causes of systematic CAM billing errors because it affects every tenant in the building simultaneously. Property controllers should audit recovery code mappings annually and whenever GL accounts are restructured to ensure expenses flow to the correct recovery pools.",
+      "relatedTerms": [
+        "cam-pool",
+        "charge-code",
+        "charge-code"
+      ],
+      "relatedResources": [
+        "/resources/gl-code-mapping-cam"
+      ],
+      "category": "property-management"
+    },
+    {
+      "slug": "charge-code",
+      "term": "Charge Code",
+      "shortDefinition": "A code in property management software that categorizes specific types of tenant charges for billing, reporting, and reconciliation purposes.",
+      "definition": "A charge code is a classification code used in property management billing systems to categorize specific types of tenant charges: base rent, CAM, property tax, insurance, utilities, and other pass-throughs. Each charge code defines the billing frequency, calculation method, and reconciliation behavior for that charge type. In CAM reconciliation, charge codes must be correctly mapped to the corresponding expense recovery pools to ensure that estimated charges collected during the year can be accurately compared against actual expenses at reconciliation. Misconfigured charge codes can cause estimates to be billed against the wrong recovery pool, producing reconciliation variances that do not reflect actual expense performance. Property controllers should maintain a documented charge code map that links each code to its GL source and recovery pool.",
+      "relatedTerms": [
+        "recovery-code",
+        "cam-pool",
+        "billing-cycle"
+      ],
+      "relatedResources": [],
+      "category": "property-management"
+    },
+    {
+      "slug": "billing-cycle",
+      "term": "Billing Cycle",
+      "shortDefinition": "The recurring schedule on which CAM estimates and other tenant charges are billed, typically monthly, with annual reconciliation.",
+      "definition": "The billing cycle is the recurring schedule on which CAM estimates and other tenant charges are invoiced. Most commercial leases specify monthly billing of estimated CAM charges (one-twelfth of the annual estimate), with an annual reconciliation that compares total estimated charges collected against actual expenses incurred. Some leases allow quarterly billing or other intervals. The billing cycle affects cash flow for both landlords and tenants. Monthly billing provides steadier cash flow but requires accurate annual estimates to minimize reconciliation variances. Mid-year estimate adjustments may be permitted under some leases when actual expenses are trending significantly above or below the original estimate. Property controllers must ensure billing system configurations match the cycle defined in each tenant's lease.",
+      "relatedTerms": [
+        "true-up",
+        "cam-reconciliation",
+        "reconciliation-statement"
+      ],
+      "relatedResources": [],
+      "category": "property-management"
+    },
+    {
+      "slug": "true-up",
+      "term": "True-Up",
+      "shortDefinition": "The year-end adjustment that settles the difference between estimated CAM charges collected from tenants and actual operating expenses incurred.",
+      "definition": "A true-up is the year-end financial adjustment that settles the difference between estimated CAM charges collected from tenants during the year and the actual operating expenses incurred. If actual expenses exceed estimates, tenants owe an additional payment; if estimates exceeded actuals, the landlord issues a credit or refund. The true-up is documented in the reconciliation statement and represents the financial outcome of the CAM reconciliation process. Large true-up amounts (whether charges or credits) indicate that the original estimates were inaccurate, which creates cash flow disruption for tenants and can damage the landlord-tenant relationship. Best practice is to maintain estimates within 5-10% of actual expenses to minimize true-up impact and reduce tenant complaints.",
+      "relatedTerms": [
+        "cam-reconciliation",
+        "reconciliation-statement",
+        "billing-cycle"
+      ],
+      "relatedResources": [
+        "/resources/mid-year-cam-true-up"
+      ],
+      "category": "core-concepts"
+    },
+    {
+      "slug": "absorption",
+      "term": "Absorption",
+      "shortDefinition": "The net change in occupied commercial space over a period, measuring how much space the market is consuming or releasing.",
+      "definition": "Absorption is the net change in occupied commercial space over a defined time period, calculated as total space newly occupied minus total space vacated. Positive absorption means the market is consuming more space than it is releasing; negative absorption indicates rising vacancy. Absorption rates directly affect CAM reconciliation because changing occupancy levels impact gross-up calculations, pro-rata share denominators, and overall recovery ratios. In markets with negative absorption, landlords face increasing vacancy-related costs that may not be fully recoverable through gross-up provisions, particularly if gross-up thresholds are set below actual occupancy. Property controllers should monitor absorption trends in their markets to anticipate impacts on expense recovery and adjust CAM estimates accordingly.",
+      "relatedTerms": [
+        "gross-up-clause",
+        "denominator",
+        "recovery-ratio"
+      ],
+      "relatedResources": [],
+      "category": "financial-analysis"
+    },
+    {
+      "slug": "denominator",
+      "term": "Denominator",
+      "shortDefinition": "The total leasable or rentable area used as the divisor in pro-rata share calculations, the accuracy of which is critical to correct tenant billing.",
+      "definition": "In CAM reconciliation, the denominator is the total leasable or rentable square footage used as the divisor when calculating each tenant's pro-rata share of operating expenses. The denominator is defined in each lease and may vary between tenants in the same building. Some leases use total building rentable area, others exclude anchor tenant space, and some use only the tenant's floor or zone. Denominator errors are among the most financially impactful CAM billing mistakes because they affect every expense calculation for every tenant simultaneously. Common denominator issues include failing to update the denominator when space is added or removed, using inconsistent denominators across leases in the same property, and not accounting for remeasurement under updated BOMA standards.",
+      "relatedTerms": [
+        "pro-rata-share",
+        "anchor-exclusion",
+        "usable-vs-rentable-area",
+        "r-u-ratio"
+      ],
+      "relatedResources": [
+        "/resources/denominator-drift"
+      ],
+      "category": "calculations"
+    },
+    {
+      "slug": "cumulative-cap",
+      "term": "Cumulative Cap",
+      "shortDefinition": "A CAM cap structure where unused cap allowance from low-expense years carries forward, allowing larger increases in future years.",
+      "definition": "A cumulative cap is a CAM cap structure where unused cap allowance from years with below-cap expense growth carries forward to future years, allowing the landlord to pass through larger increases in subsequent periods. For example, if a lease has a 5% cumulative cap and expenses increase only 3% in year one, the unused 2% carries forward, allowing up to a 7% increase in year two. Cumulative caps benefit landlords by preventing the cap from permanently limiting recovery when expenses are volatile. A single low-expense year does not reset the cap baseline. From a billing system perspective, cumulative caps require tracking the running cap balance over the entire lease term, which many standard property management systems do not handle natively. Property controllers must often calculate cumulative cap balances manually or in supplementary spreadsheets.",
+      "relatedTerms": [
+        "non-cumulative-cap",
+        "cam-cap",
+        "controllable-vs-non-controllable-expenses"
+      ],
+      "relatedResources": [
+        "/resources/cumulative-vs-non-cumulative-cam-caps"
+      ],
+      "category": "calculations"
+    },
+    {
+      "slug": "non-cumulative-cap",
+      "term": "Non-Cumulative Cap",
+      "shortDefinition": "A CAM cap structure where unused cap allowance is forfeited each year, resetting the baseline and limiting future increases to the stated percentage.",
+      "definition": "A non-cumulative cap is a CAM cap structure where unused cap allowance from years with below-cap expense growth is forfeited. It does not carry forward to future years. Each year stands alone: the maximum allowable increase is calculated only as the cap percentage applied to the prior year's actual charges (or capped amount). Non-cumulative caps strongly favor landlords in most scenarios because a single year of low expenses resets the effective baseline downward, permanently limiting the dollar amount of future increases. However, non-cumulative caps can create a compounding disadvantage for landlords if expenses spike after several years of low growth. Many tenant representatives negotiate for cumulative caps specifically because they understand the long-term financial advantage non-cumulative caps provide to landlords.",
+      "relatedTerms": [
+        "cumulative-cap",
+        "cam-cap",
+        "controllable-vs-non-controllable-expenses"
+      ],
+      "relatedResources": [
+        "/resources/cumulative-vs-non-cumulative-cam-caps"
+      ],
+      "category": "calculations"
+    },
+    {
+      "slug": "management-fee",
+      "term": "Management Fee",
+      "shortDefinition": "The fee charged by a property management company or landlord for administering building operations, often recoverable through CAM as a percentage of expenses.",
+      "definition": "A management fee is the compensation paid to a property management company (or the landlord's own management division) for administering building operations, tenant relations, vendor management, and financial reporting. Management fees are typically calculated as a percentage of effective gross revenue or total operating expenses, ranging from 3% to 6% for institutional-quality properties and up to 10-15% for smaller assets. Whether and how the management fee is recoverable through CAM depends on lease terms. Many leases cap the recoverable management fee at a specific percentage, while others exclude it entirely from pass-through expenses. The management fee calculation method (percentage of revenue vs. percentage of expenses vs. flat fee) and its treatment under CAM cap provisions are frequent sources of billing disputes and audit findings. Extract management fee cap percentages directly from lease PDFs with <a href=\"https://www.lextract.io\" target=\"_blank\" rel=\"noopener noreferrer\">Lextract.io</a>.",
+      "relatedTerms": [
+        "admin-fee",
+        "cam-cap",
+        "operating-expense-exclusions",
+        "recovery-ratio"
+      ],
+      "relatedResources": [
+        "/resources/admin-fee-calculation-methods"
+      ],
+      "category": "financial-analysis"
+    }
+  ]
+}

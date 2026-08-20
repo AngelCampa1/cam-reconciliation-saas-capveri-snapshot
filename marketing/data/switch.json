@@ -1,0 +1,576 @@
+{
+  "lastUpdated": "2026-03-26",
+  "guides": [
+    {
+      "slug": "excel",
+      "fromName": "Excel",
+      "metaTitle": "Switch from Excel to CapVeri in 15 Minutes | CAM Reconciliation",
+      "metaDescription": "Stop wrestling with Excel for CAM reconciliation. Switch to CapVeri in 15 minutes with zero data loss. Keep your ERP, ditch the spreadsheet errors.",
+      "headline": "Switch from Excel to CapVeri in 15 Minutes",
+      "subheadline": "Automate CAM reconciliation without changing your ERP or workflows",
+      "datePublished": "2026-03-26",
+      "dateModified": "2026-03-26",
+      "introParagraphs": [
+        "Excel has been the default CAM reconciliation tool for decades, not because it is the best option, but because it was already installed on every property manager's computer. The result is thousands of commercial real estate teams running multi-million-dollar reconciliations on a tool that was never designed for the job.",
+        "CapVeri replaces the spreadsheet, not your entire workflow. You keep your ERP, your GL exports, and your lease files. The only thing that changes is the error-prone middle step where formulas break, versions multiply, and audit trails disappear."
+      ],
+      "whySwitch": [
+        {
+          "title": "Formula Errors Cost Real Money",
+          "description": "A single misplaced cell reference in an Excel reconciliation can cascade through an entire building's tenant allocations. Research on real-world spreadsheets keeps finding errors in a large share of the files studied, and CAM reconciliations are no exception."
+        },
+        {
+          "title": "No Audit Trail",
+          "description": "When a tenant disputes a charge, Excel cannot show who changed what and when. You are left reconstructing months of edits from file names like 'CAM_Recon_v3_FINAL_revised.xlsx'."
+        },
+        {
+          "title": "Version Control Chaos",
+          "description": "Multiple team members editing copies of the same workbook leads to conflicting numbers, lost changes, and hours spent reconciling the reconciliation itself."
+        },
+        {
+          "title": "No Gross-Up Automation",
+          "description": "BOMA 2024 gross-up calculations require occupancy tracking, expense pool classification, and variable-base-year adjustments. In Excel, this means dozens of manual formulas per building per year."
+        }
+      ],
+      "migrationSteps": [
+        {
+          "step": 1,
+          "title": "Export Current GL Data to CSV",
+          "description": "Export your general ledger expense data from your ERP (Yardi, MRI, AppFolio, or any system) as a CSV or Excel file. CapVeri accepts the same exports you already generate.",
+          "timeEstimate": "3 minutes"
+        },
+        {
+          "step": 2,
+          "title": "Upload to CapVeri",
+          "description": "Drag and drop your CSV into CapVeri. The system auto-detects column mappings for common ERP formats and flags any data it cannot parse for your review.",
+          "timeEstimate": "2 minutes"
+        },
+        {
+          "step": 3,
+          "title": "Map Lease Terms",
+          "description": "Enter key lease terms including pro-rata share percentages, cap structures, and base year definitions. CapVeri validates entries against your GL data to catch mismatches early.",
+          "timeEstimate": "5 minutes"
+        },
+        {
+          "step": 4,
+          "title": "Run Your First Reconciliation",
+          "description": "Click reconcile and review the automated calculations. CapVeri applies BOMA-aligned gross-up, enforces cap limits, and generates a detailed audit trail for every line item.",
+          "timeEstimate": "5 minutes"
+        }
+      ],
+      "totalTime": "15 minutes",
+      "whatChanges": [
+        "Reconciliation calculations automated",
+        "Audit trail generated automatically",
+        "BOMA 2024 gross-up built in",
+        "Cap enforcement tracked per lease"
+      ],
+      "whatStays": [
+        "Your ERP/GL system",
+        "Your existing workflows",
+        "Your lease files",
+        "Your tenant relationships"
+      ],
+      "faqs": [
+        {
+          "question": "Can I import my existing Excel reconciliation data?",
+          "answer": "Yes. CapVeri accepts CSV and Excel files directly. You can upload historical GL data to establish baselines and compare against prior-year reconciliations."
+        },
+        {
+          "question": "Do I need to switch my ERP system?",
+          "answer": "No. CapVeri works alongside any ERP. You continue using Yardi, MRI, AppFolio, or whatever system you use today. CapVeri ingests the CSV/Excel exports those systems already produce."
+        },
+        {
+          "question": "What happens to my historical Excel reconciliations?",
+          "answer": "Your existing files remain untouched. You can keep prior-year Excel files as reference while running new reconciliations in CapVeri, and upload historical data for year-over-year comparison."
+        },
+        {
+          "question": "How does CapVeri handle formulas differently than Excel?",
+          "answer": "CapVeri uses deterministic, audited calculation engines rather than user-editable formulas. Every calculation is versioned, traceable, and validated against BOMA standards. No broken cell references, no hidden circular dependencies."
+        },
+        {
+          "question": "Is there a learning curve?",
+          "answer": "If you can use Excel, you can use CapVeri. The interface is designed for property managers and accountants, not software engineers. You can finish a first reconciliation in one short session."
+        }
+      ],
+      "relatedResources": [
+        { "href": "/vs/excel", "title": "CapVeri vs. Excel for CAM Reconciliation" },
+        { "href": "/cam-reconciliation-guide", "title": "Annual CAM Reconciliation Workflow" },
+        { "href": "/resources/cam-gross-up-calculation-guide", "title": "BOMA Gross-Up Methods Explained" },
+        { "href": "/integrations/yardi", "title": "Yardi Integration Guide" }
+      ],
+      "ctaHeading": "Ready to Ditch the Spreadsheet?",
+      "ctaDescription": "Start your free trial and run your first automated CAM reconciliation in 15 minutes. No credit card required."
+    },
+    {
+      "slug": "outsourced-cam",
+      "fromName": "Outsourced CAM Reconciliation",
+      "metaTitle": "Bring CAM Reconciliation In-House with CapVeri | Save 70%+",
+      "metaDescription": "Stop paying $2K-$10K per building for outsourced CAM reconciliation. Bring it in-house with CapVeri for a fraction of the cost with real-time visibility.",
+      "headline": "Bring CAM Reconciliation In-House with CapVeri",
+      "subheadline": "Replace expensive outsourced firms with purpose-built software your team controls",
+      "datePublished": "2026-03-26",
+      "dateModified": "2026-03-26",
+      "introParagraphs": [
+        "Outsourcing CAM reconciliation made sense when the only alternative was manual spreadsheet work. Third-party firms offered expertise and bandwidth that most property management teams did not have in-house. But that trade-off came with significant costs: $2,000 to $10,000 per building per year, multi-week turnaround times, and limited visibility into the actual calculations.",
+        "CapVeri changes that equation. Purpose-built CAM reconciliation software gives your team the repeatable calculation workflow used for outsourced-style review, with real-time visibility, instant turnaround, and a cost reduction of 70% or more. Your team stays in control while the software handles the complexity."
+      ],
+      "whySwitch": [
+        {
+          "title": "Cost: outsourced project fees vs. annual self-serve pricing",
+          "description": "Outsourced reconciliation fees scale linearly with your portfolio. At $2,000 to $10,000 per building per year, a 20-building portfolio costs $40,000 to $200,000 annually. {{pricing.selfServeSummary}}"
+        },
+        {
+          "title": "No Real-Time Visibility",
+          "description": "With an outsourced firm, you submit data and wait weeks for results. You cannot check progress, preview calculations, or catch issues until the final deliverable arrives, often right before tenant deadlines."
+        },
+        {
+          "title": "Slow Turnaround Times",
+          "description": "Most outsourced firms deliver reconciliations in 2 to 6 weeks. If a tenant disputes a charge or you discover a data error, the revision cycle starts over. CapVeri produces results in minutes and updates instantly when inputs change."
+        },
+        {
+          "title": "Limited Control Over Methodology",
+          "description": "Outsourced firms apply their own calculation methodology, which may not match your lease language precisely. With CapVeri, you configure gross-up methods, cap structures, and allocation bases to match each lease exactly."
+        }
+      ],
+      "migrationSteps": [
+        {
+          "step": 1,
+          "title": "Gather Your GL Exports and Lease Terms",
+          "description": "Collect the same data you currently send to your outsourced firm: GL expense exports from your ERP and key lease terms including pro-rata shares, caps, and base years.",
+          "timeEstimate": "10 minutes"
+        },
+        {
+          "step": 2,
+          "title": "Upload Data to CapVeri",
+          "description": "Import your GL data via CSV or Excel upload. CapVeri auto-maps columns from Yardi, MRI, and other common ERP formats. Enter lease terms for each tenant through the guided setup wizard.",
+          "timeEstimate": "15 minutes"
+        },
+        {
+          "step": 3,
+          "title": "Configure Calculation Settings",
+          "description": "Set your gross-up method (BOMA 2017 or 2024), define expense pools, configure cap types (cumulative, compounding, or fixed), and set allocation bases per your lease requirements.",
+          "timeEstimate": "10 minutes"
+        },
+        {
+          "step": 4,
+          "title": "Run and Compare Reconciliation",
+          "description": "Generate your first in-house reconciliation. Compare results against your most recent outsourced deliverable to validate accuracy. CapVeri shows calculation details for every line item so you can verify each step.",
+          "timeEstimate": "10 minutes"
+        }
+      ],
+      "totalTime": "45 minutes",
+      "whatChanges": [
+        "Reconciliation done in-house with full control",
+        "Results available in minutes instead of weeks",
+        "Methodology configured per lease, not per firm",
+        "Annual cost drops by 70% or more",
+        "Complete audit trail for every calculation"
+      ],
+      "whatStays": [
+        "Your ERP and GL system",
+        "Your existing lease files",
+        "Your tenant communication process",
+        "Your property management team",
+        "Your accounting workflows"
+      ],
+      "faqs": [
+        {
+          "question": "Do I need CAM reconciliation expertise on my team?",
+          "answer": "CapVeri embeds the expertise. The software handles BOMA-aligned gross-up, cap enforcement, and allocation calculations automatically. Your team needs to understand lease terms and GL data, which they already do if they have been managing the outsourced relationship."
+        },
+        {
+          "question": "How does accuracy compare to an outsourced firm?",
+          "answer": "CapVeri uses the same deterministic calculation methods as professional reconciliation firms, with the added benefit of zero transcription errors. Every calculation is auditable and reproducible. You can validate by running your first CapVeri reconciliation alongside your last outsourced deliverable."
+        },
+        {
+          "question": "What if I have a complex lease with unusual provisions?",
+          "answer": "CapVeri supports configurable gross-up methods, multiple cap structures (cumulative, compounding, fixed dollar, CPI-based), custom expense pool definitions, and variable base years. If your lease has a calculation requirement, CapVeri can model it."
+        },
+        {
+          "question": "Can I bring reconciliation in-house gradually?",
+          "answer": "Yes. You can start by running CapVeri in parallel with your outsourced firm for one reconciliation cycle. Once you verify the workflow, you can choose the subscription path that fits your portfolio."
+        },
+        {
+          "question": "What about tenant disputes?",
+          "answer": "CapVeri generates a complete audit trail for every calculation, making tenant disputes easier to resolve. You can show exactly how each charge was calculated, which expenses were included, and how gross-up and caps were applied, all from a single dashboard."
+        }
+      ],
+      "relatedResources": [
+        { "href": "/alternatives/outsourced-cam", "title": "Outsourced CAM Firm Alternatives" },
+        { "href": "/roi", "title": "CapVeri ROI Calculator" },
+        { "href": "/solutions/multi-property-cam", "title": "Multi-Building Reconciliation" },
+        { "href": "/cam-reconciliation-guide", "title": "Annual CAM Reconciliation Workflow" }
+      ],
+      "ctaHeading": "Take Control of Your CAM Reconciliation",
+      "ctaDescription": "Start your free trial and see how in-house reconciliation with CapVeri saves time, money, and headaches. No credit card required."
+    },
+    {
+      "slug": "manual-process",
+      "fromName": "Manual CAM Reconciliation",
+      "metaTitle": "Replace Your Manual CAM Reconciliation Workflow",
+      "metaDescription": "Eliminate manual CAM reconciliation errors and save hours per building. CapVeri automates gross-up, cap enforcement, and tenant allocations with a full audit trail.",
+      "headline": "Replace Your Manual CAM Reconciliation Workflow",
+      "subheadline": "Automate the tedious, error-prone parts while keeping full control",
+      "datePublished": "2026-03-26",
+      "dateModified": "2026-03-26",
+      "introParagraphs": [
+        "Manual CAM reconciliation is a rite of passage in commercial real estate accounting. Every year, teams spend weeks pulling GL data, cross-referencing lease terms, calculating pro-rata shares, applying gross-up factors, and checking cap limits, all by hand or in disconnected spreadsheets. The process works until it does not: a misread lease clause, a transposed number, or a missed cap limit can mean thousands of dollars in billing errors.",
+        "CapVeri automates the calculation-intensive middle of the reconciliation process while leaving you in full control of inputs and outputs. You still decide which expenses are recoverable, how leases should be interpreted, and when to send tenant statements. The software just makes sure the math is right every time."
+      ],
+      "whySwitch": [
+        {
+          "title": "Human Error Is Inevitable at Scale",
+          "description": "Manual reconciliation involves thousands of individual data points per building: GL line items, tenant square footages, pro-rata shares, expense pool classifications, and cap calculations. Even a 1% error rate compounds across a portfolio into material financial exposure."
+        },
+        {
+          "title": "Time Wasted on Repetitive Calculations",
+          "description": "Manual reconciliation eats hours of staff time on every building. Across a portfolio, that adds up to days of repeat work each year. Software does the same math in minutes."
+        },
+        {
+          "title": "No Scalability",
+          "description": "Adding buildings to a manual reconciliation workflow means adding proportional staff time. There is no efficiency gain at scale because every building requires the same step-by-step manual process."
+        },
+        {
+          "title": "Inconsistent Methodology",
+          "description": "When multiple team members handle reconciliations manually, each person may interpret lease language differently, apply gross-up at different stages, or handle cap limits inconsistently. This creates portfolio-wide discrepancies that are difficult to detect and correct."
+        }
+      ],
+      "migrationSteps": [
+        {
+          "step": 1,
+          "title": "Export Your GL Data",
+          "description": "Pull expense data from your ERP system in CSV or Excel format. This is the same export you already use for manual reconciliation, no new data extraction required.",
+          "timeEstimate": "3 minutes"
+        },
+        {
+          "step": 2,
+          "title": "Upload and Map Data",
+          "description": "Upload your GL export to CapVeri. The system auto-detects common ERP formats and maps columns automatically. Review and adjust any mappings the system flags for confirmation.",
+          "timeEstimate": "5 minutes"
+        },
+        {
+          "step": 3,
+          "title": "Enter Lease Terms",
+          "description": "Input tenant lease terms including rentable square footage, pro-rata share percentages, expense stop or base year amounts, cap structures, and gross-up election. CapVeri validates entries for internal consistency.",
+          "timeEstimate": "10 minutes"
+        },
+        {
+          "step": 4,
+          "title": "Review Automated Reconciliation",
+          "description": "CapVeri generates the complete reconciliation with expense allocations, gross-up calculations, cap enforcement, and tenant-level billing summaries. Review the results, drill into any line item, and export tenant statements.",
+          "timeEstimate": "10 minutes"
+        }
+      ],
+      "totalTime": "30 minutes",
+      "whatChanges": [
+        "Calculations automated with full audit trail",
+        "Gross-up applied consistently per BOMA standards",
+        "Cap limits enforced automatically per lease terms",
+        "Reconciliation time drops from hours to minutes",
+        "Every number traceable to source data"
+      ],
+      "whatStays": [
+        "Your ERP and GL system",
+        "Your lease interpretation authority",
+        "Your tenant communication process",
+        "Your team's domain expertise",
+        "Your existing review and approval workflow"
+      ],
+      "faqs": [
+        {
+          "question": "Will I lose control over the reconciliation process?",
+          "answer": "No. CapVeri automates calculations, not decisions. You still control which expenses are recoverable, how lease terms are interpreted, and when tenant statements go out. The software ensures the math is consistent and auditable."
+        },
+        {
+          "question": "How do I verify CapVeri's calculations are correct?",
+          "answer": "Every calculation includes a full audit trail showing the source data, formula applied, and intermediate results. You can drill into any line item to see exactly how it was computed. You can validate by running CapVeri alongside your manual process for the first cycle."
+        },
+        {
+          "question": "What if my manual process includes steps CapVeri does not cover?",
+          "answer": "CapVeri focuses on the calculation-intensive core of reconciliation: expense allocation, gross-up, cap enforcement, and tenant billing. Pre-reconciliation steps like expense classification and post-reconciliation steps like tenant communication remain in your control."
+        },
+        {
+          "question": "How long does the transition take?",
+          "answer": "You can finish a first automated reconciliation in one short session. The learning curve is small because CapVeri uses the same inputs you already work with: GL data and lease terms. There is no system migration or data conversion required."
+        },
+        {
+          "question": "Can CapVeri handle our unique lease structures?",
+          "answer": "CapVeri supports NNN, modified gross, full-service gross, and hybrid lease structures. It handles multiple gross-up methods (BOMA 2017 and 2024), cumulative and compounding caps, custom expense pools, and variable base years. If you can calculate it manually, CapVeri can automate it."
+        }
+      ],
+      "relatedResources": [
+        { "href": "/switch/excel", "title": "Switch from Excel to CapVeri" },
+        { "href": "/resources/pro-rata-share-calculation", "title": "Pro-Rata Share Calculation Guide" },
+        { "href": "/cam-reconciliation-guide", "title": "Annual CAM Reconciliation Workflow" },
+        { "href": "/solutions/yardi-cam-errors", "title": "CAM Error Detection" }
+      ],
+      "ctaHeading": "Automate Your CAM Reconciliation Today",
+      "ctaDescription": "Start your free trial and replace hours of manual work with automated, auditable calculations. No credit card required."
+    },
+    {
+      "slug": "yardi",
+      "fromName": "Yardi",
+      "metaTitle": "Switch from Yardi CAM Review to CapVeri Verification",
+      "metaDescription": "Keep Yardi as your ERP and add CapVeri as the CAM verification layer. Export GL data, verify gross-up and caps, and produce audit-ready packets.",
+      "headline": "Switch from Yardi-Only CAM Review to CapVeri Verification",
+      "subheadline": "Keep Voyager or Breeze. Add a focused CAM QA workflow before statements go out.",
+      "datePublished": "2026-04-28",
+      "dateModified": "2026-04-28",
+      "introParagraphs": [
+        "Switching from Yardi to CapVeri does not mean replacing Yardi. It means moving the verification step out of the ERP that produced the reconciliation and into a focused layer built to check gross-up, caps, pro-rata shares, and source GL lines.",
+        "The operational win is speed and proof. Your team exports the same Yardi data it already uses, uploads it to CapVeri, reviews exceptions, and exports an audit-ready packet without opening a new implementation project."
+      ],
+      "whySwitch": [
+        {
+          "title": "Setup and training burden",
+          "description": "Recent Yardi complaint themes cluster around learning curve, setup, and support friction. CapVeri narrows the workflow to the reconciliation proof steps controllers need during close."
+        },
+        {
+          "title": "Configuration drift is hard to spot",
+          "description": "Yardi can calculate correctly against stale or misconfigured recovery settings. CapVeri reruns the math from exported data and lease terms so drift becomes reviewable."
+        },
+        {
+          "title": "Audit backup needs to be easier to retrieve",
+          "description": "Tenant questions require source lines, formulas, and a clear explanation. CapVeri packages the calculation trace instead of forcing a report hunt."
+        }
+      ],
+      "migrationSteps": [
+        {
+          "step": 1,
+          "title": "Export Yardi CAM or GL Data",
+          "description": "Run the Yardi CAM, recovery, or GL expense report for the target property and reconciliation year. Export CSV or Excel with account, description, date, amount, and tenant billing fields where available.",
+          "timeEstimate": "5 minutes"
+        },
+        {
+          "step": 2,
+          "title": "Upload the Export to CapVeri",
+          "description": "CapVeri detects the Yardi format, previews imported rows, and flags missing or ambiguous columns before calculation.",
+          "timeEstimate": "5 minutes"
+        },
+        {
+          "step": 3,
+          "title": "Confirm Lease Terms and Pools",
+          "description": "Review gross-up thresholds, cap rules, expense stops, and recoverable pools. CapVeri stores the terms used for the calculation snapshot.",
+          "timeEstimate": "15 minutes"
+        },
+        {
+          "step": 4,
+          "title": "Review Exceptions and Export Backup",
+          "description": "Run reconciliation, inspect variances, open the calculation trace for any tenant, and export the packet for review or tenant response.",
+          "timeEstimate": "10 minutes"
+        }
+      ],
+      "totalTime": "35 minutes",
+      "whatChanges": [
+        "CAM verification moves into CapVeri",
+        "Every result gets a calculation trace",
+        "Exceptions are reviewed before tenant statements",
+        "Audit packets are exported from one workflow"
+      ],
+      "whatStays": [
+        "Yardi remains the ERP",
+        "Existing GL and lease records stay in place",
+        "No API integration project",
+        "Your accounting close process remains familiar"
+      ],
+      "faqs": [
+        {
+          "question": "Do I need to migrate away from Yardi?",
+          "answer": "No. CapVeri is an independent verification layer. Keep Yardi as the system of record and upload Yardi exports when you need CAM proof."
+        },
+        {
+          "question": "Which CapVeri package should a Yardi user start with?",
+          "answer": "Start with Reconcile for core verification, use Control for portfolio analysis and exception management, and use Defend for tenant-facing dispute and audit-defense workflows."
+        },
+        {
+          "question": "What happens if CapVeri does not match Yardi?",
+          "answer": "Treat the variance as an exception to investigate. CapVeri shows the source data, lease terms, and calculation steps so your team can identify whether the issue is Yardi configuration, source data, or CapVeri setup."
+        }
+      ],
+      "relatedResources": [
+        { "href": "/integrations/yardi", "title": "CapVeri + Yardi" },
+        { "href": "/vs/yardi", "title": "CapVeri vs Yardi" },
+        { "href": "/resources/software/yardi-voyager/cam-setup", "title": "Yardi Voyager CAM Setup Guide" }
+      ],
+      "ctaHeading": "Keep Yardi. Verify CAM in CapVeri.",
+      "ctaDescription": "Upload a Yardi export and verify gross-up, caps, pro-rata shares, and tenant-ready backup in one focused workflow."
+    },
+    {
+      "slug": "mri",
+      "fromName": "MRI",
+      "metaTitle": "Switch from MRI CAM Review to CapVeri Verification",
+      "metaDescription": "Use CapVeri alongside MRI for independent CAM reconciliation verification. Export MRI reports, review exceptions, and create audit-ready packets.",
+      "headline": "Switch from MRI-Only CAM Review to CapVeri Verification",
+      "subheadline": "Keep MRI for operations. Use CapVeri for fast CAM proof and exception review.",
+      "datePublished": "2026-04-28",
+      "dateModified": "2026-04-28",
+      "introParagraphs": [
+        "MRI is a broad commercial real estate platform. CapVeri does not replace that system; it gives controllers a dedicated CAM verification lane when the priority is proving the numbers quickly.",
+        "The workflow is file based: export MRI GL or recovery data, upload it to CapVeri, confirm lease terms, review exceptions, and export the calculation backup."
+      ],
+      "whySwitch": [
+        {
+          "title": "Reporting and navigation friction",
+          "description": "Recent MRI review themes include report discovery, navigation, and customization effort. CapVeri puts the CAM proof workflow in one path from import to packet."
+        },
+        {
+          "title": "Support delays slow close work",
+          "description": "When close deadlines are near, waiting through support escalation is expensive. CapVeri makes the exception details exportable so support starts with the relevant import, job, and trace context."
+        },
+        {
+          "title": "Finance-specific proof matters",
+          "description": "CapVeri is finance-first for CAM: deterministic formulas, finalized calculation records, and exportable calculation trace rather than broad operational reporting."
+        }
+      ],
+      "migrationSteps": [
+        {
+          "step": 1,
+          "title": "Export MRI GL or Recovery Reports",
+          "description": "Use MRI reporting to export property-level operating expenses and billed CAM data for the reconciliation period.",
+          "timeEstimate": "5 minutes"
+        },
+        {
+          "step": 2,
+          "title": "Upload and Preview Rows",
+          "description": "CapVeri detects MRI-style columns, shows preview rows, and asks for mapping confirmation only where needed.",
+          "timeEstimate": "5 minutes"
+        },
+        {
+          "step": 3,
+          "title": "Validate Lease Terms",
+          "description": "Confirm caps, base years, pro-rata shares, recoverable pools, and gross-up settings before calculation.",
+          "timeEstimate": "15 minutes"
+        },
+        {
+          "step": 4,
+          "title": "Resolve Exceptions",
+          "description": "Review variances, inspect calculation traces, and export tenant or internal-review packets.",
+          "timeEstimate": "10 minutes"
+        }
+      ],
+      "totalTime": "35 minutes",
+      "whatChanges": [
+        "CAM proof moves into a focused verification workflow",
+        "Report hunting is replaced by traceable results",
+        "Exceptions can be packaged with source context",
+        "Finalized snapshots become traceable"
+      ],
+      "whatStays": [
+        "MRI remains the property management platform",
+        "No system migration",
+        "No API credentials",
+        "Existing accounting reports remain the source export"
+      ],
+      "faqs": [
+        {
+          "question": "Can CapVeri use MRI exports?",
+          "answer": "Yes. CapVeri supports MRI-style GL and rent roll exports through file upload and mapping confirmation."
+        },
+        {
+          "question": "Is this a replacement for MRI?",
+          "answer": "No. CapVeri verifies CAM math and produces audit backup. MRI remains the operational and accounting platform."
+        },
+        {
+          "question": "Where should MRI users start?",
+          "answer": "Use Reconcile for core CAM math, Control for portfolio controls and anomaly review, and Defend for tenant dispute and audit-defense workflows."
+        }
+      ],
+      "relatedResources": [
+        { "href": "/integrations/mri", "title": "CapVeri + MRI" },
+        { "href": "/vs/mri", "title": "CapVeri vs MRI" },
+        { "href": "/resources/software/mri-software/cam-setup", "title": "MRI CAM Setup Guide" }
+      ],
+      "ctaHeading": "Keep MRI. Verify CAM in CapVeri.",
+      "ctaDescription": "Upload an MRI export and get deterministic CAM verification, exception review, and audit-ready backup."
+    },
+    {
+      "slug": "appfolio",
+      "fromName": "AppFolio",
+      "metaTitle": "Switch from AppFolio CAM Workarounds to CapVeri",
+      "metaDescription": "Keep AppFolio for property management and add CapVeri for commercial-grade CAM reconciliation, gross-up, caps, and audit trails.",
+      "headline": "Switch from AppFolio CAM Workarounds to CapVeri",
+      "subheadline": "Keep AppFolio for operations. Add commercial-grade CAM reconciliation where AppFolio gets thin.",
+      "datePublished": "2026-04-28",
+      "dateModified": "2026-04-28",
+      "introParagraphs": [
+        "AppFolio is strong for property operations, resident communication, and everyday workflows. The gap for commercial landlords is not basic property management; it is commercial-grade CAM proof.",
+        "CapVeri fills that gap without forcing a platform switch. Export AppFolio expense and billing data, upload it to CapVeri, verify gross-up and caps, and use the output for tenant billing or dispute response."
+      ],
+      "whySwitch": [
+        {
+          "title": "Commercial CAM depth is limited",
+          "description": "Recent AppFolio review themes include limited customization and reporting constraints. Commercial CAM often needs more than basic billing and expense tracking."
+        },
+        {
+          "title": "Reporting is not always enough for cross-property proof",
+          "description": "CapVeri gives controllers a portfolio view, tenant-level calculation trace, and exportable packets built for CAM rather than general PM reporting."
+        },
+        {
+          "title": "Avoid an ERP migration for one workflow",
+          "description": "If AppFolio works for operations, replacing it with Yardi or MRI just to solve CAM can be overkill. CapVeri adds the missing reconciliation layer."
+        }
+      ],
+      "migrationSteps": [
+        {
+          "step": 1,
+          "title": "Export AppFolio Expenses and Billed Amounts",
+          "description": "Export operating expense data and actual billed CAM amounts for the property and year you want to verify.",
+          "timeEstimate": "5 minutes"
+        },
+        {
+          "step": 2,
+          "title": "Upload to CapVeri",
+          "description": "Upload the CSV or Excel file. CapVeri previews rows and stores mappings so repeated exports get faster.",
+          "timeEstimate": "5 minutes"
+        },
+        {
+          "step": 3,
+          "title": "Enter Commercial Lease Terms",
+          "description": "Confirm pro-rata shares, expense stops, base years, caps, and gross-up settings that AppFolio does not model deeply enough for complex NNN leases.",
+          "timeEstimate": "15 minutes"
+        },
+        {
+          "step": 4,
+          "title": "Use Results Back in Your Workflow",
+          "description": "Review leakage and overbilling, export packets, and use the verified numbers for tenant billing or internal review.",
+          "timeEstimate": "10 minutes"
+        }
+      ],
+      "totalTime": "35 minutes",
+      "whatChanges": [
+        "CAM math moves from workarounds to CapVeri",
+        "Gross-up and caps become deterministic",
+        "Tenant backup becomes exportable",
+        "Portfolio exception review becomes available"
+      ],
+      "whatStays": [
+        "AppFolio remains your PM platform",
+        "Tenant communication workflows can stay in AppFolio",
+        "No ERP migration",
+        "No API integration"
+      ],
+      "faqs": [
+        {
+          "question": "Does CapVeri replace AppFolio?",
+          "answer": "No. CapVeri complements AppFolio by handling commercial CAM reconciliation and audit-ready verification."
+        },
+        {
+          "question": "Can CapVeri handle AppFolio exports?",
+          "answer": "Yes. Upload CSV or Excel exports from AppFolio. CapVeri maps the expense and billing fields needed for reconciliation."
+        },
+        {
+          "question": "Why not move from AppFolio to Yardi or MRI?",
+          "answer": "A full ERP migration can make sense for broader operational reasons. If the pain is CAM reconciliation depth, CapVeri is faster and less disruptive."
+        }
+      ],
+      "relatedResources": [
+        { "href": "/integrations/appfolio", "title": "CapVeri + AppFolio" },
+        { "href": "/vs/appfolio", "title": "CapVeri vs AppFolio" },
+        { "href": "/alternatives/appfolio", "title": "AppFolio Alternatives for CAM" }
+      ],
+      "ctaHeading": "Keep AppFolio. Add Commercial CAM Proof.",
+      "ctaDescription": "Upload AppFolio exports and verify CAM with deterministic gross-up, cap enforcement, and tenant-ready audit backup."
+    }
+  ]
+}

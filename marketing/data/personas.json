@@ -1,0 +1,767 @@
+{
+  "lastUpdated": "2026-06-01",
+  "personas": [
+    {
+      "slug": "property-controller",
+      "name": "CapVeri for Property Controllers",
+      "role": "Property Controller",
+      "metaTitle": "CAM Reconciliation Software for Property Controllers",
+      "metaDescription": "You run the CAM math and get blamed when it's wrong. CapVeri rechecks every building's gross-up, caps, and GL coding before statements go out. Start free.",
+      "headline": "Catch CAM Errors Before You Send Them",
+      "subheadline": "You do the reconciliation. You catch the heat when a tenant finds an error. CapVeri checks your work first. Statements go out clean.",
+      "datePublished": "2026-06-01",
+      "dateModified": "2026-06-01",
+      "problem": {
+        "heading": "Q1 Is You, A Spreadsheet, and 30 Buildings",
+        "paragraphs": [
+          "Every January you pull the year-end GL from Yardi or MRI and start the grind. Load it into Excel. Match each tenant's estimates to actuals. Apply gross-up. Check the caps. Build the statement. Then do it again for the next building, and the next. A 30-building portfolio can eat six to ten weeks of your time.",
+          "The problem is not just the hours. It's that one wrong number sticks to you. A gross-up applied to fixed costs. A cap that reset wrong after a renewal. A GL account nobody mapped. You won't see it. The tenant's auditor will, two years later, and it lands back on your desk."
+        ]
+      },
+      "solution": {
+        "heading": "A Second Set of Eyes on Every Building",
+        "paragraphs": [
+          "Upload your ERP export. CapVeri rebuilds every tenant's reconciliation from scratch, on its own, without trusting your ERP's setup. Then it shows you every gap and names the exact lease clause it breaks.",
+          "You stop building statements from a blank sheet. You review what CapVeri already checked, fix what it flags, and send with proof behind every line. The errors get caught now, in your office, not later in a tenant audit."
+        ]
+      },
+      "features": [
+        {
+          "icon": "Calculator",
+          "title": "Independent Recalculation",
+          "description": "CapVeri redoes gross-up, caps, admin fees, and tenant shares on its own. It never just trusts what Yardi or MRI hands you."
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Clause-Level Flags",
+          "description": "Every gap comes with the lease clause it breaks and the dollar amount it costs. No guessing why a number looks off."
+        },
+        {
+          "icon": "Search",
+          "title": "GL Coding Checks",
+          "description": "Spots accounts added mid-year that never got mapped and CapEx that slipped into the operating pool."
+        },
+        {
+          "icon": "Clock",
+          "title": "Review, Don't Rebuild",
+          "description": "Shift from weeks of hand-built math to days of review and approval per portfolio."
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Recalculated",
+          "label": "Every charge redone from source, not trusted"
+        },
+        {
+          "value": "Review",
+          "label": "Approve results instead of rebuilding each one"
+        },
+        {
+          "value": "Pre-send",
+          "label": "Errors caught before statements go out"
+        }
+      ],
+      "howItWorks": [
+        {
+          "step": 1,
+          "title": "Export Your GL",
+          "description": "Pull the year-end GL from Yardi, MRI, or any system that writes a CSV. No special report needed."
+        },
+        {
+          "step": 2,
+          "title": "Upload to CapVeri",
+          "description": "Drop the file in. CapVeri reads the format and maps your expense codes to standard CAM pools."
+        },
+        {
+          "step": 3,
+          "title": "Review the Flags",
+          "description": "See every error with its lease clause and dollar impact. Approve or fix each one."
+        },
+        {
+          "step": 4,
+          "title": "Send With Proof",
+          "description": "Export tenant statements where every figure traces back to a GL line."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Do I have to replace Yardi or MRI?",
+          "answer": "No. CapVeri sits next to your ERP. You keep running Yardi or MRI and just export the GL to CapVeri to check the math. No migration, no IT project."
+        },
+        {
+          "question": "How does it catch gross-up errors?",
+          "answer": "CapVeri recalculates gross-up from your lease terms, not your ERP's settings. If a fixed cost was grossed up, or the wrong occupancy threshold was used, it flags the line and shows the gap."
+        },
+        {
+          "question": "What if my buildings have different lease terms?",
+          "answer": "You set each tenant's terms once: cap type, gross-up threshold, exclusions. CapVeri applies them per tenant on every cycle."
+        },
+        {
+          "question": "Can I do a whole portfolio at once?",
+          "answer": "Yes. Upload exports for every building. CapVeri runs them together and lets you review each one on its own."
+        }
+      ],
+      "relatedPersonas": [
+        {
+          "slug": "property-accountant",
+          "title": "CapVeri for Property Accountants"
+        },
+        {
+          "slug": "director-property-management",
+          "title": "CapVeri for Directors of Property Management"
+        }
+      ],
+      "relatedResources": [
+        {
+          "href": "/resources/roles/property-controller/cam-guide",
+          "title": "Property Controller CAM Guide"
+        },
+        {
+          "href": "/solutions/year-end-cam-reconciliation",
+          "title": "Automate Year-End CAM Reconciliation"
+        },
+        {
+          "href": "/resources/cam-gross-up-calculation-guide",
+          "title": "CAM Gross-Up Calculation Guide"
+        }
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator",
+        "/tools/pro-rata-calculator",
+        "/tools/cam-billing-error-estimator"
+      ],
+      "ctaHeading": "See Your Next Reconciliation Before It Ships",
+      "ctaDescription": "Upload one building's GL export and watch CapVeri check the math. Start a 30-day trial with no card needed."
+    },
+    {
+      "slug": "cfo-financial-controller",
+      "name": "CapVeri for CFOs and Financial Controllers",
+      "role": "CFO / Financial Controller",
+      "metaTitle": "CAM Reconciliation ROI for CFOs and Financial Controllers",
+      "metaDescription": "CAM errors quietly add up year after year. CapVeri shows your leakage and audit risk before a tenant auditor does. Model your building with the ROI calculator. Start free.",
+      "headline": "CAM Reconciliation a CFO Can See",
+      "subheadline": "The money leaks where you can't watch it. CapVeri turns CAM accuracy into a number on your desk. No more surprises in a tenant audit.",
+      "datePublished": "2026-06-01",
+      "dateModified": "2026-06-01",
+      "problem": {
+        "heading": "You Can't Manage What You Can't Measure",
+        "paragraphs": [
+          "CAM reconciliation lives two levels below you. Your controllers run it. You see totals against budget. You only get pulled in when a tenant disputes or files an audit request. By then the error is already public.",
+          "That blind spot has a price. Gross-up mistakes, missed expense categories, and bad cap math quietly shrink recovery. In California, missing a 30-day SB 1103 response can trigger treble damages. None of it shows up in a summary report until someone outside your company finds it first."
+        ]
+      },
+      "solution": {
+        "heading": "Leakage and Risk, in Plain Numbers",
+        "paragraphs": [
+          "CapVeri gives you a portfolio view of CAM recovery gaps, audit exposure, and reconciliation accuracy. You don't need to know how Yardi or MRI is configured. You see where money is leaking and which buildings carry risk.",
+          "Run it before your Q1 cycle to set a baseline. The {{pricing.trialCopy}} needs no credit card. You walk into reconciliation season knowing your number instead of hoping for one."
+        ]
+      },
+      "features": [
+        {
+          "icon": "TrendingUp",
+          "title": "Portfolio Leakage View",
+          "description": "See recovery gaps across every building at once, not one controller's spreadsheet at a time."
+        },
+        {
+          "icon": "Shield",
+          "title": "Audit Exposure Score",
+          "description": "Know which buildings a tenant auditor would target before they hire one on contingency."
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "Independent Verification",
+          "description": "Stop trusting your ERP to report its own errors. CapVeri checks the math from the outside."
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Compliance Flags",
+          "description": "Catch SB 1103 deadlines and CapEx flowing through operating pools before they become liability."
+        }
+      ],
+      "metrics": [
+        {
+          "value": "$5.9K-$35.3K",
+          "label": "Modeled recovery range per building"
+        },
+        { "value": "~$17.7K", "label": "Mid-case recovery per building" },
+        { "value": "30 days", "label": "Free trial, no credit card" }
+      ],
+      "howItWorks": [
+        {
+          "step": 1,
+          "title": "Upload a Portfolio Export",
+          "description": "Send GL exports for the buildings you want to baseline. No ERP config or IT work."
+        },
+        {
+          "step": 2,
+          "title": "Model the Opportunity",
+          "description": "CapVeri helps size recovery-gap scenarios and rank buildings by audit risk."
+        },
+        {
+          "step": 3,
+          "title": "See the Liability",
+          "description": "Review compliance flags like SB 1103 timing and CapEx in operating pools."
+        },
+        {
+          "step": 4,
+          "title": "Set the Trial Plan",
+          "description": "Walk into Q1 with a clearer workflow and a plan to test the highest-risk buildings first."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Do I need to understand our ERP setup to use this?",
+          "answer": "No. That's the point. CapVeri gives you a finance-level view of recovery gaps and risk without you touching Yardi or MRI configuration."
+        },
+        {
+          "question": "How is the recovery range calculated?",
+          "answer": "CapVeri models a range of $5,900 to $35,300 per building based on CAM pool size and lease complexity. It is an estimate to size the opportunity, not a promise of recovery."
+        },
+        {
+          "question": "What is the SB 1103 risk you mention?",
+          "answer": "California's SB 1103 gives qualified commercial tenants rights including timely responses. Missing a 30-day window can expose a landlord to treble damages. CapVeri flags the timing so it stays on your radar."
+        },
+        {
+          "question": "Can I try it before committing budget?",
+          "answer": "Yes. The {{pricing.trialLabel}} needs no credit card. Start with one workflow before your reconciliation cycle and compare the output to your current process."
+        }
+      ],
+      "relatedPersonas": [
+        { "slug": "asset-manager", "title": "CapVeri for Asset Managers" },
+        {
+          "slug": "director-property-management",
+          "title": "CapVeri for Directors of Property Management"
+        }
+      ],
+      "relatedResources": [
+        {
+          "href": "/resources/roles/cfo-financial-controller/cam-guide",
+          "title": "CFO CAM Reconciliation Guide"
+        },
+        { "href": "/roi", "title": "CAM Recovery ROI Calculator" },
+        {
+          "href": "/resources/sb-1103-compliance",
+          "title": "SB 1103 Compliance Guide"
+        }
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/noi-impact-calculator",
+        "/tools/audit-risk-scorecard",
+        "/tools/audit-risk-quiz"
+      ],
+      "ctaHeading": "Check Your CAM Workflow Before Q1",
+      "ctaDescription": "Start a 30-day trial, test one workflow, and use the ROI calculator to model recovery-gap scenarios. No credit card."
+    },
+    {
+      "slug": "lease-administrator",
+      "name": "CapVeri for Lease Administrators",
+      "role": "Lease Administrator",
+      "metaTitle": "CAM Reconciliation Software for Lease Administrators",
+      "metaDescription": "Track CAM exclusions, caps, and audit rights across hundreds of leases. CapVeri checks that every reconciliation matches the actual lease terms. Start free.",
+      "headline": "CAM Math That Matches the Lease",
+      "subheadline": "Every reconciliation lives or dies on the lease details. CapVeri checks that the math matches each tenant's lease. It works across your whole portfolio.",
+      "datePublished": "2026-06-01",
+      "dateModified": "2026-06-01",
+      "problem": {
+        "heading": "Two Hundred Leases, All a Little Different",
+        "paragraphs": [
+          "You hold the lease abstracts. Each one has its own exclusions, cap type, gross-up threshold, and audit rights. During reconciliation season you check, by hand, that the ERP settings still match every tenant's terms. With 50 to 200 leases, that's slow and easy to miss.",
+          "And the terms keep moving. An amendment changes an exclusion list. A renewal resets a base year. A management fee cap hides in a rider that never made it into the ERP. When the setting and the lease drift apart, the tenant gets billed wrong, and the record points back to you."
+        ]
+      },
+      "solution": {
+        "heading": "Map the Clause, Check the Math",
+        "paragraphs": [
+          "CapVeri's lease layer lets you map each tenant's CAM terms in one place. Then it checks that the reconciliation output actually follows those terms, tenant by tenant.",
+          "When the math doesn't match the lease, CapVeri flags it with the exact clause and the dollar impact. You stop comparing ERP output to lease PDFs line by line, and you catch drifted terms before a tenant does."
+        ]
+      },
+      "features": [
+        {
+          "icon": "FileText",
+          "title": "Lease Term Mapping",
+          "description": "Hold each tenant's exclusions, cap type, gross-up threshold, and audit rights in one structured place."
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Drift Detection",
+          "description": "CapVeri flags when ERP settings no longer match the lease after an amendment or renewal."
+        },
+        {
+          "icon": "Search",
+          "title": "Exclusion Checks",
+          "description": "Catches capital costs slipping into CAM pools when an exclusion list never got updated."
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "Base Year Tracking",
+          "description": "Confirms base year amounts reset correctly after renewals, so tenants bill on the right baseline."
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Auto-checked",
+          "label": "ERP settings matched to each lease term"
+        },
+        { "value": "50-200", "label": "Leases tracked per portfolio" },
+        { "value": "Per clause", "label": "Every flag tied to a lease term" }
+      ],
+      "howItWorks": [
+        {
+          "step": 1,
+          "title": "Map Your Lease Terms",
+          "description": "Enter each tenant's CAM clauses once: exclusions, caps, thresholds, audit rights."
+        },
+        {
+          "step": 2,
+          "title": "Upload the Reconciliation",
+          "description": "Send the GL export. CapVeri runs the numbers against the terms you mapped."
+        },
+        {
+          "step": 3,
+          "title": "Review the Mismatches",
+          "description": "See every line where the math doesn't follow the lease, with the clause and dollar impact."
+        },
+        {
+          "step": 4,
+          "title": "Fix Before You Send",
+          "description": "Correct the drift now, while it's still internal."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Does CapVeri read my lease PDFs?",
+          "answer": "CapVeri gives you a structured place to capture each tenant's CAM terms and checks the reconciliation against them. You stay in control of what the terms are; CapVeri checks that the math follows them."
+        },
+        {
+          "question": "What happens when a lease is amended?",
+          "answer": "Update the term once in CapVeri. From then on, every reconciliation checks against the new exclusion list, cap, or threshold, so drift gets caught."
+        },
+        {
+          "question": "Can it handle different gross-up thresholds per tenant?",
+          "answer": "Yes. CapVeri applies each tenant's own threshold instead of forcing one pool-level setting across everyone."
+        },
+        {
+          "question": "How does it help with audit rights?",
+          "answer": "You track each tenant's audit-rights terms in one place, so request windows and record duties don't slip through during a busy season."
+        }
+      ],
+      "relatedPersonas": [
+        {
+          "slug": "property-controller",
+          "title": "CapVeri for Property Controllers"
+        },
+        {
+          "slug": "property-accountant",
+          "title": "CapVeri for Property Accountants"
+        }
+      ],
+      "relatedResources": [
+        {
+          "href": "/resources/roles/lease-administrator/cam-guide",
+          "title": "Lease Administrator CAM Guide"
+        },
+        {
+          "href": "/resources/cam-expense-caps",
+          "title": "CAM Expense Caps Explained"
+        },
+        {
+          "href": "/resources/base-year-cam-lease",
+          "title": "Base Year CAM Leases Guide"
+        }
+      ],
+      "relatedTools": [
+        "/tools/lease-abstract-matrix",
+        "/tools/base-year-escalation",
+        "/tools/cam-cap-calculator",
+        "/tools/sb-1103-checker"
+      ],
+      "ctaHeading": "Stop Checking Leases Against Spreadsheets by Hand",
+      "ctaDescription": "Map one tenant's terms and let CapVeri check the reconciliation against the lease. Free to try, no card needed."
+    },
+    {
+      "slug": "property-accountant",
+      "name": "CapVeri for Property Accountants",
+      "role": "Property Accountant",
+      "metaTitle": "CAM Reconciliation Software for Property Accountants",
+      "metaDescription": "GL coding errors compound every year. CapVeri flags miscoded entries, CapEx in operating pools, and bad recovery mapping before year-end close. Start free.",
+      "headline": "Catch GL Coding Errors Before Close",
+      "subheadline": "A miscoded entry doesn't stay small. It rolls into CAM pools and grows. CapVeri flags it before year-end close. Not two years later in a tenant audit.",
+      "datePublished": "2026-06-01",
+      "dateModified": "2026-06-01",
+      "problem": {
+        "heading": "One Wrong Code, Billed for Years",
+        "paragraphs": [
+          "Property staff code invoices all year. Some land in the wrong account. A repair booked as a capital improvement. A management fee posted where it doesn't belong. Those codes flow straight into CAM pools, and the error rides along into every tenant's bill.",
+          "At close you're chasing variances by hand. You trace why a recovery pool doesn't match the GL, post journal entries to fix it, then reconcile those fixes back through CAM. New vendor categories that never got mapped make it worse. It's slow, and the misses surface later when a tenant's auditor finds them."
+        ]
+      },
+      "solution": {
+        "heading": "Flag the Bad Codes, Not Hunt Them",
+        "paragraphs": [
+          "CapVeri's GL analysis flags suspicious coding: odd accounts, amounts that break from history, and capital costs that may have slipped into operating pools. These are advisory flags, so your team makes the final call.",
+          "Instead of tracing every variance by hand at close, you review a short list of flagged lines. The compounding errors get caught at the source, before they ride into another year of tenant bills."
+        ]
+      },
+      "features": [
+        {
+          "icon": "Search",
+          "title": "Coding Anomaly Flags",
+          "description": "Spots unusual accounts and amounts that don't match historical patterns for the property."
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "CapEx Detection",
+          "description": "Flags capital costs that may have slipped into operating expense pools where they don't belong."
+        },
+        {
+          "icon": "FileText",
+          "title": "Recovery Pool Mapping",
+          "description": "Checks that GL balances flow correctly into recovery pools, including new mid-year vendor categories."
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "Advisory, Not Automatic",
+          "description": "CapVeri flags and explains. Your team decides what's right. The math stays in your hands."
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Auto-flagged",
+          "label": "Unusual GL items surfaced for you"
+        },
+        { "value": "At source", "label": "Errors caught before they compound" },
+        { "value": "Per line", "label": "Each flag tied to a GL entry" }
+      ],
+      "howItWorks": [
+        {
+          "step": 1,
+          "title": "Export the GL",
+          "description": "Pull your expense detail with account codes, amounts, and dates from any system."
+        },
+        {
+          "step": 2,
+          "title": "Upload to CapVeri",
+          "description": "CapVeri maps codes to recovery pools and scans for coding anomalies."
+        },
+        {
+          "step": 3,
+          "title": "Review the Flags",
+          "description": "Work a short list of suspicious lines instead of tracing every variance by hand."
+        },
+        {
+          "step": 4,
+          "title": "Close With Confidence",
+          "description": "Fix codes at the source so they don't roll into next year's CAM pools."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Does CapVeri change my GL?",
+          "answer": "No. CapVeri reads your export and flags suspicious lines. Your team posts any corrections in your own system. The flags are advisory."
+        },
+        {
+          "question": "How does it know a code looks wrong?",
+          "answer": "CapVeri compares entries against historical patterns for the property and against recovery-pool logic. Accounts and amounts that break the pattern get flagged for review."
+        },
+        {
+          "question": "Can it catch CapEx in operating pools?",
+          "answer": "Yes. Capital costs that appear to have slipped into operating expense pools are flagged, since those generally aren't recoverable through CAM."
+        },
+        {
+          "question": "What about vendor categories added mid-year?",
+          "answer": "CapVeri checks that new accounts map to a recovery pool. Unmapped categories that would otherwise be missed get surfaced."
+        }
+      ],
+      "relatedPersonas": [
+        {
+          "slug": "property-controller",
+          "title": "CapVeri for Property Controllers"
+        },
+        {
+          "slug": "lease-administrator",
+          "title": "CapVeri for Lease Administrators"
+        }
+      ],
+      "relatedResources": [
+        {
+          "href": "/resources/roles/property-accountant/cam-guide",
+          "title": "Property Accountant CAM Guide"
+        },
+        {
+          "href": "/resources/gl-analysis-explained",
+          "title": "How GL Analysis Works"
+        },
+        {
+          "href": "/resources/what-is-included-in-cam-expenses",
+          "title": "What's Included in CAM Expenses"
+        }
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/reconciliation-statement-generator",
+        "/tools/recovery-gap-analyzer",
+        "/tools/admin-fee-calculator"
+      ],
+      "ctaHeading": "Catch Coding Errors Before Year-End Close",
+      "ctaDescription": "Start a 30-day trial with no card and test one GL export in CapVeri."
+    },
+    {
+      "slug": "asset-manager",
+      "name": "CapVeri for Asset Managers",
+      "role": "Asset Manager",
+      "metaTitle": "CAM Reconciliation for Asset Managers - NOI & Portfolio Risk",
+      "metaDescription": "CAM leakage is an NOI problem you can't see until you measure it. CapVeri shows building-level recovery gaps and audit risk across your portfolio. Start free.",
+      "headline": "See the CAM Leakage Hurting Your NOI",
+      "subheadline": "You manage NOI. But CAM recovery hides inside property reports. CapVeri shows the leakage in every building. See it before you buy, sell, or report.",
+      "datePublished": "2026-06-01",
+      "dateModified": "2026-06-01",
+      "problem": {
+        "heading": "Recovery Gaps Don't Show Up in a Summary",
+        "paragraphs": [
+          "You see CAM as one line in each property's financials. You don't get a portfolio view of recovery ratios, and you can't tell why two similar buildings recover at different rates. The detail sits with each controller.",
+          "That gap costs real NOI. At acquisition you inherit billing errors you never priced in. At disposition, tenant disputes surface as post-closing claims. Cumulative caps you didn't model carry forward and quietly cut future recovery. None of it is visible until someone measures it."
+        ]
+      },
+      "solution": {
+        "heading": "Building-Level Recovery, Portfolio-Wide",
+        "paragraphs": [
+          "CapVeri gives you recovery gap analysis, cap-structure modeling, and leakage estimates across every building you own. You finally see the spread between comparable assets and the reason behind it.",
+          "Run a full portfolio check before an acquisition or disposition to put a number on CAM risk. It's NOI uplift from assets you already hold, with no new square footage required."
+        ]
+      },
+      "features": [
+        {
+          "icon": "BarChart3",
+          "title": "Portfolio Recovery View",
+          "description": "Compare recovery ratios across every building and see which assets lag and why."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Leakage Estimates",
+          "description": "Put a dollar figure on undetected CAM leakage, building by building."
+        },
+        {
+          "icon": "Calculator",
+          "title": "Cap-Structure Modeling",
+          "description": "Model cumulative versus non-cumulative caps and what carry-forward means for 5-year NOI."
+        },
+        {
+          "icon": "Shield",
+          "title": "Diligence-Ready Risk",
+          "description": "Quantify CAM exposure before acquisition or disposition instead of inheriting it blind."
+        }
+      ],
+      "metrics": [
+        {
+          "value": "$5.9K-$35.3K",
+          "label": "Modeled leakage range per building at diligence"
+        },
+        { "value": "Portfolio", "label": "One view across every asset" },
+        { "value": "5-year", "label": "Cap carry-forward modeled into NOI" }
+      ],
+      "howItWorks": [
+        {
+          "step": 1,
+          "title": "Upload Portfolio Exports",
+          "description": "Send GL exports for the assets you want to measure. No ERP integration."
+        },
+        {
+          "step": 2,
+          "title": "See the Recovery Spread",
+          "description": "CapVeri benchmarks recovery ratios and flags the buildings that lag."
+        },
+        {
+          "step": 3,
+          "title": "Model the Caps",
+          "description": "Review cumulative cap carry-forward and its effect on multi-year NOI."
+        },
+        {
+          "step": 4,
+          "title": "Price the Risk",
+          "description": "Walk into diligence with CAM exposure quantified, not assumed."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How does CapVeri help at acquisition?",
+          "answer": "Run target buildings through CapVeri to find inherited CAM billing errors and recovery gaps before you close. Use the ROI calculator to model the potential leakage per building for your own deal."
+        },
+        {
+          "question": "Can it benchmark recovery across my portfolio?",
+          "answer": "Yes. CapVeri shows recovery ratios building by building so you can spot lagging assets. Office and retail norms differ, so comparisons stay within the right peer set."
+        },
+        {
+          "question": "Why does cap structure matter for NOI?",
+          "answer": "Cumulative caps carry unused room forward, which changes future recovery. If you don't model that carry-forward, you underestimate NOI on assets that have it."
+        },
+        {
+          "question": "Do I need my controllers involved to run this?",
+          "answer": "No. CapVeri works from GL exports, so you can run a portfolio-level view without pulling each controller into the process."
+        }
+      ],
+      "relatedPersonas": [
+        {
+          "slug": "cfo-financial-controller",
+          "title": "CapVeri for CFOs and Financial Controllers"
+        },
+        {
+          "slug": "director-property-management",
+          "title": "CapVeri for Directors of Property Management"
+        }
+      ],
+      "relatedResources": [
+        {
+          "href": "/resources/roles/asset-manager/cam-guide",
+          "title": "Asset Manager CAM Guide"
+        },
+        {
+          "href": "/resources/cam-leakage-guide",
+          "title": "CAM Leakage Guide"
+        },
+        {
+          "href": "/resources/what-is-cre-finops",
+          "title": "What Is CRE FinOps"
+        }
+      ],
+      "relatedTools": [
+        "/tools/noi-impact-calculator",
+        "/tools/cam-billing-error-estimator",
+        "/tools/audit-risk-scorecard",
+        "/tools/cam-cap-calculator"
+      ],
+      "ctaHeading": "Put a Number on CAM Risk Before You Close",
+      "ctaDescription": "Start a 30-day trial with no card and model building-level leakage and cap exposure."
+    },
+    {
+      "slug": "director-property-management",
+      "name": "CapVeri for Directors of Property Management",
+      "role": "Director of Property Management",
+      "metaTitle": "CAM Reconciliation Software for Property Management Directors",
+      "metaDescription": "Standardize CAM reconciliation across your team. CapVeri cuts Q1 crunch, catches errors before disputes, and scales without new headcount. Start free.",
+      "headline": "One CAM Process for Your Whole Team",
+      "subheadline": "Every controller has their own method and their own error rate. CapVeri gives your team one process. And it gives you one view of every building.",
+      "datePublished": "2026-06-01",
+      "dateModified": "2026-06-01",
+      "problem": {
+        "heading": "Q1 Is All Hands, Every Year",
+        "paragraphs": [
+          "Reconciliation season hits your whole team at once. Controllers, accountants, and property managers all underwater in the same weeks. Every controller does it their own way, so quality swings building to building, and statements go out without a real second review.",
+          "Meanwhile last year's disputes are still open, eating this year's capacity. New hires take two or three years to really learn CAM. And every building you add grows the workload in a straight line. You get no leverage and no economies of scale."
+        ]
+      },
+      "solution": {
+        "heading": "Standardize, Then Scale",
+        "paragraphs": [
+          "CapVeri puts every building on the same method. Same gross-up logic, same cap handling, same exclusion checks. Every statement gets verified against lease terms before it goes out, no matter who built it.",
+          "You get one dashboard: reconciliation status, errors found, statements ready for review. Your controllers shift from building from scratch to reviewing and approving, so the team takes on more buildings without more headcount."
+        ]
+      },
+      "features": [
+        {
+          "icon": "CheckCircle",
+          "title": "One Standard Method",
+          "description": "Every building follows the same gross-up, cap, and exclusion logic, no matter who runs it."
+        },
+        {
+          "icon": "Shield",
+          "title": "Verified Before Send",
+          "description": "Each statement is checked against lease terms before it reaches a tenant."
+        },
+        {
+          "icon": "BarChart3",
+          "title": "One Dashboard",
+          "description": "See reconciliation status, errors found, and statements ready for review across the portfolio."
+        },
+        {
+          "icon": "Zap",
+          "title": "Scale Without Hiring",
+          "description": "Controllers review instead of rebuild, so the team absorbs more buildings without new headcount."
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Verified",
+          "label": "Each statement checked against lease terms first"
+        },
+        { "value": "One method", "label": "Same process on every building" },
+        { "value": "Review", "label": "Team approves instead of rebuilds" }
+      ],
+      "howItWorks": [
+        {
+          "step": 1,
+          "title": "Set the Standard",
+          "description": "Configure your team's CAM method once in CapVeri: gross-up, caps, exclusions."
+        },
+        {
+          "step": 2,
+          "title": "Run Every Building Through It",
+          "description": "Controllers upload exports. CapVeri applies the same logic to all of them."
+        },
+        {
+          "step": 3,
+          "title": "Track From One View",
+          "description": "Watch status, errors, and ready statements across the whole portfolio."
+        },
+        {
+          "step": 4,
+          "title": "Review and Approve",
+          "description": "Your team checks flagged items and signs off, instead of building from a blank sheet."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How does this standardize my team's work?",
+          "answer": "You set the CAM method once. Every controller's buildings run through the same gross-up, cap, and exclusion logic, so output quality stops depending on who did the work."
+        },
+        {
+          "question": "Will it help with our dispute backlog?",
+          "answer": "By catching errors before statements go out, CapVeri reduces the new disputes that pile onto old ones, so your team stops losing this year's capacity to last year's mistakes."
+        },
+        {
+          "question": "Does adding buildings still grow the workload?",
+          "answer": "Less than it used to. Because controllers review instead of rebuild, your team can take on more buildings without adding headcount."
+        },
+        {
+          "question": "How fast can new team members contribute?",
+          "answer": "A standard, guided process shortens the ramp. New hires work inside the same checked method instead of inheriting a senior controller's private spreadsheet."
+        }
+      ],
+      "relatedPersonas": [
+        {
+          "slug": "property-controller",
+          "title": "CapVeri for Property Controllers"
+        },
+        {
+          "slug": "cfo-financial-controller",
+          "title": "CapVeri for CFOs and Financial Controllers"
+        }
+      ],
+      "relatedResources": [
+        {
+          "href": "/resources/roles/director-property-management/cam-guide",
+          "title": "Director of Property Management CAM Guide"
+        },
+        {
+          "href": "/resources/cam-pre-send-packet-checklist",
+          "title": "CAM Pre-Send Checklist"
+        },
+        {
+          "href": "/resources/tenant-cam-audit-landlord-side",
+          "title": "Tenant Auditor Guide"
+        }
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-scorecard",
+        "/tools/cam-billing-error-estimator",
+        "/tools/reconciliation-statement-generator",
+        "/tools/audit-risk-quiz"
+      ],
+      "ctaHeading": "Give Your Team One CAM Process",
+      "ctaDescription": "Standardize one building in CapVeri and see how review replaces rebuild. Free to start, no card needed."
+    }
+  ]
+}

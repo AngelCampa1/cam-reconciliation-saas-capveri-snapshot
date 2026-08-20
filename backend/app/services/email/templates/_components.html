@@ -1,0 +1,93 @@
+{# Email component macros.
+   Import with context so macros inherit the t token object automatically.
+   Usage: {% from "_components.html" import button, data_card_row, callout_box with context %}
+#}
+
+{% macro button(url, label) %}
+<p style="margin: 0 0 {{ t.SPACE_LG }};">
+  <a href="{{ url }}" style="
+    background-color: {{ t.PRIMARY }};
+    border-radius: {{ t.RADIUS_BUTTON }};
+    color: {{ t.TEXT_INVERSE }};
+    display: inline-block;
+    font-family: {{ t.FONT_FAMILY }};
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    padding: {{ t.SPACE_MD }} {{ t.SPACE_XL }};
+    text-decoration: none;">{{ label }}</a>
+</p>
+{% endmacro %}
+
+{% macro data_card_row(label, value, last=False) %}
+<tr>
+  <td style="
+    padding: {{ t.SPACE_MD }};
+    {% if not last %}border-bottom: 1px solid {{ t.BORDER }};{% endif %}">
+    <p style="color: {{ t.TEXT_SECONDARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; margin: 0 0 4px; text-transform: uppercase;">{{ label }}</p>
+    <p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; font-weight: 600; margin: 0;">{{ value }}</p>
+  </td>
+</tr>
+{% endmacro %}
+
+{% macro video_card(thumbnail_url, watch_url, title, caption) %}
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="
+  border: 1px solid {{ t.BORDER }};
+  border-radius: {{ t.RADIUS_MD }};
+  margin-bottom: {{ t.SPACE_LG }};
+  overflow: hidden;">
+  <tr>
+    <td style="padding: 0;">
+      <a href="{{ watch_url }}" style="display: block; text-decoration: none;">
+        <img src="{{ thumbnail_url }}" alt="{{ title }}" width="560" style="
+          border: 0;
+          display: block;
+          max-width: 100%;
+          width: 100%;">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: {{ t.SPACE_MD }};">
+      <p style="
+        color: {{ t.TEXT_PRIMARY }};
+        font-family: {{ t.FONT_FAMILY }};
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.4;
+        margin: 0 0 4px;">{{ title }}</p>
+      <p style="
+        color: {{ t.TEXT_SECONDARY }};
+        font-family: {{ t.FONT_FAMILY }};
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 0 0 {{ t.SPACE_MD }};">{{ caption }}</p>
+      <a href="{{ watch_url }}" style="
+        background-color: {{ t.PRIMARY }};
+        border-radius: {{ t.RADIUS_BUTTON }};
+        color: {{ t.TEXT_INVERSE }};
+        display: inline-block;
+        font-family: {{ t.FONT_FAMILY }};
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1;
+        padding: 10px {{ t.SPACE_LG }};
+        text-decoration: none;">Watch now</a>
+    </td>
+  </tr>
+</table>
+{% endmacro %}
+
+{% macro callout_box(bg_color=None, border_color=None) %}
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="
+  background-color: {{ bg_color or t.SURFACE }};
+  border: 2px solid {{ border_color or t.BORDER }};
+  border-radius: {{ t.RADIUS_MD }};
+  margin-bottom: {{ t.SPACE_LG }};">
+  <tr>
+    <td style="padding: {{ t.SPACE_MD }} {{ t.SPACE_LG }};">
+      {{ caller() }}
+    </td>
+  </tr>
+</table>
+{% endmacro %}

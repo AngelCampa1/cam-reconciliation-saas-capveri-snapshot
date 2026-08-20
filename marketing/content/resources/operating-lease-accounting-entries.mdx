@@ -1,0 +1,368 @@
+---
+title: "Operating Lease Accounting Entries: ASC 842 Journal Entry Templates"
+description: "Complete operating lease journal entry templates under ASC 842: commencement, monthly payments, CAM true-ups, modifications, and terminations with worked examples."
+datePublished: "2026-04-24"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 275
+faq:
+  - q: "What are the journal entries for an operating lease at commencement under ASC 842?"
+    a: "At lease commencement, you recognize a right-of-use asset equal to the initial lease liability, adjusted for initial direct costs, lease incentives received, and prepaid lease payments. The opening entry debits Right-of-Use Asset and credits Lease Liability for the present value of future payments. If there were lease incentives (e.g., a tenant improvement allowance already received), that reduces the ROU asset. If you paid a security deposit or initial direct costs, those get added. The discount rate is the rate implicit in the lease or, if not determinable, your incremental borrowing rate."
+  - q: "How do you record the monthly operating lease payment under ASC 842?"
+    a: "For an operating lease, you want a single straight-line lease cost each period. The cash payment splits between reducing the lease liability (the principal portion) and the interest accrual. The ROU asset amortizes by the difference between the straight-line lease cost and the interest portion. This is the plug that makes the income statement flat even when payments escalate. In practice, most systems record three entries each period: (1) the interest accrual on the liability, (2) the reduction of the ROU asset, and (3) the cash payment application to the liability principal."
+  - q: "How are CAM true-up payments recorded under ASC 842?"
+    a: "CAM charges on operating leases are typically variable lease payments. They depend on actual property operating costs, not fixed terms. Variable payments are excluded from the ROU asset and lease liability. They are expensed in the period incurred. Monthly CAM estimates go directly to lease cost or CAM expense. The year-end true-up (whether an additional charge or a credit) also hits the income statement in the period the reconciliation is finalized. Do not adjust the ROU asset or lease liability for variable true-ups. If the true-up is material and relates to a prior period, accrue an estimate at year-end and reverse when the final statement arrives."
+  - q: "What journal entry records a lease modification under ASC 842?"
+    a: "When a lease is modified (e.g., extending the term or adding square footage), you reassess whether the modification is a separate contract. If it grants an additional right not in the original lease and the price matches the standalone price, it is a new contract treated independently. If it is not a separate contract, you remeasure the lease liability at the modified terms using a revised discount rate, then adjust the ROU asset by the same amount. The entry is DR/CR ROU Asset and CR/DR Lease Liability for the difference, with no P&L impact at the modification date."
+  - q: "How do you record operating lease termination before the end of the term?"
+    a: "Early termination requires derecognizing both the ROU asset and lease liability. If you receive a termination fee or pay a penalty, that amount is the settlement. The gain or loss on termination is the difference between the carrying values of the ROU asset and lease liability plus any termination penalty paid. If the liability exceeds the ROU asset (common in the later years of a lease), you recognize a gain. If the ROU asset exceeds the liability (early in the lease), you may recognize a loss plus the termination penalty."
+---
+
+<Alert type="info" title="Quick Answer">
+Operating lease journal entries under ASC 842 follow a three-phase cycle: (1) commencement: recognize ROU asset and lease liability at present value; (2) monthly: post straight-line lease cost while unwinding the liability with interest accrual and amortizing the ROU asset as the plug; (3) variable events: expense CAM estimates and true-ups as incurred, with no ROU asset or liability adjustment. Templates for each phase are below.
+</Alert>
+
+## Operating Lease Accounting Entries Under ASC 842
+
+The mechanics of operating lease accounting entries catch accountants off guard because the income statement simplicity (one flat cost line) requires balance sheet complexity (an ROU asset that amortizes on an accelerating curve). These templates cover the full lifecycle.
+
+For the classification question (when you have an operating lease versus a finance lease), see [operating lease vs finance lease](/resources/operating-lease-vs-finance-lease).
+
+---
+
+## Phase 1: Lease Commencement Entries
+
+### Step 1: Calculate the Lease Liability
+
+The lease liability is the present value of all future lease payments, using the rate implicit in the lease or the incremental borrowing rate (IBR) if the implicit rate isn't readily determinable.
+
+**Example setup:**
+- Base rent: $15,000/month in Year 1, escalating 3% annually
+- Lease term: 60 months (5 years)
+- IBR: 6% per annum (0.5% per month)
+- Estimated CAM: $1,800/month (variable, excluded from PV calculation)
+- Lease incentive received (TIA): $25,000
+
+**Annual payment schedule:**
+
+| Year | Monthly Rent | Annual Total |
+|---|---|---|
+| 1 | $15,000 | $180,000 |
+| 2 | $15,450 | $185,400 |
+| 3 | $15,914 | $190,962 |
+| 4 | $16,391 | $196,691 |
+| 5 | $16,882 | $202,591 |
+
+PV of this payment stream at 6% IBR = **$846,223** (calculated using standard PV of uneven cash flows).
+
+### Step 2: Calculate the ROU Asset
+
+```
+ROU Asset = Lease Liability
+           + Initial Direct Costs (IDC)
+           + Prepaid Lease Payments
+           − Lease Incentives Received
+
+ROU Asset = $846,223 + $0 + $0 − $25,000 = $821,223
+```
+
+### Step 3: Commencement Journal Entry
+
+```
+DR  Right-of-Use Asset (Operating)    $821,223
+DR  Lease Incentive Receivable         $25,000   [if TIA not yet received]
+  CR  Lease Liability                              $846,223
+```
+
+If the TIA was already received as cash before commencement, a Deferred Lease Incentive liability was recorded at that time (DR Cash / CR Deferred Lease Incentive). At commencement, clear that deferred balance and net it against the ROU asset:
+
+```
+DR  Right-of-Use Asset (Operating)    $821,223   [net of $25,000 TIA]
+DR  Deferred Lease Incentive           $25,000   [clear the pre-commencement credit]
+  CR  Lease Liability                              $846,223
+
+[Debits: $821,223 + $25,000 = $846,223. Credits: $846,223. Balanced.]
+```
+
+---
+
+## Phase 2: Monthly Payment Entries
+
+### The Straight-Line Lease Cost Requirement
+
+ASC 842 requires operating leases to produce a single, straight-line lease cost each period. Since payments escalate (3% annually in our example), the system needs to do work behind the scenes to achieve that flat P&L line.
+
+**Total lease cost over the term:**
+$180,000 + $185,400 + $190,962 + $196,691 + $202,591 = **$955,644**
+
+**Monthly straight-line cost:**
+$955,644 / 60 months = **$15,944**
+
+### Month 1 Entries (Three-Entry Method)
+
+**Entry 1 - Interest accrual on lease liability:**
+```
+DR  Operating Lease Cost (interest component)   $4,231
+  CR  Lease Liability                                       $4,231
+
+[Lease liability balance at commencement: $846,223
+ Monthly interest: $846,223 × 0.5% = $4,231]
+```
+
+**Entry 2 - ROU asset amortization (plug for straight-line cost):**
+```
+DR  Operating Lease Cost (amortization component)   $11,713
+  CR  Right-of-Use Asset                                        $11,713
+
+[Amortization = Straight-line cost − Interest accrual
+ = $15,944 − $4,231 = $11,713]
+```
+
+**Entry 3 - Cash payment:**
+```
+DR  Lease Liability                 $15,000
+  CR  Cash                                      $15,000
+
+[Month 1 cash payment = $15,000 actual, not the straight-line amount]
+```
+
+**Net effect on lease liability after Month 1:**
+- Opening balance: $846,223
+- + Interest accrual: $4,231
+- − Cash payment: $15,000
+- = Closing balance: **$835,454**
+
+**Income statement effect Month 1:**
+Total Operating Lease Cost = $4,231 + $11,713 = **$15,944** (flat, as required)
+
+### Month 13 Entries (Year 2, Rent Escalates to $15,450)
+
+By month 13, the lease liability has run down. Let's say the liability balance at the start of month 13 is approximately $699,000.
+
+**Entry 1 - Interest accrual:**
+```
+DR  Operating Lease Cost (interest component)   $3,495
+  CR  Lease Liability                                       $3,495
+[$699,000 × 0.5% = $3,495]
+```
+
+**Entry 2 - ROU asset amortization (plug):**
+```
+DR  Operating Lease Cost (amortization component)   $12,449
+  CR  Right-of-Use Asset                                        $12,449
+[$15,944 − $3,495 = $12,449]
+```
+
+**Entry 3 - Cash payment (Year 2 rate):**
+```
+DR  Lease Liability                 $15,450
+  CR  Cash                                      $15,450
+```
+
+Notice the ROU asset amortization accelerates as the interest component decreases. The P&L stays flat at $15,944. This is the defining characteristic of operating lease accounting under ASC 842.
+
+### Simplified (Single-Entry) Method
+
+Some lower-volume operations record a single combined entry per period:
+
+```
+DR  Operating Lease Cost              $15,944   [straight-line cost]
+DR  Lease Liability                   $10,769   [net principal reduction: $15,000 cash − $4,231 interest]
+  CR  Cash                                        $15,000   [actual payment]
+  CR  Right-of-Use Asset                          $11,713   [plug for straight-line cost]
+```
+
+Debits: $15,944 + $10,769 = $26,713. Credits: $15,000 + $11,713 = $26,713. Balanced.
+
+This compresses the mechanics but obscures the liability unwind. The three-entry method is preferable for auditability.
+
+---
+
+## Phase 3: Variable CAM Entries
+
+CAM charges in NNN and modified gross leases are typically variable lease payments under ASC 842. They are not fixed and do not go into the lease liability calculation. See our [CAM reconciliation guide](/resources/common-area-maintenance-reconciliation-explained) for the lease classification analysis.
+
+### Monthly CAM Estimate Payments
+
+```
+DR  Variable Lease Cost / CAM Expense    $1,800
+  CR  Cash                                          $1,800
+```
+
+No lease liability or ROU asset adjustment. This is purely a P&L entry.
+
+### Year-End CAM Accrual (December 31)
+
+You know actual CAM will exceed estimates. Based on YTD data and the landlord's interim statements, you estimate the true-up will be approximately $3,600.
+
+```
+December 31:
+DR  Variable Lease Cost / CAM Expense    $3,600
+  CR  CAM True-Up Accrual (Accrued Liabilities)   $3,600
+```
+
+### CAM Reconciliation Settlement (February, Following Year)
+
+The landlord's reconciliation arrives. Actual CAM was $25,200; you paid $21,600 in monthly estimates. The final true-up is $3,600, matching your accrual exactly (lucky). You reverse the accrual and book the payable.
+
+```
+February:
+DR  CAM True-Up Accrual              $3,600   [reverse December accrual]
+  CR  Variable Lease Cost                         $3,600
+
+DR  Variable Lease Cost              $3,600   [book per final statement]
+  CR  Accounts Payable                            $3,600
+```
+
+If the actual true-up was $4,100 (you underaccrued by $500):
+
+```
+DR  CAM True-Up Accrual              $3,600   [reverse accrual]
+  CR  Variable Lease Cost                         $3,600
+
+DR  Variable Lease Cost              $4,100   [actual per landlord statement]
+  CR  Accounts Payable                            $4,100
+```
+
+The $500 variance hits the period the reconciliation is finalized. See [CAM true-up accounting](/resources/cam-true-up) for the full policy documentation template.
+
+### CAM Credit: Amount Due Back
+
+If actual CAM was $20,000 and you paid $21,600, the landlord owes you $1,600.
+
+```
+DR  Accounts Receivable (CAM credit due)    $1,600
+  CR  Variable Lease Cost / CAM Expense             $1,600
+```
+
+When received:
+```
+DR  Cash                              $1,600
+  CR  Accounts Receivable                        $1,600
+```
+
+---
+
+## Phase 4: Lease Modification Entries
+
+### Modification That Increases the Lease Term
+
+You negotiate a 24-month extension starting at month 48 of the original 60-month term. At the modification date (month 36), the facts are:
+
+- Remaining original term: 24 months
+- New total remaining term: 48 months (24 remaining + 24 new)
+- Updated monthly rent: $17,500 (new negotiated rate)
+- Revised IBR: 7%
+- ROU asset carrying value at modification: $310,000
+- Lease liability carrying value at modification: $290,000
+
+**Step 1 - Calculate remeasured lease liability:**
+PV of 48 remaining payments of $17,500 at 7%/12 = **$720,180** (approximate, using standard annuity formula)
+
+**Step 2 - Calculate ROU asset adjustment:**
+Increase in lease liability = $720,180 − $290,000 = **$430,180**
+
+**Modification entry:**
+```
+DR  Right-of-Use Asset            $430,180
+  CR  Lease Liability                          $430,180
+```
+
+New ROU asset carrying value: $310,000 + $430,180 = $740,180
+New lease liability: $720,180
+
+Resume the straight-line cost calculation using the new total remaining payments and the remeasured liability over 48 months.
+
+### Modification That Reduces the Leased Space
+
+You reduce your space by 30%, effective immediately. The lease liability and ROU asset must be partially derecognized.
+
+- Pre-modification lease liability: $600,000
+- Pre-modification ROU asset: $580,000
+- Proportionate reduction: 30%
+
+```
+Liability reduction: $600,000 × 30% = $180,000
+ROU asset reduction: $580,000 × 30% = $174,000
+Gain on lease modification: $180,000 − $174,000 = $6,000
+
+DR  Lease Liability               $180,000
+  CR  Right-of-Use Asset                      $174,000
+  CR  Gain on Lease Modification               $6,000
+```
+
+Then remeasure the remaining liability at the new terms using the revised discount rate.
+
+---
+
+## Phase 5: Lease Termination Entries
+
+### Early Termination - Termination Fee Paid
+
+You exit the lease early with 18 months remaining. Terms: pay a termination fee of $40,000. At termination:
+- Lease liability carrying value: $265,000
+- ROU asset carrying value: $280,000
+
+```
+DR  Lease Liability               $265,000
+DR  Loss on Lease Termination      $55,000   [plug]
+  CR  Right-of-Use Asset                      $280,000
+  CR  Cash (termination fee)                   $40,000
+```
+
+Calculation: Liability removed ($265,000) − Asset removed ($280,000) − Termination fee ($40,000) = −$55,000 loss.
+
+### Early Termination - Gain Scenario
+
+If the ROU asset has been amortized faster than the liability has run off (later in the lease term), you may recognize a gain.
+
+- Lease liability carrying value: $120,000
+- ROU asset carrying value: $100,000
+- Termination fee paid: $5,000
+
+```
+DR  Lease Liability               $120,000
+DR  Loss on Lease Termination       $5,000   [termination fee only]
+  CR  Right-of-Use Asset                      $100,000
+  CR  Cash (termination fee)                    $5,000
+  CR  Gain on Lease Termination                $20,000
+```
+
+Net P&L effect: $20,000 gain − $5,000 termination cost = $15,000 net gain.
+
+---
+
+## CAM Reconciliation Timing and ASC 842 Documentation
+
+The most common audit question around [ASC 842 and CAM](/blog/lease-accounting-standards-asc-842) is cutoff: what's accrued versus what's recognized in the new year. Document your policy:
+
+1. At each December 31, accrue estimated CAM true-up based on landlord's interim statements and your operating data
+2. When the final reconciliation arrives (typically February to March), reverse the accrual and book to actual
+3. Variances between accrual and actual hit Q1 of the following year
+4. Never adjust the ROU asset or lease liability for variable CAM true-ups
+
+Use CapVeri's import workflow to pull the landlord's reconciliation directly from Yardi/MRI CSV exports, match line items against your [pro-rata share calculation](/resources/pro-rata-share-calculation), and generate the final true-up entry with full audit documentation. The [CAM reconciliation template](/tools/cam-reconciliation-template) includes the entry templates above pre-populated for your lease terms.
+
+<CTABox
+  title="Get the CAM true-up right"
+  description="Your CAM true-up entry depends on the reconciliation behind it. CapVeri checks each CAM charge against the lease. It flags any charge that is too high or too low. Your first reconciliation is free."
+  utmContent="operating_lease_entries_cta"
+/>
+
+---
+
+## Related Resources
+
+- [Operating Lease vs Finance Lease](/resources/operating-lease-vs-finance-lease): when each classification applies
+- [ASC 842 Lease Accounting Example](/resources/asc-842-lease-accounting-example): end-to-end worked example
+- [ASC 842 Lease Accounting Guide](/resources/asc-842-lease-accounting-guide): comprehensive implementation guide
+- [Finance Lease Accounting ASC 842](/resources/finance-lease-accounting-asc-842): compare with finance lease entries
+- [CAM True-Up](/resources/cam-true-up): year-end reconciliation accounting
+- [CAM Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide): gross-up treatment in operating leases
+- [CAM Reconciliation Template](/tools/cam-reconciliation-template): download the template
+
+## Sources
+
+1. [Deloitte DART - Roadmap: Leases](https://dart.deloitte.com/USDART/home/publications/roadmap/leasing?id=us%3A2el%3A3dp%3Armleases%3Aeng%3Aaud%3A121823%3Aiaspl)
+2. [Deloitte - Lease Accounting Guide: Roadmap for ASC 842](https://www.deloitte.com/us/en/services/audit-assurance/articles/roadmap-to-applying-the-new-leasing-standard.html?icid=top_roadmap-to-applying-the-new-leasing-standard)

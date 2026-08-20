@@ -1,0 +1,5 @@
+/llms.txt
+  Cache-Control: public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800
+
+/llms-full.txt
+  Cache-Control: public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800

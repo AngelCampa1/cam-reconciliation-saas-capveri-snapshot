@@ -1,0 +1,237 @@
+---
+title: "Lease Expense Reconciliation: CAM, Taxes, and Insurance Framework"
+description: "A complete lease expense reconciliation framework covering CAM, real estate taxes, and insurance. Includes GL coding guide, common exclusions, and worked examples for each category."
+excerpt: "Lease expense reconciliation covers three distinct expense categories: CAM, real estate taxes, and insurance. Each has different GL accounts, different exclusion rules, and different cap structures. This framework handles all three."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "What's the difference between CAM reconciliation and lease expense reconciliation?"
+    a: "CAM reconciliation is a subset of lease expense reconciliation. Lease expense reconciliation is the broader process that reconciles all pass-through expense categories from a commercial lease: typically CAM (common area maintenance), real estate taxes, and property insurance. Some leases bundle all three into a single NNN or operating expense pool; others reconcile them separately on the same statement. Understanding the difference matters because taxes and insurance have different inclusion/exclusion rules and different cap structures than operating CAM expenses."
+  - q: "Are real estate taxes always passed through to commercial tenants?"
+    a: "In NNN and triple-net leases, yes. Real estate taxes are almost universally passed through. In gross leases, taxes are included in base rent and the landlord absorbs increases. In modified gross leases, you need to check the specific lease language. Some pass through tax increases above a base year amount, some pass through 100% of taxes, and some don't pass through taxes at all. Retail NNN leases almost always include full tax pass-through. Office leases vary significantly based on when the lease was negotiated and the market conditions at the time."
+  - q: "What insurance types can a landlord recover from tenants?"
+    a: "The recoverable insurance categories depend on the lease, but typically include: property insurance (building and improvements), commercial general liability insurance for common areas, and sometimes umbrella/excess liability. Excluded insurance types commonly include: officers and directors liability, crime and fidelity coverage, life insurance for key executives, and loss-of-income insurance that primarily benefits the landlord. Some landlords try to recover earthquake or flood coverage allocated from a portfolio policy. Whether that's permissible depends on the specific lease language and whether the coverage is specific to the insured property."
+  - q: "How does operating expense reconciliation differ between office and retail leases?"
+    a: "Office leases often use a 'base year stop' structure where tenants pay their pro-rata share of operating expense increases above the base year amount, not the full operating expense load. Retail NNN leases typically pass through 100% of operating expenses (less any excluded items). This creates a very different reconciliation math: office leases require a base year comparison and only bill the increment; retail leases require a full pool computation. The GL coding is the same, but the billing formula differs. Also, retail leases are more likely to have gross-up clauses and CAM caps; office leases are more likely to have expense stop structures."
+  - q: "Can a landlord recover administrative costs as part of operating expense reconciliation?"
+    a: "It depends on the lease. The management fee (typically 3-5% of operating expenses) is the standard vehicle for recovering administrative overhead. Some landlords also try to recover direct staff costs (property accountant salaries, leasing coordinator fees) as separate line items. Whether these are includable depends on the lease's definition of operating expenses and any specific exclusions for personnel costs above the property management function. Most well-negotiated tenant leases exclude above-property-level overhead and specify a management fee cap to limit administrative cost recovery."
+---
+
+Lease expense reconciliation is the annual process of comparing actual property operating costs to tenant estimate payments. It covers three distinct expense categories under most commercial leases: common area maintenance (CAM), real estate taxes, and property insurance. Each has different accounting sources, different exclusion rules, and sometimes different cap structures.
+
+Most property accountants treat these as a single process. The GL coding and calculation logic for taxes and insurance are different enough from CAM that they warrant separate treatment within the reconciliation workflow.
+
+---
+
+## The Three Expense Categories
+
+### Common Area Maintenance (CAM)
+
+CAM covers the operating costs of maintaining shared property areas: janitorial, landscaping, security, parking lot maintenance, common area utilities, and property management. These expenses come from multiple GL accounts and require the most work to reconcile. Account mapping, controllable/non-controllable split, gross-up, and cap math all apply primarily to this category.
+
+For a complete treatment of CAM reconciliation, see [what is CAM reconciliation](/resources/common-area-maintenance-reconciliation-explained) and [CAM expense reconciliation process](/resources/cam-expense-reconciliation-process).
+
+### Real Estate Taxes
+
+Real estate taxes are the annual property tax assessed by the local jurisdiction. Unlike CAM, they come from a single or small number of GL accounts and the gross-up and cap provisions in most leases don't apply to them (they're non-controllable by definition).
+
+The reconciliation complexity for taxes arises from:
+- Multi-parcel properties (the tax bill covers multiple parcels, some of which may not be part of the tenant's building)
+- Portfolio-level tax appeals (the landlord won a tax appeal - how is the refund distributed?)
+- Base year stop structures (office leases that only bill tax increases above the base year)
+- Tax escrow accounting (if the landlord collects and holds tax estimates in escrow)
+
+### Property Insurance
+
+Property insurance covers the building against loss. Like taxes, it typically comes from a single GL account or a small number of accounts. The reconciliation complexity:
+- Portfolio policies allocated across multiple properties
+- Self-insurance arrangements
+- Deductible amounts (recoverable? depends on the lease)
+- Coverage types that may not be property-specific
+
+---
+
+## GL Coding Guide by Expense Category
+
+### CAM GL Accounts (Typical)
+
+| Account Range | Common Account Names | CAM Treatment |
+|--------------|---------------------|--------------|
+| 5100–5199 | Janitorial, Cleaning | Include |
+| 5200–5299 | Landscaping, Snow Removal | Include (check lease for snow) |
+| 5300–5399 | Building Maintenance, Repairs | Include (split out capital) |
+| 5400–5499 | Security | Include |
+| 5500–5599 | Utilities (common area) | Include |
+| 5600–5649 | Management Fee | Include (subject to cap) |
+| 5650–5699 | Administrative, Office | Check lease |
+| 5700–5799 | Capital Improvements | Exclude (or amortize per lease) |
+| 5800–5899 | Depreciation | Exclude |
+
+The 5300–5399 range is the most dangerous. In most accounting systems, routine maintenance and capital repairs both post to "Building Maintenance." Reviewing individual transactions for accounts in this range is not optional. It is how you catch the $60,000 HVAC replacement that does not belong in CAM.
+
+### Real Estate Tax GL Accounts
+
+| Account | Name | Treatment |
+|---------|------|-----------|
+| 6100 | Real Estate Taxes - Current | Include (verify correct parcel) |
+| 6110 | Real Estate Tax Appeals | Reduce pool if refund received |
+| 6120 | Special Assessments | Check lease - often excluded |
+| 6130 | Business Improvement District | Check lease |
+
+**Parcel verification**: Pull the actual tax bill and confirm the parcel number matches your property. Portfolio-managed properties sometimes have a master tax account that includes adjacent land, parking structures under separate ownership, or other parcels the tenant does not occupy.
+
+**Special assessments**: These are one-time levies for infrastructure improvements (street repaving, utility upgrades). Most leases either explicitly include or exclude them. Check before including.
+
+### Insurance GL Accounts
+
+| Account | Name | Treatment |
+|---------|------|-----------|
+| 6200 | Property Insurance - Building | Include |
+| 6210 | Commercial General Liability | Include (common areas) |
+| 6220 | Umbrella/Excess Liability | Include (if property-specific) |
+| 6230 | Directors & Officers | Exclude |
+| 6240 | Crime/Fidelity | Exclude |
+| 6250 | Loss of Income | Exclude |
+| 6260 | Earthquake/Flood | Check lease |
+
+**Portfolio allocation**: If the landlord holds a portfolio policy covering 15 properties, the allocation to your property needs to be supportable. The standard method is to allocate based on insured value (replacement cost of the building). An arbitrary allocation (or one based on square footage when building values differ significantly) is grounds for dispute.
+
+---
+
+## Operating Expense Reconciliation: Three Lease Structures
+
+### Structure 1: Full NNN Pass-Through
+
+The simplest structure. Tenants pay their pro-rata share of actual taxes + actual insurance + actual CAM, less any excluded items.
+
+Formula:
+- Tax pool: Actual taxes − excluded items (special assessments if excluded)
+- Insurance pool: Actual insurance − excluded types (D&O, crime, etc.)
+- CAM pool: Actual CAM − excluded items + gross-up adjustments − cap adjustments
+- Total pool: Tax + Insurance + CAM
+- Tenant charge: Total pool × pro-rata share %
+
+Example (200,000 SF retail center, 10,000 SF tenant with 5.0% pro-rata share):
+
+| Category | Pool Amount | Tenant Share (5.0%) |
+|----------|------------|---------------------|
+| CAM | $1,100,000 | $55,000 |
+| Real estate taxes | $600,000 | $30,000 |
+| Insurance | $180,000 | $9,000 |
+| **Total** | **$1,880,000** | **$94,000** |
+
+Annual estimate paid: $88,000
+True-up amount: $6,000
+
+### Structure 2: Base Year Stop (Office)
+
+Tenants pay their pro-rata share of operating expenses above the base year amount. This is common in office leases and significantly changes the billing math.
+
+Example:
+- Base year (2022) total operating expenses: $4,200,000
+- Current year (2025) total operating expenses: $5,100,000
+- Increase above base: $900,000
+- Tenant pro-rata share: 4.5%
+- Tenant's operating expense charge: $900,000 × 4.5% = $40,500
+
+The tenant's lease may have a base year stop of $21.00/SF (the 2022 operating cost per square foot). If 2025 per-SF costs are $25.50, the billable increment is $4.50/SF × tenant's square footage.
+
+For lease expense reconciliation with a base year stop, you need the base year operating expense records. Current year data alone is not enough. Landlords who've switched accounting systems since the base year sometimes lose this data, which creates disputes.
+
+### Structure 3: Modified Gross with Partial Pass-Through
+
+Some leases pass through only specific categories. A modified gross lease might say: "Tenant pays its pro-rata share of real estate tax increases above the base year amount and 100% of insurance, but no CAM."
+
+For these leases, reconcile each category separately and apply the correct methodology to each.
+
+---
+
+## Exclusions by Category
+
+### CAM Exclusions (Most Common)
+
+- Capital expenditures and capital replacements
+- Depreciation and amortization (unless amortized capex is specifically permitted)
+- Management fees above the lease cap (typically 3–5% of operating expenses)
+- Costs of leasing space (commissions, TI allowances, legal fees for lease negotiation)
+- Executive salaries above the property management function
+- Income taxes and franchise taxes on the landlord's income
+- Costs attributable to other tenants (their TI, their specific utilities)
+- Financing costs (mortgage interest, loan fees)
+
+For the complete list, see [what is included in CAM expenses](/resources/what-is-included-in-cam-expenses) and [CAM exclusion list complete guide](/blog/cam-exclusion-list-complete-guide).
+
+### Tax Exclusions
+
+- Taxes on landlord's income or franchise
+- Estate, inheritance, or transfer taxes
+- Special assessments (in many leases)
+- Taxes on capital improvements made solely for the benefit of another tenant
+- Penalties or interest on late tax payments (landlord's fault)
+
+### Insurance Exclusions
+
+- Coverage that benefits only the landlord (D&O, crime, key-man life)
+- Coverage for tenant improvements not included in the base building
+- Deductibles (unless the lease specifically includes them - some do)
+- Self-insured retentions above the lease's stated coverage requirement
+- Loss-of-income or business interruption coverage
+
+---
+
+## CAM Caps and Tax/Insurance Caps
+
+CAM caps limiting year-over-year increases are common in retail leases. Tax and insurance caps are much less common. Most leases treat taxes and insurance as non-controllable expenses and do not subject them to caps.
+
+When a lease does cap taxes or insurance, the cap usually applies to the combined operating expense pool rather than each category separately. Check the lease carefully. A cap on "operating expenses" that includes taxes and insurance is significantly more valuable to the tenant than a cap on "controllable CAM" only.
+
+For detailed cap math on controllable CAM, see [CAM cap types](/resources/cam-cap-types).
+
+---
+
+## The Reconciliation Workflow
+
+For a full-cycle lease expense reconciliation, follow the same sequence as [CAM reconciliation checklist](/resources/cam-reconciliation-checklist-2026), applied to each expense category:
+
+1. Pull GL for all three categories
+2. Apply category-specific exclusions
+3. Verify tax bill against actual parcel records
+4. Verify insurance allocation basis
+5. Compute CAM pool (gross-up and cap as applicable)
+6. Compute each tenant's share by category (or combined, per lease)
+7. Reconcile against estimates by category (or combined)
+8. Generate statement showing all three categories
+
+---
+
+## Common Errors in Lease Cost Reconciliation
+
+**Including the wrong tax parcel**: Especially common with properties on multiple parcels or where a parking structure has a separate tax parcel not covered by the tenant's lease.
+
+**Allocating portfolio insurance incorrectly**: The allocation should be based on insured value, not arbitrary floor area or prior-year precedent.
+
+**Netting the wrong accounts**: Tax refunds from a successful tax appeal should reduce the billable tax pool. Do not net them against CAM expenses. Keep the categories separate.
+
+**Missing the base year data**: For office leases with expense stops, losing the base year operating expense records makes the stop uncomputable and creates significant dispute exposure.
+
+For a comprehensive list of billing errors across all categories, see [cam reconciliation errors guide](/blog/cam-reconciliation-errors-guide) and [top 15 cam billing errors](/resources/top-15-cam-billing-errors).
+
+---
+
+## Tenant Response: Reviewing a Lease Expense Reconciliation
+
+Tenants receiving a combined operating expense reconciliation should check each category separately:
+
+- **Taxes**: Compare the billed amount to publicly available tax records. County assessor websites typically publish current-year assessed value and tax amounts for each parcel.
+- **Insurance**: Request the insurance declarations page for the policy year. Compare the premium allocated to your property against the total premium and the allocation basis.
+- **CAM**: Review using the methodology in [tenant cam dispute](/resources/tenant-cam-dispute).
+
+If you identify a discrepancy in any category, the dispute process in [cam charges dispute process](/resources/cam-charges-dispute-process) applies to operating expenses broadly, not just CAM.
+
+## Sources
+
+1. [Fiserv - Reconciliation whitepaper](https://www.fiserv.com/content/dam/fiserv-ent/archive-files/final-files/white-papers/Frontier-Reconciliation_whitepaper_1020.pdf)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

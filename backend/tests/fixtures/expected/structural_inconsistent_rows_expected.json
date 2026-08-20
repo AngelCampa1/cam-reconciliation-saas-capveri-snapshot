@@ -1,0 +1,14 @@
+{
+  "error_type": "structural",
+  "description": "CSV with inconsistent row lengths throughout",
+  "parseable": true,
+  "expected_behavior": "Parser should handle varying row lengths gracefully",
+  "expected_warnings": [
+    "Row 2: Inconsistent columns (expected 4, got 3)",
+    "Row 3: Inconsistent columns (expected 4, got 5)",
+    "Row 4: Inconsistent columns (expected 4, got 1)"
+  ],
+  "expected_rows": 5,
+  "valid_rows": 2,
+  "invalid_rows": 3
+}

@@ -1,0 +1,24 @@
+{
+  "row_count": 240,
+  "total_units": 240,
+  "occupied_units": 217,
+  "vacant_units": 23,
+  "occupancy_rate": 0.904,
+  "active_leases": 177,
+  "expired_leases": 25,
+  "pending_leases": 15,
+  "total_annual_rent": 19108900.0,
+  "total_monthly_rent": 1592408.3333333333,
+  "average_sqft": 2508.2,
+  "average_psf": 35.29,
+  "min_sqft": 814,
+  "max_sqft": 4981,
+  "period": "2025-01",
+  "property_code": "DCC-001",
+  "statuses": [
+    "ACTIVE",
+    "EXPIRED",
+    "PENDING",
+    "VACANT"
+  ]
+}

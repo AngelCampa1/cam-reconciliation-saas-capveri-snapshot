@@ -1,0 +1,962 @@
+{
+  "lastUpdated": "2026-05-08",
+  "clauses": [
+    {
+      "slug": "gross-up-clause",
+      "title": "Gross-Up Clause",
+      "description": "How gross-up provisions adjust operating expenses to reflect full-occupancy levels, protecting landlord cost recovery when vacancy exists.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Landlord shall adjust Variable Operating Expenses to reflect ninety-five percent (95%) occupancy of the Building, regardless of actual occupancy levels.",
+          "interpretation": "Allows landlord to gross up to 95% occupancy. Variable expenses only: fixed costs like property taxes are passed through at actuals."
+        },
+        {
+          "label": "Balanced",
+          "language": "If the Building is less than ninety-five percent (95%) occupied during any calendar year, Landlord shall adjust those Operating Expenses that vary with occupancy to reflect the Operating Expenses that would have been incurred had the Building been ninety-five percent (95%) occupied.",
+          "interpretation": "Standard market provision. Only variable expenses adjusted. 95% threshold is industry norm."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Landlord may adjust variable Operating Expenses to the lesser of (i) ninety percent (90%) occupancy or (ii) actual occupancy plus five percent (5%).",
+          "interpretation": "Caps gross-up at 90% and limits adjustment to 5 points above actual. More restrictive for landlord."
+        }
+      ],
+      "calculationMethodology": "1. Separate expenses into fixed (taxes, insurance) and variable (janitorial, utilities, management fees). 2. Calculate actual occupancy as occupied SF / total rentable SF. 3. If actual occupancy < threshold (typically 95%), divide variable expenses by actual occupancy rate to get grossed-up amount. 4. Cap at threshold amount (don't gross up beyond 95%). 5. Add fixed expenses at actuals.",
+      "draftingErrors": [
+        "Failing to define which expenses are 'variable': leads to disputes over whether management fees, insurance, or taxes should be grossed up",
+        "Omitting the occupancy threshold: without a cap, landlord could theoretically gross up to 100%",
+        "Using 'occupied' without defining whether it means 'physically occupied' or 'leased': a signed lease with no tenant moved in creates ambiguity"
+      ],
+      "relevantCases": [
+        {
+          "name": "Medic Pharmacy, LLC v. AVK Properties, LLC",
+          "citation": "Harris County District Court (2022)",
+          "year": 2022,
+          "summary": "Landlord grossed up both variable and fixed expenses. Court ruled lease limited gross-up to variable operating expenses, resulting in $47K tenant recovery."
+        }
+      ],
+      "billingSystemImplications": "In Yardi Voyager, gross-up is configured per recovery pool. Common error: applying gross-up to the entire pool instead of only variable expense categories. In MRI, gross-up settings are in the Recovery Analysis module: verify that fixed expense codes are excluded from the adjustment.",
+      "notes": "The gross-up clause is the single highest-risk provision for billing errors. CapVeri's detection engine specifically identifies cases where fixed costs (taxes, insurance) have been improperly grossed up.",
+      "relatedResources": [
+        "/resources/cam-gross-up-calculation-guide",
+        "/resources/lease-clauses/gross-up-clause",
+        "/glossary/gross-up-clause"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    },
+    {
+      "slug": "cumulative-cam-cap",
+      "title": "Cumulative CAM Cap",
+      "description": "A compounding annual cap on controllable CAM expenses that allows unused cap room to carry forward to future years, giving landlords more flexibility than non-cumulative caps. Extract CAM cap type, base year, and cap percentage from your lease automatically with <a href=\"https://www.lextract.io\" target=\"_blank\" rel=\"noopener noreferrer\">Lextract.io</a>.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Controllable Operating Expenses shall not increase by more than five percent (5%) per annum on a cumulative, compounding basis over the Base Year amount. Any unused portion of the permitted increase shall carry forward to subsequent years.",
+          "interpretation": "Compounding 5% cap with explicit carry-forward. By year 5, the cap ceiling is 27.6% above base year: significantly higher than non-cumulative equivalent."
+        },
+        {
+          "label": "Balanced",
+          "language": "Tenant's share of Controllable Expenses shall not exceed the Base Year amount increased by five percent (5%) per annum, calculated on a cumulative compounding basis. For purposes hereof, 'Controllable Expenses' excludes taxes, insurance, utilities, and snow removal.",
+          "interpretation": "Cumulative compounding with clear exclusion list. Standard market provision balancing landlord recovery with tenant predictability."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Controllable Expenses shall not increase by more than four percent (4%) per annum on a cumulative but non-compounding basis over the Base Year amount. The cap shall apply to Tenant's proportionate share, not the gross expense.",
+          "interpretation": "Cumulative but non-compounding (simple interest). Applied to tenant's share rather than gross: prevents landlord from allocating cap room across tenants."
+        }
+      ],
+      "calculationMethodology": "1. Establish base year controllable expense amount. 2. For compounding: multiply base by (1 + cap rate)^n where n = lease year. 3. For non-compounding: multiply base by (1 + cap rate \u00c3 - n). 4. Compare actual controllable expenses to the cap ceiling. 5. Pass through the lesser of actual or cap ceiling. 6. Track cumulative cap room carried forward annually.",
+      "draftingErrors": [
+        "Failing to specify whether the cap is compounding or simple: a 5% compounding cap allows 27.6% increase by year 5 vs. 25% simple",
+        "Not defining 'controllable expenses': leaves open whether insurance, taxes, or utilities are capped",
+        "Applying the cap to gross expenses instead of tenant's proportionate share: creates allocation problems in multi-tenant buildings",
+        "Omitting whether the cap resets on lease renewal or continues from the original base year"
+      ],
+      "relevantCases": [
+        {
+          "name": "Westfield Corp. v. JMB Realty",
+          "citation": "Cal. App. 4th Dist. (2019)",
+          "year": 2019,
+          "summary": "Dispute over whether cumulative cap applied to gross expenses or tenant's share. Court held ambiguous lease language was construed against landlord drafter, limiting recovery by $182K over lease term."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, cumulative caps require custom recovery pool configuration with year-over-year tracking. Common error: configuring a non-cumulative cap when the lease says cumulative, losing carry-forward amounts. In MRI, use the Cap Accumulator feature in Recovery Analysis: verify compounding vs. simple calculation method matches lease terms.",
+      "notes": "Cumulative caps are more landlord-friendly than non-cumulative caps because unused cap room carries forward. However, the compounding vs. non-compounding distinction is frequently misconfigured in billing systems, creating multi-year errors that compound over the lease term.",
+      "relatedResources": [
+        "/resources/cam-expense-caps",
+        "/resources/expenses/administrative-overhead"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "non-cumulative-cam-cap",
+      "title": "Non-Cumulative CAM Cap",
+      "description": "An annual cap on controllable CAM expenses that resets each year, limiting the year-over-year increase without allowing unused cap room to carry forward.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Controllable Operating Expenses for any calendar year shall not exceed one hundred five percent (105%) of the Controllable Operating Expenses for the immediately preceding calendar year.",
+          "interpretation": "Year-over-year cap measured against prior year actuals, not base year. If expenses drop one year, the cap resets lower: but subsequent increases are measured from that lower base."
+        },
+        {
+          "label": "Balanced",
+          "language": "Controllable Operating Expenses payable by Tenant shall not increase by more than five percent (5%) per annum over the Base Year Controllable Expenses.",
+          "interpretation": "Non-cumulative annual cap measured against fixed base year. Simpler to administer. Maximum exposure in year 5 is base + 5% (not compounding)."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Controllable Expenses shall not increase by more than the greater of (i) three percent (3%) or (ii) the Consumer Price Index increase for the preceding twelve months, in each case measured from the Base Year. In no event shall such increase exceed five percent (5%) in any single year.",
+          "interpretation": "CPI-indexed with floor and hard ceiling. Protects tenant in high-inflation years while ensuring landlord gets at least 3%. Non-cumulative prevents carry-forward."
+        }
+      ],
+      "calculationMethodology": "1. Establish base year (or prior year) controllable expense amount. 2. Calculate maximum permitted increase: base \u00c3 - cap percentage. 3. Add maximum increase to base to get cap ceiling. 4. Compare actual controllable expenses to cap ceiling. 5. Pass through lesser of actual or cap ceiling. 6. No carry-forward of unused cap room: each year stands alone.",
+      "draftingErrors": [
+        "Ambiguity over whether the cap measures against base year or prior year actuals: these produce very different results when expenses fluctuate",
+        "Not specifying what happens when actual expenses are below cap: does the tenant pay actuals or the cap amount?",
+        "Failing to address CPI adjustments to the base year: a fixed base with no inflation adjustment becomes increasingly unrealistic",
+        "Omitting treatment of capital expenditure amortization under the cap"
+      ],
+      "relevantCases": [
+        {
+          "name": "Simon Property Group v. Fresh Market",
+          "citation": "S.D. Ind. (2020)",
+          "year": 2020,
+          "summary": "Tenant argued non-cumulative cap should apply to total expenses, not just controllable. Court held cap only applied to expenses defined as 'controllable' in the lease, excluding taxes and insurance."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, non-cumulative caps are configured at the recovery pool level with annual reset. Common error: failing to reset the cap calculation annually, which effectively converts it to a cumulative cap. In MRI, ensure the Recovery Analysis cap type is set to 'Non-Cumulative' and verify the base year reference is correct in the lease abstract.",
+      "notes": "Non-cumulative caps are more tenant-friendly than cumulative caps. The key billing risk is misconfiguring the cap reference point: prior year vs. base year measurement produces significantly different results, especially in years where actual expenses dropped below the cap.",
+      "relatedResources": [
+        "/resources/cam-expense-caps",
+        "/resources/expenses/administrative-overhead"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-estimate-forecaster"
+      ]
+    },
+    {
+      "slug": "expense-stop",
+      "title": "Expense Stop",
+      "description": "A fixed dollar amount per rentable square foot above which the tenant pays their proportionate share of operating expenses. Common in full-service gross leases.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Base Rent is a gross rent inclusive of Operating Expenses up to and including the Expense Stop of $12.50 per rentable square foot per annum. Tenant shall pay Tenant's Proportionate Share of all Operating Expenses in excess of the Expense Stop.",
+          "interpretation": "Fixed dollar stop with no inflation adjustment. As expenses rise, tenant absorbs an increasing share. Landlord benefits from setting stop below projected year-1 expenses."
+        },
+        {
+          "label": "Balanced",
+          "language": "Tenant shall pay its Proportionate Share of Operating Expenses in excess of the Expense Stop. The Expense Stop shall be actual Operating Expenses for the Base Year (calendar year 2026), calculated on a fully occupied basis.",
+          "interpretation": "Base year stop: pegged to actual first-year expenses. Grossed up to full occupancy to prevent windfall from vacancy. Tenant only pays escalations above year-1 actuals."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Tenant shall pay its Proportionate Share of Operating Expenses (excluding Capital Expenditures, management fees above 3% of gross revenue, and Landlord's legal costs) in excess of the Expense Stop of $14.00 per RSF. The Expense Stop shall increase by two percent (2%) per annum.",
+          "interpretation": "Higher stop with annual escalation and broad exclusions. CPI-like escalation keeps the stop relevant over the lease term, reducing tenant exposure."
+        }
+      ],
+      "calculationMethodology": "1. Determine total Operating Expenses for the calendar year. 2. Divide by total rentable SF to get per-SF expense amount. 3. Subtract the Expense Stop (per SF) from actual per-SF expenses. 4. If positive, multiply the excess by tenant's rentable SF. 5. Multiply by tenant's proportionate share percentage. 6. Bill tenant for the resulting amount (their share of excess over stop).",
+      "draftingErrors": [
+        "Setting the expense stop below projected first-year expenses: tenant has exposure from day one, defeating the purpose of a gross lease",
+        "Failing to gross up the base year stop when building isn't fully occupied: creates an artificially high stop that may never be exceeded",
+        "Not defining whether the stop applies to controllable expenses only or all operating expenses including taxes and insurance",
+        "Omitting whether capital expenditure amortization counts toward the stop calculation"
+      ],
+      "relevantCases": [
+        {
+          "name": "Brookfield Properties v. Regus Management",
+          "citation": "N.Y. Sup. Ct. (2018)",
+          "year": 2018,
+          "summary": "Tenant argued expense stop should be grossed up for vacancy in the base year. Court agreed, finding that without gross-up, the stop was artificially inflated by vacancy-reduced expenses."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, expense stops are configured as recovery pools with a fixed stop amount or base year reference. Common error: not updating the stop amount when lease amendments change the terms. In MRI, expense stops are modeled in the Lease Abstract with a per-SF threshold: verify that the stop applies to the correct expense pool and that gross-up settings align with lease terms.",
+      "notes": "Expense stops are the predominant structure in full-service office leases. The most common billing error is failing to gross up the base year stop for vacancy, which can create a stop amount $1-3/SF higher than intended and delay tenant contributions for years.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "base-year",
+      "title": "Base Year",
+      "description": "The reference year against which future operating expense increases are measured. Tenant pays only the increase above base year expenses, making it critical to the economic deal.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "The Base Year shall be calendar year 2026. Base Year Operating Expenses shall be actual Operating Expenses incurred by Landlord in the Base Year, without adjustment for occupancy. If a new assessment, utility rate increase, or other cost increase takes effect after the Base Year, the Base Year amount shall not be adjusted to reflect such increase.",
+          "interpretation": "No gross-up for vacancy in base year. If building is 70% occupied, base year expenses are artificially low, giving tenant immediate exposure to escalations."
+        },
+        {
+          "label": "Balanced",
+          "language": "The Base Year shall be calendar year 2026. Base Year Operating Expenses shall be the actual Operating Expenses for the Base Year, provided that if the Building is less than ninety-five percent (95%) occupied during the Base Year, those Operating Expenses that vary with occupancy shall be adjusted to reflect the amount that would have been incurred at ninety-five percent (95%) occupancy.",
+          "interpretation": "Standard gross-up of base year variable expenses. Fixed costs stay at actuals. Prevents artificially low base year from vacancy."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "The Base Year shall be the twelve-month period commencing on the Rent Commencement Date. Base Year Operating Expenses shall be adjusted to reflect (i) ninety-five percent (95%) occupancy for variable expenses, (ii) a full twelve months of real estate taxes based on a fully assessed and completed building, and (iii) exclusion of any non-recurring expenses, capital expenditures, or one-time charges.",
+          "interpretation": "Tenant-aligned base year starting from their occupancy date, grossed up with tax normalization and non-recurring expense exclusions. Maximizes the base year amount."
+        }
+      ],
+      "calculationMethodology": "1. Compile actual Operating Expenses for the base year. 2. Identify variable vs. fixed expenses. 3. If building occupancy < 95%, gross up variable expenses: divide by actual occupancy rate, cap at 95%. 4. Normalize property taxes for full assessment if building is newly assessed. 5. Exclude non-recurring charges (if lease requires). 6. The resulting amount is the Base Year Operating Expenses. 7. In subsequent years, tenant pays their pro rata share of expenses above this amount.",
+      "draftingErrors": [
+        "Not specifying whether the base year is a calendar year or the first 12 months of the lease term: creates confusion when lease starts mid-year",
+        "Omitting gross-up language for the base year: in a partially occupied building, this dramatically reduces the base year amount",
+        "Failing to normalize property taxes when the building received a new assessment during the base year",
+        "Not addressing what happens if the base year includes non-recurring expenses like a one-time repair or legal settlement"
+      ],
+      "relevantCases": [
+        {
+          "name": "SL Green Realty v. Citigroup",
+          "citation": "N.Y. Sup. Ct. (2017)",
+          "year": 2017,
+          "summary": "Dispute over whether base year should include one-time lobby renovation expense. Court held the renovation was a capital improvement excluded from operating expenses under the lease, reducing the base year and increasing tenant's ongoing exposure."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, the base year is established in the lease abstract and referenced by recovery pools. Common error: entering the base year amount manually instead of linking to actual year-1 expenses: causes the base year to become stale if retroactive adjustments are made. In MRI, base year settings are in the Recovery Analysis module; ensure the base year gross-up calculation matches the lease and that tax normalization is applied if required.",
+      "notes": "The base year is arguably the most economically significant provision in a full-service lease. A $1.00/SF error in the base year compounds every year of the lease term across every tenant. CapVeri flags base year anomalies including missing gross-up adjustments and tax normalization gaps.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "admin-management-fee",
+      "title": "Administrative / Management Fee",
+      "description": "The percentage fee charged by the landlord (or its management company) on top of recoverable operating expenses, typically ranging from 3% to 5% of gross collected revenue or operating expenses.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Operating Expenses shall include a management fee equal to the greater of (i) five percent (5%) of Gross Revenue or (ii) the actual management fee paid by Landlord to its property manager.",
+          "interpretation": "5% of gross revenue as a floor. If actual management fee is lower, landlord still charges 5%. Gross revenue base includes rent, parking, and other income: producing a larger fee."
+        },
+        {
+          "label": "Balanced",
+          "language": "Operating Expenses shall include a property management fee not to exceed four percent (4%) of gross collected revenues for the Building. The management fee shall be the lesser of (i) the actual fee paid to the property manager or (ii) four percent (4%) of Gross Revenue.",
+          "interpretation": "Capped at 4% with actual-fee limitation. Prevents landlord from profiting on the management fee spread."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Operating Expenses shall include a management fee not to exceed three percent (3%) of Net Collected Revenue (excluding parking and any reimbursement income). In no event shall the management fee include supervisory or construction management fees, leasing commissions, or overhead of Landlord's affiliated management company in excess of market rates.",
+          "interpretation": "3% cap on net revenue (smaller base than gross). Explicit exclusion of construction management and leasing costs. Affiliated-entity market-rate limitation."
+        }
+      ],
+      "calculationMethodology": "1. Determine the fee base: gross revenue, net revenue, or total operating expenses. 2. Apply the management fee percentage to the base. 3. Compare to the actual fee paid to the property manager (if lease requires lesser-of test). 4. Include the permitted amount in the operating expense pool. 5. Allocate to tenants as part of their pro rata share.",
+      "draftingErrors": [
+        "Not defining 'gross revenue' vs. 'net revenue': gross includes parking, signage, and reimbursement income, significantly increasing the fee base",
+        "Failing to address affiliated management companies: landlord pays an above-market fee to its own entity, inflating recoverable expenses",
+        "Omitting whether the management fee is included or excluded from CAM cap calculations",
+        "Not distinguishing between property management fees and asset management fees: asset management is typically a landlord cost, not recoverable"
+      ],
+      "relevantCases": [
+        {
+          "name": "Maguire Partners v. Ernst & Young",
+          "citation": "Cal. App. 2d Dist. (2015)",
+          "year": 2015,
+          "summary": "Tenant challenged a 5% management fee charged by landlord's affiliated entity when market rate was 2.5-3%. Court found affiliate fee was above-market and limited recovery to 3%."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, management fees can be configured as a percentage of revenue or as a fixed charge code within the operating expense pool. Common error: double-counting the management fee: including it as both a separate line item and embedded in the recovery pool total. In MRI, verify that the management fee charge code is mapped correctly and that the percentage base matches the lease definition.",
+      "notes": "Management fees are a frequent source of tenant disputes, particularly when charged by affiliated entities. The fee base definition (gross vs. net revenue) can create a 30-40% difference in the actual fee amount. CapVeri flags management fees that exceed market benchmarks and identifies double-counting errors.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "audit-rights",
+      "title": "Audit Rights",
+      "description": "Provisions granting tenants the right to inspect landlord's books and records to verify CAM charges, including timing restrictions, cost allocation, and dispute resolution procedures. Tenants can run a full forensic CAM audit online at <a href=\"https://www.camaudit.io\" target=\"_blank\" rel=\"noopener noreferrer\">CAMAudit.io</a> before or alongside a formal audit rights request.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Tenant may, at Tenant's sole cost and expense, audit Landlord's books and records relating to Operating Expenses for the preceding calendar year only. Such audit must be conducted by a nationally recognized CPA firm within ninety (90) days after Landlord delivers the annual reconciliation statement. The audit shall be conducted at Landlord's office during normal business hours upon thirty (30) days' prior written notice. Tenant shall not use an auditor compensated on a contingency fee basis.",
+          "interpretation": "Strict 90-day window. CPA-only requirement increases cost. Contingency fee prohibition discourages smaller tenants from auditing. Single-year lookback."
+        },
+        {
+          "label": "Balanced",
+          "language": "Tenant may audit Landlord's books and records relating to Operating Expenses for any calendar year within one hundred eighty (180) days after receipt of the annual reconciliation statement. The audit may be conducted by Tenant's employees or a qualified third-party auditor. If the audit reveals an overcharge of more than five percent (5%), Landlord shall reimburse Tenant's reasonable audit costs.",
+          "interpretation": "180-day window. Allows non-CPA auditors. 5% threshold for landlord-paid audit costs incentivizes accuracy without enabling nuisance audits."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Tenant may audit Landlord's books and records for any calendar year during the Term, and for two (2) years following lease expiration. If the audit reveals an overcharge of three percent (3%) or more, Landlord shall pay all reasonable audit costs and interest on the overcharge at the rate of ten percent (10%) per annum from the date of overpayment. Tenant may use any qualified auditor, including those compensated on a contingency basis.",
+          "interpretation": "No audit window deadline. Post-lease audit rights. Low 3% threshold for cost recovery. Contingency auditors allowed. Interest on overcharges."
+        }
+      ],
+      "calculationMethodology": "1. Tenant delivers written audit notice within the permitted window. 2. Landlord provides access to books, records, contracts, and invoices for the audit year(s). 3. Auditor reviews: expense classification, pro rata share calculation, cap compliance, exclusion compliance, and management fee calculation. 4. If overcharge found, landlord credits tenant within 30 days. 5. If overcharge exceeds threshold (typically 3-5%), landlord reimburses audit costs.",
+      "draftingErrors": [
+        "Not specifying what 'books and records' includes: tenant may need access to vendor contracts, insurance policies, and tax bills, not just GL reports",
+        "Omitting confidentiality provisions: without them, audit findings could be shared with other tenants",
+        "Failing to include a dispute resolution mechanism when landlord and tenant disagree on audit findings",
+        "Not addressing whether the audit right survives lease expiration: tenants may need to audit the final reconciliation year after move-out"
+      ],
+      "relevantCases": [
+        {
+          "name": "HQ Global Workplaces v. Maguire Properties",
+          "citation": "Cal. App. 2d Dist. (2010)",
+          "year": 2010,
+          "summary": "Tenant attempted audit 14 months after reconciliation delivery. Court enforced lease's 12-month audit window, barring the audit. Emphasized strict interpretation of audit deadlines."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, audit-ready reports are generated from the Recovery Billing module. Common error: running audit reports from different date ranges than the reconciliation statement, creating discrepancies. In MRI, the Recovery Analysis detail report should match the reconciliation statement exactly: any variance between the summary and detail indicates a configuration issue that will be flagged in an audit.",
+      "notes": "Audit rights provisions are increasingly tenant-favorable in new leases. Landlords should maintain audit-ready documentation proactively: the cost of responding to an audit is far lower when records are organized. CapVeri's pre-audit validation catches errors before tenant auditors find them, reducing dispute frequency and audit costs.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "anchor-exclusion",
+      "title": "Anchor Tenant Exclusion",
+      "description": "Provisions excluding anchor tenants (typically occupying 20%+ of a center) from the CAM cost pool, requiring remaining tenants to absorb a larger share of common area expenses.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Operating Expenses shall be allocated among all tenants of the Shopping Center based on the ratio of each tenant's Premises to the total Gross Leasable Area. Notwithstanding the foregoing, Landlord reserves the right to exclude certain tenants from specific expense pools where such tenants maintain their own facilities.",
+          "interpretation": "Vague exclusion right gives landlord discretion to exclude anchors from specific pools without reducing the denominator. In-line tenants effectively subsidize anchor exclusions."
+        },
+        {
+          "label": "Balanced",
+          "language": "Anchor Tenants (those leasing 25,000 SF or more) shall be excluded from the Operating Expense pool for janitorial, HVAC, and common area lighting, provided such Anchor Tenants are responsible for such expenses within their premises. Tenant's Proportionate Share for excluded expenses shall be calculated using the Gross Leasable Area minus the excluded Anchor Tenant premises as the denominator.",
+          "interpretation": "Specific expense exclusions for anchors who self-maintain. Denominator adjusts to exclude anchor SF: preventing cost-shifting to in-line tenants."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Tenant's Proportionate Share shall be calculated based on total Gross Leasable Area of the Shopping Center, including all Anchor Tenant premises. If any tenant is excluded from any Operating Expense category, Landlord shall proportionally reduce Tenant's share of such category by reducing the denominator accordingly. In no event shall Tenant's actual per-SF cost for any expense category exceed the per-SF cost that would have applied had all tenants participated equally.",
+          "interpretation": "Full protection against anchor exclusion cost-shifting. Per-SF cap ensures in-line tenant never pays more than their proportionate share."
+        }
+      ],
+      "calculationMethodology": "1. Identify anchor tenants excluded from the CAM pool (per lease terms). 2. Identify which expense categories anchors are excluded from. 3. For excluded categories: reduce the denominator by the excluded anchor SF. 4. Calculate proportionate share for remaining tenants using adjusted denominator. 5. For included categories: use full building SF as denominator. 6. Reconcile total billings: ensure excluded amounts are borne by landlord, not shifted to other tenants.",
+      "draftingErrors": [
+        "Excluding anchors from the expense pool without reducing the denominator: forces in-line tenants to pay for anchor's share",
+        "Not specifying which expense categories anchors are excluded from: creates ambiguity over whether anchors are excluded from all CAM or just self-maintained items",
+        "Failing to address what happens when an anchor goes dark (closes but retains the lease): do they re-enter the pool?",
+        "Not defining 'anchor tenant' by SF threshold: creates disputes when mid-size tenants claim anchor status"
+      ],
+      "relevantCases": [
+        {
+          "name": "Clear Lake Center v. Garden Ridge",
+          "citation": "Tex. App. - Houston [14th Dist.] 2013",
+          "year": 2013,
+          "summary": "Court examined anchor tenant CAM exclusion in a retail center. Held that anchor exclusion from denominator must be explicitly stated in the lease; ambiguous language was construed against the landlord."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, anchor exclusions require separate recovery pools for excluded and included expense categories, with different denominators for each. Common error: using a single recovery pool with a manual override that doesn't adjust the denominator. In MRI, configure separate allocation groups for anchor-excluded categories: verify that the total rentable area denominator in each group matches the lease abstracts.",
+      "notes": "Anchor exclusions are the most complex CAM allocation issue in retail properties. The most frequent error is failing to reduce the denominator when excluding anchors: this effectively shifts the anchor's share to in-line tenants and is a top-5 audit finding in retail CAM reconciliations.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "capex-exclusion",
+      "title": "Capital Expenditure Exclusion",
+      "description": "Provisions defining which capital costs are recoverable through CAM and how they are amortized, distinguishing between true operating expenses and capital improvements.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Operating Expenses shall include the annual amortization (over the useful life as determined by Landlord) of capital improvements made to reduce Operating Expenses or as required by governmental authorities enacted after the Commencement Date. Amortization shall include interest at Landlord's actual borrowing rate or ten percent (10%) per annum, whichever is greater.",
+          "interpretation": "Broad inclusion of cost-saving and compliance capital. Landlord determines useful life (shorter = higher annual charge). Interest at greater of actual or 10%: above-market."
+        },
+        {
+          "label": "Balanced",
+          "language": "Capital Expenditures shall be excluded from Operating Expenses, except that the annual amortization (on a straight-line basis over the GAAP useful life, with interest at the Wall Street Journal prime rate plus two percent) of capital improvements (i) required by governmental regulations enacted after the date hereof, or (ii) reasonably intended to reduce Operating Expenses, shall be included in Operating Expenses, provided the annual amortized amount for cost-saving improvements shall not exceed the documented annual savings.",
+          "interpretation": "Standard market provision. GAAP useful life. Market-rate interest. Cost-saving capex limited to actual documented savings: landlord can't profit on the amortization."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Capital Expenditures are excluded from Operating Expenses. No capital item with a useful life in excess of one (1) year or costing more than $10,000 shall be included in Operating Expenses regardless of the purpose of such expenditure. Repairs necessitated by Landlord's negligence, design defects, or deferred maintenance shall not be classified as Operating Expenses.",
+          "interpretation": "Bright-line exclusion with dollar and useful life thresholds. No exceptions for compliance or cost-savings. Prevents relabeling maintenance as operating expense."
+        }
+      ],
+      "calculationMethodology": "1. Classify each expense as operating or capital using GAAP criteria (useful life > 1 year, cost exceeds materiality threshold). 2. For permitted capital inclusions: determine useful life per GAAP or lease terms. 3. Amortize on straight-line basis over useful life. 4. Add interest at the lease-specified rate to the unamortized balance. 5. Include only the current-year amortization in operating expenses. 6. For cost-saving capex: document annual savings and cap amortization at savings amount.",
+      "draftingErrors": [
+        "Failing to define 'capital expenditure': allows landlord to classify major renovations as repairs and pass them through as operating expenses",
+        "Not specifying the amortization method (straight-line vs. accelerated) or useful life standard (GAAP vs. landlord's discretion)",
+        "Omitting an interest rate cap on amortization: landlord could charge well above market rates on unamortized balances",
+        "Not addressing whether amortized capex counts toward CAM caps: if excluded from caps, it becomes an uncapped pass-through"
+      ],
+      "relevantCases": [
+        {
+          "name": "ProLogis v. Advance Auto Parts",
+          "citation": "N.D. Ga. (2016)",
+          "year": 2016,
+          "summary": "Landlord amortized $2.1M parking lot replacement over 5 years as an operating expense. Court held it was a capital expenditure excluded by the lease, as the lot's useful life exceeded 15 years."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, capital expenditures are tracked using the Fixed Asset module with amortization schedules feeding into recovery pools. Common error: expensing a capital item directly to an operating expense GL code, bypassing amortization entirely. In MRI, capital amortization is configured in the Fixed Asset Manager: verify that amortization schedules match lease terms and that the interest component is calculated correctly.",
+      "notes": "Capital expenditure classification is the second most common CAM audit finding after gross-up errors. Landlords frequently expense items that should be capitalized, or amortize over shorter periods than GAAP requires. CapVeri flags expenses exceeding $10,000 or items with characteristics suggesting capital classification.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "controllable-expense-definition",
+      "title": "Controllable Expense Definition",
+      "description": "The lease definition of which operating expenses are subject to annual caps ('controllable') versus which pass through at actual cost ('uncontrollable'), directly determining the effectiveness of CAM caps.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Controllable Operating Expenses means all Operating Expenses other than (i) real estate taxes and special assessments, (ii) insurance premiums, and (iii) utility costs. All other Operating Expenses shall be deemed controllable and subject to the Cap.",
+          "interpretation": "Narrow exclusion: only taxes, insurance, and utilities are uncontrollable. Management fees, repairs, and all other costs are capped. Landlord accepted the risk that these costs will rise faster than the cap."
+        },
+        {
+          "label": "Balanced",
+          "language": "Controllable Expenses means Operating Expenses excluding: (i) real estate taxes and assessments, (ii) property and liability insurance premiums, (iii) utility costs, (iv) snow and ice removal, and (v) costs imposed by governmental regulation enacted after the date hereof. All Controllable Expenses shall be subject to the Annual Cap.",
+          "interpretation": "Broader exclusion list includes weather-related and regulatory costs. Standard market approach: landlord retains uncapped pass-through for truly uncontrollable items."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "All Operating Expenses are deemed Controllable and subject to the Annual Cap, including without limitation real estate taxes, insurance, utilities, and management fees. Only costs imposed by governmental regulation enacted after the Commencement Date and not reasonably foreseeable as of the date hereof shall be excluded from the Cap.",
+          "interpretation": "Nearly all expenses capped. Only genuinely unforeseeable regulatory costs excluded. Maximum tenant protection: landlord bears risk of tax and insurance increases."
+        }
+      ],
+      "calculationMethodology": "1. Review the lease's controllable expense definition. 2. Classify each operating expense line item as controllable or uncontrollable. 3. Sum all controllable expenses and apply the CAM cap calculation. 4. Sum all uncontrollable expenses and pass through at actual (no cap). 5. Tenant's total CAM charge = capped controllable share + actual uncontrollable share.",
+      "draftingErrors": [
+        "Using a non-exhaustive exclusion list ('including but not limited to'): landlord can argue additional items are uncontrollable",
+        "Not addressing utility costs: a major and volatile expense category that should be explicitly classified",
+        "Failing to specify whether management fees are controllable: they are a percentage of expenses, so they arguably increase with uncontrollable cost increases",
+        "Not addressing newly created expense categories (e.g., sustainability compliance costs): ambiguity over whether they are controllable"
+      ],
+      "relevantCases": [
+        {
+          "name": "Kimco Realty Corp. v. Bed Bath & Beyond",
+          "citation": "D.N.J. (2021)",
+          "year": 2021,
+          "summary": "Dispute over whether property insurance premium increases (35% YOY after major storm season) were 'controllable.' Court held insurance was explicitly excluded from the controllable definition, so the full increase passed through uncapped."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, controllable vs. uncontrollable expenses must be mapped to separate recovery pools or expense categories within a single pool with different cap settings. Common error: applying the cap to the entire recovery pool total, which effectively caps uncontrollable expenses. In MRI, use separate allocation codes for controllable and uncontrollable line items: verify that the cap only applies to the controllable subtotal.",
+      "notes": "The controllable expense definition is what makes a CAM cap meaningful or hollow. A cap that excludes taxes, insurance, and utilities may only cover 40-50% of total operating expenses, leaving the majority uncapped. CapVeri analyzes controllable vs. uncontrollable splits to identify when caps are being applied to the wrong expense categories.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "opex-inclusions",
+      "title": "Operating Expense Inclusions",
+      "description": "The positive definition of what costs are included in operating expenses and recoverable from tenants through CAM charges.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Operating Expenses shall mean all costs and expenses of every kind and nature paid or incurred by Landlord in connection with the ownership, management, operation, maintenance, repair, and replacement of the Building and the Land, including without limitation the items set forth on Exhibit B.",
+          "interpretation": "Expansive 'all costs' language with non-exhaustive list. 'Without limitation' preserves landlord's ability to include costs not specifically enumerated. 'Replacement' language blurs the capital/operating line."
+        },
+        {
+          "label": "Balanced",
+          "language": "Operating Expenses shall mean all reasonable costs incurred by Landlord in the operation, management, maintenance, and repair (but not replacement) of the Building, including the specific categories listed on Exhibit B. Costs not listed on Exhibit B shall be included only if customarily included in operating expenses for comparable Class A office buildings in the metropolitan area.",
+          "interpretation": "Reasonableness standard with market comparability test. Exhaustive list with market-based catch-all. Repair vs. replacement distinction preserved."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Operating Expenses shall mean only those costs specifically enumerated on Exhibit B attached hereto. No cost not set forth on Exhibit B shall be included in Operating Expenses regardless of whether such cost is customary or necessary for the operation of the Building.",
+          "interpretation": "Strictly exhaustive list. If it's not on Exhibit B, it's not recoverable. Maximum certainty for tenant. Landlord bears risk of omitting a cost category."
+        }
+      ],
+      "calculationMethodology": "1. Compile all Building-related expenses for the year. 2. For each expense, determine if it falls within the lease's inclusion definition. 3. Apply the reasonableness standard if applicable. 4. Verify against the exclusion list (see Operating Expense Exclusions). 5. Include only expenses that pass both the inclusion and exclusion tests. 6. Allocate included expenses to tenants per their pro rata share.",
+      "draftingErrors": [
+        "Using 'including without limitation' language that makes the inclusion list illustrative rather than exhaustive: virtually any expense could be included",
+        "Not defining 'reasonable' or providing a market comparability standard: leaves the reasonableness determination to landlord's discretion",
+        "Including 'replacement' in the definition without a dollar threshold: allows major replacements to bypass the capital expenditure exclusion",
+        "Failing to address landlord's costs that benefit the landlord directly (e.g., leasing commissions, marketing for vacant space)"
+      ],
+      "relevantCases": [
+        {
+          "name": "Vereit Real Estate v. Walgreens",
+          "citation": "S.D.N.Y. (2020)",
+          "year": 2020,
+          "summary": "Landlord included lease termination costs and vacant space marketing in operating expenses under 'all costs of management and operation.' Court held these were landlord's costs, not Building operating expenses, and excluded them."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, operating expense inclusions are mapped through GL account assignments to recovery pools. Common error: assigning GL codes to recovery pools that don't match the lease's inclusion definition: e.g., including corporate overhead allocation in a pool that only permits building-level expenses. In MRI, verify that each charge code in the Recovery Analysis is tied to a specific lease inclusion provision.",
+      "notes": "The inclusion definition sets the outer boundary of what's recoverable. Overly broad inclusion language is the root cause of most CAM disputes. CapVeri compares actual expenses billed against the lease's inclusion list to identify improperly included costs.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "opex-exclusions",
+      "title": "Operating Expense Exclusions",
+      "description": "The negative definition of costs specifically carved out from operating expenses, protecting tenants from bearing landlord-specific costs, capital items, and above-market charges.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Operating Expenses shall not include: (i) costs of capital improvements (except as provided in Section X), (ii) leasing commissions, (iii) interest and amortization on mortgages, and (iv) depreciation of the Building.",
+          "interpretation": "Short exclusion list covering only obvious non-recoverable items. Many tenant-unfriendly costs (legal fees, executive salaries, above-market management fees) are not excluded."
+        },
+        {
+          "label": "Balanced",
+          "language": "Operating Expenses shall not include: (i) capital expenditures (except amortization per Section X), (ii) leasing costs and commissions, (iii) mortgage interest and principal, (iv) depreciation, (v) Landlord's income taxes, (vi) costs of Landlord's disputes with other tenants, (vii) costs of correcting defects in original construction, (viii) executive salaries above on-site property manager level, (ix) above-market fees to Landlord affiliates, and (x) costs reimbursed by insurance or third parties.",
+          "interpretation": "Comprehensive exclusion list covering the most common improperly included items. Market-standard for Class A office leases."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "In addition to the exclusions set forth above, Operating Expenses shall not include: (a) any expense arising from Landlord's negligence or willful misconduct; (b) fines, penalties, or interest for late payment of any expense; (c) charitable contributions; (d) art purchases or rentals; (e) political contributions or lobbying costs; (f) costs of environmental remediation; (g) costs of ADA compliance for the base building; (h) any cost that would not be incurred by a prudent owner of a comparable building; and (i) reserves for future expenses.",
+          "interpretation": "Exhaustive exclusion list with prudent-owner standard. Captures edge cases frequently found in audits (art, donations, reserves, environmental). Gold-standard tenant protection."
+        }
+      ],
+      "calculationMethodology": "1. After applying the inclusion test, review each included expense against the exclusion list. 2. Remove any expense that matches an exclusion category. 3. For gray-area items, apply the reasonableness or prudent-owner standard if applicable. 4. For insurance or third-party reimbursed costs, net the reimbursement against the gross expense before allocating. 5. Document the exclusion analysis for audit support.",
+      "draftingErrors": [
+        "Using a non-exhaustive exclusion list while the inclusion list says 'all costs without limitation': the inclusion language swallows the exclusion carve-outs",
+        "Not excluding above-market fees to landlord affiliates: allows self-dealing in management, insurance brokerage, and construction management",
+        "Failing to exclude reserves: landlord bills for future expenses not yet incurred, inflating current-year CAM",
+        "Not addressing environmental remediation: a single cleanup event could dwarf annual operating expenses"
+      ],
+      "relevantCases": [
+        {
+          "name": "Inland Western Retail v. CVS Pharmacy",
+          "citation": "N.D. Ill. (2019)",
+          "year": 2019,
+          "summary": "Landlord included $340K in environmental testing and remediation in CAM charges. Tenant's lease excluded 'costs arising from hazardous materials on the property.' Court ordered full refund plus interest."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, exclusions are typically managed by not assigning the relevant GL codes to recovery pools. Common error: assigning a GL code that should be excluded (e.g., legal fees, corporate overhead) to a recovery pool by mistake. In MRI, exclusions are managed through charge code mapping: run a periodic reconciliation of charge codes vs. lease exclusion lists to catch mapping errors.",
+      "notes": "A strong exclusion list is the tenant's primary protection against overbilling. The most frequently violated exclusions are: above-market affiliate fees, reserves, and costs that should be capitalized. CapVeri's lease compliance engine checks each expense line against the exclusion list from the lease abstract.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "proportionate-share-definition",
+      "title": "Proportionate Share Definition",
+      "description": "The formula for calculating each tenant's percentage share of operating expenses, typically based on the ratio of tenant's rentable area to total building rentable area.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Tenant's Proportionate Share shall be a fraction, the numerator of which is the Rentable Area of the Premises and the denominator of which is the total Rentable Area of the Building as reasonably determined by Landlord from time to time. As of the Commencement Date, Tenant's Proportionate Share is estimated to be 8.50%.",
+          "interpretation": "Landlord has discretion to remeasure and change the denominator. 'From time to time' language allows adjustments that could increase tenant's share. No BOMA standard specified."
+        },
+        {
+          "label": "Balanced",
+          "language": "Tenant's Proportionate Share shall be 8.50%, calculated as the Rentable Area of the Premises (12,750 RSF) divided by the total Rentable Area of the Building (150,000 RSF), measured in accordance with BOMA 2017 (ANSI/BOMA Z65.1-2017). The Proportionate Share shall be adjusted only if the Building is expanded or the Premises are remeasured by mutual agreement.",
+          "interpretation": "Fixed percentage with BOMA measurement standard. Can only change on expansion or mutual remeasurement. Tenant has certainty over their share."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Tenant's Proportionate Share is fixed at 8.50% for the Term and all renewal periods. The Proportionate Share shall not be adjusted for any reason, including remeasurement, expansion of the Building, or change in the BOMA standard. If the Building is expanded, Tenant's Proportionate Share shall be recalculated using the expanded building SF as the denominator, resulting in a lower percentage.",
+          "interpretation": "Locked share that can only decrease (on expansion). No remeasurement risk. Maximum certainty. Landlord bears measurement risk."
+        }
+      ],
+      "calculationMethodology": "1. Measure Premises rentable area per the agreed standard (BOMA 2017 or 2024). 2. Measure total Building rentable area per the same standard. 3. Divide Premises by Building total: Proportionate Share = Premises RSF / Building RSF. 4. Apply the resulting percentage to each recoverable expense category. 5. If the lease has separate pools (e.g., retail CAM vs. office CAM), calculate separate proportionate shares for each pool.",
+      "draftingErrors": [
+        "Not specifying the measurement standard (BOMA 2017 vs. 2024): can create a 5-10% difference in rentable area calculations",
+        "Using 'Gross Leasable Area' interchangeably with 'Rentable Area': these are different measurements in retail vs. office contexts",
+        "Failing to address how the denominator changes when space is taken out of service for renovation or when the building is expanded",
+        "Not specifying whether storage rooms, parking structures, or outdoor areas are included in the denominator"
+      ],
+      "relevantCases": [
+        {
+          "name": "Boston Properties v. Lennar Partners",
+          "citation": "Mass. Super. Ct. (2021)",
+          "year": 2021,
+          "summary": "Landlord remeasured building from BOMA 1996 to BOMA 2017 standards, reducing the denominator by 4% and increasing all tenant proportionate shares. Court held the lease specified 'BOMA standards' without a version, allowing the update. Tenant's share increased from 12.3% to 12.8%."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, proportionate share is entered in the lease abstract and applied to recovery pools. Common error: manually overriding the share for 'adjusted' billing without updating the lease abstract, creating a permanent discrepancy. In MRI, the pro rata share is calculated from the square footage entries: verify that both Premises SF and Building SF match the lease and that the BOMA measurement methodology is documented.",
+      "notes": "Proportionate share errors are the most straightforward billing error to detect and the hardest to defend. A 0.5% error in proportionate share affects every dollar of CAM over the lease term. CapVeri validates proportionate share calculations against lease terms and flags discrepancies between the stated percentage and the SF-based calculation.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "tax-escalation",
+      "title": "Tax Escalation",
+      "description": "Provisions governing how real estate tax increases are passed through to tenants, including base year treatment, assessment challenges, and tax abatement sharing.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Tenant shall pay Tenant's Proportionate Share of all Real Estate Taxes, including any increases resulting from reassessment, without reduction for any tax abatement, exemption, or incentive obtained by Landlord. Landlord shall have no obligation to challenge any tax assessment.",
+          "interpretation": "Full pass-through with no obligation to contest. Tax abatements retained by landlord. Tenant bears full risk of assessment increases."
+        },
+        {
+          "label": "Balanced",
+          "language": "Tenant shall pay Tenant's Proportionate Share of Real Estate Taxes in excess of Base Year Real Estate Taxes. If Landlord obtains a tax abatement or reduction through protest, the benefit shall be shared proportionately with Tenant (net of Landlord's costs of obtaining the reduction). Landlord shall use commercially reasonable efforts to protest assessments that exceed market value.",
+          "interpretation": "Base year with abatement sharing. Landlord required to make commercially reasonable efforts to contest above-market assessments. Net savings shared after protest costs."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Tenant shall pay Tenant's Proportionate Share of Real Estate Taxes in excess of Base Year Taxes, provided that (i) Base Year Taxes shall be normalized to reflect a fully assessed, fully completed Building; (ii) any tax abatement or incentive shall reduce Tenant's share dollar-for-dollar; and (iii) if Landlord fails to timely protest a tax assessment that exceeds market value by more than ten percent (10%), Tenant may protest at Landlord's cost.",
+          "interpretation": "Normalized base year for new buildings. Full abatement pass-through. Tenant has self-help right to protest if landlord fails to act."
+        }
+      ],
+      "calculationMethodology": "1. Determine current year Real Estate Taxes (all ad valorem taxes, special assessments, and charges). 2. Subtract Base Year Real Estate Taxes (if applicable). 3. If taxes were protested and reduced, adjust current year taxes to reflect the reduction, net of protest costs. 4. If tax abatement applies, reduce taxes by abatement amount per lease terms. 5. Multiply the excess (or total, for NNN) by Tenant's Proportionate Share.",
+      "draftingErrors": [
+        "Not normalizing base year taxes for a newly assessed building: first-year taxes may be based on unimproved land value, creating a misleadingly low base",
+        "Failing to address tax abatements and incentives: landlord obtains an abatement but passes through the pre-abatement amount",
+        "Not specifying whether special assessments (improvement districts, BIDs) are included in 'Real Estate Taxes'",
+        "Omitting treatment of supplemental tax bills that arrive after the reconciliation year closes"
+      ],
+      "relevantCases": [
+        {
+          "name": "Vornado Realty v. NYC Dept. of Finance",
+          "citation": "N.Y. Tax Appeals Tribunal (2018)",
+          "year": 2018,
+          "summary": "Landlord failed to pass through tax abatement benefits to tenants. Tenants sued and court ordered retroactive sharing of ICAP abatement benefits for 10 years, totaling $12.8M in refunds across 47 tenants."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, real estate taxes are typically tracked in a separate recovery pool with their own base year. Common error: not updating the tax amount when a protest succeeds retroactively: the refund must be allocated back to tenants. In MRI, tax escalation is modeled in the Tax Pass-Through module: verify that supplemental and retroactive adjustments flow through to tenant billings and that any abatement credits are properly applied.",
+      "notes": "Real estate taxes are typically the largest single operating expense, often 30-50% of total CAM. Tax escalation errors tend to be large-dollar items. The most common error is failing to share tax protest savings with tenants or not normalizing base year taxes for new construction. CapVeri flags tax pass-throughs that exclude known abatements.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "insurance-pass-through",
+      "title": "Insurance Pass-Through",
+      "description": "Provisions governing how property insurance premiums are allocated to tenants, including coverage scope, carrier selection, and premium increase limitations.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Operating Expenses shall include all insurance premiums for insurance carried by Landlord with respect to the Building and the Land, including property, liability, umbrella, earthquake, flood, terrorism, environmental, and any other coverage Landlord deems necessary or advisable. Landlord shall determine the appropriate coverage types and limits in its sole discretion.",
+          "interpretation": "Broad discretion on coverage types and limits. Includes optional coverages (earthquake, terrorism) at landlord's sole election. No market-rate limitation."
+        },
+        {
+          "label": "Balanced",
+          "language": "Operating Expenses shall include premiums for commercially reasonable insurance covering the Building, including property (replacement value), commercial general liability ($5M per occurrence), and such other coverages as are customarily carried by owners of comparable buildings in the metropolitan area. If the premium increases by more than fifteen percent (15%) in any year, Landlord shall obtain competitive quotes from at least two (2) carriers.",
+          "interpretation": "Market-based coverage standard. Competitive bidding requirement on large increases. Specific limit for liability. Prevents gold-plating."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Insurance included in Operating Expenses shall be limited to: (i) property insurance at replacement value, (ii) commercial general liability ($5M per occurrence), and (iii) umbrella coverage ($10M). Premium increases exceeding ten percent (10%) per year shall be excluded from Operating Expenses to the extent exceeding such threshold. Earthquake, flood, and terrorism insurance shall not be included absent written consent of tenants occupying more than fifty percent (50%) of the Building.",
+          "interpretation": "Enumerated coverage types only. Premium increase cap at 10%. Optional coverages require majority tenant consent. Maximum protection against premium volatility."
+        }
+      ],
+      "calculationMethodology": "1. Compile all insurance premiums paid by Landlord for the Building. 2. Verify each policy type falls within the lease's permitted coverage scope. 3. If premium increase exceeds lease threshold, cap at the permitted amount. 4. Net out any insurance proceeds received for the coverage year. 5. Allocate premiums to tenants per their proportionate share. 6. For base year leases, pass through only the increase above base year premiums.",
+      "draftingErrors": [
+        "Not enumerating permitted coverage types: allows landlord to add exotic coverages (cyber, pollution) at tenant's expense",
+        "Failing to require competitive bidding: landlord may use an affiliated broker with above-market premiums",
+        "Not addressing terrorism (TRIA) insurance: post-9/11, this can be a significant cost that should be explicitly included or excluded",
+        "Omitting treatment of insurance deductibles: a high deductible reduces premiums but shifts risk to the self-insured retention, which may be billed as a loss expense"
+      ],
+      "relevantCases": [
+        {
+          "name": "Mack-Cali Realty v. Hartford Financial",
+          "citation": "D.N.J. (2017)",
+          "year": 2017,
+          "summary": "Landlord added terrorism insurance post-lease signing and passed through the $180K premium as an operating expense. Court held the lease's insurance provision was broad enough to include TRIA coverage, as it permitted 'such other coverages as are customary.'"
+        }
+      ],
+      "billingSystemImplications": "In Yardi, insurance premiums are assigned to a GL code within the operating expense recovery pool. Common error: including the full annual premium in the month it's paid rather than spreading it across 12 months: creates timing mismatches in monthly estimates. In MRI, insurance is typically a manual entry in the Recovery Analysis: verify that premium allocation matches the policy period, not the payment date.",
+      "notes": "Insurance premiums have increased significantly since 2020, with many markets seeing 20-50% annual increases. This has made insurance pass-through provisions much more contentious. CapVeri benchmarks insurance premiums per SF against market data to flag above-market charges.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "utility-sub-metering",
+      "title": "Utility Sub-Metering",
+      "description": "Provisions governing whether tenants pay for utilities through direct metering, sub-metering, or as part of the operating expense pool, and how excess usage is allocated.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Tenant shall pay for all utilities consumed in the Premises as measured by the Building's sub-meters. Landlord shall charge Tenant at Landlord's actual cost plus a fifteen percent (15%) administrative fee. Common area utility costs shall be allocated to Tenant based on Tenant's Proportionate Share.",
+          "interpretation": "Sub-metered with 15% administrative markup. Common area utilities still allocated pro rata. Landlord profits on the administrative fee."
+        },
+        {
+          "label": "Balanced",
+          "language": "The Premises are sub-metered for electricity. Tenant shall pay for electricity consumed in the Premises at the utility company's published rate applicable to the Building. Tenant's share of common area electricity shall be allocated based on Tenant's Proportionate Share. HVAC during Building Operating Hours is included in Base Rent.",
+          "interpretation": "Sub-metered at published utility rates (no markup). Standard-hours HVAC in base rent. Only after-hours and excess usage billed separately."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Utilities for the Premises shall be directly metered. Tenant shall contract directly with the utility provider and pay the utility company directly. Tenant shall have no obligation to pay any portion of common area utility costs through Operating Expenses, as such costs are included in Base Rent.",
+          "interpretation": "Direct metering with direct utility relationship. Common area utilities included in base rent. Complete separation from operating expense pool."
+        }
+      ],
+      "calculationMethodology": "1. Read sub-meter (or direct meter) for tenant's premises usage. 2. Determine the applicable utility rate (published tariff or landlord's blended rate). 3. Calculate premises utility cost: usage \u00c3 - rate (+ admin fee if applicable). 4. Calculate common area utility cost for the building. 5. Allocate common area cost to tenant per proportionate share. 6. Total tenant utility charge = premises usage + common area share.",
+      "draftingErrors": [
+        "Not specifying the utility rate: landlord charges retail rates while paying wholesale, pocketing the spread",
+        "Failing to define which utilities are sub-metered vs. allocated by pro rata share: inconsistent treatment creates audit issues",
+        "Not addressing utility rate increases: tenant may argue landlord should absorb rate increases as part of base rent",
+        "Omitting after-hours HVAC provisions: standard-hours HVAC is usually in base rent, but after-hours charges are separately billed"
+      ],
+      "relevantCases": [
+        {
+          "name": "Paramount Group v. WeWork",
+          "citation": "N.Y. Sup. Ct. (2021)",
+          "year": 2021,
+          "summary": "High-density tenant consumed 3x average electricity per SF. Landlord's sub-meters showed $4.2M in excess usage. Court upheld sub-meter charges, finding WeWork's usage exceeded building design capacity."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, sub-metered utilities can be billed through the Utility Billing module or as a recovery item. Common error: double-billing utilities: including sub-metered premises costs in both the direct utility billing and the operating expense pool. In MRI, utility billing is typically handled outside the Recovery Analysis module: verify that sub-metered utility charges are excluded from the operating expense recovery pool to prevent double-counting.",
+      "notes": "Utility billing errors are common in mixed-use and multi-tenant buildings. The most frequent error is double-counting: billing a tenant for sub-metered usage AND allocating their pro rata share of total building utilities through CAM. CapVeri flags buildings where sub-metered tenants are also allocated utility costs through the operating expense pool.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "after-hours-hvac",
+      "title": "After-Hours HVAC",
+      "description": "Provisions governing heating, ventilation, and air conditioning service outside standard building operating hours, including hourly rates, minimum charges, and advance notice requirements.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "HVAC service outside Building Operating Hours (8:00 AM - 6:00 PM weekdays, 8:00 AM - 1:00 PM Saturdays) shall be available upon twenty-four (24) hours advance request at Landlord's then-current hourly rate. The initial rate is $75.00 per hour per zone, with a four (4) hour minimum. Landlord may adjust the rate annually to reflect actual costs.",
+          "interpretation": "High hourly rate with 4-hour minimum. Narrow standard hours (no Saturday afternoons). Landlord can increase rate annually without cap."
+        },
+        {
+          "label": "Balanced",
+          "language": "HVAC during Building Operating Hours (8:00 AM - 7:00 PM weekdays, 9:00 AM - 1:00 PM Saturdays) is included in Operating Expenses. After-hours HVAC is available at Tenant's request at Landlord's cost (including electricity, equipment depreciation, and labor), currently estimated at $50.00 per hour per zone, subject to annual adjustment based on actual cost changes, with a two (2) hour minimum.",
+          "interpretation": "Cost-based pricing with transparent components. Extended weekday hours. 2-hour minimum. Annual adjustment tied to actual costs, not landlord's discretion."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "HVAC during Building Operating Hours (7:00 AM - 8:00 PM weekdays, 8:00 AM - 2:00 PM Saturdays) is included in Base Rent. After-hours HVAC shall be provided at actual incremental cost (electricity only, as determined by the Building's energy management system), not to exceed $35.00 per hour per zone (increased annually by CPI). No minimum charge. Tenant may request after-hours HVAC via the Building's automated system.",
+          "interpretation": "Long standard hours. Electricity-only cost (no equipment or labor allocation). Dollar cap with CPI escalation. No minimum. Automated ordering."
+        }
+      ],
+      "calculationMethodology": "1. Define standard Building Operating Hours per the lease. 2. Track after-hours HVAC requests by tenant (date, time, duration, zones). 3. Calculate cost per hour: electricity consumption \u00c3 - rate + equipment wear allocation + labor (if applicable). 4. Apply minimum charge if usage is below minimum. 5. Multiply hourly rate by actual hours (rounded up to minimum). 6. Bill tenant directly: after-hours HVAC is typically a direct charge, not part of the CAM pool.",
+      "draftingErrors": [
+        "Not defining 'Building Operating Hours' precisely: disputes arise over holiday schedules and whether Saturday hours are standard",
+        "Failing to specify the cost basis (electricity-only vs. fully-loaded): can create a 40-60% difference in hourly rate",
+        "Not including a rate cap or adjustment methodology: hourly rates can increase without limit",
+        "Omitting provisions for shared zones: when one tenant's after-hours request benefits adjacent tenants, who pays?"
+      ],
+      "relevantCases": [
+        {
+          "name": "Tishman Speyer v. Deloitte LLP",
+          "citation": "N.Y. Sup. Ct. (2019)",
+          "year": 2019,
+          "summary": "Tenant disputed $2.1M in annual after-hours HVAC charges, arguing landlord's fully-loaded rate included capital equipment depreciation. Court held the lease permitted only 'incremental costs,' limiting recovery to electricity and labor."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, after-hours HVAC is typically billed through a separate charge code, not through the recovery billing module. Common error: including after-hours HVAC revenue in the operating expense pool as a credit, which reduces all tenants' CAM but only benefits the requesting tenant. In MRI, after-hours HVAC is a tenant-specific charge: verify it is excluded from the Recovery Analysis pool and billed as a direct tenant charge.",
+      "notes": "After-hours HVAC charges are a significant expense for tenants with non-standard operating hours (law firms, financial services). The fully-loaded vs. incremental cost distinction can represent a 50%+ difference in the hourly rate. CapVeri flags after-hours HVAC charges that exceed market benchmarks for the building class.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "marketing-fund",
+      "title": "Marketing / Promotion Fund",
+      "description": "Common in retail leases, provisions requiring tenants to contribute to a shared marketing, advertising, and promotional fund for the shopping center, separate from CAM charges.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Tenant shall pay a Marketing Fund contribution of $2.00 per SF per annum, increasing by five percent (5%) annually. Landlord shall administer the Marketing Fund in its sole discretion and shall have no obligation to account for Fund expenditures.",
+          "interpretation": "Fixed per-SF charge with automatic escalation. No accountability for fund usage. Landlord has complete discretion over marketing spend."
+        },
+        {
+          "label": "Balanced",
+          "language": "Tenant shall contribute to the Shopping Center Marketing Fund an amount equal to Tenant's Proportionate Share of actual Marketing Fund expenditures, not to exceed $1.50 per SF per annum. Landlord shall provide an annual accounting of Marketing Fund expenditures and shall spend the Fund exclusively on marketing, advertising, and promotional activities for the Shopping Center.",
+          "interpretation": "Pro rata share of actual expenditures with per-SF cap. Annual accounting required. Expenditures limited to marketing purposes."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Tenant's Marketing Fund contribution shall not exceed $1.00 per SF per annum. Landlord shall establish a Marketing Fund Advisory Committee including tenant representatives. The Fund shall be held in a separate account and used solely for marketing and promotional activities directly benefiting the Shopping Center. Landlord shall provide quarterly reports of Fund activity.",
+          "interpretation": "Low per-SF cap. Tenant advisory committee provides governance. Separate accounting. Quarterly reporting. Transparent management."
+        }
+      ],
+      "calculationMethodology": "1. Determine total Marketing Fund budget for the year. 2. Calculate each tenant's contribution: either fixed per-SF amount or proportionate share of actual expenditures. 3. Apply any per-SF cap or annual increase limitation. 4. Bill tenants monthly (1/12 of annual estimate) or quarterly. 5. Reconcile at year-end if based on actual expenditures. 6. Account for Marketing Fund separately from Operating Expenses.",
+      "draftingErrors": [
+        "Not specifying whether the marketing fund is separate from or included in CAM charges: can lead to double-counting if included in both",
+        "Failing to require separate accounting: allows landlord to commingle marketing fund with general operating funds",
+        "Not defining 'marketing activities': landlord may use the fund for general property improvements disguised as marketing",
+        "Omitting anchor tenant obligations: if anchors don't contribute to the fund, the burden falls disproportionately on in-line tenants"
+      ],
+      "relevantCases": [
+        {
+          "name": "Westfield Corp. v. Gap Inc.",
+          "citation": "Cal. App. 2d Dist. (2016)",
+          "year": 2016,
+          "summary": "Tenant argued marketing fund was used for security improvements and holiday decorations exceeding $500K, not traditional marketing. Court found lease's broad definition of 'promotional activities' encompassed decorations but not security."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, marketing fund charges should be configured as a separate billing pool, not included in the CAM recovery pool. Common error: including marketing fund contributions in the operating expense pool, which means they are subject to CAM caps and exclusions when they should be a separate charge. In MRI, use a distinct charge code and billing category for marketing fund: verify it does not flow into the Recovery Analysis for CAM.",
+      "notes": "Marketing funds are unique to retail leases and are frequently misclassified in billing systems. The most common error is including marketing fund charges in the CAM pool, which subjects them to CAM caps (reducing landlord recovery) and creates confusion in reconciliation statements.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "parking-maintenance",
+      "title": "Parking Area Maintenance",
+      "description": "Provisions governing maintenance, repair, and replacement costs for parking structures and surface lots, including allocation between tenants and treatment of capital repairs.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Operating Expenses shall include all costs of operating, maintaining, repairing, and resurfacing the Parking Facility, including without limitation striping, lighting, signage, security, cleaning, snow removal, structural repairs, and the annual amortization of capital improvements to the Parking Facility over their useful life.",
+          "interpretation": "Comprehensive inclusion of all parking costs including structural repairs and capital amortization. No distinction between surface lot and structured parking. No cap on capital amortization."
+        },
+        {
+          "label": "Balanced",
+          "language": "Operating Expenses shall include costs of maintaining the Parking Facility, including routine maintenance, cleaning, lighting, striping, and snow removal. Structural repairs and resurfacing shall be treated as Capital Expenditures and amortized per Section X. If the Parking Facility generates net revenue from paid parking, such revenue shall offset parking Operating Expenses before allocation to tenants.",
+          "interpretation": "Routine maintenance included; structural and resurfacing capital items amortized. Parking revenue offsets costs. Balanced allocation."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Tenant's parking rights are included in Base Rent. Parking Facility maintenance costs shall not be included in Operating Expenses. If Landlord generates revenue from the Parking Facility (monthly permits, hourly rates, or event parking), such revenue shall be credited against Operating Expenses.",
+          "interpretation": "Parking maintenance in base rent. Revenue credit to operating expenses. Tenant has no exposure to parking cost increases."
+        }
+      ],
+      "calculationMethodology": "1. Compile all Parking Facility expenses: maintenance, cleaning, security, lighting, snow removal, repairs. 2. Classify major items as operating or capital per lease terms. 3. For capital items, apply amortization schedule per lease. 4. If parking generates revenue, net revenue against gross parking expenses. 5. Allocate net parking costs to tenants per their proportionate share (or per parking space allocation if lease specifies).",
+      "draftingErrors": [
+        "Not distinguishing between surface lot and structured parking costs: structural maintenance for garages is 5-10x more expensive than surface lot maintenance",
+        "Failing to address parking revenue offset: landlord profits from paid parking while passing all maintenance costs to tenants",
+        "Not specifying whether parking space allocation affects pro rata share: a tenant with no parking spaces may still pay for parking maintenance",
+        "Omitting treatment of parking structure capital reserves: deferred maintenance on parking garages can create large one-time charges"
+      ],
+      "relevantCases": [
+        {
+          "name": "Federal Realty v. Nordstrom",
+          "citation": "Montgomery County Circuit Court (2020)",
+          "year": 2020,
+          "summary": "Landlord passed through $3.2M parking garage structural repair as an operating expense. Court held it was a capital expenditure subject to the lease's amortization requirement. Tenant's annual share reduced from $180K to $28K."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, parking costs can be allocated through the operating expense recovery pool or through a separate parking-specific pool. Common error: including parking revenue as a GL credit in the operating expense pool without matching it to parking expenses, which reduces total CAM for all tenants even if parking costs are a separate charge. In MRI, maintain separate allocation groups for parking expenses if the lease treats parking differently from other operating expenses.",
+      "notes": "Parking maintenance is an increasingly significant expense, particularly for structured parking which can cost $150-300/space annually for routine maintenance plus $3,000-5,000/space for major capital repairs amortized over time. CapVeri flags parking expenses that are inconsistent with the property's parking type (surface vs. structured) and benchmarks.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "percentage-rent-offset",
+      "title": "Percentage Rent Offset",
+      "description": "Provisions in retail leases allowing tenants to offset CAM charges against percentage rent obligations, or vice versa, reducing total occupancy cost when sales-based rent is triggered.",
+      "variations": [
+        {
+          "label": "Landlord-Favorable",
+          "language": "Percentage Rent and all Operating Expense charges shall be calculated and paid independently. No offset or credit between Percentage Rent and any other charge under this Lease shall be permitted.",
+          "interpretation": "No offset. Tenant pays both percentage rent and full CAM charges independently. Simplest for landlord but highest total occupancy cost for tenant."
+        },
+        {
+          "label": "Balanced",
+          "language": "If Tenant's total occupancy cost (Base Rent + Operating Expenses + Percentage Rent) exceeds the Natural Breakpoint Rent, Tenant may offset Operating Expense charges against Percentage Rent to the extent such charges would cause total occupancy cost to exceed Natural Breakpoint Rent plus Operating Expenses.",
+          "interpretation": "Offset available when total occupancy cost exceeds natural breakpoint. Prevents double-charging: tenant shouldn't pay percentage rent AND full CAM on the same sales dollars."
+        },
+        {
+          "label": "Tenant-Favorable",
+          "language": "Tenant's Percentage Rent shall be reduced dollar-for-dollar by Tenant's total Operating Expense charges (including CAM, taxes, insurance, and marketing fund contributions). In no event shall the combined Operating Expenses and Percentage Rent for any year exceed the Percentage Rent that would have been payable absent any Operating Expense charges.",
+          "interpretation": "Full dollar-for-dollar offset. CAM charges directly reduce percentage rent. Tenant's total exposure is capped at what percentage rent alone would have been."
+        }
+      ],
+      "calculationMethodology": "1. Calculate Percentage Rent: (Gross Sales - Breakpoint) \u00c3 - Percentage Rate. 2. Calculate total Operating Expenses (CAM + taxes + insurance). 3. If offset applies: determine total occupancy cost (Base Rent + OpEx + Percentage Rent). 4. Apply the offset formula per lease terms (usually reduce Percentage Rent by OpEx amount). 5. Tenant's total due = Base Rent + the greater of (i) Percentage Rent minus OpEx offset or (ii) zero, plus any non-offsetable charges.",
+      "draftingErrors": [
+        "Not defining 'Natural Breakpoint': creates ambiguity over the offset trigger point",
+        "Failing to specify which charges are eligible for offset: does the offset include marketing fund, taxes, and insurance, or just CAM?",
+        "Not addressing the timing of offset calculations: percentage rent is usually based on annual sales reported after year-end, while CAM is estimated monthly",
+        "Omitting floor provisions: without a floor, a large CAM increase could eliminate all percentage rent, reducing landlord revenue in strong sales years"
+      ],
+      "relevantCases": [
+        {
+          "name": "Macerich Co. v. Williams-Sonoma",
+          "citation": "Cal. App. 4th Dist. (2018)",
+          "year": 2018,
+          "summary": "Tenant claimed CAM charges should offset percentage rent dollar-for-dollar. Lease was ambiguous on offset scope. Court applied California's rule of construction against drafter (landlord) and allowed full offset, reducing percentage rent by $340K."
+        }
+      ],
+      "billingSystemImplications": "In Yardi, percentage rent and CAM are calculated in separate modules (Percentage Rent module vs. Recovery Billing). Common error: failing to link the two modules so the offset is applied: percentage rent is billed at the full amount without deducting the CAM credit. In MRI, percentage rent offsets require manual configuration in the Percentage Rent Analysis: verify that the offset calculation is automated and reconciled annually.",
+      "notes": "Percentage rent offsets are complex and frequently miscalculated in retail properties. The most common error is billing percentage rent and CAM independently without applying the offset, resulting in tenant overpayment. CapVeri cross-references percentage rent and CAM billing to identify missing offsets.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/expenses/administrative-overhead",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-cap-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "capveri-app",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-06-12",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    // Run the Worker ahead of static-asset serving so withSecurityHeaders()
+    // (CSP, HSTS, X-Frame-Options, noindex) applies to real asset files like
+    // index.html ("/"), not just SPA-fallback routes. Without this, Cloudflare
+    // serves "/" straight from the asset cache and the security headers are absent.
+    "run_worker_first": true
+  },
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "VITE_API_URL": "https://api.capveri.com",
+    "VITE_AI_CS_BASE_URL": "https://ventora-ai-cs-worker.REPLACE_WITH_ACCOUNT_SUBDOMAIN.workers.dev"
+  },
+  "routes": [
+    {
+      "pattern": "app.capveri.com/*",
+      "zone_id": "REPLACE_WITH_ZONE_ID"
+    }
+  ]
+}

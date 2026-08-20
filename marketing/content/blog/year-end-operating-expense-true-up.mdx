@@ -1,0 +1,160 @@
+---
+title: "Year-End Operating Expense True-Up: Timing, Calculations, and Tenant Communication"
+description: "Complete guide to year-end operating expense true-ups for commercial landlords. When to run them, how to calculate the settlement amount, and how to communicate with tenants."
+excerpt: "The year-end operating expense true-up is the moment when estimated CAM payments meet actual expenses. Getting it right requires precise timing and clear communication."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "operations"
+faq:
+  - q: "What is a year-end operating expense true-up?"
+    a: "A year-end operating expense true-up (also called a CAM reconciliation settlement) is the annual calculation that compares what a tenant actually paid in estimated CAM charges during the year against what they were actually required to pay based on actual operating expenses. If they overpaid (estimated CAM was higher than their actual share), the landlord owes them a credit. If they underpaid (actual expenses were higher than estimates), the tenant owes an additional payment."
+  - q: "How long does a landlord have to deliver a year-end true-up statement?"
+    a: "The deadline varies by lease. Most commercial leases require the reconciliation statement within 90-120 days after the end of the fiscal year (typically March 31-April 30 for calendar-year leases). Some older leases allow 180 days. A few leases include a 'failure to reconcile' clause: if the landlord misses the deadline, they may waive their right to collect underpayments for that year. Always confirm the specific deadline in each lease before starting the reconciliation cycle."
+  - q: "What happens if the true-up shows a negative balance (tenant overpaid)?"
+    a: "If the true-up calculation shows the tenant overpaid estimated CAM during the year (actual CAM was lower than estimates), the landlord owes a credit or refund. Most leases specify that the credit is applied to the next month's CAM estimate rather than paid as cash, though some require a cash refund within 30 days. Check the lease payment mechanism for credits. The credit amount should appear clearly on the reconciliation statement, with the calculation showing both the annual actual CAM and the total estimates paid."
+---
+
+The year-end operating expense true-up is the settlement moment of commercial real estate leasing: the point where twelve months of estimated payments meet twelve months of actual expenses, and the difference (positive or negative) is settled between landlord and tenant. (For a precise look at the [difference between a true-up and a reconciliation](/blog/cam-true-up-vs-cam-reconciliation), the terms are related but not identical. See the dedicated comparison.)
+
+Done correctly, the true-up is a routine financial transaction supported by clear documentation. Done incorrectly, it's the beginning of a tenant dispute, an audit claim, or in the worst case, a legal challenge.
+
+## What a True-Up Actually Is
+
+Throughout the lease year, tenants pay monthly CAM estimates. These are fixed monthly amounts calculated at the beginning of the year based on budgeted operating expenses. They are the landlord's best forecast of what actual expenses will be.
+
+Actual expenses rarely match the forecast exactly. By the time the year ends and the books close, actual operating costs have been higher or lower than estimated, and the difference must be reconciled.
+
+The true-up calculation answers: **What did the tenant actually owe vs. what did they actually pay?**
+
+- **Actual CAM:** The tenant's pro-rata share of actual operating expenses for the year (after gross-up and cap adjustments)
+- **Estimated CAM paid:** The total of all monthly estimate payments the tenant made during the year
+- **True-up amount:** Actual CAM minus Estimated CAM paid
+
+A positive true-up amount means the tenant underpaid. They owe additional money. A negative true-up amount means they overpaid. The landlord owes a credit.
+
+## Timing Requirements
+
+The true-up timeline is governed by:
+
+**1. Fiscal year end:** The reconciliation period must be closed before calculations can be final. For calendar-year leases, this is December 31.
+
+**2. GL close:** The GL must be closed and all adjustments posted before GL data can be used for the reconciliation. For most commercial real estate organizations, GL close completes in January, sometimes extending into February for complex portfolios.
+
+**3. Lease deadline:** Most commercial leases specify the maximum time the landlord has to deliver the reconciliation statement after fiscal year end. This is typically 90-180 days. Missing this deadline can have consequences ranging from tenant delay rights to waiver of collection rights, depending on lease language.
+
+**Practical timeline for a March 31 deadline:**
+- January 1-15: GL close completes
+- January 15-31: Data gathering and ERP configuration verification
+- February 1 - March 15: Reconciliation calculations and statement drafting
+- March 15-31: Review, approval, and delivery
+
+This timeline assumes no significant rework cycles. Portfolios with ERP configuration issues, complex leases, or staff constraints often need to start earlier. In some cases that means beginning pre-close preparation in November.
+
+## The True-Up Calculation
+
+For a single tenant, the true-up calculation follows this structure:
+
+**Step 1: Determine actual recoverable expenses**
+
+Start with total operating expenses from the GL for the year. Subtract:
+- Capital expenditures (not recoverable unless lease specifically includes them)
+- Excluded expenses per lease terms (management fee caps, specific category exclusions)
+- Non-property expenses
+
+Add (if applicable):
+- Gross-up adjustment (if occupancy was below the lease threshold)
+
+Result: Total recoverable expenses
+
+**Step 2: Apply pro-rata share**
+
+Tenant actual CAM = Total recoverable expenses × (Tenant RSF / Denominator)
+
+Where the denominator is defined per the lease (total building RSF, floor RSF, occupied RSF, etc.).
+
+**Step 3: Apply cap (if applicable)**
+
+If the tenant has a CAM expense cap, calculate the cap limit:
+- Non-cumulative cap: Base year CAM × (1 + cap %)^years
+- Cumulative cap: Apply year-by-year with carryforward of unused headroom
+
+If capped actual CAM is lower than uncapped actual CAM, the capped amount is the final actual CAM.
+
+**Step 4: Calculate true-up amount**
+
+True-up = Final actual CAM - Total estimated CAM paid during the year
+
+**Example:**
+
+| Item | Amount |
+|---|---|
+| Total operating expenses | $850,000 |
+| Less: Excluded expenses (management fee cap) | ($25,000) |
+| Net recoverable expenses | $825,000 |
+| Gross-up adjustment (building at 88%, grossed to 95%) | $58,750 |
+| Grossed-up recoverable expenses | $883,750 |
+| Tenant pro-rata share (15,000 RSF / 120,000 RSF) | 12.5% |
+| Tenant actual CAM | $110,469 |
+| Less: Estimates paid (12 months × $8,500) | ($102,000) |
+| **True-up amount due from tenant** | **$8,469** |
+
+## Positive vs. Negative True-Ups
+
+**Positive true-up (tenant underpaid, balance due from tenant)**
+
+This is the most common outcome when operating costs rise faster than estimated. The tenant owes the difference, typically payable within 30 days of statement delivery.
+
+Communicate clearly: the statement should show both the actual CAM calculation and the estimates paid, so the tenant can verify the math. Opaque statements generate more disputes.
+
+**Negative true-up (tenant overpaid, credit due from landlord)**
+
+This occurs when actual expenses are lower than estimated, or when a cap applies and reduces actual CAM below the estimate level. The landlord owes a credit or refund.
+
+Handle this promptly and correctly. Delays in applying negative true-up credits are a common source of tenant complaints and can escalate to disputes. Check the lease for the credit mechanism: most specify application to next month's CAM estimate, but some require a cash payment.
+
+## Tenant Communication Best Practices
+
+**Statement format:** The reconciliation statement should include:
+- Clear header: property name, tenant name, lease period, statement date
+- Operating expense summary (total pool expenses by major category)
+- Gross-up calculation (if applicable): show the math, don't hide it
+- Pro-rata share (tenant RSF, denominator, resulting percentage)
+- Cap application (if applicable): show the cap limit and how it was calculated
+- Settlement calculation (actual CAM, estimates paid, balance due or credit)
+- Payment instructions and deadline (for positive true-ups)
+- Credit application method (for negative true-ups)
+
+**Cover letter:** Accompany every statement with a brief cover letter explaining:
+- The reconciliation period
+- Whether the statement shows a balance due or a credit
+- The deadline for payment (or when the credit will be applied)
+- Who to contact with questions
+
+**Timing:** Deliver all statements for a property on the same day when possible. Tenants in the same building talking to each other creates questions when one receives their statement weeks before another.
+
+**Response protocol:** Designate a single point of contact for tenant questions. Establish a response time standard (48-72 hours for routine questions) and communicate it to tenants in the cover letter.
+
+## Common True-Up Errors
+
+**Using wrong estimate amounts:** The total estimates paid should come from the lease's billing record (actual invoices issued), not from the budgeted estimate. If a mid-year adjustment was made to the estimate, the correct total is the sum of actual monthly charges, not the original annual estimate.
+
+**Missing lease review deadlines:** Some leases require that any adjustments to the true-up be communicated within a specific window. Missing that window may limit your ability to correct errors.
+
+**Incorrect gross-up methodology:** True-up calculations using Physical occupancy when the lease requires Economic, or using wrong gross-up thresholds, are among the most common and most significant errors. Verify gross-up methodology against lease terms before calculating.
+
+**Cap base year errors:** True-up calculations that use the wrong cap base year (particularly after lease renewals) produce incorrect cap limits and potentially over- or under-collect from tenants.
+
+CapVeri's reconciliation statement generator handles the full true-up calculation (gross-up, cap application, pro-rata share, and settlement amount) from your GL export and lease terms, with audit-ready documentation for every step.
+
+## Related Resources
+
+- [Year-End CAM Reconciliation Workflow](/cam-reconciliation-guide)
+- [What Is CAM Reconciliation?](/resources/common-area-maintenance-reconciliation-explained)
+- [Reconciliation Statement Generator](/tools/reconciliation-statement-generator)
+
+## Sources
+
+1. [Fiserv - Reconciliation whitepaper](https://www.fiserv.com/content/dam/fiserv-ent/archive-files/final-files/white-papers/Frontier-Reconciliation_whitepaper_1020.pdf)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

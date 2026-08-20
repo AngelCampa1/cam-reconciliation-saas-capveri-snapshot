@@ -1,0 +1,106 @@
+---
+title: "AI-Assisted GL Analysis for CAM Reconciliation"
+description: "CapVeri's GL analysis reviews your general ledger for CapEx/OpEx misclassification, non-recoverable expenses per BOMA 2024, and audit risk patterns, before the reconciliation goes out."
+datePublished: "2026-02-27"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+buttonText: "See How It Works"
+order: 11
+faq:
+  - q: "What does the GL narrative analysis actually do?"
+    a: "CapVeri's GL analysis reviews your general ledger entries, grouped by account code, for three categories of risk: CapEx items expensed to CAM operating pools (a common dispute trigger under GAAP ASC 840/842 and IRS Rev. Proc. 2015-82), non-recoverable expenses that should be excluded per BOMA 2024 and standard lease exclusion lists, and spending patterns tenant auditors typically flag first (mid-year vendor spikes, management fee overages, admin double-billing). It never modifies your calculations. Every finding is advisory. You review it and decide what, if anything, to change."
+  - q: "Is my GL data sent to OpenAI or stored by Anthropic?"
+    a: "Only to Anthropic's Claude API, and only under Zero Data Retention. That means Anthropic does not store the data and does not use it to train models. CapVeri sends account-code level aggregates, not individual transaction line items. Raw transaction data never leaves your environment."
+  - q: "Can I trust the GL analysis findings to be accurate?"
+    a: "The findings are advisory signals, not conclusions. CapVeri's GL analysis reads account names and spending patterns and flags what looks like a potential problem. A $42,000 charge coded to a maintenance account with 'roof' in the name is worth a second look. It may be a legitimate operating repair or a capital improvement that should be excluded. You make that call. The financial math in your reconciliation does not change unless you explicitly change it."
+  - q: "What expenses are non-recoverable in a CAM reconciliation?"
+    a: "Under BOMA 2024 standards, non-recoverable expenses typically include capital improvements and replacements (as distinguished from repairs and maintenance), leasing commissions and tenant improvement allowances, costs to attract or retain tenants, ground floor retail lobbies exclusively serving a single tenant, and expenses caused by the landlord's negligence. Management fees are sometimes partially non-recoverable depending on lease language. The specific exclusions vary by lease. GL analysis flags the accounts most likely to contain misclassified items for your review."
+  - q: "How do you detect CapEx misclassification in a CAM audit?"
+    a: "The IRS Tangible Property Regulations (Rev. Proc. 2015-82 safe harbors) and GAAP ASC 840/842 define the line between a capital expenditure and a deductible operating expense. In practice, the most common CAM audit dispute involves a structural repair (roofing systems, HVAC replacement, elevator modernization) that a landlord expensed as maintenance. CapVeri's GL analysis scans account names and descriptions for patterns that typically indicate capital work: terms like 'replacement,' 'renovation,' 'system upgrade,' or vendor invoice patterns inconsistent with routine maintenance frequency and cost range."
+  - q: "Does the GL analysis replace my accountant's review?"
+    a: "No. It's an advisory pre-flight that runs before your reconciliation is finalized. Think of it like a spell-checker on a contract. The attorney still reads every word, but the spell-checker catches obvious problems faster. CapVeri flags accounts that warrant a second look. Your team reviews those flags against the actual invoices and makes the call. The analysis is included in all paid plans at no extra charge."
+---
+
+<Alert type="info" title="Advisory Only">
+GL analysis is a pre-send review pass, not part of the calculation engine. The reconciliation math runs on CapVeri's deterministic Python. Same formulas, same output every time. The AI reads account names and spending patterns and flags what to double-check. It has no access to the calculation results.
+</Alert>
+
+## What GL Analysis Detects
+
+CapVeri's GL analysis runs a single advisory pass across your GL entries, grouped by account code, and flags three categories of risk.
+
+### CapEx/OpEx Misclassification
+
+Capital expenditures billed as operating expense are the first thing tenant auditors look for. The IRS Tangible Property Regulations (Rev. Proc. 2015-82) and GAAP ASC 840/842 draw a line between repairs that maintain existing functionality and improvements that extend useful life, add new functionality, or restore a major component. Roofing systems, HVAC replacement, elevator modernization, and major parking lot resurfacing are frequently expensed to CAM operating pools incorrectly.
+
+A single misclassified capital project can generate a five- or six-figure dispute. GL analysis scans for account names and spending patterns that match known CapEx profiles: "replacement," "renovation," "system upgrade," large one-time charges to maintenance accounts, vendor invoice patterns inconsistent with routine service frequency.
+
+### Non-Recoverable Expenses per BOMA 2024
+
+BOMA 2024 updated the classification of several building areas and expense categories. Under the revised standard, non-recoverable items typically include:
+
+- Capital improvements and full system replacements
+- Leasing commissions and tenant improvement allowances
+- Tenant attraction and retention costs
+- Costs caused by landlord negligence
+- Balconies and rooftop terraces reclassified under the Non-Allocated Tenant Area definition
+
+Many leases also include custom exclusion lists. GL analysis flags the accounts most likely to contain excluded items: management fee overruns, above-standard services, and ground-floor retail costs that don't share with the upper floors.
+
+### CAM Audit Risk Patterns
+
+Beyond misclassification, GL analysis also flags the behavioral patterns that trigger tenant disputes:
+
+**Mid-year vendor spikes.** A vendor charge that runs consistently from January through July, then doubles in August, is worth reviewing before a tenant's accountant notices it. The spike may be legitimate (a one-time service, a contract renegotiation, an emergency repair). But it needs documentation.
+
+**Management fee structure.** In some portfolios, management fees are calculated as a percentage of the full CAM pool before expenses are excluded. That means CapEx and non-recoverable costs can inflate the fee base. GL analysis flags the fee structure for review.
+
+**Admin double-billing.** Property management staff costs sometimes appear in both a direct labor line and an admin/overhead allocation. The second charge may or may not be appropriate depending on the lease language, but tenants and their auditors will flag it.
+
+## How It Works
+
+The workflow runs automatically when you upload your GL export to CapVeri.
+
+<Steps items={["Upload your GL export (same CSV you already pull from Yardi or MRI)", "CapVeri aggregates entries by account code and normalizes account names", "Claude reviews the aggregated data for CapEx patterns, exclusion flags, and audit risk signals", "An advisory panel appears in your reconciliation view with flagged items and rationale", "You review each flag, check the underlying invoices, and decide what to act on"]} />
+
+Anthropic's API receives account-code aggregates, not individual transaction records. Under Zero Data Retention, nothing is stored or used to train models.
+
+## Human Review Checkpoints
+
+Every GL finding needs a human review before the reconciliation changes. Use the advisory output as a queue, then verify the record behind each item:
+
+1. Open the source invoice or work order.
+2. Confirm whether the work repaired existing function or improved the asset.
+3. Check the lease exclusion list for the affected tenant group.
+4. Confirm whether the charge is in the correct pool.
+5. Decide whether the item should remain recoverable, be excluded, or be amortized if the lease allows recovery.
+6. Save the evidence with the reconciliation packet.
+
+This is why the feature is advisory only. The model can identify that "roof replacement" looks like a capital item, but it cannot decide recoverability without the lease, invoice, property context, and accounting judgment.
+
+## Data Boundary
+
+The GL pass is designed to minimize what leaves the application. CapVeri groups entries by account code and sends aggregate labels and spend patterns for review. The deterministic calculation engine remains separate. AI output does not write to the reconciliation, change tenant balances, or alter a ledger import.
+
+That separation matters for audit defense. A tenant can review the math without relying on a model explanation, and your team can review the advisory findings without risking accidental financial changes.
+
+## Why This Matters Before the Reconciliation Goes Out
+
+Tenant auditors look for CapEx misclassification before they look for anything else. It is the highest-yield dispute category. A single misclassified roofing project can generate a six-figure clawback, and it is the easiest to find because the account codes often give it away.
+
+The practical asymmetry: your tenants may be using platforms like Tango Analytics, Visual Lease, or LeaseQuery to review CAM charges. These are purpose-built tools for finding landlord billing errors. GL analysis is the landlord-side equivalent: a pre-send review pass that catches the same patterns before the statement is delivered.
+
+The cheapest dispute is the one that never happens. GL analysis is how you catch it first.
+
+<CTABox
+  headline="Run Your First GL Analysis Free"
+  subtext="Upload your GL export. CapVeri runs the math and the advisory review. No credit card, no integration needed. Results in minutes."
+  buttonText="Start Free Trial"
+  buttonHref="/onboard"
+/>
+
+## Sources
+
+1. IRS Section 162 routine maintenance safe harbor - [Cornell Law](https://www.law.cornell.edu/uscode/text/26/162)
+2. IRS Section 263(a) capital expenditures - [Cornell Law](https://www.law.cornell.edu/uscode/text/26/263)
+3. BOMA EER standards - [BOMA](https://boma.org/boma-standards/)

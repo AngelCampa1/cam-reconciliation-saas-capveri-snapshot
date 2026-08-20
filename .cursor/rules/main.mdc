@@ -1,0 +1,15 @@
+---
+alwaysApply: true
+---
+
+# Project Standards
+
+Always follow the core rules and prohibited behaviors in @CLAUDE.md.
+
+## Context-Specific References
+
+When working on:
+- **Backend code**: Also reference @docs/guides/coding-standards.md for Python patterns
+- **Frontend code**: Also reference @docs/guides/coding-standards.md for TypeScript/React patterns
+- **Domain/calculation logic**: Also reference @docs/guides/domain-knowledge.md for CAM/BOMA rules
+- **Stories**: Also reference @docs/guides/story-workflow.md for the complete workflow

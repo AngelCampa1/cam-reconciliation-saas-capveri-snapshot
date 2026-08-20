@@ -1,0 +1,130 @@
+{
+  "property": {
+    "id": "hou-01",
+    "name": "Eldridge Energy Center",
+    "address": "9805 Katy Freeway, Houston, TX 77024",
+    "total_rentable_sqft": 210000,
+    "total_usable_sqft": 178500,
+    "common_area_sqft": 31500,
+    "target_occupancy": 0.95,
+    "actual_occupancy_2024": 0.72,
+    "boma_standard_version": "BOMA_2024"
+  },
+  "prior_year_controllable_total": 273370.00,
+  "tenants": [
+    {
+      "tenant_name": "Murphy Oil Corporation",
+      "leased_sqft": 55000,
+      "pro_rata_share": 0.2619,
+      "lease_start": "2024-11-01",
+      "lease_end": "2034-10-31",
+      "status": "ACTIVE",
+      "base_year": 2024,
+      "cap_type": "non_cumulative",
+      "cap_rate": 0.05,
+      "gross_up_target_occupancy": 0.95,
+      "gross_up_trigger_occupancy": 0.90,
+      "variable_expense_accounts": ["5100.10","5100.20","5110.00","5200.10","5200.20","5200.30","5900.10"],
+      "uncontrollable_accounts": ["5700.10","5700.20","5800.10"],
+      "excluded_accounts": [],
+      "admin_fee_percentage": 0.10,
+      "admin_fee_excludes_tax_insurance": true
+    },
+    {
+      "tenant_name": "PetroTal",
+      "leased_sqft": 16892,
+      "pro_rata_share": 0.0804,
+      "lease_start": "2024-03-01",
+      "lease_end": "2029-02-28",
+      "status": "ACTIVE",
+      "base_year": 2024,
+      "cap_type": "non_cumulative",
+      "cap_rate": 0.05,
+      "gross_up_target_occupancy": 0.95,
+      "gross_up_trigger_occupancy": 0.90,
+      "variable_expense_accounts": ["5100.10","5100.20","5110.00","5200.10","5200.20","5200.30","5900.10"],
+      "uncontrollable_accounts": ["5700.10","5700.20","5800.10"],
+      "excluded_accounts": [],
+      "admin_fee_percentage": 0.10,
+      "admin_fee_excludes_tax_insurance": true
+    },
+    {
+      "tenant_name": "Thyssenkrupp Industrial",
+      "leased_sqft": 41880,
+      "pro_rata_share": 0.1994,
+      "lease_start": "2023-01-01",
+      "lease_end": "2030-12-31",
+      "status": "ACTIVE",
+      "base_year": 2023,
+      "cap_type": "non_cumulative",
+      "cap_rate": 0.05,
+      "gross_up_target_occupancy": 0.95,
+      "gross_up_trigger_occupancy": 0.90,
+      "variable_expense_accounts": ["5100.10","5100.20","5110.00","5200.10","5200.20","5200.30","5900.10"],
+      "uncontrollable_accounts": ["5700.10","5700.20","5800.10"],
+      "excluded_accounts": [],
+      "admin_fee_percentage": 0.15,
+      "admin_fee_excludes_tax_insurance": true
+    },
+    {
+      "tenant_name": "Subsea 7",
+      "leased_sqft": 21000,
+      "pro_rata_share": 0.1000,
+      "lease_start": "2019-05-01",
+      "lease_end": "2026-04-30",
+      "status": "ACTIVE",
+      "base_year": 2019,
+      "cap_type": "non_cumulative",
+      "cap_rate": 0.05,
+      "gross_up_target_occupancy": 0.95,
+      "gross_up_trigger_occupancy": 0.90,
+      "variable_expense_accounts": ["5100.10","5100.20","5110.00","5200.10","5200.20","5200.30","5900.10"],
+      "uncontrollable_accounts": ["5700.10","5700.20","5800.10"],
+      "excluded_accounts": ["5910.00","5940.00"],
+      "admin_fee_percentage": 0.10,
+      "admin_fee_excludes_tax_insurance": true
+    },
+    {
+      "tenant_name": "Western Midstream",
+      "leased_sqft": 16500,
+      "pro_rata_share": 0.0785,
+      "lease_start": "2021-02-01",
+      "lease_end": "2026-01-31",
+      "status": "ACTIVE",
+      "base_year": 2021,
+      "cap_type": "cumulative",
+      "cap_rate": 0.05,
+      "gross_up_target_occupancy": 0.95,
+      "gross_up_trigger_occupancy": 0.90,
+      "variable_expense_accounts": ["5100.10","5100.20","5110.00","5200.10","5200.20","5200.30","5900.10"],
+      "uncontrollable_accounts": ["5700.10","5700.20","5800.10"],
+      "excluded_accounts": [],
+      "admin_fee_percentage": 0.10,
+      "admin_fee_excludes_tax_insurance": false
+    }
+  ],
+  "_seeded_errors": {
+    "error_1_gross_up_on_tax": {
+      "description": "Account 5800.10 (Taxes - Real Estate, $95,000) must never be grossed up. If the reconciliation engine applies the 95% gross-up factor (1.3158 for 72% occupancy), it inflates the tax line by $30,000. This is an uncontrollable expense per all 5 lease abstracts.",
+      "affected_account": "5800.10",
+      "legitimate_amount": 95000.00,
+      "wrongly_grossed_up_amount": 125003.60,
+      "overcharge": 30003.60
+    },
+    "error_2_capex_misclassification": {
+      "description": "TR-105301: $12,000 HVAC chiller overhaul booked to 5300.15 (R&M - HVAC Repairs). This is a capital improvement that should be amortized over 10 years ($1,200/yr). Passing $12,000 in a single year overcharges tenants by $10,800.",
+      "affected_account": "5300.15",
+      "affected_transaction": "TR-105301",
+      "amount_booked": 12000.00,
+      "correct_annual_amortization": 1200.00,
+      "overcharge": 10800.00
+    },
+    "error_3_cap_violation": {
+      "description": "2023 controllable baseline: $273,370. 2024 controllable actuals: $296,236. 5% cap limit: $287,038.50. Tenants with non-cumulative 5% cap (Murphy Oil, PetroTal, Thyssenkrupp, Subsea 7) are being charged $9,197.50 above their capped amount.",
+      "prior_year_controllable": 273370.00,
+      "current_year_controllable": 296236.00,
+      "five_pct_cap_limit": 287038.50,
+      "cap_violation_amount": 9197.50
+    }
+  }
+}

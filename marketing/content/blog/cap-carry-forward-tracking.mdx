@@ -1,0 +1,115 @@
+---
+title: "CAM Cap Carry-Forward: The Multi-Year Error Nobody Catches Until Year 5"
+description: "Cumulative CAM caps compound year over year. A base year error or wrong cap type does not just affect one year. It compounds across the lease term. By year 5, the cumulative error can exceed $100,000."
+excerpt: "A non-cumulative cap limits each year on its own. A cumulative cap limits the total growth from the base year. Use the wrong type and the error compounds every year, silently, until an auditor finds it."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "What is a cumulative CAM cap carry-forward?"
+    a: "A cumulative cap tracks the maximum allowable increase from the base year, compounding at the cap rate annually. If expenses increase less than the cap in any given year, the unused capacity 'carries forward'. The cap ceiling keeps rising at the stated rate regardless of actual expense growth. This means a low-expense year can create room for a larger increase in a future year without hitting the cap."
+  - q: "What is the difference between cumulative and non-cumulative CAM caps?"
+    a: "A non-cumulative cap limits the year-over-year increase (e.g., expenses can't rise more than 5% from the prior year). A cumulative cap limits the total increase from the original base year amount, compounding annually (e.g., expenses can't exceed the base year x 1.05^n where n is the number of years). The cumulative cap is generally more landlord-favorable because unused capacity carries forward."
+---
+
+## The Setup
+
+A tenant signs a 10-year lease in 2020 with a 5% cumulative CAM cap. Base year CAM: $8.00/SF. The tenant occupies 15,000 SF.
+
+This means the maximum the landlord can charge increases every year at 5%, compounding from the base:
+
+| Year | Cap Ceiling (5% cumulative) | Actual CAM | Billed Amount | Under Cap? |
+|---|---|---|---|---|
+| 2020 (base) | $8.00 | $8.00 | $8.00 | - |
+| 2021 | $8.40 | $8.15 | $8.15 | Yes ($0.25 room) |
+| 2022 | $8.82 | $8.45 | $8.45 | Yes ($0.37 room) |
+| 2023 | $9.26 | $9.10 | $9.10 | Yes ($0.16 room) |
+| 2024 | $9.72 | $9.85 | **$9.72** | **Capped** |
+| 2025 | $10.21 | $10.20 | $10.20 | Yes ($0.01 room) |
+
+In Year 5, actual expenses exceeded the cap ceiling. The landlord absorbs the $0.13/SF difference ($1,950 on 15,000 SF). In all other years, the tenant pays actual expenses because they fall below the cumulative ceiling.
+
+This is how cumulative caps are supposed to work. Now here's where errors happen.
+
+## Error 1: Using Non-Cumulative When Lease Says Cumulative
+
+If the controller applies a non-cumulative cap instead of cumulative, the ceiling resets each year based on the prior year's amount:
+
+| Year | Cumulative Ceiling | Non-Cumulative Ceiling | Actual CAM | Billed (Wrong) | Billed (Correct) | Error |
+|---|---|---|---|---|---|---|
+| 2020 | $8.00 | $8.00 | $8.00 | $8.00 | $8.00 | $0 |
+| 2021 | $8.40 | $8.40 | $8.15 | $8.15 | $8.15 | $0 |
+| 2022 | $8.82 | $8.56 | $8.45 | $8.45 | $8.45 | $0 |
+| 2023 | $9.26 | $8.87 | $9.10 | **$8.87** | $9.10 | **-$0.23** |
+| 2024 | $9.72 | $9.32 | $9.85 | **$9.32** | **$9.72** | **-$0.40** |
+| 2025 | $10.21 | $9.78 | $10.20 | **$9.78** | $10.20 | **-$0.42** |
+
+With the wrong cap type, the landlord under-billed by $0.23 + $0.40 + $0.42 = $1.05/SF over three years. On 15,000 SF: **$15,750 in lost recovery.**
+
+The non-cumulative ceiling is lower because it resets from the prior year's actual (which was below the cumulative ceiling), rather than compounding from the base year.
+
+## Error 2: Wrong Base Year Amount
+
+The base year amount is the foundation. If it's wrong, every subsequent year's cap ceiling is wrong.
+
+Suppose the correct base year CAM was $8.00/SF but the controller entered $8.50/SF (perhaps including a non-recoverable item in the base):
+
+| Year | Correct Ceiling (base $8.00) | Wrong Ceiling (base $8.50) | Actual CAM | Billed (Wrong) | Error |
+|---|---|---|---|---|---|
+| 2021 | $8.40 | $8.93 | $8.15 | $8.15 | $0 |
+| 2022 | $8.82 | $9.37 | $8.45 | $8.45 | $0 |
+| 2023 | $9.26 | $9.84 | $9.10 | $9.10 | $0 |
+| 2024 | $9.72 | $10.33 | $9.85 | $9.85 | +$0.13 |
+| 2025 | $10.21 | $10.85 | $10.20 | $10.20 | $0 |
+
+In Year 5, the correct cap ceiling was $9.72, so the billed amount should have been capped at $9.72. But the inflated base year pushed the ceiling to $10.33, so the tenant was billed the full $9.85. Overcharge: $0.13/SF × 15,000 SF = **$1,950**.
+
+This is a small number in Year 5. But the error persists for the remaining 5 years of the lease, and the gap between the correct and wrong ceiling widens every year as the compounding diverges.
+
+By Year 10 with a $0.50 base year error at 5% compounding:
+- Correct ceiling: $8.00 × 1.05^10 = $13.03
+- Wrong ceiling: $8.50 × 1.05^10 = $13.84
+- Gap: $0.81/SF × 15,000 SF = $12,150 potential overcharge in a single year
+
+Over the full 10-year term, the cumulative overpayment from a $0.50 base year error ranges from $30,000-$60,000 depending on actual expense growth.
+
+## Error 3: Not Tracking the Carry-Forward
+
+Some controllers reset the cap comparison each year rather than tracking the cumulative ceiling from the base year. They compare the current year's increase to 5% of last year's amount rather than to 5% compounded from the base year.
+
+This produces the non-cumulative result even when the lease says cumulative. The error is subtle because the calculation "looks right" each year. It applies 5%, but to the wrong reference point.
+
+## How to Track It Correctly
+
+For each tenant with a cumulative cap:
+
+1. **Lock the base year amount.** Document it in the lease abstract. Never modify it.
+2. **Calculate the ceiling from the base.** Each year: Base × (1 + cap rate)^(years since base). Don't calculate from the prior year's ceiling.
+3. **Compare actuals to the ceiling.** Bill the lesser of actual expenses or the ceiling.
+4. **Document the unused capacity.** If actuals are below the ceiling, note the gap. This is not "banked" in the same way. The ceiling continues rising regardless, but tracking the gap is useful for forecasting when the cap will start binding.
+
+A spreadsheet formula for the ceiling: `=BaseYear * (1 + CapRate) ^ YearNumber`
+
+Where YearNumber is 1 for the first year after the base year, 2 for the second, etc.
+
+## When Auditors Find This
+
+Cap carry-forward errors are among the highest-dollar findings in tenant audits because they compound over time. An auditor reviewing Year 7 of a 10-year lease with a cap error will calculate the cumulative overcharge from Year 1 through Year 7, not just the current year's variance.
+
+The refund liability includes interest in many jurisdictions. And once the error is identified, the correction must be applied for every remaining year of the lease.
+
+CapVeri tracks cumulative cap calculations from the base year forward, flagging any year where the billed amount exceeds the correctly calculated ceiling. It also validates the base year amount against the original reconciliation data.
+
+## Related Resources
+
+- [Cumulative vs. Non-Cumulative CAM Caps](/resources/cumulative-vs-non-cumulative-cam-caps) - Structure comparison
+- [CAM Expense Caps](/resources/cam-expense-caps) - Cap types and calculations
+- [Base Year CAM Lease Guide](/resources/base-year-cam-lease) - Getting the foundation right
+- [What Tenant Auditors Look For](/blog/what-tenant-auditors-look-for) - Cap errors are finding #3
+
+## Sources
+
+1. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

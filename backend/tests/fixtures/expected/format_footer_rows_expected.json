@@ -1,0 +1,12 @@
+{
+  "error_type": "format",
+  "description": "CSV with footer/summary rows at the end",
+  "parseable": true,
+  "expected_behavior": "Parser should detect and filter out footer rows",
+  "expected_warnings": [
+    "Footer rows detected and removed (rows 4-7)"
+  ],
+  "expected_rows": 3,
+  "valid_rows": 3,
+  "invalid_rows": 0
+}

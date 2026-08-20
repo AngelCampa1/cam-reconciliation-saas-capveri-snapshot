@@ -1,0 +1,58 @@
+{
+  "scenario": "base_year_normalization",
+  "description": "Base year normalized for low occupancy (70%)",
+  "inputs": {
+    "base_year_variable_expenses": 60000.0,
+    "base_year_fixed_expenses": 40000.0,
+    "base_year_occupancy": 0.7,
+    "target_occupancy": 0.95,
+    "current_year_expenses": 115000.0,
+    "pro_rata_share": 0.0312
+  },
+  "calculation_steps": [
+    {
+      "step": 1,
+      "description": "Calculate gross-up factor for base year",
+      "formula": "target_occupancy / base_year_occupancy",
+      "calculation": "0.95 / 0.70 = 1.357143",
+      "result": 1.357143
+    },
+    {
+      "step": 2,
+      "description": "Normalize base year variable expenses",
+      "formula": "base_variable * gross_up_factor",
+      "calculation": "60000.00 * 1.357143 = 81428.58",
+      "result": 81428.58
+    },
+    {
+      "step": 3,
+      "description": "Calculate normalized base year total",
+      "formula": "normalized_variable + fixed",
+      "calculation": "81428.58 + 40000.00 = 121428.58",
+      "result": 121428.58
+    },
+    {
+      "step": 4,
+      "description": "Calculate tenant share (negative - credit case)",
+      "formula": "(current - normalized_base) * pro_rata_share",
+      "calculation": "(115000.00 - 121428.58) * 0.0312 = -200.58",
+      "result": -200.58,
+      "note": "Negative result - tenant gets credit (different from decrease scenario)"
+    },
+    {
+      "step": 5,
+      "description": "Apply zero floor",
+      "formula": "max(tenant_share, 0)",
+      "calculation": "max(-200.58, 0) = 0.00",
+      "result": 0.0
+    }
+  ],
+  "expected_output": {
+    "original_base_year_total": 100000.0,
+    "normalized_base_year_total": 121428.58,
+    "current_year_expenses": 115000.0,
+    "tenant_share_before_floor": -200.58,
+    "tenant_share_final": 0.0,
+    "normalization_applied": true
+  }
+}

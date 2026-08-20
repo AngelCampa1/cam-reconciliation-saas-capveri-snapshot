@@ -1,0 +1,168 @@
+---
+title: "Lease Administration Fields That Drive CAM Accuracy"
+description: "The 12 lease administration data points that determine CAM billing accuracy: what to capture, where abstractors go wrong, and how to validate before reconciliation."
+excerpt: "Most CAM billing errors don't start in the reconciliation. They start in lease administration, when a field is captured wrong, left blank, or never updated after an amendment."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "operations"
+faq:
+  - q: "What is lease administration in commercial real estate?"
+    a: "Lease administration is the process of managing commercial lease documents throughout their lifecycle, from initial abstraction at execution through amendments, renewals, and expiration. It includes extracting and storing key lease terms, tracking critical dates, maintaining billing parameters, and ensuring that the data used for tenant billing and property management accurately reflects the current executed lease documents. For CAM billing purposes, lease administration is critical because the data captured during abstraction directly controls what tenants are billed for and what recovery amounts landlords can collect."
+  - q: "What lease administration data matters most for CAM billing?"
+    a: "The data points with the highest impact on CAM billing accuracy are: the pro-rata share definition (including how the denominator is defined), gross-up provision details (deemed occupancy %, which expenses are grossed up), the expense cap structure (cumulative vs. non-cumulative, controllable expense definition), the full CAM exclusion list, and the management fee provision. Missing or incorrect data in any of these fields produces systematic billing errors that affect every reconciliation for the life of the lease. Secondary fields like critical dates and audit rights windows are also important for operational compliance."
+  - q: "How should lease administration handle lease amendments?"
+    a: "Every amendment that modifies a CAM-relevant field (exclusions, cap structure, pro-rata share, gross-up terms) needs a formal update workflow in the lease administration system. The original field values should be preserved with a note of what was changed, when, and which amendment document made the change. Never overwrite original values without creating an audit trail. The biggest lease administration failure mode in practice is an amendment that changes CAM terms but doesn't trigger an update to the billing system, creating billing errors that compound year over year until a tenant audit discovers them."
+  - q: "What's the difference between lease administration software and property management software?"
+    a: "Property management software (Yardi, MRI, AppFolio) handles the full operational workflow: maintenance, AP, tenant billing, and lease administration as a component. Dedicated lease administration software focuses specifically on the lease data layer: storing, tracking, and managing lease terms with CAM-specific field coverage, critical date alerting, and amendment tracking. The distinction matters because some PM systems have relatively weak lease administration modules - sufficient for simple leases but inadequate for portfolios with negotiated CAM provisions, complex cap structures, or frequent amendments."
+---
+
+Lease administration best practices are usually discussed in terms of process and workflow. But for a property manager focused on CAM accuracy, the conversation needs to start with data, specifically which data fields have to be right for billing to work.
+
+There are 12 fields. Get them all right and CAM reconciliation becomes mechanical. Miss any one of them and you have a systematic billing error that compounds every year until someone finds it.
+
+## Lease Administration as a Billing Foundation
+
+Think of lease administration as the foundation layer for everything that happens in [CAM reconciliation](/resources/common-area-maintenance-reconciliation-explained). The reconciliation software, the GL data, the property management workflow: all of it produces accurate results only if the lease administration data it's built on is correct.
+
+This is why a sophisticated tenant audit almost always starts with the lease administration data: the auditor requests the lease abstract and compares it against the executed documents. If they find a discrepancy (a gross-up provision recorded incorrectly, an exclusion missing from the abstract), that's where the retroactive adjustment calculation begins.
+
+Good lease administration protects both sides. It protects tenants from systematic overcharges. And it protects landlords from having to retroactively credit billing errors that accumulated over three or four reconciliation cycles.
+
+---
+
+## The 12 CAM-Critical Lease Administration Fields
+
+### 1. Tenant RSF and Denominator Definition
+
+The pro-rata share calculation requires two numbers: the tenant's rentable square footage and the total rentable area used as the denominator. Most lease administration systems store the tenant RSF reliably; the denominator definition is where it breaks down.
+
+Some leases define the denominator as the building's total rentable area. Some use the entire project (relevant in multi-building campuses). Some use "leased" or "occupied" area, which changes annually with the building's vacancy level.
+
+Record which definition applies. If it's a variable denominator, flag it so the billing team knows the denominator needs to be recalculated each reconciliation period.
+
+Use our [pro-rata calculator](/tools/pro-rata-calculator) to verify your extracted percentage against actual SF figures.
+
+### 2. Gross-Up Provision: Does One Exist?
+
+Don't assume. Not all commercial leases include a gross-up provision. Before recording any gross-up parameters, confirm the provision actually exists in the lease.
+
+For leases without gross-up, the actual expenses incurred at any occupancy level are allocated to tenants as-is. For leases with gross-up, expenses are adjusted to what they would have been at full (or deemed full) occupancy. Missing this distinction in your abstract means you're either not grossing up when you should be, or grossing up when you shouldn't be.
+
+### 3. Deemed Occupancy Percentage
+
+When a gross-up provision exists, the deemed occupancy percentage is the specific number used in the calculation. Commonly 90% or 95%. The lease specifies which.
+
+The difference between 90% and 95% isn't trivial. On a building with $500,000 in grossable operating expenses and 30% actual vacancy, the two percentages produce materially different grossed-up totals. Your lease administration data needs the exact percentage from the executed document.
+
+See our [CAM gross-up calculation guide](/resources/cam-gross-up-calculation-guide) for the full mechanics.
+
+### 4. Gross-Up Applicable Expense Categories
+
+The gross-up provision typically applies to "variable" expenses, meaning those that would be higher if the building were more fully occupied. The challenge: leases differ on which expenses are considered variable.
+
+Standard approach: utilities, janitorial, and management fees are variable; taxes and insurance are not. But some leases gross up all operating expenses; some specify a custom list. Your lease administration record needs to capture which approach applies, not just "yes, gross-up exists."
+
+### 5. Expense Cap: Type and Percentage
+
+The cap percentage tells you the maximum annual increase. But you also need the type:
+
+- **Annual increase cap**: Year-over-year growth is limited to X%
+- **Base-year cap**: Tenant's share is capped relative to base year expenses
+- **Expense stop**: Tenant pays expenses above a fixed dollar threshold
+
+These are different structures with different calculation mechanics. Record the type, not just the percentage.
+
+### 6. Cumulative vs. Non-Cumulative Cap
+
+This is the field most likely to be recorded incorrectly, not because abstractors misread it, but because leases are sometimes ambiguous and the abstractor makes an assumption.
+
+Cumulative caps carry forward unused capacity. If the cap is 5% and expenses only grew 3% last year, the remaining 2% can be applied in future years. Non-cumulative caps reset annually. Unused capacity disappears.
+
+Over a 10-year lease, the difference between these two structures can be significant. If the lease is ambiguous, note that and flag it for legal review rather than recording a default.
+
+For the full explanation of how these structures work, see [CAM cap types](/resources/cam-cap-types).
+
+### 7. Controllable Expense Definition
+
+Cap structures typically apply only to "controllable" expenses. But "controllable" is a defined term in each lease, not a universal standard. Some leases include HVAC maintenance as controllable; others don't. Some include landscaping; others carve it out. Some explicitly exclude all maintenance above a certain threshold.
+
+Record the specific definition from the lease, not just "controllable expenses capped at 5%."
+
+### 8. Full CAM Exclusion List
+
+This field should never be summarized. Transcribe the complete exclusion list from the lease.
+
+The risk of summarizing is that you capture the standard exclusions (capital expenditures, leasing commissions, debt service) and miss the negotiated ones. A retail anchor tenant might have negotiated an exclusion for parking lot resurfacing or roof replacement. Those negotiated exclusions could be worth tens of thousands of dollars per year if the building is older. Those negotiated exclusions are exactly what tenant auditors look for.
+
+See [what is included in CAM expenses](/resources/what-is-included-in-cam-expenses) for the standard framework, and flag anything in your leases that deviates from it.
+
+### 9. Management Fee Inclusion and Cap
+
+Record: (1) Is the management fee included in the recoverable CAM pool? (2) Is there a percentage cap on the management fee? (3) Is the cap applied to gross revenues, net revenues, or another basis?
+
+A missing management fee cap can result in overbilling if the property manager's fee increases while the tenant is paying a share of it. Some institutional tenants specifically audit management fee billing.
+
+### 10. CAM Statement Delivery Deadline
+
+Some leases specify a deadline by which the landlord must deliver the annual reconciliation statement. In some cases, missing this deadline affects the landlord's right to collect a year-end deficiency payment from the tenant.
+
+This is a lease administration responsibility, not just a billing workflow matter. The deadline needs to be in the system as a tracked critical date, not just noted in a field.
+
+### 11. Tenant Audit Rights Window
+
+The period during which the tenant can exercise their audit rights after receiving the annual reconciliation statement. Typically 12 months, but ranges from 6 months to 24 months. After this window closes, the statement is typically final and cannot be challenged.
+
+Track this as a date calculated from statement delivery, not as a static field. See [tenant audit rights](/resources/tenant-audit-rights-landlord) for the full picture of what this means operationally.
+
+### 12. Amendment Supersessions
+
+Every amendment to the original lease that modifies a CAM-relevant field needs to be flagged in the lease administration record. The original values should be preserved with amendment references noted.
+
+This is the field most likely to be missing entirely, not because the system doesn't support it, but because the workflow doesn't require it. Build the amendment tracking requirement into your lease administration process.
+
+---
+
+## Lease Administration Best Practices for CAM Accuracy
+
+**Validate before each reconciliation.** One day before the annual reconciliation begins, run a data quality check. For each active lease, verify that the 12 fields above are populated and match the current executed documents. This takes time upfront and saves significantly more time in disputes downstream.
+
+**Use the abstract as a verification tool, not a replacement for the source document.** When a question arises about a CAM provision, go back to the lease. The abstract is a summarized representation; the lease is the legal document.
+
+**Create a modification log for every lease.** When a field changes for any reason, log what changed, why, when, and who made the change. This is basic change management, but it's not standard practice in most lease administration workflows.
+
+**Don't let verbal agreements affect billing.** During renewals or tenant relationship management, landlords sometimes informally agree to cap adjustments or add exclusions. Until that agreement is in a signed document and the lease administration system is updated, it doesn't affect billing.
+
+---
+
+## Lease Administration Software: When You Need It
+
+For portfolios under 15 leases with standard NNN provisions, a well-maintained spreadsheet can work. But the failure modes compound quickly as portfolio size grows and leases develop more complex negotiated provisions.
+
+The tipping point is usually one of these scenarios:
+
+- A tenant audit reveals a billing error that traces back to an incorrect abstract field, and you realize you don't have an audit trail of when or how that field was set
+- A lease amendment is executed and billing doesn't update because the workflow didn't require it
+- Critical date tracking fails: a renewal option expires unexercised, or a CAM statement is delivered late and triggers a lease provision
+
+If any of these have happened (or you're worried they might), dedicated lease administration software is worth evaluating. See [/blog/lease-administration-software-buyers-guide](/blog/lease-administration-software-buyers-guide) for a buyer's guide, and [/blog/lease-management-cre-finops](/blog/lease-management-cre-finops) for the broader context on how lease management feeds CAM accuracy.
+
+---
+
+## Connecting Lease Administration to Reconciliation Workflow
+
+The practical connection: every time CapVeri (or any CAM reconciliation tool) runs a calculation, it's using the lease administration data as inputs. Pro-rata share, gross-up parameters, cap limits, exclusions: all of it flows from the lease records.
+
+This means improving your lease administration data quality directly improves your reconciliation accuracy. You don't need better reconciliation software to fix a data problem. You need cleaner lease data.
+
+Start with a lease data audit using the 12 fields above as your checklist. For each active lease, verify that all 12 are populated, accurate, and current. Then reconcile.
+
+For additional context on the abstraction process that feeds lease administration, see [/resources/lease-abstraction-guide](/resources/lease-abstraction-guide) and [/resources/lease-abstract-template-guide](/resources/lease-abstract-template-guide).
+
+To see how AI tools can accelerate the initial data capture (with the appropriate caveats), see [/blog/ai-lease-abstraction-cam-accuracy](/blog/ai-lease-abstraction-cam-accuracy).
+
+## Sources
+
+1. [ICSC - Dictionary of Shopping Center Terms](https://www.icsc.com/news-and-views/newsstand/icscs-dictionary-of-shopping-center-terms-fourth-edition)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

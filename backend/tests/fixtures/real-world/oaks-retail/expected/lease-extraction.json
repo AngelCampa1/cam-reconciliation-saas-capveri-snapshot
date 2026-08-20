@@ -1,0 +1,40 @@
+{
+  "lease_terms": {
+    "base_year": null,
+    "base_year_amount": null,
+    "gross_up_base_year": false,
+    "pro_rata_share": null,
+    "cap_type": "none",
+    "cap_rate": null,
+    "admin_fee_percent": 0.15,
+    "excluded_pools": [],
+    "accounting_basis": "accrual"
+  },
+  "premises": {
+    "rentable_sqft": 3200,
+    "usable_sqft": 3200,
+    "load_factor": 1.0
+  },
+  "rent": {
+    "monthly_base_rent": 5866.67,
+    "annual_base_rent": 70400.00,
+    "psf_annual": 22.00
+  },
+  "dates": {
+    "commencement_date": "2009-06-01",
+    "expiration_date": "2019-05-31"
+  },
+  "extraction_confidence": {
+    "base_year": "high",
+    "pro_rata_share": "medium",
+    "cap_type": "high",
+    "cap_rate": "high",
+    "admin_fee_percent": "high",
+    "excluded_pools": "high",
+    "accounting_basis": "medium"
+  },
+  "notes": {
+    "pro_rata_share": "Formula-based: tenant sqft / total leasable sqft. Values assumed for testing (3,200/42,000 = 7.62%). Actual values depend on Exhibit A floor plan.",
+    "accounting_basis": "Inferred from 'paid or incurred' language in Art. 5.01.A"
+  }
+}

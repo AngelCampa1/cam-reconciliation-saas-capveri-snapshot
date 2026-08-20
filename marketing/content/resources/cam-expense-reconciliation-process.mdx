@@ -1,0 +1,228 @@
+---
+title: "CAM Expense Reconciliation Process: GL Mapping to Final Billing"
+description: "The end-to-end CAM expense reconciliation process - GL account mapping, controllable vs non-controllable split, gross-up math, and cap calculations explained with worked examples."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 231
+faq:
+  - q: "What's the difference between the CAM pool and total property expenses?"
+    a: "The CAM pool is the subset of total property operating expenses that the lease permits the landlord to recover from tenants. Total property expenses include items tenants never pay - depreciation, capital expenditures, executive compensation above the management fee cap, income taxes, and leasing commissions. A property with $2M in total annual expenses might have a recoverable CAM pool of $1.4M after removing these categories. The pool size depends entirely on each lease's inclusion/exclusion list."
+  - q: "How do I map GL accounts to CAM categories without a chart of accounts guide?"
+    a: "Start with the account name and vendor. Janitorial vendor invoices booked to a 'Building Maintenance' GL code are almost certainly includable. Capital vendor invoices (roofing contractors, HVAC replacement specialists) booked to the same code need to be split. Build a mapping table with four columns: GL account number, GL account name, CAM includable (yes/no/partial), and the lease clause that controls it. For partial accounts (like a GL code that mixes routine maintenance and capital repairs), you'll need to review the underlying transactions."
+  - q: "When should I gross up expenses, and which expense types qualify?"
+    a: "Gross-up applies when the property is below the occupancy threshold specified in the lease - typically 90% or 95%. Only variable expenses (those that scale with occupancy) qualify. Fixed expenses like a parking lot management contract with a flat monthly fee don't change with occupancy, so grossing them up overstates the pool. Variable expenses that do qualify: janitorial labor tied to occupied square footage, common area utilities that increase with building population, and landscaping contracts with per-building-visit pricing. Always check the lease for the specific threshold and the definition of 'variable expenses.'"
+  - q: "How do base-year caps interact with the gross-up calculation?"
+    a: "The sequencing matters and the lease should specify it. If the lease says 'gross-up applies to expenses subject to the cap,' then gross up first, test the grossed-up total against the cap, and apply the cap if exceeded. If the lease is silent, most attorneys advise applying the cap to actual (un-grossed) expenses to avoid double-favoring the landlord. Document your sequencing choice in the reconciliation workbook - if a tenant disputes it, you need to show you followed either the lease language or a conservative interpretation."
+  - q: "What's the fastest way to find denominator errors in an existing reconciliation?"
+    a: "Pull the denominator used in each tenant's statement and compare it against the GLA schedule. Also run a sense-check: sum all tenant pro-rata shares. If they total more than 100%, you have a denominator error. If they total significantly less than 100%, you either have excluded anchor space or a data entry mistake. Also check any partial-year tenants. Their fractional shares should still be based on the same full-year denominator, just multiplied by their occupancy fraction."
+---
+
+<Alert type="info" title="Quick Answer">
+The CAM expense reconciliation process has five phases: GL mapping and exclusions, controllable/non-controllable split, gross-up calculation (if occupancy is below threshold), cap math, and pro-rata share billing. Getting the GL mapping right is the foundation. Errors there compound through every downstream calculation.
+</Alert>
+
+## Why the Process Order Matters
+
+CAM expense reconciliation isn't a single calculation. It's a sequence of decisions, each dependent on the one before. A property accountant who gross-ups before removing non-recoverable expenses will overstate the pool. One who applies the cap before the gross-up may create a calculation the lease doesn't support.
+
+This guide walks through the process in the correct order, with worked dollar examples at each stage.
+
+If you need a step-by-step task list, use the [CAM reconciliation checklist](/resources/cam-reconciliation-checklist-2026) alongside this guide.
+
+---
+
+## Phase 1: GL Account Mapping
+
+### Building the Account Map
+
+Every CAM reconciliation starts with a complete GL export for the property year. Your first job is assigning every GL account a disposition: includable, excludable, or partial.
+
+A standard mapping table looks like this:
+
+| GL Account | Account Name | Disposition | Lease Clause |
+|------------|-------------|-------------|-------------|
+| 5100 | Janitorial Services | Include | §7.1(a) |
+| 5200 | Landscaping | Include | §7.1(b) |
+| 5300 | Building Maintenance | Partial | §7.1(c), §7.3 |
+| 5400 | Management Fee | Include (capped) | §7.2 - max 3% opex |
+| 5500 | Capital Improvements | Exclude | §7.4 |
+| 5600 | Depreciation | Exclude | §7.4 |
+| 5700 | Real Estate Taxes | Include (non-controllable) | §8.1 |
+| 5800 | Insurance | Include (non-controllable) | §8.2 |
+
+The "Partial" accounts require transaction-level review. Account 5300 (Building Maintenance) might contain both a $4,200 quarterly HVAC service contract (includable) and a $45,000 HVAC compressor replacement (excludable). Pull the underlying transactions and split them.
+
+For a full inclusion/exclusion breakdown, see [what is included in CAM expenses](/resources/what-is-included-in-cam-expenses).
+
+### Management Fee Cap
+
+Management fees are nearly always includable but frequently capped. Common cap structures:
+- 3% of total operating expenses (most common in retail)
+- 4% of gross revenues
+- A fixed dollar amount per square foot
+
+Example: 200,000 SF property, $1,800,000 in total operating expenses. Management fee cap at 3% of opex = $54,000. If actual management fees billed = $72,000, the excess $18,000 is excluded from the pool.
+
+---
+
+## Phase 2: Controllable vs. Non-Controllable Split
+
+Once you have a clean includable expense pool, split it into controllable and non-controllable categories. This split drives the cap calculation. Caps only apply to controllable expenses in most leases.
+
+**Controllable expenses** (typically): janitorial, landscaping, parking lot maintenance, security, common area utilities, management fees, general repairs.
+
+**Non-controllable expenses** (typically): real estate taxes, property insurance, snow and ice removal (in some leases), utility costs for uncontrollable municipal rate changes.
+
+See [controllable vs non-controllable expenses](/resources/controllable-vs-non-controllable-expenses) for how different lease types classify each category.
+
+### Example Split
+
+Property: 350,000 SF retail center
+Year-end includable expenses: $2,100,000
+
+| Category | Amount | Classification |
+|----------|--------|----------------|
+| Janitorial | $280,000 | Controllable |
+| Landscaping | $140,000 | Controllable |
+| Parking lot maintenance | $95,000 | Controllable |
+| Security | $210,000 | Controllable |
+| Common area utilities | $175,000 | Controllable |
+| Management fee | $54,000 | Controllable |
+| Repairs and maintenance | $146,000 | Controllable |
+| Real estate taxes | $700,000 | Non-controllable |
+| Insurance | $300,000 | Non-controllable |
+| **Total** | **$2,100,000** | |
+
+Controllable subtotal: $1,100,000
+Non-controllable subtotal: $1,000,000
+
+---
+
+## Phase 3: Gross-Up Calculation
+
+### When Gross-Up Applies
+
+The lease will specify an occupancy threshold, typically 90% or 95%. If actual average occupancy for the year falls below that threshold, variable CAM expenses get grossed up to what they would have been at the threshold occupancy.
+
+Why this matters: if a building is 70% occupied, the landlord is covering more common area maintenance per occupied tenant than they would at full occupancy. Without gross-up, tenants benefit from a windfall reduction. The gross-up clause restores the per-tenant cost to a stabilized-occupancy level.
+
+### The Math
+
+Formula: Grossed-up expense = (Actual variable expense ÷ Actual occupancy %) × Gross-up threshold %
+
+Continuing the example above:
+- Property: 350,000 SF, 245,000 SF occupied = 70% occupancy
+- Gross-up threshold per lease: 95%
+- Variable controllable expenses: $1,100,000
+
+But not all controllable expenses are variable. The $54,000 management fee contract is a flat fee regardless of occupancy. The $146,000 in repairs is mostly reactive (same vacancy percentage doesn't reduce repair calls much). A reasonable variable/fixed split:
+
+| Expense | Total | Variable Portion |
+|---------|-------|-----------------|
+| Janitorial | $280,000 | 85% = $238,000 |
+| Landscaping | $140,000 | 30% = $42,000 |
+| Parking lot maintenance | $95,000 | 20% = $19,000 |
+| Security | $210,000 | 40% = $84,000 |
+| Common area utilities | $175,000 | 70% = $122,500 |
+| Management fee | $54,000 | 0% = $0 |
+| Repairs and maintenance | $146,000 | 25% = $36,500 |
+
+Total variable portion: $542,000
+
+Gross-up: ($542,000 ÷ 0.70) × 0.95 = $735,571
+
+Fixed portion: $558,000 (unchanged)
+
+Grossed-up controllable CAM: $735,571 + $558,000 = $1,293,571
+
+For a deeper walkthrough of gross-up with multiple scenarios, see the [CAM gross-up calculation guide](/resources/cam-gross-up-calculation-guide).
+
+---
+
+## Phase 4: Cap Calculation
+
+### Applying the Cap
+
+With the grossed-up pool in hand, test the controllable portion against the lease's cap. Assume the cap is 5% per year and prior-year controllable CAM was $1,050,000.
+
+Maximum allowed increase: $1,050,000 × 1.05 = $1,102,500
+
+Grossed-up controllable CAM: $1,293,571
+
+Cap applies. Capped controllable CAM: $1,102,500
+
+Final billable pool: $1,102,500 (controllable, capped) + $1,000,000 (non-controllable) = $2,102,500
+
+Note: without the gross-up, this property's actual controllable expenses ($1,100,000) would have been just under the cap. The gross-up created the cap-triggering situation, which is why documenting the sequencing matters.
+
+For more on cap structures, see [CAM cap types](/resources/cam-cap-types).
+
+---
+
+## Phase 5: Pro-Rata Share Billing
+
+### Computing Each Tenant's Share
+
+Pro-rata share = tenant's rentable SF ÷ denominator
+
+Denominator is typically total leasable area, but leases vary. Retail leases often exclude anchor tenant space. Some office leases use rentable area on a floor-by-floor basis.
+
+For the [pro-rata share calculation](/resources/pro-rata-share-calculation) in detail, see that resource. For this example:
+
+Property GLA: 350,000 SF
+Anchor tenant (excluded from denominator per lease): 80,000 SF
+Effective denominator: 270,000 SF
+
+| Tenant | SF | Pro-Rata Share | CAM Charge |
+|--------|-----|---------------|------------|
+| Tenant A | 15,000 | 5.56% | $116,899 |
+| Tenant B | 8,500 | 3.15% | $66,229 |
+| Tenant C | 22,000 | 8.15% | $171,354 |
+| Anchor | 80,000 | Excluded | $0 (or flat fee) |
+| (remaining tenants...) | 144,500 | 53.52% | - |
+| Vacant | 80,000 | - | Not billed |
+
+### Reconciling Against Estimates
+
+Each tenant paid monthly estimates during the year. The final reconciliation computes:
+
+Final charge − Total estimates paid = True-up amount
+
+Positive true-up: tenant owes additional payment
+Negative true-up: landlord issues credit against next month's rent
+
+For the mechanics of handling credits and disputes, see [CAM true-up](/resources/cam-true-up).
+
+---
+
+## Building the Audit Trail
+
+Every calculation step should be documented with the source data attached:
+
+1. GL export with account mapping notations
+2. Management fee cap calculation
+3. Controllable/non-controllable split schedule
+4. Variable/fixed expense split for gross-up
+5. Gross-up calculation worksheet
+6. Cap calculation worksheet (with prior-year comparison)
+7. Pro-rata share denominator source (rent roll)
+8. Tenant billing summary with estimate reconciliation
+
+This documentation package is what you hand over if a tenant exercises their audit rights. See [defensible reconciliation package](/resources/defensible-reconciliation-package) for what "audit-ready" looks like.
+
+---
+
+## Where CapVeri Fits
+
+CapVeri automates Phases 1–5 after you import your GL export. The account mapping table is configured once per property and reused each year. Gross-up and cap parameters are set per lease. Pro-rata share denominators pull from your rent roll import.
+
+The platform produces the audit trail documentation as a byproduct of the calculation, not a separate manual step.
+
+Use the [CAM reconciliation checklist](/resources/cam-reconciliation-checklist-2026) alongside CapVeri to make sure no pre-import steps (like lease abstract review) get skipped.
+
+## Sources
+
+1. [Fiserv - Reconciliation whitepaper](https://www.fiserv.com/content/dam/fiserv-ent/archive-files/final-files/white-papers/Frontier-Reconciliation_whitepaper_1020.pdf)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

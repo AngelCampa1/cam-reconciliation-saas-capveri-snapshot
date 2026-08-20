@@ -1,0 +1,123 @@
+---
+title: "What Tenant Auditors Look For"
+description: "Discover what tenant auditors look for in CAM reconciliation: the 7 line items they check first, and how to audit yourself before disputes start."
+datePublished: "2026-01-15"
+dateModified: "2026-02-27"
+author: "Angel Campa"
+buttonText: "Know Their Playbook"
+order: 4
+faq:
+  - q: "How should a landlord respond to a tenant auditor's document request?"
+    a: "Treat the document request as a formal dispute. Pull the six primary-source documents first: the GL with chart of accounts, the gross-up calculation showing monthly occupancy as the source, management fee base statement, original vendor invoices, monthly occupancy records from the rent roll, and the lease abstract covering expense inclusions, exclusions, and audit rights. Re-run your gross-up, pro-rata denominator, cap limit, and admin fee sequence before responding. If the numbers hold, send the documentation package with a line-by-line rebuttal citing specific lease clauses. See the full landlord's dispute response guide at https://www.capveri.com/resources/tenant-cam-dispute."
+  - q: "Can a landlord dispute a tenant auditor's findings?"
+    a: "Yes. A tenant auditor's report is a claim, not a judgment. The landlord can formally dispute each finding by citing the lease clause that authorizes the charge, the supporting documentation that was produced, and the calculation methodology used. If the auditor's finding rests on an incorrect reading of the lease or uses a denominator that does not match the lease definition, those are legitimate grounds for a written rebuttal. The landlord should respond in writing, not orally, and reference the specific contract language for each disputed item."
+  - q: "What happens if a tenant auditor finds a billing error?"
+    a: "The landlord has two options. Issue a corrected reconciliation statement with a credit memo (controlling the outcome and limiting the auditor's role). Or dispute the finding in writing with full documentation. If the error is real, correcting it before the auditor formally documents it is almost always better: the tenant's auditor fee is contingency-based, so they only get paid if there is a recovery. A landlord who self-corrects removes the auditor's bargaining position. A landlord who waits for the auditor to force a correction pays the auditor's contingency on top of the overcharge."
+---
+
+The audit is not coming. It is already running. When your year-end reconciliation reaches a tenant's desk, firms like Baker Tilly and Springbord have automated tools that flag discrepancies before a human reviews a single line. A billing error above 3-5% of recoverable costs is not just a refund. In most leases, it triggers the landlord's obligation to pay the tenant's audit costs outright. That changes the math on what "close enough" really means.
+
+## Why Tenant Auditors Target Your Reconciliation
+
+<Alert type="info" title="Key numbers">
+- **40%** of CAM reconciliations contain material billing errors (industry-cited, via Springbord/PredictAP) [[Source]](/sources#cam-errors-40-percent)
+- **15-20%** of total CAM billed is recovered on average by tenant audit firms (industry-cited, via Springbord) [[Source]](/sources#tenant-audit-recovery-15-20-percent)
+- **4 hrs/lease** for manual abstraction: the root of systemic error at scale (Springbord)
+</Alert>
+
+The error rate exists for a specific reason. Springbord documents it plainly: manual lease abstraction takes four hours per document. A 30-building portfolio with 200 leases means 800 hours of manual work per reconciliation cycle. The mistakes are not malicious. They are arithmetic.
+
+Springbord's analysis of CAM reconciliation errors found that the majority of findings trace to internal process failures: inconsistent expense classification, undocumented gross-up methodology, and missing base year records. Most of these are preventable before the reconciliation goes out.
+
+Leasecake has documented when audits get triggered: lease renewals, property ownership transfers, year-end NNN reconciliation letters, and corporate acquisitions. Those aren't random. They're the moments when a tenant's legal team reviews lease language in detail for the first time in years.
+
+ASC 842 raised the stakes further. Commercial tenants now recognize operating leases on their balance sheets as Right-of-Use (ROU) assets. An inflated CAM bill doesn't just hit the income statement. It distorts the ROU asset calculation, affecting financial ratios that matter to investors and lenders. That gives CFOs a second reason to care about reconciliation accuracy.
+
+## The 7 Things They Check First
+
+Auditors do not start randomly. Every firm runs a targeted sweep against the line items where property management accounting systems fail most predictably.
+
+**1. CapEx/OpEx misclassification.** The highest-yield finding. Full roof replacement, chiller swap, or asphalt overlay billed as operating expense instead of capital. Auditors apply IRS Publication 946 and GAAP depreciation, then verify amortization schedules.
+
+| System | Allowable Operating Expense | Capital Expenditure |
+|--------|----------------------------|---------------------|
+| Roofing | Patching leaks, annual inspection | Full tear-off and membrane replacement |
+| HVAC | Filter changes, seasonal service | Full chiller or rooftop unit replacement |
+| Paving | Pothole fill, restriping | Complete asphalt overlay |
+| Interior | Painting between tenants | Full lobby renovation |
+
+**2. Gross-up applied to fixed costs.** Gross-up should apply only to variable costs: janitorial, trash, utilities. Property insurance, real estate taxes, and exterior landscaping are fixed and do not change with occupancy. BDO and Springbord flag this as the single most common reconciliation error. In a building at 50% occupancy with $100K in variable costs, correct gross-up to 95% yields a 10% tenant share of $9,500. Any number higher on fixed items is an immediate audit objection.
+
+**3. Management fee base inflation.** Landlords calculate percentage fees on a base that improperly includes CapEx, taxes, or insurance. These items are commonly excluded by well-negotiated leases. BDO also documents double-billing: a percentage management fee charged for overhead while the same staff's direct payroll and benefits run separately in the CAM pool.
+
+**4. Ownership expenses bleeding into CAM.** Baker Tilly calls this "unallowed ownership expenses." The CAM pool reimburses property operations, not entity overhead. Auditors screen for executive salaries, leasing commissions, tenant improvement allowances, entity legal fees, and regional managers without direct daily property responsibility. Property management systems rarely force a clean ledger separation.
+
+**5. Pro-rata denominator manipulation.** Most leases define the denominator as Gross Leasable Area (GLA): total building SF, static. If a landlord uses Leased Area instead, a major tenant vacancy shrinks the denominator and spikes every remaining tenant's share. Springbord tracks mid-year rent roll changes to catch pro-rata adjustments that were never applied.
+
+**6. Base year baseline errors.** Tenants pay only for increases above the base year. A low base year means a larger delta every year after. Auditors reconstruct the base year ledger to find two patterns: partial-vacancy years where the landlord did not gross-up base year variable expenses, and methodology shifts where in-house maintenance switched to outside vendors after the base year, making normal operations look like a cost spike.
+
+**7. Utility double-billing and sub-meter markups.** High-consumption tenants (data centers, restaurants, 24-hour retailers) drive disproportionate utility costs that land in the general pool when not billed directly. After-hours HVAC revenue must be credited back to the utility pool, or the landlord collects twice. Sub-meter rate markups are often prohibited by lease language and state PUC regulations.
+
+## How to Audit Yourself Before They Do
+
+You do not need an audit firm. Run the same screens they run before the reconciliation goes out.
+
+<Steps>
+  <Step title="Run the CapEx screen">
+    Pull every invoice over $5,000. Apply the IRS/GAAP test: does this expense extend useful life or increase asset value? If yes, it's capital. Verify an amortization schedule exists with a defensible useful life. A 3-year amortization on a roof replacement will be challenged immediately.
+  </Step>
+  <Step title="Validate your gross-up arithmetic">
+    Separate variable costs (janitorial, trash, utilities) from fixed costs (taxes, insurance, landscaping contracts). Re-run the gross-up on variable costs only. Check the multiplier against actual monthly occupancy reports, not an estimate.
+  </Step>
+  <Step title="Reconstruct the denominator">
+    Pull rent roll data from Yardi or MRI for each month of the reconciliation year. Confirm the denominator in every tenant's calculation matches the GLA definition in their lease, not occupied area.
+  </Step>
+  <Step title="Audit the management fee base">
+    Find the exact lease language defining what costs are included in the fee calculation base. Cross-check it against the actual figure your accounting system used. If CapEx, taxes, or insurance appear in that base, flag it.
+  </Step>
+  <Step title="Isolate ownership expenses">
+    Export your GL. Search for corporate overhead allocations, leasing costs, legal fees, and above-property personnel costs. Any item hitting the CAM pool needs a paper trail that establishes it as a recoverable property expense.
+  </Step>
+</Steps>
+
+Estimate your potential exposure before sending reconciliations with the [CAM Billing Error Estimator](/tools/cam-billing-error-estimator).
+
+## Documentation That Stops Disputes Cold
+
+A correct reconciliation that is poorly documented is harder to defend than a well-documented one that is slightly off. Audit clauses give tenants 12-36 months to request records retroactively. The documentation gap on closed years reopens disputes that should be settled.
+
+| Document | What It Proves | Common Gap |
+|----------|---------------|------------|
+| Invoice-to-GL reconciliation | Every dollar has a source document | Invoices don't match GL entries |
+| CapEx amortization schedule | Capital items are spread over useful life | Full expensing in year one |
+| Monthly occupancy reports | Gross-up applied at correct occupancy level | Approximated, not actual |
+| Vendor contracts | Distinguishes fixed vs. variable costs | "We always estimated it" |
+| Management fee base calculation | Fee applied to correct expense subset | Calculated on total expenses |
+| Property vs. entity cost allocation | Ownership expenses excluded | Commingled ledger |
+
+Use the [CAM Pre-Send Checklist](/resources/cam-pre-send-packet-checklist) before sending reconciliations to verify each of these is ready.
+
+## What to Do When the Dispute Letter Has Already Arrived
+
+If the audit demand letter is already on your desk, the playbook shifts. You are not preparing for an audit. You are responding to one. Pull the six primary-source documents (GL, gross-up calculation, management fee base, vendor invoices, occupancy records, lease abstract), re-run the four key calculations independently, then respond in writing with a complete documentation package. The [landlord's dispute response guide](/resources/tenant-cam-dispute) covers the full process, including what to do when your own recalculation turns up an error.
+
+<FAQSection items={[
+  { q: "How should a landlord respond to a tenant auditor's document request?", a: "Treat the document request as a formal dispute. Pull the six primary-source documents first: the GL with chart of accounts, the gross-up calculation showing monthly occupancy as the source, management fee base statement, original vendor invoices, monthly occupancy records from the rent roll, and the lease abstract covering expense inclusions, exclusions, and audit rights. Re-run your gross-up, pro-rata denominator, cap limit, and admin fee sequence before responding. If the numbers hold, send the documentation package with a line-by-line rebuttal citing specific lease clauses. See the full landlord's dispute response guide at https://www.capveri.com/resources/tenant-cam-dispute." },
+  { q: "Can a landlord dispute a tenant auditor's findings?", a: "Yes. A tenant auditor's report is a claim, not a judgment. The landlord can formally dispute each finding by citing the lease clause that authorizes the charge, the supporting documentation that was produced, and the calculation methodology used. If the auditor's finding rests on an incorrect reading of the lease or uses a denominator that does not match the lease definition, those are legitimate grounds for a written rebuttal. The landlord should respond in writing, not orally, and reference the specific contract language for each disputed item." },
+  { q: "What happens if a tenant auditor finds a billing error?", a: "The landlord has two options. Issue a corrected reconciliation statement with a credit memo (controlling the outcome and limiting the auditor's role). Or dispute the finding in writing with full documentation. If the error is real, correcting it before the auditor formally documents it is almost always better: the tenant's auditor fee is contingency-based, so they only get paid if there is a recovery. A landlord who self-corrects removes the auditor's bargaining position. A landlord who waits for the auditor to force a correction pays the auditor's contingency on top of the overcharge." }
+]} />
+
+<CTABox
+  title="Find the Errors Before the Auditor Does"
+  description="CapVeri surfaces the errors in this guide against your uploaded Yardi or MRI reconciliation file. Get a line-by-line discrepancy report before it goes out, or before an auditor requests your records."
+  utmContent="u_cta"
+  buttonText="Start Free Trial"
+/>
+
+## Sources
+
+1. "40% of CAM reconciliations contain material errors": [Sources & methodology](/sources#cam-errors-40-percent)
+2. "15-20% of billed CAM charges recovered by tenant auditors": [Sources & methodology](/sources#tenant-audit-recovery-15-20-percent)
+3. BDO gross-up audit findings: [BDO (2020)](https://www.bdo.com/insights/advisory/2020-lease-audit-spotlight-gain-clarity-on-gross-up-adjustments)
+4. IRS §162 routine maintenance safe harbor: [Cornell Law](https://www.law.cornell.edu/uscode/text/26/162)
+5. IRS §263(a) capital expenditures: [Cornell Law](https://www.law.cornell.edu/uscode/text/26/263)

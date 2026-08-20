@@ -1,0 +1,40 @@
+{
+  "lease_terms": {
+    "base_year": null,
+    "base_year_amount": null,
+    "gross_up_base_year": false,
+    "pro_rata_share": 1.0,
+    "cap_type": "none",
+    "cap_rate": null,
+    "admin_fee_percent": 0.10,
+    "excluded_pools": [],
+    "accounting_basis": null
+  },
+  "premises": {
+    "rentable_sqft": 45000,
+    "usable_sqft": 45000,
+    "load_factor": 1.0
+  },
+  "rent": {
+    "monthly_base_rent": 52500.00,
+    "annual_base_rent": 630000.00,
+    "psf_annual": 14.00
+  },
+  "dates": {
+    "commencement_date": "2024-01-01",
+    "expiration_date": "2039-12-31"
+  },
+  "extraction_confidence": {
+    "base_year": "high",
+    "pro_rata_share": "high",
+    "cap_type": "high",
+    "cap_rate": "high",
+    "admin_fee_percent": "high",
+    "excluded_pools": "high",
+    "accounting_basis": "low"
+  },
+  "notes": {
+    "pro_rata_share": "NNN standalone building - tenant pays 100% of building costs directly. REA allocates 30% of shared common area costs to this parcel.",
+    "admin_fee_percent": "10% admin fee on REA common area costs only (not on building-level costs which tenant manages directly)"
+  }
+}

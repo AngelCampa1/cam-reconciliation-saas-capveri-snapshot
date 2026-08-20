@@ -1,0 +1,161 @@
+---
+title: "Yardi Recovery Pool Not Calculating Correctly: 7 Root Causes"
+description: "Yardi Voyager recovery pool producing wrong CAM amounts? These 7 configuration issues cause 90% of Yardi CAM calculation errors. How to diagnose each one and fix it before statements go out."
+excerpt: "When Yardi recovery pool calculations don't match what your lease says, one of seven root causes is almost always responsible. Here's how to find it."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "Why is my Yardi CAM amount different from my manual calculation?"
+    a: "The most common reasons: (1) Occupancy Type set to Physical instead of Economic, which uses a snapshot instead of weighted average for gross-up; (2) Fixed expenses flagged as Variable in the recovery pool, causing them to be grossed up when they shouldn't be; (3) wrong gross-up threshold (pool is set to 90% but your lease says 95%); (4) pro-rata denominator not updated after mid-year tenant changes; (5) new GL accounts not mapped to the recovery pool."
+  - q: "What is an Economic occupancy type in Yardi?"
+    a: "Economic occupancy in Yardi calculates a weighted average occupancy across the entire reconciliation period, accounting for move-in and move-out dates throughout the year. This is more accurate for gross-up calculations than Physical occupancy, which uses a single date's occupancy snapshot (typically December 31). Most leases require Economic occupancy methodology."
+  - q: "How do I fix a Yardi recovery pool that has wrong expense totals?"
+    a: "Run the GL Account Mapping Report in Yardi for the affected recovery pool. Compare the total expenses in the pool to your total operating expenses in the GL. Any difference represents unmapped accounts. For each unmapped account, determine whether it belongs in the pool, and if yes, add it to the GL Account Mapping tab in Recovery Pool Setup."
+---
+
+Recovery pool configuration in Yardi Voyager is where CAM reconciliation math begins. Most errors originate here. When the output doesn't match your manual calculation or your lease terms, one of these seven root causes is almost always responsible.
+
+## Root Cause 1: Occupancy Type Set to Physical Instead of Economic
+
+**Where to find it:** Recovery Pool Setup → Calculation tab → Occupancy Type
+
+**What it does:** Controls how Yardi measures occupancy for gross-up calculations.
+
+- **Physical:** Snapshot of occupancy on a specific date (usually December 31). If a major tenant vacated in November, December 31 shows 15% lower occupancy than the weighted average for the full year.
+- **Economic:** Weighted average occupancy across the entire period. Accounts for every move-in and move-out date.
+
+**The problem:** Physical occupancy significantly overstates the gross-up adjustment when buildings have meaningful mid-year tenancy changes. A building that ran at 88% occupancy for 10 months and dropped to 75% when a large tenant vacated in November will show:
+- Physical occupancy at 12/31: 75%
+- Gross-up multiplier at 75%: 1.267 (grossing expenses to 95% threshold)
+- Economic occupancy for full year: 86.25%
+- Gross-up multiplier at 86.25%: 1.102
+
+On $500,000 of variable expenses, that's a $82,500 difference in grossed-up pool total. That full difference gets charged to remaining tenants.
+
+**How to fix:** Navigate to Recovery Pool Setup → Calculation tab. Change Occupancy Type from Physical to Economic. Re-run the recovery pool calculation and compare to prior output.
+
+**When Physical is correct:** Only when the building has minimal occupancy changes during the year (less than 5% variance). If occupancy was stable all year, Physical and Economic produce nearly identical results.
+
+## Root Cause 2: Fixed Expenses Flagged as Variable
+
+**Where to find it:** Recovery Pool Setup → Expense Pool tab → Variable/Fixed flag for each GL account
+
+**What it does:** Tells Yardi which expenses to include in the gross-up calculation. Only Variable expenses should be grossed up. Fixed expenses (those that don't change with occupancy) pass through at actual amounts.
+
+**Common misclassification:**
+
+| GL Category | Should Be | Often Misconfigured As |
+|---|---|---|
+| Property taxes | Fixed | Variable |
+| Insurance premiums | Fixed | Variable |
+| Landscaping (contract-based) | Fixed | Variable |
+| Elevator maintenance (contract) | Fixed | Variable |
+| Janitorial | Variable | (usually correct) |
+| Utilities (common area) | Variable | (usually correct) |
+| Management fees (% of revenue) | Variable | Fixed |
+
+**The problem:** When fixed expenses are flagged as Variable, they get grossed up as if they would increase with occupancy. They don't. This overcharges tenants by applying a multiplier to expenses that are actually fixed.
+
+**How to find it:** Export the recovery pool GL account list. Review the Variable/Fixed flag for every line. Any property tax or insurance account marked Variable is wrong.
+
+**How to fix:** For each incorrectly flagged account, change the Variable/Fixed classification in Recovery Pool Setup → Expense Pool tab. Run the recalculation.
+
+## Root Cause 3: Wrong Gross-Up Threshold
+
+**Where to find it:** Recovery Pool Setup → Calculation tab → Gross-Up Threshold (%)
+
+**What it does:** Sets the occupancy percentage to which variable expenses are grossed up. Standard is 95%, but leases vary.
+
+**The problem:** If your recovery pool is set to 90% and leases say 95%, you're understating the gross-up adjustment. Tenants pay less than the lease entitles the landlord to collect. The reverse also happens: a pool set to 95% when tenants have 90% thresholds means tenants are overcharged.
+
+**More complex situation:** Different tenants in the same building may have different gross-up thresholds. Tenant A: 95%. Tenant B: 90%. Tenant C: no gross-up clause. A single pool-level threshold cannot serve all three correctly.
+
+**How to fix:** In Yardi, you can set tenant-level exceptions to the pool-level threshold:
+1. Navigate to the tenant's recovery billing record
+2. Go to Calculation tab
+3. Override the pool-level threshold for this tenant
+4. For tenants with no gross-up clause: set threshold to 0% or exclude from gross-up
+
+## Root Cause 4: Unmapped GL Accounts
+
+**Where to find it:** Recovery Pool Setup → Expense Pool tab → GL Account Mapping
+
+**What it does:** Lists which GL accounts contribute to the recoverable expense pool. Only expenses posted to mapped accounts flow into the CAM calculation.
+
+**The problem:** GL accounts created mid-year (new vendor category, reclassified expense) often don't get added to the recovery pool mapping. The expense exists in the GL and reduces NOI, but tenants are never billed for it.
+
+**How to find it:**
+1. Export total operating expenses from the GL for the year
+2. Export the total expense amount in the recovery pool
+3. If the GL total is higher than the pool total, there are unmapped accounts
+4. Run the GL Account Mapping Report to see which accounts aren't mapped
+
+**How to fix:** For each unmapped account that belongs in the pool, add it to the GL Account Mapping tab. If the account represents a capital expenditure, consult lease terms before adding: capital expenses are typically not recoverable.
+
+## Root Cause 5: Pro-Rata Denominator Not Updated
+
+**Where to find it:** Tenant Recovery Billing → Pro-Rata Share tab → Denominator field
+
+**What it does:** Sets the denominator for each tenant's pro-rata share calculation. Pro-rata share = tenant RSF / denominator.
+
+**The problem:** The denominator must match the lease definition. If the lease defines denominator as total building RSF (200,000 SF), but Yardi is using occupied RSF (185,000 SF because 15,000 SF is currently vacant), every tenant's pro-rata share is too high.
+
+**Common denominator errors:**
+- Denominator not updated when new space was added to the building
+- Denominator not updated after tenant move-outs when the lease defines it by occupancy
+- Wrong lease-defined denominator (using occupied area when lease says total RSF)
+
+**How to fix:** For each tenant, verify the denominator in Yardi against the denominator definition in their lease. Most leases define a specific method. Update Yardi to match.
+
+## Root Cause 6: Cap Configuration Error
+
+**Where to find it:** Tenant Recovery Billing → Cap tab → Cap Type, Cap Amount, Base Year
+
+**What it does:** Applies the expense cap defined in the tenant's lease, limiting how much CAM can increase year-over-year.
+
+**Common cap errors:**
+- **Non-cumulative applied when lease says cumulative:** A 5% cumulative cap allows unused capacity to carry forward. A 5% non-cumulative cap does not. Over 3 years, these can produce very different results.
+- **Wrong cap base year:** After a lease renewal, the cap base year often resets. If Yardi still uses the original base year, every year since renewal is being capped against the wrong baseline.
+- **Cap applied to wrong expense categories:** Some leases cap only controllable expenses (excluding taxes, insurance). If Yardi applies the cap to the total including taxes and insurance, it's over-restricting the landlord's recovery.
+
+**How to check:** Pull the cap configuration for each tenant. Run a manual cap calculation using 2-3 years of actual data. Compare to Yardi's output.
+
+## Root Cause 7: Incorrect Recovery Code Assignment
+
+**Where to find it:** Lease record → Recovery Code field
+
+**What it does:** Links the tenant to a specific recovery pool or recovery code. If a tenant is assigned to the wrong pool, they're getting calculations from the wrong expense pool. That pool may include expenses from the wrong building, the wrong property type, or a different lease structure.
+
+**The problem:** When a building has multiple recovery pools (e.g., a base building pool and a retail pool), tenants must be assigned to the correct pool. Assigning a retail tenant to the office pool (or vice versa) produces systematically wrong results.
+
+**How to check:** For every tenant, verify that the recovery code in their lease record matches the recovery pool that contains the expenses they should be billed for.
+
+---
+
+## The Validation Workflow
+
+After checking these seven items:
+
+1. Pick 3 tenants (largest, smallest, most complex lease)
+2. Calculate their CAM charges manually using GL data and lease terms
+3. Compare to Yardi's calculated amounts
+4. If they match within 1%, configuration is likely correct
+5. If they diverge, trace back to the seven items above
+
+CapVeri automates this validation. Upload your Yardi GL export and lease terms, and CapVeri independently recalculates every tenant's reconciliation, flagging each discrepancy with the specific configuration setting and lease clause responsible.
+
+## Related Resources
+- [CAM Reconciliation Guide](/cam-reconciliation-guide): Complete step-by-step reconciliation process
+
+- [Yardi CAM Recovery Pool Setup Guide](/resources/software/yardi-voyager/cam-setup): Detailed configuration walkthrough
+- [CAM Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide): Verify gross-up methodology
+- [CAM Cap Calculator](/tools/cam-cap-calculator): Model cumulative vs. non-cumulative cap scenarios
+- [Pro-Rata Calculator](/tools/pro-rata-calculator): Verify pro-rata share calculations
+
+## Sources
+
+1. [Yardi - Voyager Commercial property management](https://www.yardi.com/products/yardi-voyager-commercial/)
+2. [CapVeri Sources & Research - Yardi interface program pricing](/sources#yardi-interface-program-pricing)

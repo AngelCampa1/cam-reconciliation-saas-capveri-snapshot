@@ -1,0 +1,41 @@
+{
+  "scenario": "grossup_basic",
+  "description": "Basic gross-up with 90% occupancy to 95% target",
+  "inputs": {
+    "variable_expenses": 10000.0,
+    "fixed_expenses": 5000.0,
+    "actual_occupancy": 0.9,
+    "target_occupancy": 0.95
+  },
+  "calculation_steps": [
+    {
+      "step": 1,
+      "description": "Calculate gross-up factor",
+      "formula": "target_occupancy / actual_occupancy",
+      "calculation": "0.95 / 0.90 = 1.055556",
+      "result": 1.055556
+    },
+    {
+      "step": 2,
+      "description": "Apply gross-up to variable expenses",
+      "formula": "variable_expenses * gross_up_factor",
+      "calculation": "10000.00 * 1.055556 = 10555.56",
+      "result": 10555.56
+    },
+    {
+      "step": 3,
+      "description": "Verify safety valve (100% occupancy cap)",
+      "formula": "variable_expenses * (1.0 / actual_occupancy)",
+      "calculation": "10000.00 * (1.0 / 0.90) = 11111.11",
+      "result": 11111.11,
+      "check": "10555.56 <= 11111.11 \u2713"
+    }
+  ],
+  "expected_output": {
+    "grossed_variable_expenses": 10555.56,
+    "fixed_expenses": 5000.0,
+    "total_expenses": 15555.56,
+    "gross_up_factor": 1.055556,
+    "safety_valve_triggered": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "error_type": "format",
+  "description": "CSV with header row repeated in the middle of data",
+  "parseable": true,
+  "expected_behavior": "Parser should detect and filter out repeated header rows",
+  "expected_warnings": [
+    "Repeated header row detected at row 3 and removed"
+  ],
+  "expected_rows": 4,
+  "valid_rows": 4,
+  "invalid_rows": 0
+}

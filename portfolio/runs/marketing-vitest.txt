@@ -1,0 +1,382 @@
+# NOTE: absolute local build paths on the author's machine were normalized below to <repo> and <site-packages> placeholders. Nothing else in this log was altered: no test names, counts, timings, or outcomes changed.
+
+> capveri-marketing@0.1.0 test:coverage
+> vitest run --coverage
+
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90m<repo>/marketing[39m
+      [2mCoverage enabled with [22m[33mv8[39m
+
+ [32m✓[39m src/__tests__/mdx-image-alt-text.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 1020[2mms[22m[39m
+     [33m[2m✓[22m[39m no MDX images have empty alt text (![](...)) [33m 515[2mms[22m[39m
+     [33m[2m✓[22m[39m no MDX <img> tags are missing an alt attribute [33m 500[2mms[22m[39m
+ [32m✓[39m src/lib/content/__tests__/videos-data.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 83[2mms[22m[39m
+ [32m✓[39m src/__tests__/resource-citation-integrity.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 1288[2mms[22m[39m
+     [33m[2m✓[22m[39m does not use legacy internal research source IDs [33m 524[2mms[22m[39m
+     [33m[2m✓[22m[39m does not use retired external source URLs that failed live verification [33m 521[2mms[22m[39m
+ [32m✓[39m src/__tests__/offering-consistency.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 1463[2mms[22m[39m
+     [33m[2m✓[22m[39m has no hardcoded subscription price strings outside canonical files [33m 799[2mms[22m[39m
+     [33m[2m✓[22m[39m has no inline hardcoded schema.org Offer arrays with price fields outside canonical files [33m 660[2mms[22m[39m
+ [32m✓[39m src/__tests__/VideoEmbed.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 758[2mms[22m[39m
+     [33m[2m✓[22m[39m renders thumbnail image and play button before click [33m 520[2mms[22m[39m
+ [32m✓[39m src/components/landing/__tests__/ValuePropositionSection.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 992[2mms[22m[39m
+     [33m[2m✓[22m[39m states the homepage problem plainly [33m 965[2mms[22m[39m
+ [32m✓[39m src/components/product-demo/__tests__/product-demo.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1249[2mms[22m[39m
+     [33m[2m✓[22m[39m renders lease rules, exception queue, and audit packet sections [33m 1083[2mms[22m[39m
+ [32m✓[39m src/app/tools/__tests__/page.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 2033[2mms[22m[39m
+     [33m[2m✓[22m[39m renders FAQPage structured data schema [33m 361[2mms[22m[39m
+     [33m[2m✓[22m[39m renders all eighteen tools [33m 847[2mms[22m[39m
+     [33m[2m✓[22m[39m renders a freshness signal time element [33m 821[2mms[22m[39m
+ [32m✓[39m src/app/vs/__tests__/page.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 2015[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the page heading [33m 831[2mms[22m[39m
+     [33m[2m✓[22m[39m links to all comparison pages [33m 386[2mms[22m[39m
+ [32m✓[39m src/app/glossary/page.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 2165[2mms[22m[39m
+     [33m[2m✓[22m[39m renders an H1 heading [33m 961[2mms[22m[39m
+     [33m[2m✓[22m[39m renders a back link to resources or home [33m 1044[2mms[22m[39m
+Not implemented: navigation to another Document
+ [32m✓[39m src/components/landing/__tests__/LandingPageClient.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 1322[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the universal hero [33m 956[2mms[22m[39m
+ [32m✓[39m src/__tests__/PricingContent.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 3467[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the pricing positioning headline [33m 1328[2mms[22m[39m
+     [33m[2m✓[22m[39m fires a tracking event when the CTA is clicked [33m 520[2mms[22m[39m
+     [33m[2m✓[22m[39m passes the limited offer to checkout links [33m 446[2mms[22m[39m
+     [33m[2m✓[22m[39m shows list pricing and omits the offer when the limited offer is exhausted [33m 303[2mms[22m[39m
+ [32m✓[39m src/components/landing/__tests__/HowItWorksSection.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 1073[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the section heading [33m 633[2mms[22m[39m
+ [32m✓[39m src/__tests__/mobile-first-patterns.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 1673[2mms[22m[39m
+     [33m[2m✓[22m[39m only allowed legacy files contain ungated grid-cols-3+ [33m 1114[2mms[22m[39m
+     [33m[2m✓[22m[39m only allowed legacy files contain raw fixed pixel widths >= 300px [33m 552[2mms[22m[39m
+ [32m✓[39m src/components/content/__tests__/BlogPostLayout.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 729[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the post title as h1 [33m 550[2mms[22m[39m
+ [32m✓[39m src/components/lead-capture/__tests__/LeadMagnetExitIntentPopup.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 894[2mms[22m[39m
+     [33m[2m✓[22m[39m can still open in enabled test mode for behavior coverage [33m 603[2mms[22m[39m
+ [32m✓[39m src/app/__tests__/breadcrumb-coverage.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 958[2mms[22m[39m
+ [32m✓[39m src/app/sample-report/__tests__/page.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 969[2mms[22m[39m
+     [33m[2m✓[22m[39m displays the synthetic audit packet framing [33m 965[2mms[22m[39m
+ [32m✓[39m src/components/landing/FAQSection.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 6464[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the complete landing FAQ list collapsed with the help link [33m 2137[2mms[22m[39m
+     [33m[2m✓[22m[39m clicking an FAQ item expands it and shows the answer [33m 803[2mms[22m[39m
+     [33m[2m✓[22m[39m clicking an open FAQ item closes it [33m 1084[2mms[22m[39m
+     [33m[2m✓[22m[39m each FAQ trigger is linked to its answer panel for assistive tech [33m 811[2mms[22m[39m
+     [33m[2m✓[22m[39m collapsed FAQ panels start inert and out of the tab order [33m 745[2mms[22m[39m
+     [33m[2m✓[22m[39m clicking a different FAQ closes the previously open one [33m 878[2mms[22m[39m
+ [32m✓[39m src/__tests__/internal-jargon-gate.test.ts [2m([22m[2m1 test[22m[2m)[22m[33m 7051[2mms[22m[39m
+     [33m[2m✓[22m[39m public-facing marketing copy contains no internal-only jargon [33m 7047[2mms[22m[39m
+ [32m✓[39m src/app/__tests__/llms-txt.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 261[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/MarketingFooter.test.tsx [2m([22m[2m11 tests[22m[2m)[22m[33m 6752[2mms[22m[39m
+       [33m[2m✓[22m[39m renders the uncluttered footer section headings [33m 914[2mms[22m[39m
+       [33m[2m✓[22m[39m renders product links [33m 1989[2mms[22m[39m
+       [33m[2m✓[22m[39m renders legal links [33m 1163[2mms[22m[39m
+       [33m[2m✓[22m[39m folds tools and compare into concise main footer groups [33m 1158[2mms[22m[39m
+       [33m[2m✓[22m[39m renders sources link in company section [33m 1060[2mms[22m[39m
+ [32m✓[39m src/__tests__/pricing-consistency.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 2940[2mms[22m[39m
+     [33m[2m✓[22m[39m does not publish retired fractional CapVeri limited offer pricing [33m 2848[2mms[22m[39m
+ [32m✓[39m src/lib/seo/__tests__/clusters.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 6947[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps cluster hubs, product paths, and priority links resolvable [32m 300[2mms[22m[39m
+     [33m[2m✓[22m[39m assigns every indexable public route to a cluster with reciprocal links [33m 6642[2mms[22m[39m
+ [32m✓[39m src/__tests__/PricingTeaser.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 858[2mms[22m[39m
+     [33m[2m✓[22m[39m links to the app trial flow and full pricing page [33m 575[2mms[22m[39m
+ [32m✓[39m src/components/landing/ValuePropositionSection.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 886[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the current problem statement [33m 551[2mms[22m[39m
+     [33m[2m✓[22m[39m renders exactly 3 non-stat value prop cards [33m 301[2mms[22m[39m
+ [32m✓[39m src/components/landing/SocialProofStrip.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 641[2mms[22m[39m
+     [33m[2m✓[22m[39m renders non-stat trust points [33m 605[2mms[22m[39m
+ [32m✓[39m src/components/content/__tests__/CitationChip.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 378[2mms[22m[39m
+     [33m[2m✓[22m[39m renders a citation link with source number [33m 364[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/Logo.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 946[2mms[22m[39m
+     [33m[2m✓[22m[39m renders an img with correct src and alt [33m 491[2mms[22m[39m
+Not implemented: navigation to another Document
+ [32m✓[39m src/components/landing/FeaturesGrid.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 811[2mms[22m[39m
+     [33m[2m✓[22m[39m renders current workflow heading [33m 476[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the six workflow feature cards [33m 310[2mms[22m[39m
+ [32m✓[39m src/components/content/__tests__/ToolPageLayout.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 904[2mms[22m[39m
+     [33m[2m✓[22m[39m links Home to / and Tools to /tools [33m 573[2mms[22m[39m
+ [32m✓[39m src/components/content/__tests__/ContentPageLayout.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 658[2mms[22m[39m
+     [33m[2m✓[22m[39m nav has aria-label Breadcrumb [33m 474[2mms[22m[39m
+ [32m✓[39m src/lib/__tests__/tool-result-tracking.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 600[2mms[22m[39m
+     [33m[2m✓[22m[39m tracks a tool result only once for the current page session [33m 591[2mms[22m[39m
+ [32m✓[39m src/components/ai-sdr/__tests__/AiSdrSalesWidget.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 705[2mms[22m[39m
+ [32m✓[39m src/app/__tests__/calendar-hub.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32m✓[39m src/components/lead-capture/__tests__/LeadCaptureForm.test.tsx [2m([22m[2m19 tests[22m[2m)[22m[33m 10965[2mms[22m[39m
+     [33m[2m✓[22m[39m renders default CTA label [33m 682[2mms[22m[39m
+     [33m[2m✓[22m[39m shows validation error when first_name is empty [33m 751[2mms[22m[39m
+     [33m[2m✓[22m[39m shows validation error for invalid email [33m 887[2mms[22m[39m
+     [33m[2m✓[22m[39m calls fetch with correct payload on valid submission [33m 884[2mms[22m[39m
+     [33m[2m✓[22m[39m calls onSuccess on 200 response [33m 707[2mms[22m[39m
+     [33m[2m✓[22m[39m shows 429 error message with detail from server [33m 746[2mms[22m[39m
+     [33m[2m✓[22m[39m shows fallback 429 message when detail is missing [33m 819[2mms[22m[39m
+     [33m[2m✓[22m[39m reports and shows generic error on 5xx response [33m 781[2mms[22m[39m
+     [33m[2m✓[22m[39m does not report expected 4xx response [33m 680[2mms[22m[39m
+     [33m[2m✓[22m[39m reports and shows network error when fetch throws [33m 635[2mms[22m[39m
+     [33m[2m✓[22m[39m does not report explicit abort errors [33m 566[2mms[22m[39m
+     [33m[2m✓[22m[39m tracks missing Turnstile verification before submit [33m 782[2mms[22m[39m
+     [33m[2m✓[22m[39m handles non-JSON error response body (json parse fails) [33m 688[2mms[22m[39m
+     [33m[2m✓[22m[39m submits without first_name in the request body [33m 468[2mms[22m[39m
+     [33m[2m✓[22m[39m shows validation error for invalid email in emailOnly mode [33m 434[2mms[22m[39m
+ [32m✓[39m src/components/content/__tests__/FrontmatterFAQ.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 778[2mms[22m[39m
+     [33m[2m✓[22m[39m renders frontmatter FAQ questions and answers as visible content [33m 773[2mms[22m[39m
+ [32m✓[39m src/components/landing/HeroSection.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1331[2mms[22m[39m
+     [33m[2m✓[22m[39m renders concrete CAM reconciliation headline [33m 812[2mms[22m[39m
+     [33m[2m✓[22m[39m renders primary and secondary CTAs [33m 422[2mms[22m[39m
+ [32m✓[39m src/__tests__/build-metadata-route.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 158[2mms[22m[39m
+ [32m✓[39m src/components/landing/__tests__/HeroSection.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1683[2mms[22m[39m
+     [33m[2m✓[22m[39m leads with concrete CAM reconciliation positioning [33m 1200[2mms[22m[39m
+     [33m[2m✓[22m[39m shows the synthetic product preview and CTAs [33m 380[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/ContactForm.test.tsx [2m([22m[2m17 tests[22m[2m)[22m[33m 11681[2mms[22m[39m
+       [33m[2m✓[22m[39m renders the form [33m 1116[2mms[22m[39m
+       [33m[2m✓[22m[39m calls fetch and shows success state on 200 response [33m 865[2mms[22m[39m
+       [33m[2m✓[22m[39m calls fetch and shows success on 200 response [33m 959[2mms[22m[39m
+       [33m[2m✓[22m[39m shows error message on non-ok API response [33m 867[2mms[22m[39m
+       [33m[2m✓[22m[39m reports audit API 5xx failures to Sentry while showing the API message [33m 1006[2mms[22m[39m
+       [33m[2m✓[22m[39m shows fallback error when API detail is missing [33m 940[2mms[22m[39m
+       [33m[2m✓[22m[39m shows network error message when fetch throws [33m 895[2mms[22m[39m
+       [33m[2m✓[22m[39m does not report explicit abort errors [33m 772[2mms[22m[39m
+       [33m[2m✓[22m[39m tracks missing Turnstile verification before submit [33m 717[2mms[22m[39m
+       [33m[2m✓[22m[39m clears previous error on resubmit [33m 1141[2mms[22m[39m
+       [33m[2m✓[22m[39m renders Return to Home link in success state [33m 663[2mms[22m[39m
+       [33m[2m✓[22m[39m updates buildingCount field [33m 453[2mms[22m[39m
+       [33m[2m✓[22m[39m updates message field [33m 750[2mms[22m[39m
+ [32m✓[39m src/__tests__/marketing-remediation.test.ts [2m([22m[2m11 tests[22m[2m)[22m[33m 11057[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps source marketing data free of mojibake sequences [33m 10825[2mms[22m[39m
+ [32m✓[39m src/app/tools/cam-billing-error-estimator/CamBillingErrorEstimatorClient.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 7721[2mms[22m[39m
+     [33m[2m✓[22m[39m tracks first result view after the estimator has enough inputs [33m 1720[2mms[22m[39m
+     [33m[2m✓[22m[39m does not track result views for implausibly small partial square-foot inputs [33m 861[2mms[22m[39m
+     [33m[2m✓[22m[39m tracks the post-result CTA with result state [33m 1340[2mms[22m[39m
+     [33m[2m✓[22m[39m shows worksheet email capture only after the modeled result is tracked [33m 834[2mms[22m[39m
+     [33m[2m✓[22m[39m requests the estimator worksheet from the post-result form [33m 2912[2mms[22m[39m
+ [32m✓[39m src/app/global-error.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 442[2mms[22m[39m
+     [33m[2m✓[22m[39m reports the exception and shows helpful recovery copy [33m 438[2mms[22m[39m
+ [32m✓[39m src/app/resources/__tests__/page.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 280[2mms[22m[39m
+ [32m✓[39m src/components/content/__tests__/CrossSiteCallout.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 791[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the lextract link with correct href [33m 460[2mms[22m[39m
+ [32m✓[39m src/components/content/__tests__/SourcesSection.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1061[2mms[22m[39m
+     [33m[2m✓[22m[39m renders sources ordered by citation number [33m 779[2mms[22m[39m
+ [32m✓[39m src/__tests__/route-integrity.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 9205[2mms[22m[39m
+     [33m[2m✓[22m[39m pre-renders JSON-backed dynamic route families [33m 804[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps demoted overlapping resources out of the indexed sitemap [33m 2260[2mms[22m[39m
+     [33m[2m✓[22m[39m resolves governed and JSON-backed internal links to real routes [33m 498[2mms[22m[39m
+     [33m[2m✓[22m[39m resolves hardcoded marketing links in source and MDX content [33m 5061[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps redirect destinations on valid canonical routes [33m 569[2mms[22m[39m
+ [32m✓[39m src/lib/__tests__/posthog.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 194[2mms[22m[39m
+ [32m✓[39m src/app/__tests__/roles-hub.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m src/components/landing/__tests__/PricingTeaser.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 219[2mms[22m[39m
+ [32m✓[39m scripts/cloudflare-env-runner.test.mjs [2m([22m[2m5 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32m✓[39m src/components/landing/__tests__/CTASection.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1089[2mms[22m[39m
+     [33m[2m✓[22m[39m renders universal concrete CTA copy [33m 805[2mms[22m[39m
+ [32m✓[39m src/components/landing/__tests__/FeaturesGrid.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1237[2mms[22m[39m
+     [33m[2m✓[22m[39m renders workflow-focused heading and subheading [33m 1189[2mms[22m[39m
+ [32m✓[39m src/__tests__/citation-self-reference-guard.test.ts [2m([22m[2m1 test[22m[2m)[22m[33m 1159[2mms[22m[39m
+     [33m[2m✓[22m[39m rejects internal research sources on resource and tool pages [33m 1155[2mms[22m[39m
+ [32m✓[39m src/app/docs/__tests__/page.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 883[2mms[22m[39m
+     [33m[2m✓[22m[39m renders all catalog domain cards [33m 879[2mms[22m[39m
+ [32m✓[39m src/app/terms/page.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 82[2mms[22m[39m
+ [32m✓[39m src/app/__tests__/posthog-provider.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 82[2mms[22m[39m
+ [32m✓[39m src/lib/lead-magnets/__tests__/page-tailoring.test.ts [2m([22m[2m67 tests[22m[2m)[22m[32m 39[2mms[22m[39m
+ [32m✓[39m src/__tests__/internal-link-graph.test.ts [2m([22m[2m9 tests[22m[2m)[22m[33m 17429[2mms[22m[39m
+     [33m[2m✓[22m[39m resolves every discovered internal link to a real route [33m 3520[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps every indexable public page reachable from an internal link [33m 2621[2mms[22m[39m
+     [33m[2m✓[22m[39m does not render links to demoted CAM reconciliation canonical pages [33m 1969[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps every indexable public page attached to one Resources megamenu hub [33m 1670[2mms[22m[39m
+     [33m[2m✓[22m[39m generates crawl links from Resources megamenu hubs to their attached pages [33m 1975[2mms[22m[39m
+     [33m[2m✓[22m[39m exposes every SEO resource family through the Resources hub or megamenu [33m 1730[2mms[22m[39m
+     [33m[2m✓[22m[39m counts resource family data links as rendered inbound links [33m 1686[2mms[22m[39m
+     [33m[2m✓[22m[39m does not count route governance metadata as rendered inbound links [33m 2072[2mms[22m[39m
+ [32m✓[39m src/__tests__/funnel-system-map.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/app/api/ai-sdr/sign/__tests__/route.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m src/lib/content/__tests__/mdx-gfm.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m src/lib/__tests__/canonical-features.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m src/app/api/ai-sdr/product-context/__tests__/route.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m src/components/lead-capture/__tests__/CalculatorUnlockGate.test.tsx [2m([22m[2m17 tests[22m[2m)[22m[33m 16339[2mms[22m[39m
+       [33m[2m✓[22m[39m shows unlock prompt with button when not unlocked [33m 548[2mms[22m[39m
+       [33m[2m✓[22m[39m clicking unlock button shows the form [33m 377[2mms[22m[39m
+       [33m[2m✓[22m[39m calls onUnlock and sets localStorage on 200 response [33m 1415[2mms[22m[39m
+       [33m[2m✓[22m[39m calls fetch with correct endpoint and payload [33m 1168[2mms[22m[39m
+       [33m[2m✓[22m[39m treats 429 as returning lead and sets slug-specific localStorage [33m 1356[2mms[22m[39m
+       [33m[2m✓[22m[39m still unlocks when localStorage writes are blocked [33m 1400[2mms[22m[39m
+       [33m[2m✓[22m[39m reports and shows error message on 5xx response [33m 1551[2mms[22m[39m
+       [33m[2m✓[22m[39m does not report expected 4xx response [33m 1513[2mms[22m[39m
+       [33m[2m✓[22m[39m reports and shows network error when fetch throws [33m 1769[2mms[22m[39m
+       [33m[2m✓[22m[39m does not report explicit abort errors [33m 1799[2mms[22m[39m
+       [33m[2m✓[22m[39m tracks missing Turnstile verification before submit [33m 1533[2mms[22m[39m
+       [33m[2m✓[22m[39m renders tailored lockMessage and unlockLabel when provided [33m 629[2mms[22m[39m
+       [33m[2m✓[22m[39m shows first_name and work_email validation errors when submitting empty form [33m 684[2mms[22m[39m
+ [32m✓[39m src/__tests__/competitor-gap-content.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32m✓[39m src/components/mdx/__tests__/StatGrid.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 200[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/ThemeProvider.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 85[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/JsonLd.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 108[2mms[22m[39m
+ [32m✓[39m src/app/__tests__/sitemap.test.ts [2m([22m[2m9 tests[22m[2m)[22m[33m 18368[2mms[22m[39m
+     [33m[2m✓[22m[39m includes all indexable marketing pages and excludes non-indexable routes [33m 1944[2mms[22m[39m
+     [33m[2m✓[22m[39m includes only explicitly allowlisted public AI text assets [33m 1557[2mms[22m[39m
+     [33m[2m✓[22m[39m includes every static canonical indexable tool route [33m 1513[2mms[22m[39m
+     [33m[2m✓[22m[39m matches the internal link registry indexable route set [33m 1874[2mms[22m[39m
+     [33m[2m✓[22m[39m uses canonical absolute URLs and unique paths [33m 1665[2mms[22m[39m
+     [33m[2m✓[22m[39m preserves explicit metadata when static route discovery finds duplicate paths [33m 3165[2mms[22m[39m
+     [33m[2m✓[22m[39m assigns a non-trivial positive priority to every /resources/* article page [33m 2906[2mms[22m[39m
+     [33m[2m✓[22m[39m includes JSON-backed resource detail pages with data file dates [33m 1779[2mms[22m[39m
+     [33m[2m✓[22m[39m uses deterministic lastModified values from the central route map for static routes [33m 1962[2mms[22m[39m
+Not implemented: navigation to another Document
+ [32m✓[39m src/app/__tests__/main-commercial-pages-positioning.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m src/app/tools/cam-overcharge-calculator/__tests__/CamOverchargeCalculatorClient.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 14975[2mms[22m[39m
+     [33m[2m✓[22m[39m renders breadcrumb, form fields, and calculator structured data [33m 905[2mms[22m[39m
+     [33m[2m✓[22m[39m validates inputs and conditionally shows the cap rate field [33m 1717[2mms[22m[39m
+     [33m[2m✓[22m[39m shows gated preview, unlocks full results, and links to the audit wizard [33m 4763[2mms[22m[39m
+     [33m[2m✓[22m[39m tracks the first successful result calculation with safe buckets only [33m 3296[2mms[22m[39m
+     [33m[2m✓[22m[39m shows full results immediately for returning visitors [33m 2347[2mms[22m[39m
+     [33m[2m✓[22m[39m clears a shown estimate when an input changes [33m 1934[2mms[22m[39m
+ [32m✓[39m src/app/__tests__/noindex-metadata.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m src/lib/__tests__/api.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/hooks/__tests__/useScrollReveal.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 339[2mms[22m[39m
+ [32m✓[39m src/components/mdx/__tests__/Table.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 277[2mms[22m[39m
+ [32m✓[39m src/app/__tests__/robots.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/lib/__tests__/ai-sdr-hmac.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/lib/lead-magnets/__tests__/registry.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 561[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps every promoted lead capture slug registered [33m 530[2mms[22m[39m
+ [32m✓[39m src/components/ui/button.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/app/__tests__/workflows-hub.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 269[2mms[22m[39m
+ [32m✓[39m src/data/__tests__/faq-data.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 107[2mms[22m[39m
+ [32m✓[39m src/app/pricing/__tests__/page.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/__tests__/cloudflare-redirects.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m src/app/sources/__tests__/page.test.tsx [2m([22m[2m11 tests[22m[2m)[22m[33m 21638[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the page heading [33m 3461[2mms[22m[39m
+     [33m[2m✓[22m[39m renders industry statistics section [33m 2400[2mms[22m[39m
+     [33m[2m✓[22m[39m renders CapVeri-specific claims section [33m 1754[2mms[22m[39m
+     [33m[2m✓[22m[39m renders standards referenced section [33m 2656[2mms[22m[39m
+     [33m[2m✓[22m[39m renders methodology notes section [33m 2540[2mms[22m[39m
+     [33m[2m✓[22m[39m renders corrections policy with email link [33m 7275[2mms[22m[39m
+     [33m[2m✓[22m[39m renders reliability ratings on industry stats [33m 457[2mms[22m[39m
+     [33m[2m✓[22m[39m renders source verification process note [33m 363[2mms[22m[39m
+ [32m✓[39m src/app/blog/category/[category]/page.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/lib/__tests__/structured-data.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m src/__tests__/theme-class-guard.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 50[2mms[22m[39m
+ [32m✓[39m src/__tests__/structured-data.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32m✓[39m src/__tests__/plans.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m src/lib/__tests__/auditLink.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/lib/sentry.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m src/lib/seo/__tests__/contextual-links.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/lib/citations/__tests__/types.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/app/glossary/[term]/page.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m src/components/landing/__tests__/index.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/__tests__/content-quality.test.ts [2m([22m[2m14 tests[22m[2m)[22m[33m 24974[2mms[22m[39m
+     [33m[2m✓[22m[39m does not publish em dashes or mojibake em dashes in marketing text [33m 12235[2mms[22m[39m
+     [33m[2m✓[22m[39m does not publish unfinished placeholder markers [33m 10303[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps public page copy aligned to approved CTA and anti-slop terms [33m 766[2mms[22m[39m
+     [33m[2m✓[22m[39m uses only valid funnel stage values in blog and resource frontmatter [33m 598[2mms[22m[39m
+     [33m[2m✓[22m[39m attributes every blog and resource MDX page to Angel Campa [33m 397[2mms[22m[39m
+     [33m[2m✓[22m[39m requires linked Sources sections on every blog and resource MDX page [33m 373[2mms[22m[39m
+ [32m✓[39m src/app/help/__tests__/HelpCenterClient.test.tsx [2m([22m[2m21 tests[22m[2m)[22m[33m 28283[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the Help Center heading [33m 1199[2mms[22m[39m
+     [33m[2m✓[22m[39m renders task-based beginner help cards before FAQs [33m 2146[2mms[22m[39m
+     [33m[2m✓[22m[39m renders all category headings [33m 1073[2mms[22m[39m
+     [33m[2m✓[22m[39m renders category nav links with correct href anchors [33m 1584[2mms[22m[39m
+     [33m[2m✓[22m[39m renders Contact Support link pointing to /contact [33m 943[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'Still have questions?' CTA [33m 916[2mms[22m[39m
+       [33m[2m✓[22m[39m expands a FAQ item on click [33m 4824[2mms[22m[39m
+       [33m[2m✓[22m[39m collapses a FAQ item on second click [33m 5731[2mms[22m[39m
+       [33m[2m✓[22m[39m allows multiple items to be open simultaneously [33m 4665[2mms[22m[39m
+       [33m[2m✓[22m[39m filters questions by question text [33m 972[2mms[22m[39m
+       [33m[2m✓[22m[39m filters questions by answer text [33m 1066[2mms[22m[39m
+       [33m[2m✓[22m[39m shows all categories when search is empty [33m 634[2mms[22m[39m
+       [33m[2m✓[22m[39m shows no-results message for nonsense query [33m 554[2mms[22m[39m
+       [33m[2m✓[22m[39m handles intersection callback for intersecting entries [33m 477[2mms[22m[39m
+       [33m[2m✓[22m[39m handles intersection callback for non-intersecting entries [33m 507[2mms[22m[39m
+Not implemented: navigation to another Document
+ [32m✓[39m src/components/__tests__/MarketingNav.test.tsx [2m([22m[2m28 tests[22m[2m)[22m[33m 29334[2mms[22m[39m
+       [33m[2m✓[22m[39m renders only the primary marketing nav links at the top level [33m 2525[2mms[22m[39m
+       [33m[2m✓[22m[39m opens and closes the Product dropdown with disclosure state [33m 1275[2mms[22m[39m
+       [33m[2m✓[22m[39m opens the Resources dropdown with disclosure state [33m 1101[2mms[22m[39m
+       [33m[2m✓[22m[39m does NOT render For Tenants link in nav [33m 1036[2mms[22m[39m
+       [33m[2m✓[22m[39m does NOT render standalone Help or Tools top-level nav links [33m 1132[2mms[22m[39m
+       [33m[2m✓[22m[39m does NOT render How It Works link in nav [33m 984[2mms[22m[39m
+       [33m[2m✓[22m[39m does NOT render ROI Calculator link in nav [33m 1240[2mms[22m[39m
+       [33m[2m✓[22m[39m renders About link in nav [33m 1658[2mms[22m[39m
+       [33m[2m✓[22m[39m does NOT render Contact link in nav [33m 1394[2mms[22m[39m
+       [33m[2m✓[22m[39m renders Sign in link pointing to APP_URL/auth/login [33m 1495[2mms[22m[39m
+       [33m[2m✓[22m[39m shows the limited time offer in the banner without scarcity count [33m 1134[2mms[22m[39m
+       [33m[2m✓[22m[39m renders Start Free Trial CTA pointing to APP_URL/auth/register [33m 1283[2mms[22m[39m
+       [33m[2m✓[22m[39m fires cta_clicked event when desktop CTA is clicked [33m 2395[2mms[22m[39m
+       [33m[2m✓[22m[39m applies active styling to Pricing when pathname is /pricing [33m 2223[2mms[22m[39m
+       [33m[2m✓[22m[39m does not apply active styling to Features when pathname is /pricing [33m 1293[2mms[22m[39m
+       [33m[2m✓[22m[39m applies active styling to Product for product detail paths [33m 749[2mms[22m[39m
+       [33m[2m✓[22m[39m applies active styling to Resources when pathname is /resources [33m 789[2mms[22m[39m
+       [33m[2m✓[22m[39m mobile menu shows the primary marketing nav links when open [33m 1130[2mms[22m[39m
+       [33m[2m✓[22m[39m mobile menu keeps product detail links out of the header [33m 812[2mms[22m[39m
+       [33m[2m✓[22m[39m mobile menu keeps resource hub links out of the header [33m 727[2mms[22m[39m
+       [33m[2m✓[22m[39m mobile menu does NOT show removed links when open [33m 791[2mms[22m[39m
+       [33m[2m✓[22m[39m applies active styling to Pricing in mobile menu when pathname is /pricing [33m 822[2mms[22m[39m
+       [33m[2m✓[22m[39m clicking a mobile link closes the mobile menu [33m 849[2mms[22m[39m
+ [32m✓[39m src/app/__tests__/features-pages.test.tsx [2m([22m[2m28 tests[22m[2m)[22m[33m 33455[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the feature hub with one clickable link per canonical feature [33m 6245[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'ingestion-csv-excel' with problem then solution [33m 1477[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'deterministic-calc-engine' with problem then solution [33m 1424[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'leakage-detection' with problem then solution [33m 2185[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'ai-gl-analysis' with problem then solution [33m 1597[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'historical-analysis' with problem then solution [33m 1491[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'lease-ai-with-review' with problem then solution [33m 1593[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'snapshot-and-campaign' with problem then solution [33m 2090[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'tenant-portal' with problem then solution [33m 2135[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'dispute-management' with problem then solution [33m 1669[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'tenant-communications' with problem then solution [33m 842[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'sb1103-and-demand-letters' with problem then solution [33m 940[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'append-only-audit-trail' with problem then solution [33m 1010[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'audit-defense-package' with problem then solution [33m 768[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'multi-format-exports' with problem then solution [33m 732[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'statement-detail-advisor' with problem then solution [33m 701[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'pricing-and-checkout' with problem then solution [33m 785[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'denominator-audit-trail' with problem then solution [33m 807[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'cap-bank-tracking' with problem then solution [33m 742[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'importable-adjustment-exports' with problem then solution [33m 752[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'anomaly-alerts' with problem then solution [33m 677[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'noi-impact-calculator' with problem then solution [33m 706[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'portfolio-board-reports' with problem then solution [33m 689[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'tax-protest-package' with problem then solution [33m 697[2mms[22m[39m
+     [33m[2m✓[22m[39m renders 'rbac-and-rls' with problem then solution [33m 661[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m101 passed[39m[22m[90m (101)[39m
+[2m      Tests [22m [1m[32m698 passed[39m[22m[90m (698)[39m
+[2m   Start at [22m 13:20:31
+[2m   Duration [22m 42.46s[2m (transform 25.49s, setup 99.26s, import 75.29s, tests 331.46s, environment 276.14s)[22m
+
+[34m % [39m[2mCoverage report from [22m[33mv8[39m
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   88.46 |    84.27 |   87.95 |   88.53 |                   
+ app/help          |     100 |     93.1 |     100 |     100 |                   
+  ...terClient.tsx |     100 |     93.1 |     100 |     100 | 135,177           
+ components        |   76.05 |    78.37 |   78.94 |   76.69 |                   
+  ContactForm.tsx  |      78 |    85.36 |      75 |   78.94 | ...85,415,439,488 
+  JsonLd.tsx       |     100 |      100 |     100 |     100 |                   
+  Logo.tsx         |     100 |      100 |     100 |     100 |                   
+  ...ingFooter.tsx |     100 |    88.88 |     100 |     100 | 59                
+  MarketingNav.tsx |   68.81 |    69.31 |   74.07 |   69.23 | ...25-332,516-520 
+  ...eProvider.tsx |     100 |      100 |     100 |     100 |                   
+  VideoEmbed.tsx   |     100 |      100 |     100 |     100 |                   
+ ...onents/content |     100 |      100 |     100 |     100 |                   
+  ...ageLayout.tsx |     100 |      100 |     100 |     100 |                   
+  ...ageLayout.tsx |     100 |      100 |     100 |     100 |                   
+ ...onents/landing |   92.98 |    77.77 |   85.18 |   92.85 |                   
+  CTASection.tsx   |   83.33 |      100 |   66.66 |   83.33 | 61                
+  FAQSection.tsx   |     100 |      100 |     100 |     100 |                   
+  FeaturesGrid.tsx |     100 |      100 |     100 |     100 |                   
+  HeroSection.tsx  |   33.33 |      100 |   33.33 |   33.33 | 46-65             
+  ...ksSection.tsx |     100 |      100 |     100 |     100 |                   
+  ...ageClient.tsx |     100 |      100 |     100 |     100 |                   
+  ...ingTeaser.tsx |    92.3 |       50 |      80 |   91.66 | 122               
+  ...roofStrip.tsx |     100 |      100 |     100 |     100 |                   
+  ...onSection.tsx |     100 |      100 |     100 |     100 |                   
+ ...s/lead-capture |   97.81 |    96.55 |    91.3 |   97.65 |                   
+  ...nlockGate.tsx |   97.26 |    95.65 |   91.66 |    97.1 | 80,321            
+  ...ptureForm.tsx |   98.43 |    97.14 |    90.9 |    98.3 | 327               
+ data              |     100 |      100 |     100 |     100 |                   
+  faq-data.tsx     |     100 |      100 |     100 |     100 |                   
+ hooks             |     100 |      100 |     100 |     100 |                   
+  ...rollReveal.ts |     100 |      100 |     100 |     100 |                   
+ lib               |      94 |    68.51 |    91.3 |      94 |                   
+  auditLink.ts     |     100 |      100 |     100 |     100 |                   
+  ...tured-data.ts |   90.62 |    55.26 |    90.9 |   90.62 | 132,301,361       
+-------------------|---------|----------|---------|---------|-------------------
+ERROR: Coverage for lines (88.53%) does not meet global threshold (95%)
+ERROR: Coverage for functions (87.95%) does not meet global threshold (95%)
+ERROR: Coverage for statements (88.46%) does not meet global threshold (95%)
+ERROR: Coverage for branches (84.27%) does not meet global threshold (95%)
+EXIT=1 ELAPSED=46s

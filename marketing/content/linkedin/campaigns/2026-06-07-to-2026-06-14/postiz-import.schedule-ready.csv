@@ -1,0 +1,2105 @@
+slot_id,scheduled_date,scheduled_time,timezone,scheduled_at_utc,platform,account,format,pillar,source_url,source_file,source_path,schedule_action,content_sha256,visible_length,content
+016,2026-06-08,06:00,America/Chicago,2026-06-08T11:00:00Z,linkedin,capveri,carousel,erp-exports,https://www.capveri.com/resources/export-cam-mri,marketing/content/resources/export-cam-mri.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-0600-mri-export-stack-016.md,schedule,7884d252eea059788d1d9aac6a8e7e8ecd0922127b0a0138888ec5c1cc61852c,687,"Carousel outline: The MRI export stack before CAM math
+
+Slide 1: Do not start with the cap formula
+- Start with the files.
+
+Slide 2: Recovery Reconciliation
+- Tenant recovery result by pool, in detail mode.
+
+Slide 3: GL Transaction Detail
+- Account, date, source, reference, and amount.
+
+Slide 4: Rent Roll
+- Tenant ID, suite, rentable SF, and lease dates.
+
+Slide 5: Tenant Billing History
+- Use it when estimate charges or invoice history are the question.
+
+Slide 6: The period check
+- Decide whether period 13 or 14 belongs in the year.
+
+Slide 7: The entity check
+- Make sure the expense entity and property selection match.
+
+Slide 8: The order
+- Export stack first. Lease math second."
+017,2026-06-08,07:00,America/Chicago,2026-06-08T12:00:00Z,linkedin,capveri,text-short,audit-defense,https://www.capveri.com/resources/landlord-cam-audit-defense-playbook,marketing/content/resources/landlord-cam-audit-defense-playbook.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-0700-first-thirty-days-017.md,schedule,fae4ee13d459358b80acf15102c8631c9a86f84016d140ee851c53c392ef76d0,677,"The first 30 days after a tenant audit notice are mostly about control.
+
+Who owns the response?
+Which lease clause governs the request?
+Which years are in scope?
+Which records can be produced without scrambling?
+Which disputed items are math errors, ambiguous lease reads, or unsupported claims?
+
+That sorting work matters because a blanket denial is rarely useful.
+
+A stronger response says:
+
+This item is conceded.
+This item is supported by these records.
+This item depends on this lease interpretation.
+This item is outside the documented scope.
+
+CapVeri helps build that trail before the notice arrives, so the response starts from files and calculations instead of memory."
+018,2026-06-08,08:00,America/Chicago,2026-06-08T13:00:00Z,linkedin,capveri,text-short,deterministic-math,https://www.capveri.com/resources/cam-gross-up-calculation-guide,marketing/content/resources/cam-gross-up-calculation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-0800-gross-up-threshold-018.md,schedule,90da7cf00cb238b13e85a699c9c533cbde753d0bdd50a043879953ac2d542b10,477,"90% and 95% are not interchangeable gross-up targets.
+
+On $500,000 of variable expenses at 70% occupancy:
+
+Gross-up to 90%:
+$500,000 / 0.70 x 0.90 = $642,857
+
+Gross-up to 95%:
+$500,000 / 0.70 x 0.95 = $678,571
+
+Difference:
+$35,714 in the variable expense pool.
+
+The spreadsheet may treat that as one input cell.
+
+The lease treats it as the rule.
+
+CapVeri keeps the target tied to the lease clause because a clean formula with the wrong threshold is still the wrong calculation."
+019,2026-06-08,09:00,America/Chicago,2026-06-08T14:00:00Z,linkedin,capveri,text-short,lease-math,https://www.capveri.com/resources/pro-rata-share-calculation,marketing/content/resources/pro-rata-share-calculation.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-0900-move-out-reconciliation-019.md,schedule,09b580fef7fb1f4e6e034db7f08ee353a8ace53e99fbfdb2183477c62e47e383,565,"Move-outs make annual pro-rata math easy to get wrong.
+
+A tenant that leaves on June 30 should not be treated like a full-year tenant.
+
+A tenant that expands on July 1 should not have one annual numerator.
+
+The year needs to be split into the periods the lease actually occupied:
+
+Before move-out.
+After move-out.
+Before expansion.
+After expansion.
+
+Then the share gets calculated for each period and prorated by lease days.
+
+CapVeri handles that as date-bound math, not a year-end shortcut.
+
+Because the rent roll snapshot is a starting point, not the whole story."
+020,2026-06-08,10:00,America/Chicago,2026-06-08T15:00:00Z,linkedin,capveri,text-short,lease-math,https://www.capveri.com/resources/cumulative-vs-non-cumulative-cam-caps,marketing/content/resources/cumulative-vs-non-cumulative-cam-caps.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-1000-cap-compounding-base-020.md,schedule,9839ea7df7d93fe68a01bb37cbd85d3a60bdec5f940930080c2197ebf513617f,671,"One CAM cap error stays quiet until expenses spike:
+
+Compounding from last year's actual bill instead of last year's cap ceiling.
+
+If actuals were below the ceiling, the two bases separate.
+
+Year after year, the incorrect ceiling drifts lower. In a calm expense year, the issue may stay hidden because actuals are still under both numbers.
+
+Then insurance, security, or maintenance jumps.
+
+Suddenly the cap binds, and the building is using a ceiling that was quietly underbuilt for years.
+
+CapVeri tracks the cap path from the prior ceiling, not from whatever happened to be billed last year.
+
+That distinction is dull until it matters.
+
+Then it is the whole calculation."
+021,2026-06-08,11:00,America/Chicago,2026-06-08T16:00:00Z,linkedin,capveri,carousel,lease-math,https://www.capveri.com/resources/admin-fee-calculation-methods,marketing/content/resources/admin-fee-calculation-methods.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-1100-admin-fee-circularity-carousel-021.md,schedule,82923ac39842e911953672b7e815477769f0b7637dc82d2d571957ed3cab82dd,602,"Carousel outline: The admin fee circularity problem
+
+Slide 1: ""15% of CAM"" may not be enough
+- The base decides the fee.
+
+Slide 2: Net method
+- Fee = rate x expense base.
+
+Slide 3: Gross method
+- Fee is included in the total that the fee is based on.
+
+Slide 4: The circularity
+- The fee depends on a number that includes the fee.
+
+Slide 5: The algebraic fix
+- Fee = rate x base / (1 - rate).
+
+Slide 6: The capped method
+- Calculate the fee, then apply the lease ceiling.
+
+Slide 7: The audit packet
+- Keep the lease clause and worksheet together.
+
+Slide 8: The control
+- Method first. Percentage second."
+022,2026-06-08,12:00,America/Chicago,2026-06-08T17:00:00Z,linkedin,capveri,text-short,boma-2024,https://www.capveri.com/resources/boma-2024-implementation-guide,marketing/content/resources/boma-2024-implementation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-1200-boma-parallel-run-022.md,schedule,bab80ba344e8af84abc37cd1a34efe89b58d625852d70155f3840dd49b400ab9,585,"The BOMA 2024 rollout step worth protecting:
+
+Run the reconciliation both ways before go-live.
+
+Current measurement.
+Updated measurement.
+Tenant by tenant comparison.
+Variance review.
+System check.
+
+That parallel run catches the quiet mistakes:
+
+Building total updated, suite RSF not updated.
+Pro-rata shares no longer sum correctly.
+Gross-up denominator still uses the old rentable area.
+One lease references a fixed BOMA version while another allows updates.
+
+CapVeri treats BOMA 2024 as an input-control project, not a slogan.
+
+The first live statement should not be the first test."
+023,2026-06-08,13:00,America/Chicago,2026-06-08T18:00:00Z,linkedin,capveri,text-short,anti-integration,https://www.capveri.com/resources/export-cam-yardi-voyager,marketing/content/resources/export-cam-yardi-voyager.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-1300-export-first-positioning-023.md,schedule,713c0ee977bfd6eac10746ca30c2764a3b1bde15ed8aab83074d2e3f570ffbc7,613,"CapVeri can find CAM risk without becoming the accounting system.
+
+The useful data is already there:
+
+Recovery report.
+GL detail.
+Rent roll.
+Billing history when needed.
+
+The question is whether those exports are complete, flat, tied to the same period, and matched back to lease rules.
+
+That is the export-first view of CAM reconciliation.
+
+No direct ERP integration promise.
+No ""rip out the system"" story.
+No black-box math.
+
+Just the files property teams already know, tested against deterministic lease calculations.
+
+Sometimes the fastest path to control is not a deeper integration.
+
+It is a cleaner export."
+024,2026-06-08,14:00,America/Chicago,2026-06-08T19:00:00Z,linkedin,capveri,text-short,audit-defense,https://www.capveri.com/resources/landlord-cam-audit-defense-playbook,marketing/content/resources/landlord-cam-audit-defense-playbook.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-1400-what-happens-next-024.md,schedule,dbde15b3f5474567bfb11eaadba880bab2e9b256fa59c25aba3ed5c5daa79259,640,"The useful question after a tenant flags a CAM charge is:
+
+What happens next?
+
+Not ""who made the mistake?""
+Not ""can we explain this away?""
+
+What happens next?
+
+If the GL supports it, produce the invoice and clause.
+
+If the math is wrong, recalculate and document the correction.
+
+If the lease language is ambiguous, separate the interpretation issue from the arithmetic.
+
+If the request is outside scope, say why with the lease language attached.
+
+CapVeri is built for that response path: source record, lease rule, calculation, review status.
+
+That is a better posture than searching through old folders while the clock is already running."
+025,2026-06-08,15:00,America/Chicago,2026-06-08T20:00:00Z,linkedin,capveri,text-short,deterministic-math,https://www.capveri.com/resources/deterministic-vs-ai-cam,marketing/content/resources/deterministic-vs-ai-cam.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-1500-human-verified-extraction-025.md,schedule,4c5521f9b13b90ac31962b58ea609c0ac4f073b2701688ae04574fd125c6d117,590,"The safest place for AI in CAM reconciliation is before the math, not inside it.
+
+Use it to extract lease clauses.
+Use it to identify likely expense categories.
+Use it to surface the fields a human needs to verify.
+
+Then stop.
+
+The calculation should run on confirmed inputs and explicit formulas.
+
+That split matters because extraction can be reviewed. Math has to be reproducible.
+
+CapVeri keeps AI-assisted document work separate from deterministic calculation for exactly that reason.
+
+No model should be asked to ""probably"" allocate a tenant's charge.
+
+The ledger should show the work."
+026,2026-06-08,16:00,America/Chicago,2026-06-08T21:00:00Z,linkedin,capveri,text-short,erp-exports,https://www.capveri.com/resources/export-cam-yardi-voyager,marketing/content/resources/export-cam-yardi-voyager.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-1600-charge-schedule-estimates-026.md,schedule,6399e56c442a779214051b0a0045c187f33aa1104476c28d2389f075102cb206,612,"When the question is ""what did we bill?"" the GL is not enough.
+
+For Yardi teams, Charge Schedule often becomes the support file.
+
+It helps answer:
+
+Which estimate charge was billed?
+When did the estimate change?
+Did the billed side move when the budget changed?
+Which charge code carried the amount?
+
+That matters because reconciliation is two-sided:
+
+Adjusted actual obligation.
+Estimated billings already collected.
+
+The tenant's balance sits between those numbers.
+
+CapVeri keeps billing support tied to the reconciliation because a correct expense pool still needs a correct credit for what was already paid."
+027,2026-06-08,17:00,America/Chicago,2026-06-08T22:00:00Z,linkedin,capveri,carousel,operating-controls,https://www.capveri.com/resources/recovery-ratio-analysis,marketing/content/resources/recovery-ratio-analysis.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-1700-recovery-gap-carousel-027.md,schedule,e2d6d38bf3410ef3ffc3c0e757827c838d744bbd618449b9e3baec007313dd51,678,"Carousel outline: A recovery gap is not one thing
+
+Slide 1: Low recovery is a question
+- Not a conclusion.
+
+Slide 2: GL mapping gap
+- Expense exists, but the recovery pool did not pick it up.
+
+Slide 3: Gross-up gap
+- Variable expenses were not normalized below the lease threshold.
+
+Slide 4: Cap constraint
+- The lease may limit what can be billed.
+
+Slide 5: Classification noise
+- Recoverable, excluded, capital, and landlord-only costs got mixed.
+
+Slide 6: Denominator drift
+- Tenant shares changed because the denominator moved.
+
+Slide 7: The useful output
+- A reason code, not a vague leakage number.
+
+Slide 8: The CapVeri view
+- Model the gap before calling it recoverable."
+028,2026-06-08,18:00,America/Chicago,2026-06-08T23:00:00Z,linkedin,capveri,text-short,audit-defense,https://www.capveri.com/resources/cam-presend-checklist,marketing/content/resources/cam-presend-checklist.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-1800-presend-lineage-028.md,schedule,086b51c245fbb8659d891cfcfedff6f361ad338c81ebbbb98cdb5d792979ae88,542,"Each material CAM statement line should have a lineage.
+
+Not a paragraph of explanation.
+
+A lineage:
+
+GL account.
+Invoice support.
+Lease treatment.
+Gross-up status.
+Cap status.
+Tenant share.
+Estimate credit.
+
+When that chain is visible, review gets calmer.
+
+When it is missing, a simple tenant question can turn into a reconstruction project.
+
+CapVeri pushes for source-linked statements because CAM confidence is not created by the final PDF. It is created by the records behind it.
+
+The statement is the output.
+
+The lineage is the control."
+029,2026-06-08,19:00,America/Chicago,2026-06-09T00:00:00Z,linkedin,capveri,text-short,deterministic-math,https://www.capveri.com/resources/cam-gross-up-calculation-guide,marketing/content/resources/cam-gross-up-calculation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-1900-gross-up-above-threshold-029.md,schedule,3977cc6845cf32604efe1c93d3184aa98b21a256da2a3dc3867842e0b360d8d4,675,"Gross-up has a stop sign.
+
+If the lease target is 95% and the building is already at or above 95%, the gross-up factor should not inflate the variable pool.
+
+That sounds obvious.
+
+It still needs to be checked, because a spreadsheet can apply the formula mechanically:
+
+Target occupancy / actual occupancy.
+
+Without the threshold guard, the calculation can move when it should stay at actuals.
+
+CapVeri treats gross-up as a rule set, not just a formula:
+
+Only variable expenses.
+Only when the lease allows it.
+Only to the lease-defined target.
+No inflation above the target condition.
+
+Small guardrails help catch expensive-looking mistakes before they harden into the packet."
+030,2026-06-08,20:00,America/Chicago,2026-06-09T01:00:00Z,linkedin,capveri,text-short,operating-controls,https://www.capveri.com/resources/cam-reconciliation-vs-estimate,marketing/content/resources/cam-reconciliation-vs-estimate.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-08-2000-second-day-close-030.md,schedule,0ec6b471cae1939a5ea4ddd088bdc49ca87281ba2be5e1e393cba32bd40cc99b,530,"The reconciliation question is not only:
+
+What did the property spend?
+
+It is also:
+
+What did the tenant already pay?
+
+A strong true-up needs both sides:
+
+Adjusted expense pool.
+Lease-defined pro-rata share.
+Any allowed gross-up or cap logic.
+Estimated billings collected during the year.
+Final balance due or credit.
+
+Miss the estimate credit, and the statement can be wrong even if the expense math is right.
+
+CapVeri ties billing history back into the calculation because reconciliation is not a GL report.
+
+It is a settlement."
+031,2026-06-09,06:00,America/Chicago,2026-06-09T11:00:00Z,linkedin,capveri,text-short,anti-integration,https://www.capveri.com/resources/export-cam-yardi-voyager,marketing/content/resources/export-cam-yardi-voyager.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-0600-export-first-control-031.md,schedule,04e6c2cda4e709f41aafb334d02e48f6f4a9e3590fc12c3fd7c264d28ea42a30,519,"The cleanest CAM review often starts with a file question:
+
+Do the exports tie before anyone opens the workbook?
+
+For Yardi teams, that means the Recovery Analysis, GL Analytics, and rent roll need the same property, the same reconciliation period, and detail-level output.
+
+If one file is summary-level, the math may still look polished. The support will not.
+
+That is where the control lives.
+
+Export first. Tie the files. Then test the lease math.
+
+What is the first export your team checks before statements go out?"
+032,2026-06-09,07:00,America/Chicago,2026-06-09T12:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/cam-gross-up-calculation-guide,marketing/content/resources/cam-gross-up-calculation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-0700-gross-up-fixed-variable-032.md,schedule,9170464de6505fb752944d4fa9cabfce53685bbdf6bddd52f5375e52fa48d0f2,512,"Gross-up mistakes usually start before the formula.
+
+The question is not just ""what is the occupancy target?""
+
+It is:
+
+Which expenses are actually variable?
+
+Property taxes do not become 95% occupied. Insurance does not become 95% occupied. A fixed management fee does not become 95% occupied.
+
+Janitorial, utilities, trash, and similar usage-driven costs are the items that need the closer look.
+
+The formula is only defensible after the pool is split.
+
+If the split is wrong, the percentage will not rescue it."
+033,2026-06-09,08:00,America/Chicago,2026-06-09T13:00:00Z,linkedin,capveri,carousel,audit-defense,https://www.capveri.com/resources/audit-defense-packet,marketing/src/app/resources/audit-defense-packet/page.tsx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-0800-audit-packet-six-docs-033.md,schedule,0171d3f0601746e2e86ecc9a16a6a1cfd47786bfb8207767afc6f58bd7b1573c,805,"Carousel outline: What belongs in the CAM audit packet?
+
+Slide 1: The packet is the response
+- A tenant audit request should not start a document hunt.
+
+Slide 2: GL export
+- Full year, property level, with account codes and descriptions.
+
+Slide 3: Invoice index
+- Vendor, date, amount, account, and a way to pull the backup fast.
+
+Slide 4: Management fee calculation
+- Base, rate, cap if any, and the lease clause used.
+
+Slide 5: Pro-rata schedule
+- Tenant RSF, denominator, percentage, and source for each number.
+
+Slide 6: Gross-up workbook
+- Occupancy, threshold, fixed-variable split, and normalized variable pool.
+
+Slide 7: Cap bank schedule
+- Base year, annual ceiling, actuals, unused capacity, and carry-forward balance.
+
+Slide 8: The point
+- Make the review traceable before the question arrives."
+034,2026-06-09,09:00,America/Chicago,2026-06-09T14:00:00Z,linkedin,capveri,text-short,erp-exports,https://www.capveri.com/resources/export-cam-mri,marketing/content/resources/export-cam-mri.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-0900-mri-period-thirteen-034.md,schedule,bef7bc5771f8f62c8c0e776a0a0e8d90f0503482afba091ecf361e14b0ecc3a4,575,"An MRI export can run clean and still miss the reconciliation answer.
+
+One quiet reason: adjustment periods.
+
+If period 13 or 14 belongs in the close process, a period 12 GL export can look complete while leaving year-end activity outside the file.
+
+That is not a cap problem.
+
+It is not a pro-rata problem.
+
+It is an export boundary problem.
+
+Before testing formulas, check entity, property, period range, and whether adjustment periods are intentionally included or intentionally excluded.
+
+""We used the report"" is not the same as ""we exported the right accounting period."""
+035,2026-06-09,10:00,America/Chicago,2026-06-09T15:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/pro-rata-share-calculation,marketing/content/resources/pro-rata-share-calculation.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-1000-denominator-drift-035.md,schedule,587908d17817873590253f6a157b7166f1ded7b26064d0b8fe21d96d36a98912,577,"Pro-rata share is a tiny percentage with a large blast radius.
+
+The numerator gets attention because it is the tenant's space.
+
+The denominator is where quiet drift shows up.
+
+Leasable area and leased area are not interchangeable. If vacant suites fall out of the denominator, the occupied tenants carry a larger share of the same pool.
+
+The expense did not change.
+
+The allocation did.
+
+Before sending a reconciliation, compare the denominator to the lease definition and the rent roll source behind it.
+
+That one check can explain a lot of ""why did my share move?"" questions."
+036,2026-06-09,11:00,America/Chicago,2026-06-09T16:00:00Z,linkedin,capveri,text-long,cam-math,https://www.capveri.com/resources/cumulative-vs-non-cumulative-cam-caps,marketing/content/resources/cumulative-vs-non-cumulative-cam-caps.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-1100-cumulative-cap-bank-036.md,schedule,9743a33dd1a27bf966c1f27c91d1012eafa233dacbce653c0ffaf51c5e5e33d8,701,"Cumulative caps need a ledger, not a memory.
+
+The cap bank is easy to explain:
+
+If actual controllable expenses are below the allowed ceiling, unused capacity may carry forward when the lease says the cap is cumulative.
+
+The hard part is proving the balance later.
+
+Each year needs the same basic row:
+
+Base amount.
+Annual cap ceiling.
+Actual controllable amount.
+Amount billed.
+Unused capacity.
+Bank balance.
+
+When that schedule is missing, the next reconciliation starts with a trust problem.
+
+If the lease says non-cumulative, the unused capacity disappears. If it says cumulative, the carry-forward needs to survive ownership changes, staff changes, and spreadsheet cleanups.
+
+That is the control."
+037,2026-06-09,12:00,America/Chicago,2026-06-09T17:00:00Z,linkedin,capveri,text-short,traceable-math,https://www.capveri.com/resources/deterministic-vs-ai-cam,marketing/content/resources/deterministic-vs-ai-cam.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-1200-deterministic-math-ledger-037.md,schedule,05542d364142f31491ac3e164267b6c4556426a8fbac21d01de24d0351134f8e,574,"AI can help read documents.
+
+CAM math needs a ledger.
+
+The calculation has to answer ordinary questions:
+
+Which lease clause controlled the pool?
+Which expenses were included or excluded?
+Which gross-up threshold was used?
+Which denominator produced the tenant share?
+Which cap ceiling limited the amount?
+
+That is why CapVeri keeps extraction and calculation separate.
+
+Extraction can be reviewed by a human.
+
+The math runs through deterministic rules so the same inputs produce the same answer.
+
+For financial work, ""show the work"" is not a nice-to-have.
+
+It is the point."
+038,2026-06-09,13:00,America/Chicago,2026-06-09T18:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/admin-fee-calculation-methods,marketing/content/resources/admin-fee-calculation-methods.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-1300-admin-fee-method-038.md,schedule,7cd9591c99093cfd333541cfadd9ba1f888388957fb80316f0939de5f9a6e722,551,"Two admin fee calculations can use the same percentage and produce different answers.
+
+That is why the first question is method, not rate.
+
+Gross method: the fee is calculated on a pool that includes the fee.
+
+Net method: the fee is calculated on the pool before the fee is added.
+
+Capped method: the calculated fee is limited by a lease-defined ceiling.
+
+The percentage is only half the instruction.
+
+Before billing, document the base, the method, and the cap treatment if the lease has one.
+
+A clean admin fee backup should be clear enough to audit."
+039,2026-06-09,14:00,America/Chicago,2026-06-09T19:00:00Z,linkedin,capveri,text-short,measurement,https://www.capveri.com/resources/boma-2024-implementation-guide,marketing/content/resources/boma-2024-implementation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-1400-boma-source-not-badge-039.md,schedule,55f2b8f82fb3883878121aebca80c6cc70740af9622c8695c96c7125f572c396,556,"BOMA 2024 is a measurement input, not a marketing badge.
+
+For CAM, the practical question is simple:
+
+Did the rentable square footage used in the reconciliation change?
+
+If yes, the packet needs the source:
+
+Old measurement.
+New measurement.
+Lease language that allows or blocks the update.
+Effective date.
+Tenant-level pro-rata impact.
+
+CapVeri can work with BOMA-referenced measurement inputs.
+
+That does not mean a certification, endorsement, or shortcut around the lease.
+
+Measurement changes belong in the backup, not in someone's inbox after billing."
+040,2026-06-09,15:00,America/Chicago,2026-06-09T20:00:00Z,linkedin,capveri,text-short,recovery-modeling,https://www.capveri.com/resources/recovery-ratio-analysis,marketing/content/resources/recovery-ratio-analysis.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-1500-recovery-gap-model-040.md,schedule,0c3e5c998a6fc3a213dc0be562175ce6c9a1abfec688e8342459f6328087ad85,593,"Treat recovery ratio like a smoke alarm.
+
+When it drops, the answer is not automatically ""bill more.""
+
+The first move is the comparison:
+
+Recoverable operating expense pool.
+Total CAM billed.
+Difference by property.
+Reason codes for the gap.
+
+The reason codes matter more than the headline number.
+
+A gap caused by a lease exclusion is not the same as a gap caused by an unmapped GL account.
+
+A cap limitation is not the same as a missed gross-up.
+
+The review should make the difference traceable enough for the team to decide what is recoverable, what is excluded, and what needs a setup fix."
+041,2026-06-09,16:00,America/Chicago,2026-06-09T21:00:00Z,linkedin,capveri,carousel,erp-exports,https://www.capveri.com/resources/export-cam-yardi-voyager,marketing/content/resources/export-cam-yardi-voyager.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-1600-yardi-three-exports-carousel-041.md,schedule,82c2b67ed5c1f41712f810bd74e38fe0f2c5bc0808a40531d3717d7d3b883143,726,"Carousel outline: The Yardi export set before CAM review
+
+Slide 1: Do not start with the spreadsheet
+- Start with the export stack.
+
+Slide 2: Recovery Analysis
+- Tenant-level actuals, billings, variances, and recovery pools.
+
+Slide 3: GL Analytics
+- The transaction detail behind the recoverable expense pool.
+
+Slide 4: Rent Roll with Lease Charges
+- Tenant roster, rentable SF, lease timing, and charge setup.
+
+Slide 5: Charge Schedule when needed
+- Use it when the question is what was billed during the year.
+
+Slide 6: The QA pass
+- Same property, same period, detail mode, flat CSV.
+
+Slide 7: The wrong order
+- Debugging gross-up before the exports tie.
+
+Slide 8: The right order
+- Tie the files, then test the lease math."
+042,2026-06-09,17:00,America/Chicago,2026-06-09T22:00:00Z,linkedin,capveri,text-short,reconciliation-controls,https://www.capveri.com/resources/cam-reconciliation-vs-estimate,marketing/content/resources/cam-reconciliation-vs-estimate.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-1700-estimate-drift-042.md,schedule,e8b1f4349b6ebf1b6e4c9f3955a790fe7803d4c1a28a8b5398e6b54cb7cac577,528,"The estimate letter is where expectations get set.
+
+The reconciliation is where the actuals catch up.
+
+If the estimate was stale all year, the true-up may be mathematically correct and still feel like a surprise.
+
+That is why a mid-year check matters:
+
+Current GL run rate.
+Budget assumptions.
+Vendor changes.
+Insurance and tax movement.
+Tenant estimate billings to date.
+
+The goal is not to make the estimate perfect.
+
+It is to catch obvious drift before it becomes the only thing the tenant remembers about the reconciliation."
+043,2026-06-09,18:00,America/Chicago,2026-06-09T23:00:00Z,linkedin,capveri,text-short,operational-controls,https://www.capveri.com/resources/pro-rata-share-calculation,marketing/content/resources/pro-rata-share-calculation.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-1800-move-out-reconciliation-043.md,schedule,070772348fbcbaf3041f5a776a9a74849dd3f72ea1c5725fa0a997d6a2bd1b1b,546,"Move-out reconciliations break when the year is treated as one flat period.
+
+A tenant that leaves in May does not need the same date range as a tenant that stayed through December.
+
+The control is simple:
+
+Calculate the share.
+Apply the correct expense pool.
+Prorate by the lease days in the reconciliation period.
+Tie the estimate billings already collected.
+
+The mistake is skipping straight to the annual tenant percentage and hoping the timing works itself out.
+
+It usually does not.
+
+Partial-year occupancy needs its own row, not a footnote."
+044,2026-06-09,19:00,America/Chicago,2026-06-10T00:00:00Z,linkedin,capveri,text-long,traceable-math,https://www.capveri.com/resources/deterministic-vs-ai-cam,marketing/content/resources/deterministic-vs-ai-cam.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-1900-cpa-verification-trace-044.md,schedule,77c97613e0a494dbed51f7db7fddce60501f7e82d91e0a0747304bd2370395b3,576,"A useful CAM calculation should let a reviewer rerun the answer from the inputs.
+
+That reviewer might be internal accounting.
+
+It might be a CPA.
+
+It might be the person who inherits the file two years from now.
+
+Either way, the file needs more than a final number.
+
+It needs:
+
+The source export.
+The lease rule.
+The classification decision.
+The formula.
+The exact inputs.
+The final tenant result.
+
+CapVeri's math is built around that trace.
+
+AI can help extract lease and document facts, but verified inputs and deterministic calculations are what make the result repeatable."
+045,2026-06-09,20:00,America/Chicago,2026-06-10T01:00:00Z,linkedin,capveri,question,engagement,https://www.capveri.com/resources/audit-defense-packet,marketing/src/app/resources/audit-defense-packet/page.tsx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-09-2000-what-happens-next-045.md,schedule,985f4d348affbfd1492dbee961362ba4a12f40ff84e93470d4f818df21442d53,611,"A tenant asks for CAM support.
+
+What happens next inside the property team?
+
+A. Someone sends the same packet by default.
+
+B. Accounting pulls the GL while property management searches for invoices.
+
+C. The team rebuilds the workbook from the last person who touched it.
+
+D. It depends on the tenant.
+
+The strongest process is not the one with the longest explanation.
+
+It is the one that makes the next step obvious.
+
+For CAM, that means source files, lease rules, calculation workbooks, and tenant-facing support are already connected before the request arrives.
+
+Which answer is closest to the real workflow?"
+046,2026-06-10,06:00,America/Chicago,2026-06-10T11:00:00Z,linkedin,capveri,text-short,erp-exports,https://www.capveri.com/resources/export-cam-mri,marketing/content/resources/export-cam-mri.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-0600-mri-three-files-046.md,schedule,0af0ab2c9a82eb617c36790b988c58b9f7821f68bc7b07c7181a9554eb502a73,578,"For MRI CAM review, three files carry much of the load:
+
+Recovery Reconciliation.
+GL Transaction Detail.
+Rent roll.
+
+The first shows the tenant recovery result.
+
+The second proves what fed the expense pool.
+
+The third gives the tenant roster, rentable SF, and timing.
+
+If tenant IDs or suites are missing, matching turns fragile fast.
+
+If the GL is summary-level, classification gets harder than it needs to be.
+
+If the entity is wrong, the rest of the review is noise.
+
+Export QA is not admin work. It is the control that decides whether the math review starts on solid ground."
+047,2026-06-10,07:00,America/Chicago,2026-06-10T12:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/cumulative-vs-non-cumulative-cam-caps,marketing/content/resources/cumulative-vs-non-cumulative-cam-caps.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-0700-cap-base-error-047.md,schedule,52de79346f6d610e051961f33833094228727a3b2f679fb0f32b93ba5ad9c22f,575,"A cap can be applied to the right expenses and still drift.
+
+One common source is the compounding base.
+
+If the lease says the cap grows from the prior cap ceiling, but the workbook grows it from the prior billed amount, the ceiling can fall behind year after year.
+
+That error may stay hidden while actuals are below the cap.
+
+It shows up when expenses spike and the ceiling finally matters.
+
+The check:
+
+Find the base year.
+Find the allowed annual increase.
+Find the prior ceiling.
+Recalculate the current ceiling from the lease rule.
+
+Do that before debating the variance."
+048,2026-06-10,08:00,America/Chicago,2026-06-10T13:00:00Z,linkedin,capveri,carousel,cam-math,https://www.capveri.com/resources/cam-gross-up-calculation-guide,marketing/content/resources/cam-gross-up-calculation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-0800-gross-up-carousel-048.md,schedule,2d7dbc70892ce3d744d49f1672046ddb74bba13128301203df231b83cf436910,800,"Carousel outline: Gross-up review in the right order
+
+Slide 1: Gross-up is not one number
+- It is a lease rule plus an expense classification.
+
+Slide 2: Start with the clause
+- Does the lease permit gross-up, and what target does it define?
+
+Slide 3: Confirm actual occupancy
+- Use the period and measurement basis the lease requires.
+
+Slide 4: Split the pool
+- Fixed costs stay fixed. Variable costs are the gross-up candidates.
+
+Slide 5: Apply the target
+- Variable expenses divided by actual occupancy, multiplied by target occupancy.
+
+Slide 6: Add fixed costs back
+- Do not gross up the whole operating pool.
+
+Slide 7: Keep the workbook
+- Occupancy, target, classifications, and final pool need to be retrievable.
+
+Slide 8: The control
+- The formula is simple. The evidence around it is the work."
+049,2026-06-10,09:00,America/Chicago,2026-06-10T14:00:00Z,linkedin,capveri,text-short,measurement,https://www.capveri.com/resources/boma-2024-implementation-guide,marketing/content/resources/boma-2024-implementation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-0900-boma-parallel-run-049.md,schedule,85f7cce1175ada0358f0bc7c534241972cc9a93c286df82f5c3c9b3f4a3f4de0,564,"Before a BOMA 2024 measurement update reaches billing, run it twice.
+
+Once with the current measurements.
+
+Once with the updated measurements.
+
+Then compare tenant by tenant.
+
+The point is not to turn a measurement standard into a dispute.
+
+The point is to know what changed before a statement goes out.
+
+Useful backup includes the old rentable SF, new rentable SF, denominator movement, pro-rata impact, and the lease language that controls whether the update applies now.
+
+No surprise measurement changes.
+
+No mystery denominator.
+
+No certification claim needed."
+050,2026-06-10,10:00,America/Chicago,2026-06-10T15:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/admin-fee-calculation-methods,marketing/content/resources/admin-fee-calculation-methods.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-1000-admin-fee-circularity-050.md,schedule,e9f5d5156e8cf0f9a0cac4d7f323b39254125f49ff6bd6cc618bbd92848bc080,539,"Admin fee circularity is easy to miss because the rate looks right.
+
+The problem is the base.
+
+If the lease defines the fee as a percentage of total CAM expenses and total CAM includes the fee, the fee depends on a number that includes itself.
+
+That needs an explicit method.
+
+Otherwise the spreadsheet may quietly do something else:
+
+Calculate on the pool before the fee.
+Calculate on the pool after the fee.
+Stop after one pass.
+Apply a cap late.
+
+Same rate. Different answer.
+
+The backup should show the method, not just the percentage."
+051,2026-06-10,11:00,America/Chicago,2026-06-10T16:00:00Z,linkedin,capveri,text-long,anti-integration,https://www.capveri.com/resources/deterministic-vs-ai-cam,marketing/content/resources/deterministic-vs-ai-cam.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-1100-lease-rule-before-system-051.md,schedule,bb7110769eed5b43ceb4e47dd13ca53dc8eb07e4f5b33d90afe4f9fc8cf80c79,602,"""The system calculated it"" is not enough support for CAM.
+
+The system still needs instructions.
+
+Gross-up threshold.
+Expense exclusions.
+Cap type.
+Denominator.
+Admin fee method.
+Partial-year treatment.
+
+Those are lease rules before they are software settings.
+
+CapVeri's export-first approach keeps the ERP as the source system and runs a traceable calculation layer beside it.
+
+That matters because a reconciliation question rarely starts with ""which button was clicked?""
+
+It starts with ""why did this tenant get this number?""
+
+The answer needs a source file, a lease rule, and math that can be rerun."
+052,2026-06-10,12:00,America/Chicago,2026-06-10T17:00:00Z,linkedin,capveri,carousel,cam-math,https://www.capveri.com/resources/pro-rata-share-calculation,marketing/content/resources/pro-rata-share-calculation.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-1200-pro-rata-carousel-052.md,schedule,42937f5a055ae5e9b281fd2defac2e434a1be8773eb03c3a83377fa6dfcdb5ec,882,"Carousel outline: The pro-rata share check
+
+Slide 1: The percentage is not the whole story
+- A clean-looking share can still use the wrong denominator.
+
+Slide 2: Confirm the numerator
+- Tenant rentable SF from the lease abstract or controlling measurement source.
+
+Slide 3: Confirm the denominator
+- Building leasable area, or the lease-defined denominator.
+
+Slide 4: Watch leased area
+- Vacant space should not disappear unless the lease says the method allows it.
+
+Slide 5: Watch excluded anchors
+- If anchors are excluded, the effective denominator changes for inline tenants.
+
+Slide 6: Watch remeasurement
+- BOMA updates can move RSF and pro-rata shares when the lease permits it.
+
+Slide 7: Watch partial-year changes
+- Expansions, contractions, move-ins, and move-outs need date ranges.
+
+Slide 8: Keep the schedule
+- The tenant percentage needs a source, not just a cell value."
+053,2026-06-10,13:00,America/Chicago,2026-06-10T18:00:00Z,linkedin,capveri,text-short,erp-exports,https://www.capveri.com/resources/export-cam-yardi-voyager,marketing/content/resources/export-cam-yardi-voyager.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-1300-export-furniture-053.md,schedule,97cd5782326d21af09d30c8d34dcf9cd8bedc62012e1ab83972370926958f4d7,521,"A spreadsheet can look like data and still behave like a report.
+
+Yardi exports often carry report furniture:
+
+Title rows.
+Header bands.
+Subtotal rows.
+Page totals.
+Footer notes.
+
+Those are readable for humans and painful for validation.
+
+Before the CAM file goes into any review process, flatten it.
+
+One row per record.
+Column names in one header row.
+No hidden totals mixed into transaction data.
+
+This is not cosmetic.
+
+It decides whether the file can be tied, filtered, and traced without accidental double-counting."
+054,2026-06-10,14:00,America/Chicago,2026-06-10T19:00:00Z,linkedin,capveri,text-short,audit-defense,https://www.capveri.com/resources/audit-defense-packet,marketing/src/app/resources/audit-defense-packet/page.tsx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-1400-audit-request-first-week-054.md,schedule,2cd6e740852a6ceaad8bb89ded00f1134d5bba71a10dc83476fffa32f7cbcfcf,529,"The first week after a CAM audit request should not be spent asking where the documents are.
+
+It should be spent checking that the packet matches the reconciliation that was sent.
+
+That means:
+
+Final GL export.
+Invoice index.
+Management fee backup.
+Pro-rata schedule.
+Gross-up workbook.
+Cap schedule.
+Tax and insurance support.
+Lease amendment register.
+
+The packet does not need drama.
+
+It needs version control.
+
+If the team has to recreate the support on demand, each manual step creates another place for the story to change."
+055,2026-06-10,15:00,America/Chicago,2026-06-10T20:00:00Z,linkedin,capveri,text-short,recovery-modeling,https://www.capveri.com/resources/recovery-ratio-analysis,marketing/content/resources/recovery-ratio-analysis.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-1500-recovery-reason-codes-055.md,schedule,379a5e8eb98420debc8a5d4d9182c935fabf848bc65b4be6e8eeb13822f496b1,502,"A recovery gap without reason codes is just a number.
+
+Useful reason codes are specific:
+
+Unmapped GL account.
+Lease-excluded category.
+Cap limitation.
+Gross-up not applied.
+Vacancy absorption.
+Tenant setup issue.
+Estimate billing shortfall.
+
+That list turns a portfolio-level gap into work the team can assign.
+
+Some items may be recoverable.
+
+Some may be permanently excluded.
+
+Some may point to setup controls for next year.
+
+The important part is not pretending the gap is one thing.
+
+It rarely is."
+056,2026-06-10,16:00,America/Chicago,2026-06-10T21:00:00Z,linkedin,capveri,carousel,cam-math,https://www.capveri.com/resources/cumulative-vs-non-cumulative-cam-caps,marketing/content/resources/cumulative-vs-non-cumulative-cam-caps.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-1600-cap-bank-carousel-056.md,schedule,3a2ddc8cde6e76316edba63f217a068e66abfa566b6b1b55043b11f14bb21f4c,719,"Carousel outline: Cumulative cap bank review
+
+Slide 1: A cap bank is not a note
+- It is a year-by-year schedule.
+
+Slide 2: Confirm the lease type
+- Cumulative and non-cumulative caps behave differently.
+
+Slide 3: Start with the base
+- Base year controllable amount and tenant share.
+
+Slide 4: Build the ceiling
+- Apply the annual cap percentage to the correct prior ceiling.
+
+Slide 5: Compare actuals
+- Actual controllable amount versus allowed ceiling.
+
+Slide 6: Track unused capacity
+- If cumulative, bank unused capacity for later years.
+
+Slide 7: Track draws
+- When actuals exceed the base ceiling, show the bank draw.
+
+Slide 8: Keep it portable
+- The schedule should survive a sale, staff change, or audit request."
+057,2026-06-10,17:00,America/Chicago,2026-06-10T22:00:00Z,linkedin,capveri,text-short,reconciliation-controls,https://www.capveri.com/resources/cam-reconciliation-vs-estimate,marketing/content/resources/cam-reconciliation-vs-estimate.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-1700-estimate-letter-support-057.md,schedule,58f505be43c900496c81285069607cd5ebaed7dc31732b0a3334413feef421ee,512,"An estimate letter should have backup before it has a PDF.
+
+At minimum, the file should answer:
+
+What prior-year actuals were used?
+What vendor changes were assumed?
+What inflation or rate movement was applied?
+What tenant share was used?
+What monthly amount was billed?
+What changed during the year?
+
+That does not make the estimate perfect.
+
+It makes the estimate explainable when the year-end reconciliation lands.
+
+The worst time to document the estimate logic is after the tenant asks why the true-up moved."
+058,2026-06-10,18:00,America/Chicago,2026-06-10T23:00:00Z,linkedin,capveri,text-short,traceable-math,https://www.capveri.com/resources/deterministic-vs-ai-cam,marketing/content/resources/deterministic-vs-ai-cam.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-1800-human-verified-extraction-058.md,schedule,70ce66de5a41b888d098a168ffb1cd06423bc3ade4c19799a753a4ec096a1634,445,"AI is useful when the file is messy.
+
+Lease PDFs are messy.
+GL descriptions are messy.
+Amendments are messy.
+Expense categories are messy.
+
+That is a reading problem.
+
+The charge calculation is different.
+
+Once the clause, category, date, and amount are extracted, the next question is whether a reviewer can confirm the inputs and rerun the formula.
+
+AI can help with the first read.
+
+It should not be the final authority on what a tenant owes."
+059,2026-06-10,19:00,America/Chicago,2026-06-11T00:00:00Z,linkedin,capveri,question,engagement,https://www.capveri.com/resources/audit-defense-packet,marketing/src/app/resources/audit-defense-packet/page.tsx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-1900-tenant-question-file-059.md,schedule,acfd5a7f14981e3d4d828502454dc527cdc4d510c7e5f5873af624417e81c608,466,"A tenant asks one narrow question:
+
+""Why did our management fee increase?""
+
+The answer should not require opening five old workbooks.
+
+The clean file has:
+
+The lease clause.
+The fee method.
+The expense base.
+The cap treatment.
+The calculation.
+The prior-year comparison.
+
+That is the difference between a response and a search project.
+
+Which CAM question takes the longest for teams to answer today?
+
+Gross-up, management fee, cap, denominator, or estimate billing?"
+060,2026-06-10,20:00,America/Chicago,2026-06-11T01:00:00Z,linkedin,capveri,text-short,campaign-summary,https://www.capveri.com/resources/audit-defense-packet,marketing/src/app/resources/audit-defense-packet/page.tsx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-10-2000-second-day-close-060.md,schedule,7cbe07909771429a8dafcb65ce3037b0a9426c970fe2abff87301ec04b017d4a,553,"CAM reconciliation gets easier to defend when the answer is built from the same pieces every time.
+
+Source export.
+Lease rule.
+Calculation input.
+Deterministic math.
+Reviewer note.
+Tenant-facing support.
+
+That sequence is not flashy.
+
+It is the part that keeps the file usable after the close, after the staff change, and after the tenant question.
+
+CapVeri is built for that kind of review:
+
+Export-based inputs, traceable calculations, and backup a property team can actually hand over.
+
+What would make your next reconciliation file easier to defend?"
+061,2026-06-11,06:00,America/Chicago,2026-06-11T11:00:00Z,linkedin,capveri,text-short,erp-exports,https://www.capveri.com/resources/export-cam-yardi-voyager,marketing/content/resources/export-cam-yardi-voyager.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-0600-export-exception-queue-061.md,schedule,07ca4126ca74af1afb42c52cde5716fe28b89293c4a954fed76fbfc074801f4e,684,"The useful Yardi export question is not ""did the report run?""
+
+It is:
+
+What did the export force the team to exclude, fix, or rerun?
+
+A clean CAM review should leave an exception queue:
+
+Missing tenant names.
+Summary output where detail was needed.
+Recovery pools with no GL support.
+Rent roll rows without rentable SF.
+Date filters that do not match the close period.
+Excel report rows mixed into transaction data.
+
+Those are not spreadsheet annoyances.
+
+They are the points where a later tenant question will ask for support the file cannot provide.
+
+CapVeri's export-first workflow treats those exceptions as the first review, before gross-up, caps, or pro-rata math get attention."
+062,2026-06-11,07:00,America/Chicago,2026-06-11T12:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/cam-gross-up-calculation-guide,marketing/content/resources/cam-gross-up-calculation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-0700-gross-up-threshold-ledger-062.md,schedule,290d2fed3d2620b0bf1d8af62d7d627780552943106bbd978eab99ce9d01fd7c,564,"Gross-up support should show more than the final adjusted pool.
+
+It should show the threshold ledger.
+
+Actual occupancy.
+Lease target.
+Variable expense pool.
+Fixed expense pool.
+Gross-up factor.
+Adjusted variable expense.
+Fixed costs added back unchanged.
+
+That order matters.
+
+If the file cannot show which costs stayed fixed, the tenant or reviewer has to infer the treatment from the final number.
+
+That is a weak place to stand.
+
+The calculation is not hard. The hard part is leaving enough evidence that the team can prove the right costs entered the formula."
+063,2026-06-11,08:00,America/Chicago,2026-06-11T13:00:00Z,linkedin,capveri,carousel,audit-defense,https://www.capveri.com/resources/respond-tenant-documentation-demand,marketing/content/resources/respond-tenant-documentation-demand.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-0800-response-packet-carousel-063.md,schedule,c9c1009097debfde26ef87affa5d30a825a16852069adcbaf717a2940ab3d5c5,851,"Carousel outline: The first CAM documentation response packet
+
+Slide 1: Do not start with every invoice
+- Start with the records that explain the reconciliation.
+
+Slide 2: Reconciliation statement
+- The exact statement sent to the tenant.
+
+Slide 3: Calculation workbook
+- Expense pools, pro-rata shares, gross-up, caps, and estimate credits.
+
+Slide 4: GL detail
+- Recoverable accounts for the audit year, with account, vendor, date, and amount.
+
+Slide 5: Rent roll
+- Tenant, suite, square footage, lease dates, and share percentage.
+
+Slide 6: Tax and insurance support
+- Bills, assessments, declarations, or summary backup tied to the year.
+
+Slide 7: Redaction check
+- Remove other tenant terms, payment history, and internal communications.
+
+Slide 8: The control
+- Send enough structure for review without turning the first response into a data dump."
+064,2026-06-11,09:00,America/Chicago,2026-06-11T14:00:00Z,linkedin,capveri,text-short,erp-exports,https://www.capveri.com/resources/export-cam-mri,marketing/content/resources/export-cam-mri.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-0900-mri-billing-history-064.md,schedule,cd67dac8d143512533f981923aa59cbddc261d8846940afc726fe222def24d86,601,"MRI Tenant Billing History is not always the first file to pull.
+
+But when the question is ""what did we bill during the year?"" it matters.
+
+Recovery Reconciliation can show the recovery result.
+
+GL Transaction Detail can show what hit the expense pool.
+
+The rent roll can show who was in the building and what square footage applied.
+
+Tenant Billing History answers a different question:
+
+Which estimates were actually invoiced, and did a mid-year estimate change reach the tenant?
+
+That is the difference between checking spend and checking collection.
+
+Both sides of the reconciliation need support."
+065,2026-06-11,10:00,America/Chicago,2026-06-11T15:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/multiple-denominator-pro-rata,marketing/content/resources/multiple-denominator-pro-rata.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-1000-multiple-denominator-ledger-065.md,schedule,0f969ea32a88d8bf3d68d1c885363c03b052feab0cbdc6f2ddda277d69ed39b6,652,"One building can have more than one CAM denominator.
+
+That is where copy-paste math gets dangerous.
+
+One lease may reference total rentable area.
+Another may reference gross leasable area.
+Another may have an occupied-area floor.
+Another may freeze a measurement standard from an older lease form.
+
+The control is a denominator ledger by tenant:
+
+Lease clause.
+Interpreted denominator.
+Square footage source.
+Current value.
+Prior-year value.
+Reason for any change.
+
+Then each tenant share is calculated from its own rule.
+
+The portfolio view comes after that, with a total recovery check to make sure the allocations do not exceed the recoverable pool."
+066,2026-06-11,11:00,America/Chicago,2026-06-11T16:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/cumulative-vs-non-cumulative-cam-caps,marketing/content/resources/cumulative-vs-non-cumulative-cam-caps.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-1100-cap-handoff-file-066.md,schedule,605f76c0e09942cda4ee6bb44781d67e15fa0fa464759e1689939c2b905aac34,656,"Cumulative CAM caps are fragile during handoffs.
+
+The number that matters is not only this year's cap ceiling.
+
+It is the unused capacity carried from prior years, if the lease allows banking.
+
+When a property changes ownership or the accounting seat turns over, that bank can disappear into old spreadsheets.
+
+A useful handoff file should include:
+
+Lease language for cap type.
+Base amount.
+Annual cap percentage.
+Actual controllable expenses by year.
+Amount billed by year.
+Bank balance by year.
+Expiration or renewal notes.
+
+If the lease is non-cumulative, say that clearly too.
+
+Silence is how the wrong cap logic survives into the next reconciliation."
+067,2026-06-11,12:00,America/Chicago,2026-06-11T17:00:00Z,linkedin,capveri,carousel,cam-math,https://www.capveri.com/resources/admin-fee-calculation-methods,marketing/content/resources/admin-fee-calculation-methods.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-1200-admin-fee-method-card-067.md,schedule,794fe5cd511598c9615e51c86e7ca7c039ad30cd1cbbecba170d13e8f88a904d,853,"Carousel outline: Where admin fee checks usually break
+
+Slide 1: Start with the base
+- The percentage matters less if the fee is applied to the wrong number.
+
+Slide 2: Failure point 1
+- The fee is calculated from the gross pool when the lease points to a net base.
+
+Slide 3: Failure point 2
+- The fee is added twice: once as a GL line, once as a percentage.
+
+Slide 4: Failure point 3
+- The cap is missed, or applied to the wrong expense group.
+
+Slide 5: The clause language matters
+- ""Included in"" and ""added to"" can point to different treatments.
+
+Slide 6: The support file should show
+- Base, rate, cap if any, GL treatment, and clause reference.
+
+Slide 7: The reviewer question
+- Can the fee be recalculated without guessing what base was used?
+
+Slide 8: The practical takeaway
+- Debate the percentage only after the base and cap treatment are clean."
+068,2026-06-11,13:00,America/Chicago,2026-06-11T18:00:00Z,linkedin,capveri,text-short,boma-standards,https://www.capveri.com/resources/boma-2024-implementation-guide,marketing/content/resources/boma-2024-implementation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-1300-boma-input-map-068.md,schedule,6ccd02b11e74b5de153035df25456945e57db0f61e1d550a4ac6f410983d177c,609,"BOMA 2024 does not change the CAM formula by itself.
+
+It changes inputs that the formula may use.
+
+Rentable area.
+Load factor.
+Amenity allocation.
+Outdoor tenant areas.
+Building support zones.
+Measurement source.
+
+That is why the transition needs an input map before the first reconciliation using updated measurements.
+
+For each tenant, the file should show:
+
+Prior measurement basis.
+Current measurement basis.
+Lease language that allows or blocks the change.
+Old share.
+New share.
+Effective date.
+
+CapVeri can align the reconciliation math to the current inputs. The lease still decides which inputs apply."
+069,2026-06-11,14:00,America/Chicago,2026-06-11T19:00:00Z,linkedin,capveri,text-short,estimates,https://www.capveri.com/resources/cam-estimate-forecasting,marketing/content/resources/cam-estimate-forecasting.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-1400-estimate-drift-dashboard-069.md,schedule,f200f4902c2d27f08375c2028bfce35be599700d8c0ab52518158c9d05a83dd2,534,"Estimate drift should be visible before the year-end statement.
+
+The useful dashboard is not fancy:
+
+Budget by category.
+Actuals to date.
+Annualized run rate.
+Known contract changes.
+Tax and insurance movement.
+Estimate billings collected.
+Projected true-up.
+
+That view gives the property team a chance to decide whether a mid-year estimate adjustment is worth discussing under the lease.
+
+Without it, too many variances wait until reconciliation season.
+
+The math may be right at year-end.
+
+The surprise still creates the phone call."
+070,2026-06-11,15:00,America/Chicago,2026-06-11T20:00:00Z,linkedin,capveri,text-short,recovery-modeling,https://www.capveri.com/resources/recovery-ratio-analysis,marketing/content/resources/recovery-ratio-analysis.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-1500-recovery-gap-triage-070.md,schedule,33099ef262d77123426ada472d683706af0a309c7ef8ea19e1cc2a7ee292e323,555,"Recovery gap analysis should separate modeling from action.
+
+Modeling says:
+
+Recoverable operating expense pool.
+Total CAM billed.
+Gap by property.
+Gap by category.
+Likely reason code.
+
+Action says:
+
+Can this be corrected under the lease?
+Is the billing window still open?
+Is the issue a current-year setup fix instead?
+Does the file need owner, accountant, or counsel review?
+
+CapVeri can help identify the gap and the likely source.
+
+That is not the same as saying the full gap is collectible.
+
+The cleanest recovery work keeps that distinction visible."
+071,2026-06-11,16:00,America/Chicago,2026-06-11T21:00:00Z,linkedin,capveri,text-short,audit-defense,https://www.capveri.com/resources/cam-presend-checklist,marketing/content/resources/cam-presend-checklist.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-1600-pre-send-control-list-071.md,schedule,120bb574c50fd55d5b377d1e748da2900c50888595a1736c814b5ae8b87a6bd6,625,"The pre-send CAM checklist is not a formality.
+
+It is where small mistakes stop becoming tenant-facing statements.
+
+A useful control list asks:
+
+Did CapEx stay out of the recoverable pool?
+Were fixed and variable expenses split before gross-up?
+Does the gross-up target match the lease?
+Does the pro-rata denominator match the lease?
+Were partial-year changes time-weighted?
+Do capped tenants use the right cap structure?
+Is the management fee calculated once, on the right base?
+Did late invoices make it into the right year?
+
+None of those questions needs a speech.
+
+They need evidence in the file before statements go out."
+072,2026-06-11,17:00,America/Chicago,2026-06-11T22:00:00Z,linkedin,capveri,text-short,erp-exports,https://www.capveri.com/resources/export-cam-yardi-voyager,marketing/content/resources/export-cam-yardi-voyager.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-1700-charge-schedule-support-072.md,schedule,ad44994957e430af97aea2ba6f3a168036d1e1a39d163868dd93898b71316cf7,600,"Yardi Charge Schedule belongs in the file when the dispute is about billing history.
+
+Recovery Analysis answers what the reconciliation says.
+
+GL Analytics answers what expenses were in the pool.
+
+Rent Roll with Lease Charges answers who and how much square footage.
+
+Charge Schedule answers what was actually billed through the year.
+
+That matters for:
+
+Mid-year estimate changes.
+Charge-code questions.
+Invoice-level support.
+Proof that the billed side moved when the budget changed.
+
+The mistake is asking one export to answer the whole question.
+
+CAM review works better when each file has a job."
+073,2026-06-11,18:00,America/Chicago,2026-06-11T23:00:00Z,linkedin,capveri,text-short,ai-controls,https://www.capveri.com/resources/deterministic-vs-ai-cam,marketing/content/resources/deterministic-vs-ai-cam.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-1800-ai-extraction-boundary-073.md,schedule,0f94f902117e5bdfaaa9ef0276d3a92b2ee7bc9ab545539b2febf5e28ef82105,576,"The danger with AI in CAM work is not that it reads documents.
+
+That part can help.
+
+The danger is letting a plausible extraction become a financial answer without a verification step.
+
+A gross-up clause still needs the occupancy threshold.
+An exclusion still needs the expense category.
+A cap clause still needs the base, year, and carry-forward rule.
+
+Those are inputs.
+
+Once the inputs are confirmed, the calculation should be boringly repeatable:
+
+Same source file.
+Same lease rule.
+Same formula.
+Same answer.
+
+Assistance is useful.
+
+Authority belongs to the source trail."
+074,2026-06-11,19:00,America/Chicago,2026-06-12T00:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/denominator-change-guide,marketing/content/resources/denominator-change-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-1900-denominator-change-note-074.md,schedule,f9eddc62a6b273312a8ca5cd58e50c39c00487a04d2a4500d9edb4995e6a842c,565,"When a tenant's pro-rata share changes, the file needs a short answer ready.
+
+Not a paragraph of theory.
+
+A trace.
+
+Prior denominator.
+Current denominator.
+Reason for change.
+Measurement source.
+Lease clause.
+Effective date.
+Tenant numerator.
+Share before and after.
+
+That is the note that keeps a denominator change from looking arbitrary.
+
+If the source is a remeasurement, show it.
+
+If the source is a lease amendment, show it.
+
+If the source is an occupancy provision, show the lease language.
+
+The percentage is the output. The denominator note is the support."
+075,2026-06-11,20:00,America/Chicago,2026-06-12T01:00:00Z,linkedin,capveri,carousel,engagement,https://www.capveri.com/resources/respond-tenant-documentation-demand,marketing/content/resources/respond-tenant-documentation-demand.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-11-2000-first-30-days-question-075.md,schedule,2994e147ff174df4070a631b2b5848574118dca7277f29716d6de25c77843cf0,720,"Carousel outline: First 30 days after a CAM documentation request
+
+Slide 1: Day 1
+- Pull the lease and confirm the audit clause.
+
+Slide 2: Days 1 to 5
+- Re-run the math internally before producing records.
+
+Slide 3: Exposure check
+- Identify the largest possible issue before the tenant does.
+
+Slide 4: Records package
+- Statement, workbook, GL detail, rent roll, tax, insurance, and requested support.
+
+Slide 5: Redaction
+- Remove other tenant terms and internal communications.
+
+Slide 6: Delivery
+- Use a controlled file share and keep one contact point.
+
+Slide 7: Follow-up
+- Track questions by document, not by email thread memory.
+
+Slide 8: The question
+- Does the team have this workflow before the letter arrives?"
+076,2026-06-12,06:00,America/Chicago,2026-06-12T11:00:00Z,linkedin,capveri,text-short,erp-exports,https://www.capveri.com/resources/export-guide,marketing/content/resources/export-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-0600-export-column-contract-076.md,schedule,0e33e702b281bcda8e6b04b6682da509039fd587519511810261643bcc5b34a5,556,"A CAM export package needs a column contract.
+
+Not a legal contract.
+
+A practical one.
+
+Rent roll needs tenant, suite, rentable SF, lease start, and lease end.
+
+GL detail needs account, date, vendor or description, and amount.
+
+Recovery output needs tenant, pool, actuals, estimates, and variance.
+
+When those fields are missing, the review turns into matching by memory.
+
+That is where errors creep in.
+
+Before the math starts, CapVeri treats the export package as the first control surface:
+
+Do the files contain the fields needed to trace the statement?"
+077,2026-06-12,07:00,America/Chicago,2026-06-12T12:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/gross-up-optimization,marketing/content/resources/gross-up-optimization.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-0700-fixed-cost-leakage-077.md,schedule,e4cca2b0f75e8d26f00ee0cb57ad51013d2d46379732e9d9e8672be71bea5259,606,"Gross-up errors cut both ways.
+
+Grossing up fixed costs can overstate the pool.
+
+Failing to gross up eligible variable costs can leave recoverable expense out of the tenant calculation when the lease permits the adjustment.
+
+The control is the same in both directions:
+
+Classify first.
+Check the clause.
+Check actual occupancy.
+Apply the target only to the eligible variable pool.
+Add fixed costs back unchanged.
+
+That sequence is basic, but easy to skip under deadline pressure.
+
+It is also the part that reduces the risk of the same spreadsheet being wrong in opposite directions on different properties."
+078,2026-06-12,08:00,America/Chicago,2026-06-12T13:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/cam-cap-calculation-guide,marketing/content/resources/cam-cap-calculation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-0800-cap-base-year-check-078.md,schedule,360be7a7c3b0608d928998c2331e2d39fed880beb17456488238651549e798cb,585,"The cap percentage gets the attention.
+
+The base usually decides the answer.
+
+A CAM cap can start from prior-year actual controllable expenses.
+
+It can start from a fixed base year.
+
+It can compound from a prior ceiling.
+
+It can interact with carve-outs for taxes, insurance, utilities, or management fees.
+
+The percentage is not portable unless the base is the same.
+
+For capped tenants, the file should show:
+
+Base amount.
+Source year.
+Expense categories included.
+Excluded categories.
+Cap percentage.
+Current ceiling.
+Actual controllable amount.
+
+Without that, ""5%"" is just a label."
+079,2026-06-12,09:00,America/Chicago,2026-06-12T14:00:00Z,linkedin,capveri,text-short,boma-standards,https://www.capveri.com/resources/boma-2024-implementation-guide,marketing/content/resources/boma-2024-implementation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-0900-boma-parallel-proof-079.md,schedule,11a7eeba5cee8b071b96e121d1bf67fc692982665e8dab3db11d78989c1f680c,612,"The first reconciliation after a measurement update needs a parallel proof.
+
+Old measurement input.
+New measurement input.
+Lease language.
+Tenant share under each basis.
+Expense pool under the current methodology.
+Dollar impact.
+Effective date.
+
+That comparison is not about turning BOMA 2024 into a badge.
+
+It is about showing which input changed and why the allocation changed.
+
+If the lease references a specific older standard, the file needs to say that too.
+
+If the lease allows an updated standard, the file needs the support.
+
+The math should not ask the tenant to guess which measurement basis was used."
+080,2026-06-12,10:00,America/Chicago,2026-06-12T15:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/admin-fee-calculation-methods,marketing/content/resources/admin-fee-calculation-methods.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-1000-admin-fee-double-count-080.md,schedule,37646ce9a9ef5899557afdc871c44b5c54804ad1cdf0927a17c8110b0a088fe1,545,"Management fee review needs one uncomfortable check:
+
+Was the same cost counted twice?
+
+It can happen when the management company invoice sits in the GL as an operating expense and the reconciliation also adds a percentage admin fee on top.
+
+The file should answer:
+
+Is the fee actual or imputed?
+Which lease clause allows it?
+What base was used?
+What rate was applied?
+Is there a cap?
+Are related GL accounts already in the pool?
+
+That last question is the trap.
+
+The fee line and the GL detail need to agree on what has already been recovered."
+081,2026-06-12,11:00,America/Chicago,2026-06-12T16:00:00Z,linkedin,capveri,text-short,audit-defense,https://www.capveri.com/resources/lease-abstract-template-guide,marketing/content/resources/lease-abstract-template-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-1100-lease-abstract-cam-fields-081.md,schedule,3faff9e43851b85dca9e658a3fff9b3ff725a69583281a3bed8629db32dd7c2f,577,"A CAM-ready lease abstract needs more than tenant name, suite, and rent.
+
+For reconciliation, the fields that matter are smaller and easier to miss:
+
+Expense inclusions.
+Expense exclusions.
+Gross-up clause.
+Occupancy target.
+Pro-rata denominator.
+Cap type.
+Base year.
+Admin fee method.
+Audit window.
+Statement delivery deadline.
+
+Those fields decide how the export data gets treated.
+
+If they live only in the PDF lease, each reconciliation can become a fresh reading project.
+
+CapVeri works better when the abstract carries the calculation rules directly into the review file."
+082,2026-06-12,12:00,America/Chicago,2026-06-12T17:00:00Z,linkedin,capveri,text-short,erp-exports,https://www.capveri.com/resources/export-cam-mri,marketing/content/resources/export-cam-mri.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-1200-mri-entity-property-period-082.md,schedule,18111ce232841c68eae903f70d51b94585e2d45aaddcd9f6c548a726a27c5f39,580,"MRI export QA starts with three labels that sound small until one is wrong:
+
+Entity.
+Property.
+Period.
+
+If any one is wrong, the reconciliation can still look polished.
+
+It just will not tie.
+
+The entity may hold the operating expense.
+The property may drive the recovery setup.
+The period may need adjustment months included or excluded intentionally.
+
+Those decisions come before the math review.
+
+A clean export packet should make them visible on the core files:
+
+Recovery Reconciliation.
+GL Transaction Detail.
+Rent roll.
+Tenant Billing History when billing support is needed."
+083,2026-06-12,13:00,America/Chicago,2026-06-12T18:00:00Z,linkedin,capveri,carousel,recovery-modeling,https://www.capveri.com/resources/recovery-ratio-analysis,marketing/content/resources/recovery-ratio-analysis.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-1300-recovery-ratio-carousel-083.md,schedule,d25bc27a0bdf80cf2f0095a79275b4f428e8417cb3d60cddf2a9e85e868a9623,778,"Carousel outline: Recovery gap model, not a collection promise
+
+Slide 1: Start with the ratio
+- CAM billed divided by recoverable operating expenses.
+
+Slide 2: Build the recoverable pool
+- Total OpEx less CapEx, lease exclusions, and landlord-only costs.
+
+Slide 3: Compare billings
+- Estimates collected plus year-end true-up amounts.
+
+Slide 4: Split the gap
+- GL mapping, gross-up, cap limits, denominator drift, vacancy absorption, or estimate shortfall.
+
+Slide 5: Check the lease
+- A modeled gap is not automatically billable.
+
+Slide 6: Check timing
+- Billing windows and statement deadlines matter.
+
+Slide 7: Assign the next step
+- Fix setup, document exclusion, or escalate the question.
+
+Slide 8: Keep the caveat
+- The model points to work. It does not guarantee recovery."
+084,2026-06-12,14:00,America/Chicago,2026-06-12T19:00:00Z,linkedin,capveri,text-short,audit-defense,https://www.capveri.com/resources/respond-tenant-documentation-demand,marketing/content/resources/respond-tenant-documentation-demand.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-1400-audit-clock-docs-084.md,schedule,acbc33081454357048115ca18f254b9e252668f1b7f6463bdd6f3b5875b5eebb,619,"A tenant documentation request starts two clocks.
+
+One clock is contractual.
+
+The lease sets the audit window, response deadline, and lookback period that may apply.
+
+The other clock is operational.
+
+How fast can the team locate the statement, workbook, GL detail, rent roll, invoices, tax support, insurance support, and lease abstract?
+
+The second clock is the one the property team controls.
+
+If the packet is already structured, the response starts with review.
+
+If it is scattered, the response starts with searching.
+
+The response is stronger when the source files and calculation trail are already in one packet."
+085,2026-06-12,15:00,America/Chicago,2026-06-12T20:00:00Z,linkedin,capveri,text-short,traceable-math,https://www.capveri.com/resources/deterministic-vs-ai-cam,marketing/content/resources/deterministic-vs-ai-cam.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-1500-deterministic-rerun-test-085.md,schedule,910fc74d3fe56dd3305bd18143ec6e3b7ca9ca2070f9abcfc0b887a01f5aed4d,518,"The simplest test for CAM math:
+
+Can the same inputs rerun to the same answer?
+
+That means the file needs:
+
+Source export.
+Lease clause.
+Classification decision.
+Formula.
+Input values.
+Rounding treatment.
+Final tenant result.
+
+If the answer changes because the model phrased something differently, it is not financial math.
+
+It is text generation.
+
+CapVeri can use AI to help read and classify documents for human review.
+
+The tenant charge still comes from deterministic math that can be rerun from the same evidence."
+086,2026-06-12,16:00,America/Chicago,2026-06-12T21:00:00Z,linkedin,capveri,carousel,cam-math,https://www.capveri.com/resources/pro-rata-share-calculation,marketing/content/resources/pro-rata-share-calculation.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-1600-partial-year-share-card-086.md,schedule,53059b132c04e3db098c354b3f78f60b90a49b210b49677c40dcc6bacd8db812,746,"Carousel outline: Partial-year pro-rata review
+
+Slide 1: Annual share is not enough
+- Move-ins, move-outs, expansions, and contractions need date ranges.
+
+Slide 2: Start with tenant RSF
+- Use the rentable area from the lease or controlling source.
+
+Slide 3: Confirm the denominator
+- Use the denominator defined by that tenant's lease.
+
+Slide 4: Calculate the share
+- Tenant RSF divided by the lease-defined denominator.
+
+Slide 5: Split the year
+- Build one row for each effective date range.
+
+Slide 6: Apply the pool
+- Use the adjusted expense pool that applies to the period.
+
+Slide 7: Credit estimates
+- Subtract what was billed or collected during that period.
+
+Slide 8: Leave the schedule
+- The timing support is the control, not a footnote."
+087,2026-06-12,17:00,America/Chicago,2026-06-12T22:00:00Z,linkedin,capveri,text-short,estimates,https://www.capveri.com/resources/cam-estimate-forecasting,marketing/content/resources/cam-estimate-forecasting.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-1700-estimate-letter-proof-087.md,schedule,cfe236f7649470d81164b0953aacf05507d920d949d73bffd076894bf1996667,560,"An estimate letter should be able to answer one question fast:
+
+What changed?
+
+The useful support is usually short:
+
+New monthly estimate.
+Effective date.
+Prior amount.
+Top expense drivers.
+Known contract changes.
+Tax or insurance movement.
+Lease section for estimate adjustments.
+Contact point for questions.
+
+The estimate letter usually does not need a full GL dump.
+
+But if the increase is material, the team should have the driver summary ready before the letter goes out.
+
+That is the difference between sending a number and sending a number with support."
+088,2026-06-12,18:00,America/Chicago,2026-06-12T23:00:00Z,linkedin,capveri,text-short,anti-integration,https://www.capveri.com/resources/export-guide,marketing/content/resources/export-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-1800-export-first-not-api-088.md,schedule,8991367ef4f0be9dccf22ce8c45593dfeb4ab9a232013662606d504532032b7c,536,"For CAM reconciliation, the export is often the right boundary.
+
+The ERP remains the system of record.
+
+The review layer needs clean files:
+
+Rent roll.
+GL detail.
+Recovery output.
+Billing history when needed.
+
+That is different from promising a deep integration or replacing the property management system.
+
+CapVeri's position is deliberately narrower:
+
+Get the source files out.
+Validate the fields.
+Map the lease rules.
+Run deterministic math.
+Keep the support packet.
+
+That is enough work without pretending the ERP should disappear."
+089,2026-06-12,19:00,America/Chicago,2026-06-13T00:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/cumulative-vs-non-cumulative-cam-caps,marketing/content/resources/cumulative-vs-non-cumulative-cam-caps.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-1900-cap-table-source-row-089.md,schedule,28365a13002ffe60e6323b80de0e4f6f4847e4649a88ae86714e31eba86c0519,554,"A cap table is weaker when the numbers are anonymous.
+
+Each row needs a source.
+
+Prior-year controllable expenses from the reconciliation.
+Current-year actual controllable expenses from the GL and classification file.
+Cap percentage from the lease.
+Carry-forward rule from the lease.
+Bank balance from the prior cap schedule.
+Amount billed from the statement.
+
+That makes the cap table slower to build.
+
+Good.
+
+Fast cap schedules are how old assumptions survive.
+
+For cumulative caps, the bank balance is only useful if the source trail survives with it."
+090,2026-06-12,20:00,America/Chicago,2026-06-13T01:00:00Z,linkedin,capveri,question,engagement,https://www.capveri.com/resources/cam-presend-checklist,marketing/content/resources/cam-presend-checklist.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-12-2000-two-day-close-090.md,schedule,4fc4b1ee475dcf662dacd9d21041803ec41a12f71c364bc2c0e178235bd0b74b,606,"Before CAM statements go out, which check tends to catch the most avoidable pain?
+
+A. Export files tie to the same property and period.
+
+B. Gross-up uses only eligible variable expenses.
+
+C. Pro-rata denominators match the lease.
+
+D. Cap schedules carry the right base and bank logic.
+
+E. Management fee is calculated once, on the right base.
+
+The answer can vary by portfolio.
+
+The pattern does not.
+
+Many reconciliation problems get harder only after they leave the internal file and become tenant-facing.
+
+The best pre-send process catches the weak support before the statement turns it into a question."
+091,2026-06-13,06:00,America/Chicago,2026-06-13T11:00:00Z,linkedin,capveri,text-short,anti-integration,https://www.capveri.com/resources/export-cam-yardi-voyager,marketing/content/resources/export-cam-yardi-voyager.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-0600-export-first-close-control-091.md,schedule,dd681b19406f137afbf24292d005eb1e7b992282f489a400cdef068fe8b18cdd,745,"A CAM close does not need a new ERP project to get cleaner.
+
+It needs the export set to tie.
+
+For a Yardi workflow, the practical control is simple enough to inspect:
+
+Recovery Analysis
+GL Analytics
+Rent Roll with Lease Charges
+
+Same property. Same period. Detail-level output. Flat files without report headers or subtotals mixed into the data.
+
+If those three files do not agree, formulas are a distraction. The reconciliation may still print, but the support package is already weak.
+
+CapVeri is built around that export-first reality. Keep the system of record where it is. Pull the files that already exist. Test the reconciliation before the statement leaves the building.
+
+That is a better place to start than another integration roadmap."
+092,2026-06-13,07:00,America/Chicago,2026-06-13T12:00:00Z,linkedin,capveri,text-short,audit-defense,https://www.capveri.com/resources/respond-tenant-documentation-demand,marketing/content/resources/respond-tenant-documentation-demand.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-0700-dispute-letter-first-hour-092.md,schedule,7409836a3c8bd310ebef7b1beacef3cafb1672b7869b683fd20651377e4d5f61,753,"The first hour after a tenant documentation request is not the time to debate the disputed charge.
+
+It is the time to pull the lease.
+
+Before records go out, the team needs to know:
+
+Does the tenant have audit rights?
+What years are open?
+What response window applies?
+Does the auditor need to meet a qualification rule?
+What records does the clause actually require?
+
+That sounds procedural. It is also how the accounting team reduces the risk of producing the wrong package under pressure.
+
+The useful response is calm and specific:
+
+Acknowledge the request.
+Confirm the lease provision.
+Assign one contact.
+Prepare the records package.
+Track what was produced.
+
+A tenant question gets harder when multiple departments answer different versions of it."
+093,2026-06-13,08:00,America/Chicago,2026-06-13T13:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/cam-gross-up-calculation-guide,marketing/content/resources/cam-gross-up-calculation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-0800-gross-up-threshold-proof-093.md,schedule,ee09ffb40e6232bdad34cbfe55ddff781b0a3a3fd6c9aa91258392ebe464ea0f,785,"The difference between a 90% and 95% gross-up target is not wording.
+
+It is a billing input.
+
+The lease has to answer three questions before the calculation is useful:
+
+What occupancy threshold applies?
+What occupancy measurement applies?
+Which expenses are variable enough to gross up?
+
+The math after that is mechanical:
+
+Variable expenses divided by actual occupancy, multiplied by the lease-defined target.
+
+Fixed expenses come back in unchanged.
+
+The mistake is treating the target as a portfolio habit. One building uses 95% because the lease says 95%. Another uses 90% because the lease says 90%. A third may have no gross-up right at all.
+
+CapVeri keeps that distinction visible in the calculation trail, because a gross-up factor without the clause behind it is just a number."
+094,2026-06-13,09:00,America/Chicago,2026-06-13T14:00:00Z,linkedin,capveri,carousel,cam-math,https://www.capveri.com/resources/pro-rata-share-calculation,marketing/content/resources/pro-rata-share-calculation.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-0900-denominator-slide-check-094.md,schedule,24d310783b59467593fa14bcc5d553f9fb971b922711efbddaf4f53678b602d4,803,"Carousel outline: The denominator check that changes CAM
+
+Slide 1: Pro-rata share is not only tenant square footage
+- The denominator carries just as much risk.
+
+Slide 2: Pull the lease definition
+- Total building area, leasable area, component area, and anchor exclusions are different inputs.
+
+Slide 3: Compare to the rent roll
+- The square footage in the system should match the lease-defined method.
+
+Slide 4: Look for vacancy leakage
+- Leased area can shrink when suites are vacant. Leasable area usually does not.
+
+Slide 5: Check special pools
+- Retail, office, parking, and mixed-use components may need separate denominators.
+
+Slide 6: Save the proof
+- Lease clause, rent roll, measurement support, and final percentage.
+
+Slide 7: The control
+- A small denominator change can move tenant shares."
+095,2026-06-13,10:00,America/Chicago,2026-06-13T15:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/admin-fee-calculation-methods,marketing/content/resources/admin-fee-calculation-methods.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-1000-admin-fee-circular-check-095.md,schedule,edf1aded63ba3c3954abd1391534e4ee8576a07dbf1873d516717f42eeeee469,703,"Admin fee disputes often start with one quiet ambiguity:
+
+Is the fee calculated on the pool before the fee, or on the pool including the fee?
+
+Those are not the same method.
+
+Net method:
+Rate x base expenses.
+
+Gross method:
+Rate x base expenses divided by one minus the rate.
+
+Capped method:
+Calculate the fee, then limit it to the lease ceiling.
+
+The reconciliation should not hide which one was used. The worksheet needs the clause, the base, the rate, any cap, and whether the fee sits inside or outside the CAM cap.
+
+If the team cannot answer that from the packet, the tenant auditor will ask the same question later.
+
+CapVeri treats admin fee method as a rule to document, not a line item to trust."
+096,2026-06-13,11:00,America/Chicago,2026-06-13T16:00:00Z,linkedin,capveri,text-short,erp-workarounds,https://www.capveri.com/resources/export-cam-mri,marketing/content/resources/export-cam-mri.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-1100-mri-adjustment-period-096.md,schedule,8189facf11ec42495b58e6d626ce6d5b9795ce6260a6c95d1d2256169364138b,675,"An MRI recovery report can run correctly and still miss the close.
+
+One common reason: adjustment periods.
+
+If period 13 or 14 belongs in the reconciliation year, the GL Transaction Detail export has to include it. Otherwise the recovery file, the GL support, and the financials can all tell slightly different stories.
+
+That is not a cap formula problem.
+
+It is an export scope problem.
+
+The practical check is simple enough to miss:
+
+Same entity.
+Same property.
+Same period.
+Adjustment periods handled intentionally.
+Detail-level recovery output.
+Tenant IDs present on the rent roll.
+
+Only after those checks pass should the team argue about allocations, gross-up, or caps."
+097,2026-06-13,12:00,America/Chicago,2026-06-13T17:00:00Z,linkedin,capveri,text-short,audit-defense,https://www.capveri.com/resources/respond-tenant-documentation-demand,marketing/content/resources/respond-tenant-documentation-demand.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-1200-audit-packet-components-097.md,schedule,2d6380eb0ab1a6ab31ad8bc634a04fabbdddc90419e616534a35f8edc1d9fbc8,719,"A defensible CAM packet is not a folder full of everything.
+
+It is the right records in the right order.
+
+For a tenant documentation request, the standard first layer usually looks like:
+
+GL detail for recoverable accounts
+Reconciliation worksheets
+Rent roll
+Statement sent to the tenant
+Tax bills and assessment notices
+Insurance support
+
+Then come targeted invoices, service contracts, management fee support, and utility detail when the lease or the request calls for them.
+
+The mistake is either under-producing or dumping a messy data room on the auditor.
+
+Neither builds confidence.
+
+CapVeri's bias is toward a traceable packet: the number, the rule, the source, and the support that lets someone rerun the logic."
+098,2026-06-13,13:00,America/Chicago,2026-06-13T18:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/cumulative-vs-non-cumulative-cam-caps,marketing/content/resources/cumulative-vs-non-cumulative-cam-caps.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-1300-cap-bank-memory-098.md,schedule,1d7424b0a87422576298e450aa8339a7ebda7668f94352f728a76ba284580727,784,"A cumulative CAM cap needs memory.
+
+That is the part spreadsheets lose.
+
+If actual controllable expenses come in below the cap ceiling, unused room may carry forward when the lease allows it. If expenses spike later, that bank can change the effective ceiling.
+
+Under a non-cumulative cap, the unused room disappears.
+
+Same base year. Same cap rate. Different recovery path.
+
+The control is not complicated:
+
+Calculate the annual cap ceiling.
+Compare actuals to the ceiling.
+Add unused room or draw from the bank.
+Keep the bank from going negative.
+Carry the balance into the next year.
+
+The hard part is preserving that trail across fiscal years, template changes, ownership changes, and staff turnover.
+
+Cap math breaks when history gets treated like a note in last year's workbook."
+099,2026-06-13,14:00,America/Chicago,2026-06-13T19:00:00Z,linkedin,capveri,text-short,industry-standard,https://www.capveri.com/resources/boma-2024-implementation-guide,marketing/content/resources/boma-2024-implementation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-1400-boma-parallel-run-099.md,schedule,b54f9bc5edebe93f90a4002fd1d722f14d893b04df4423e115a3062a05f2b731,779,"BOMA 2024 adoption should not first show up on a tenant's statement.
+
+Run the parallel calculation first.
+
+Old measurement.
+New measurement.
+Tenant by tenant.
+Same operating expense pool.
+Same reconciliation period.
+
+Then inspect the changes before anyone sends the package.
+
+The source page recommends this because measurement updates can affect rentable square footage, pro-rata shares, and gross-up denominators. Even when the final change is valid, surprise creates avoidable friction.
+
+CapVeri can use measurement inputs from a BOMA-based remeasurement, but that is not the same as claiming certification, endorsement, or a universal rule.
+
+The defensible move is narrower:
+
+Document the standard used, preserve the measurement support, and show how the denominator changed."
+100,2026-06-13,15:00,America/Chicago,2026-06-13T20:00:00Z,linkedin,capveri,text-short,owner-reporting,https://www.capveri.com/resources/recovery-ratio-analysis,marketing/content/resources/recovery-ratio-analysis.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-1500-recovery-gap-modeling-100.md,schedule,2c68355e4f38156553a19acc3a47cd20b2b01c78f31d5eb79ae690965b2c9536,691,"Recovery gap math is useful only when it stays close to the source files.
+
+The basic question:
+
+How much of the recoverable operating expense pool was actually billed back through CAM?
+
+That can point the team toward specific review paths:
+
+New GL accounts not mapped to recovery pools.
+Gross-up not applied when the lease permits it.
+Recoverable maintenance treated as capital.
+Denominator drift.
+Cap rules suppressing recovery.
+
+But a low ratio does not automatically mean the landlord can bill more. The lease still controls, and the source support still has to hold up.
+
+The recovery-gap view works best as a triage tool:
+
+Find the property.
+Find the category.
+Then test the actual rule."
+101,2026-06-13,16:00,America/Chicago,2026-06-13T21:00:00Z,linkedin,capveri,text-short,erp-workarounds,https://www.capveri.com/resources/export-cam-yardi-voyager,marketing/content/resources/export-cam-yardi-voyager.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-1600-yardi-report-furniture-101.md,schedule,fec5ca5c4b843bdf1c9c80c70394ba89724b0f961d37b9d1d829afd9c55a81b9,708,"One of the least glamorous CAM controls:
+
+Remove the report furniture.
+
+Yardi exports can carry title bands, page totals, headers, subtotals, and footer rows into Excel. They are fine for a human report. They are bad inputs for validation.
+
+When those rows survive, a workbook can count the same subtotal as if it were a transaction. Or it can fail silently because the account code column is not really an account code column on every row.
+
+Before testing the reconciliation, flatten the file.
+
+Transaction rows only.
+Visible account codes.
+Visible dates.
+Visible descriptions.
+Visible debit or credit detail.
+
+It is not sophisticated. It is the kind of QA that helps catch a polished but unprovable number."
+102,2026-06-13,17:00,America/Chicago,2026-06-13T22:00:00Z,linkedin,capveri,text-short,audit-defense,https://www.capveri.com/resources/cam-reconciliation-vs-estimate,marketing/content/resources/cam-reconciliation-vs-estimate.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-1700-estimate-letter-support-102.md,schedule,28ef966dcd4e2d7ecd8a14a32fd30d4a69d1656a204ee04224474d9b1c490ff0,836,"Estimate letters should not be treated as a January admin task.
+
+They are the first version of the reconciliation conversation.
+
+If the estimate is based on prior-year actuals, inflation assumptions, utility rate changes, and new vendor contracts, the file should show that. When the year-end true-up lands, the team can explain the path from projection to actuals.
+
+The formula at year-end is direct:
+
+Adjusted expense pool x pro-rata share, minus estimated billings collected.
+
+The messy part is the expectation gap.
+
+A tenant is less surprised by a true-up when the estimate letter already made the basis clear and the team reviewed run-rate drift before year-end.
+
+CapVeri does not make estimates magically right. It gives the team a cleaner way to compare the projection against the GL reality before the gap becomes a tenant call."
+103,2026-06-13,18:00,America/Chicago,2026-06-13T23:00:00Z,linkedin,capveri,carousel,career-ops,https://www.capveri.com/resources/deterministic-vs-ai-cam,marketing/content/resources/deterministic-vs-ai-cam.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-1800-math-career-slide-103.md,schedule,972d34093ac5ad107d2400107493def014cc58253d1fc35f78390c84f3bec6c1,751,"Carousel outline: The controller who can show the math wins
+
+Slide 1: Clean CAM work is career insurance
+- Not because it is flashy. Because it survives questions.
+
+Slide 2: A number is not enough
+- The packet needs the source, the rule, and the calculation path.
+
+Slide 3: AI can help read documents
+- Lease extraction and classification still need human verification.
+
+Slide 4: AI should not own the math
+- Financial calculations need reproducible formulas.
+
+Slide 5: Deterministic math is strict on purpose
+- Same inputs, same answer, same audit trail.
+
+Slide 6: The review standard
+- Could a CPA rerun the inputs and arrive at the same number?
+
+Slide 7: The CapVeri position
+- Use AI where it helps extraction. Use deterministic logic for dollars."
+104,2026-06-13,19:00,America/Chicago,2026-06-14T00:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/pro-rata-share-calculation,marketing/content/resources/pro-rata-share-calculation.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-1900-move-out-proration-104.md,schedule,58ab0be435a188074727a0ed58f306a1ae281cc154e553c34322b346bfda9cc6,658,"Move-outs create small CAM math traps.
+
+The tenant share is not always one annual percentage applied once.
+
+If a tenant moves out mid-year, expands, contracts, or changes suites, the calculation may need date ranges:
+
+Old square footage for one period.
+New square footage for the next.
+Lease days applied to each period.
+Then the adjusted CAM pool.
+
+That is easy to miss when the rent roll is pulled only at year-end.
+
+The source page makes the sequence clear: calculate the share first, then prorate for the tenant's lease days in the reconciliation period.
+
+A move-out reconciliation is cleaner when the packet shows the timing, not just the final true-up."
+105,2026-06-13,20:00,America/Chicago,2026-06-14T01:00:00Z,linkedin,capveri,text-short,audit-defense,https://www.capveri.com/resources/landlord-cam-audit-defense-playbook,marketing/content/resources/landlord-cam-audit-defense-playbook.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-13-2000-tenant-question-next-step-105.md,schedule,5e8fc7c6fcd32b5eeac12788d7d57c2c6ea132b6c69631d848d8e16c23e4d640,694,"When a tenant asks why CAM changed, the weakest answer is:
+
+""That is what the system calculated.""
+
+The better next step is to identify which question they are really asking.
+
+Did the denominator change?
+Was gross-up applied?
+Did an excluded category enter the pool?
+Did the management fee base move?
+Was a capital item amortized or expensed?
+Did the estimate lag actual costs?
+
+Each one needs different support.
+
+The best packets make that triage faster. They do not ask the accounting team to recreate the reconciliation from memory while the property manager waits for a reply.
+
+CapVeri is designed for that moment: source file, lease rule, calculation trail, and exception note in one place."
+106,2026-06-14,06:00,America/Chicago,2026-06-14T11:00:00Z,linkedin,capveri,text-short,career-ops,https://www.capveri.com/resources/deterministic-vs-ai-cam,marketing/content/resources/deterministic-vs-ai-cam.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-0600-controller-packet-standard-106.md,schedule,0598775b538fbaf0cfb6ea94345b76d321997e549ffca41d0160f1f15804d3d4,717,"A strong CAM-season controller is not the one with the most complicated workbook.
+
+It is the one who can answer:
+
+Where did this number come from?
+Which lease rule drove it?
+Which inputs changed?
+Can the same inputs produce the same answer again?
+
+That is why deterministic math matters.
+
+For extraction, AI can help find lease clauses and classify messy source material. But before dollars move, those extracted values need human review.
+
+For the calculation itself, reproducibility is the standard.
+
+Same inputs.
+Same formulas.
+Same result.
+Retrievable later.
+
+That is not a branding line. It is the difference between a packet that explains itself and a packet that depends on whoever built the workbook last year."
+107,2026-06-14,07:00,America/Chicago,2026-06-14T12:00:00Z,linkedin,capveri,text-short,erp-workarounds,https://www.capveri.com/resources/export-cam-yardi-voyager,marketing/content/resources/export-cam-yardi-voyager.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-0700-charge-schedule-estimates-107.md,schedule,0b8c4f74b74cb1f25d222bdfa7eb6821f6b9fae94e53e1cc4e220ff68b9e7e9f,805,"Sometimes the CAM question is not ""what did we spend?""
+
+It is ""what did we bill?""
+
+That is when the Yardi Charge Schedule becomes useful support.
+
+Recovery Analysis shows the reconciliation result. GL Analytics shows the expense detail. Rent Roll with Lease Charges supports tenant roster and square footage.
+
+Charge Schedule helps when the question turns to estimate billing:
+
+Mid-year estimate changes.
+Charge-code disputes.
+Invoice-level billing support.
+Whether the billed side moved when the budget changed.
+
+It should not replace the core export stack. It should support the billing side when the tenant asks how monthly estimates turned into the final true-up.
+
+Clean reconciliation support separates spend evidence from billing evidence. Mixing those two is how simple questions become long calls."
+108,2026-06-14,08:00,America/Chicago,2026-06-14T13:00:00Z,linkedin,capveri,carousel,cam-math,https://www.capveri.com/resources/cam-gross-up-calculation-guide,marketing/content/resources/cam-gross-up-calculation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-0800-fixed-variable-gross-up-slides-108.md,schedule,b4985fb89047e1ccb30420196ea92fee5aa676596c8439e5feb5faa358843d6a,834,"Carousel outline: The gross-up review starts before the formula
+
+Slide 1: First split the pool
+- Gross-up is a classification problem before it is a math problem.
+
+Slide 2: Ask what occupancy changes
+- Some costs move with occupancy. Others stay close to fixed.
+
+Slide 3: Keep fixed costs out
+- Taxes, insurance, and many management fees need separate treatment unless the lease says otherwise.
+
+Slide 4: Then apply the target
+- The lease-defined target belongs on eligible variable costs only.
+
+Slide 5: Add back after review
+- Fixed costs may still be recoverable. They are just not inflated by occupancy.
+
+Slide 6: The support file needs labels
+- Variable, fixed, excluded, capped, and disputed should not be hidden in formulas.
+
+Slide 7: The audit question
+- Which costs changed because occupancy changed, and where is that shown?"
+109,2026-06-14,09:00,America/Chicago,2026-06-14T14:00:00Z,linkedin,capveri,text-short,audit-defense,https://www.capveri.com/resources/pro-rata-share-calculation,marketing/content/resources/pro-rata-share-calculation.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-0900-denominator-proof-file-109.md,schedule,465704dd3a30e86ec1929b7da114eb975bcb0a3f46688ff2efb79b584009b837,672,"The denominator proof file should be plain.
+
+That is the point.
+
+For pro-rata share, the team should be able to produce:
+
+The lease clause.
+The tenant rentable square footage.
+The building or component denominator.
+Any anchor or excluded-area treatment.
+The rent roll or measurement support.
+The final percentage used in the reconciliation.
+
+If the denominator came from leased area instead of leasable area, that needs to be intentional and lease-supported. If it came from a component pool, the component boundary needs to be visible.
+
+Small denominator differences travel through tenant charges.
+
+The final percentage is not the proof. It is the last line of the proof."
+110,2026-06-14,10:00,America/Chicago,2026-06-14T15:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/admin-fee-calculation-methods,marketing/content/resources/admin-fee-calculation-methods.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-1000-fee-cap-interaction-110.md,schedule,e7d5801259d599b316fd3c74e412af861e4c2c14c4ad19c143cec062ce4d21d9,690,"A management fee clause and a CAM cap clause can collide.
+
+The reconciliation has to answer one question clearly:
+
+Is the fee inside the cap or outside it?
+
+If the fee is inside the cap, it may be limited with other controllable expenses.
+
+If the fee is outside the cap, it may flow through based on the fee method and base the lease allows.
+
+Then there is a second question:
+
+Is the fee calculated on actual expenses, capped expenses, or a defined subset of the pool?
+
+This is where a one-line ""15% admin fee"" entry creates more questions than it answers.
+
+The packet should show the clause, the base, the method, and the cap interaction. Anything less asks the reviewer to infer the rule."
+111,2026-06-14,11:00,America/Chicago,2026-06-14T16:00:00Z,linkedin,capveri,text-short,erp-workarounds,https://www.capveri.com/resources/export-cam-mri,marketing/content/resources/export-cam-mri.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-1100-mri-tenant-id-match-111.md,schedule,b3bb329f6494dc682380d34e0400bb4781205dd5cb88a1486ac52758e3517b8a,718,"Name-only matching is fragile in CAM work.
+
+MRI export QA should preserve tenant IDs across the recovery file, rent roll, and billing support whenever possible.
+
+Why it matters:
+
+Tenant names change.
+Suite labels drift.
+Abbreviations differ between leasing and accounting views.
+Move-outs and partial-year tenants create timing noise.
+
+A stable tenant ID makes the export set easier to match before the team starts testing gross-up, caps, or allocations.
+
+This is a matching problem, not a feature problem.
+
+If the final reconciliation uses a tenant-level result, the packet should show how that tenant was matched from source files to calculation output.
+
+That small ID column can reduce a lot of avoidable ambiguity."
+112,2026-06-14,12:00,America/Chicago,2026-06-14T17:00:00Z,linkedin,capveri,text-short,cam-math,https://www.capveri.com/resources/cumulative-vs-non-cumulative-cam-caps,marketing/content/resources/cumulative-vs-non-cumulative-cam-caps.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-1200-cap-ceiling-base-112.md,schedule,f556d486b7d395123b55bea31dbeab5ea2e0e83194852277fc35a6d7fcd5f4a6,719,"One cap error hides until expenses spike:
+
+Compounding from prior actuals instead of the prior cap ceiling.
+
+In a quiet year, actual controllable expenses may sit below both numbers. Nobody notices.
+
+Then costs jump.
+
+Now the ceiling matters, and the wrong base has been dragging the allowable path down for years.
+
+The control is to preserve two separate numbers:
+
+Actual controllable expenses.
+Cap ceiling.
+
+They are related. They are not interchangeable.
+
+For cumulative caps, the bank adds another layer. For non-cumulative caps, unused capacity disappears. In both cases, the ceiling history needs to survive the annual workbook refresh.
+
+The cap schedule should read like a ledger, not a set of overwritten cells."
+113,2026-06-14,13:00,America/Chicago,2026-06-14T18:00:00Z,linkedin,capveri,text-short,industry-standard,https://www.capveri.com/resources/boma-2024-implementation-guide,marketing/content/resources/boma-2024-implementation-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-1300-boma-measurement-support-113.md,schedule,c1752a03fbd5073f12282d48574f82c767207e3be83baa8df43159c83f74b090,752,"If a portfolio adopts BOMA 2024, the measurement support has to travel with the CAM math.
+
+The system update is only one step.
+
+The packet should still show:
+
+Prior measurement.
+New measurement.
+Tenant rentable square footage.
+Building total rentable area.
+Pro-rata share before and after.
+Effective date.
+Lease language that permits the change, or the lease event where it applies.
+
+That sounds like extra paperwork until the first tenant asks why their share changed.
+
+CapVeri can support calculation workflows that use BOMA-referenced measurement inputs, but the source documentation remains the control. The measurement standard, lease permission, and denominator update all need to be visible.
+
+No certification claim needed. Just a cleaner trail."
+114,2026-06-14,14:00,America/Chicago,2026-06-14T19:00:00Z,linkedin,capveri,text-short,audit-defense,https://www.capveri.com/resources/landlord-cam-audit-defense-playbook,marketing/content/resources/landlord-cam-audit-defense-playbook.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-1400-records-before-request-114.md,schedule,fd90d6d38d9a78934408f5424b59c47b9a01aa2ac0b6d43e2432a02151e351a3,774,"The best time to build the CAM audit file is before anyone asks for it.
+
+The defense playbook is not mysterious:
+
+Vendor invoices.
+Recurring service contracts.
+GL detail by property and expense account.
+Occupancy schedules.
+Management fee worksheets.
+Insurance support.
+Tax bills and assessment notices.
+Capital schedules when needed.
+
+What matters is whether those records connect to the reconciliation statement without a scavenger hunt.
+
+A documentation request is stressful when the file has to be assembled from inboxes, old folders, and someone's memory.
+
+It is calmer when the packet already exists by property, year, category, tenant, and calculation.
+
+That is the operating standard CapVeri is built around: make the support retrievable before the question arrives."
+115,2026-06-14,15:00,America/Chicago,2026-06-14T20:00:00Z,linkedin,capveri,text-short,owner-reporting,https://www.capveri.com/resources/recovery-ratio-analysis,marketing/content/resources/recovery-ratio-analysis.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-1500-recovery-ratio-triage-115.md,schedule,9fe2ec8015766da1e6555bde68a711d8bb5b5a5d34a4b119b968b5db78234c57,635,"A recovery ratio is not a verdict.
+
+It is a triage signal.
+
+Total CAM billed divided by total recoverable operating expenses gives the team a property-level view of whether recovery is behaving as expected.
+
+If the ratio drops, the next step is not ""bill more.""
+
+The next step is to find the cause:
+
+Was a new GL account left out of the recovery pool?
+Was gross-up skipped or misapplied?
+Did a denominator change move shares?
+Did a cap suppress recovery?
+Was a maintenance item treated as capital?
+
+Each answer needs lease support and source support.
+
+The metric points to where the review should start. It does not replace the review."
+116,2026-06-14,16:00,America/Chicago,2026-06-14T21:00:00Z,linkedin,capveri,text-short,anti-integration,https://www.capveri.com/resources/export-guide,marketing/content/resources/export-guide.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-1600-exports-not-apis-116.md,schedule,8c74b338c39351e8c6505dd03cc2ca49ee1184642c1c99bff617a6d86b7a53d6,683,"For CAM verification, exports are often enough.
+
+That is not a compromise. It is the control surface accounting teams already use.
+
+The source system still owns the transaction record. CapVeri does not need to replace Yardi, MRI, RealPage, or Excel to test the reconciliation.
+
+The work is narrower:
+
+Pull the GL detail.
+Pull the rent roll.
+Pull the recovery or billing output.
+Flatten the files.
+Match the period and property.
+Run deterministic checks against the lease rules.
+
+An API can be useful in some systems. It is not required for this workflow.
+
+The practical question is not ""can everything connect?""
+
+It is ""can the exported evidence support the number on the statement?"""
+117,2026-06-14,17:00,America/Chicago,2026-06-14T22:00:00Z,linkedin,capveri,text-short,anti-integration,https://www.capveri.com/resources/deterministic-vs-ai-cam,marketing/content/resources/deterministic-vs-ai-cam.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-1700-human-verified-extraction-117.md,schedule,46558f831f34b3209d0e890aed083feebbb2a633d3ef59cfe76df6ea09add9f0,647,"There is a clean place for AI in CAM reconciliation.
+
+Reading messy documents.
+
+Lease PDFs, clause extraction, GL classification, and anomaly flags can all benefit from AI assistance. That does not mean the model should decide what a tenant owes.
+
+CapVeri's position is deliberately split:
+
+AI can help extract.
+Humans verify the extracted values.
+Deterministic logic calculates the dollars.
+The ledger stores the path.
+
+That split matters because a tenant dispute is not asking whether the output sounded reasonable.
+
+It is asking whether the number can be traced and reproduced.
+
+The safer architecture is not anti-AI. It is anti-black-box math."
+118,2026-06-14,18:00,America/Chicago,2026-06-14T23:00:00Z,linkedin,capveri,carousel,audit-defense,https://www.capveri.com/resources/landlord-cam-audit-defense-playbook,marketing/content/resources/landlord-cam-audit-defense-playbook.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-1800-presend-question-list-118.md,schedule,eb6ef69e07f5f866d875e043277542fc2ff38216d8d3f66fea74affd3b15cfc2,806,"Carousel outline: Questions to ask before CAM statements go out
+
+Slide 1: The pre-send review is where disputes get cheaper
+- Catch the issue before the tenant packet is final.
+
+Slide 2: Denominator
+- Does each tenant share match the lease and current measurement support?
+
+Slide 3: Gross-up
+- Was the correct occupancy method used, and only on variable expenses?
+
+Slide 4: Exclusions
+- Did the material lease exclusions get checked against the pool?
+
+Slide 5: Management fee
+- Does the method, base, rate, and cap interaction match the clause?
+
+Slide 6: Capital items
+- Were capital items excluded or amortized according to the lease?
+
+Slide 7: Records
+- Can the team produce the invoice, worksheet, rent roll, and statement support?
+
+Slide 8: The standard
+- Do not send a number the packet cannot defend."
+119,2026-06-14,19:00,America/Chicago,2026-06-15T00:00:00Z,linkedin,capveri,text-short,product-positioning,https://www.capveri.com/resources/deterministic-vs-ai-cam,marketing/content/resources/deterministic-vs-ai-cam.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-1900-same-inputs-same-answer-119.md,schedule,c5eb821d8bc0d4ba9533ae31a784e2d0270f06714782bd3e3e34ee4eca00d37d,695,"There is a simple test for CAM math:
+
+Can the same inputs produce the same answer again?
+
+Not close.
+Not plausible.
+The same.
+
+Financial math needs deterministic logic. Gross-up, pro-rata share, caps, exclusions, estimates, and settlement amounts need explicit formulas and retrievable inputs.
+
+AI can flag lease clauses and source categories. Humans verify them before calculations use them.
+
+It should not be the calculator.
+
+When a tenant, CPA, asset manager, or property controller asks for the path, the answer should be a ledger, not a paragraph.
+
+Same source file.
+Same rule.
+Same calculation.
+Same result.
+
+That is the bar for a reconciliation packet that has to survive questions later."
+120,2026-06-14,20:00,America/Chicago,2026-06-15T01:00:00Z,linkedin,capveri,text-short,campaign-close,https://www.capveri.com/resources/cam-presend-checklist,marketing/content/resources/cam-presend-checklist.mdx,marketing/content/linkedin/campaigns/2026-06-07-to-2026-06-14/posts/2026-06-14-2000-weekend-close-packet-120.md,schedule,9833beb7be88372a854b932c62a19b9f6e5d919b523cbb5ae30ef77cb9ccf429,766,"Before a reconciliation statement leaves the building, the review should answer four plain questions.
+
+Do the exports tie?
+
+Do the lease rules match the calculation inputs?
+
+Can the packet explain the big movements?
+
+Can the team produce support without rebuilding the workbook?
+
+That is the operating standard behind CapVeri.
+
+Export-first, because the source systems already hold the records.
+
+Deterministic math, because financial calculations need to reproduce.
+
+Human verification, because extracted lease terms and classifications still need judgment.
+
+Traceable packets, because tenant questions do not wait for someone to remember how last year's workbook worked.
+
+CAM reconciliation gets stronger when the statement is not just cleaner, but easier to prove."

@@ -1,0 +1,190 @@
+# Throwaway local-e2e scale harness & probes (top-level backend only; never commit)
+/backend/_*.py
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+/lib/
+/lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+leaseaudit_backend.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.virtualenv/
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage/
+coverage*.txt
+coverage*.json
+*_test.log
+.tox/
+.nox/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.playwright-mcp/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node.js / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+.vite/
+.next/
+out/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Ventora AI-SDR/AI-CS shared secrets restore record (LOCAL ONLY, never commit)
+.ai-secrets.local
+
+# Logs
+logs/
+*.log
+marketing/content/linkedin/postiz_*_state.json
+marketing/content/linkedin/postiz_*.log
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+nul
+temp_home.html
+
+# PID files
+*.pid
+
+# Test artifacts
+e2e-adhoc/
+e2e-adhoc-failed/
+test-output.txt
+test-results.txt
+test-results.json
+test-failure-*.png
+
+# Session screenshots (exploratory/walkthrough PNGs in repo root and backend/)
+/*.png
+backend/*.png
+[0-9][0-9]-*.png
+[0-9][0-9][a-z]-*.png
+[0-9][0-9][a-z][a-z]-*.png
+backend/[0-9][0-9]-*.png
+backend/[0-9][0-9][a-z]-*.png
+backend/[0-9][0-9][a-z][a-z]-*.png
+# ...except the portfolio gallery, which is deliberate and reproducible via
+# frontend/scripts/portfolio-screenshots.mjs. The numeric prefixes are gallery
+# order, so they collide with the session-screenshot patterns above.
+!portfolio/screenshots/[0-9][0-9]-*.png
+*-output.txt
+*_output.txt
+test-results*.txt
+test_results*.txt
+typecheck*.txt
+
+# Accidental pip artifacts
+backend/=*
+
+# GTM data
+gtm/data/leads.db
+
+# Test credentials
+test-login.json
+test-token.txt
+**/test-credentials.*
+login.json
+
+# Bundle analysis
+dist/stats.html
+
+# Temporary test files with credentials
+test_auth.json
+test_upload_fix.py
+
+# Coverage reports
+frontend/coverage_report.txt
+
+# Backup files
+*.backup
+*.bak
+
+# Generated files
+frontend/openapi.json
+
+# Additional environment files
+.env.test
+frontend/.env.test
+.playwright-cli/
+.worktrees/
+.worktree-state/
+.claude/worktrees/
+.claude/scheduled_tasks.lock
+
+# TypeScript build cache
+*.tsbuildinfo
+gtm/data/prospects/gtm tool db/
+
+# Temporary snapshots (playwright-cli / exploratory)
+*-snap.yaml
+*-snapshot.yaml
+step*.yaml
+output/playwright/
+
+.vercel
+.open-next/
+.dev.vars
+.cloudflare/
+.wrangler/

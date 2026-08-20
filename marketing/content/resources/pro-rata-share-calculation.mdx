@@ -1,0 +1,177 @@
+---
+title: "Pro-Rata Share Calculation in Commercial Real Estate: Formula, Disputes, and BOMA 2024 Changes"
+description: "The pro-rata share formula, usable vs. rentable SF, denominator disputes, anchor exclusions, and how BOMA 2024 changes the math."
+datePublished: "2026-02-27"
+dateModified: "2026-05-08"
+author: "Angel Campa"
+buttonText: "Recalculate Your Shares"
+order: 20
+faq:
+  - q: "What is pro-rata share in a commercial lease?"
+    a: "Pro-rata share is the percentage of total CAM expenses a tenant owes, based on their share of the building's total leasable area. It is expressed as a decimal and applied to the adjusted CAM pool to produce the tenant's annual CAM liability."
+  - q: "How is pro-rata share calculated?"
+    a: "Divide the tenant's rentable square footage by the building's total gross leasable area. That percentage, multiplied by the adjusted CAM pool, gives you the tenant's CAM liability. The denominator must be leasable area, not leased area, so existing tenants don't absorb costs from vacant suites they have nothing to do with."
+  - q: "What is the difference between usable and rentable square footage?"
+    a: "Usable SF is the physical space a tenant occupies, measured from interior wall to interior wall. Rentable SF adds a proportional share of common areas through a load factor. A 10,000 usable SF suite in a building with a 1.20 load factor becomes 12,000 rentable SF. Rent and pro-rata share are both calculated on rentable SF."
+  - q: "Can a landlord use leased area instead of leasable area as the denominator?"
+    a: "Landlords sometimes substitute leased area for leasable area in the denominator. Every vacancy then shrinks the denominator and pushes each occupied tenant's share higher. The expenses don't change; the math just redistributes them onto tenants who have nothing to show for it. The National Retail Tenants Association has called this one of the primary sources of CAM litigation, because the effect is mathematically certain and quantifiable."
+  - q: "How does BOMA 2024 change pro-rata share calculations?"
+    a: "BOMA 2024 reclassifies Non-Allocated Tenant Areas, including storage rooms and outdoor tenant spaces, as Rentable Area without applying a load factor. When a building is re-measured under BOMA 2024, the total rentable area in the denominator grows. Tenants whose leases reference a fixed rentable SF figure may see their pro-rata share drop, unless the lease requires re-measurement to apply."
+---
+
+<Alert type="info" title="Quick Answer">
+A pro-rata share is the percentage of total CAM expenses a tenant owes, based on their proportion of the building's total leasable area. It is the number that drives every CAM reconciliation, and it is highly sensitive to how the lease defines the numerator and the denominator.
+</Alert>
+
+Pro-rata share sits at the center of every CAM reconciliation. Get it right and every downstream calculation flows correctly. Get it wrong and a single percentage error compounds across every tenant and every billing period. This page covers the formula, the measurement standards behind it, the disputes it generates, and how BOMA 2024 revisions change the arithmetic.
+
+## The Formula
+
+The calculation has two steps. First, derive the pro-rata share percentage:
+
+```
+Tenant RSF / Total Building GLA = Pro-Rata Share %
+```
+
+Then apply that percentage to the adjusted CAM pool:
+
+```
+Pro-Rata Share % x Adjusted CAM Pool = Tenant's CAM Liability
+```
+
+Wall Street Prep describes this as the standard method for allocating shared costs in triple-net and modified-gross leases. The percentage itself looks simple. The complexity is in what goes into each number.
+
+One point that causes consistent errors: the denominator must be the building's total **leasable** area, not its **leased** area. Leasable area includes vacant suites. Leased area does not. Using leased area shrinks the denominator whenever occupancy drops, which raises every occupied tenant's share. The expenses stay the same; the math just redistributes them onto tenants who have no vacancy to show for it.
+
+### Worked example: pro-rata share on a CAM pool
+
+Assume a tenant leases 12,000 RSF in a 240,000 RSF building. The reconciled CAM pool is $1,080,000 after exclusions, fixed-cost adjustments, and any permitted gross-up.
+
+| Input | Amount |
+|---|---:|
+| Tenant rentable area | 12,000 RSF |
+| Building leasable area | 240,000 RSF |
+| Tenant pro-rata share | 5.00% |
+| Adjusted CAM pool | $1,080,000 |
+| Tenant annual CAM liability | $54,000 |
+
+The formula is:
+
+```
+12,000 / 240,000 = 0.05
+0.05 x $1,080,000 = $54,000
+```
+
+If the landlord uses leased area instead of leasable area and the building is only 216,000 RSF leased, the same tenant's share becomes 5.56%. That turns the charge into $60,000, a $6,000 difference created entirely by the denominator.
+
+## Usable vs. Rentable Square Footage
+
+Both terms refer to the same physical space measured differently, and the distinction directly affects every pro-rata calculation.
+
+<TwoColumnCard
+  left={{
+    title: "Usable SF",
+    items: [
+      "The physical space a tenant occupies",
+      "Measured from interior wall to interior wall",
+      "Excludes all common areas",
+      "Used for workspace planning and furniture layouts",
+      "Lower number than rentable SF in almost every case"
+    ]
+  }}
+  right={{
+    title: "Rentable SF",
+    variant: "default",
+    items: [
+      "Usable SF plus a proportional share of common areas",
+      "Common areas added via a load factor (also called add-on factor)",
+      "Example: 10,000 usable SF x 1.20 load factor = 12,000 RSF",
+      "Used for lease pricing and pro-rata share calculations",
+      "The number in your lease abstract"
+    ]
+  }}
+/>
+
+AQUILA Commercial explains the load factor as the ratio of rentable to usable area across the building. A building with 100,000 RSF and 85,000 total usable SF carries a load factor of approximately 1.18. Each tenant's usable SF is multiplied by that factor to arrive at their rentable SF. Rent is quoted and pro-rata shares are calculated on the rentable number.
+
+A miscalculated load factor, one that omits newly classified common areas or applies a stale measurement, changes every tenant's share at once.
+
+## Pro-Rata Share Formula by Lease Type
+
+The numerator is usually tenant RSF, but the denominator changes by lease structure. That is why two tenants in the same building can have different formulas even when both leases say "pro-rata share."
+
+| Lease or property structure | Typical denominator | What to verify |
+|---|---|---|
+| Triple-net office lease | Total building rentable area | The denominator includes vacant space and matches the rent roll. |
+| Modified gross lease with expense stop | Building rentable area above the base-year stop | Only expenses above the stop are multiplied by the tenant share. |
+| Shopping center with anchor exclusion | Inline leasable area after excluded anchors | Anchor contribution and excluded area are disclosed in the lease. |
+| Mixed-use property | Relevant component area, such as retail-only or office-only area | Residential, retail, office, and parking costs are not blended into one pool. |
+| Direct-metered or direct-billed category | Tenant-specific usage or invoice amount | The charge is not also allocated through the shared CAM pool. |
+
+For partial-year tenants, calculate the share first, then prorate by the number of lease days in the reconciliation period. For expansions and contractions, split the year into date ranges and calculate each period separately. A tenant that grows from 8,000 RSF to 12,000 RSF on July 1 does not have one annual numerator. It has two.
+
+## The Denominator Manipulation Dispute
+
+The denominator in the pro-rata formula is the most frequently contested variable in CAM litigation. Landlords have an economic incentive to use leased area: it keeps the denominator stable at full occupancy and grows tenant shares whenever a vacancy opens. Tenants have an economic incentive to insist on leasable area: it holds their share constant regardless of what happens to adjacent suites.
+
+The National Retail Tenants Association's CAM Wars Part 2 analysis puts it directly: utilizing leased area mathematically forces existing tenants to subsidize the costs of vacant units. On a 100,000 SF center with 10,000 SF vacant, a tenant occupying 6,000 RSF sees their share rise from 6.0% to 6.67% under a leased-area denominator. That 0.67 percentage point difference on a $500,000 CAM pool is $3,350 per year, every year the vacancy persists, with no corresponding benefit to the paying tenant.
+
+Lease language is the only control. Leases that specify "total leasable area of the building" are protected. Leases that say "area leased by other tenants" or that are silent on the point are exposed. If your lease is silent, check the reconciliation methodology your landlord is applying and compare it to the square footage figures in prior statements.
+
+## Anchor Exclusions and Their Effect on Inline Tenants
+
+Shopping center leases frequently exclude anchor tenant square footage from the denominator. The anchor negotiates a separate CAM deal, often a fixed-dollar or capped contribution, and the remaining leasable area carries the full CAM pool.
+
+The arithmetic effect is direct. A 100,000 SF center with a 40,000 SF anchor excluded from the denominator leaves 60,000 SF to absorb all CAM expenses. A 6,000 SF inline tenant holds 6% of the full building but 10% of the effective denominator. Every dollar of CAM expense hits them 67% harder than it would in a building without anchor exclusions.
+
+The issue is not the existence of anchor exclusions. Those are disclosed in the lease and priced into the deal. The problem is undisclosed exclusions, or exclusions that expand over time as anchor tenants renegotiate their CAM caps. When the anchor's contribution shrinks and the exclusion expands at the same time, inline tenants absorb both effects without notice.
+
+For a detailed treatment of how anchor exclusions interact with specific lease structures, see the [anchor exclusion CAM guide](/resources/anchor-exclusion-cam).
+
+## BOMA 2024 Changes to the Numerator
+
+BOMA 2024 (the Office Buildings standard and its retail and industrial equivalents) introduced a new measurement category: Non-Allocated Tenant Areas. This includes storage rooms located outside the primary demised space, outdoor tenant areas like patios and balconies, and similar spaces that a tenant uses exclusively but that prior BOMA standards either excluded from rentable area or measured inconsistently.
+
+Under BOMA 2024, these spaces are included in Rentable Area without applying the standard load factor. That changes both sides of the pro-rata equation. For buildings that have been re-measured:
+
+- The numerator for affected tenants increases if their storage or outdoor space is now measured as RSF.
+- The total building GLA in the denominator may also increase, depending on how many tenants have Non-Allocated Tenant Areas.
+- The net effect on any individual tenant's pro-rata share depends on whether their square footage increased more or less than the building total.
+
+Building Engines and Gensler have both noted that re-measurement under BOMA 2024 can produce meaningful shifts in reported RSF, which flow directly into lease abstracts and CAM calculations. If your building was re-measured after lease execution, the lease abstract denominator may no longer match what the landlord is using in the reconciliation.
+
+Check this by comparing the total RSF figure your landlord uses in the CAM denominator to the figure in your lease abstract. If they differ by more than a rounding adjustment, request the re-measurement documentation and verify whether your lease requires you to accept revised figures.
+
+For a full explanation of the BOMA 2024 measurement changes, see [BOMA 2024 changes](/blog/boma-2024-changes).
+
+<CTABox
+  title="Verify Your Pro-Rata Share with BOMA 2024 Standards"
+  description="Run your square footage figures through the BOMA 2024 calculator to check whether re-measurement changes your pro-rata share or your CAM liability."
+  utmContent="u_cta"
+  buttonText="Recalculate Your Shares"
+/>
+
+## What to Verify Before Accepting a Reconciliation
+
+A pro-rata share dispute rarely appears as a single obvious error. It usually involves a stale denominator, a misapplied load factor, and an anchor exclusion that was never disclosed, sometimes all three at once. Before signing off on a reconciliation statement, confirm:
+
+- The denominator matches the total leasable area in the lease or the most recent BOMA-compliant measurement, not leased area.
+- Your numerator matches the rentable SF in your lease abstract, not a revised figure unless the lease permits re-measurement.
+- Any anchor or excluded-tenant square footage is disclosed in writing and matches what was in the lease at execution.
+- If the building has been re-measured under BOMA 2024, the reconciliation reflects which measurement standard was applied and in which year.
+
+The [CAM reconciliation overview](/resources/common-area-maintenance-reconciliation-explained) explains the broader reconciliation process, including gross-up, caps, and admin fees, that layer on top of the pro-rata share calculation. The [CAM gross-up calculator](/tools/cam-gross-up-calculator) applies the formula to your specific occupancy and expense figures.
+
+<FAQSection items={[
+  { q: "What is pro-rata share in a commercial lease?", a: "Pro-rata share is the percentage of total CAM expenses a tenant owes, based on their share of the building's total leasable area. It is expressed as a decimal and applied to the adjusted CAM pool to produce the tenant's annual CAM liability." },
+  { q: "How is pro-rata share calculated?", a: "Divide the tenant's rentable square footage by the building's total gross leasable area. That percentage, multiplied by the adjusted CAM pool, gives you the tenant's CAM liability. The denominator must be leasable area, not leased area, so existing tenants don't absorb costs from vacant suites they have nothing to do with." },
+  { q: "What is the difference between usable and rentable square footage?", a: "Usable SF is the physical space a tenant occupies, measured from interior wall to interior wall. Rentable SF adds a proportional share of common areas through a load factor. A 10,000 usable SF suite in a building with a 1.20 load factor becomes 12,000 rentable SF. Rent and pro-rata share are both calculated on rentable SF." },
+  { q: "Can a landlord use leased area instead of leasable area as the denominator?", a: "Landlords sometimes substitute leased area for leasable area in the denominator. Every vacancy then shrinks the denominator and pushes each occupied tenant's share higher. The expenses don't change; the math just redistributes them onto tenants who have nothing to show for it. The National Retail Tenants Association has called this one of the primary sources of CAM litigation, because the effect is mathematically certain and quantifiable." },
+  { q: "How does BOMA 2024 change pro-rata share calculations?", a: "BOMA 2024 reclassifies Non-Allocated Tenant Areas, including storage rooms and outdoor tenant spaces, as Rentable Area without applying a load factor. When a building is re-measured under BOMA 2024, the total rentable area in the denominator grows. Tenants whose leases reference a fixed rentable SF figure may see their pro-rata share drop, unless the lease requires re-measurement to apply." }
+]} />
+
+## Sources
+
+1. BOMA measurement standards - [BOMA](https://boma.org/boma-standards/)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)
+3. [CapVeri Sources & Research - BOMA 2024 methodology](/sources#boma-2024)

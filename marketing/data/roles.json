@@ -1,0 +1,240 @@
+{
+  "lastUpdated": "2026-03-19",
+  "roles": [
+    {
+      "slug": "property-controller",
+      "name": "Property Controller",
+      "metaTitle": "CAM Reconciliation Guide for Property Controllers",
+      "metaDescription": "Property controllers: stop spending Q1 in spreadsheets. CAM reconciliation that catches gross-up errors, cap violations, and GL miscoding before statements go out.",
+      "headline": "CAM Reconciliation for Property Controllers",
+      "subheadline": "The person who actually runs the math. And gets blamed when it's wrong.",
+      "painPoints": [
+        "Manually reconciling 20-40 buildings in Q1 using spreadsheets inherited from predecessors",
+        "Yardi or MRI configurations that don't match current lease terms, found only when tenants dispute",
+        "Gross-up calculations applied to fixed expenses that shouldn't be grossed up",
+        "Cap calculations that reset incorrectly after lease renewals",
+        "GL accounts added mid-year that never got mapped to recovery pools"
+      ],
+      "typicalWorkflow": "January: pull year-end GL export from Yardi or MRI. Load into Excel. Manually reconcile each tenant's estimated payments against actuals. Apply gross-up per lease. Check caps. Generate statements. Send. Repeat for every building. Duration: 6-10 weeks.",
+      "timeOnCam": "Property controllers handle most CAM reconciliation. At firms with 20 to 50 buildings, it fills much of Q1.",
+      "commonErrors": [
+        "Gross-up applied to fixed expenses (property taxes, insurance) - should only apply to variable costs",
+        "Wrong occupancy threshold used for gross-up (lease says 95%, ERP configured at 90%)",
+        "Non-cumulative cap applied when lease specifies cumulative: compounds into significant overcharge over time",
+        "Pro-rata denominator not updated after tenant move-outs or new construction",
+        "GL coding errors not caught until tenant auditor finds them 2 years later"
+      ],
+      "capveriValue": "Upload your ERP export. CapVeri recalculates every tenant's reconciliation from scratch, independently of your ERP's configuration, and flags every discrepancy with the specific lease clause it violates. Catches the errors before statements go out instead of after tenant auditors find them.",
+      "timeSavings": "CapVeri works out each building again from the source data. Your controllers review and approve the results. They no longer rebuild every reconciliation by hand.",
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator",
+        "/tools/pro-rata-calculator",
+        "/tools/cam-billing-error-estimator"
+      ],
+      "relatedResources": [
+        "/resources/cam-gross-up-calculation-guide",
+        "/resources/cam-expense-caps",
+        "/resources/software",
+        "/blog/cam-reconciliation-errors",
+        "/blog/cam-reconciliation-questions-property-managers-ask",
+        "/blog/controller-career-path-cre-finops"
+      ]
+    },
+    {
+      "slug": "cfo-financial-controller",
+      "name": "CFO / Financial Controller",
+      "metaTitle": "CAM Reconciliation ROI for CFOs and Financial Controllers",
+      "metaDescription": "CFOs: model CAM billing-error exposure per building with the ROI calculator. See the recovery model and liability exposure before your next reconciliation cycle.",
+      "headline": "CAM Reconciliation for CFOs and Financial Controllers",
+      "subheadline": "The NOI leakage you can't see, until a tenant auditor finds it for you.",
+      "painPoints": [
+        "No visibility into whether CAM reconciliation math is correct until a tenant dispute surfaces",
+        "Audit exposure: tenant-side auditors (Tango Analytics, Visual Lease) are hired on contingency to find errors landlords missed",
+        "Revenue leakage from systematic underbilling (gross-up errors, missed expense categories, cap calculation mistakes)",
+        "SB 1103 response risk in California: failure to respond to qualified commercial tenant requests within 30 days triggers treble-damage liability",
+        "Year-end close delays because reconciliation process takes too long"
+      ],
+      "typicalWorkflow": "CFOs review CAM reconciliation at a high level: total billings vs. budget, aggregate recovery ratios, and any disputes flagged by property managers. Reconciliation details are delegated to property controllers. CFO involvement spikes when a tenant disputes or files an audit request.",
+      "timeOnCam": "CFOs spend part of Q1 on CAM review and disputes. It grows in years when tenants hire outside auditors.",
+      "commonErrors": [
+        "No independent verification of ERP output: trusting Yardi or MRI to self-report errors",
+        "Systematic underbilling not discovered until acquisition due diligence exposes it",
+        "Liability from SB 1103 non-compliance in California not on the radar",
+        "Recovery ratio variance between properties never explained or investigated",
+        "Capital expenses flowing through operating expense pools (billing tenants for CapEx)"
+      ],
+      "capveriValue": "CapVeri gives CFOs a portfolio-level view of CAM recovery gaps, liability exposure, and reconciliation accuracy, without requiring technical knowledge of ERP configuration. {{pricing.trialCopy}} Run it before your Q1 reconciliation cycle to establish baseline leakage.",
+      "timeSavings": "ROI model: modeled recovery range of $5,900-$35,300 per building depending on CAM pool size and lease complexity. With {{pricing.launchOfferTerms}}, a mid-scenario recovery of ~$17,700 represents strong ROI per building.",
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/noi-impact-calculator",
+        "/tools/audit-risk-scorecard",
+        "/tools/audit-risk-quiz"
+      ],
+      "relatedResources": [
+        "/resources/cam-leakage-guide",
+        "/resources/deterministic-vs-ai-cam",
+        "/resources/sb-1103-compliance",
+        "/blog/cam-overbilling-liability",
+        "/blog/cam-highest-roi-process-to-automate",
+        "/resources/cam-reconciliation-cost"
+      ]
+    },
+    {
+      "slug": "lease-administrator",
+      "name": "Lease Administrator",
+      "metaTitle": "CAM Reconciliation Guide for Lease Administrators",
+      "metaDescription": "Lease administrators: track CAM exclusions, audit rights, and cap clauses across your entire portfolio. Catch misapplied lease terms before tenants do.",
+      "headline": "CAM Reconciliation for Lease Administrators",
+      "subheadline": "The clause-level detail that makes or breaks every reconciliation",
+      "painPoints": [
+        "Tracking CAM exclusions across 50-200 leases, each with slightly different language",
+        "Lease amendments that change exclusion lists, cap types, or gross-up thresholds, not reflected in ERP settings",
+        "Audit rights clause management: knowing when and how tenants can request records",
+        "Base year resets after lease renewals: calculated and applied correctly across multiple tenants",
+        "Capital expenditure misclassification: CapEx flowing through operating expense pools"
+      ],
+      "typicalWorkflow": "Lease admins maintain the lease abstract database. During reconciliation season, they verify that ERP configuration matches current lease terms for each tenant. They flag discrepancies to property controllers. They also field tenant audit requests and manage the response process.",
+      "timeOnCam": "Lease administrators spend much of Q1 checking ERP settings against lease terms. This manual work relies on spreadsheets and PDFs.",
+      "commonErrors": [
+        "Exclusion lists not updated after lease amendments: capital expenses slipping into CAM pools",
+        "Base year amounts not updated after the renewal base year: tenants charged on wrong baseline",
+        "Audit rights clause not tracked: missing tenant request deadlines creates liability",
+        "Different gross-up thresholds per lease not reflected in ERP: single pool-level threshold applied to all tenants",
+        "Management fee caps buried in lease riders that never made it into the ERP"
+      ],
+      "capveriValue": "CapVeri's lease abstraction layer lets lease admins map each tenant's specific CAM clauses and validates that reconciliation output matches those terms. Every discrepancy is flagged with the specific clause and the dollar impact.",
+      "timeSavings": "CapVeri matches ERP settings to each lease term for you. Your team skips comparing ERP output to lease PDFs tenant by tenant. The lease terms drive every flag.",
+      "relatedTools": [
+        "/tools/lease-abstract-matrix",
+        "/tools/base-year-escalation",
+        "/tools/cam-cap-calculator",
+        "/tools/sb-1103-checker"
+      ],
+      "relatedResources": [
+        "/resources/cam-expense-caps",
+        "/resources/base-year-cam-lease",
+        "/resources/anchor-exclusion-cam",
+        "/resources/cam-pre-send-packet-checklist"
+      ]
+    },
+    {
+      "slug": "property-accountant",
+      "name": "Property Accountant",
+      "metaTitle": "CAM Reconciliation Guide for Property Accountants",
+      "metaDescription": "Property accountants: automate GL coding validation, expense categorization, and CAM pool reconciliation. Stop manually tracing miscoded entries at year-end.",
+      "headline": "CAM Reconciliation for Property Accountants",
+      "subheadline": "GL coding errors compound every year. Catch them before year-end close.",
+      "painPoints": [
+        "GL coding errors from property management staff that flow into CAM pools incorrectly",
+        "Expense categorization that doesn't match lease definitions for recoverable vs. non-recoverable",
+        "Journal entries at year-end to correct miscoded transactions, then reconciling those corrections through CAM billing",
+        "New vendor categories created mid-year that don't map to recovery pools",
+        "Capital vs. operating expense classification disputes that affect CAM pool totals"
+      ],
+      "typicalWorkflow": "Property accountants maintain the GL, post journal entries, and close each period. During reconciliation season, they work with property controllers to ensure GL balances flow correctly to recovery pool exports. They investigate variances between GL totals and recovery pool calculations.",
+      "timeOnCam": "Property accountants spend part of Q1 on CAM-related GL work. That means coding reviews, recoding, and export prep.",
+      "commonErrors": [
+        "Vendor invoices coded to wrong GL accounts: repairs and maintenance vs. capital improvements",
+        "Management fees posted to wrong account: not linked to recovery pool, or grossed up incorrectly",
+        "Utilities split incorrectly between common area and tenant-specific: common area portion missing from pool",
+        "Insurance premium true-ups not prorated correctly through CAM billing",
+        "Reserves classified as operating expenses: capital reserves are generally not recoverable"
+      ],
+      "capveriValue": "CapVeri's GL analysis layer flags suspicious coding patterns: unusual accounts, amounts that don't match historical patterns, and capital expenditures that may have slipped into operating expense pools. Advisory flags only. Your team makes the final call.",
+      "timeSavings": "CapVeri flags unusual GL items for you at year-end. Your team reviews what it flags. No more hunting line by line.",
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/reconciliation-statement-generator",
+        "/tools/recovery-gap-analyzer",
+        "/tools/admin-fee-calculator"
+      ],
+      "relatedResources": [
+        "/resources/gl-coding-guide",
+        "/resources/gl-analysis-explained",
+        "/resources/what-is-included-in-cam-expenses",
+        "/resources/capex-detection-cam",
+        "/blog/cpa-guide-cam-reconciliation-audit"
+      ]
+    },
+    {
+      "slug": "asset-manager",
+      "name": "Asset Manager",
+      "metaTitle": "CAM Reconciliation for Asset Managers: NOI Impact & Portfolio",
+      "metaDescription": "Asset managers: CAM billing errors reduce NOI and create audit exposure at acquisition. See portfolio-level leakage and recovery ratio variance across all buildings.",
+      "headline": "CAM Reconciliation for Asset Managers",
+      "subheadline": "CAM leakage is a NOI problem. It's invisible until you measure it.",
+      "painPoints": [
+        "No portfolio-level view of CAM recovery ratios: only property-level data from each controller",
+        "Acquisition due diligence: inherited CAM billing errors that reduce NOI projections",
+        "Recovery ratio variance between comparable buildings not explained or investigated",
+        "Tenant disputes that surface during asset disposition. They are solvable earlier at lower cost.",
+        "Cap structure analysis across portfolio: which buildings have cumulative vs. non-cumulative caps and what that means for 5-year NOI"
+      ],
+      "typicalWorkflow": "Asset managers review portfolio operating performance quarterly. CAM recovery is a line item in property-level financials. Disputes surface as line items in property management reports. Asset managers engage deeply with CAM only during acquisitions (due diligence) or dispositions (disclosure obligations).",
+      "timeOnCam": "Asset managers spend some of Q1 reviewing CAM. It spikes when they buy buildings or when tenants hire auditors.",
+      "commonErrors": [
+        "Accepting acquisition underwriting CAM recovery figures without independent verification",
+        "Not modeling cumulative cap carry-forward in NOI projections: underestimates future recovery",
+        "Recovery ratio benchmarking against wrong peer set: office vs. retail norms are very different",
+        "SB 1103 liability not included in California asset risk assessments",
+        "Tenant audit exposure not quantified before disposition: emerges as post-closing claim"
+      ],
+      "capveriValue": "CapVeri's portfolio view gives asset managers building-level recovery gap analysis, CAP structure modeling, and leakage estimates across their entire portfolio. Run a full portfolio audit before acquisition or disposition to quantify CAM risk.",
+      "timeSavings": "Use the ROI calculator to model undetected CAM leakage per building during acquisition due diligence. At portfolio scale, recovered leakage can mean meaningful NOI uplift from existing assets, without adding new square footage.",
+      "relatedTools": [
+        "/tools/noi-impact-calculator",
+        "/tools/cam-billing-error-estimator",
+        "/tools/audit-risk-scorecard",
+        "/tools/cam-cap-calculator"
+      ],
+      "relatedResources": [
+        "/resources/cam-leakage-guide",
+        "/resources/what-is-cre-finops",
+        "/resources/deterministic-vs-ai-cam",
+        "/blog/institutional-investors-recovery-ratios",
+        "/resources/ai-cam-reconciliation-limits"
+      ]
+    },
+    {
+      "slug": "director-property-management",
+      "name": "Director of Property Management",
+      "metaTitle": "CAM Reconciliation for Property Management Directors",
+      "metaDescription": "Property management directors: standardize CAM reconciliation across your team. Reduce Q1 crunch time, catch errors before disputes, and scale to 50 buildings.",
+      "headline": "CAM Reconciliation for Directors of Property Management",
+      "subheadline": "Scale your team's capacity without scaling headcount",
+      "painPoints": [
+        "Q1 crunch requires all-hands: property managers, controllers, and accountants overwhelmed simultaneously",
+        "No standardized reconciliation process: each controller has their own method, spreadsheet, and error rate",
+        "Disputes from prior years still being managed while new cycle starts",
+        "New team members take 2-3 years to fully understand CAM reconciliation nuances",
+        "Adding buildings to the portfolio increases workload linearly, with no economies of scale"
+      ],
+      "typicalWorkflow": "Directors oversee the reconciliation process from a management perspective: setting timelines, allocating staff, resolving escalated issues, and reviewing statements before they go out. They also field calls from tenants and tenant representatives during dispute season.",
+      "timeOnCam": "Directors of property management spend much of Q1 on reconciliation. They review output, manage disputes, and coordinate teams.",
+      "commonErrors": [
+        "Inconsistent reconciliation methodology across buildings: no standardized process for gross-up, caps, or exclusions",
+        "Statements sent without independent review: errors discovered by tenants instead of internally",
+        "Dispute backlog from prior years consuming current-year capacity",
+        "Onboarding new properties without standardized CAM setup verification",
+        "No benchmarking of reconciliation timing against industry peers: 90-day statements are avoidable"
+      ],
+      "capveriValue": "CapVeri standardizes the reconciliation process across your entire portfolio. Every building follows the same methodology. Every statement gets independently verified against lease terms before it goes out. Directors get a single dashboard view of reconciliation status, errors found, and statements ready for review.",
+      "timeSavings": "CapVeri runs the same method on every building. Your controllers review and approve instead of building each reconciliation from scratch.",
+      "relatedTools": [
+        "/tools/audit-risk-scorecard",
+        "/tools/cam-billing-error-estimator",
+        "/tools/reconciliation-statement-generator",
+        "/tools/audit-risk-quiz"
+      ],
+      "relatedResources": [
+        "/resources/cam-pre-send-packet-checklist",
+        "/resources/tenant-cam-audit-landlord-side",
+        "/resources/export-guide",
+        "/blog/cam-reconciliation-too-slow",
+        "/blog/cam-competitive-advantage-retention"
+      ]
+    }
+  ]
+}

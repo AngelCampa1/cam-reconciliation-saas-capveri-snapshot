@@ -1,0 +1,11 @@
+export { HeroSection } from "./HeroSection";
+export { LandingPageClient } from "./LandingPageClient";
+export { ValuePropositionSection } from "./ValuePropositionSection";
+export { HowItWorksSection } from "./HowItWorksSection";
+export { ProductDemoSection } from "./ProductDemoSection";
+export { FeaturesGrid } from "./FeaturesGrid";
+export { PricingTeaser } from "./PricingTeaser";
+export { CTASection } from "./CTASection";
+export { FAQSection } from "./FAQSection";
+export { LANDING_FAQS } from "@/data/landing-faqs";
+export { SocialProofStrip } from "./SocialProofStrip";

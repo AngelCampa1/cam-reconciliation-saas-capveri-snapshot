@@ -1,0 +1,152 @@
+[
+  {
+    "id": "33333333-3333-3333-3333-333333333333",
+    "organization_id": "11111111-1111-1111-1111-111111111111",
+    "property_id": "aaaa2222-2222-2222-2222-222222222222",
+    "lease_id": "cccc1111-1111-1111-1111-111111111111",
+    "period_start_date": "2024-01-01",
+    "period_end_date": "2024-12-31",
+    "total_operating_expenses": "150000.00",
+    "total_tax_expenses": "45000.00",
+    "total_insurance_expenses": "12000.00",
+    "total_capital_expenses": "8000.00",
+    "gross_up_factor": "1.0526",
+    "grossed_operating_expenses": "157895.00",
+    "tenant_pro_rata_share": "0.25",
+    "tenant_share_before_cap": "39473.75",
+    "cap_applied": "1184.21",
+    "tenant_share_after_cap": "38289.54",
+    "admin_fee": "5743.43",
+    "total_recovery": "44032.97",
+    "status": "draft",
+    "is_finalized": false,
+    "finalized_at": null,
+    "finalized_by_user_id": null,
+    "calculation_trace": {
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Loaded operating expenses from GL entries",
+          "result": "150000.00",
+          "metadata": {
+            "entry_count": 247
+          }
+        },
+        {
+          "step_number": 2,
+          "description": "Applied gross-up factor for 75% occupancy",
+          "result": "157895.00",
+          "metadata": {
+            "occupancy": "0.75",
+            "target": "0.95",
+            "factor": "1.0526"
+          }
+        },
+        {
+          "step_number": 3,
+          "description": "Calculated tenant pro-rata share (25%)",
+          "result": "39473.75",
+          "metadata": {
+            "pro_rata_share": "0.25"
+          }
+        },
+        {
+          "step_number": 4,
+          "description": "Applied cumulative cap (3% annual)",
+          "result": "38289.54",
+          "metadata": {
+            "cap_type": "cumulative",
+            "cap_rate": "0.03",
+            "base_year": 2023,
+            "cap_amount": "1184.21"
+          }
+        },
+        {
+          "step_number": 5,
+          "description": "Added admin fee (15%)",
+          "result": "44032.97",
+          "metadata": {
+            "admin_fee_percent": "0.15",
+            "admin_fee": "5743.43"
+          }
+        }
+      ]
+    },
+    "created_at": "2024-12-01T10:00:00Z",
+    "updated_at": "2024-12-01T10:00:00Z"
+  },
+  {
+    "id": "44444444-4444-4444-4444-444444444444",
+    "organization_id": "11111111-1111-1111-1111-111111111111",
+    "property_id": "aaaa2222-2222-2222-2222-222222222222",
+    "lease_id": "cccc1111-1111-1111-1111-111111111111",
+    "period_start_date": "2023-01-01",
+    "period_end_date": "2023-12-31",
+    "total_operating_expenses": "140000.00",
+    "total_tax_expenses": "42000.00",
+    "total_insurance_expenses": "11000.00",
+    "total_capital_expenses": "7500.00",
+    "gross_up_factor": "1.0417",
+    "grossed_operating_expenses": "145834.00",
+    "tenant_pro_rata_share": "0.25",
+    "tenant_share_before_cap": "36458.50",
+    "cap_applied": "0.00",
+    "tenant_share_after_cap": "36458.50",
+    "admin_fee": "5468.78",
+    "total_recovery": "41927.28",
+    "status": "finalized",
+    "is_finalized": true,
+    "finalized_at": "2024-01-15T14:30:00Z",
+    "finalized_by_user_id": "aaaa1111-1111-1111-1111-111111111111",
+    "calculation_trace": {
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Loaded operating expenses from GL entries",
+          "result": "140000.00",
+          "metadata": {
+            "entry_count": 235
+          }
+        },
+        {
+          "step_number": 2,
+          "description": "Applied gross-up factor for 80% occupancy",
+          "result": "145834.00",
+          "metadata": {
+            "occupancy": "0.80",
+            "target": "0.95",
+            "factor": "1.0417"
+          }
+        },
+        {
+          "step_number": 3,
+          "description": "Calculated tenant pro-rata share (25%)",
+          "result": "36458.50",
+          "metadata": {
+            "pro_rata_share": "0.25"
+          }
+        },
+        {
+          "step_number": 4,
+          "description": "No cap applied (base year)",
+          "result": "36458.50",
+          "metadata": {
+            "cap_type": "cumulative",
+            "is_base_year": true
+          }
+        },
+        {
+          "step_number": 5,
+          "description": "Added admin fee (15%)",
+          "result": "41927.28",
+          "metadata": {
+            "admin_fee_percent": "0.15",
+            "admin_fee": "5468.78"
+          }
+        }
+      ]
+    },
+    "created_at": "2024-01-15T14:00:00Z",
+    "updated_at": "2024-01-15T14:30:00Z"
+  }
+]

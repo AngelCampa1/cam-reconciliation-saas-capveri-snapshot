@@ -1,0 +1,122 @@
+---
+title: "BOMA 2024 vs 2017: What Changed and How It Affects CAM Billing"
+description: "BOMA 2024 changes office RSF, pro-rata denominators, and outdoor amenity treatment. See what property controllers need to update before CAM billing."
+excerpt: "BOMA 2024 vs 2017 changes CAM billing denominators in ways most controllers have not modeled. Here is what to check before your next reconciliation."
+datePublished: "2026-01-15"
+dateModified: "2026-03-22"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "compliance"
+faq:
+  - q: "What changed between BOMA 2017 and BOMA 2024?"
+    a: "BOMA 2024 reclassifies outdoor amenities (patios, terraces, courtyards) as billable RSF, eliminates load factors on balconies and rooftop terraces by creating a 'Non-Allocated Tenant Area' category, simplifies Method B circulation allocation, and streamlines tenant storage classifications. The net effect is a 2-5% RSF increase per building."
+  - q: "How does BOMA 2024 affect pro-rata share calculations?"
+    a: "A larger RSF denominator under BOMA 2024 changes every tenant's pro-rata share, even if the CAM expense pool stays the same. Mixed-vintage lease books (with some leases under 2017 and others under 2024 measurements) create denominator mismatches where pro-rata shares no longer sum to 100%."
+  - q: "What is a Non-Allocated Tenant Area in BOMA 2024?"
+    a: "Non-Allocated Tenant Areas are balconies and rooftop terraces that BOMA 2024 measures at 100% of actual area with no load factor applied. Under BOMA 2017, these spaces carried a load factor. This reclassification changes the rentable square footage calculation for any building with exterior tenant amenity space."
+  - q: "Do I need to re-measure my building for BOMA 2024?"
+    a: "Not necessarily. BOMA 2024 adoption typically requires a lease amendment or formal notice. Switching methodology unilaterally can create disputes. Before re-measuring, reconcile lease RSF vs. measured RSF for every tenant, audit billing system denominators, and get lease counsel sign-off."
+  - q: "Does BOMA certify software for compliance?"
+    a: "No. BOMA publishes a measurement standard, not a software certification program. Any vendor claiming 'BOMA-certified software' is misrepresenting BOMA's position. Compliance means the calculation logic correctly implements BOMA 2024 methodology: Non-Allocated Tenant Areas must be measured at 100% with no load factor."
+---
+
+On a 250,000 RSF office building, adopting BOMA 2024 produced an additional $445,500 in annual NOI. No new tenants, no capex, no rent bumps. Just different math. For property controllers, wrong denominators produce wrong tenant bills, which produce disputes and clawbacks.
+
+## What Changed: BOMA 2017 vs. BOMA 2024
+
+| What Changed                         | BOMA 2017                                | BOMA 2024                                                                    | Financial Impact                                                   |
+| ------------------------------------ | ---------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Ground-level outdoor amenities       | Excluded from RSF                        | Patios, terraces, courtyards now included                                    | Expands RSF pool; raises billable denominator                      |
+| Balconies & rooftop terraces         | Load factor penalty applied              | Classified as 'Non-Allocated Tenant Area': no load factor; measured at 100% | Eliminates RSF discount on premium amenity space                   |
+| Base building circulation (Method B) | Complex multi-step allocation            | Simplified proportional floor allocation                                     | Reduces disputes; typical RSF increase per floor                   |
+| Tenant storage areas                 | Multiple classification buckets          | Single streamlined category                                                  | Fewer CAM exclusions; cleaner pro-rata allocation                  |
+| Single-tenant equipment shafts       | Excluded or ambiguous                    | Explicitly billable RSF                                                      | Incremental NOI recovery on previously excluded space              |
+| Pro-rata sum integrity               | Shares sum to ~100% (single methodology) | Mixed-vintage leases create denominator mismatch                             | Pro-rata shares no longer sum to 100% in mixed-standard portfolios |
+
+Net effect across a typical portfolio: **2–5% RSF increase per building.**
+
+## What This Means for Your Pro-Rata Calculations
+
+A larger RSF denominator changes every tenant's pro-rata share, even if the CAM pool itself does not grow. Two tenants with identical leases can end up with different bills if one lease was signed under 2017 measurements and the other under 2024 measurements. That gap is not a rounding error. It is a structural mismatch baked into your billing system.
+
+Mixed-vintage lease books are the real landmine. When you have 2017-era leases sitting beside tenants whose space was certified under 2024 methodology, you are running two different denominators in the same pool without realizing it. That mismatch compounds every reconciliation cycle. Year one it is a rounding issue, year three it is a dispute, year five it is an audit demand from counsel.
+
+When the denominator shifts due to BOMA re-measurement, CapVeri automatically detects the change and generates a denominator change audit report showing exactly how each tenant's pro-rata share moved and by how much. See our guide on [why pro-rata shares change](/resources/denominator-change-guide) for the full breakdown of denominator shift triggers and documentation requirements.
+
+The place this surfaces earliest is GL coding. If your expense categories do not map cleanly to your measurement standard, controllers end up manually reconciling line items that should close automatically. Before you re-measure or renegotiate, lock down your coding discipline first. See the [GL Coding Guide](/resources/gl-coding-guide) for the specific categories where 2024 changes the inclusion/exclusion calculus.
+
+## The Non-Allocated Tenant Area Problem
+
+BOMA 2024 reclassified balconies and rooftop terraces as "Non-Allocated Tenant Areas." That one change breaks the math in most mixed-vintage lease books.
+
+Under BOMA 2017, balconies and terraces carried a load factor. The common area overhead was distributed across those spaces the same way it was distributed across interior tenant areas. Under BOMA 2024, these spaces are measured at 100% of their actual area with no load factor applied. The practical effect: the same physical space now produces a different rentable square footage number depending on which standard you use to measure it.
+
+That difference matters the moment you have leases signed under both standards in the same building. A tenant whose lease was executed under BOMA 2017 measurements has a pro-rata share calculated on one denominator. A tenant whose lease was executed or re-measured under BOMA 2024 has a share calculated on a different denominator. Add them together and the shares don't sum to 100%. This is not a rounding error - it is a mathematical consequence of running two measurement methodologies in parallel.
+
+Most billing systems assume a single denominator for the entire building. When the assumption breaks, every tenant's allocation is wrong, and the errors compound with each reconciliation cycle. The fix requires identifying which leases use which standard, calculating separate denominators, and reconciling the gap. CapVeri flags this mismatch automatically from your existing GL export.
+
+## What You Need to Do Now
+
+<Steps>
+  <Step title="Pull your current BOMA measurement report">
+    Confirm 2017 vs. 2024 and the last certification date. If the report is more
+    than three years old, the number in your billing system may not reflect
+    actual certified RSF.
+  </Step>
+  <Step title="Reconcile lease RSF vs. measured RSF for every tenant">
+    Flag gaps greater than 1%. Anything above that threshold is material in a
+    reconciliation dispute.
+  </Step>
+  <Step title="Audit billing system denominators">
+    Your system is almost certainly running frozen lease-execution RSF, not
+    current certified RSF. Identify which leases allow re-measurement and which
+    lock in the execution-date figure.
+  </Step>
+  <Step title="Run the numbers before you make any move">
+    The [CAM Billing Error Estimator](/tools/cam-billing-error-estimator) calculates dollar
+    exposure across your tenant roster. Three inputs, hard output.
+  </Step>
+  <Step title="Get lease counsel sign-off before re-measuring">
+    BOMA 2024 adoption typically requires a lease amendment or formal notice.
+    Switching methodology unilaterally creates exactly the dispute you were
+    trying to prevent.
+  </Step>
+</Steps>
+
+<Alert type="info" title="Calculate Your Hidden SF - Free">
+  Use the [BOMA 2024 Rentable Area Calculator](/tools/boma-2024-calculator) to
+  see exactly how many additional billable square feet your building gains under
+  the 2024 standard.
+</Alert>
+
+<Alert type="info" title="On BOMA Software Compliance Claims">
+  BOMA does not certify software. Any vendor claiming "BOMA-certified software"
+  is misrepresenting BOMA's position: BOMA publishes a measurement standard, not
+  a software certification program. Compliance means the calculation logic
+  correctly implements BOMA 2024 methodology, specifically that Non-Allocated
+  Tenant Areas (balconies, rooftop terraces) are measured at 100% of actual area
+  with no load factor applied. CapVeri's calculator uses this methodology.
+</Alert>
+
+<CTABox
+  title="See Where Your CAM Denominators Stand"
+  description="CapVeri checks your CAM statements against BOMA 2024 standards, flags denominator mismatches, and shows your exposure before it becomes a dispute."
+  utmContent="u_cta"
+  buttonText="Start your free trial"
+/>
+
+## Related Resources
+
+- [CAM Reconciliation Guide](/cam-reconciliation-guide): Complete step-by-step reconciliation process
+- [CAM reconciliation best practices under the new standard](/blog/cam-reconciliation-best-practices-boma): How to apply BOMA 2024 correctly in your reconciliation workflow
+- [BOMA Remeasurement Impact Calculator](/tools/boma-remeasurement-impact): Model NOI impact of re-measuring
+- [CAM Gross-Up Calculator](/tools/cam-gross-up-calculator): Calculate gross-up after area changes
+- [BOMA 2024 Office Standard Deep Dive](/resources/boma/boma-2024-adoption-roadmap): Full methodology guide
+- [Pro Rata Share Calculator](/tools/pro-rata-calculator): Recalculate tenant shares under new denominators
+
+## Sources
+
+1. BOMA 2024 Office Standard (ANSI/BOMA Z65.1-2024) - [BOMA Standards Portal](https://boma.org/boma-standards/)
+2. "2-5% RSF increase from BOMA 2024 adoption" - [Sources & methodology](/sources#boma-2024-rsf-increase)
+3. Gensler BOMA 2024 analysis - [Gensler](https://www.gensler.com/blog/boma-2024-office-building-measurements)
+4. Building Engines BOMA transition guidance - [Building Engines](https://www.buildingengines.com/blog/boma-2024-office-standard-updates/)

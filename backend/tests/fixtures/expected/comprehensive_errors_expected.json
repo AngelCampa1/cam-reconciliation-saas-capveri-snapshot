@@ -1,0 +1,20 @@
+{
+  "error_type": "comprehensive",
+  "description": "Comprehensive fixture combining multiple error types",
+  "parseable": true,
+  "expected_behavior": "Parser should handle all errors gracefully and extract valid rows",
+  "expected_warnings": [
+    "UTF-8 BOM detected and removed",
+    "Encoding errors detected in some rows",
+    "Missing columns in row(s)",
+    "Invalid dates detected",
+    "Non-numeric amounts detected",
+    "Repeated headers detected and removed",
+    "Footer rows detected and removed"
+  ],
+  "expected_errors": [],
+  "expected_rows": 2,
+  "valid_rows": 2,
+  "invalid_rows": 4,
+  "recovery_rate": "~30-40%"
+}

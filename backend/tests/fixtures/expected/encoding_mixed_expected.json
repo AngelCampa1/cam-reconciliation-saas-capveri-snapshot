@@ -1,0 +1,12 @@
+{
+  "error_type": "encoding",
+  "description": "CSV file with mixed encodings (corrupted)",
+  "parseable": "partial",
+  "expected_behavior": "Parser should handle encoding errors gracefully using errors='ignore' or 'replace'",
+  "expected_warnings": [
+    "Encoding errors encountered, some characters may be corrupted"
+  ],
+  "expected_rows": 2,
+  "valid_rows": "1-2",
+  "invalid_rows": "0-1"
+}

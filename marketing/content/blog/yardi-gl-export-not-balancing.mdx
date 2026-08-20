@@ -1,0 +1,172 @@
+---
+title: "Yardi GL Export Not Balancing: 5 Root Causes and the Fastest Fix for Each"
+description: "Why a Yardi GL export fails to tie to financials, how to isolate the gap fast, and which setup changes usually fix the problem."
+excerpt: "If a Yardi GL export does not tie to the financials, the cause is usually in date logic, account scope, basis selection, intercompany structure, or stale close adjustments."
+datePublished: "2026-03-19"
+dateModified: "2026-04-17"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "Why does my Yardi GL export not match my financial statements?"
+    a: "Most gaps come from one of five causes: wrong date logic, missing account ranges, basis mismatch, intercompany treatment, or closed-period adjustments that never made it into the export."
+  - q: "What should I check first when the Yardi export does not balance?"
+    a: "Check the date basis first, then account scope, then whether the export was pulled before final close. Those three explain most balancing failures faster than reviewing formulas line by line."
+---
+
+<Alert type="info" title="Quick Answer">
+If your Yardi GL export does not tie to the financial statements, do not start with CAM math. Start with **date basis**, **account scope**, and **final-close timing**. Those three checks usually explain the gap faster than any reconciliation formula review.
+</Alert>
+
+When a Yardi export fails to balance, teams often jump straight into tenant-level analysis. That is backward. The problem is usually upstream in the export configuration or close process.
+
+## The Fast Triage Sequence
+
+Use this order:
+
+1. compare the export period to the statement period;
+2. compare the included account set to the chart of accounts;
+3. confirm whether the export was pulled before final close;
+4. only then review recovery-pool or tenant-level logic.
+
+That order saves hours.
+
+## Cause 1: The Date Basis Is Wrong
+
+Yardi can be filtered in ways that look similar and behave very differently.
+
+**Typical failure mode**
+
+- The statements reflect the reconciliation year.
+- The export uses a posting-date logic that excludes late-posted accruals.
+- The totals are close, but not close enough.
+
+**Fastest fix**
+
+- confirm which date basis the finance team uses for the final statements;
+- rerun the export to match that basis;
+- compare the rerun totals before touching anything else.
+
+If the gap collapses after the rerun, stop there. You found the root cause.
+
+## Cause 2: The Account Scope Is Incomplete
+
+A saved Yardi export filter can quietly drop new or reclassified operating accounts.
+
+**Typical failure mode**
+
+- new expense accounts were added during the year;
+- the saved account-range filter was never updated;
+- the export excludes valid operating costs.
+
+**Fastest fix**
+
+1. pull the chart of accounts for the same entity;
+2. identify accounts with period activity;
+3. compare them to the export account set;
+4. rerun the export with complete operating-account coverage.
+
+This is one of the highest-frequency causes of "the reconciliation math is wrong" when the real problem is incomplete GL input.
+
+## Cause 3: The Export Basis Does Not Match the Financials
+
+Even when dates are right, the basis can still be wrong.
+
+**Typical failure mode**
+
+- the export is prepared on a different accounting basis than the statements;
+- year-end payables or accruals create a gap that looks like a reconciliation error;
+- the team starts investigating tenant-level variance for what is really an accounting-basis mismatch.
+
+**Fastest fix**
+
+- confirm the basis used in the statements;
+- rerun the export to match;
+- compare only after both files are aligned on the same basis.
+
+## Cause 4: Intercompany Structure Is Being Compared Incorrectly
+
+This is common in portfolios with management entities or shared-service structures.
+
+**Typical failure mode**
+
+- the export is entity-level;
+- the financial statements are consolidated or elimination-adjusted;
+- the gap is structural, not erroneous.
+
+**Fastest fix**
+
+- determine whether you are reconciling to entity-level or consolidated financials;
+- document intercompany eliminations explicitly;
+- use the entity-level operating view for CAM validation unless your accounting design says otherwise.
+
+If the statements and export are not built on the same structural basis, they will not tie cleanly.
+
+## Cause 5: The Export Was Pulled Before Final Close
+
+This is the easiest mistake to make during year-end pressure.
+
+**Typical failure mode**
+
+- the export was pulled before final journal entries or late close adjustments posted;
+- the statements were refreshed later;
+- the export is now stale even though the file itself is technically valid.
+
+**Fastest fix**
+
+- check the export timestamp against final-close timing;
+- check whether period adjustments were posted after the file was pulled;
+- rerun the export after close completion.
+
+Do not debug a stale export like it is a live data issue.
+
+## What This Looks Like in Practice
+
+If the gap is large and abrupt:
+
+- suspect account scope or wrong entity first.
+
+If the gap is small but persistent:
+
+- suspect date basis or late close adjustments first.
+
+If the gap only appears at the consolidated level:
+
+- suspect intercompany or elimination treatment first.
+
+That pattern recognition is faster than line-by-line inspection.
+
+## The Minimum QA Standard Before Reconciliation
+
+Before the GL export is used for CAM work, confirm:
+
+- period and statement timing match;
+- accounting basis matches;
+- operating account coverage is complete;
+- close is final or clearly marked preliminary;
+- the entity structure matches the statement basis you are comparing against.
+
+If those checks are not done, do not trust downstream recovery math.
+
+## The Next Place to Look After the GL Ties
+
+Once the GL export balances, then move to:
+
+- [the Yardi setup guide](/resources/software/yardi-voyager/cam-setup);
+- [the export workflow](/resources/export-cam-yardi-voyager);
+- [gross-up logic](/resources/cam-gross-up-calculation-guide);
+- [pro-rata share logic](/resources/pro-rata-share-calculation).
+
+That sequence keeps troubleshooting grounded in the source data.
+
+## Related Resources
+
+- [How to Export CAM Reconciliation Data from Yardi Voyager](/resources/export-cam-yardi-voyager)
+- [CAM Export Guide](/resources/export-guide)
+- [CAM Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide)
+- [Pro Rata Share Calculation Guide](/resources/pro-rata-share-calculation)
+
+## Sources
+
+1. [Yardi - Voyager Commercial property management](https://www.yardi.com/products/yardi-voyager-commercial/)
+2. [CapVeri Sources & Research - Yardi interface program pricing](/sources#yardi-interface-program-pricing)

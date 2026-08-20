@@ -1,0 +1,115 @@
+---
+title: "The Spreadsheet Is Dying in CAM Reconciliation"
+description: "Excel still runs much of CAM reconciliation, even at firms with Yardi or MRI. The risks are catching up: formula errors, version problems, and audit exposure that purpose-built software removes."
+excerpt: "Excel doesn't have a bug. It has a design philosophy: trust the user. In CAM reconciliation, that means trusting the user to never mistype a cell reference, never forget to update a formula, and never accidentally delete a row. That trust is expensive."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "technology"
+faq:
+  - q: "Why do property controllers still use Excel for CAM reconciliation?"
+    a: "Many property controllers still use Excel for some or all of their CAM reconciliation, even when their organization has a property management system like Yardi or MRI. Common reasons include: the system doesn't handle their specific lease structures, they need more flexibility for custom calculations, or they inherited a workbook from someone who left."
+  - q: "What is the biggest risk of using Excel for CAM reconciliation?"
+    a: "Formula errors that compound silently. Unlike a purpose-built system that validates calculations against defined rules, Excel executes whatever formula is in the cell, right or wrong. A mistyped cell reference, an accidentally overwritten formula, or a SUM range that doesn't include all rows will produce wrong numbers without any warning. These errors often persist for years before detection."
+---
+
+## The Current State
+
+Walk into any property management company and ask the controllers how they do CAM reconciliation. You'll hear some version of this:
+
+"We export from Yardi, pull it into our spreadsheet, make adjustments, and calculate the tenant charges."
+
+The spreadsheet is the constant. Even organizations that have invested heavily in Yardi Voyager or MRI Software often use Excel as the actual calculation engine. The PMS provides the data. Excel does the math.
+
+This workflow has worked for 25 years. The question is whether the risks have finally outgrown the convenience.
+
+## Why Spreadsheets Persist
+
+Understanding why Excel won't die is more useful than arguing it should.
+
+**Flexibility.** Every lease is different. Gross-up thresholds vary. Cap structures vary. Exclusion lists vary. Pro-rata share definitions vary. A spreadsheet lets the controller build exactly the calculation each lease requires, without waiting for a software vendor to add a feature.
+
+**Familiarity.** Every property accountant knows Excel. Training time is zero. The learning curve for a PMS recovery module is 20-40 hours. For a new CAM-specific tool, 10-20 hours. For Excel, it's already done.
+
+**Cost.** Excel is effectively free (bundled with Office). Additional CAM software costs $200-$500 per property per year. For a 10-property portfolio, that's $2,000-$5,000 annually.
+
+**Inheritance.** The workbook was built by a controller who left three years ago. It works. Nobody wants to rebuild it in a new system. So it gets passed forward, updated annually, and trusted.
+
+These are rational reasons. The problem isn't that people are wrong to use Excel. The risk profile has changed.
+
+## What Changed
+
+**Tenant audit firms got better.** Five years ago, tenant auditors reviewed the statement totals. Now they request the workbook and check the formulas. They know the common Excel errors (broken SUM ranges, hardcoded overrides, stale references) and they look for them specifically.
+
+**Portfolio sizes grew.** A controller managing 5 properties can maintain 5 spreadsheets. A controller managing 25 properties has 25 spreadsheets, each slightly different, each with its own formula structure, each updated once a year. The probability of an error in at least one workbook approaches certainty.
+
+**Expenses grew.** The dollar value of CAM pass-throughs has increased. A formula error that produced a $5,000 variance in 2015 produces a $12,000 variance in 2026 because the expense pool is larger. The same percentage error creates a bigger dollar finding.
+
+**ASC 842 raised documentation standards.** Tenant CFOs and their external auditors now scrutinize CAM charges as part of their lease accounting process. "Trust my spreadsheet" is not sufficient documentation for an external audit.
+
+## The Specific Risks
+
+### Risk 1: Silent Formula Errors
+
+The most expensive spreadsheet errors are the ones that don't produce obvious symptoms. A SUM formula that misses one row. A VLOOKUP that returns the wrong tenant's SF because of an unsorted table. A gross-up formula that references last year's occupancy instead of this year's.
+
+These errors produce numbers that look reasonable. Nobody questions them until an auditor checks the formula itself. By then, the error has been compounding for years.
+
+### Risk 2: Version Control
+
+"CAM Reconciliation 2025 v3 FINAL (2).xlsx"
+
+Multiple versions of the workbook exist. Changes made in one version don't propagate to others. The controller works in one file while the assistant controller works in another. At some point, someone saves over someone else's changes.
+
+There is no audit trail. You can't see who changed what, when. If an auditor asks "why did the insurance amount change between the draft and final statement," the answer is "someone edited the cell" - but you can't prove who, when, or why.
+
+### Risk 3: Key-Person Dependency
+
+The spreadsheet works because the person who built it understands its structure. When that person leaves, the next controller inherits a workbook with:
+
+- No documentation
+- Custom formulas that reference non-obvious cells
+- Hardcoded values that override calculations for specific tenants (but aren't labeled)
+- Hidden rows or columns containing intermediate calculations
+- Circular references that Excel resolves through iteration settings
+
+Understanding this workbook takes weeks. Validating it takes longer. Most controllers just trust it and update the numbers.
+
+### Risk 4: No Validation Layer
+
+Excel doesn't know anything about CAM reconciliation. It doesn't know that property taxes shouldn't be grossed up. It doesn't know that a 5% cap means the year-over-year increase should be capped. It doesn't know that the denominator should match the lease definition.
+
+A purpose-built system validates calculations against rules. Excel executes whatever formula is in the cell. The controller is the validation layer, and humans miss things, especially at scale.
+
+## The Transition
+
+Moving off Excel doesn't have to be all-or-nothing. Most organizations follow a phased approach:
+
+**Phase 1: Validation layer.** Keep using Excel for calculations but add a validation step. Export the Excel results and run them through a validation tool (like CapVeri) that checks for common errors. This catches problems without requiring a full process change.
+
+**Phase 2: Parallel run.** Calculate reconciliation in both Excel and the new system for one cycle. Compare results. Identify and resolve discrepancies. Build confidence in the new system's output.
+
+**Phase 3: System of record.** The new system becomes the primary calculation engine. Excel becomes the export/analysis layer, used for ad hoc analysis, not for production calculations.
+
+This transition takes 1-2 reconciliation cycles (12-24 months) for most organizations. The first cycle is the hardest because you're running parallel processes. The second cycle is easier because you trust the new system's output.
+
+## The Math on Risk vs. Cost
+
+A purpose-built CAM tool costs $200-$500 per property per year. A single audit finding from a spreadsheet error costs $20,000-$100,000+ in refunds, legal costs, and lost credibility.
+
+The expected value calculation is straightforward: if you have a 10% annual probability of a material spreadsheet error (conservative for a multi-property portfolio), and the average cost of that error is $50,000, the expected annual loss is $5,000 per property. The tool costs less than the expected loss.
+
+The spreadsheet isn't dying because it's bad. It's dying because the cost of its failure modes now exceeds the cost of the alternatives. CAM reconciliation is consistently identified as the [highest-ROI process to automate](/blog/cam-highest-roi-process-to-automate) in property management for exactly this reason: the error cost is high, the fix is tractable, and the savings land directly on the NOI line.
+
+## Related Resources
+
+- [CAM Build vs. Buy](/resources/cam-build-vs-buy): Spreadsheet automation vs purpose-built software
+- [Data Migration Off Excel](/resources/data-migration-off-excel): Moving historical data from spreadsheets
+- [CAM Software Evaluation Checklist](/resources/cam-software-evaluation-checklist): 25-point RFP for property controllers
+- [The $247,000 Spreadsheet Error](/blog/cost-single-cam-error-case-study): Case study
+
+## Sources
+
+1. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

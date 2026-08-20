@@ -1,0 +1,192 @@
+{
+  "model": "reconcile_unit_bands",
+  "lastUpdated": "2026-06-06",
+  "trialDays": 30,
+  "trialReminderDays": 3,
+  "promos": [
+    {
+      "id": "launch-80off",
+      "code": "80OFF",
+      "type": "percent_off_first_year",
+      "label": "80% off the first year",
+      "discountPercent": 80,
+      "checkoutParam": "offer",
+      "maxRedemptions": 300,
+      "startsAt": null,
+      "endsAt": "2026-07-04T07:00:00Z",
+      "endsAtDisplay": "Friday, July 3",
+      "stripeCouponEnv": "STRIPE_80OFF_COUPON_ID",
+      "terms": "80% off the first year, applied once to your first annual subscription invoice.",
+      "perks": [],
+      "appliesToPlans": ["reconcile"],
+      "enabled": true
+    }
+  ],
+  "enterpriseThreshold": {
+    "minUnits": null,
+    "buildingCount": null,
+    "label": "Annual Reconcile pricing continues for every rentable unit count",
+    "summary": "Reconcile pricing is annual and scales by rentable unit count."
+  },
+  "tiers": [
+    {
+      "id": "reconcile",
+      "name": "Reconcile",
+      "baseAnnual": 4990,
+      "includedUnits": 25,
+      "pricePerUnitAnnual": null,
+      "unitPricingBands": [
+        { "minUnits": 26, "maxUnits": 150, "pricePerUnitAnnual": 179 },
+        { "minUnits": 151, "maxUnits": 500, "pricePerUnitAnnual": 169 },
+        { "minUnits": 501, "maxUnits": 2500, "pricePerUnitAnnual": 159 },
+        { "minUnits": 2501, "maxUnits": null, "pricePerUnitAnnual": 149 }
+      ],
+      "minUnits": 1,
+      "maxUnits": null,
+      "description": "For commercial landlords who want lease-accurate CAM reconciliation without spreadsheet drift.",
+      "tagline": "Run lease-accurate CAM reconciliation without spreadsheet drift.",
+      "audience": {
+        "who": "Commercial landlords and property managers",
+        "portfolio": "Starts at $4,990/year for up to 25 rentable units",
+        "primaryJobs": [
+          "Stop reconciling CAM in Excel",
+          "Price the subscription by rentable unit count",
+          "Produce tenant-ready exception summaries"
+        ]
+      },
+      "comparisonLabel": "Annual Reconcile subscription",
+      "includedInTrial": true,
+      "primaryCtaId": "startTrial"
+    }
+  ],
+  "features": [
+    {
+      "key": "glImportAndParsing",
+      "label": "GL import and parsing",
+      "tier": "reconcile"
+    },
+    {
+      "key": "camReconciliation",
+      "label": "CAM reconciliation",
+      "tier": "reconcile"
+    },
+    {
+      "key": "leakageDetection",
+      "label": "Exception summary",
+      "tier": "reconcile"
+    },
+    {
+      "key": "expensePools",
+      "label": "Expense pool management",
+      "tier": "reconcile"
+    },
+    {
+      "key": "leaseManagement",
+      "label": "Lease management and versioning",
+      "tier": "reconcile"
+    },
+    {
+      "key": "rentRollUpload",
+      "label": "Rent roll upload",
+      "tier": "reconcile"
+    },
+    {
+      "key": "basicReporting",
+      "label": "Reconciliation summaries",
+      "tier": "reconcile"
+    },
+    { "key": "csvExports", "label": "CSV exports", "tier": "reconcile" },
+    {
+      "key": "unlimitedTeamMembers",
+      "label": "Unlimited team members",
+      "tier": "reconcile"
+    },
+    {
+      "key": "portfolioDashboard",
+      "label": "Portfolio dashboard",
+      "tier": "reconcile"
+    },
+    {
+      "key": "capBankTracking",
+      "label": "Cumulative cap bank tracking",
+      "tier": "reconcile"
+    },
+    {
+      "key": "trendAnalysis",
+      "label": "Year-over-year trend analysis",
+      "tier": "reconcile"
+    },
+    {
+      "key": "anomalyAlerts",
+      "label": "Anomaly detection alerts",
+      "tier": "reconcile"
+    },
+    {
+      "key": "pdfExports",
+      "label": "PDF reconciliation reports",
+      "tier": "reconcile"
+    },
+    { "key": "excelExports", "label": "Excel exports", "tier": "reconcile" },
+    {
+      "key": "noiImpactCalculator",
+      "label": "NOI impact calculator",
+      "tier": "reconcile"
+    },
+    {
+      "key": "taxProtest",
+      "label": "HCAD tax protest normalization",
+      "tier": "reconcile"
+    },
+    {
+      "key": "aiLeaseExtraction",
+      "label": "AI lease extraction with human review",
+      "tier": "reconcile"
+    },
+    {
+      "key": "aiGlNarrativeAnalysis",
+      "label": "AI GL analysis + CapEx screening",
+      "tier": "reconcile"
+    },
+    {
+      "key": "tenantPortal",
+      "label": "Tenant self-serve portal",
+      "tier": "reconcile"
+    },
+    {
+      "key": "disputeSystem",
+      "label": "Dispute management with audit trail",
+      "tier": "reconcile"
+    },
+    {
+      "key": "sb1103ComplianceExport",
+      "label": "California SB 1103 compliance export",
+      "tier": "reconcile"
+    },
+    {
+      "key": "demandLetters",
+      "label": "Tenant response templates",
+      "tier": "reconcile"
+    },
+    {
+      "key": "auditDefensePackage",
+      "label": "Audit defense package",
+      "tier": "reconcile"
+    },
+    {
+      "key": "prioritySupport",
+      "label": "Priority support",
+      "tier": "reconcile"
+    },
+    { "key": "supportAccess", "label": "Support access", "tier": "reconcile" },
+    {
+      "key": "publishedUnitPricing",
+      "label": "Published pricing for every unit count",
+      "tier": "reconcile"
+    },
+    {
+      "key": "onboardingSupport",
+      "label": "Onboarding support",
+      "tier": "reconcile"
+    }
+  ]
+}

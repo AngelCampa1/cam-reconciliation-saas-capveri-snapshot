@@ -1,0 +1,148 @@
+---
+title: "Yardi CAM Recovery Pool Setup: 6 Fields That Cause 90% of Errors"
+description: "Step-by-step Yardi Voyager recovery pool configuration guide. Fix the 6 fields behind most CAM calculation errors: occupancy type, GL mapping, gross-up, and more."
+excerpt: "Recovery pool setup in Yardi Voyager is where CAM calculations begin. Most errors start here. Six configuration fields drive 90% of the calculation, and each one has a default that might not match your lease."
+datePublished: "2026-03-17"
+dateModified: "2026-03-22"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "What is a recovery pool in Yardi Voyager?"
+    a: "A recovery pool in Yardi Voyager is a configuration object that defines how operating expenses are allocated to tenants for CAM billing. It specifies which GL accounts are included, how expenses are allocated (pro-rata, fixed amount, etc.), whether gross-up applies, and what occupancy threshold triggers the gross-up calculation. Each property can have multiple recovery pools for different expense categories."
+  - q: "What is the most common Yardi CAM configuration error?"
+    a: "The most common error is setting the Occupancy Type to 'Physical' (point-in-time snapshot) instead of 'Economic' (weighted average). This means Yardi uses a single date's occupancy figure for the entire year's gross-up calculation, which can significantly overstate or understate the adjustment depending on when tenants moved in or out."
+  - q: "Which Yardi recovery pool fields should controllers check before year-end reconciliation?"
+    a: "Check expense pool GL account mapping, occupancy type, gross-up threshold, variable versus fixed expense classification, pro-rata share basis, and cap or exclusion settings. These fields determine whether expenses flow into the right pool, whether gross-up applies correctly, and whether each tenant's lease terms are enforced."
+---
+
+## Where the Errors Start
+
+Yardi Voyager handles CAM reconciliation through its Recovery Billing module. The configuration is powerful but dense. Dozens of fields span multiple screens. Most property controllers inherit their Yardi setup from a predecessor and modify it incrementally.
+
+Six specific fields control the core calculation, and each one has a default value that may not match your lease terms. If any of these fields are wrong, every tenant statement from that recovery pool is wrong.
+
+## Field 1: Expense Pool - GL Account Selection
+
+**Where:** Recovery Pool Setup > Expense Pool tab > GL Account Mapping
+
+**What it does:** Defines which GL accounts are included in the recoverable expense pool. Only expenses posted to mapped accounts flow into the CAM calculation.
+
+**The common error:** New GL accounts added during the year (new vendor category, reclassified expense) aren't added to the recovery pool. The expense exists in the GL but never reaches the tenant statement.
+
+**How to check:** At year-end, export total operating expenses from the GL and compare to the total expense amount in the recovery pool. If they differ, there are unmapped accounts. Run the Yardi GL Account Mapping Report to identify which accounts are missing.
+
+**The fix:** Review GL account mapping quarterly, not just at year-end. Any time a new GL account is created, ask: "Should this flow through to CAM?" If yes, map it to the appropriate recovery pool immediately.
+
+## Field 2: Occupancy Type
+
+**Where:** Recovery Pool Setup > Calculation tab > Occupancy Type dropdown
+
+**Options:** Physical, Economic, Manual Override
+
+**What it does:** Determines how Yardi calculates occupancy for gross-up purposes.
+
+- **Physical:** Uses occupancy from a single date (typically month-end or period-end). A snapshot.
+- **Economic:** Calculates weighted average occupancy across the entire period, accounting for move-in and move-out dates.
+- **Manual Override:** Lets you enter a specific occupancy percentage.
+
+**The common error:** Using "Physical" when the building had significant occupancy changes during the year. A building that was 85% occupied for 10 months and 70% occupied for 2 months (lost a tenant in November) shows 70% physical occupancy at December 31. The weighted average for the year is ~82.5%.
+
+Using the December snapshot inflates the gross-up by applying a larger multiplier than the full year's occupancy justifies.
+
+**How to check:** Pull the Occupancy History report for the year. If occupancy varied by more than 5 points during the year, "Economic" is the correct setting.
+
+## Field 3: Gross-Up Threshold
+
+**Where:** Recovery Pool Setup > Calculation tab > Gross-Up Threshold (%)
+
+**What it does:** Sets the occupancy percentage at which variable expenses are capped. Standard is 95%, but leases vary.
+
+**The common error:** Setting a single threshold for the entire recovery pool when different tenants have different thresholds in their leases. Tenant A's lease says 95%. Tenant B's lease says 90%. Tenant C's lease doesn't mention gross-up at all (meaning no gross-up applies to that tenant).
+
+**How to check:** Pull every lease in the building. Compare the gross-up threshold to the recovery pool setting. If thresholds vary, you need tenant-level overrides or separate recovery pools.
+
+**The fix:** In Yardi Voyager, you can set tenant-level exceptions to the pool-level threshold. Navigate to the tenant's recovery billing record and override the threshold. For tenants with no gross-up clause, set the threshold to 0% or exclude them from gross-up entirely.
+
+## Field 4: Expense Classification (Variable vs. Fixed)
+
+**Where:** Recovery Pool Setup > Expense Pool tab > each GL account row > Variable/Fixed flag
+
+**What it does:** Determines whether each expense category is subject to gross-up. Only variable expenses get grossed up. Fixed expenses pass through at actuals.
+
+**The common error:** All expenses defaulted to "Variable" because no one reviewed the classification line by line. Property taxes (fixed), insurance premiums (fixed), and other non-occupancy-dependent costs get grossed up, overcharging tenants.
+
+**How to check:** Export the recovery pool GL account list with the variable/fixed flag. Review each line:
+
+| Category | Should Be |
+|---|---|
+| Janitorial | Variable |
+| Utilities (common area) | Variable |
+| Management fees (% of revenue) | Variable |
+| Security (staffed) | Partial (split variable/fixed) |
+| Property taxes | Fixed |
+| Insurance | Fixed |
+| Landscaping | Fixed (doesn't vary with occupancy) |
+| Elevator maintenance | Fixed (contract-based) |
+
+Any fixed expense flagged as variable produces overcharges when the building has vacancy.
+
+## Field 5: Pro-Rata Share Basis
+
+**Where:** Tenant Recovery Billing > Pro-Rata Share tab > Denominator field
+
+**What it does:** Sets the denominator for each tenant's pro-rata share calculation (tenant SF / denominator = share %).
+
+**The common error:** The denominator doesn't match the lease definition. Some leases define pro-rata share based on total building RSF. Others use leaseable area. Others use occupied area. Using the wrong denominator changes every tenant's share percentage.
+
+**How to check:** For each tenant, compare the pro-rata share in Yardi to the share calculated from the lease definition. If the lease says "10,000 SF / 200,000 SF total building RSF = 5.00%" and Yardi shows 5.26% (because it's using 190,000 SF occupied as the denominator), the field is wrong.
+
+## Field 6: Cap Configuration
+
+**Where:** Tenant Recovery Billing > Cap tab > Cap Type, Cap Amount, Base Year
+
+**What it does:** Applies expense caps defined in the lease. Options include cumulative, non-cumulative, compound, and none.
+
+**The common error:** Non-cumulative cap applied when the lease specifies cumulative (or vice versa). The two produce very different results over multi-year periods. A 5% non-cumulative cap limits each year's increase independently. A 5% cumulative cap limits the total increase from the base year.
+
+After three years of 4% actual increases:
+- Non-cumulative cap: each year passes through at 4% (below 5% annual limit)
+- Cumulative cap: Year 3's maximum is base × 1.157 (5% compounded). Actual is base × 1.125 (4% compounded). Both pass the cap.
+
+But after three years of increases at 3%, 2%, and 8%:
+- Non-cumulative cap: Years 1-2 pass, Year 3 capped at 5%
+- Cumulative cap: Total increase from base is 13.5%. Cap allows 15.76%. Year 3 passes in full.
+
+**How to check:** Pull the cap configuration for each tenant. Compare cap type, cap percentage, and base year amount to the lease. Run a manual cap calculation for 2-3 tenants and compare to Yardi's output.
+
+## The Validation Workflow
+
+After reviewing these six fields, validate the output:
+
+1. Pick 3 tenants (largest, smallest, most complex lease)
+2. Calculate their CAM charge manually using lease terms and GL data
+3. Compare to Yardi's calculated amount
+4. If they match within 1%, the configuration is likely correct
+5. If they diverge, trace the difference to one of the six fields above
+
+CapVeri automates this validation. Upload your Yardi export and your lease terms, and CapVeri checks every calculation against every lease, not just a sample of three.
+
+<CTABox
+  title="Check your Yardi CAM against every lease"
+  description="Upload your Yardi export and lease terms. CapVeri checks your CAM math against every lease. It flags the errors before tenants see them."
+  utmContent="yardi_recovery_pool_cta"
+  buttonText="Start free trial"
+/>
+
+## Related Resources
+
+- [CAM Reconciliation Guide](/cam-reconciliation-guide): Complete step-by-step reconciliation process
+- [Yardi CAM Configuration Errors](/resources/yardi-cam-configuration-errors): Full list of configuration pitfalls
+- [Export CAM from Yardi Voyager](/resources/export-cam-yardi-voyager): Step-by-step export guide
+- [Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide): Validate Yardi's gross-up output
+- [Self-Audit CAM Billing](/resources/self-audit-cam-billing): Systematic validation checklist
+
+## Sources
+
+1. [Yardi - Voyager Commercial property management](https://www.yardi.com/products/yardi-voyager-commercial/)
+2. [CapVeri Sources & Research - Yardi interface program pricing](/sources#yardi-interface-program-pricing)

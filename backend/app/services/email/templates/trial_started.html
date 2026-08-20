@@ -1,0 +1,26 @@
+{% extends "_base.html" %}
+{% from "_components.html" import button, video_card with context %}
+{% block content %}
+<h2 style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 22px; margin: 0 0 {{ t.SPACE_MD }};">
+  Your CapVeri trial is live
+</h2>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  Hi {{ organization_name }},
+</p>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  Your {{ trial_days }}-day free trial started on <strong>{{ trial_start_formatted }}</strong>.
+</p>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  No credit card is required to start. Add billing before <strong>{{ charge_date_formatted }}</strong> to keep access after the trial. If no payment method is on file when the trial ends, your workspace will pause until billing is added.
+</p>
+<ul style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_LG }}; padding-left: {{ t.SPACE_XL }};">
+  <li style="margin-bottom: {{ t.SPACE_SM }};">Full self-serve access is unlocked during the trial.</li>
+  <li style="margin-bottom: {{ t.SPACE_SM }};">Your plan will be <strong>{{ charge_amount_formatted }}</strong> once billing is added after the trial.</li>
+  <li style="margin-bottom: {{ t.SPACE_SM }};">We will email you again {{ trial_reminder_days }} days before the trial ends.</li>
+  <li style="margin-bottom: {{ t.SPACE_SM }};">You can add billing or cancel any time from billing settings.</li>
+</ul>
+{{ button(billing_url, "Manage Billing") }}
+{% if video_trial_started %}
+{{ video_card(video_trial_started.thumbnail_url, video_trial_started.watch_url, video_trial_started.title, video_trial_started.description) }}
+{% endif %}
+{% endblock %}

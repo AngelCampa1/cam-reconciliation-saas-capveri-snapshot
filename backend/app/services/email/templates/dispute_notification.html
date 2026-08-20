@@ -1,0 +1,17 @@
+{% extends "_base.html" %}
+{% from "_components.html" import button with context %}
+{% block content %}
+<h2 style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 22px; margin: 0 0 {{ t.SPACE_MD }};">
+  New Tenant Dispute Submitted
+</h2>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  Hello {{ admin_name }},
+</p>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  A new dispute has been submitted by <strong>{{ tenant_name }}</strong>:
+</p>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_LG }};">
+  <strong>Category:</strong> {{ category }}
+</p>
+{{ button(portal_url, "Review Dispute") }}
+{% endblock %}

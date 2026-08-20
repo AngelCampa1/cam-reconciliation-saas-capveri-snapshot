@@ -1,0 +1,78 @@
+{
+  "lastUpdated": "2026-06-09",
+  "channelUrl": "https://www.youtube.com/@capveri",
+  "videos": [
+    {
+      "slug": "forty-percent-material-error",
+      "youtubeId": "4015LE26Wsc",
+      "title": "40% of CAM Reconciliations Have a Material Error. Find Yours.",
+      "shortLabel": "Most CAM bills hide an error",
+      "description": "Many CAM bills have a costly mistake. See where yours could be wrong.",
+      "stage": "awareness",
+      "durationSeconds": 220,
+      "uploadDate": "2026-06-02",
+      "thumbnailUrl": "https://i.ytimg.com/vi/4015LE26Wsc/hqdefault.jpg",
+      "placements": ["home", "cam-reconciliation-software", "audit-results-email", "videos-library"]
+    },
+    {
+      "slug": "cam-reconciliation-validate",
+      "youtubeId": "odNNkE1SfLs",
+      "title": "CAM Reconciliation: Catch the Error Before Your Tenant Does",
+      "shortLabel": "Catch CAM errors first",
+      "description": "Check your CAM bill before you send it. Find the mistake before your tenant does.",
+      "stage": "awareness",
+      "durationSeconds": 245,
+      "uploadDate": "2026-06-02",
+      "thumbnailUrl": "https://i.ytimg.com/vi/odNNkE1SfLs/hqdefault.jpg",
+      "placements": ["cam-reconciliation-guide", "app-reconciliations-empty", "videos-library"]
+    },
+    {
+      "slug": "common-area-maintenance-recoverable",
+      "youtubeId": "koc5gDxYGw0",
+      "title": "Common Area Maintenance: What's Recoverable and What Isn't",
+      "shortLabel": "What CAM costs you can bill",
+      "description": "Learn which shared costs tenants pay for. Learn which ones you cannot bill.",
+      "stage": "educational",
+      "durationSeconds": 225,
+      "uploadDate": "2026-06-02",
+      "thumbnailUrl": "https://i.ytimg.com/vi/koc5gDxYGw0/hqdefault.jpg",
+      "placements": ["cam-reconciliation-guide", "trial-started-email", "content-download-email", "app-help", "videos-library"]
+    },
+    {
+      "slug": "software-vs-spreadsheets",
+      "youtubeId": "PhquEnLt0A0",
+      "title": "CAM Reconciliation Software vs Spreadsheets: When to Switch",
+      "shortLabel": "Spreadsheets or software?",
+      "description": "See when a spreadsheet is no longer enough for CAM.",
+      "stage": "consideration",
+      "durationSeconds": 243,
+      "uploadDate": "2026-06-02",
+      "thumbnailUrl": "https://i.ytimg.com/vi/PhquEnLt0A0/hqdefault.jpg",
+      "placements": ["vs-spreadsheets", "team-welcome-email", "videos-library"]
+    },
+    {
+      "slug": "no-api-no-it-project",
+      "youtubeId": "afWoFSIGWk4",
+      "title": "CAM Reconciliation Software With No API: Skip the $25K IT Project",
+      "shortLabel": "No IT project needed",
+      "description": "Skip the costly setup. Check your CAM from a file you already export.",
+      "stage": "objection",
+      "durationSeconds": 213,
+      "uploadDate": "2026-06-02",
+      "thumbnailUrl": "https://i.ytimg.com/vi/afWoFSIGWk4/hqdefault.jpg",
+      "placements": ["integrations", "videos-library"]
+    },
+    {
+      "slug": "walkthrough-yardi-csv",
+      "youtubeId": "kCMogQ3ZJck",
+      "title": "CAM Reconciliation Demo: Upload a Yardi CSV and Catch the Errors",
+      "shortLabel": "Watch a quick demo",
+      "description": "Watch us upload a Yardi file and find CAM errors fast.",
+      "stage": "demo",
+      "durationSeconds": 212,
+      "uploadDate": "2026-06-02",
+      "thumbnailUrl": "https://i.ytimg.com/vi/kCMogQ3ZJck/hqdefault.jpg",
+      "placements": ["home", "product-tour", "sample-report", "app-first-import", "app-onboarding-welcome", "welcome-email", "videos-library"]
+    }
+  ]
+}

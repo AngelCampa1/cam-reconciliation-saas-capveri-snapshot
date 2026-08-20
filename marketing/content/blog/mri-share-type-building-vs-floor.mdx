@@ -1,0 +1,133 @@
+---
+title: "MRI Share Type: Building-Level vs Floor-Level Allocation Explained"
+description: "MRI Software's Share Type field determines whether tenants pay on building-level or floor-level pro-rata share. Wrong configuration causes systematic over- and under-billing. Here is when to use each."
+excerpt: "The Share Type field in MRI is one of the most consequential configuration choices in CAM setup. It is also one of the most frequently misconfigured."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "What is Share Type in MRI Software?"
+    a: "Share Type in MRI controls the denominator used in a tenant's pro-rata share calculation. Building-level Share Type uses total building rentable square footage as the denominator, so each tenant's share reflects their portion of the entire building. Floor-level Share Type uses only the rentable square footage of the specific floor the tenant occupies, making their share a portion of floor expenses rather than building-wide expenses. The correct choice depends on how expenses are structured in the lease and whether the building has separate floor-by-floor expense pools."
+  - q: "What happens if MRI Share Type is set incorrectly?"
+    a: "If a tenant who should be on building-level share is set to floor-level, their pro-rata percentage is calculated against a smaller denominator (floor SF vs. building SF), resulting in a higher pro-rata percentage and higher charges than the lease requires. The reverse is also true: a tenant on a floor with higher expense intensity who is incorrectly billed on building-level share may be undercharged. These errors compound annually and can lead to significant overbilling claims if discovered during a tenant audit."
+  - q: "How do I know which Share Type a tenant's lease requires?"
+    a: "Look for the CAM expense allocation section in the lease. Language like 'Tenant's pro-rata share of Building Operating Expenses' indicates building-level. Language like 'Tenant's pro-rata share of the costs attributable to the floor on which the Premises are located' indicates floor-level. If the lease defines the denominator as 'total rentable area of the Building,' use building-level. If it defines the denominator as 'total rentable area of the floor,' use floor-level."
+---
+
+The Share Type field in MRI Software may be the single most consequential configuration choice in CAM setup. It is frequently set incorrectly at initial property entry and never revisited. When it's wrong, every tenant on that lease pays the wrong amount, year after year, until a lease audit surfaces the error.
+
+## What Share Type Controls
+
+In MRI, Share Type defines the denominator of a tenant's pro-rata share fraction:
+
+**Pro-rata share = Tenant RSF / Share Type Denominator**
+
+The numerator (tenant's rentable square footage) is almost always correct. The denominator is where errors occur. MRI offers two primary Share Type configurations:
+
+- **Building:** Denominator = total rentable square footage of the building
+- **Floor:** Denominator = total rentable square footage of the specific floor
+
+This single setting changes the denominator in every CAM calculation for that tenant. For large tenants, the financial impact can be significant.
+
+## Building-Level Share: When to Use It
+
+Building-level Share Type is the standard configuration for most commercial leases. Use it when:
+
+- The lease defines CAM expenses as building-wide expenses shared by all tenants
+- The lease denominator is "total rentable area of the Building"
+- Expenses (HVAC, janitorial, landscaping, common area utilities) benefit all tenants regardless of floor
+- The building has a single common area maintenance pool covering all floors
+
+**Math example (Building-Level):**
+
+Building: 120,000 RSF total
+Floor 3: 30,000 RSF
+Tenant A on Floor 3: 15,000 RSF
+
+- Building-level pro-rata: 15,000 / 120,000 = 12.5%
+- If total CAM pool is $600,000, Tenant A pays: $75,000
+
+This is correct when the lease says Tenant A is responsible for 12.5% of building operating expenses.
+
+## Floor-Level Share: When to Use It
+
+Floor-level Share Type applies when expenses are structured differently by floor, typically in multi-tenant office buildings where each floor has its own HVAC system, janitorial service, and some dedicated common areas. Use it when:
+
+- The lease explicitly defines the denominator as floor square footage
+- The building has separate operating expense pools by floor
+- Each floor has materially different operating costs (dedicated HVAC units, different service levels)
+- The lease contains language like "costs attributable to the floor on which the Premises are located"
+
+**Math example (Floor-Level):**
+
+Building: 120,000 RSF total
+Floor 3: 30,000 RSF total
+Tenant A on Floor 3: 15,000 RSF
+
+- Floor-level pro-rata: 15,000 / 30,000 = 50.0%
+- If Floor 3 operating costs are $80,000, Tenant A pays: $40,000
+
+Note the difference: Tenant A pays $40,000 under floor-level allocation versus $75,000 under building-level. The correct answer depends entirely on what the lease says, not which number is larger.
+
+**Why floor-level exists:** In a 10-floor office building where a pharmaceutical company occupies all of Floor 3 and runs 24/7 operations with higher HVAC demand, floor-level allocation ensures they pay for the actual costs their operations drive. Other tenants don't subsidize those costs.
+
+## Lease Language to Look For
+
+**Building-level indicators:**
+- "Tenant's proportionate share of the Building's operating expenses"
+- "...calculated by dividing Tenant's rentable square footage by the total rentable square footage of the Building"
+- "Landlord may adjust the denominator to exclude anchor tenant space" (still building-level, just with a modified denominator)
+
+**Floor-level indicators:**
+- "Tenant's proportionate share of the costs of operating and maintaining the floor on which the Premises are located"
+- "...calculated by dividing Tenant's rentable square footage by the total rentable square footage of the [floor/level] on which the Premises are located"
+- "Floor operating expenses" as a defined term in the lease
+
+**Mixed allocation (split leases):** Some tenants occupy space on multiple floors and have a split allocation: building-level for common building expenses, floor-level for floor-specific expenses. MRI handles this through separate charge codes rather than a single Share Type.
+
+## How to Audit Share Type Assignments
+
+Run this audit before each reconciliation cycle:
+
+1. **Export the tenant roster from MRI** with Share Type, Floor, and RSF columns
+2. **Pull lease abstracts** for each tenant, noting the denominator definition
+3. **For each tenant, verify:** Does the MRI Share Type match the lease denominator definition?
+4. **Calculate a spot check:** For 3-5 tenants, manually calculate their pro-rata share using MRI's denominator and compare against your lease-defined calculation
+5. **Flag any mismatches:** a tenant on building-level in MRI but floor-level in their lease is systematically over- or under-billed
+
+Pay particular attention to:
+- Tenants who moved in during the past 3 years (Share Type may have been set quickly at lease execution)
+- Tenants who renewed with amended CAM terms (Share Type may not have been updated for the renewal)
+- Multi-floor tenants (Share Type may be inconsistently set across their multiple space records)
+
+## Fixing Incorrect Share Types
+
+Before making a correction, calculate the financial impact:
+
+1. Determine the correct Share Type from the lease
+2. Calculate what the tenant should have been billed under the correct configuration for each historical year
+3. Compare to what they were actually billed
+4. Determine if the error is subject to reconciliation cure periods under the lease (most leases have 1-2 year lookback limits)
+
+Then:
+1. Update the Share Type field in MRI for the affected tenant
+2. Recalculate the current-year reconciliation using the corrected configuration
+3. If prior-year corrections are within the lease's cure period, prepare a corrected reconciliation statement
+4. Document the change in your audit trail
+
+Do not make the correction silently. Document it, communicate it to the tenant if a payment adjustment results, and retain the original calculation for your records.
+
+CapVeri's pro-rata calculator verifies each tenant's share against the lease-defined denominator and flags mismatches between MRI's configured Share Type and what the lease actually requires.
+
+## Related Resources
+- [CAM Reconciliation Guide](/cam-reconciliation-guide): complete step-by-step reconciliation process
+
+- [MRI Software CAM Setup Guide](/resources/software/mri-software/cam-setup)
+- [Pro-Rata Share Calculator](/tools/pro-rata-calculator)
+
+## Sources
+
+1. [MRI Software - Property Management](https://www.mrisoftware.com/products/mri-property-management/)
+2. [CapVeri Sources & Research - MRI public procurement pricing](/sources#mri-gcloud-pricing)

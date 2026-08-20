@@ -1,0 +1,421 @@
+{
+  "batch": "C",
+  "posts_reviewed": 95,
+  "issues_found": 28,
+  "posts": [
+    {
+      "file": "2026-05-26-0900-anti-integration-194.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "The court test for CAM reconciliation software. Can you reproduce the calculation three years from now",
+          "fix": "Open Slide 1 with a specific number, dollar amount, named system, or named error type. Example: 'A tenant's attorney asked for the 2022 gross-up methodology in 2025. The platform couldn't reproduce the same output twice.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-26-1000-cam-math-195.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "Most CAM disputes start before anyone reviews the math. They start when the tenant's AP team sees a $14,000 charge",
+          "fix": "Move the specifics ($14,000 charge) into the opening line. Example: 'A $14,000 CAM charge hit a tenant's AP queue with no explanation. Three weeks and a broker call later, it became a formal dispute - before anyone checked whether the math was even wrong.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-26-1600-anti-integration-201.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "Property controllers are fielding more pitches for \"AI-powered CAM reconciliation\" than ever. Some of these tools are genuinely useful. Others are dangerous.",
+          "fix": "Replace the vague opener with a specific number or named system. Example: 'A 12-property portfolio running AI-powered reconciliation received a tenant audit claim in Q1. The platform couldn't reproduce its own output from 18 months earlier.'"
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "3,600 vendor invoices per year. At 8 minutes per invoice...saving $27,000 annually at $75 per hour fully loaded",
+          "fix": "These specific invoice counts, time savings, and dollar amounts have no named third-party source (BOMA, IREM, named publication). Attribute to a named source or reframe as illustrative estimates ('for example, a 12-property portfolio might generate...')."
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "a 180-page commercial lease takes 2-4 hours for an experienced paralegal. AI cuts that to 15-30 minutes of review time",
+          "fix": "No named third-party source for these specific time ranges. Attribute to a named source or reframe as illustrative estimates."
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "AI may get it right 95% of the time. The problem is that you cannot prove it is right",
+          "fix": "The '95%' accuracy figure has no named source. Remove the specific percentage or attribute to a named third-party study."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-26-2000-engagement-205.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "The 3-5% CAM recovery leakage figure gets cited often...The figure comes from industry research on the gap",
+          "fix": "'Industry research' is not a named source. Attribute to BOMA, IREM, or a named CRE publication, or reframe as 'a figure commonly cited in the industry' without presenting it as a fact."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-27-0800-war-stories-208.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "40% of CAM reconciliations have material billing errors. Many of those errors are not original mistakes",
+          "fix": "The 40% figure has no named third-party source in the post. Attribute to a named source (e.g., a specific tenant audit firm's published data, IREM, or named CRE publication) or remove the specific percentage."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-27-0900-anti-integration-209.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "typically charge 20-40% of the amount they recover. On a $15,000 error, that is $3,000-$6,000 to the tenant's auditor",
+          "fix": "The 20-40% contingency rate is presented as fact with no named source. Attribute to a named firm's published fee structure, industry publication, or label it 'typical industry contingency rates.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-27-1100-industry-news-211.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "Most property management operations have quality control for maintenance work orders. Almost none have quality control for CAM reconciliation.",
+          "fix": "Replace with a specific observation. Example: 'A 50-property portfolio with a formal work order QA program had zero reconciliation QA. Three audits in four years.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-27-1400-war-stories-214.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "The most common error, appearing in more than 40% of audited reconciliations. It generates more tenant dispute letters than any other single cause.",
+          "fix": "The '40%' figure and 'more tenant dispute letters' claim have no named third-party source. Attribute to a named tenant audit firm's published findings or remove the specific percentage."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-27-2000-engagement-220.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "A question that comes up more than expected when talking to property managers: \"How do I explain to ownership",
+          "fix": "While the embedded quote adds specificity, the opening framing is vague. Start with the scenario directly: 'A property manager found a 3-year gross-up misconfiguration that cost $72,000 in under-recovery. The question was how to explain it to ownership without it sounding like negligence.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-28-0800-war-stories-223.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "There is a common assumption in property management: tenants who hire audit firms do so because they suspect the landlord is dishonest.",
+          "fix": "No specific number, dollar amount, named system, or error type in the first two lines. Open with something like: 'A tenant audit engagement notice arrived 18 months after a 20-year tenant signed. Not because they suspected fraud - because their CPA flagged the ASC 842 workpaper.'"
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "which is true in 40% of cases...The 60-80% finding rate in tenant audits is not evidence that landlords are dishonest",
+          "fix": "Both the 40% and 60-80% figures have no named third-party source. Attribute to named audit firm data, IREM, or a named CRE publication, or remove the specific percentages."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-28-0900-anti-integration-224.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "Excel: $0 in software cost, $16,250 in reconciliation labor...Total estimated annual cost: $31,500-$72,250. Purpose-built CAM software: $5,000-$25,000 in software cost, $5,200 in reconciliation labor",
+          "fix": "These specific cost ranges have no named third-party source. Label them explicitly as 'illustrative estimates based on [basis]' or attribute to a named industry study."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-28-1100-industry-news-226.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "A standard CAM reconciliation takes 8 to 15 analyst hours per building. Most property accounting teams have 200 available hours per analyst per reconciliation season.",
+          "fix": "These specific figures have no named third-party source. Attribute to a named publication (IREM, BOMA) or label as illustrative estimates. The hook itself is fine since it has specific numbers."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-28-1200-cam-math-227.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "Janitorial: up 3.8% annually on average. Repairs and maintenance: up 5.0% annually. Insurance premiums: up 8-15% annually since 2023.",
+          "fix": "These specific expense inflation rates have no named third-party source. Attribute to Bureau of Labor Statistics, a named insurance index, or a named CRE publication, or label them as illustrative estimates."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-28-1600-anti-integration-231.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "65% of property controllers are still using Excel as their primary CAM reconciliation tool.",
+          "fix": "This specific percentage has no named third-party source. Attribute to a named survey (IREM, BOMA, named CRE publication) or remove the specific percentage."
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "material discrepancies in 60-80% of the statements they audit",
+          "fix": "The 60-80% finding rate has no named third-party source in this post. Attribute to a named tenant audit firm's published data or remove the specific range."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-28-1700-founder-232.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "A contrarian view on the \"just use a consultant\" approach to CAM auditing. Third-party CAM audit engagements are valuable.",
+          "fix": "No number, dollar amount, named system, or specific error type in first two lines. From Angel Campa, CapVeri founder: open with something specific, e.g. 'A portfolio that had consultant audits every two years still accumulated $72,000 in leakage between them.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-29-0600-cam-math-236.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "IMAGE BRIEF: \"BOMA 2024. 4.8% average RSF increase per building.\"",
+          "fix": "The '4.8% average RSF increase per building' is derived from the post's own example (4,800/100,000 SF), not a published BOMA statistic. Either cite the actual BOMA 2024 published average RSF increase or change to 'up to 4.8% RSF increase in this example.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-29-0900-anti-integration-239.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "Spreadsheet error rates in financial models run at 88% across studies of real workbooks",
+          "fix": "The 88% figure is attributed to unnamed 'studies.' Cite the specific source (e.g., Raymond Panko's research, or the EuSpRIG studies) or remove the specific percentage."
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "Tenant audit firms find material discrepancies in 60-80% of the reconciliation statements they review. They work on contingency and charge 20-40% of recovered amounts.",
+          "fix": "Both the 60-80% finding rate and 20-40% contingency fee have no named third-party source in this post. Attribute to named firms' published data or remove specific percentages."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-29-1400-war-stories-244.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "The most expensive CAM problem is not overbilling. It is the chronic under-recovery that compounds for years before anyone checks.",
+          "fix": "No number or dollar amount in first two lines. Open with specifics: 'A retail property with $3.5M in operating expenses was under-recovering $87,500 per year for three years. No tenant ever complained.'"
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "Retail properties leak 1.5-3.5% of annual operating expenses. Office leaks 1.0-2.5%. Industrial is lower, at 0.5-1.5%...Medical office buildings have the highest leakage rate: 2.0-3.5%.",
+          "fix": "These property-type-specific leakage rates have no named third-party source. Attribute to BOMA, IREM, or a named CRE publication, or label as estimates from CapVeri's internal data."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-29-1600-anti-integration-246.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "The business case for CAM reconciliation software is usually framed as cost reduction. That framing understates it by roughly a factor of five.",
+          "fix": "No number, dollar amount, named system, or error type in first two lines. Open with: 'For a 20-property portfolio, the first independent lease-vs-ERP comparison identified $475,000 in recoverable income the ERP configuration wasn't delivering.'"
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "Conservative estimate...of no prior independent verification: $475,000-$760,000 in additional legitimate recovery captured in year one",
+          "fix": "These specific recovery estimate ranges have no named third-party source or methodology citation. Label them explicitly as CapVeri's own estimates based on internal portfolio data, or provide the calculation methodology."
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "expected audit exposure without an independent verification layer is $75,600-$87,600 per year in contingency payments alone",
+          "fix": "This specific dollar range has no named source. Label as an illustrative estimate or attribute to named third-party data."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-30-1130-anti-integration-254.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "Nakisa, a lease accounting platform, documented $10.3 million in savings for enterprise customers who automated CAM verification.",
+          "fix": "Verify that Nakisa published this specific $10.3M figure for CAM verification (not general lease accounting automation). If the figure is not from a published Nakisa source, remove or correct it. The attribution conflates lease accounting savings with CAM verification savings."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-31-1430-war-stories-266.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "40% of CAM reconciliations have material billing errors. That number comes from industry sources with a stake in finding errors...The 28% of tenants who report finding discrepancies on their own",
+          "fix": "The post itself acknowledges the 40% figure is from 'industry sources with a stake in finding errors' - which is not a named third-party. The 28% figure also has no named source. Either name both sources specifically or remove the specific percentages."
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "This error is present in more than 40% of audited statements, making it the single most common finding in tenant audit engagements.",
+          "fix": "Second reference to the 40% figure without a named source. Attribute to a named firm or publication or remove."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-31-1730-founder-268.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "Commercial landlords are leaving real money on the table every year, and it's not because anyone is doing something wrong.",
+          "fix": "No number, dollar amount, named system, or specific error type. From Angel Campa, CapVeri founder: open with a specific figure. Example: 'Commercial landlords leave 3-5% of their operating expense recovery on the table every year - not from fraud or bad software, but from configuration drift.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-31-1900-anti-integration-269.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "the estimated annual ROI from implementing an independent CAM verification layer: $573,250. That number breaks down as: $475,000 in additional legitimate recovery from correcting systematic billing gaps, $75,600 in avoided tenant auditor payouts",
+          "fix": "These specific dollar figures have no named third-party source or methodology citation. Label explicitly as CapVeri's own estimates from portfolio analysis, or provide the calculation basis."
+        }
+      ]
+    },
+    {
+      "file": "2026-06-01-0600-cam-math-271.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "40% of commercial CAM reconciliations contain material errors. One in three landlords is billing incorrectly right now.",
+          "fix": "The 40% figure has no named third-party source in this post. Attribute to a named source or remove the specific percentage. 'One in three' is not consistent with 40% (which would be two in five)."
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "The $25,000 per building per year average recovery gap",
+          "fix": "This specific average has no named third-party source. Attribute to CapVeri's own portfolio analysis data or a named industry source."
+        }
+      ]
+    },
+    {
+      "file": "2026-06-01-0700-erp-workarounds-272.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "RealPage exports for CAM reconciliation require more cleanup than Yardi or MRI. That is not an opinion. it is a data quality reality documented in every portfolio that has moved from RealPage",
+          "fix": "While RealPage is named, the opening makes a strong claim ('every portfolio') without a specific number or finding. Add specifics: 'RealPage exports for CAM reconciliation have four structural data issues - embedded subtotal rows, multi-line descriptions, inconsistent date formats, and blank separator rows - that silently corrupt import totals.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-06-01-0900-anti-integration-274.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "The property controller's job is changing. The controllers who understand what it's changing into are on a different career track.",
+          "fix": "No number, dollar amount, named system, or error type in first two lines. Open with a specific figure: 'A property controller who can translate a $45,000 gross-up correction into $750,000 in property value at a 6% cap rate is not doing accounting anymore.'"
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "Property Accountant (0-3 years): $55K-$75K...Property Controller (5-8 years): $85K-$120K...VP / CFO (12+ years): $150K-$250K+",
+          "fix": "These salary ranges have no named third-party source. Attribute to a named salary survey (IREM, BOMA, Bureau of Labor Statistics, Robert Half) or label as general market estimates."
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "revise",
+          "excerpt": "Commercial real estate manages $20.7 trillion in U.S. assets.",
+          "fix": "This specific figure has no named source. Attribute to MSCI, NCREIF, or a named CRE research publication."
+        }
+      ]
+    },
+    {
+      "file": "2026-06-01-1700-founder-282.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "A framework for thinking about data security in a CAM reconciliation tool, from the CapVeri /about page. This comes up in evaluations because the data involved is sensitive.",
+          "fix": "No number, dollar amount, named system, or specific error type in first two lines. Open with something concrete: 'GL exports contain per-tenant financial figures and negotiated lease terms. When a property manager sends that data to a third-party tool, four security questions determine whether the risk is acceptable.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-06-01-2000-engagement-285.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "One underappreciated reason CAM reconciliation errors persist: the person who finds a potential error rarely has the authority to correct it.",
+          "fix": "No number, dollar amount, named system, or named error type in the opening line. Restructure: 'A property accountant found a gross-up factor that hadn't been updated after a 2023 lease amendment. Correcting it required four steps and two approvals. The statement went out wrong instead.'"
+        }
+      ]
+    }
+  ]
+}

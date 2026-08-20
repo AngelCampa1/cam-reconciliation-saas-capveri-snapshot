@@ -1,0 +1,353 @@
+{
+  "promotedPaths": [
+    "/alternatives",
+    "/integrations",
+    "/solutions",
+    "/switch",
+    "/roi",
+    "/product-tour",
+    "/best/cam-reconciliation-software",
+    "/sample-report"
+  ],
+  "priorityPages": [
+    {
+      "path": "/cam-reconciliation-guide",
+      "funnelStage": "tofu",
+      "primaryIntent": "definition-and-process",
+      "canonicalTopic": "what-is-cam-reconciliation",
+      "primaryCTA": "See how CapVeri verifies reconciliations before statements go out",
+      "nextStepHref": "/cam-reconciliation-software",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-03-22",
+      "sourcesSection": "Methodology and source notes maintained on-page",
+      "parentInternalLinks": [
+        "/cam-charges",
+        "/resources/how-to-calculate-cam-charges"
+      ],
+      "childInternalLinks": [
+        "/resources/cam-reconciliation-example",
+        "/blog/cam-reconciliation-deadlines",
+        "/cam-reconciliation-software"
+      ]
+    },
+    {
+      "path": "/cam-charges",
+      "funnelStage": "tofu",
+      "primaryIntent": "definition-and-calculation",
+      "canonicalTopic": "what-are-cam-charges",
+      "primaryCTA": "Calculate tenant charges with CapVeri's verification workflow",
+      "nextStepHref": "/resources/how-to-calculate-cam-charges",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-04-17",
+      "sourcesSection": "On-page sources block with dated references",
+      "parentInternalLinks": [
+        "/cam-reconciliation-guide"
+      ],
+      "childInternalLinks": [
+        "/resources/how-to-calculate-cam-charges",
+        "/tools/pro-rata-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "path": "/cam-audit",
+      "funnelStage": "mofu",
+      "primaryIntent": "landlord-side-audit-workflow",
+      "canonicalTopic": "landlord-cam-audit-software",
+      "primaryCTA": "Run a landlord-side pre-send audit with CapVeri",
+      "nextStepHref": "/sample-report",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-04-17",
+      "sourcesSection": "On-page sources block with dated references",
+      "parentInternalLinks": [
+        "/cam-reconciliation-guide"
+      ],
+      "childInternalLinks": [
+        "/sample-report",
+        "/tools/audit-risk-quiz",
+        "/blog/cam-reconciliation-audit-trail"
+      ]
+    },
+    {
+      "path": "/cam-reconciliation-software",
+      "funnelStage": "bofu",
+      "primaryIntent": "product-evaluation",
+      "canonicalTopic": "cam-reconciliation-software",
+      "primaryCTA": "Start a CapVeri trial",
+      "nextStepHref": "/product-tour",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-03-31",
+      "sourcesSection": "On-page sources and proof references",
+      "parentInternalLinks": [
+        "/cam-reconciliation-guide",
+        "/best/cam-reconciliation-software"
+      ],
+      "childInternalLinks": [
+        "/product-tour",
+        "/sample-report",
+        "/pricing"
+      ]
+    },
+    {
+      "path": "/best/cam-reconciliation-software",
+      "funnelStage": "bofu",
+      "primaryIntent": "software-comparison",
+      "canonicalTopic": "best-cam-reconciliation-software",
+      "primaryCTA": "Compare CapVeri against manual and ERP-led workflows",
+      "nextStepHref": "/vs/yardi",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-04-17",
+      "sourcesSection": "On-page vendor and methodology references",
+      "parentInternalLinks": [
+        "/cam-reconciliation-software"
+      ],
+      "childInternalLinks": [
+        "/vs/yardi",
+        "/vs/mri",
+        "/alternatives"
+      ]
+    },
+    {
+      "path": "/product-tour",
+      "funnelStage": "bofu",
+      "primaryIntent": "product-proof",
+      "canonicalTopic": "cam-reconciliation-product-tour",
+      "primaryCTA": "See the workflow before starting a trial",
+      "nextStepHref": "/pricing",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-04-17",
+      "sourcesSection": "On-page product proof references",
+      "parentInternalLinks": [
+        "/cam-reconciliation-software"
+      ],
+      "childInternalLinks": [
+        "/sample-report",
+        "/pricing",
+        "/roi"
+      ]
+    },
+    {
+      "path": "/sample-report",
+      "funnelStage": "bofu",
+      "primaryIntent": "output-proof",
+      "canonicalTopic": "cam-reconciliation-sample-report",
+      "primaryCTA": "Review the audit-ready output",
+      "nextStepHref": "/product-tour",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-01-30",
+      "sourcesSection": "On-page proof and methodology references",
+      "parentInternalLinks": [
+        "/cam-audit",
+        "/cam-reconciliation-software"
+      ],
+      "childInternalLinks": [
+        "/product-tour",
+        "/pricing",
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/roi",
+      "funnelStage": "bofu",
+      "primaryIntent": "business-case",
+      "canonicalTopic": "cam-reconciliation-roi",
+      "primaryCTA": "Quantify recovery and efficiency upside",
+      "nextStepHref": "/pricing",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-04-17",
+      "sourcesSection": "On-page assumptions and source references",
+      "parentInternalLinks": [
+        "/cam-reconciliation-software"
+      ],
+      "childInternalLinks": [
+        "/pricing",
+        "/sample-report",
+        "/case-studies"
+      ]
+    },
+    {
+      "path": "/alternatives",
+      "funnelStage": "bofu",
+      "primaryIntent": "alternatives-hub",
+      "canonicalTopic": "cam-reconciliation-software-alternatives",
+      "primaryCTA": "Compare alternatives by migration risk and verification depth",
+      "nextStepHref": "/alternatives/yardi",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-04-17",
+      "sourcesSection": "Hub references and linked comparison pages",
+      "parentInternalLinks": [
+        "/best/cam-reconciliation-software"
+      ],
+      "childInternalLinks": [
+        "/alternatives/yardi",
+        "/alternatives/mri",
+        "/alternatives/appfolio"
+      ]
+    },
+    {
+      "path": "/integrations",
+      "funnelStage": "mofu",
+      "primaryIntent": "workflow-hub",
+      "canonicalTopic": "erp-export-verification-integrations",
+      "primaryCTA": "See how CapVeri works beside existing ERPs",
+      "nextStepHref": "/integrations/yardi",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-04-17",
+      "sourcesSection": "Hub references and linked verification pages",
+      "parentInternalLinks": [
+        "/cam-reconciliation-software"
+      ],
+      "childInternalLinks": [
+        "/integrations/yardi",
+        "/integrations/mri",
+        "/integrations/realpage"
+      ]
+    },
+    {
+      "path": "/solutions",
+      "funnelStage": "mofu",
+      "primaryIntent": "use-case-hub",
+      "canonicalTopic": "cam-reconciliation-solutions",
+      "primaryCTA": "Choose the workflow problem you need to fix first",
+      "nextStepHref": "/solutions/year-end-cam-reconciliation",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-04-17",
+      "sourcesSection": "Use-case links and proof references",
+      "parentInternalLinks": [
+        "/cam-reconciliation-guide"
+      ],
+      "childInternalLinks": [
+        "/solutions/year-end-cam-reconciliation",
+        "/solutions/yardi-cam-errors",
+        "/solutions/cam-recovery-optimization"
+      ]
+    },
+    {
+      "path": "/switch",
+      "funnelStage": "bofu",
+      "primaryIntent": "migration-hub",
+      "canonicalTopic": "switch-cam-reconciliation-workflow",
+      "primaryCTA": "See what changes and what stays when you move to CapVeri",
+      "nextStepHref": "/switch/excel",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-04-17",
+      "sourcesSection": "Migration guidance and linked pages",
+      "parentInternalLinks": [
+        "/alternatives"
+      ],
+      "childInternalLinks": [
+        "/switch/excel",
+        "/switch/outsourced-cam",
+        "/switch/manual-process"
+      ]
+    },
+    {
+      "path": "/vs/yardi",
+      "funnelStage": "bofu",
+      "primaryIntent": "competitor-comparison",
+      "canonicalTopic": "capveri-vs-yardi-cam-reconciliation",
+      "primaryCTA": "Compare Yardi configuration against export-based verification",
+      "nextStepHref": "/integrations/yardi",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-03-18",
+      "sourcesSection": "Comparison table, FAQs, and linked references",
+      "parentInternalLinks": [
+        "/best/cam-reconciliation-software"
+      ],
+      "childInternalLinks": [
+        "/integrations/yardi",
+        "/alternatives",
+        "/product-tour"
+      ]
+    },
+    {
+      "path": "/vs/mri",
+      "funnelStage": "bofu",
+      "primaryIntent": "competitor-comparison",
+      "canonicalTopic": "capveri-vs-mri-cam-reconciliation",
+      "primaryCTA": "Compare MRI workflow complexity against independent verification",
+      "nextStepHref": "/integrations/mri",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-03-18",
+      "sourcesSection": "Comparison table, FAQs, and linked references",
+      "parentInternalLinks": [
+        "/best/cam-reconciliation-software"
+      ],
+      "childInternalLinks": [
+        "/integrations/mri",
+        "/alternatives",
+        "/product-tour"
+      ]
+    },
+    {
+      "path": "/vs/realpage",
+      "funnelStage": "bofu",
+      "primaryIntent": "competitor-comparison",
+      "canonicalTopic": "capveri-vs-realpage-cam-reconciliation",
+      "primaryCTA": "Compare RealPage expense recovery against CapVeri QA",
+      "nextStepHref": "/integrations/realpage",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-03-18",
+      "sourcesSection": "Comparison table, FAQs, and linked references",
+      "parentInternalLinks": [
+        "/best/cam-reconciliation-software"
+      ],
+      "childInternalLinks": [
+        "/integrations/realpage",
+        "/product-tour",
+        "/sample-report"
+      ]
+    },
+    {
+      "path": "/vs/excel",
+      "funnelStage": "bofu",
+      "primaryIntent": "competitor-comparison",
+      "canonicalTopic": "capveri-vs-excel-cam-reconciliation",
+      "primaryCTA": "See the difference between spreadsheet math and audited calculations",
+      "nextStepHref": "/switch/excel",
+      "citationReady": true,
+      "author": "Angel Campa",
+      "reviewer": "CapVeri Editorial Review",
+      "updated": "2026-03-18",
+      "sourcesSection": "Comparison table, FAQs, and linked references",
+      "parentInternalLinks": [
+        "/best/cam-reconciliation-software"
+      ],
+      "childInternalLinks": [
+        "/switch/excel",
+        "/product-tour",
+        "/pricing"
+      ]
+    }
+  ]
+}

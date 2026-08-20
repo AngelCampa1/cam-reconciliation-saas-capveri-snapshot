@@ -1,0 +1,125 @@
+---
+title: "Base Year Reset on Lease Renewal: How to Handle It in Your ERP"
+description: "When a lease renews, the base year often resets. How to update base year in Yardi, MRI, and RealPage, what a reset means for tenant CAM obligations, and common errors."
+excerpt: "A base year lease renewal without a base year reset creates an invisible error that compounds every year until a tenant auditor finds it."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "Does a lease renewal always reset the base year?"
+    a: "No. It depends on lease language. Some renewal options specify that the base year resets to the first year of the renewal term. Others explicitly carry forward the original base year. Some are silent on the issue, which creates ambiguity. Always read the renewal option section of the lease, not just the original base year provisions. When in doubt, the lease abstract should be updated by your leasing team with a specific answer."
+  - q: "What happens if we missed a base year reset for several years?"
+    a: "The tenant has been overpaying CAM. Their obligation was calculated against the wrong (older, lower) base year, producing artificially high excess amounts. When discovered, the landlord typically owes a retroactive credit for all overpaid amounts within the audit window specified in the lease (usually 3 years). Document the error, calculate the correct amounts for each overpaid year, and issue a credit memo with amended reconciliation statements."
+---
+
+A base year lease is, in principle, simple: the tenant pays only the increase in CAM expenses above the base year level. The base year is established when the lease starts, and the tenant's obligation is the difference between actual expenses and that baseline.
+
+The complication arrives at renewal. If the renewal option resets the base year to the renewal commencement year (which many do), the ERP must be updated to reflect the new base. If it isn't, the tenant's CAM exposure calculation continues using the original base year, which is now years old and typically lower. The tenant overpays. They may not notice for years. Their auditor will notice immediately.
+
+## What a Base Year Reset Means
+
+When a base year resets at renewal, the tenant's CAM obligation effectively resets to zero for the renewal period. They pay nothing until actual CAM expenses exceed the new base year's expense level.
+
+This is significant from a cash flow perspective. In the first year of a renewal with a reset, a tenant in a well-managed building may pay minimal or zero CAM recovery, because actual expenses are unlikely to significantly exceed the base year level in year one. Only as expenses grow above the new baseline does recovery increase.
+
+From the landlord's perspective, a base year reset reduces CAM recovery during the early renewal years compared to what it would be if the original base year were carried forward. This is the intended commercial outcome negotiated in the lease, but only if the ERP reflects the new base correctly.
+
+## How to Find the Reset Provision in Lease Language
+
+The base year reset provision, if it exists, appears in the renewal option section of the lease, not in the base year definition section where you'd typically look. The two most common formulations:
+
+**Explicit reset:** "The Base Year for any Renewal Term shall be the calendar year in which the Renewal Term commences."
+
+**Carried-forward base year:** "The Base Year shall remain [year] for the duration of the Lease Term, including any Renewal Terms."
+
+**Silent on the issue:** The renewal option sets rent but says nothing about the base year. This is ambiguous. Have your legal team document the interpretation before updating your ERP.
+
+When abstracting leases for renewal options, always flag base year treatment explicitly. This is information that should appear in your lease abstract system, not buried in the renewal option exhibit. Extract your base year reset language and current year values from your lease PDF using [Lextract.io](https://www.lextract.io).
+
+## Updating Base Year in Yardi
+
+In Yardi Voyager, base year updates for CAM recovery are made at the lease level in the Recovery Setup module.
+
+Navigation path:
+1. Open the tenant's lease record in Voyager
+2. Select **Lease** → **Recovery Setup** from the top navigation
+3. Locate the recovery pool line item for the tenant
+4. Select the recovery row and click **Edit**
+5. Update the **Base Year** field to the new renewal year
+6. Update the **Base Year Amount** field: this is the actual expense total from the new base year (required for accurate excess calculations)
+7. Update the **Effective Date** of the new setup to match the renewal commencement date
+8. Save and verify the updated setup produces the expected results
+
+Note: The Base Year Amount field requires you to know the actual CAM pool expense total for the new base year. For a renewal commencing January 1, 2026, you'd use 2026 actual expenses, which you won't know until reconciliation in early 2027. Many properties use the budgeted amount for 2026 initially and update once actuals are finalized. Document this clearly.
+
+## Updating Base Year in MRI
+
+In MRI Commercial Management, recovery setup is managed at the lease level through the Recovery Configuration module.
+
+Navigation path:
+1. Open the tenant record in MRI
+2. Navigate to **Leases** → **Lease Detail** → **Recoveries**
+3. Select the recovery configuration row applicable to CAM
+4. Click **Edit Recovery Setup**
+5. Update the **Base Year** value
+6. Update the **Base Year Expenses** amount with actual or budgeted figures for the new base year
+7. Set an **Effective Date** for the new configuration matching the renewal date
+8. Verify the change in the **Recovery Preview** function before saving
+
+MRI allows multiple dated recovery configurations for a single tenant, which is the correct way to handle a mid-term base year change: add a new row effective at renewal rather than overwriting the existing configuration. This preserves historical data for the prior term.
+
+## Updating Base Year in RealPage
+
+In RealPage Commercial, base year recovery settings are found in the Lease Administration module under Recovery Agreements.
+
+Navigation path:
+1. Open the tenant lease in RealPage Commercial
+2. Navigate to **Lease Administration** → **Recovery Agreements**
+3. Select the active CAM recovery agreement
+4. Click **Edit Agreement**
+5. Add a new **Agreement Period** for the renewal term (do not edit the existing period)
+6. Set the **Base Year** for the new period
+7. Enter **Base Year Operating Expenses** for the new base year
+8. Save and run the recovery calculation test to verify expected output
+
+RealPage's period-based structure makes it relatively clean to handle renewals. Each period has its own settings. The most common error is editing the existing period rather than creating a new one, which destroys the audit trail for the prior term.
+
+## The Financial Impact of a Missed Reset
+
+The financial impact of a missed base year reset compounds annually.
+
+Example: Original base year 2020 with $180,000 in expenses. New base year should be 2025 with $210,000 in expenses. Annual CAM expenses in 2026: $215,000.
+
+**Correct calculation (new base year 2025):** $215,000 − $210,000 = $5,000 excess to recover from tenant.
+
+**Incorrect calculation (original base year 2020):** $215,000 − $180,000 = $35,000 excess to recover from tenant.
+
+The tenant overpays by $30,000 in 2026 alone. In a typical 5-year renewal, this compounds into hundreds of thousands of dollars of overcollection, all of which is owed back when discovered.
+
+## Validation Process for Renewals
+
+When a lease renews, run a mandatory checklist before the renewal effective date:
+
+1. Extract the base year provision from the renewal option language
+2. Confirm with leasing whether the base year resets or carries forward
+3. Update the ERP recovery setup with the new base year and an effective date matching renewal commencement
+4. Document the base year amount source (actual, budgeted, or estimated)
+5. Run a test reconciliation against the new setup to verify expected output
+6. Update the lease abstract with the new base year term
+
+This process should be part of your standard lease renewal workflow, not an afterthought at reconciliation time. By the time you're running reconciliations, a missed base year reset has already caused a year of incorrect billing.
+
+---
+
+## Related Resources
+
+- [Yardi Voyager CAM Setup Guide](/resources/software/yardi-voyager/cam-setup)
+- [Base Year CAM Lease Guide](/resources/base-year-cam-lease)
+- [Base Year Escalation Tool](/tools/base-year-escalation)
+
+## Sources
+
+1. [ICSC: Dictionary of Shopping Center Terms](https://www.icsc.com/news-and-views/newsstand/icscs-dictionary-of-shopping-center-terms-fourth-edition)
+2. [J.P. Morgan: What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

@@ -1,0 +1,175 @@
+{
+  "batch": "B2",
+  "posts_reviewed": 95,
+  "issues_found": 14,
+  "posts": [
+    {
+      "file": "2026-05-19-1200-cam-math-102.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "Most property controllers can quote their building's NOI.",
+          "fix": "Replace the opening line with something specific: include a dollar amount, named system (Yardi/MRI), named error type (recovery ratio, gross-up), or a specific building scenario. Example: 'A $1.1M expense pool losing $11,000 for every point of recovery shortfall - and most controllers can't tell you their recovery ratio without running a new report.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-19-2000-engagement-110.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "A common assumption worth questioning: CAM reconciliation errors favor the landlord.",
+          "fix": "Add a specific anchor in the opening: a dollar figure, named error type, or building data point. Example: 'A common assumption worth questioning: the 3% gross-up threshold misconfiguration is always a landlord-favorable error.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-20-0600-cam-math-111.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "The CAM true-up is not a penalty, not a fee, and not negotiable in isolation.",
+          "fix": "Ground the hook in a specific scenario. Example: 'A $11,637 true-up balance that comes with no supporting math is an invoice with no basis - and tenants are not required to pay it.' Then follow with the framework explanation."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-20-1700-founder-122.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "A framework for thinking about CAM reconciliation risk by lease age.",
+          "fix": "Open with a specific data point or observation. Example: 'Configuration errors set at lease execution compound for the full 7-to-10-year lease term. Here is how to think about where the risk concentrates - and when intervention is highest leverage.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-21-1400-war-stories-134.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "Consider a scenario that represents a pattern seen across commercial portfolios: a single formula error compounds into a $247,000 exposure",
+          "fix": "The opening is close but the first clause ('Consider a scenario that represents a pattern seen across commercial portfolios') is padding that delays the specific $247,000 figure. Start directly: 'A single formula error - =SUM(A12:A43,A45:A52) instead of =SUM(A12:A52) - compounds into $247,000 in refunds on a 180,000 SF building. Here is how that happens.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-21-1700-founder-137.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "personal-I-without-attribution",
+          "severity": "revise",
+          "excerpt": "From Angel Campa, CapVeri founder: ... I spent time looking at what types of CAM errors",
+          "fix": "Wrap the first-person prose in quotation marks per the required format: 'From Angel Campa, CapVeri founder: \"Early in scoping this product, I spent time looking at what types of CAM errors show up most consistently...\"' - or restructure to third-person: 'Angel Campa, CapVeri founder, spent time early in scoping looking at...'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-21-1800-cam-math-138.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "The call came in mid-March. A national retailer's in-house audit team was requesting backup documentation",
+          "fix": "Add a specific dollar, error type, or scale anchor in the hook. Example: 'The call came in mid-March: a national retailer's audit team requesting backup on five properties where the pro-rata denominator had been wrong since 2021 - a $300,000 exposure.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-22-1200-cam-math-147.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "The national food-and-beverage tenant sent the audit letter in October. Year-end review, routine request for three years of GL backup.",
+          "fix": "Lead with the specific error and dollar impact. Example: 'A $42,000-per-year loan origination fee sitting in the recoverable CAM pool for five years - excluded by every tenant's lease, invisible to every reconciliation cycle until an October audit letter arrived.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-22-1600-anti-integration-151.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "The teams that finish CAM reconciliation fastest are not the ones that start earliest.",
+          "fix": "Anchor the hook in a specific figure. Example: 'A single gross-up error found after drafting 10 of 15 tenant statements costs 3–5 hours of rework. The teams that finish reconciliation season first have eliminated that late-discovery problem - not started earlier.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-23-0830-war-stories-157.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "fabricated-statistic",
+          "severity": "reject",
+          "excerpt": "CAM dispute settlements cluster between 50-75% of the initial claim.",
+          "fix": "This specific percentage range (50–75% of initial claim) does not appear in the post's stated source_url (capveri.com/blog/cam-demand-letter). Either (1) add a named third-party source in the post body (e.g., citing BOMA, IREM, or a law firm report), (2) label this as a modeled estimate or observed pattern, or (3) change the source_url to the resource file that contains this data (landlord-cam-audit-defense-playbook.mdx maps to capveri.com/resources/tenant-audit-defense-playbook)."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-23-1000-cam-math-158.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "The dispute letter came from a national office tenant on the fourth floor of a mixed-use property.",
+          "fix": "The opening line identifies the property type (mixed-use office) but no dollar amount, named error type, or specific measurement. Strengthening: 'A $28,900 audit finding - three years of parking lot maintenance charged to office tenants who never used the lot - started with a single lease phrase: \"common areas of the building.\"'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-24-0830-war-stories-167.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "fabricated-statistic",
+          "severity": "reject",
+          "excerpt": "CAM audit settlements cluster between 50% and 75% of the initial claim.",
+          "fix": "This specific percentage range (50–75% of initial claim) does not appear in the post's stated source_url (capveri.com/blog/cam-audit-defense-landlord-guide). The stat exists in capveri.com/resources/tenant-audit-defense-playbook. Either (1) add a named third-party attribution in the post body, (2) label this as a modeled/observed pattern rather than an asserted fact, or (3) correct the source_url to match the file containing this data."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-24-1430-war-stories-171.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "Here is a scenario that illustrates how CAM disputes typically develop. And How the first 30 days determine most of the outcome.",
+          "fix": "Lead with the specific dollar and error. Example: 'A 60,000 SF office tenant. A 22% year-over-year CAM increase. A documentation gap that turned a defensible single-year billing into a three-year gross-up dispute. Here is how the first 72-hour response determined most of the outcome.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-25-1700-founder-187.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "personal-I-without-attribution",
+          "severity": "revise",
+          "excerpt": "From Angel Campa, CapVeri founder: ... When a property accountant files a bug report, I read it.",
+          "fix": "Wrap the first-person content in quotation marks per the required format: 'From Angel Campa, CapVeri founder: \"Building CapVeri as a solo operation was deliberate. When a property accountant files a bug report, I read it...\"' - or restructure to third-person throughout."
+        }
+      ]
+    }
+  ]
+}

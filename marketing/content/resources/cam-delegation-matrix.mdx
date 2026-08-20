@@ -1,0 +1,197 @@
+---
+title: "CAM Reconciliation Delegation Matrix: Who Owns What"
+description: "A RACI matrix for CAM reconciliation tasks across property controller, property manager, accounting manager, and asset manager roles. Define clear ownership for GL review, lease abstracts, statement generation, tenant communication, dispute resolution, and sign-off."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 53
+faq:
+  - q: "Who is responsible for CAM reconciliation in commercial real estate?"
+    a: "The property controller is typically the accountable owner of CAM reconciliation, meaning they ensure the numbers are correct and statements are delivered on time. However, the process requires input from property managers (expense context, tenant communication), accounting managers (GL accuracy, accruals), and asset managers (sign-off authority). Problems arise when these roles overlap without clear ownership, leading to missed deadlines and billing errors."
+  - q: "What is a RACI matrix for CAM reconciliation?"
+    a: "A RACI matrix assigns one of four roles to each person for each task in the reconciliation process: Responsible (does the work), Accountable (owns the outcome and has sign-off authority), Consulted (provides input before the work is done), and Informed (notified after the work is done). Applying RACI to CAM reconciliation prevents the common problem where everyone assumes someone else is handling a specific task."
+---
+
+## The Ownership Problem
+
+A property controller finishes the draft reconciliation for a 200,000 SF office building. The statement shows a $340,000 expense pool with recoveries of $295,000. She emails it to the property manager for review. The property manager forwards it to the asset manager. The asset manager asks a question about a $28,000 landscaping charge. The question goes back to the property manager, who forwards it to the controller, who checks the GL and responds.
+
+Three weeks pass. The statement still has not gone to tenants.
+
+Nobody dropped the ball. Everyone was doing their job. The problem is that nobody owned the end-to-end process, so every handoff introduced delay. The controller thought she was done after producing the numbers. The property manager thought review meant forwarding, not validating. The asset manager thought his approval was required before anything went out. None of those assumptions were written down.
+
+This pattern repeats at every company that runs CAM reconciliation without a clear delegation matrix. The fix is straightforward: define who does what, who approves, who provides input, and who just needs to know.
+
+---
+
+## The Four Roles
+
+Before mapping tasks, here is how these roles typically function in CAM reconciliation. Titles vary by organization, but the functions are consistent.
+
+### Property Controller
+
+The financial owner. Pulls GL data, maps expenses to recovery pools, applies lease terms, calculates tenant shares, and produces reconciliation statements. In smaller organizations, this role may be called "property accountant" or "senior accountant."
+
+### Property Manager
+
+The operational owner. Manages the building day-to-day, approves vendor invoices, handles tenant relationships, and has context on expenses that the GL does not capture (why a $45,000 repair happened, whether the elevator contract is being renegotiated).
+
+### Accounting Manager / Director
+
+The oversight layer. Reviews reconciliation output for accuracy and consistency across the portfolio. Ensures GAAP compliance for accrual-basis reporting. May manage the property controllers directly.
+
+### Asset Manager
+
+The investment owner. Focused on NOI and property value. Reviews recoveries to ensure the property is billing what it is entitled to under the leases. Authorizes decisions that affect tenant relationships (write-offs, settlement offers on disputes).
+
+---
+
+## The RACI Matrix
+
+**R** = Responsible (does the work)
+**A** = Accountable (owns the outcome, has final authority)
+**C** = Consulted (provides input before work is done)
+**I** = Informed (notified after work is done)
+
+### Phase 1: Pre-Reconciliation Setup
+
+| Task | Property Controller | Property Manager | Accounting Manager | Asset Manager |
+|---|---|---|---|---|
+| Maintain lease abstracts (CAM terms, caps, base years) | R | C | A | I |
+| Update tenant square footage and occupancy dates | C | R | I | I |
+| Confirm GL account mapping to recovery pools | R | I | A | I |
+| Accrue year-end expenses (unbilled vendor invoices) | R | C | A | I |
+| Verify gross-up parameters (occupancy %, threshold) | R | I | A | I |
+| Set reconciliation timeline and deadlines | C | I | A | I |
+
+**Key point:** The property manager is the source of truth for occupancy data. Lease commencement and expiration dates, early terminations, and expansion dates should flow from the PM's lease administration system. The controller consumes this data but should not be creating it.
+
+**Key point:** Lease abstracts are maintained by the controller but the accounting manager is accountable for their accuracy. An error in the abstract (wrong cap percentage, wrong base year) flows directly into incorrect billings. Quarterly abstract audits catch these errors before they reach statements.
+
+### Phase 2: Expense Analysis
+
+| Task | Property Controller | Property Manager | Accounting Manager | Asset Manager |
+|---|---|---|---|---|
+| Pull and review GL detail for reconciliation period | R | I | A | I |
+| Identify and reclassify CapEx coded as OpEx | R | C | A | I |
+| Flag year-over-year variances > 10% for investigation | R | I | A | I |
+| Provide context on unusual expenses (why did R&M spike?) | I | R | I | I |
+| Confirm vendor accruals are complete | R | C | A | I |
+| Review management fee calculation | R | I | A | C |
+
+**Example:** The GL shows $52,000 in account 6250 (Repairs & Maintenance) for a roof repair. The controller flags it as a potential CapEx exclusion. The property manager confirms: "The roof repair replaced 30% of the membrane. Our policy treats replacements over 25% as capital." The controller reclassifies the $52,000 to CapEx. Without that PM input, the controller either guesses or bills it through, risking a tenant dispute.
+
+### Phase 3: Calculation and Statement Generation
+
+| Task | Property Controller | Property Manager | Accounting Manager | Asset Manager |
+|---|---|---|---|---|
+| Calculate gross-up (if applicable) | R | I | A | I |
+| Apply expense caps per lease terms | R | I | A | I |
+| Calculate each tenant's pro-rata share | R | I | A | I |
+| Apply base-year stops and exclusions | R | I | A | I |
+| Generate draft reconciliation statements | R | I | A | I |
+| Cross-check statement totals against GL | R | I | A | I |
+
+This phase is almost entirely the controller's domain. The accounting manager reviews output but should not be recalculating from scratch. If the accounting manager is routinely finding errors in the controller's calculations, that is a training or tooling problem, not a RACI problem.
+
+### Phase 4: Review and Approval
+
+| Task | Property Controller | Property Manager | Accounting Manager | Asset Manager |
+|---|---|---|---|---|
+| First-pass review of draft statements | - | - | R/A | I |
+| Validate recoveries against budget expectations | I | I | C | R/A |
+| Approve statements for distribution | I | I | R | A |
+| Prepare cover letters explaining YoY changes | C | R | I | I |
+| Compile backup documentation package | R | C | I | I |
+
+**The approval bottleneck:** This is where most reconciliation timelines break down. If the asset manager is accountable for approval but reviews statements in batches once a month, a 40-property portfolio creates a four-week delay at this step alone.
+
+**Fix:** Set a service-level agreement. Asset managers approve or return statements within 5 business days of receipt. Statements not returned within 5 days are deemed approved. Put this SLA in the delegation matrix.
+
+### Phase 5: Distribution and Follow-Up
+
+| Task | Property Controller | Property Manager | Accounting Manager | Asset Manager |
+|---|---|---|---|---|
+| Send reconciliation statements to tenants | R | I | I | I |
+| Field initial tenant questions | C | R | I | I |
+| Research and respond to formal disputes | R | C | A | I |
+| Negotiate dispute settlements | C | C | I | R/A |
+| Process credits/adjustments from disputes | R | I | A | I |
+| Track true-up collections | R | I | A | I |
+
+**The handoff that fails most often:** Tenant questions start with the property manager, who has the relationship. If the question is about a specific dollar amount or calculation method, the PM needs to loop in the controller. Problems arise when the PM attempts to answer financial questions without controller input, or when the controller responds directly to tenants without PM awareness.
+
+**Establish a rule:** All tenant questions about CAM come to the property manager first. The PM routes financial/calculation questions to the controller. The PM routes all responses back to the tenant. One communication channel. No conflicting answers.
+
+---
+
+## The Three Most Common RACI Failures
+
+### 1. Nobody Owns Lease Abstract Maintenance
+
+Lease abstracts are the foundation of CAM billing. If the abstract says the cap is 5% cumulative and the actual lease says 5% non-cumulative, every year's billing is wrong. In many organizations, the original abstract was created during lease execution, and nobody has a defined responsibility to update it when amendments are signed.
+
+**The fix:** The controller maintains the abstract. The accounting manager audits abstracts annually against actual lease documents. Any lease amendment triggers an abstract update within 10 business days.
+
+### 2. CapEx vs. OpEx Decisions Are Made Without PM Input
+
+The controller sees a $38,000 HVAC charge in the GL. Is it a compressor replacement (CapEx, non-recoverable) or a major repair (OpEx, recoverable)? The answer depends on what actually happened, and the property manager is the only person who knows.
+
+**The fix:** Every expense over a defined threshold ($10,000 is common) flagged as potential CapEx requires PM confirmation before reclassification. Build this into the reconciliation checklist.
+
+### 3. Dispute Resolution Has No Escalation Path
+
+A tenant disputes $12,000 in landscaping charges. The property manager agrees it seems high. The controller says it matches the GL. The tenant's auditor sends a formal letter. Six weeks pass. Nobody has authority to settle.
+
+**The fix:** Define dollar thresholds for dispute resolution authority.
+
+| Settlement Amount | Approval Authority |
+|---|---|
+| Under $5,000 | Property Manager + Controller |
+| $5,000 – $25,000 | Accounting Manager |
+| $25,000 – $100,000 | Asset Manager |
+| Over $100,000 | Regional VP / Portfolio Head |
+
+---
+
+## Building Your Own Matrix
+
+The RACI framework above is a starting template. Your organization's version should reflect your actual team structure, which means adjusting for these variables:
+
+**Portfolio size.** A 5-property portfolio may have one person filling the controller and accounting manager roles. A 200-property portfolio may have regional controllers with a separate quality assurance function.
+
+**In-house vs. third-party management.** If property management is outsourced, the PM's role in the RACI matrix shifts. The third-party PM handles tenant communication but may not have authority to approve reclassifications or settle disputes.
+
+**Asset type.** Retail portfolios with percentage rent and merchant association fees have additional reconciliation tasks that do not appear in the office RACI. Industrial portfolios with NNN leases have fewer tasks overall but may need a more detailed GL review process because a higher percentage of expenses pass through.
+
+### Implementation Steps
+
+1. List every task in your reconciliation process, from initial GL pull to collection of final true-up payments
+2. Assign RACI codes based on who actually does each task today (not who should)
+3. Identify conflicts: tasks with no "R," tasks with two "A"s, tasks where the "R" does not have access to the data they need
+4. Resolve conflicts by reassigning roles and documenting the change
+5. Review the matrix with all four roles in the room. Disagreements at this stage prevent failures during reconciliation season
+6. Publish the matrix and reference it in your reconciliation timeline
+
+---
+
+## How CapVeri Supports Clear Delegation
+
+CapVeri's workflow assigns each reconciliation task to a specific role with visibility across the team. Controllers see their calculation tasks. Property managers see the expense context requests waiting for their input. Accounting managers see the review queue. Asset managers see the approval queue with aging metrics.
+
+When a task is overdue, the person accountable gets notified. No more forwarded emails or missed handoffs.
+
+---
+
+## Related Resources
+
+- [CAM Reconciliation Timeline Checklist](/resources/cam-reconciliation-timeline-checklist) - Map your RACI matrix to a calendar
+- [Defensible Reconciliation Package](/resources/defensible-reconciliation-package) - What the backup documentation should include
+- [Tenant Audit Defense Playbook](/resources/tenant-audit-defense-playbook) - Dispute resolution workflows in detail
+- [Multi-Property CAM Workflow](/resources/multi-property-cam-workflow) - Scaling the delegation matrix across a portfolio
+
+## Sources
+
+1. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

@@ -1,0 +1,38 @@
+{
+  "scenario": "edge_negative_variance",
+  "description": "Expenses decreased - potential tenant credit",
+  "inputs": {
+    "prior_year_estimate": 120000.0,
+    "prior_year_actual": 110000.0,
+    "tenant_paid_on_estimate": 3744.0,
+    "pro_rata_share": 0.0312
+  },
+  "calculation_steps": [
+    {
+      "step": 1,
+      "description": "Calculate what tenant should have paid",
+      "formula": "actual_expenses * pro_rata_share",
+      "calculation": "110000.00 * 0.0312 = 3432.00",
+      "result": 3432.0
+    },
+    {
+      "step": 2,
+      "description": "Calculate variance",
+      "formula": "amount_paid - amount_owed",
+      "calculation": "3744.00 - 3432.00 = 312.00",
+      "result": 312.0
+    },
+    {
+      "step": 3,
+      "description": "Determine credit due",
+      "result": 312.0,
+      "note": "Tenant overpaid - credit or refund due"
+    }
+  ],
+  "expected_output": {
+    "tenant_paid": 3744.0,
+    "tenant_owed": 3432.0,
+    "credit_due": 312.0,
+    "variance_type": "overpayment"
+  }
+}

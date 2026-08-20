@@ -1,0 +1,42 @@
+{
+  "lease_terms": {
+    "base_year": null,
+    "base_year_amount": null,
+    "gross_up_base_year": false,
+    "pro_rata_share": 1.0,
+    "cap_type": "none",
+    "cap_rate": null,
+    "admin_fee_percent": null,
+    "excluded_pools": ["capital"],
+    "accounting_basis": "accrual"
+  },
+  "premises": {
+    "rentable_sqft": 35000,
+    "usable_sqft": 35000,
+    "load_factor": 1.0
+  },
+  "rent": {
+    "monthly_base_rent": 58333.33,
+    "annual_base_rent": 700000.00,
+    "psf_annual": 20.00
+  },
+  "dates": {
+    "commencement_date": "2018-01-01",
+    "expiration_date": "2028-12-31"
+  },
+  "extraction_confidence": {
+    "base_year": "high",
+    "pro_rata_share": "high",
+    "cap_type": "high",
+    "cap_rate": "high",
+    "admin_fee_percent": "low",
+    "excluded_pools": "high",
+    "accounting_basis": "medium"
+  },
+  "notes": {
+    "pro_rata_share": "Single-tenant building. Section 2.2 explicitly states 100% for building-exclusive elements.",
+    "admin_fee_percent": "Section 5.5 allows 'reasonable allowance for Landlord's overhead' but specifies no percentage. The 20% in Section 3.1 is penalty-specific for remedial repairs only.",
+    "excluded_pools": "Capital expenditures excluded from CAM (Section 5.5) except: (a) maintenance items, (b) cost-reducing items, (c) Capital Repairs per Section 3.1, (d) items required by law -- all amortized over useful life per GAAP.",
+    "accounting_basis": "Inferred from GAAP amortization reference in Section 5.5"
+  }
+}

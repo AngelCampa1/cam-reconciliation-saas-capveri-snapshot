@@ -1,0 +1,24 @@
+{
+  "row_count": 60,
+  "total_units": 60,
+  "occupied_units": 46,
+  "vacant_units": 14,
+  "occupancy_rate": 0.767,
+  "active_leases": 44,
+  "expired_leases": 1,
+  "pending_leases": 1,
+  "total_annual_rent": 3979000.0,
+  "total_monthly_rent": 331583.3333333333,
+  "average_sqft": 2415.2,
+  "average_psf": 34.99,
+  "min_sqft": 824,
+  "max_sqft": 4984,
+  "period": "2025-01",
+  "property_code": "METRO-001",
+  "statuses": [
+    "ACTIVE",
+    "EXPIRED",
+    "PENDING",
+    "VACANT"
+  ]
+}

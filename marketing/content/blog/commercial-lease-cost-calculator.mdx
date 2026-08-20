@@ -1,0 +1,219 @@
+---
+title: "Commercial Lease Calculator: How to Model Your True Total Occupancy Cost"
+description: "How to calculate total commercial lease cost: base rent, CAM estimate, taxes, insurance, and sensitivity analysis. Step-by-step walkthrough with real dollar scenarios."
+excerpt: "The rent number in the LOI is never your actual occupancy cost. For a 5,000 SF office tenant, the gap between quoted rent and total occupancy cost is typically $4–9/SF annually."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "operations"
+faq:
+  - q: "How do you calculate total commercial lease cost?"
+    a: "Total commercial lease cost = base rent + CAM charges + property taxes (tenant's pro-rata share) + property insurance (tenant's pro-rata share) + any additional rent items specified in the lease. For triple-net leases, all four components apply. For gross leases with expense stops, you pay the base rent plus any operating expenses above the stop amount. Always calculate annual cost first, then divide by square footage to get a per-SF figure you can compare across properties."
+  - q: "What is the difference between base rent and total occupancy cost in a commercial lease?"
+    a: "Base rent is the fixed rent obligation before any operating expense pass-throughs. Total occupancy cost adds CAM, taxes, and insurance to base rent. On a typical triple-net suburban office lease, CAM runs $6–12/SF, taxes $3–7/SF, and insurance $0.50–1.50/SF. A lease quoted at $22/SF NNN could have a total occupancy cost of $35–42/SF depending on the building's operating profile. The gap between base rent and total cost is frequently $10–18/SF, which significantly affects how leases compare against each other."
+  - q: "How accurate are CAM estimates provided by landlords?"
+    a: "Landlord CAM estimates are frequently 15–25% below actual first-year costs. This is partly because estimates are made 3–6 months before the lease year begins and actual expenses aren't finalized, and partly because estimates that are too high can deter tenants from signing. Always request the prior two to three years of actual CAM reconciliation statements alongside the estimate. The trend of actuals versus estimates tells you more than any single estimate figure."
+  - q: "What should I look for in a commercial lease cost calculator?"
+    a: "A useful commercial lease cost calculator should handle base rent, CAM, taxes, and insurance separately, not lumped together. It should allow input of CAM growth rates by category (controllable vs. non-controllable), apply cap provisions to controllable expenses, and model the gross-up adjustment if applicable. A good calculator also shows year-by-year cost projections over the full lease term, not just year-one totals. Comparing two buildings requires modeling both through lease expiration to get a meaningful NPV comparison."
+  - q: "How do I compare two commercial lease options on a total cost basis?"
+    a: "Normalize everything to annual cost per square foot, then project over the full term. Building A might have lower base rent but higher CAM with no cap; Building B might have higher base rent but a 5% non-cumulative cap on controllable expenses. Over a 7-year term, Building B could be cheaper in total even with the higher starting rent. Use the net present value of total occupancy cost, discounted at your cost of capital, to compare. Also factor in TI allowance. A larger TI allowance offsets higher rent in the early years."
+  - q: "Do I pay CAM on the full building or just my space?"
+    a: "You pay your pro-rata share of CAM for the entire building's common areas, not just the costs attributable to your space. If you occupy 5% of a building, you pay 5% of all eligible common area expenses. This is why a tenant in a large, high-amenity building can pay significantly more in CAM than a tenant in a smaller, simpler building, even if the base rents are comparable. CAM rates can range from $3/SF in a basic single-story retail strip to $18/SF or more in a Class A urban office building."
+---
+
+A 5,000 SF tenant signed a lease at $28/SF NNN. The LOI said CAM was "estimated at $8.50/SF." By year two, their total rent invoice was $47,200/month. That's $113/SF annually on a space they thought would cost $85/SF. The gap was real, documented, and entirely legal under the lease they signed.
+
+The commercial lease calculator problem isn't math. It's knowing what to put into the calculation. Most tenants model base rent accurately and CAM inaccurately. The result is an occupancy budget understated by 20–40% before year one even closes.
+
+## What Total Commercial Lease Cost Actually Includes
+
+For a triple-net (NNN) lease, total occupancy cost has four components:
+
+**1. Base Rent:** The fixed rent per square foot per year, escalating per the lease escalation schedule.
+
+**2. CAM (Common Area Maintenance):** Your pro-rata share of operating expenses for common areas. Includes janitorial, landscaping, security, parking lot maintenance, management fees, and common area utilities. Most variable; most disputed.
+
+**3. Property Taxes:** Your pro-rata share of the landlord's property tax bill. Non-controllable and typically the second-largest component.
+
+**4. Property Insurance:** Your pro-rata share of the building's property insurance premium. Smallest of the four in most cases, but can spike in certain markets.
+
+In a modified gross lease, some of these items are bundled into the base rent. In a full gross lease, all four are included in the rent figure. In an NNN lease, all four are separate and you need to model each independently.
+
+## The Complete Commercial Lease Cost Model
+
+Let's build a full model for a 5,000 SF office tenant in a 100,000 SF Class B suburban office building.
+
+**Lease terms:**
+- Base rent: $22/SF/year, 3% annual escalation
+- CAM: Estimated at $9.50/SF with 5% non-cumulative cap on controllable
+- Taxes: Estimated at $4.75/SF (actual from prior year tax bill)
+- Insurance: Estimated at $0.85/SF
+- Lease term: 7 years (2026–2032)
+- Pro-rata share: 5,000 ÷ 100,000 = 5.0%
+
+**Year 1 cost breakdown:**
+
+| Component | Per SF | Annual (5,000 SF) | Monthly |
+|-----------|--------|-------------------|---------|
+| Base rent | $22.00 | $110,000 | $9,167 |
+| CAM | $9.50 | $47,500 | $3,958 |
+| Property taxes | $4.75 | $23,750 | $1,979 |
+| Insurance | $0.85 | $4,250 | $354 |
+| **Total Year 1** | **$37.10** | **$185,500** | **$15,458** |
+
+That $37.10/SF total versus $22/SF base rent is a 69% premium. For a tenant budgeting based on the LOI rent figure, this is a significant surprise.
+
+## Projecting Costs Over the Full Lease Term
+
+Year one is just the starting point. The real question is what you pay over seven years, and that requires modeling each component's growth rate separately.
+
+**Growth rate assumptions:**
+- Base rent: 3% annual (per lease)
+- CAM controllable: 5% annual (at cap limit)
+- CAM non-controllable: 3% annual estimate
+- Property taxes: 4% annual estimate (local assessment trend)
+- Insurance: 5% annual estimate (market trend)
+
+| Year | Base Rent/SF | CAM/SF | Taxes/SF | Insurance/SF | Total/SF | Annual Cost |
+|------|-------------|--------|----------|--------------|----------|-------------|
+| 2026 | $22.00 | $9.50 | $4.75 | $0.85 | $37.10 | $185,500 |
+| 2027 | $22.66 | $9.98 | $4.94 | $0.89 | $38.47 | $192,350 |
+| 2028 | $23.34 | $10.48 | $5.14 | $0.94 | $39.90 | $199,500 |
+| 2029 | $24.04 | $11.00 | $5.35 | $0.99 | $41.38 | $206,900 |
+| 2030 | $24.76 | $11.55 | $5.56 | $1.04 | $42.91 | $214,550 |
+| 2031 | $25.51 | $12.13 | $5.78 | $1.09 | $44.51 | $222,550 |
+| 2032 | $26.27 | $12.74 | $6.01 | $1.15 | $46.17 | $230,850 |
+| **7-Year Total** | | | | | | **$1,452,200** |
+
+Over 7 years, total occupancy cost is $1.45 million ($290.44/SF on a 5,000 SF lease). The base rent alone would have been $168/SF over the same period. The "NNN" adds $122/SF in total occupancy cost over the lease term.
+
+## Sensitivity Analysis: What Happens If Estimates Are Wrong?
+
+Landlord CAM estimates are not guarantees. Request the prior two to three years of actual reconciliation statements. Compare actuals versus estimates each year. If the landlord consistently comes in 15–20% above estimate, apply that factor to their current estimate.
+
+**Sensitivity scenarios on Year 1 CAM estimate:**
+
+| Scenario | CAM Estimate/SF | CAM Actual/SF | Annual Impact | 7-Year Impact |
+|----------|----------------|---------------|---------------|---------------|
+| Base case | $9.50 | $9.50 | $0 | $0 |
+| 10% above estimate | $9.50 | $10.45 | +$4,750 | +$39,900 |
+| 20% above estimate | $9.50 | $11.40 | +$9,500 | +$79,800 |
+| 30% above estimate | $9.50 | $12.35 | +$14,250 | +$119,700 |
+
+A CAM estimate that comes in 20% high in year one and compounds from there adds $80,000 to your 7-year total occupancy cost. On a 5,000 SF space that seemed like a good deal at $22/SF, this is material.
+
+Use the [CAM estimate forecaster](/tools/cam-estimate-forecaster) to model your sensitivity scenarios before signing, and the [CAM billing error estimator](/tools/cam-billing-error-estimator) to track actual versus estimated during the lease term.
+
+## The Gross-Up Effect on Your Cost Model
+
+If the building is partially vacant and the lease contains a [gross-up provision](/resources/gross-up-clause-commercial-lease), your effective CAM is higher than the base estimate. The gross-up adjusts variable expenses as if the building were 90–95% occupied.
+
+**Gross-up impact example:**
+- Building actual occupancy: 75%
+- Gross-up occupancy: 95%
+- Variable CAM expenses (building-level): $600,000
+- Gross-up adjusted variable: $600,000 ÷ 75% × 95% = $760,000
+- Fixed CAM expenses: $350,000
+- Total adjusted CAM: $1,110,000 (vs. $950,000 without gross-up)
+- Impact on your 5% pro-rata share: +$8,000/year
+
+Over a 7-year lease, gross-up in a partially occupied building can add $50,000–$80,000 to your total cost. This needs to be in your model if the building has significant vacancy.
+
+For the detailed calculation mechanics, see [gross-up clause lease explained](/blog/gross-up-clause-lease-explained) and the [CAM gross-up calculator](/tools/cam-gross-up-calculator).
+
+## Comparing Two Properties Side by Side
+
+The commercial lease calculator is most valuable when you're comparing options. Normalize everything to annual per-SF cost and project over the full term.
+
+**Comparison: Building A vs. Building B**
+
+| Metric | Building A | Building B |
+|--------|-----------|-----------|
+| Base rent | $24/SF | $20/SF |
+| CAM (actual prior year) | $8.20/SF | $11.40/SF |
+| Taxes | $4.20/SF | $5.80/SF |
+| Insurance | $0.75/SF | $0.90/SF |
+| **Year 1 total** | **$37.15/SF** | **$38.10/SF** |
+| Cap structure | 3% non-cumulative | Uncapped |
+| TI allowance | $30/SF | $45/SF |
+| Lease term | 7 years | 7 years |
+
+Building A looks more expensive in year one ($37.15/SF vs. $38.10/SF). But the uncapped CAM at Building B means by year four, assuming Building B's CAM grows at 6% annually, total occupancy cost at Building B exceeds Building A by $2.50/SF. That gap widens every year.
+
+Over 7 years, Building A's capped structure saves approximately $87,500 on a 5,000 SF space versus Building B's uncapped arrangement, despite the higher year-one cost. Building B's larger TI allowance ($45/SF vs. $30/SF = $75,000 difference) partially offsets this, but not fully.
+
+You can't see this without the full term model. The rent number alone is misleading.
+
+## The CAM Cap's Effect on Your Long-Term Cost Model
+
+The cap provision is the most undervalued lease term in new lease negotiations. Over a 7-year term, the difference between a 5% cumulative cap and a 3% non-cumulative cap is substantial.
+
+**Cap comparison on controllable CAM (5,000 SF tenant):**
+
+Assume controllable CAM is $6.50/SF in year one.
+
+| Year | 5% Cumulative | 3% Non-Cumulative | Annual Savings |
+|------|--------------|-------------------|----------------|
+| 1 | $6.50 | $6.50 | $0 |
+| 2 | $6.83 | $6.70 | $650 |
+| 3 | $7.17 | $6.90 | $1,350 |
+| 4 | $7.53 | $7.11 | $2,100 |
+| 5 | $7.90 | $7.32 | $2,900 |
+| 6 | $8.30 | $7.54 | $3,800 |
+| 7 | $8.72 | $7.77 | $4,750 |
+| **7-Yr Total (per SF)** | **$52.95** | **$49.84** | **$15,550** |
+
+On a 5,000 SF lease, the cap structure choice alone is worth $15,550 over seven years, before accounting for compounding differences. That's real money, and it's completely determined by a clause most tenants don't focus on.
+
+See [commercial lease negotiation CAM clauses](/blog/commercial-lease-negotiation-cam-clauses) for how to negotiate the cap structure, and [cam expense caps](/resources/cam-expense-caps) for the technical detail.
+
+## Beyond the Calculator: What the Numbers Don't Capture
+
+The cost model tells you what you'll pay. It doesn't tell you how well the landlord manages expenses, how responsive they are to service issues, or how aggressively they bill.
+
+A landlord who sends reconciliations late, is vague about the expense pool, and resists audit requests is a higher-risk landlord regardless of what the numbers show. Check references from existing tenants in the building before you sign.
+
+Also verify your [audit rights](/resources/tenant-audit-rights-landlord) before signing. A right to audit with a 24-month lookback and fee-shifting for overbilling larger than 3% of annual CAM is worth real money. Not because you're planning to audit, but because it incentivizes accurate billing.
+
+## Building Your Own Occupancy Cost Model
+
+You don't need a complex spreadsheet to model total occupancy cost. Here's the minimum viable structure:
+
+**Columns:** Year, Base Rent/SF, CAM/SF (controllable), CAM/SF (non-controllable), Taxes/SF, Insurance/SF, Total/SF, Annual Cost (SF × total/SF)
+
+**Rows:** One per lease year
+
+**Add on rows:**
+- Total 7-year cost
+- NPV of total cost (discounted at your cost of capital)
+- TI allowance (negative - offsets cost)
+- Net 7-year total occupancy cost
+
+For a comprehensive view of all the occupancy cost components, see [occupancy cost analysis commercial lease](/blog/occupancy-cost-analysis-commercial-lease), which covers the full breakdown including fit-out costs, moving expenses, and opportunity costs of relocation.
+
+The [pro-rata calculator](/tools/pro-rata-calculator) verifies your share calculation, and the [base year escalation tool](/tools/base-year-escalation) models how base year rent structures affect long-term cost in modified gross leases.
+
+## Using the CAM Estimate Forecaster
+
+Before you finalize your occupancy cost model, run the landlord's CAM estimate through the [CAM estimate forecaster](/tools/cam-estimate-forecaster). Input:
+
+- Prior three years of actual CAM reconciliation data
+- Current estimate for the upcoming year
+- Cap structure from your proposed lease
+- Occupancy of the building and gross-up assumption if applicable
+
+The forecaster shows you whether the landlord's estimate is consistent with their historical actuals, what your expected range of year-end true-up charges looks like, and where the biggest variance risk lies (typically management fees, utilities, and taxes).
+
+This analysis takes 15 minutes and can reveal that a seemingly competitive building is a consistently expensive one to occupy.
+
+---
+
+For tenants in multi-tenant retail properties, also review [co-tenancy clause CAM impact](/blog/co-tenancy-clause-cam-impact). Co-tenancy provisions can affect your total cost indirectly by changing the denominator calculation if triggered tenants are removed from the pool.
+
+*CapVeri automates CAM reconciliation for landlords and property managers. [Start a free trial](/pricing) to run your first property comparison.*
+
+## Sources
+
+1. [ICSC - Dictionary of Shopping Center Terms](https://www.icsc.com/news-and-views/newsstand/icscs-dictionary-of-shopping-center-terms-fourth-edition)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

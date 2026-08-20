@@ -1,0 +1,178 @@
+---
+title: "Harris County CAM Gross-Up Calculation"
+description: "Master the Harris County commercial lease gross up calculation. Fix HCAD retroactive adjustment errors and bifurcate fixed vs. variable expenses correctly."
+datePublished: "2026-01-15"
+dateModified: "2026-02-24"
+author: "Angel Campa"
+buttonText: "Fix Your Gross-Up"
+order: 8
+faq:
+  - q: "Does the gross-up clause apply to all Houston commercial leases?"
+    a: "No. Gross-up provisions must be explicitly written into the lease. Most Class A office leases in Houston executed after 2015 include them, but older leases (common in Greenspoint and the Northwest Freeway corridor) often do not. If your lease does not include a gross-up provision, you cannot apply one unilaterally. Review the \"Operating Expenses\" and \"Additional Rent\" definitions in your lease before any calculation."
+  - q: "Can landlords include HCAD tax protest attorney fees in the CAM pool?"
+    a: "Under Medic Pharmacy, LLC v. AVK Properties, LLC (2022): no, unless the lease specifically permits recovery of tax protest costs. Standard leases allow property taxes to pass through, but legal and consulting fees to contest those taxes are generally considered landlord expenses. Check your lease's definition of \"Operating Expenses\" for language like \"costs of contesting assessments\" before including these."
+  - q: "How do we handle a mid-year HCAD supplemental assessment?"
+    a: "If HCAD issues a supplemental tax bill mid-year (common when property ownership transfers or improvements are completed), add it to the fixed expense bucket in the period it is incurred. If the reconciliation has already been sent, issue an amended statement. Do not gross it up. It is a fixed expense regardless of timing."
+  - q: "What occupancy percentage should we use: leased or occupied?"
+    a: "Most Houston leases specify \"leased and occupied\" or just \"leased.\" If your lease is silent, BOMA and Texas courts generally apply the \"leased\" percentage, meaning tenants who have signed leases but have not yet taken occupancy count toward the occupancy figure. This distinction matters significantly during high-sublease periods like the current Energy Corridor market."
+  - q: "We received an HCAD refund for a closed reconciliation year. Do we owe tenants money?"
+    a: "Almost certainly yes, if the lease defines operating expenses on an actual-cost basis and includes reconciliation provisions. Issue amended CAM statements for the affected year crediting the refund on a pro-rata basis. The refund applies only to the fixed expense (tax) line; do not adjust the grossed-up variable expense calculation for that year."
+---
+
+_Updated: February 2026 · For controllers and accounting managers at Houston-area commercial PMCs_
+
+<Alert type="info" title="TL;DR">
+Houston's 26.3% office vacancy rate means most Energy Corridor and Galleria leases trigger gross-up clauses. HCAD's retroactive assessment corrections and improper fixed/variable bifurcation are generating systematic overcharges. This guide walks through the math, the legal exposure, and the correct calculation sequence. (Vacancy data: CBRE Houston Office Q4 2025)
+</Alert>
+
+## The Houston Gross-Up Problem in Plain Numbers
+
+Take a 100,000-square-foot Class A building in the Energy Corridor. Current occupancy sits at 73%, not unusual given the submarket's 22.9% vacancy. The lease's gross-up clause kicks in at 95% occupancy.
+
+Here's where most property managers get it wrong.
+
+<Alert type="warning" title="Incorrect approach (what most systems do)">
+```
+Total variable operating expenses:    $850,000
+Gross-up to 95%:   $850,000 × (95 ÷ 73) = $1,106,164
+```
+</Alert>
+
+<Alert type="tip" title="Correct approach (proper bifurcation first)">
+```
+Step 1 - Separate expense categories:
+  Truly variable (utilities, janitorial):  $620,000
+  Step-function (management fees at 4%):   $125,000
+  Fixed (taxes, insurance, security):      $105,000
+                                      ──────────────
+  Total:                                   $850,000
+
+Step 2 - Gross-up only the variable portion:
+  $620,000 × (95 ÷ 73) =                  $806,849
+
+Step 3 - Add step-function costs unchanged:
+  $806,849 + $125,000 =                    $931,849
+
+Final grossed-up pool:                   $931,849
+```
+</Alert>
+
+**The delta:** $1,106,164 − $931,849 = **$174,315 tenant overcharge** on a single building in a single year. Multiply that across a 10-property portfolio and you have seven-figure exposure.
+
+Houston's current market conditions make this calculation non-negotiable. With Greenspoint at 49.1% vacancy and FM 1960 at 37.8% (CBRE Q4 2025), gross-up provisions are triggering on nearly every lease in the MSA. Controllers who haven't audited their gross-up methodology recently have almost certainly been calculating incorrectly.
+
+## How HCAD Retroactive Adjustments Break Standard Gross-Up Formulas
+
+Harris County Appraisal District operates on a timeline that doesn't align with CAM reconciliation cycles. Here's the collision that breaks most accounting systems:
+
+- **March 2024:** You close the 2023 CAM reconciliation. Tenant's pro-rata share of property taxes: $125,000. Statement sent.
+- **August 2024:** Landlord files a Section 25.25 protest on the 2023 assessed value.
+- **November 2024:** HCAD reduces the 2023 assessed value by $2.1M. Tax refund to landlord: $47,200.
+
+The question your lease probably doesn't answer clearly: does that $47,200 refund reduce the tenant's 2023 CAM obligation?
+
+Most standard NNN leases say expenses are calculated on an "incurred" basis. The tax was incurred in 2023 at $125,000. But the landlord received a refund in 2024. _Medic Pharmacy, LLC v. AVK Properties, LLC_ (Harris County District Court, 2022) established that landlords bear the burden of proving their expense ledgers are properly bifurcated and that tax protest costs cannot be folded into the CAM pool.
+
+**The gross-up contamination problem:** When accounting systems receive the HCAD credit, they often apply it as a negative expense in the CAM pool, before gross-up is applied. Correct treatment: property tax adjustments must be applied to the fixed expense bucket _after_ gross-up calculation, with documentation showing the HCAD notice number and effective period.
+
+## Fixed vs. Variable Bifurcation: The Calculation Most Managers Get Wrong
+
+### Fixed Expenses (excluded from gross-up)
+
+| Expense Category | Why It's Fixed | Common GL Codes |
+|---|---|---|
+| Ad valorem property taxes | Assessed on building value, not occupancy | 7100–7150 |
+| Property and liability insurance | Premium set annually by risk profile | 6900–6950 |
+| Landscaping and exterior maintenance | Contract-based, building-wide | 6400–6450 |
+| Security services | Staffed at full-building level | 6500–6550 |
+| Structural repairs | Capital/reserve; occupancy-independent | 8100–8200 |
+
+### Variable Expenses (subject to gross-up)
+
+| Expense Category | Variability Driver | Typical Range |
+|---|---|---|
+| Utilities (electric, gas, water) | Direct function of occupancy | 60–80% variable |
+| Janitorial services | Per-occupied-floor contracts | 90–100% variable |
+| Trash removal | Volume-based | 80–90% variable |
+| HVAC maintenance (occupied floors) | Usage-driven | 50–70% variable |
+
+**Management fees** present the trickiest case. A 4% management fee on a building with $2M in gross revenues doesn't linearly scale with occupancy. Bill Brownfield's _Escalation Handbook for Office Buildings_ (3rd ed.) recommends applying gross-up only to the portion of the management fee directly tied to tenant services (typically 40–60%).
+
+## Step-by-Step: Correct Gross-Up Calculation for a Partially Occupied Harris County Building
+
+**Scenario:** 85,000 RSF Galleria-area office. Current occupancy: 68%. Lease gross-up threshold: 95%.
+
+<Steps>
+  <Step title="Pull the full operating expense register">
+    Get every line item coded and categorized before calculating anything.
+  </Step>
+  <Step title="Bifurcate the expense pool">
+    ```
+    Fixed expenses total:        $412,000
+    Variable expenses total:     $538,000
+    Semi-variable (mgmt fees):    $84,000
+    ─────────────────────────────────────
+    Total operating expenses:  $1,034,000
+    ```
+  </Step>
+  <Step title="Calculate the gross-up multiplier">
+    ```
+    Multiplier = 95% ÷ 68% = 1.3971
+    ```
+  </Step>
+  <Step title="Apply multiplier only to variable expenses">
+    ```
+    $538,000 × 1.3971 = $751,640
+    ```
+  </Step>
+  <Step title="Apply partial multiplier to semi-variable">
+    ```
+    Variable portion (50%): $42,000 × 1.3971 = $58,678
+    Fixed portion (50%):   $42,000 × 1.0000 = $42,000
+    Subtotal:                                  $100,678
+    ```
+  </Step>
+  <Step title="Add fixed expenses at actual cost">
+    ```
+    $751,640 + $100,678 + $412,000 = $1,264,318
+    ```
+  </Step>
+  <Step title="Apply HCAD adjustments to fixed bucket only, after gross-up">
+    ```
+    HCAD credit: ($31,400)
+    Adjusted fixed: $412,000 − $31,400 = $380,600
+    Final pool: $751,640 + $100,678 + $380,600 = $1,232,918
+    ```
+  </Step>
+  <Step title="Calculate tenant pro-rata share">
+    ```
+    Tenant: 12,500 SF ÷ 85,000 SF = 14.71%
+    Tenant CAM: $1,232,918 × 14.71% = $181,362
+    ```
+  </Step>
+</Steps>
+
+<FAQSection items={[
+  { q: "Does the gross-up clause apply to all Houston commercial leases?", a: "No. Gross-up provisions must be explicitly written into the lease. Most Class A office leases in Houston executed after 2015 include them, but older leases (common in Greenspoint and the Northwest Freeway corridor) often do not. If your lease does not include a gross-up provision, you cannot apply one unilaterally. Review the \"Operating Expenses\" and \"Additional Rent\" definitions in your lease before any calculation." },
+  { q: "Can landlords include HCAD tax protest attorney fees in the CAM pool?", a: "Under Medic Pharmacy, LLC v. AVK Properties, LLC (2022): no, unless the lease specifically permits recovery of tax protest costs. Standard leases allow property taxes to pass through, but legal and consulting fees to contest those taxes are generally considered landlord expenses. Check your lease's definition of \"Operating Expenses\" for language like \"costs of contesting assessments\" before including these." },
+  { q: "How do we handle a mid-year HCAD supplemental assessment?", a: "If HCAD issues a supplemental tax bill mid-year (common when property ownership transfers or improvements are completed), add it to the fixed expense bucket in the period it is incurred. If the reconciliation has already been sent, issue an amended statement. Do not gross it up. It is a fixed expense regardless of timing." },
+  { q: "What occupancy percentage should we use: leased or occupied?", a: "Most Houston leases specify \"leased and occupied\" or just \"leased.\" If your lease is silent, BOMA and Texas courts generally apply the \"leased\" percentage, meaning tenants who have signed leases but have not yet taken occupancy count toward the occupancy figure. This distinction matters significantly during high-sublease periods like the current Energy Corridor market." },
+  { q: "We received an HCAD refund for a closed reconciliation year. Do we owe tenants money?", a: "Almost certainly yes, if the lease defines operating expenses on an actual-cost basis and includes reconciliation provisions. Issue amended CAM statements for the affected year crediting the refund on a pro-rata basis. The refund applies only to the fixed expense (tax) line; do not adjust the grossed-up variable expense calculation for that year." }
+]} />
+
+<CTABox
+  title="Run your Harris County gross-up in minutes"
+  description="Automated bifurcation, HCAD adjustment tracking, and audit-ready output."
+  utmContent="u_cta"
+  buttonText="Fix Your Gross-Up"
+/>
+
+Related: [What Is CAM Reconciliation?](/resources/common-area-maintenance-reconciliation-explained) · [CAM Gross-Up Calculator](/tools/cam-gross-up-calculator) · [Sources & methodology](/sources#houston-vacancy)
+
+## Sources
+
+1. Houston office vacancy 26.3% (Q4 2025) - [Sources & methodology](/sources#houston-vacancy)
+2. Partners Real Estate Q4 2025 Report - [Partners Real Estate](https://partnersrealestate.com/research/houston-office-q4-2025-quarterly-market-report/)
+3. HCAD 2025-2026 Reappraisal Plan - [HCAD](https://hcad.org/hcad-resources/reappraisal/)
+4. Parr Brown gross-up provisions - [Parr Brown](https://parrbrown.com/leasing-basics-gross-up-provisions/)
+5. BOMA measurement standards - [BOMA](https://boma.org/boma-standards/)

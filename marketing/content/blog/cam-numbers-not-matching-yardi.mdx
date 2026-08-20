@@ -1,0 +1,130 @@
+---
+title: "CAM Numbers Don't Match Yardi? 5 Root Causes and How to Fix Each One"
+description: "The 5 most common reasons CAM reconciliation totals don't match Yardi Voyager: GL mapping gaps, stale RSF, gross-up errors, unapplied cash, and cap misconfigs."
+excerpt: "Five root causes of CAM reconciliation discrepancies in Yardi, and how to find and fix each one before your tenant does."
+datePublished: "2026-02-27"
+dateModified: "2026-03-22"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "cam-errors"
+faq:
+  - q: "Why are my Yardi CAM totals different from my manual calculation?"
+    a: "The most common reason is that Yardi runs accurate math on whatever data lives in the GL, and the GL has errors. Non-recoverable expenses coded to recoverable accounts, stale square footage from lease execution, and unapplied tenant cash payments all produce totals that look correct inside Yardi but don't match a manually reconstructed reconciliation. Yardi doesn't flag these inputs as wrong. You have to catch them upstream."
+  - q: "Can Yardi handle cumulative CAM expense caps automatically?"
+    a: "Not out of the box. Cumulative cap banks, compounding cap structures, and per-tenant cap schedules require paid configuration work and often ongoing consulting support. G2 reviews of Yardi Commercial Management consistently note that executing custom lease caveats requires extensive, costly support. Teams that assume Yardi is handling cap math it isn't configured for will over-bill tenants every year the cap should have applied."
+  - q: "Does Yardi gross-up CAM expenses correctly?"
+    a: "Yardi's out-of-box gross-up may apply the multiplier to the full expense pool rather than to variable expenses only. Fixed costs like property taxes, insurance premiums, and fixed-contract services don't change with occupancy, so they must be excluded from the gross-up base. A $50,000 tax bill grossed up at 50% occupancy adds $50,000 in phantom charges that no lease justifies. The gross-up base must be limited to variable expenses before the multiplier is applied."
+  - q: "What is unapplied cash in Yardi and how does it affect reconciliation?"
+    a: "Unapplied cash refers to tenant payments received but not matched to a specific expense account or charge code. These payments float as unallocated balances in Yardi and can distort CAM pool totals when you run reconciliation. The variance shows up as an unexplained difference between what the system shows as collected and what the expense pool expects. Reconciling unapplied cash before year-end close is a required step if you want CAM totals to tie out."
+  - q: "Is there a way to independently audit Yardi's CAM calculations?"
+    a: "Yes. Export the GL data from Yardi as a CSV and run the reconciliation in a system that sits outside Yardi's calculation engine. CapVeri ingests the GL export directly and produces an independent reconciliation, including gross-up, cap math, and pro-rata calculations, with a full trace showing exactly where the numbers diverge from Yardi's output. This is the same approach tenant auditors use: they don't audit inside Yardi, they audit the data Yardi produces."
+---
+
+<Alert type="info" title="Quick Answer">
+  If your CAM reconciliation totals don't match what Yardi shows, the problem is
+  almost never a bug. It's usually one of five data and configuration issues
+  that Yardi processes without complaint. Each one has a fix that doesn't
+  require a support ticket.
+</Alert>
+
+## 1. Miscoded AP Invoices Pass Through Unchallenged
+
+Yardi runs accurate math on whatever lives in the GL. That's the problem.
+
+Non-recoverable expenses (marketing spend, leasing commissions, capital expenditures) coded to recoverable accounts get included in the CAM pool and billed to tenants automatically. Yardi's calculation modules have no way to know a CapEx invoice shouldn't be there. As PredictAP notes, "Calculation modules will process miscoded AP data, making front-end GL accuracy paramount."
+
+The discrepancy appears when you manually reconstruct the pool from source invoices and find items that have no basis in the lease's definition of operating expenses. Yardi shows a larger pool. Your manual total is smaller. Both are doing the math correctly; the inputs are different.
+
+**Fix:** Run a GL scrub before executing reconciliation. Pull every invoice coded to a recoverable account and verify it against the lease's expense exclusion list. Anything that fails, including CapEx, leasing costs, and above-the-line management, must be recoded before the reconciliation runs.
+
+## 2. Unapplied Cash Distorts the Pool
+
+When tenant payments are received but not matched to a specific charge code or expense account, they sit in Yardi as unallocated balances. These unapplied cash amounts create floating variances in CAM pool totals that are difficult to trace without a dedicated reconciliation of the cash ledger.
+
+The symptom is a CAM total that doesn't match the sum of recoverable expense invoices by an amount that looks like a partial payment. The root cause is that cash activity and expense activity are running on parallel tracks that haven't been reconciled against each other. NtrustInfotech's Yardi accounting guides flag unapplied cash as a recurring source of year-end variance for this exact reason.
+
+**Fix:** Before year-end close, run a full unapplied cash report in Yardi and match every open balance to its corresponding charge. Any cash that can't be matched should be investigated before it contaminates the reconciliation.
+
+## 3. Square Footage Is Frozen at Lease Execution
+
+Yardi defaults to the square footage recorded when the lease was signed. If the building was re-measured due to a renovation, a space reconfiguration, or an update to measurement standards, the denominator Yardi uses for every pro-rata calculation is wrong until someone manually updates it.
+
+This matters especially with BOMA 2024. The 2024 standard introduced changes to Non-Allocated Tenant Area definitions that affect how rentable area is calculated across multi-tenant floors. Buildings re-measured under BOMA 2024 may have different rentable SF values than what's recorded in Yardi for leases signed under prior standards. As Building Engines notes, the BOMA 2024 updates require landlords to revisit their measurement methodology and, where buildings have been re-measured, update the SF figures in their property management systems. See [BOMA 2024 measurement changes](/blog/boma-2024-changes) for what changed and which lease structures are most affected.
+
+**Fix:** Compare the SF in Yardi against the current BOMA-certified measurement for each tenant space. Any discrepancy requires a manual update to the lease record in Yardi before the pro-rata calculation is run.
+
+## 4. Gross-Up Applied Globally Instead of to Variable Expenses Only
+
+Yardi's out-of-box gross-up configuration may apply the multiplier to the full CAM expense pool. That's wrong.
+
+Fixed expenses like property taxes, insurance premiums, contracted security, and other costs that don't change based on how many tenants occupy the building must be excluded from the gross-up base. As both Stross Law and Lowndes Law have documented in lease interpretation guidance, the gross-up adjustment is justified only for variable expenses, because only variable expenses would actually increase if the building were fully occupied.
+
+The math is not complicated. A $50,000 property tax bill grossed up at 50% occupancy produces $100,000 in expense pool charges. That extra $50,000 is phantom: taxes don't double because the building fills up. Tenants who audit will identify this immediately. Professional CAM auditors check it first.
+
+**Fix:** Separate your expense pool into fixed and variable categories before applying the gross-up. The multiplier applies only to the variable pool. Fixed expenses pass through at actual cost, regardless of occupancy.
+
+## 5. Custom Cap Logic Requires Paid Configuration Work
+
+Cumulative cap banks, compounding cap structures, and per-tenant cap schedules are not Yardi out-of-the-box functionality. G2 reviews of Yardi Commercial Management consistently note that "executing custom lease caveats requires extensive, costly support." This is a known limitation of the platform, not a bug.
+
+The problem is that teams who don't know this assume Yardi is doing cap math it hasn't been configured to do. The system processes the expense pool and produces a number. That number doesn't reflect the cap. The discrepancy between what Yardi bills and what the lease allows can compound for years before an audit surfaces it.
+
+This is the same category of issue that produces [CAM reconciliation errors](/blog/cam-reconciliation-errors) in portfolios where lease complexity outpaces system configuration: the billing engine doesn't fail, it just calculates something different from what the lease requires.
+
+**Fix:** For every tenant with a cap clause, verify that the cap logic in Yardi matches what the lease requires. If the lease has cumulative banking, compounding, or per-tenant structures, confirm with your Yardi implementation team whether those features have been configured and tested. If they haven't, the cap is not being applied.
+
+## How CapVeri Solves This
+
+CapVeri sits adjacent to Yardi. You export the GL data as a CSV, the same export you already produce for year-end close, and CapVeri runs the reconciliation independently, outside Yardi's calculation engine.
+
+The independent calculation catches the errors Yardi can't catch itself. For gross-up errors, CapVeri applies the multiplier only to variable expenses and flags any fixed costs that appear in the gross-up base. For cap violations, cumulative banks, compounding structures, and per-tenant caps are calculated from lease terms, not from Yardi's configuration. For pro-rata discrepancies, the denominator is verified against current building SF, not the SF frozen at lease execution.
+
+The output is a full calculation trace that shows exactly where CapVeri's numbers diverge from Yardi's output, line by line, with the lease clause that governs each calculation.
+
+For instructions on exporting your GL data from Yardi in the format CapVeri expects, see the [Yardi export guide](/resources/export-guide). For a direct comparison of what CapVeri does versus what Yardi's native reconciliation tools produce, see [CapVeri vs. Yardi](/vs/yardi).
+
+<FAQSection
+  items={[
+    {
+      q: "Why are my Yardi CAM totals different from my manual calculation?",
+      a: "The most common reason is that Yardi runs accurate math on whatever data lives in the GL, and the GL has errors. Non-recoverable expenses coded to recoverable accounts, stale square footage from lease execution, and unapplied tenant cash payments all produce totals that look correct inside Yardi but don't match a manually reconstructed reconciliation. Yardi doesn't flag these inputs as wrong. You have to catch them upstream.",
+    },
+    {
+      q: "Can Yardi handle cumulative CAM expense caps automatically?",
+      a: "Not out of the box. Cumulative cap banks, compounding cap structures, and per-tenant cap schedules require paid configuration work and often ongoing consulting support. G2 reviews of Yardi Commercial Management consistently note that executing custom lease caveats requires extensive, costly support. Teams that assume Yardi is handling cap math it isn't configured for will over-bill tenants every year the cap should have applied.",
+    },
+    {
+      q: "Does Yardi gross-up CAM expenses correctly?",
+      a: "Yardi's out-of-box gross-up may apply the multiplier to the full expense pool rather than to variable expenses only. Fixed costs like property taxes, insurance premiums, and fixed-contract services don't change with occupancy, so they must be excluded from the gross-up base. A $50,000 tax bill grossed up at 50% occupancy adds $50,000 in phantom charges that no lease justifies. The gross-up base must be limited to variable expenses before the multiplier is applied.",
+    },
+    {
+      q: "What is unapplied cash in Yardi and how does it affect reconciliation?",
+      a: "Unapplied cash refers to tenant payments received but not matched to a specific expense account or charge code. These payments float as unallocated balances in Yardi and can distort CAM pool totals when you run reconciliation. The variance shows up as an unexplained difference between what the system shows as collected and what the expense pool expects. Reconciling unapplied cash before year-end close is a required step if you want CAM totals to tie out.",
+    },
+    {
+      q: "Is there a way to independently audit Yardi's CAM calculations?",
+      a: "Yes. Export the GL data from Yardi as a CSV and run the reconciliation in a system that sits outside Yardi's calculation engine. CapVeri ingests the GL export directly and produces an independent reconciliation, including gross-up, cap math, and pro-rata calculations, with a full trace showing exactly where the numbers diverge from Yardi's output. This is the same approach tenant auditors use: they don't audit inside Yardi, they audit the data Yardi produces.",
+    },
+  ]}
+/>
+
+<CTABox
+  title="Audit Your Yardi Output"
+  description="Export your GL CSV from Yardi and CapVeri runs an independent reconciliation, catching gross-up errors, cap violations, and pro-rata discrepancies with a full calculation trace. No ERP integration, no spreadsheets."
+  utmContent="u_cta"
+  buttonText="Audit Your Yardi Output"
+/>
+
+## Related Resources
+
+- [CAM Reconciliation Guide](/cam-reconciliation-guide) - Complete step-by-step reconciliation process
+- [CAM Billing Error Estimator](/tools/cam-billing-error-estimator) - Size your billing error exposure
+- [Recovery Gap Analyzer](/tools/recovery-gap-analyzer) - Find and close recovery gaps
+- [GL Export Reconciliation Workflow](/cam-reconciliation-guide) - Step-by-step export process
+- [Yardi CAM Setup Guide](/resources/software/yardi-voyager/cam-setup) - Configure Yardi correctly
+- [Common CAM Reconciliation Errors](/blog/cam-reconciliation-errors) - The 7 errors causing mismatches
+
+## Sources
+
+1. Yardi Voyager interface program - [Yardi](https://www.yardi.com/company/become-an-interface-partner/)
+2. MRI Software UK G-Cloud pricing - [Sources & methodology](/sources#mri-gcloud-pricing)

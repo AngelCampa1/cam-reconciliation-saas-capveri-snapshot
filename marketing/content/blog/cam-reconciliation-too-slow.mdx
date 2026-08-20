@@ -1,0 +1,188 @@
+---
+title: "Why CAM Reconciliation Takes So Long, and What It's Costing You"
+description: "Industry standard is 90-120 days post year-end. Most teams miss it. Here's why timelines slip and what delayed statements cost in uncollectable revenue."
+excerpt: "Industry standard is 90-120 days post year-end. Most teams miss it. Here's why timelines slip and what delayed statements cost in uncollectable revenue."
+datePublished: "2026-02-27"
+dateModified: "2026-02-27"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "cre-finops"
+faq:
+  - q: "How long should CAM reconciliation take?"
+    a: "Industry benchmark is 90-120 days after fiscal year-end. Top property accounting teams deliver statements in Q1. Most mid-size teams land in Q2 or Q3. The gap comes from manual AP data entry, siloed spreadsheets across properties, and waiting on final tax and insurance bills, not from reconciliation complexity itself."
+  - q: "What happens if a landlord misses the CAM reconciliation deadline?"
+    a: "Two consequences compound each other. First, the contractual billing window starts closing: once a lease's statement-delivery deadline passes, the tenant can refuse to pay and cite landlord breach. Second, any expenses older than 24-36 months become permanently uncollectable in most states, regardless of what the lease says. California SB 1103 imposes an 18-month hard limit from when the tenant requests documentation. The longer a statement sits unsent, the more of the true-up balance evaporates."
+  - q: "Why does CAM reconciliation take so long in large portfolios?"
+    a: "Scale compounds every manual step. Each property has its own GL export, its own spreadsheet, and its own set of lease abstracts to cross-reference. A 50-property portfolio with 10 tenants each means 500 individual tenant calculations, each with potentially different cap types, gross-up provisions, and exclusion clauses. There is no shared logic across properties: a formula fix in one building has to be manually replicated in every other. Invoice coding backlogs from the prior year add weeks before the reconciliation can even start."
+  - q: "Can CAM reconciliation be automated?"
+    a: "Yes, for the steps that consume the most time: invoice ingestion, GL coding, expense pool assembly, gross-up and cap calculations, and statement generation. Automation does not eliminate the need for accountant judgment on ambiguous exclusions or lease interpretation, but it removes the mechanical work that typically takes 80% of the calendar time. Nakisa reports $10.3M in annual savings for a 3,500-lease portfolio that automated reconciliation workflows."
+---
+
+<Alert type="info" title="Quick Answer">
+  Industry norm is 90-120 days post year-end. Teams that miss it face more than
+  late statements: they risk permanently forfeiting the right to collect
+  expenses past the statutory lookback window. In most states that window is
+  24-36 months. In California, SB 1103 sets an 18-month hard limit.
+</Alert>
+
+<StatGrid
+  stats={[
+    {
+      value: "9.2 days",
+      caption: "Average invoice cycle time, drops to 3.1 days with automation",
+      source: "PredictAP",
+    },
+    {
+      value: "$12.88",
+      caption:
+        "Average cost to process one invoice manually, drops to $2.78 automated",
+      source: "PredictAP",
+    },
+    {
+      value: "24-36 mo.",
+      caption:
+        "Delays past this window = permanently uncollectable revenue in most states",
+      source: "Holland & Knight",
+    },
+  ]}
+/>
+
+## What the benchmark actually is
+
+The CRE industry benchmark is 90-120 days after fiscal year-end, a standard cited by CREModels and RE BackOffice. For a January 1 fiscal year, that means statements should be in tenants' hands by April 30 at the latest.
+
+Top teams hit Q1. Most mid-size property accounting teams land in Q2. Portfolios without dedicated reconciliation processes regularly push into Q3, sometimes later.
+
+California adds a statutory layer on top of the contractual deadline. Under SB 1103, once a qualifying small-business tenant submits a written request for CAM documentation, the landlord has 30 days to produce it. The tenant's right to request runs back 18 months from the date of the request. See [SB 1103 compliance requirements](/resources/sb-1103-compliance) for the documentation package that request triggers.
+
+The gap between benchmark and reality is not random. Five specific bottlenecks account for most of it.
+
+## Five reasons timelines slip
+
+<InfoCardGrid
+  items={[
+    {
+      icon: "FileText",
+      title: "Siloed spreadsheets with no shared logic",
+      desc: "Each property runs its own GL export into its own spreadsheet. A gross-up formula fix, a cap calculation correction, or a new exclusion has to be manually replicated across every building. There is no single version of the calculation, there are as many versions as there are properties.",
+    },
+    {
+      icon: "Clock",
+      title: "Manual AP data entry",
+      desc: "The average invoice cycle takes 9.2 days from receipt to posting, including manual keying, routing for approval, coding to the correct GL account, then posting. Multiply by hundreds of vendor invoices per building and the AP backlog alone pushes reconciliation start dates into late Q1.",
+    },
+    {
+      icon: "AlertTriangle",
+      title: "Waiting on stragglers: tax bills and insurance true-ups",
+      desc: "Property tax assessments and insurance premium true-ups often arrive in November or December, or later. Teams that wait for every final figure before starting reconciliation are starting in February at the earliest. The alternative is to start with estimates and amend, but most teams lack the workflow to manage that cleanly.",
+    },
+    {
+      icon: "TrendingUp",
+      title: "Lease complexity: every tenant is different",
+      desc: "Each tenant can have a different cap type (cumulative vs. non-cumulative), different gross-up provisions, different expense exclusions, and a different pro-rata denominator. A 40-tenant building may require 40 separate calculation paths. Manual reconciliation handles each one sequentially. There is no way to parallelize it without shared software.",
+    },
+  ]}
+/>
+
+## What "too slow" actually costs
+
+<Alert type="warning" title="Stale Charge Forfeiture">
+  Expenses older than 24-36 months become permanently uncollectable in most
+  states, regardless of what the lease says (Holland & Knight). California SB
+  1103 imposes an 18-month hard limit from the date of the tenant's written
+  request. A statement sent 30 months after year-end may be legally valid under
+  the lease but economically unenforceable for the oldest expenses it contains.
+</Alert>
+
+The NOI math is direct. Every $100,000 in uncollected CAM reduces property valuation by $1-2 million at typical cap rates (PredictAP). A 50-property portfolio where each building loses $25,000 in stale charges per year, a conservative figure for a delayed team, represents $1.25 million in annual write-offs and $12-25 million in valuation impact at a 5% cap rate.
+
+Late statements also change tenant behavior. A tenant who receives a reconciliation 18 months after year-end has had time to hire an auditor. A tenant who receives it in Q1 has not. Delay increases the probability of formal audit disputes on the charges that do get billed.
+
+## What automation does to the timeline
+
+<Steps>
+  <Step title="Invoice ingestion: weeks of manual entry → automated OCR coding">
+    Automated systems capture vendor invoices via OCR, extract line-item
+    amounts, and propose GL account codes for accountant review. The 9.2-day
+    average invoice cycle compresses to 3.1 days. At $2.78 per invoice versus
+    $12.88 manually, the savings fund the tooling many times over. The AP
+    backlog that delays reconciliation start dates disappears.
+  </Step>
+  <Step title="Expense pool assembly: property-by-property spreadsheets → single shared engine">
+    Instead of maintaining separate spreadsheets per property, shared
+    calculation logic runs across the entire portfolio simultaneously. A formula
+    change applies everywhere. Exclusions, cap structures, and gross-up rules
+    are configured once per lease and enforced automatically, not re-entered and
+    re-verified for each building.
+  </Step>
+  <Step title="Calculation: days of spreadsheet work → minutes">
+    Gross-up, cap application, pro-rata share, and admin fee sequencing run in
+    minutes once the GL export and lease terms are loaded. The calculation layer
+    that takes days of manual work in spreadsheets becomes an automated step
+    that produces reviewable output rather than requiring full manual
+    construction.
+  </Step>
+  <Step title="Statement generation: manual formatting → exportable draft">
+    Reconciliation statements generate directly from the calculation output:
+    tenant name, lease period, estimated charges, actual charges, and true-up
+    amount. No reformatting. No copying figures between tools. Nakisa reports
+    $10.3 million in annual savings for a 3,500-lease portfolio that automated
+    this workflow end to end.
+  </Step>
+</Steps>
+
+## How to compress the timeline without new software
+
+Two discipline changes produce the largest time savings independent of tooling.
+
+Year-round GL coding discipline matters more than most teams realize. The AP backlog that delays reconciliation start dates is almost entirely a coding problem. Invoices that hit the GL with wrong account codes have to be corrected before the reconciliation can start. Teams that enforce GL coding standards throughout the year, particularly for high-volume vendors like utilities and landscaping, start reconciliation with a clean GL rather than a backlog of reclassifications.
+
+A Q3 rent roll audit before year-end is the other lever. Pro-rata denominators, occupancy records, and lease amendment dates need to be accurate before year-end closes. Catching a reversed lease date or a missing amendment in September means a five-minute fix. Catching it in February means backtracking through months of calculations. Run the rent roll audit in Q3 rather than discovering data quality problems during reconciliation.
+
+Before statements go out, run through the [CAM pre-send checklist](/resources/cam-pre-send-packet-checklist), which catches GL scrub issues, gross-up validation errors, cap structure problems, and denominator mistakes that most teams only find after a tenant requests an audit. That checklist is also the right starting point if you have already sent statements and received a dispute: see [CAM reconciliation errors and disputes](/blog/cam-reconciliation-errors) for the response process.
+
+<FAQSection
+  items={[
+    {
+      q: "How long should CAM reconciliation take?",
+      a: "Industry benchmark is 90-120 days after fiscal year-end. Top property accounting teams deliver statements in Q1. Most mid-size teams land in Q2 or Q3. The gap comes from manual AP data entry, siloed spreadsheets across properties, and waiting on final tax and insurance bills, not from reconciliation complexity itself.",
+    },
+    {
+      q: "What happens if a landlord misses the CAM reconciliation deadline?",
+      a: "Two consequences compound each other. First, the contractual billing window starts closing: once a lease's statement-delivery deadline passes, the tenant can refuse to pay and cite landlord breach. Second, any expenses older than 24-36 months become permanently uncollectable in most states, regardless of what the lease says. California SB 1103 imposes an 18-month hard limit from when the tenant requests documentation. The longer a statement sits unsent, the more of the true-up balance evaporates.",
+    },
+    {
+      q: "Why does CAM reconciliation take so long in large portfolios?",
+      a: "Scale compounds every manual step. Each property has its own GL export, its own spreadsheet, and its own set of lease abstracts to cross-reference. A 50-property portfolio with 10 tenants each means 500 individual tenant calculations, each with potentially different cap types, gross-up provisions, and exclusion clauses. There is no shared logic across properties: a formula fix in one building has to be manually replicated in every other. Invoice coding backlogs from the prior year add weeks before the reconciliation can even start.",
+    },
+    {
+      q: "Can CAM reconciliation be automated?",
+      a: "Yes, for the steps that consume the most time: invoice ingestion, GL coding, expense pool assembly, gross-up and cap calculations, and statement generation. Automation does not eliminate the need for accountant judgment on ambiguous exclusions or lease interpretation, but it removes the mechanical work that typically takes 80% of the calendar time. Nakisa reports $10.3M in annual savings for a 3,500-lease portfolio that automated reconciliation workflows.",
+    },
+  ]}
+/>
+
+<CTABox
+  title="Cut Months Off Your Reconciliation Cycle"
+  description="CapVeri ingests your GL export and runs gross-up, cap calculations, and pro-rata share across every tenant in your portfolio: no ERP integration, no spreadsheet maintenance."
+  utmContent="u_cta"
+  buttonText="Speed Up Reconciliation"
+/>
+
+## Related Resources
+
+- [CAM Reconciliation Guide](/cam-reconciliation-guide): Complete step-by-step reconciliation process
+
+- [Annual CAM Reconciliation Workflow](/cam-reconciliation-guide): Streamline your process
+- [CAM Variance Investigation Workflow](/cam-reconciliation-guide): Resolve discrepancies faster
+- [GL Export Reconciliation Workflow](/cam-reconciliation-guide): Automate the data stage
+- [CAM Estimate Forecaster](/tools/cam-estimate-forecaster): Reduce year-end surprises
+- [Reconciliation Statement Generator](/tools/reconciliation-statement-generator): Generate statements faster
+
+## Sources
+
+1. "Invoice cycle time: 9.2 days manual vs. 3.1 days automated" - [Sources & methodology](/sources#invoice-cycle-time)
+2. "$10.3M savings for 3,500-lease portfolio" - [Sources & methodology](/sources#portfolio-savings-nakisa)
+3. "400+ hours per year on manual CAM reconciliation" - [Sources & methodology](/sources#manual-cam-hours-datagrid)
+4. CREModels CAM deadline benchmarks - [CREModels](https://www.cremodels.com/cam-reconciliation-deadlines-loom-large)
+5. Fiserv reconciliation whitepaper - [Fiserv](https://www.fiserv.com/content/dam/fiserv-ent/archive-files/final-files/white-papers/Frontier-Reconciliation_whitepaper_1020.pdf)

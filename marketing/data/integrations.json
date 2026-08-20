@@ -1,0 +1,373 @@
+{
+ "lastUpdated": "2026-03-26",
+ "integrations": [
+ {
+ "slug": "yardi",
+ "softwareName": "Yardi Voyager",
+ "metaTitle": "CapVeri + Yardi: Automated CAM Reconciliation Verification",
+ "metaDescription": "Verify Yardi Voyager CAM reconciliation output in 15 minutes per building. Export your SSRS reports, upload to CapVeri, and catch billing errors automatically.",
+ "headline": "CapVeri + Yardi: Automated CAM Reconciliation Verification",
+ "subheadline": "Export your Yardi Voyager CAM data. Upload it to CapVeri. Get an independent verification report in minutes. No API integration required.",
+ "datePublished": "2026-03-26",
+ "dateModified": "2026-03-26",
+ "introParagraphs": [
+ "Yardi Voyager is the most widely used property management ERP in commercial real estate. It handles lease administration and CAM billing for thousands of portfolios. But even a well-configured Yardi instance can have recovery pool errors, gross-up mistakes, and cap gaps that quietly leak revenue year after year.",
+ "CapVeri does not replace Yardi. It independently verifies Yardi's output. Export your SSRS CAM reconciliation reports, upload the CSV to CapVeri, and our deterministic calculation engine checks every tenant share, gross-up factor, and cap limit against your lease terms. No API keys, no Yardi marketplace integration, no IT tickets. Just a CSV export and 15 minutes."
+ ],
+ "exportSteps": [
+ {
+ "step": 1,
+ "title": "Run Your SSRS CAM Reconciliation Report",
+ "description": "In Yardi Voyager, navigate to Reports > Recovery Billing > CAM Reconciliation. Select your property, the reconciliation year, and all recovery pools you want to verify. Run the report using your standard SSRS parameters."
+ },
+ {
+ "step": 2,
+ "title": "Export the Report as CSV",
+ "description": "Click the export button in the SSRS viewer and select CSV (comma delimited). Save the file locally. The export includes tenant names, charge codes, pro-rata shares, estimated vs. actual amounts, and reconciliation adjustments."
+ },
+ {
+ "step": 3,
+ "title": "Upload to CapVeri",
+ "description": "Log into CapVeri, select your property, and drag-and-drop the CSV file into the upload area. CapVeri's Yardi-aware parser automatically maps Yardi's column headers and charge code structures. No manual column mapping required."
+ },
+ {
+ "step": 4,
+ "title": "Review Your Verification Report",
+ "description": "CapVeri runs its independent calculations and highlights every discrepancy: tenant share mismatches, gross-up errors, cap overages, and CapEx items incorrectly included in recoverable pools. Review findings, accept or dismiss each flag, and export the audit trail."
+ }
+ ],
+ "whatCapVeriFinds": [
+ {
+ "title": "Configuration Drift",
+ "description": "Recovery pool settings in Yardi change over time as properties are acquired, leases renew, and staff turns over. CapVeri detects when pool configurations no longer match the underlying lease terms. It catches errors that have been quietly compounding for months or years."
+ },
+ {
+ "title": "Gross-Up Mismatches",
+ "description": "Yardi's gross-up calculation depends on correctly configured occupancy percentages and gross-up thresholds. CapVeri independently recalculates each gross-up using the actual occupancy data in your export and flags any tenant where the billed amount diverges from the correct figure."
+ },
+ {
+ "title": "Cap Enforcement Gaps",
+ "description": "Administrative and management fee caps are notoriously easy to misconfigure in Yardi's recovery billing module. CapVeri checks every capped expense category against lease-specified limits and identifies tenants who have been over- or under-billed due to cap misapplication."
+ },
+ {
+ "title": "CapEx Leakage Into Recoverable Pools",
+ "description": "Capital expenditure items that should be excluded from operating expense recoveries sometimes slip into CAM pools through incorrect GL code mapping. CapVeri flags line items that match common CapEx patterns (roof replacements, HVAC system installations, parking lot resurfacing) so you can verify they belong."
+ }
+ ],
+ "timeSavings": {
+ "before": "Hours per building each year",
+ "after": "15 minutes per building",
+ "metric": "Hours to minutes"
+ },
+ "faqs": [
+ {
+ "question": "Does CapVeri require API access to my Yardi instance?",
+ "answer": "No. CapVeri needs no integration. You export CSV files from Yardi's SSRS reporting tools and upload them yourself. There is no API connection, no marketplace app, and no need to involve your Yardi administrator or IT team."
+ },
+ {
+ "question": "Which Yardi products does CapVeri work with?",
+ "answer": "CapVeri works with any Yardi product that can export CAM reconciliation data to CSV, including Yardi Voyager, Yardi Breeze (commercial), and Yardi GenesisPro. The Yardi-specific parser handles the column naming conventions and charge code structures used across all Yardi platforms."
+ },
+ {
+ "question": "How does CapVeri handle Yardi's recovery pool structure?",
+ "answer": "CapVeri maps Yardi's recovery pools, charge codes, and tenant share allocations from your CSV export. It then independently recalculates each tenant's share using the lease parameters you provide during onboarding, and flags any discrepancy between Yardi's billed amount and CapVeri's calculated amount."
+ },
+ {
+ "question": "Will my Yardi data be used to train AI models?",
+ "answer": "No. CapVeri uses deterministic Python calculations for all financial math, never AI. Your data is encrypted at rest and in transit, processed only for your verification report, and never shared with third parties or used for model training."
+ },
+ {
+ "question": "How long does the first verification take?",
+ "answer": "The CSV upload and parsing takes about 2 minutes. Initial lease parameter setup (entering cap limits, base year stops, and share percentages) takes 20-30 minutes for a new property. After that, each subsequent reconciliation verification takes about 15 minutes per building."
+ }
+ ],
+ "relatedIntegrations": [
+ { "slug": "mri", "title": "CapVeri + MRI Software" },
+ { "slug": "realpage", "title": "CapVeri + RealPage" },
+ { "slug": "appfolio", "title": "CapVeri + AppFolio" }
+ ],
+ "relatedResources": [
+ { "href": "/resources/software/yardi-voyager/cam-setup", "title": "Yardi Voyager CAM Setup Guide" },
+ { "href": "/vs/yardi", "title": "CapVeri vs. Yardi CAM Module" },
+ { "href": "/solutions/year-end-cam-reconciliation", "title": "Year-End CAM Reconciliation Solution" },
+ { "href": "/resources/expenses/management-fees", "title": "Management Fee Recovery Guide" }
+ ],
+ "ctaHeading": "Verify Your Next Yardi CAM Reconciliation",
+ "ctaDescription": "Upload your Yardi SSRS export and get an independent verification report in 15 minutes. Free trial. No credit card, no Yardi admin needed."
+ },
+ {
+ "slug": "mri",
+ "softwareName": "MRI Software",
+ "metaTitle": "CapVeri + MRI: Find CAM Billing Errors Faster",
+ "metaDescription": "Independently verify MRI Software recovery billing output. Export your CAM reports, upload to CapVeri, and catch share type errors, allocation mistakes, and rate discrepancies.",
+ "headline": "CapVeri + MRI: Find CAM Billing Errors Faster",
+ "subheadline": "Export your MRI recovery billing data. Upload it to CapVeri. Get an independent verification in minutes. No API connection, no MRI marketplace app.",
+ "datePublished": "2026-03-26",
+ "dateModified": "2026-03-26",
+ "introParagraphs": [
+ "MRI Software powers recovery billing and lease administration for some of the largest commercial real estate portfolios in North America. Its flexible configuration handles complex multi-pool recovery structures, floor-vs-building allocations, and variable rate billing. But that flexibility also means more configuration surfaces where errors can hide.",
+ "CapVeri provides an independent check on MRI's recovery billing output. Export your CAM reconciliation reports from MRI, upload the CSV to CapVeri, and our calculation engine verifies every allocation, share type, and recovery rate against your lease terms. No IT involvement, no API keys, no MRI consultant fees. Just your standard report export."
+ ],
+ "exportSteps": [
+ {
+ "step": 1,
+ "title": "Run the Recovery Billing Report in MRI",
+ "description": "Navigate to MRI's Recovery Billing module and run the CAM Reconciliation or Recovery Variance report for your target property and reconciliation period. Select all recovery pools and tenant records you want to verify."
+ },
+ {
+ "step": 2,
+ "title": "Export to CSV or Excel",
+ "description": "Use MRI's export function to save the report as CSV or Excel. The export should include tenant identifiers, share types, allocated amounts, estimated billings, actual expenses, and reconciliation adjustments."
+ },
+ {
+ "step": 3,
+ "title": "Upload to CapVeri",
+ "description": "Log into CapVeri, create or select your property, and upload the MRI export file. CapVeri's MRI-aware parser recognizes MRI's recovery billing field names and automatically maps the data. No manual column configuration needed."
+ },
+ {
+ "step": 4,
+ "title": "Review Discrepancies",
+ "description": "CapVeri compares MRI's billed amounts against its own independent calculations and presents every discrepancy with a clear explanation: which tenant, which expense pool, expected vs. actual amount, and the likely root cause."
+ }
+ ],
+ "whatCapVeriFinds": [
+ {
+ "title": "Share Type Errors",
+ "description": "MRI supports multiple share types (pro-rata, fixed, percentage, and custom formulas). CapVeri verifies that each tenant's share type matches the lease and that the calculated amount is correct for that share methodology. It catches cases where a tenant was switched to the wrong share type during a lease renewal."
+ },
+ {
+ "title": "Floor-vs-Building Allocation Mistakes",
+ "description": "Multi-building and multi-floor properties in MRI require careful configuration of allocation hierarchies. CapVeri flags tenants whose expenses are allocated at the wrong level. For example, it catches a tenant charged building-level insurance when their lease specifies floor-level allocation only."
+ },
+ {
+ "title": "Recovery Billing Rate Discrepancies",
+ "description": "Estimated CAM billing rates in MRI should approximate actual expenses to minimize year-end reconciliation swings. CapVeri identifies tenants where the estimated-to-actual variance exceeds industry norms, helping you adjust billing rates before the next cycle."
+ },
+ {
+ "title": "Excluded Expense Violations",
+ "description": "Leases commonly exclude specific expense categories from CAM recovery (capital improvements, above-standard cleaning, or landlord-specific costs). CapVeri cross-references your GL line items against standard exclusion patterns and flags any potentially non-recoverable expenses included in recovery pools."
+ }
+ ],
+ "timeSavings": {
+ "before": "Hours per building each year",
+ "after": "15 minutes per building",
+ "metric": "Hours to minutes"
+ },
+ "faqs": [
+ {
+ "question": "Does CapVeri need API access to MRI?",
+ "answer": "No. CapVeri works entirely from CSV or Excel exports generated by MRI's built-in reporting tools. There is no API integration, no MRI marketplace listing, and no need to involve MRI support or your IT team."
+ },
+ {
+ "question": "Which MRI modules does CapVeri verify?",
+ "answer": "CapVeri verifies output from MRI's Recovery Billing module, including CAM, tax, and insurance recovery pools. If you can export the reconciliation data to CSV, CapVeri can verify it."
+ },
+ {
+ "question": "Can CapVeri handle MRI's custom share formulas?",
+ "answer": "Yes. During property setup, you enter the share methodology for each tenant as specified in their lease. CapVeri calculates the expected share independently and compares it to MRI's output, regardless of whether MRI used pro-rata, fixed, or custom formula share types."
+ },
+ {
+ "question": "How does CapVeri handle multi-entity portfolios in MRI?",
+ "answer": "Each property in CapVeri maps to a single building or recovery unit. For multi-entity portfolios, you upload one export per property and CapVeri verifies each independently. Cross-property reporting is available on the dashboard."
+ }
+ ],
+ "relatedIntegrations": [
+ { "slug": "yardi", "title": "CapVeri + Yardi Voyager" },
+ { "slug": "realpage", "title": "CapVeri + RealPage" },
+ { "slug": "appfolio", "title": "CapVeri + AppFolio" }
+ ],
+ "relatedResources": [
+ { "href": "/resources/software/mri-software/cam-setup", "title": "MRI Software CAM Setup Guide" },
+ { "href": "/vs/mri", "title": "CapVeri vs. MRI Recovery Billing" },
+ { "href": "/solutions/multi-property-cam", "title": "Portfolio CAM Management Solution" },
+ { "href": "/resources/pro-rata-share-calculation", "title": "Pro-Rata Share Calculation Guide" }
+ ],
+ "ctaHeading": "Verify Your Next MRI CAM Reconciliation",
+ "ctaDescription": "Upload your MRI recovery billing export and get an independent verification report in minutes. Free trial. No credit card, no MRI integration needed."
+ },
+ {
+ "slug": "realpage",
+ "softwareName": "RealPage",
+ "metaTitle": "CapVeri + RealPage: Independent CAM Verification",
+ "metaDescription": "Independently verify RealPage commercial CAM reconciliation output. Export your expense recovery reports, upload to CapVeri, and catch allocation errors automatically.",
+ "headline": "CapVeri + RealPage: Independent CAM Verification",
+ "subheadline": "Export your RealPage expense recovery data. Upload it to CapVeri. Get independent verification without API integrations or IT involvement.",
+ "datePublished": "2026-03-26",
+ "dateModified": "2026-03-26",
+ "introParagraphs": [
+ "RealPage serves a large segment of the commercial real estate market with its expense recovery and lease administration modules. For property managers handling CAM reconciliation through RealPage, the challenge is the same as with any ERP: the system calculates what you tell it to calculate, and configuration errors compound silently over time.",
+ "CapVeri acts as an independent auditor for your RealPage CAM output. Export your expense recovery reports to CSV, upload them to CapVeri, and get a line-by-line verification of every tenant's share calculation. CapVeri does not connect to RealPage. It verifies the numbers independently using your lease terms as the source of truth."
+ ],
+ "exportSteps": [
+ {
+ "step": 1,
+ "title": "Generate the Expense Recovery Report",
+ "description": "In RealPage, navigate to the expense recovery or CAM reconciliation reporting area. Generate the reconciliation report for your target property and fiscal year, including all expense pools and tenant allocations."
+ },
+ {
+ "step": 2,
+ "title": "Export to CSV",
+ "description": "Export the report to CSV format. Ensure the export includes tenant identifiers, expense categories, allocated amounts, square footage data, and any cap or stop amounts applied during billing."
+ },
+ {
+ "step": 3,
+ "title": "Upload to CapVeri",
+ "description": "In CapVeri, select your property and upload the RealPage CSV. The parser identifies RealPage's export format and maps fields automatically. If column headers differ from the standard template, CapVeri prompts you to confirm the mapping."
+ },
+ {
+ "step": 4,
+ "title": "Review the Verification Report",
+ "description": "CapVeri presents a tenant-by-tenant comparison of RealPage's billed amounts versus CapVeri's independent calculations. Each discrepancy includes the variance amount, affected expense pool, and a plain-language explanation of the likely cause."
+ }
+ ],
+ "whatCapVeriFinds": [
+ {
+ "title": "Square Footage Discrepancies",
+ "description": "Pro-rata share calculations are only as accurate as the square footage inputs. CapVeri flags tenants where the share percentage in the RealPage export does not match the expected ratio based on the lease's stated rentable square footage and the building's total area."
+ },
+ {
+ "title": "Base Year Stop Miscalculations",
+ "description": "Base year and expense stop provisions limit a tenant's CAM exposure to increases above a baseline. CapVeri verifies that RealPage correctly applied each tenant's base year or stop amount and identifies cases where the stop was misconfigured or not applied at all."
+ },
+ {
+ "title": "Insurance Recovery Errors",
+ "description": "Insurance is frequently billed as a separate recovery pool with different allocation rules than CAM. CapVeri verifies that insurance allocations follow the lease-specified methodology and flags any blending of insurance with general CAM pools."
+ },
+ {
+ "title": "Reconciliation Timing Issues",
+ "description": "Late reconciliations can trigger different tenant rights and landlord obligations depending on the lease and jurisdiction. CapVeri flags reconciliation periods that fall outside typical timelines and notes any tenants with audit rights that may be triggered by late delivery."
+ }
+ ],
+ "timeSavings": {
+ "before": "Hours per building each year",
+ "after": "15 minutes per building",
+ "metric": "Hours to minutes"
+ },
+ "faqs": [
+ {
+ "question": "Does CapVeri integrate directly with RealPage?",
+ "answer": "No. CapVeri uses a file-based approach. You export CSV reports from RealPage and upload them to CapVeri. There is no API connection, no data sync, and no need for RealPage support involvement."
+ },
+ {
+ "question": "What RealPage reports should I export?",
+ "answer": "Export the expense recovery reconciliation report that shows tenant-level detail: allocated amounts by expense pool, pro-rata shares, cap/stop applications, and estimated vs. actual comparisons. The more detail in the export, the more comprehensive the verification."
+ },
+ {
+ "question": "Can I verify both CAM and tax recoveries?",
+ "answer": "Yes. CapVeri verifies any expense recovery pool: CAM, property tax, insurance, and utilities. Upload the reconciliation data for each pool and CapVeri checks them independently."
+ },
+ {
+ "question": "How does CapVeri handle properties transitioning from RealPage to another system?",
+ "answer": "CapVeri is ERP-agnostic. If you are migrating from RealPage to another platform, you can verify both the final RealPage reconciliation and the first reconciliation in the new system to ensure continuity and catch migration-related errors."
+ }
+ ],
+ "relatedIntegrations": [
+ { "slug": "yardi", "title": "CapVeri + Yardi Voyager" },
+ { "slug": "mri", "title": "CapVeri + MRI Software" },
+ { "slug": "appfolio", "title": "CapVeri + AppFolio" }
+ ],
+ "relatedResources": [
+ { "href": "/resources/software/realpage/cam-setup", "title": "RealPage CAM Setup Guide" },
+ { "href": "/solutions/acquisition-due-diligence", "title": "Acquisition CAM Diligence Solution" },
+ { "href": "/resources/base-year-expense-stop", "title": "Base Year Stop Calculation Guide" },
+ { "href": "/resources/lease-exclusions-cam-billing", "title": "Operating Expense Exclusions Guide" }
+ ],
+ "ctaHeading": "Verify Your Next RealPage CAM Reconciliation",
+ "ctaDescription": "Upload your RealPage expense recovery export and get independent verification in minutes. Free trial. No credit card, no API setup required."
+ },
+ {
+ "slug": "appfolio",
+ "softwareName": "AppFolio",
+ "metaTitle": "CapVeri + AppFolio: CAM Reconciliation for Growing Portfolios",
+ "metaDescription": "Verify AppFolio CAM reconciliation output as your commercial portfolio grows. Export reports, upload to CapVeri, and catch errors before they compound across tenants.",
+ "headline": "CapVeri + AppFolio: CAM Reconciliation for Growing Portfolios",
+ "subheadline": "Export your AppFolio expense data. Upload it to CapVeri. Get independent verification that scales with your portfolio. No API integration needed.",
+ "datePublished": "2026-03-26",
+ "dateModified": "2026-03-26",
+ "introParagraphs": [
+ "AppFolio is increasingly popular among growing commercial property management firms that want a cloud-native platform without enterprise ERP complexity. Its clean interface handles day-to-day management well, but CAM reconciliation in AppFolio can outgrow the platform's built-in capabilities as portfolios grow and lease structures get more complex.",
+ "CapVeri adds an independent verification layer on top of AppFolio. Export your expense and billing data to CSV, upload it to CapVeri, and get a detailed verification report that catches allocation errors, cap miscalculations, and recovery gaps. CapVeri does not modify your AppFolio data or require any integration. It checks the math independently."
+ ],
+ "exportSteps": [
+ {
+ "step": 1,
+ "title": "Export Expense and Billing Data",
+ "description": "In AppFolio, navigate to Reports and generate your CAM expense summary and tenant billing reports for the reconciliation period. Select the target property and include all expense categories and tenant charges."
+ },
+ {
+ "step": 2,
+ "title": "Download as CSV",
+ "description": "Export both reports to CSV. AppFolio's export includes property details, expense line items, tenant names, and billed amounts. If your reconciliation data spans multiple reports, download each one separately."
+ },
+ {
+ "step": 3,
+ "title": "Upload to CapVeri",
+ "description": "In CapVeri, select your property and upload the AppFolio CSV file(s). CapVeri's generic parser handles AppFolio's export format. If any column headers are ambiguous, you will be prompted to confirm the mapping."
+ },
+ {
+ "step": 4,
+ "title": "Review Findings",
+ "description": "CapVeri compares AppFolio's billed amounts to its independent calculations and presents flagged discrepancies organized by tenant and expense category. Each finding includes the dollar variance and a recommendation for resolution."
+ }
+ ],
+ "whatCapVeriFinds": [
+ {
+ "title": "Pro-Rata Share Calculation Errors",
+ "description": "As tenants move in and out, pro-rata shares need to be recalculated based on current occupancy. CapVeri verifies that each tenant's share percentage matches their lease's square footage relative to the building total, catching stale shares that were not updated after tenant turnover."
+ },
+ {
+ "title": "Missing Expense Categories",
+ "description": "Growing portfolios sometimes add new expense categories (security, landscaping upgrades, common area WiFi) without properly configuring them for recovery. CapVeri identifies recoverable expenses that appear in your GL but are not being allocated to tenants."
+ },
+ {
+ "title": "Cap and Stop Overrides",
+ "description": "Lease-specific caps on management fees, administrative charges, or total CAM exposure require manual configuration in most mid-market platforms. CapVeri verifies that every tenant's capped categories are actually being limited and flags any tenant billed above their lease-specified cap."
+ },
+ {
+ "title": "Year-Over-Year Anomalies",
+ "description": "CapVeri compares current-year allocations against prior-year data (when available) and flags unusual swings, such as a 40% increase in insurance allocation or a sudden drop in a tenant's share percentage, that warrant investigation before sending reconciliation statements."
+ }
+ ],
+ "timeSavings": {
+ "before": "Hours per building each year",
+ "after": "15 minutes per building",
+ "metric": "Hours to minutes"
+ },
+ "faqs": [
+ {
+ "question": "Is AppFolio sufficient for commercial CAM reconciliation?",
+ "answer": "AppFolio handles basic CAM billing well, but complex lease structures with multiple recovery pools, gross-up provisions, and varied cap structures can exceed its built-in reconciliation capabilities. CapVeri adds the independent verification layer that growing commercial portfolios need."
+ },
+ {
+ "question": "Does CapVeri require an AppFolio integration?",
+ "answer": "No. CapVeri works from CSV exports. No API connection, no AppFolio marketplace app, no IT involvement. Export your reports, upload them, and get verification results in minutes."
+ },
+ {
+ "question": "Can CapVeri handle mixed-use properties managed in AppFolio?",
+ "answer": "Yes. CapVeri supports separate recovery pools for different property types within a single building (retail on ground floor, office above). You configure each pool's allocation methodology during property setup."
+ },
+ {
+ "question": "What if my AppFolio export does not include all the data CapVeri needs?",
+ "answer": "CapVeri works with whatever data you can export. If certain fields are missing (for example, square footage breakdowns), CapVeri prompts you to enter them manually during property setup. The more complete your export, the more comprehensive the verification."
+ },
+ {
+ "question": "How does CapVeri pricing compare to hiring a CAM auditor?",
+ "answer": "A traditional CAM audit costs $3,000-$10,000 per building and takes 4-8 weeks. CapVeri starts with {{pricing.launchOfferTerms}} Reconcile includes a {{pricing.trialCopy}}."
+ }
+ ],
+ "relatedIntegrations": [
+ { "slug": "yardi", "title": "CapVeri + Yardi Voyager" },
+ { "slug": "mri", "title": "CapVeri + MRI Software" },
+ { "slug": "realpage", "title": "CapVeri + RealPage" }
+ ],
+ "relatedResources": [
+ { "href": "/solutions/multi-property-cam", "title": "Portfolio CAM Management Solution" },
+ { "href": "/cam-reconciliation-guide", "title": "Year-End Reconciliation Workflow" },
+ { "href": "/resources/expenses", "title": "Class B Office CAM Guide" },
+ { "href": "/resources/cam-gross-up-calculation-guide", "title": "Gross-Up Factor Calculation Guide" }
+ ],
+ "ctaHeading": "Verify Your Next AppFolio CAM Reconciliation",
+ "ctaDescription": "Upload your AppFolio export and get independent CAM verification in minutes. Free trial. No credit card, no integration setup required."
+ }
+ ]
+}

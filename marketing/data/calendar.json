@@ -1,0 +1,219 @@
+{
+  "lastUpdated": "2026-03-19",
+  "entries": [
+    {
+      "slug": "q1-reconciliation-season",
+      "name": "Q1 Reconciliation Season",
+      "metaTitle": "Q1 CAM Reconciliation Season Guide - Deadlines & Checklist",
+      "metaDescription": "Navigate Q1 CAM reconciliation season with confidence. Key deadlines, pre-close checklist, tenant communication timeline, and common errors to avoid.",
+      "headline": "Q1 Reconciliation Season: 90 Days That Determine Your NOI",
+      "subheadline": "January through March is when landlords settle what tenants paid versus what they owed. Here is how to run it without errors.",
+      "overview": "Q1 reconciliation season runs from January 1 through March 31 for most commercial properties with calendar-year leases. During this window, property teams must finalize GL data, run CAM calculations, issue reconciliation statements, and collect settlement payments. All while managing ongoing operations. Most errors that become tenant disputes start in this 90-day window.",
+      "keyDates": [
+        { "date": "January 1-15", "description": "GL close and final accrual postings for prior year" },
+        { "date": "January 15-31", "description": "Run initial reconciliation calculations, identify data gaps" },
+        { "date": "February 1-28", "description": "Issue reconciliation statements to tenants" },
+        { "date": "March 1-31", "description": "Collect settlement payments, respond to tenant disputes" }
+      ],
+      "checklist": [
+        "Confirm GL is fully closed for prior fiscal year before running reconciliation",
+        "Verify all year-end accruals and adjustments are posted",
+        "Confirm recovery pool GL account assignments match current chart of accounts",
+        "Review tenant pro-rata denominators for mid-year changes",
+        "Validate gross-up threshold settings against each tenant lease",
+        "Check CAM cap configurations for each tenant with cap provisions",
+        "Run independent verification before sending statements",
+        "Issue statements by lease deadline (typically 60-90 days after year end)",
+        "Document all calculation assumptions for audit readiness"
+      ],
+      "commonMistakes": [
+        "Running reconciliation before the GL is fully closed. Corrections after statements are sent create disputes.",
+        "Missing lease deadlines for statement delivery, which can reduce or eliminate settlement rights",
+        "Applying the prior year's pro-rata denominator after mid-year tenant changes",
+        "Failing to update recovery pool GL account assignments after chart of accounts changes"
+      ],
+      "capveriRole": "CapVeri works as an independent check during Q1 reconciliation season. Upload your Yardi or MRI GL export, and CapVeri recalculates every tenant's reconciliation independently. Errors caught before delivery cost a revised statement. Errors caught by tenants cost disputes, legal fees, and relationship damage.",
+      "relatedResources": [
+        "/cam-reconciliation-guide",
+        "/blog/cam-reconciliation-season-2026-guide",
+        "/resources/common-area-maintenance-reconciliation-explained"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator",
+        "/tools/reconciliation-statement-generator"
+      ],
+      "lastUpdated": "2026-03-19"
+    },
+    {
+      "slug": "q4-year-end-close",
+      "name": "Q4 Year-End Close",
+      "metaTitle": "Q4 CAM Year-End Close Guide - Pre-Close Checklist for Landlords",
+      "metaDescription": "Q4 year-end close preparation for commercial landlords. Pre-close checklist, GL accrual requirements, and how to prepare for a clean Q1 reconciliation.",
+      "headline": "Q4 Year-End Close: What You Do Now Shapes Q1",
+      "subheadline": "Most Q1 reconciliation errors start with Q4 close problems. This guide covers what to do before December 31.",
+      "overview": "Q4 year-end close is the preparation phase that determines how clean your Q1 reconciliation will be. From October through December, property teams must ensure all vendor invoices are posted, accruals are accurate, capital vs. operating expense classifications are correct, and CAM pool configurations are updated. Shortcuts in Q4 become errors in Q1.",
+      "keyDates": [
+        { "date": "October-November", "description": "Review CAM pool GL account assignments, update for any mid-year additions" },
+        { "date": "November 30", "description": "Soft close: identify missing invoices and outstanding accruals" },
+        { "date": "December 15", "description": "Post all estimated year-end accruals" },
+        { "date": "December 31", "description": "Hard close: all transactions must be in the system" },
+        { "date": "January 5-10", "description": "Final adjusting entries and accrual true-up" }
+      ],
+      "checklist": [
+        "Review all CAM pool GL account assignments against current chart of accounts",
+        "Confirm all vendor invoices for operating expenses are posted before December 31",
+        "Post year-end accruals for invoices not yet received",
+        "Review capital vs. operating expense classifications for any major repairs",
+        "Confirm management fee calculation matches lease terms",
+        "Update tenant pro-rata denominators for any mid-year lease changes",
+        "Verify gross-up settings are current in your ERP",
+        "Document any unusual expenses that will require explanation in tenant statements"
+      ],
+      "commonMistakes": [
+        "Posting capital improvements to operating expense accounts. These are not recoverable in most leases.",
+        "Missing year-end accruals for invoices that arrive in January for December services",
+        "Not updating CAM pool GL mappings when new vendor expense categories are created",
+        "Leaving the prior year's denominator in place after mid-year tenant changes"
+      ],
+      "capveriRole": "CapVeri flags potential classification errors before year-end close. It identifies accounts that may contain capital items, unusual expense spikes, or unrecognized vendor categories. Running a CapVeri analysis in November gives you time to correct issues before the close, rather than finding them in January when statements are already due.",
+      "relatedResources": [
+        "/cam-reconciliation-guide",
+        "/blog/year-end-operating-expense-true-up",
+        "/resources/cam-pre-send-packet-checklist"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/recovery-gap-analyzer",
+        "/tools/cam-gross-up-calculator"
+      ],
+      "lastUpdated": "2026-03-19"
+    },
+    {
+      "slug": "q2-tenant-disputes",
+      "name": "Q2 Tenant Dispute Season",
+      "metaTitle": "Q2 CAM Tenant Dispute Season - How to Respond and Defend Your Reconciliation",
+      "metaDescription": "Q2 is when tenant disputes from Q1 statements arrive. How to respond to audit requests, defend your calculations, and resolve disputes without legal escalation.",
+      "headline": "Q2 Tenant Dispute Season: Defending Your CAM Reconciliation",
+      "subheadline": "After Q1 statements go out, Q2 brings audit requests, dispute letters, and tenant challenges. Here is how to respond.",
+      "overview": "Q2 (April through June) is when tenants respond to reconciliation statements received in Q1. Responses range from payment to formal audit requests, dispute letters, and in the worst case, legal challenges. How landlords respond in Q2 determines whether disputes are resolved quickly or escalate into prolonged conflicts.",
+      "keyDates": [
+        { "date": "April 1-30", "description": "Initial tenant responses and payment collection" },
+        { "date": "April-May", "description": "Audit requests arrive (typically 30-60 days after statements)" },
+        { "date": "May-June", "description": "Dispute letters and formal challenges" },
+        { "date": "June 30", "description": "Target for resolution of routine disputes before summer slowdown" }
+      ],
+      "checklist": [
+        "Maintain complete calculation documentation for every tenant reconciliation",
+        "Log all audit requests with receipt date. Most leases have response windows.",
+        "Respond to audit requests within the lease-specified timeframe (typically 30-60 days)",
+        "Provide itemized GL detail, not just summary totals, when requested",
+        "Review disputed line items against lease language before responding",
+        "Document your response rationale in writing for each disputed item",
+        "Track dispute status and target resolution dates for each open dispute"
+      ],
+      "commonMistakes": [
+        "Failing to track audit request receipt dates. Missing response deadlines can waive your position.",
+        "Providing summary data when itemized GL detail is required by the lease",
+        "Responding to disputes without reviewing the actual lease language for that tenant",
+        "Escalating to legal before attempting direct resolution. Most disputes settle without litigation."
+      ],
+      "capveriRole": "CapVeri's audit trail gives you the documentation to defend reconciliation calculations in Q2. Every calculation step, GL account, and allocation decision is logged and exportable. When a tenant's auditor questions your method, CapVeri's calculation trace shows exactly how each number was derived and which lease clause it follows.",
+      "relatedResources": [
+        "/resources/tenant-cam-dispute",
+        "/blog/cam-reconciliation-audit-trail",
+        "/blog/cam-demand-letter"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-scorecard",
+        "/tools/audit-risk-quiz"
+      ],
+      "lastUpdated": "2026-03-19"
+    },
+    {
+      "slug": "q3-budget-season",
+      "name": "Q3 Budget Season",
+      "metaTitle": "Q3 CAM Budget Season - Setting Next Year's CAM Estimates Accurately",
+      "metaDescription": "Q3 is when landlords set next year's CAM estimates. How to use current year actuals, adjust for known changes, and minimize year-end settlement surprises.",
+      "headline": "Q3 Budget Season: Setting Next Year's CAM Estimates",
+      "subheadline": "CAM estimates set in Q3 determine what tenants owe at next year's reconciliation. Accurate estimates reduce disputes later.",
+      "overview": "Q3 budget season (July through September) is when commercial landlords set CAM estimates for the following year. These estimates determine monthly tenant payments for 12 months. The difference between estimates and actuals becomes the year-end settlement. Setting estimates too low creates large underpayment settlements. Too high creates overpayments and tenant frustration. The goal is accuracy.",
+      "keyDates": [
+        { "date": "July-August", "description": "Review current year actuals through June, identify trends" },
+        { "date": "August-September", "description": "Build next year's expense budget by category" },
+        { "date": "September 30", "description": "Finalize estimates for properties with October 1 estimate anniversaries" },
+        { "date": "October-November", "description": "Issue estimate letters for calendar-year properties (January 1 effective date)" },
+        { "date": "December 1", "description": "Deadline for issuing most calendar-year CAM estimate letters" }
+      ],
+      "checklist": [
+        "Pull current year actuals through Q2 as the estimation base",
+        "Identify known expense changes: vendor contract renewals, new vendors, property improvements",
+        "Adjust for known one-time items from current year that won't recur",
+        "Review property tax assessments for next year. Increases flow directly to CAM.",
+        "Check utility rate changes for your jurisdiction",
+        "Review lease requirements for estimate letter format and delivery timing",
+        "Calculate estimated pro-rata shares based on expected occupancy",
+        "Issue estimate letters within the lease-required advance notice period"
+      ],
+      "commonMistakes": [
+        "Using prior year actuals without adjusting for known changes, which produces stale estimates",
+        "Missing lease deadlines for estimate letter delivery, which can create billing disputes",
+        "Setting estimates based on budget targets rather than expected actuals",
+        "Not adjusting pro-rata shares for known upcoming lease changes"
+      ],
+      "capveriRole": "CapVeri's CAM Estimate Forecaster uses current year actuals as a base, applies growth assumptions by expense category, and projects next year's estimate by tenant. This replaces the manual spreadsheet work of building estimates and flags any estimates that would produce unusually large settlements based on current trajectory.",
+      "relatedResources": [
+        "/cam-reconciliation-guide",
+        "/resources/cam-reconciliation-vs-estimate",
+        "/blog/cam-reconciliation-season-2026-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-estimate-forecaster",
+        "/tools/cam-billing-error-estimator",
+        "/tools/noi-impact-calculator"
+      ],
+      "lastUpdated": "2026-03-19"
+    },
+    {
+      "slug": "property-tax-assessment-season",
+      "name": "Property Tax Assessment Season",
+      "metaTitle": "Property Tax Assessment Season - CAM Impact and Appeal Strategy for Landlords",
+      "metaDescription": "Property tax assessments arrive in spring and fall. How increases flow into CAM pools, when to appeal, and how assessment changes affect tenant reconciliations.",
+      "headline": "Property Tax Assessment Season: How Assessments Flow Into CAM",
+      "subheadline": "Property tax is typically the largest single CAM line item. Assessment changes affect every tenant reconciliation, and the right response determines how much you recover.",
+      "overview": "Property tax assessment season occurs on different schedules by jurisdiction, typically spring (March-May) or fall (August-October). For commercial landlords, assessment changes flow directly into CAM pools as one of the largest and most audited expense categories. Understanding how assessments affect reconciliations, when to appeal, and how to document tax pass-through for tenant statements is essential CAM knowledge.",
+      "keyDates": [
+        { "date": "Varies by jurisdiction", "description": "Assessment notices issued (spring or fall depending on jurisdiction)" },
+        { "date": "30-90 days after notice", "description": "Protest/appeal deadline (varies by jurisdiction)" },
+        { "date": "Q4 of assessment year", "description": "Final tax bill issued for the year" },
+        { "date": "Year-end reconciliation", "description": "Actual tax amounts flow into CAM pool for reconciliation" }
+      ],
+      "checklist": [
+        "Track assessment notice receipt dates and protest deadlines for each property",
+        "Compare new assessment to prior year and market comparables",
+        "Calculate potential CAM impact if assessment stands: new tax / total RSF x tenant SF",
+        "File protest for assessments with material errors or above-market valuations",
+        "Confirm property tax GL account is correctly mapped to your CAM recovery pool",
+        "Verify whether your leases classify property tax as Fixed or Variable for gross-up purposes",
+        "Update CAM estimates when final tax bills differ materially from estimated amounts"
+      ],
+      "commonMistakes": [
+        "Missing protest deadlines. Most jurisdictions have strict cutoffs with no extensions.",
+        "Not updating CAM estimates when tax assessments increase materially mid-year",
+        "Misclassifying property tax as a Variable expense for gross-up purposes (it's Fixed in most leases)",
+        "Failing to document the tax pass-through calculation clearly in tenant statements"
+      ],
+      "capveriRole": "CapVeri flags property tax amounts that vary materially from prior year actuals, surfacing potential assessment issues before reconciliation. When tax amounts change significantly, CapVeri's calculation trace shows exactly how the change flows through to each tenant's share, making it straightforward to explain the adjustment in tenant communications.",
+      "relatedResources": [
+        "/resources/expenses/property-taxes",
+        "/blog/property-tax-appeal-cam-impact",
+        "/resources/cam-expense-caps"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/noi-impact-calculator"
+      ],
+      "lastUpdated": "2026-03-19"
+    }
+  ]
+}

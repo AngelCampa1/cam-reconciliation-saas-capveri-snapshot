@@ -1,0 +1,176 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capveri-backend"
+version = "0.1.0"
+description = "CapVeri Backend API"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "pydantic>=2.10.0",
+    "pydantic-settings>=2.7.0",
+    "email-validator>=2.1.0",
+    "pandas>=2.2.0",
+    "python-dotenv>=1.0.1",
+    "supabase>=2.10.0",
+    "httpx>=0.28.0",
+    #  PostgreSQL async driver for direct DB access
+    "asyncpg>=0.29.0",
+    # File upload support
+    "python-multipart>=0.0.9",
+    # AWS SDK for object storage
+    "boto3>=1.35.0",
+    "botocore>=1.35.0",
+    # Retry logic for transient failures
+    "tenacity>=9.0.0",
+    # Stripe SDK for billing and subscriptions
+    "stripe>=10.0.0",
+    # Resend SDK for transactional emails
+    "resend>=2.5.0",
+    # Email template rendering
+    "jinja2>=3.1.0",
+    # OpenAI SDK for OpenRouter extraction pipeline
+    "openai>=1.0.0",
+    # Levenshtein distance for fuzzy string matching
+    "python-Levenshtein>=0.26.0",
+    # Encoding detection for uploaded CSV exports
+    "chardet>=5.2.0",
+    # PDF report generation
+    "reportlab>=4.0.0",
+    # Excel export
+    "openpyxl>=3.1.0",
+    # Numerical operations for analytics/cleaning
+    "numpy>=1.24.0",
+    # Statistical models for anomaly detection
+    "statsmodels>=0.14.0",
+    # Rate limiting
+    "limits>=3.12.0",
+    # Circuit breakers for external services
+    "pybreaker>=1.4.0",
+    # Background job processing
+    "celery[redis]>=5.4.0",
+    "redis>=5.0.0",
+    # Sentry error tracking and performance monitoring
+    "sentry-sdk[fastapi]>=2.44.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-cov>=6.0.0",
+    "pytest-asyncio>=0.24.0",
+    "black>=24.10.0",
+    "isort>=5.13.0",
+    "ruff>=0.8.0",
+    "mypy>=1.13.0",
+    "boto3-stubs[s3]>=1.35.0",
+    "moto[s3]>=5.0.0",
+    "openapi-spec-validator>=0.7.0",
+    "faker>=20.0.0",
+    # Parallel test execution
+    "pytest-xdist>=3.6.0",
+    # Property-based testing for fuzz testing
+    "hypothesis>=6.100.0",
+    "pandas-stubs>=2.2.3.250308",
+    "types-openpyxl>=3.1.5.20250919",
+    "types-reportlab>=4.4.3.20251021",
+    "PyPDF2>=3.0.1",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["UP042"]
+# Don't auto-fix these rules - they can remove intentional code
+unfixable = [
+    "F401",  # Don't auto-remove "unused" imports (may be used in code being written)
+    "F841",  # Don't auto-remove "unused" variables
+]
+
+[tool.ruff.lint.per-file-ignores]
+"app/api/v1/__init__.py" = ["I001"]  # isort handles imports; ruff I001 conflicts with aliased import ordering
+"app/services/extraction/processor.py" = ["I001"]  # isort handles imports; ruff I001 conflicts with aliased import ordering
+"tests/**" = ["E501", "N806", "N817", "I001"]  # Ignore line length, naming, and isort (isort pre-commit hook handles import sorting)
+"app/services/calculation/caps.py" = ["E501"]  # Long docstrings and Pydantic descriptions
+"app/services/calculation/pool_aggregator.py" = ["E501"]  # Long error messages
+"app/services/extraction/prompts.py" = ["E501"]  # LLM prompts with long sentences
+"app/services/extraction/cross_doc_prompt.py" = ["E501"]  # LLM prompts with long sentences
+"app/services/extraction/gl_analysis_prompt.py" = ["E501"]  # LLM prompts with long sentences
+"app/services/extraction/gap_filler_prompts.py" = ["E501"]  # LLM prompts with long sentences
+"app/services/extraction/dual/judge.py" = ["E501"]  # LLM system prompt with long sentences
+"app/services/email/resend_service.py" = ["E501"]  # Long HTML email bodies
+"app/api/v1/export.py" = ["E501"]  # Long PDF prose strings in board presentation generator
+"scripts/**" = ["E501", "F401"]  # Script files with long string content and optional imports
+"app/services/compliance/sb1103_service.py" = ["E501"]  # Long legal certification text and PDF content
+"app/models/sb1103.py" = ["E501"]  # Long Pydantic field descriptions
+"app/services/billing/credits.py" = ["E501"]  # Long error class names in docstrings
+"app/services/billing/plans.py" = ["E501"]  # Long docstrings describing billing models
+"app/api/routes/webhooks.py" = ["E501"]  # Long docstring in _ServiceCtx adapter class
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+disallow_any_generics = false
+disallow_untyped_decorators = false
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+disallow_untyped_calls = false
+
+[[tool.mypy.overrides]]
+module = "sentry_sdk.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = [
+    "celery.*",
+    "dateutil.*",
+    "statsmodels.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"
+addopts = [
+    "-m", "not benchmark and not e2e and not resend_live",
+    "--cov=app",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-fail-under=95",
+]
+markers = [
+    "benchmark: Performance benchmark tests (run with: pytest -m benchmark)",
+    "integration: Integration tests with mocked database (fast, runs in CI)",
+    "e2e: End-to-end tests with real local Supabase (slow, local only)",
+    "resend_live: Manual Resend API smoke tests (run with RUN_RESEND_LIVE_TEST=1)",
+    "real_entitlements: Opt out of the autouse full-access patch and exercise the real has_full_access paywall gate",
+]
+
+[tool.coverage.run]
+branch = true
+omit = ["*/tests/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError"
+]

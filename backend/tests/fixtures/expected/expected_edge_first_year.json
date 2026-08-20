@@ -1,0 +1,34 @@
+{
+  "scenario": "edge_first_year_tenant",
+  "description": "First year tenant - no base year comparison",
+  "inputs": {
+    "current_year_expenses": 115000.0,
+    "pro_rata_share": 0.0312,
+    "is_first_year": true
+  },
+  "calculation_steps": [
+    {
+      "step": 1,
+      "description": "Check for base year",
+      "result": "No base year - first year of tenancy"
+    },
+    {
+      "step": 2,
+      "description": "Set current year as base",
+      "calculation": "current_year becomes base_year",
+      "result": 115000.0
+    },
+    {
+      "step": 3,
+      "description": "Calculate tenant share",
+      "formula": "(current - base) * pro_rata_share",
+      "calculation": "(115000 - 115000) * 0.0312 = 0.00",
+      "result": 0.0
+    }
+  ],
+  "expected_output": {
+    "tenant_share": 0.0,
+    "base_year_set": 115000.0,
+    "note": "First year establishes base - no charges"
+  }
+}

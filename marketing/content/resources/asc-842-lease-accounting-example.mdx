@@ -1,0 +1,316 @@
+---
+title: "ASC 842 Lease Accounting Example: End-to-End Walkthrough with CAM"
+description: "A complete ASC 842 lease accounting example: ROU asset, lease liability, monthly entries, CAM variable payments, and year-end true-up treatment with real dollar figures."
+datePublished: "2026-04-24"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 278
+faq:
+  - q: "What does a complete ASC 842 lease accounting example look like for a CRE tenant?"
+    a: "A complete ASC 842 example for a commercial real estate tenant includes five components: (1) initial measurement - calculating the lease liability as PV of future fixed payments using the IBR, and the ROU asset as the liability adjusted for prepaid rent and lease incentives; (2) commencement entry - DR ROU Asset, CR Lease Liability; (3) monthly entries - interest accrual on liability, ROU asset amortization as a plug to achieve straight-line cost, and cash payment applied to principal reduction; (4) variable CAM payments expensed as incurred each month; (5) year-end true-up recognized in the period the reconciliation is finalized. This walkthrough shows all five phases with real numbers."
+  - q: "How do you calculate the incremental borrowing rate (IBR) for an ASC 842 example?"
+    a: "The IBR is the rate of interest a lessee would have to pay to borrow collateralized funds over a similar term and in a similar economic environment as the lease. For a CRE tenant, the practical approach is to look at current loan rates for commercial real estate debt of similar maturity: a 5-year lease starting in 2026 might use a rate based on current 5-year SOFR plus a credit spread. Many companies use their actual borrowing rate on similar-term debt, or work with a treasury advisor to document a supportable IBR. The rate is fixed at lease commencement; it only changes on a modification or reassessment event."
+  - q: "How does the CAM true-up affect the ROU asset and lease liability in the ASC 842 example?"
+    a: "For variable CAM charges - which is most CAM - it doesn't. Variable lease payments are explicitly excluded from the lease liability measurement under ASC 842-20-30-5. Monthly CAM estimates and the year-end true-up (whether additional charge or credit) are expensed in the period incurred without touching the ROU asset or lease liability. The only scenario where CAM affects the liability is if the lease contains a fixed CAM amount written into the contract - a set dollar commitment regardless of actual costs. In that case, the fixed CAM amount is included in the payment stream used to calculate the initial lease liability."
+  - q: "What happens to the lease amortization schedule when rent escalates mid-lease?"
+    a: "Known rent escalations are included in the original lease payment stream and factored into the initial PV calculation. The monthly interest accrual uses the actual ending liability balance, so it declines each period. The ROU asset amortization is always the plug - the difference between the straight-line cost (total payments divided by months) and the interest accrual. As interest declines, ROU asset amortization increases to keep the income statement flat. The cash payment follows the lease terms (the escalated amount), and the difference between the straight-line cost and actual cash either reduces the liability more than expected or creates a short-term payable - the system handles this through the liability accretion and principal reduction mechanics."
+  - q: "How do you handle a lease that includes both fixed rent and estimated CAM in the same invoice?"
+    a: "You must separate the lease component (the right to use the space) from the non-lease components (CAM services). Unless you've elected the practical expedient to combine them, the fixed rent goes into the lease liability calculation and the variable CAM estimates are excluded. In practice, ask the landlord for a breakdown of the monthly invoice between base rent and CAM estimate. If the lease specifies a fixed monthly CAM contribution (not variable), that fixed amount gets capitalized. If it's labeled as 'estimated' and reconciled annually based on actual costs, it's variable and stays off the balance sheet."
+---
+
+<Alert type="info" title="Quick Answer">
+This ASC 842 lease accounting example walks through a 5-year office lease with annual rent escalations and monthly CAM estimates, from initial ROU asset measurement through the year-end CAM true-up. Every journal entry uses actual dollar figures. The key rule: fixed rent drives the lease liability; variable CAM is expensed as incurred.
+</Alert>
+
+## The Lease Setup
+
+**Tenant:** Regional accounting firm
+**Property:** 4,200 SF office suite, Class B suburban office park
+**Lease start:** January 1, 2026
+**Term:** 60 months (January 1, 2026 – December 31, 2030)
+**Base rent:** $18/SF Year 1, escalating 3% annually
+**CAM:** Estimated at $4.50/SF, billed monthly, reconciled annually
+**Lease incentive:** $35,000 tenant improvement allowance already received
+**IBR:** 6.5% per annum (based on company's current 5-year borrowing rate)
+**Practical expedients elected:** Short-term lease exemption (for month-to-month storage unit); no lease/non-lease component combination for this lease
+
+---
+
+## Step 1: Classify the Lease
+
+Apply the five ASC 842 criteria:
+
+1. **Transfer of ownership** - No
+2. **Purchase option** - No option in lease
+3. **Lease term vs economic life** - 5 years vs 30+ year building; clearly not ≥75%
+4. **PV of payments vs fair value** - PV will be well under 90% of building fair value
+5. **Specialized nature** - Standard office space; no specialized buildout
+
+**Result: Operating lease.** See [operating lease vs finance lease](/resources/operating-lease-vs-finance-lease) for the full classification analysis.
+
+---
+
+## Step 2: Calculate the Payment Stream (Fixed Rent Only)
+
+CAM is variable and excluded.
+
+**Annual base rent:**
+- 4,200 SF × $18.00/SF = $75,600/year = $6,300/month (Year 1)
+- Year 2: $6,300 × 1.03 = $6,489/month → $77,868/year
+- Year 3: $6,489 × 1.03 = $6,684/month → $80,204/year
+- Year 4: $6,684 × 1.03 = $6,884/month → $82,610/year
+- Year 5: $6,884 × 1.03 = $7,091/month → $85,089/year
+
+**Total fixed payments over term:** $75,600 + $77,868 + $80,204 + $82,610 + $85,089 = **$401,371**
+
+---
+
+## Step 3: Calculate the Lease Liability (PV of Fixed Payments)
+
+Monthly discount rate = 6.5% / 12 = 0.5417%
+
+Calculate the PV of each year's monthly payments, discounted from the midpoint of the year (simplified) or month by month (exact). Using monthly cash flows:
+
+Months 1–12: $6,300/month
+Months 13–24: $6,489/month
+Months 25–36: $6,684/month
+Months 37–48: $6,884/month
+Months 49–60: $7,091/month
+
+**PV of all payments at 6.5% IBR = $344,847**
+
+(This is calculated using standard NPV of uneven cash flows - use the Excel NPV function or a lease accounting tool to get the exact figure.)
+
+---
+
+## Step 4: Calculate the ROU Asset
+
+```
+Lease Liability:                $344,847
++ Initial Direct Costs:               $0   (no broker commission paid by tenant)
++ Prepaid Lease Payments:             $0   (no first month paid before commencement)
+− Lease Incentives Received:    $35,000   (TIA already received)
+= ROU Asset:                    $309,847
+```
+
+---
+
+## Step 5: Commencement Journal Entry (January 1, 2026)
+
+The TIA of $35,000 was received in cash before lease commencement. That receipt was recorded as cash in, with a corresponding deferred lease incentive or contra entry when received. At commencement, the ROU asset is measured net of the incentive already received ($344,847 − $35,000 = $309,847):
+
+```
+DR  Right-of-Use Asset (Operating)    $309,847
+  CR  Lease Liability                              $344,847
+[ROU asset is already net of the $35,000 TIA received]
+```
+
+If the TIA has not yet been received at commencement (e.g., landlord pays after move-in), record a receivable:
+
+```
+DR  Right-of-Use Asset (Operating)    $309,847
+DR  Lease Incentive Receivable          $35,000   [TIA not yet received]
+  CR  Lease Liability                              $344,847
+```
+
+**Balance sheet after commencement:**
+
+| Account | Amount |
+|---|---|
+| Right-of-Use Asset (Operating) | $309,847 |
+| Lease Liability (Current) | $54,912 |
+| Lease Liability (Non-Current) | $289,935 |
+
+The current/non-current split uses the next 12 months of principal reduction.
+
+---
+
+## Step 6: Monthly Journal Entries - January 2026 (Month 1)
+
+**Total straight-line cost per month:**
+$401,371 ÷ 60 months = **$6,689**
+
+**Entry 1 - Interest accrual on lease liability:**
+```
+DR  Operating Lease Cost    $1,868
+  CR  Lease Liability                    $1,868
+
+[$344,847 × 0.5417% = $1,868]
+```
+
+**Entry 2 - ROU asset amortization (plug):**
+```
+DR  Operating Lease Cost    $4,821
+  CR  Right-of-Use Asset                $4,821
+
+[Plug = $6,689 straight-line cost − $1,868 interest = $4,821]
+```
+
+**Entry 3 - Cash payment (actual Month 1 rent):**
+```
+DR  Lease Liability          $6,300
+  CR  Cash                               $6,300
+```
+
+**Month 1 lease liability movement:**
+- Opening: $344,847
+- + Interest accrual: $1,868
+- − Cash payment: $6,300
+- = Closing: **$340,415**
+
+**Income statement - Month 1:**
+Total Operating Lease Cost = $1,868 + $4,821 = **$6,689** (straight-line ✓)
+
+**CAM payment - Month 1 (variable, not in the above):**
+```
+4,200 SF × $4.50/SF / 12 months = $1,575/month
+
+DR  Variable Lease Cost / CAM Expense    $1,575
+  CR  Cash                                          $1,575
+```
+
+**Total cash out in January:** $6,300 (rent) + $1,575 (CAM) = **$7,875**
+
+---
+
+## Step 7: Lease Amortization Schedule (First 6 Months)
+
+| Month | Opening Liability | Interest Accrual | Cash Payment | Principal Reduction | Closing Liability | ROU Asset Amortization | Lease Cost |
+|---|---|---|---|---|---|---|---|
+| Jan 2026 | $344,847 | $1,868 | $6,300 | $4,432 | $340,415 | $4,821 | $6,689 |
+| Feb 2026 | $340,415 | $1,844 | $6,300 | $4,456 | $335,959 | $4,845 | $6,689 |
+| Mar 2026 | $335,959 | $1,820 | $6,300 | $4,480 | $331,479 | $4,869 | $6,689 |
+| Apr 2026 | $331,479 | $1,795 | $6,300 | $4,505 | $326,974 | $4,894 | $6,689 |
+| May 2026 | $326,974 | $1,771 | $6,300 | $4,529 | $322,445 | $4,918 | $6,689 |
+| Jun 2026 | $322,445 | $1,746 | $6,300 | $4,554 | $317,891 | $4,943 | $6,689 |
+
+Note: The ROU asset amortization accelerates each month (from $4,821 to $4,943 in just 6 months) even though the lease cost stays flat. By Month 60, the ROU asset amortization will be roughly $6,050 and the interest will be only ~$38.
+
+---
+
+## Step 8: Year-End CAM True-Up (December 31, 2026 / Q1 2027)
+
+**CAM payments made in 2026:** $1,575 × 12 = **$18,900**
+
+**December 31, 2026 - Accrue estimated true-up:**
+
+Based on the landlord's Q3 operating expense report and your analysis of the [CAM reconciliation](/resources/common-area-maintenance-reconciliation-explained), you estimate the true-up will be approximately $2,200.
+
+```
+DR  Variable Lease Cost / CAM Expense    $2,200
+  CR  CAM Accrual (Accrued Liabilities)             $2,200
+```
+
+**February 15, 2027 - Landlord's reconciliation statement arrives:**
+
+Actual CAM = $21,600 for the 4,200 SF space
+You paid: $18,900
+True-up owed: $2,700
+
+Your accrual was $2,200, so you underaccrued by $500.
+
+```
+[Reverse December accrual:]
+DR  CAM Accrual                          $2,200
+  CR  Variable Lease Cost                            $2,200
+
+[Book final true-up per reconciliation statement:]
+DR  Variable Lease Cost / CAM Expense    $2,700
+  CR  Accounts Payable                              $2,700
+```
+
+**Net income statement impact in Q1 2027:** +$500 incremental CAM expense (the variance between accrual and actual).
+
+**Actual CAM rate check:** $21,600 / 4,200 SF = **$5.14/SF** vs landlord's estimate of $4.50/SF. This 14% overage warrants review - see [pro-rata share calculation](/resources/pro-rata-share-calculation) and [controllable vs non-controllable expenses](/resources/controllable-vs-non-controllable-expenses) to identify which line items drove the overage.
+
+---
+
+## Step 9: Year-End Balance Sheet (December 31, 2026)
+
+After 12 months of entries:
+
+**Lease Liability - December 31, 2026:**
+Opening: $344,847
++ 12 months interest accruals (approx.): $20,850
+− 12 monthly payments: $75,600
+= **$290,097**
+
+**ROU Asset - December 31, 2026:**
+Opening: $309,847
+− 12 months amortization (12 × avg ~$4,870): $58,440
+= **$251,407**
+
+**Balance sheet presentation:**
+
+| Account | Dec 31, 2026 |
+|---|---|
+| Right-of-Use Asset (Operating) - non-current | $251,407 |
+| Operating Lease Liability - current | $57,440 |
+| Operating Lease Liability - non-current | $232,657 |
+
+**2026 Income Statement - Lease-Related Costs:**
+
+| Line Item | Amount |
+|---|---|
+| Operating Lease Cost (straight-line) | $80,268 ($6,689 × 12) |
+| Variable Lease Cost - CAM estimates | $18,900 |
+| Variable Lease Cost - CAM true-up accrual | $2,200 |
+| **Total 2026 Lease Expense** | **$101,368** |
+
+---
+
+## Step 10: ASC 842 Disclosure Footnote (Excerpt)
+
+For the year ended December 31, 2026:
+
+> The Company recognized operating lease costs of $80,268 for fixed base rent and $21,100 for variable lease payments (CAM charges and estimated true-ups). Cash paid for operating leases in operating activities was $94,500 ($75,600 base rent + $18,900 CAM estimates). The weighted-average remaining lease term is 4.0 years. The weighted-average discount rate is 6.5%.
+
+**Maturity of operating lease liabilities as of December 31, 2026:**
+
+| Year | Minimum Lease Payments |
+|---|---|
+| 2027 | $77,868 |
+| 2028 | $80,204 |
+| 2029 | $82,610 |
+| 2030 | $85,089 |
+| Total undiscounted | $325,771 |
+| Less: imputed interest | $(35,674) |
+| **Present value of lease liability** | **$290,097** |
+
+---
+
+## CAM Review Workflow After the True-Up
+
+The $5.14/SF actual vs $4.50/SF budgeted gap in this example is meaningful. Before paying the $2,700 true-up, the controller should request the landlord's backup and check:
+
+1. Is the [pro-rata share](/resources/pro-rata-share-calculation) calculation correct? (4,200 SF / total leasable area)
+2. Were any [non-controllable expense caps](/resources/cam-cap-types) applied?
+3. Were capital items excluded from the CAM pool per the lease?
+4. Were management fees within the contractual limit?
+5. Does the [gross-up calculation](/resources/cam-gross-up-calculation-guide) reflect the right occupancy rate?
+
+CapVeri's reconciliation workflow accepts a CSV you export from Yardi or MRI, maps each GL line to the lease's exclusion list, and outputs a variance report. Use the [CAM reconciliation template](/tools/cam-reconciliation-template) to run this analysis before the payment deadline.
+
+<CTABox
+  title="Trust the CAM numbers you book"
+  description="The CAM payments in this example come from a reconciliation. If that reconciliation is wrong, your entries are wrong. CapVeri works out each CAM charge from the source data. It catches errors before they reach your books. Your first reconciliation is free."
+  utmContent="asc842_example_cta"
+/>
+
+---
+
+## Related Resources
+
+- [Operating Lease Accounting Entries](/resources/operating-lease-accounting-entries) - full entry templates for every scenario
+- [ASC 842 Lease Accounting Guide](/resources/asc-842-lease-accounting-guide) - comprehensive implementation guide
+- [Operating Lease vs Finance Lease](/resources/operating-lease-vs-finance-lease) - classification criteria
+- [US GAAP Lease Accounting Guide](/resources/us-gaap-lease-accounting-guide) - GAAP vs IFRS comparison
+- [CAM True-Up](/resources/cam-true-up) - year-end reconciliation accounting
+- [CAM Gross-Up Calculator](/tools/cam-gross-up-calculator) - verify the landlord's calculation
+- [Lease Accounting Standards ASC 842](/blog/lease-accounting-standards-asc-842) - how ASC 842 changed CAM treatment
+
+## Sources
+
+1. [Deloitte DART - Roadmap: Leases](https://dart.deloitte.com/USDART/home/publications/roadmap/leasing?id=us%3A2el%3A3dp%3Armleases%3Aeng%3Aaud%3A121823%3Aiaspl)
+2. [Deloitte - Lease Accounting Guide: Roadmap for ASC 842](https://www.deloitte.com/us/en/services/audit-assurance/articles/roadmap-to-applying-the-new-leasing-standard.html?icid=top_roadmap-to-applying-the-new-leasing-standard)

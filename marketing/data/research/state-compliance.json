@@ -1,0 +1,447 @@
+{
+  "lastUpdated": "2026-03-17",
+  "disclaimer": "This data is for informational and marketing purposes only. It does not constitute legal advice. Commercial lease obligations are primarily governed by the lease contract itself. Statutes cited should be verified with current legal counsel. Most states have minimal statutory requirements for commercial CAM reconciliation - lease terms control.",
+  "methodology": "Research conducted across state statutes, legal commentary, and case law databases. Compliance complexity rated based on specificity of statutory CAM requirements, not overall commercial lease regulatory burden.",
+  "states": {
+    "california": {
+      "name": "California",
+      "abbreviation": "CA",
+      "primaryStatute": "Cal. Civ. Code \u00a7 1950.9 (SB 1103, Commercial Tenant Protection Act)",
+      "statuteEffectiveDate": "2025-01-01",
+      "reconciliationTiming": "Landlords must respond to qualified commercial tenant (QCT) documentation requests within 30 days. Costs charged must have been incurred within the previous 18 months or be reasonably expected within the next 12 months.",
+      "tenantAuditRights": "QCTs can request supporting documentation for all building operating cost charges. Landlords must provide dated and itemized quotes, contracts, receipts, or invoices, plus a tabulation showing how costs are allocated and a signed attestation that documentation is true and correct. These rights cannot be waived.",
+      "requiredDisclosures": "Allocation tabulation showing proportionate distribution among tenants; itemized documentation with valid quotes, invoices, or receipts for each expense; signed and dated landlord attestation certifying accuracy and completeness. Costs must be allocated proportionately by square footage or another substantiated method.",
+      "penalties": "Actual damages; reasonable attorney's fees and costs (court discretion); treble damages (3x actual) plus punitive damages for willful, oppressive, fraudulent, or malicious violations. Non-compliance can also be raised as a defense in eviction proceedings.",
+      "caseLaw": [
+        {
+          "name": "Thrifty Payless, Inc. v. Americana at Brand, LLC",
+          "citation": "218 Cal.App.4th 1230, 160 Cal.Rptr.3d 718 (Cal. App. 2013)",
+          "summary": "Landlord estimated CAM at $14.50/sqft in LOI but charged nearly double. Court ruled landlord cannot rely on integration or exculpatory clauses to avoid liability for fraudulent misrepresentations made during lease negotiations regarding CAM estimates."
+        },
+        {
+          "name": "SB 1103 Enforcement (pending)",
+          "citation": "Cal. Civ. Code \u00a7 1950.9 (effective Jan. 1, 2025)",
+          "summary": "No appellate decisions yet as the statute is recent. The law creates a new private right of action for QCTs against landlords who fail to comply with building operating cost documentation and allocation requirements."
+        }
+      ],
+      "regulatoryBody": "California Department of Real Estate (DRE); enforcement is primarily through private civil action",
+      "complianceComplexity": "high",
+      "qualifiedTenantDefinition": "Microenterprises (5 or fewer employees), restaurants (fewer than 10 employees), or nonprofits (fewer than 20 employees) who have provided written notice and attestation of their status.",
+      "notes": "California is the national leader in statutory CAM regulation for commercial leases. SB 1103 applies to leases executed or renewed on or after Jan. 1, 2025, periodic tenancies of a month or less, and leases without building operating cost provisions. Protections are non-waivable as a matter of public policy. This is the benchmark statute that CapVeri's compliance features are designed around."
+    },
+    "texas": {
+      "name": "Texas",
+      "abbreviation": "TX",
+      "primaryStatute": "Tex. Prop. Code \u00a7 93.012 (Assessment of Charges)",
+      "statuteEffectiveDate": "2001-09-01",
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation statements. Timing is governed entirely by lease terms.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Audit rights must be negotiated into the lease agreement.",
+      "requiredDisclosures": "Section 93.012 requires that any charge to a tenant (excluding rent and physical damage) must have the amount or calculation method stated in the lease, an exhibit/attachment, or a lease amendment. No specific line-item disclosure requirements for CAM.",
+      "penalties": "No specific statutory penalties for CAM non-compliance beyond general breach of contract remedies. Section 93.012 effectively voids charges not disclosed in the lease.",
+      "caseLaw": [
+        {
+          "name": "General contract law principles apply",
+          "citation": "Tex. Prop. Code Ch. 93",
+          "summary": "Texas courts enforce commercial leases as written. The primary protection is Section 93.012's requirement that all non-rent charges must be disclosed in the lease document itself, preventing surprise assessments."
+        }
+      ],
+      "regulatoryBody": "Texas Real Estate Commission (TREC); enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Texas has minimal statutory regulation of commercial CAM charges. Section 93.012 provides a basic transparency floor - charges must be disclosed in the lease - but imposes no requirements on reconciliation timing, itemization, or tenant audit rights. Commercial leases are enforced as written. Landlords operating in Texas benefit from clear documentation practices even though the statute doesn't mandate them."
+    },
+    "new_york": {
+      "name": "New York",
+      "abbreviation": "NY",
+      "primaryStatute": "N.Y. Real Prop. Law Art. 7 (Landlord and Tenant); no CAM-specific commercial statute",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. Governed entirely by lease terms. Industry standard is annual reconciliation within 90-120 days of year-end.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Must be negotiated into the lease. Standard practice in NYC commercial leases includes audit rights with 1-3 year lookback periods.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements for commercial leases. Since 2019, landlords cannot require tenants to waive the right to bring a declaratory judgment action (RPL \u00a7 259-c). Certain negligence liability waivers are void (GOL \u00a7 5-321).",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract remedies apply. Courts may apply 'pay now, fight later' framework per Morgan Guaranty Trust precedent.",
+      "caseLaw": [
+        {
+          "name": "Morgan Guaranty Trust Co. v. Solow",
+          "citation": "68 N.Y.2d 779 (1986)",
+          "summary": "Landmark NY Court of Appeals case establishing the 'pay now, fight later' framework for operating expense disputes. Tenants must pay disputed amounts but can demand arbitration; courts will enjoin landlord's improper calculations."
+        },
+        {
+          "name": "NY Senate Bill S3593 (2025, pending)",
+          "citation": "S3593, 2025-2026 Legislative Session",
+          "summary": "Proposed legislation requiring written lease contracts for commercial tenancies. Does not specifically address CAM but signals growing legislative interest in commercial tenant protections."
+        }
+      ],
+      "regulatoryBody": "NY Department of State, Division of Licensing Services; NYC Department of Housing Preservation and Development (residential only); enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "New York has no commercial CAM-specific statute despite being the largest commercial real estate market. Commercial leases are enforced as negotiated. NYC market practice includes detailed operating expense escalation clauses and audit rights, but these are contractual, not statutory. The absence of statutory requirements makes defensible documentation even more critical for landlords facing sophisticated tenants with negotiated audit rights."
+    },
+    "florida": {
+      "name": "Florida",
+      "abbreviation": "FL",
+      "primaryStatute": "Fla. Stat. Ch. 83, Part I (Nonresidential Tenancies, \u00a7\u00a7 83.001-83.251)",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. Chapter 83 Part I provides a minimal framework for nonresidential tenancies. Reconciliation timing is governed by lease terms.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Must be negotiated into the lease agreement.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements. Chapter 83 Part I addresses basic tenancy issues (notice periods, defaults, distress for rent) but does not regulate operating expense pass-throughs or CAM allocations.",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract and unjust enrichment remedies apply.",
+      "caseLaw": [
+        {
+          "name": "General contract principles govern",
+          "citation": "Fla. Stat. Ch. 83, Part I",
+          "summary": "Florida courts treat commercial leases as contracts between sophisticated parties. CAM disputes are resolved based on lease language. Tenants may argue breach of contract, misrepresentation, or unjust enrichment when landlords charge incorrect CAM amounts."
+        }
+      ],
+      "regulatoryBody": "Florida Department of Business and Professional Regulation (DBPR); enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Florida's commercial landlord-tenant statute (Ch. 83, Part I) is notably sparse compared to the detailed residential provisions in Part II. The statute does not address CAM charges, reconciliation, or tenant audit rights. All CAM obligations flow from the lease agreement. Florida's large retail and commercial market means CAM disputes are common but resolved contractually, not statutorily."
+    },
+    "illinois": {
+      "name": "Illinois",
+      "abbreviation": "IL",
+      "primaryStatute": "765 ILCS 705/ (Landlord and Tenant Act); no CAM-specific commercial statute",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. The Landlord and Tenant Act primarily addresses residential tenancies. Commercial reconciliation is governed by lease terms.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Illinois courts have recognized implied rights to an itemized accounting when a landlord seeks to collect CAM charges, but a full audit right must be in the lease.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements for commercial leases. The lease governs what must be disclosed.",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract remedies. Illinois courts may award damages for CAM overcharges based on lease terms.",
+      "caseLaw": [
+        {
+          "name": "Illinois implied accounting rights",
+          "citation": "765 ILCS 705/; common law",
+          "summary": "Illinois courts have held that commercial tenants have an implied right to an itemized accounting of CAM charges when the landlord seeks payment, even if the lease is silent on audit rights. However, a full audit right to inspect landlord's books must be contractually granted."
+        }
+      ],
+      "regulatoryBody": "Illinois Department of Financial and Professional Regulation; enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Illinois has no CAM-specific commercial lease statute. The Landlord and Tenant Act (765 ILCS 705/) is primarily focused on residential matters. Commercial lease CAM obligations are entirely contractual. Chicago's large commercial market sees frequent CAM disputes resolved through lease interpretation and negotiation."
+    },
+    "georgia": {
+      "name": "Georgia",
+      "abbreviation": "GA",
+      "primaryStatute": "O.C.G.A. Title 44, Ch. 7 (Landlord and Tenant); O.C.G.A. \u00a7 44-7-13 (landlord duty to repair)",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. Governed by lease terms.",
+      "tenantAuditRights": "No statutory audit rights specific to CAM. However, tenants have a 6-year statute of limitations to recover CAM overcharges under O.C.G.A. \u00a7 9-3-24 (general breach of written contract).",
+      "requiredDisclosures": "No statutory CAM disclosure requirements. O.C.G.A. \u00a7 44-7-13 requires landlords to keep premises in good repair, but parties can contractually shift this obligation in commercial leases.",
+      "penalties": "No CAM-specific statutory penalties. Tenants may pursue breach of contract, misrepresentation, or unjust enrichment claims. 6-year statute of limitations on written contract claims.",
+      "caseLaw": [
+        {
+          "name": "General contract principles govern",
+          "citation": "O.C.G.A. Title 44, Ch. 7",
+          "summary": "Georgia courts enforce commercial lease CAM provisions as written. Tenants challenging overcharges may argue breach of contract or unjust enrichment. The 6-year limitations period under O.C.G.A. \u00a7 9-3-24 provides a relatively long window for recovery."
+        }
+      ],
+      "regulatoryBody": "Georgia Real Estate Commission; enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Georgia has no CAM-specific commercial statute. The landlord-tenant code (Title 44, Ch. 7) provides basic framework provisions but does not regulate operating expense pass-throughs. The 6-year statute of limitations on contract claims is notably long, giving tenants an extended window to challenge CAM overcharges - a risk factor landlords should manage through clear documentation."
+    },
+    "arizona": {
+      "name": "Arizona",
+      "abbreviation": "AZ",
+      "primaryStatute": "A.R.S. Title 33 (Property); no commercial landlord-tenant specific statute comparable to Residential Landlord and Tenant Act (A.R.S. \u00a7 33-1301 et seq.)",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. Governed entirely by lease terms.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. The law presumes commercial tenants are sophisticated parties capable of negotiating audit provisions.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements. Lease should clearly define CAM calculation methodology, distinguish between CAM charges and capital improvements.",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract remedies. A.R.S. \u00a7 42-5069 addresses commercial lease tax classification but not CAM obligations.",
+      "caseLaw": [
+        {
+          "name": "Contract-based enforcement",
+          "citation": "A.R.S. Title 33; common law",
+          "summary": "Arizona courts enforce commercial leases as negotiated between sophisticated parties. CAM disputes are resolved through lease interpretation. Clear distinction between capital improvements and CAM charges is critical in Arizona case law."
+        }
+      ],
+      "regulatoryBody": "Arizona Department of Real Estate; enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Arizona has no commercial landlord-tenant act and no CAM-specific regulations. The Residential Landlord and Tenant Act (A.R.S. \u00a7 33-1301 et seq.) explicitly does not apply to commercial properties. Commercial leases are governed entirely by contract law. Arizona's growing CRE market makes defensible CAM documentation increasingly important despite the absence of statutory mandates."
+    },
+    "colorado": {
+      "name": "Colorado",
+      "abbreviation": "CO",
+      "primaryStatute": "C.R.S. Title 38, Art. 12 (Tenants and Landlords); HB 25-1090 (Protections Against Deceptive Pricing Practices, effective Jan. 1, 2026)",
+      "statuteEffectiveDate": "2026-01-01",
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation in commercial leases. Annual reconciliation is standard market practice. 3-year statute of limitations on contract actions limits how far back landlords can retroactively impose amended CAM charges.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Must be negotiated into the lease. Some leases include accounting clauses, but tenants must insist on their inclusion.",
+      "requiredDisclosures": "HB 25-1090 (effective Jan. 1, 2026) introduces new transparency rules for commercial CAM charges aimed at helping small business tenants understand charges. Residential CAM fees are banned outright. Commercial leases are subject to new disclosure standards but CAM charges are not prohibited.",
+      "penalties": "HB 25-1090 penalties for deceptive pricing practices. Standard breach of contract remedies for lease-based CAM disputes. 3-year statute of limitations on contract claims.",
+      "caseLaw": [
+        {
+          "name": "HB 25-1090 enforcement (pending)",
+          "citation": "C.R.S. (HB 25-1090, effective Jan. 1, 2026)",
+          "summary": "New Colorado law banning residential CAM fees and imposing transparency requirements on commercial CAM charges. No case law yet as the statute takes effect in 2026. Expected to generate enforcement actions and litigation as small businesses challenge opaque CAM charges."
+        }
+      ],
+      "regulatoryBody": "Colorado Attorney General's Office (consumer protection); Colorado Division of Real Estate; enforcement through AG action and private civil suits",
+      "complianceComplexity": "medium",
+      "notes": "Colorado is an emerging regulatory state for commercial CAM. While historically contract-driven, HB 25-1090 (effective Jan. 2026) signals a shift toward greater transparency requirements. The law bans residential CAM fees entirely and imposes commercial transparency rules targeting small business tenants. The 3-year statute of limitations on contract actions limits retroactive CAM charge amendments. Landlords should prepare for the new disclosure regime."
+    },
+    "washington": {
+      "name": "Washington",
+      "abbreviation": "WA",
+      "primaryStatute": "RCW Title 59 (Landlord and Tenant); RCW Ch. 62A.2A (UCC Leases)",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation in commercial leases. RCW Title 59 primarily governs residential tenancies. Commercial reconciliation governed by lease terms.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Must be negotiated into the lease.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements for commercial leases. RCW 59.18 (Residential Landlord-Tenant Act) does not apply to commercial properties.",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract remedies apply.",
+      "caseLaw": [
+        {
+          "name": "Contract-based enforcement",
+          "citation": "RCW Title 59; common law",
+          "summary": "Washington courts enforce commercial leases as written. The Residential Landlord-Tenant Act (RCW 59.18) explicitly excludes commercial properties. CAM disputes are resolved through contract interpretation."
+        }
+      ],
+      "regulatoryBody": "Washington Department of Licensing, Real Estate Division; enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Washington has no commercial CAM-specific statute. The extensive Residential Landlord-Tenant Act (RCW 59.18) does not apply to commercial properties. Seattle's growing tech-driven commercial market relies entirely on contractual CAM provisions. No legislative movement toward commercial CAM regulation as of 2026."
+    },
+    "massachusetts": {
+      "name": "Massachusetts",
+      "abbreviation": "MA",
+      "primaryStatute": "M.G.L. c. 186 (Estates for Years and at Will); no CAM-specific commercial provisions",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. Chapter 186's tenant protections are primarily residential. Commercial reconciliation governed by lease terms.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Must be negotiated into the lease. M.G.L. c. 186, \u00a7 15B restrictions on security deposits do not apply to commercial leases.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements for commercial leases. M.G.L. c. 186, \u00a7 19 imposes a landlord duty to correct unsafe conditions, but this is not CAM-specific.",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract remedies. Massachusetts courts enforce commercial lease terms as negotiated.",
+      "caseLaw": [
+        {
+          "name": "Contract-based enforcement",
+          "citation": "M.G.L. c. 186; common law",
+          "summary": "Massachusetts provides significantly fewer statutory protections for commercial tenants compared to residential. Commercial lease terms, including CAM provisions, are enforced as written."
+        }
+      ],
+      "regulatoryBody": "Massachusetts Division of Professional Licensure, Board of Registration of Real Estate Brokers and Salespersons; enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Massachusetts has no commercial CAM statute. Chapter 186 is overwhelmingly residential in focus. Boston's competitive commercial market relies on negotiated lease terms for CAM governance. Triple net leases are the most common structure, placing CAM documentation burden on the relationship between landlord and tenant rather than statute."
+    },
+    "new_jersey": {
+      "name": "New Jersey",
+      "abbreviation": "NJ",
+      "primaryStatute": "N.J.S.A. Title 2A, Ch. 42 (Summary Proceedings for Recovery of Tenants); no CAM-specific commercial statute",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. Commercial leases are governed entirely by contract law.",
+      "tenantAuditRights": "No statutory audit rights. Many commercial leases now grant express audit rights contractually. Tenants can typically audit going back 2-3 years depending on lease terms. Missing the review window may mean losing recovery rights.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements. NJ courts uphold leases as written, so ambiguities in expense pass-throughs can lead to costly surprises. CAM charges in multi-tenant settings must be disclosed and calculated fairly per lease terms.",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract remedies. NJ courts construe ambiguities against the drafter (typically the landlord).",
+      "caseLaw": [
+        {
+          "name": "Contract-based enforcement with contra proferentem",
+          "citation": "N.J.S.A. Title 2A; common law",
+          "summary": "New Jersey courts enforce commercial leases as written but apply contra proferentem (construe ambiguities against drafter) when CAM provisions are unclear. Landlord-drafted leases with vague CAM definitions tend to be resolved in tenant's favor."
+        }
+      ],
+      "regulatoryBody": "New Jersey Real Estate Commission; enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "New Jersey has no commercial CAM statute. Commercial leases are entirely contract-driven. NJ courts are known for applying contra proferentem aggressively, making clear CAM definitions critical for landlords. The state's dense commercial corridors (Northern NJ, Route 1 corridor) generate frequent CAM disputes resolved through lease interpretation."
+    },
+    "pennsylvania": {
+      "name": "Pennsylvania",
+      "abbreviation": "PA",
+      "primaryStatute": "68 Pa.C.S. (Landlord and Tenant Act of 1951); no CAM-specific commercial provisions",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. The Landlord and Tenant Act of 1951 does not address commercial CAM. Reconciliation governed entirely by lease terms.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Must be negotiated into the lease.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements. Commercial leases in Pennsylvania are governed primarily by contract law, not landlord-tenant statutes.",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract remedies. Courts enforce commercial lease terms as written with little statutory interference.",
+      "caseLaw": [
+        {
+          "name": "Contract-based enforcement",
+          "citation": "68 Pa.C.S.; common law",
+          "summary": "Pennsylvania courts treat commercial leases as contracts between sophisticated parties with minimal statutory overlay. CAM disputes are resolved based on lease language."
+        }
+      ],
+      "regulatoryBody": "Pennsylvania Real Estate Commission; enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Pennsylvania has no commercial CAM statute. The Landlord and Tenant Act of 1951 does not regulate operating expense pass-throughs. Philadelphia and Pittsburgh commercial markets rely entirely on contractual CAM provisions. Landlords benefit from clear documentation practices as a matter of risk management, not statutory compliance."
+    },
+    "ohio": {
+      "name": "Ohio",
+      "abbreviation": "OH",
+      "primaryStatute": "O.R.C. Ch. 5321 (Landlord-Tenant Law, residential); O.R.C. \u00a7 5301.08 (notarization for leases > 3 years)",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. Ohio's landlord-tenant statute (Ch. 5321) applies only to residential properties. Commercial reconciliation governed by lease terms.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Must be negotiated into the lease.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements. Commercial leases longer than 3 years must be notarized (O.R.C. \u00a7 5301.08) but this is a formality requirement, not a CAM disclosure mandate.",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract remedies.",
+      "caseLaw": [
+        {
+          "name": "Contract-based enforcement",
+          "citation": "O.R.C. Ch. 5321; common law",
+          "summary": "Ohio's residential landlord-tenant statute (Ch. 5321) does not apply to commercial properties. Commercial CAM disputes are resolved through contract interpretation. The 3-year lease notarization requirement is the only notable statutory touchpoint."
+        }
+      ],
+      "regulatoryBody": "Ohio Division of Real Estate and Professional Licensing; enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Ohio has no commercial CAM statute. The residential Landlord-Tenant Act (Ch. 5321) explicitly excludes commercial properties. Columbus and Cleveland commercial markets rely on contractual CAM provisions. The notarization requirement for leases over 3 years is the only statutory formality of note."
+    },
+    "michigan": {
+      "name": "Michigan",
+      "abbreviation": "MI",
+      "primaryStatute": "M.C.L. Ch. 554 (Landlord and Tenant); no CAM-specific commercial provisions",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. Governed by lease terms.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Must be negotiated into the lease. Best practice is to include detailed audit provisions specifying scope, lookback period, and dispute resolution.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements. Michigan law provides that commercial CAM provisions should specify line-item detail, but this is a best practice recommendation, not a statutory mandate.",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract remedies.",
+      "caseLaw": [
+        {
+          "name": "Contract-based enforcement",
+          "citation": "M.C.L. Ch. 554; common law",
+          "summary": "Michigan courts enforce commercial lease CAM provisions as written. Legal commentary emphasizes that CAM provisions 'should provide uncommon detail and clarity' to avoid disputes, reflecting the absence of statutory safety nets."
+        }
+      ],
+      "regulatoryBody": "Michigan Department of Licensing and Regulatory Affairs (LARA); enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Michigan has no commercial CAM statute. Industry best practices emphasize detailed, clear CAM provisions because there is no statutory fallback. Detroit and suburban Michigan commercial markets see CAM disputes resolved entirely through contract interpretation. Legal commentary frequently recommends 'uncommon detail and clarity' in CAM lease provisions."
+    },
+    "north_carolina": {
+      "name": "North Carolina",
+      "abbreviation": "NC",
+      "primaryStatute": "N.C.G.S. Ch. 42 (Landlord and Tenant); no CAM-specific commercial provisions",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. Chapter 42 is primarily residential in focus. Commercial reconciliation governed by lease terms.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Commercial tenants do not have the same degree of statutory protections as residential tenants in North Carolina.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements for commercial leases.",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract remedies.",
+      "caseLaw": [
+        {
+          "name": "Contract-based enforcement",
+          "citation": "N.C.G.S. Ch. 42; common law",
+          "summary": "North Carolina courts enforce commercial leases as negotiated. The state provides fewer statutory protections for commercial tenants compared to residential, making contractual CAM provisions the sole source of rights and obligations."
+        }
+      ],
+      "regulatoryBody": "North Carolina Real Estate Commission; enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "North Carolina has no commercial CAM statute. Charlotte and Raleigh-Durham's rapidly growing CRE markets operate under purely contractual CAM frameworks. Landlords face no statutory reconciliation requirements but benefit from clear documentation as a defensive practice."
+    },
+    "virginia": {
+      "name": "Virginia",
+      "abbreviation": "VA",
+      "primaryStatute": "Va. Code \u00a7 55.1-1200 et seq. (Virginia Residential Landlord and Tenant Act); no commercial equivalent",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. The VRLTA applies only to residential properties. Commercial reconciliation governed by lease terms.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Must be negotiated into the lease.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements for commercial leases. Base rent is typically separated from additional rent (CAM, taxes, insurance) in Virginia commercial practice.",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract remedies.",
+      "caseLaw": [
+        {
+          "name": "Contract-based enforcement",
+          "citation": "Va. Code Title 55.1; common law",
+          "summary": "Virginia courts enforce commercial lease CAM provisions as written. The Virginia Residential Landlord and Tenant Act explicitly does not apply to commercial tenancies, leaving all CAM obligations to the lease agreement."
+        }
+      ],
+      "regulatoryBody": "Virginia Real Estate Board; enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Virginia has no commercial CAM statute. Northern Virginia's large office and retail markets (Tysons Corner, Arlington) operate under purely contractual CAM frameworks. The absence of statutory requirements means lease drafting quality is the primary determinant of CAM dispute outcomes."
+    },
+    "maryland": {
+      "name": "Maryland",
+      "abbreviation": "MD",
+      "primaryStatute": "Md. Code, Real Prop. \u00a7 8-101 et seq. (Landlord and Tenant); no CAM-specific commercial statute",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. Governed by lease terms.",
+      "tenantAuditRights": "No statutory audit rights, but Maryland case law (P.V. Properties) established that tenants are entitled to itemized CAM statements when the landlord seeks to collect common area charges.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements. However, case law requires itemized CAM statements, not just aggregate totals, when the lease calls for tenants to pay common area costs.",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract remedies. Case law supports tenant claims for itemized accounting.",
+      "caseLaw": [
+        {
+          "name": "P.V. Properties, Inc. v. Rock Creek Village Associates Ltd. Partnership",
+          "citation": "77 Md.App. 77, 549 A.2d 403 (Md.Ct.Spec.App. 1988)",
+          "summary": "Landmark Maryland case ruling that lease language requiring landlord to provide 'written statement setting forth the total actual costs' of CAM requires an itemized list, not just one aggregate number. Established tenant right to detailed CAM accounting even when lease is ambiguous on format."
+        }
+      ],
+      "regulatoryBody": "Maryland Real Estate Commission; enforcement through private civil action",
+      "complianceComplexity": "medium",
+      "notes": "While Maryland has no CAM-specific statute, the P.V. Properties case (1988) established important case law requiring itemized CAM statements. This judicial precedent effectively creates a disclosure obligation beyond what the statute provides, making Maryland a moderately complex compliance environment. Landlords operating in the Baltimore-DC corridor should ensure CAM statements include line-item detail."
+    },
+    "minnesota": {
+      "name": "Minnesota",
+      "abbreviation": "MN",
+      "primaryStatute": "Minn. Stat. Ch. 504B (Landlord and Tenant); no CAM-specific commercial provisions",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. Chapter 504B does not address commercial CAM. Reconciliation governed by lease terms.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Must be negotiated into the lease.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements. Minnesota requires written lease agreements for commercial tenancies but does not mandate CAM-specific content.",
+      "penalties": "No CAM-specific statutory penalties. Standard breach of contract remedies.",
+      "caseLaw": [
+        {
+          "name": "Contract-based enforcement",
+          "citation": "Minn. Stat. Ch. 504B; common law",
+          "summary": "Minnesota courts enforce commercial lease CAM provisions as written. Commercial security deposits are governed by the lease contract, not statute, reflecting the contract-first approach to commercial landlord-tenant law."
+        }
+      ],
+      "regulatoryBody": "Minnesota Department of Commerce, Real Estate Division; enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Minnesota has no commercial CAM statute. Chapter 504B does not regulate operating expense pass-throughs in commercial leases. Minneapolis-St. Paul commercial market relies on contractual CAM provisions. Written lease requirement is the only notable statutory formality."
+    },
+    "tennessee": {
+      "name": "Tennessee",
+      "abbreviation": "TN",
+      "primaryStatute": "Tenn. Code \u00a7 66-7-108 (Commercial Lease Disclosure Statement)",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline specifically for CAM reconciliation. Section 66-7-108 requires pre-lease disclosure of code compliance status, not ongoing CAM reconciliation.",
+      "tenantAuditRights": "No statutory audit rights for CAM charges. Section 66-7-108 grants prospective tenants the right to request a disclosure statement about property code compliance prior to lease execution.",
+      "requiredDisclosures": "At tenant request, landlord must provide a signed disclosure statement detailing compliance with applicable fire, plumbing, and electrical codes. Applies to commercial property of 1,500 sqft or less and industrial property of 5,000 sqft or less. This is a pre-lease disclosure, not a CAM reconciliation requirement.",
+      "penalties": "Remedies for misrepresentation under \u00a7 66-7-108: actual damages for known defects existing at lease execution. Action must commence within 1 year from disclosure receipt or occupancy date, whichever is first.",
+      "caseLaw": [
+        {
+          "name": "Section 66-7-108 disclosure obligations",
+          "citation": "Tenn. Code \u00a7 66-7-108",
+          "summary": "Tennessee's commercial lease disclosure statute is limited to pre-lease code compliance disclosures for smaller properties. It does not address CAM charges or ongoing operating expense reconciliation. CAM disputes are resolved through lease interpretation."
+        }
+      ],
+      "regulatoryBody": "Tennessee Real Estate Commission; enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Tennessee is unique in having a commercial lease disclosure statute (\u00a7 66-7-108), but it addresses property code compliance, not CAM charges. The disclosure applies only to smaller properties (commercial \u2264 1,500 sqft, industrial \u2264 5,000 sqft). Nashville's booming CRE market operates under contractual CAM frameworks. The disclosure statute is a narrow exception that does not create CAM-specific obligations."
+    },
+    "nevada": {
+      "name": "Nevada",
+      "abbreviation": "NV",
+      "primaryStatute": "NRS Ch. 118C (Landlord and Tenant: Commercial Premises)",
+      "statuteEffectiveDate": null,
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. NRS 118C provides basic commercial tenancy protections but does not address operating expense pass-throughs.",
+      "tenantAuditRights": "No statutory audit rights for CAM charges. Must be negotiated into the lease.",
+      "requiredDisclosures": "No statutory CAM disclosure requirements. NRS 118C.200 addresses basic landlord obligations (no utility interruption, no removal of fixtures) but not operating expense documentation.",
+      "penalties": "No CAM-specific statutory penalties. NRS 118C.200 provides remedies for basic landlord violations (utility interruption, fixture removal). Lease terms supersede NRS 118C.200 where there is a conflict.",
+      "caseLaw": [
+        {
+          "name": "Lease supersession under NRS 118C.200",
+          "citation": "NRS 118C.200",
+          "summary": "Nevada statute explicitly provides that commercial lease terms supersede statutory provisions where they conflict. This makes the lease agreement the primary source of CAM rights and obligations, with minimal statutory floor."
+        }
+      ],
+      "regulatoryBody": "Nevada Real Estate Division; enforcement through private civil action",
+      "complianceComplexity": "low",
+      "notes": "Nevada has a dedicated commercial landlord-tenant chapter (NRS 118C) but it does not address CAM charges or reconciliation. Critically, NRS 118C.200 states that lease terms supersede the statute where there is a conflict, making Nevada one of the most contract-driven commercial lease environments. Las Vegas's large retail and hospitality commercial market resolves CAM disputes entirely through lease interpretation."
+    }
+  },
+  "summary": {
+    "highComplexity": ["california"],
+    "mediumComplexity": ["colorado", "maryland"],
+    "lowComplexity": [
+      "texas",
+      "new_york",
+      "florida",
+      "illinois",
+      "georgia",
+      "arizona",
+      "washington",
+      "massachusetts",
+      "new_jersey",
+      "pennsylvania",
+      "ohio",
+      "michigan",
+      "north_carolina",
+      "virginia",
+      "minnesota",
+      "tennessee",
+      "nevada"
+    ],
+    "statesWithCAMStatute": ["california"],
+    "statesWithEmergingRegulation": ["colorado"],
+    "statesWithNotableCaseLaw": ["california", "maryland", "new_york"],
+    "statesWithDisclosureStatutes": ["california", "texas", "tennessee"],
+    "keyInsight": "Only California (SB 1103) has a dedicated statutory framework for commercial CAM reconciliation and tenant audit rights. Colorado (HB 25-1090) is emerging with transparency requirements effective 2026. The remaining 18 states rely primarily or entirely on contract law, making defensible documentation a best practice rather than a statutory mandate - and an even stronger selling point for CapVeri.",
+    "contentAngle": "For 18 of the top 20 CRE states, there is no statutory equivalent to California's SB 1103. This creates a powerful content angle: 'Your state has no SB 1103 - here's why defensible CAM documentation still matters.' Landlords in contract-driven states face litigation risk from tenants with negotiated audit rights, implied accounting rights (Illinois), or case law precedent (Maryland's P.V. Properties). CapVeri provides the documentation rigor that statutes don't require but courts expect."
+  }
+}

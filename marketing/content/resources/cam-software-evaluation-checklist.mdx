@@ -1,0 +1,287 @@
+---
+title: "CAM Software Evaluation: 25-Point Checklist for Property Controllers"
+description: "A structured RFP checklist for evaluating CAM reconciliation software. Covers calculation engine, lease abstraction, gross-up handling, cap tracking, reporting, integrations, audit trail, security, and pricing."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 47
+faq:
+  - q: "What should I look for in CAM reconciliation software?"
+    a: "The five most critical capabilities are: (1) deterministic calculation engine that matches lease math exactly, (2) gross-up handling that distinguishes variable from fixed expenses, (3) cumulative cap tracking with year-over-year bank balances, (4) a complete audit trail with user and timestamp on every change, and (5) data import from your property management system without requiring an API integration."
+  - q: "How much does CAM reconciliation software cost?"
+    a: "Pricing models vary widely. Per-property pricing ranges from $50–$250 per property per month. Per-user pricing ranges from $200–$800 per user per month. Some vendors charge per square foot. Annual contracts for a 10-property portfolio typically run $5,000–$25,000 per year depending on features and support level."
+  - q: "Should CAM software integrate with Yardi or MRI?"
+    a: "Direct API integration is nice but not necessary. The critical requirement is the ability to import GL exports (CSV or Excel) from your property management system. File-based import is faster to implement, doesn't require IT involvement, and works regardless of which PM system version you're running."
+  - q: "How long does CAM software implementation take?"
+    a: "For file-based import solutions, implementation can be same-day: upload a GL export and start. For API-integrated solutions, expect 4–12 weeks for IT coordination, data mapping, and testing. Lease abstraction setup adds 1–3 days per property depending on lease complexity."
+---
+
+## How to Use This Checklist
+
+This is a structured evaluation framework, not a feature wishlist. Each item is scored on a 0–3 scale:
+
+- **0**: Not supported
+- **1**: Partially supported or requires workaround
+- **2**: Fully supported
+- **3**: Fully supported with notable strength (best-in-class implementation)
+
+Maximum score: 75. A score below 40 indicates significant gaps. A score of 50+ indicates a strong fit for most commercial portfolios.
+
+Run each vendor through the same checklist. Compare scores side by side. Weight the categories based on your portfolio's specific needs. A portfolio with many cumulative caps should weight the Cap Tracking section more heavily.
+
+---
+
+## Category 1: Calculation Engine (Items 1–5)
+
+The calculation engine is the core. If it can't match your lease math, nothing else matters.
+
+### 1. Deterministic Calculations
+
+Does the system use deterministic math (fixed formulas, no AI or ML) for all financial calculations? CAM reconciliation is a contractual obligation: the numbers must be reproducible and auditable. AI-assisted extraction of lease terms or expense classification is acceptable, but the actual dollar calculations must be deterministic.
+
+**Why it matters:** If an auditor asks how a number was calculated, the answer must be a formula, not "the model determined..."
+
+### 2. Gross-Up Handling
+
+Does the system distinguish between variable and fixed expenses when applying gross-up? Can it handle:
+- Different gross-up thresholds per lease (90%, 95%, 100%)
+- Exclusion of specific expense categories (taxes, insurance) from gross-up
+- Mid-year occupancy changes
+- Multiple gross-up pools within a single property
+
+**Why it matters:** Gross-up errors are the #1 finding in tenant audits. The system must enforce the correct application of gross-up to variable expenses only, at the lease-specific threshold.
+
+### 3. Pro-Rata Share Calculation
+
+Does the system support:
+- Standard pro-rata (tenant SF / building SF)
+- Different denominators per tenant (some leases exclude anchor space)
+- Mid-year pro-ration for move-ins, move-outs, and expansions
+- Multiple share pools (CAM share vs. tax share vs. insurance share)
+
+**Why it matters:** Pro-rata errors affect every dollar in the expense pool and every tenant in the building.
+
+### 4. Expense Pool Management
+
+Can the system:
+- Map GL accounts to recoverable/non-recoverable categories
+- Apply different recoverability rules per tenant (lease-specific exclusions)
+- Handle multiple expense pools per property (CAM, tax, insurance, management fee)
+- Persist GL mappings across reconciliation years
+
+**Why it matters:** Manual GL classification is the second most common error source. Saved mappings eliminate reclassification work and reduce errors.
+
+### 5. Base Year and Stop Calculations
+
+Does the system support:
+- Base year with expense stop
+- Base year with gross-up normalization
+- Modified base year (adjusted for specific events)
+- Annual recalculation of base year excess
+
+**Why it matters:** Base year calculations require historical data and multi-year tracking. Spreadsheet-based processes frequently lose or corrupt base year amounts.
+
+---
+
+## Category 2: Cap Tracking (Items 6–8)
+
+Cap provisions are where spreadsheets fail most often because they require state that persists across years.
+
+### 6. Non-Cumulative Cap Enforcement
+
+Does the system enforce annual caps (e.g., 5% per year) and automatically limit tenant billings to the capped amount?
+
+### 7. Cumulative Cap with Bank Tracking
+
+Does the system maintain a cap bank balance (tracking unused cap capacity from low-increase years and drawing it down in high-increase years)? Can you view the bank balance history for each tenant?
+
+**Why it matters:** Cumulative cap tracking is the single hardest thing to do in a spreadsheet. Miss one year and the bank balance is wrong permanently.
+
+### 8. Cap-Specific Exclusions
+
+Can the system exclude specific expense categories from the cap calculation? Some leases cap controllable expenses only (excluding taxes, insurance, and utilities). The system must apply caps after removing excluded categories, not to the total pool.
+
+---
+
+## Category 3: Data Import (Items 9–12)
+
+How does the data get into the system?
+
+### 9. File-Based Import (CSV/Excel)
+
+Can you import GL data via CSV or Excel export from your property management system? This is the minimum requirement. If the system requires an API connection, ask: what happens when the API is down, the PM system upgrades, or IT won't approve the connection?
+
+### 10. GL Mapping Persistence
+
+After you map GL accounts to expense categories for the first import, does the system remember those mappings for subsequent imports? Or do you re-map every time?
+
+**Why it matters:** Re-mapping 200 GL accounts every reconciliation cycle defeats the purpose of automation.
+
+### 11. Multi-Property Import
+
+Can you import data for multiple properties in a single session, or must each property be imported individually?
+
+### 12. Rent Roll / Lease Data Import
+
+Can lease terms (pro-rata share, cap provisions, gross-up thresholds, exclusions) be imported in bulk, or must they be entered manually for each tenant?
+
+---
+
+## Category 4: Reporting and Output (Items 13–16)
+
+### 13. Tenant Statement Generation
+
+Does the system produce tenant-ready reconciliation statements? Can you customize the format to match your existing statement template?
+
+### 14. Variance Reporting
+
+Does the system flag year-over-year variances by expense category and by tenant? Can you set variance thresholds (e.g., flag anything over 10%)?
+
+### 15. Portfolio-Level Reporting
+
+Can you view reconciliation results, recovery ratios, and findings across the entire portfolio, not just property by property?
+
+### 16. Export Capability
+
+Can you export reconciliation data, findings, and statements to Excel, PDF, or your property management system?
+
+---
+
+## Category 5: Audit Trail and Compliance (Items 17–19)
+
+### 17. Change Log
+
+Does the system log every data modification with:
+- Who made the change
+- When the change was made
+- What the previous value was
+- What the new value is
+
+**Why it matters:** Tenant auditors will ask for documentation of changes. "I don't know who changed this or when" is not a defensible answer.
+
+### 18. Calculation Transparency
+
+Can you drill into any number on a tenant statement and see the complete calculation path: from GL total through gross-up, cap application, pro-rata allocation, and estimate credit?
+
+### 19. Historical Data Retention
+
+Does the system retain reconciliation data from prior years? Can you re-open and review a completed reconciliation from three years ago?
+
+---
+
+## Category 6: Security and Access (Items 20–22)
+
+### 20. Role-Based Access Control
+
+Can you restrict access by property, portfolio, or function? The property accountant for Building A should not necessarily see Building B's data.
+
+### 21. Data Encryption
+
+Is data encrypted at rest and in transit? Where is it hosted? Does the vendor have SOC 2 Type II certification or equivalent?
+
+### 22. Data Ownership
+
+If you cancel the contract, what happens to your data? Can you export everything? Is there a data retention period after cancellation?
+
+---
+
+## Category 7: Support and Pricing (Items 23–25)
+
+### 23. Implementation Support
+
+What does onboarding include? Training? Data migration assistance? Lease setup? Is there an implementation fee, and if so, what does it cover?
+
+### 24. Pricing Model Clarity
+
+Is pricing per property, per user, per square foot, or flat rate? Are there additional charges for:
+- Additional properties
+- Additional users
+- Storage
+- Support
+- Exports or API calls
+- Annual price increases
+
+Get the total cost of ownership for years 1, 2, and 3 in writing.
+
+### 25. Domain Expertise
+
+Does the vendor's team include people who have actually done CAM reconciliation? Can they explain the difference between a cumulative and non-cumulative cap? Do they understand gross-up mechanics?
+
+**Why it matters:** Software built by people who don't understand the domain will have blind spots in the calculation engine. Ask the vendor to walk through a complex reconciliation scenario (cumulative cap + gross-up + base year) and see if they can explain it without reading from a script.
+
+---
+
+## Scoring Template
+
+| # | Item | Vendor A | Vendor B | Vendor C |
+|---|---|---|---|---|
+| 1 | Deterministic calculations | _/3 | _/3 | _/3 |
+| 2 | Gross-up handling | _/3 | _/3 | _/3 |
+| 3 | Pro-rata share calculation | _/3 | _/3 | _/3 |
+| 4 | Expense pool management | _/3 | _/3 | _/3 |
+| 5 | Base year and stop calculations | _/3 | _/3 | _/3 |
+| 6 | Non-cumulative cap enforcement | _/3 | _/3 | _/3 |
+| 7 | Cumulative cap with bank tracking | _/3 | _/3 | _/3 |
+| 8 | Cap-specific exclusions | _/3 | _/3 | _/3 |
+| 9 | File-based import (CSV/Excel) | _/3 | _/3 | _/3 |
+| 10 | GL mapping persistence | _/3 | _/3 | _/3 |
+| 11 | Multi-property import | _/3 | _/3 | _/3 |
+| 12 | Rent roll / lease data import | _/3 | _/3 | _/3 |
+| 13 | Tenant statement generation | _/3 | _/3 | _/3 |
+| 14 | Variance reporting | _/3 | _/3 | _/3 |
+| 15 | Portfolio-level reporting | _/3 | _/3 | _/3 |
+| 16 | Export capability | _/3 | _/3 | _/3 |
+| 17 | Change log | _/3 | _/3 | _/3 |
+| 18 | Calculation transparency | _/3 | _/3 | _/3 |
+| 19 | Historical data retention | _/3 | _/3 | _/3 |
+| 20 | Role-based access control | _/3 | _/3 | _/3 |
+| 21 | Data encryption | _/3 | _/3 | _/3 |
+| 22 | Data ownership | _/3 | _/3 | _/3 |
+| 23 | Implementation support | _/3 | _/3 | _/3 |
+| 24 | Pricing model clarity | _/3 | _/3 | _/3 |
+| 25 | Domain expertise | _/3 | _/3 | _/3 |
+| | **Total** | **_/75** | **_/75** | **_/75** |
+
+---
+
+## Red Flags During Evaluation
+
+Watch for these during vendor demos and discussions:
+
+**"We use AI for the calculations."** AI is useful for extracting data from PDFs and classifying expenses. It should never be the calculation engine. CAM math is deterministic: 6.70% of $1,140,000 is $76,380 every time. If the vendor can't explain exactly how the number is derived, move on.
+
+**"Our system handles all lease types automatically."** Every commercial lease is different. A system that claims to handle everything automatically is either oversimplifying or not being honest about the setup required. Good software makes the configuration explicit; it doesn't hide it.
+
+**"You'll need to work with our API team."** If importing a CSV requires an API integration project, the implementation will take months and involve your IT department. File-based import should be available on day one.
+
+**"Pricing depends on usage."** If the vendor cannot give you a fixed annual price for your portfolio, you'll get surprised by overages. Get pricing in writing with a cap on annual increases.
+
+**"We don't do cumulative caps."** Walk away. Cumulative cap tracking is one of the primary reasons to buy software. If they can't do it, their calculation engine is not built for real-world commercial leases.
+
+---
+
+## How CapVeri Scores
+
+CapVeri was built by people who have done CAM reconciliation. The calculation engine is fully deterministic: no AI in the math. Gross-up, caps (both types), pro-rata shares, base year, and expense pool management are all enforced against lease terms.
+
+Data comes in via CSV/Excel export from Yardi, MRI, RealPage, or any system that can produce a GL trial balance. No API integration required. No IT project. Upload a file and run the reconciliation.
+
+Every calculation includes a full audit trail. Every change is logged. Every finding shows the specific dollar impact and the lease provision it references.
+
+Run CapVeri through this checklist yourself. The scores speak for themselves.
+
+---
+
+## Related Resources
+
+- [Build vs. Buy Analysis](/resources/cam-build-vs-buy) - Full cost comparison of spreadsheets vs. software
+- [Data Migration Off Excel](/resources/data-migration-off-excel) - How to transition historical data
+- [Deterministic vs. AI Calculations](/resources/deterministic-vs-ai-cam) - Why calculation engines must be deterministic
+- [Self-Audit Your CAM Billing](/resources/self-audit-cam-billing) - The manual process this software automates
+- [CAM Reconciliation Timeline](/resources/cam-reconciliation-timeline-checklist) - How software compresses the timeline
+
+## Sources
+
+1. [IREM - Operating expense benchmark resources](https://www.irem.org/)
+2. [Partners Real Estate - Houston Office Q4 2025](https://partnersrealestate.com/research/houston-office-q4-2025-quarterly-market-report/)

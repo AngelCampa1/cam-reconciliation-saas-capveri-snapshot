@@ -1,0 +1,12 @@
+{
+  "error_type": "encoding",
+  "description": "CSV file encoded in Windows-1252 (not UTF-8)",
+  "parseable": true,
+  "expected_behavior": "Parser should detect encoding and decode properly, or use latin-1 fallback",
+  "expected_warnings": [
+    "Non-UTF-8 encoding detected, using fallback decoder"
+  ],
+  "expected_rows": 2,
+  "valid_rows": 2,
+  "invalid_rows": 0
+}

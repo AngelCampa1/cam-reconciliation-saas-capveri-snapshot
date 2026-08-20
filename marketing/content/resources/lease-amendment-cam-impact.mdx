@@ -1,0 +1,187 @@
+---
+title: "How Lease Amendments Affect CAM Calculations: Renewals, Expansions, and Mid-Year Changes"
+description: "Lease amendments (renewals, expansions, contractions, and blend-and-extends) change CAM calculations in ways that spreadsheets rarely handle correctly. Pro-rata share recalculations, base year resets, and cap adjustments all shift when a tenant's deal changes mid-year."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 64
+faq:
+  - q: "How does a mid-year tenant expansion affect CAM billing?"
+    a: "When a tenant expands mid-year, their pro-rata share must be recalculated on a weighted-average basis for the expansion year. The tenant pays their original share for the pre-expansion months and the new, larger share for the post-expansion months. The annual reconciliation statement should show both periods separately with the effective date of the change. Failure to weight the periods correctly is one of the most common amendment-related billing errors."
+  - q: "Does a lease renewal reset the CAM base year?"
+    a: "It depends on the renewal terms. A straight renewal at existing terms typically carries forward the original base year. A renewal with renegotiated CAM provisions (new cap structure, new exclusions, or an explicit base year reset clause) establishes a new base year as of the renewal commencement date. The renewal amendment language controls. If the amendment is silent on the base year, most courts default to the original base year continuing."
+---
+
+Lease amendments are where CAM reconciliation breaks. Not because the math is hard, but because the reconciliation template was built for the original deal and nobody updates it when the deal changes.
+
+A tenant renews with a new base year. A tenant expands from 5,000 SF to 8,000 SF on July 1. A tenant contracts and gives back a floor. A blend-and-extend restructures everything mid-lease. Each of these events changes the inputs to the CAM calculation (pro-rata share, base year, cap structure, expense pool) and each one requires a manual update to whatever system or spreadsheet is running the reconciliation.
+
+The problem is that lease amendments are handled by leasing teams, while CAM reconciliation is handled by property accounting. The amendment gets signed, the rent commencement memo goes to accounting, and the CAM implications get lost in the handoff.
+
+## The Four Amendment Types and Their CAM Impact
+
+### 1. Renewals
+
+A renewal is the simplest amendment, but it still carries CAM consequences.
+
+**What changes:**
+- Base year may reset to the renewal commencement year
+- Cap structure may change (new cap percentage, cumulative vs. non-cumulative)
+- Expense exclusions may be renegotiated
+- Administrative fee percentage may change
+
+**What stays the same:**
+- Pro-rata share (assuming same square footage)
+- Denominator (no change to building RSF)
+
+**The base year trap.** When a renewal resets the base year, the new base year amount must be calculated using that year's actual expenses. Gross those up to the target occupancy level if the building is not fully leased. If you carry forward the old base year by accident, the tenant overpays from day one of the renewal term. They will find it during an audit.
+
+**Example.** Tenant A has a 2021 base year with base year expenses of $11.50/SF. They renew effective January 1, 2026 with a base year reset. The 2026 base year expenses come in at $13.80/SF. If accounting misses the reset and keeps using $11.50, the tenant is overpaying $2.30/SF on their entire premises every year of the renewal. On 10,000 SF, that is $23,000 per year in overbilling exposure.
+
+### 2. Expansions
+
+Expansions are the most complex amendment type for CAM because they change the numerator of the pro-rata share calculation mid-year.
+
+**What changes:**
+- Tenant's rentable square footage increases
+- Pro-rata share increases
+- Base year may reset for the expansion space (or the entire premises)
+- Cap calculations may need to be split between original and expansion space
+
+**The mid-year weighting problem.** When a tenant expands on any date other than January 1, the annual reconciliation must weight the pre-expansion and post-expansion periods. This is where most errors occur.
+
+#### Worked Example: 5,000 SF to 8,000 SF Expansion on July 1
+
+**Building facts:**
+- Total building RSF: 100,000 SF
+- Annual recoverable operating expenses: $1,100,000
+- Per-SF expense rate: $11.00/SF
+
+**Pre-expansion (January 1 to June 30):**
+- Tenant SF: 5,000
+- Pro-rata share: 5,000 / 100,000 = 5.00%
+- Expense allocation for 6 months: $1,100,000 x 5.00% x (6/12) = $27,500
+
+**Post-expansion (July 1 to December 31):**
+- Tenant SF: 8,000
+- Pro-rata share: 8,000 / 100,000 = 8.00%
+- Expense allocation for 6 months: $1,100,000 x 8.00% x (6/12) = $44,000
+
+**Full-year weighted CAM charge: $27,500 + $44,000 = $71,500**
+
+Compare this to the two common errors:
+
+| Calculation Method | Annual CAM | Error vs. Correct |
+|---|---|---|
+| Correct weighted average | $71,500 | - |
+| Using post-expansion share for full year (8%) | $88,000 | +$16,500 overbilled |
+| Using pre-expansion share for full year (5%) | $55,000 | -$16,500 underbilled |
+
+Both errors are significant. Overbilling creates audit exposure. Underbilling is pure leakage. The correct answer requires two separate calculations joined at the expansion effective date.
+
+**Base year complications.** If the expansion amendment establishes a new base year for the expansion space only, you now have two base year amounts running simultaneously for the same tenant:
+
+- Original 5,000 SF: 2022 base year at $10.50/SF = $52,500
+- Expansion 3,000 SF: 2026 base year at $13.80/SF = $41,400
+
+The tenant's annual CAM obligation is the sum of the excess over each base year, weighted by the effective period. This is not a calculation most spreadsheets are set up to handle, and it is almost never configured correctly in Yardi or MRI without manual intervention.
+
+### 3. Contractions
+
+Contractions are the mirror image of expansions, with one additional complication: the returned space affects the building denominator.
+
+**What changes:**
+- Tenant's rentable square footage decreases
+- Pro-rata share decreases
+- The returned space may sit vacant, affecting gross-up calculations
+- The denominator may change if the returned space is taken offline
+
+**Example.** Tenant B gives back 4,000 SF of their 12,000 SF premises effective April 1. Building is 100,000 SF total.
+
+| Period | Tenant SF | Pro-Rata Share | Months | Weighted Share |
+|---|---|---|---|---|
+| Jan 1 to Mar 31 | 12,000 | 12.00% | 3 | 3.00% |
+| Apr 1 to Dec 31 | 8,000 | 8.00% | 9 | 6.00% |
+| **Full Year Weighted** | - | - | 12 | **9.00%** |
+
+On $1,100,000 in recoverable expenses, the tenant's weighted annual obligation is $99,000. Using the pre-contraction share for the full year would bill $132,000 (a $33,000 overbilling).
+
+**The vacancy cascade.** The 4,000 SF the tenant returned is now vacant. If the building was at 95% occupancy before the contraction, it drops to 91%. Variable operating expenses should now be grossed up to the target occupancy level. If your reconciliation does not adjust the gross-up factor for the mid-year vacancy change, you are under-recovering from the remaining tenants for the balance of the year.
+
+### 4. Blend-and-Extend
+
+A blend-and-extend restructures the economic terms of the lease (typically reducing current rent in exchange for a longer term) without a formal termination and new lease.
+
+**What changes (potentially everything):**
+- Base year may reset
+- Cap structure may change
+- Expense exclusions may be renegotiated
+- Administrative fee percentage may change
+- Pro-rata share stays the same (assuming same SF)
+
+**The hidden CAM risk.** Blend-and-extend amendments are negotiated by leasing teams focused on rent economics. The CAM provisions are often treated as boilerplate. But if the amendment includes language like "all other terms remain unchanged," the original base year, cap structure, and exclusions carry forward, even if the parties intended to modernize them.
+
+Review every blend-and-extend amendment for:
+1. Explicit base year reset language (or absence of it)
+2. Cap percentage and structure (cumulative vs. non-cumulative)
+3. Expense exclusion list changes
+4. Administrative fee cap changes
+5. Audit rights modifications
+
+## Cap Resets on Amendment
+
+CAM caps interact with lease amendments in ways that create billing errors if not tracked carefully.
+
+**Cumulative cap with expansion.** If the original lease has a 5% cumulative cap and the tenant expands, does the cap bank carry forward for the original space? Does the expansion space start with a fresh bank? The amendment should specify, but many do not. In the absence of explicit language, the conservative position is that the cumulative bank carries forward for the original space and the expansion space starts fresh.
+
+**Non-cumulative cap with renewal.** A non-cumulative cap resets each year based on the prior year's capped amount. When a renewal resets the base year, the cap calculation restarts from the new base. If accounting continues compounding from the old base, the cap will be wrong, potentially for the entire renewal term.
+
+**Dollar amounts at stake:**
+
+| Scenario | Original Base | Cap Rate | Year 1 Correct | Year 1 Error | Annual Variance |
+|---|---|---|---|---|---|
+| Renewal resets base to $13.80/SF | $13.80/SF | 5% | $14.49/SF | $15.23/SF (old base compounded) | $0.74/SF |
+| On 10,000 SF | - | - | $144,900 | $152,300 | **$7,400** |
+
+That $7,400 error compounds every subsequent year because each year's cap calculation builds on the prior year.
+
+## The Amendment-to-Reconciliation Handoff
+
+The root cause of amendment-related CAM errors is not math. It is workflow. Lease amendments are executed by one team and implemented by another, with no structured handoff for the CAM implications.
+
+**What a proper handoff includes:**
+
+1. **Effective date.** The exact date the amendment changes take effect for CAM purposes (which may differ from the rent commencement date)
+2. **SF change.** Old and new square footage with measurement standard
+3. **Base year impact.** Whether the base year resets, and if so, for which portion of the premises
+4. **Cap impact.** Whether the cap structure changes, and whether the cumulative bank carries forward
+5. **Exclusion changes.** Any modifications to the list of excluded expenses
+6. **Pro-rata share calculation.** Whether the amendment specifies weighted-average, effective-date, or some other methodology for the transition year
+
+Without this handoff document, the property accountant is left to interpret the amendment language, which was drafted by attorneys focused on rent, not CAM.
+
+## Auditing Your Amendment Process
+
+Run this check quarterly:
+
+1. Pull all lease amendments executed in the trailing 12 months
+2. For each amendment, confirm the reconciliation template reflects the current terms
+3. For mid-year changes, verify the transition year uses weighted-average allocation
+4. For base year resets, verify the new base year amount is calculated and entered
+5. For cap changes, verify the cap tracker reflects the new structure from the effective date
+6. For expansions/contractions, verify the pro-rata share was updated as of the effective date
+
+If any of these checks fail, you have a billing error that will persist until someone catches it, which usually means the tenant's auditor catches it first.
+
+## Related Resources
+
+- [Base Year CAM Explained](/resources/base-year-cam-lease) - How base years work and when they reset
+- [CAM Expense Caps](/resources/cam-expense-caps) - Cap structures and compounding mechanics
+- [Pro-Rata Share Calculation](/resources/pro-rata-share-calculation) - The denominator math behind share calculations
+- [Denominator Change Guide](/resources/denominator-change-guide) - When and why the building RSF changes
+
+## Sources
+
+1. [ICSC - Dictionary of Shopping Center Terms](https://www.icsc.com/news-and-views/newsstand/icscs-dictionary-of-shopping-center-terms-fourth-edition)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

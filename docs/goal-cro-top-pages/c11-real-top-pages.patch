@@ -1,0 +1,113 @@
+diff --git a/marketing/content/blog/irem-operating-expense-benchmarks.mdx b/marketing/content/blog/irem-operating-expense-benchmarks.mdx
+index 905e9d36..ddfb1730 100644
+--- a/marketing/content/blog/irem-operating-expense-benchmarks.mdx
++++ b/marketing/content/blog/irem-operating-expense-benchmarks.mdx
+@@ -125,6 +125,12 @@ A practical benchmark comparison process:
+
+ Using multiple sources strengthens your benchmarking analysis. When BOMA, IREM, and CoStar data all show similar expense ranges, you have a strong foundation for defending your expense levels against tenant challenges.
+
++<CTABox
++  title="Find CAM charges that look wrong"
++  description="CapVeri works out your cost per square foot by category. It compares every building you own. It flags numbers that look off before tenants do. Upload a CSV or PDF to start."
++  utmContent="irem_benchmarks_cta"
++/>
++
+ ---
+
+ ## Related Resources
+diff --git a/marketing/content/resources/asc-842-lease-accounting-example.mdx b/marketing/content/resources/asc-842-lease-accounting-example.mdx
+index e7475c02..adfe5763 100644
+--- a/marketing/content/resources/asc-842-lease-accounting-example.mdx
++++ b/marketing/content/resources/asc-842-lease-accounting-example.mdx
+@@ -292,6 +292,12 @@ The $5.14/SF actual vs $4.50/SF budgeted gap in this example is meaningful. Befo
+
+ CapVeri's reconciliation workflow accepts a CSV you export from Yardi or MRI, maps each GL line to the lease's exclusion list, and outputs a variance report. Use the [CAM reconciliation template](/tools/cam-reconciliation-template) to run this analysis before the payment deadline.
+
++<CTABox
++  title="Trust the CAM numbers you book"
++  description="The CAM payments in this example come from a reconciliation. If that reconciliation is wrong, your entries are wrong. CapVeri works out each CAM charge from the source data. It catches errors before they reach your books. Your first reconciliation is free."
++  utmContent="asc842_example_cta"
++/>
++
+ ---
+
+ ## Related Resources
+diff --git a/marketing/content/resources/benchmarking-operating-expenses.mdx b/marketing/content/resources/benchmarking-operating-expenses.mdx
+index 864f33cf..d50311d9 100644
+--- a/marketing/content/resources/benchmarking-operating-expenses.mdx
++++ b/marketing/content/resources/benchmarking-operating-expenses.mdx
+@@ -200,6 +200,12 @@ Benchmarks are directional, not prescriptive. Keep these limitations in mind:
+
+ CapVeri calculates your per-SF operating expenses by category as part of the reconciliation process. The platform shows portfolio-level comparisons across your own buildings, which is often more actionable than external benchmarks because you control the data quality and category definitions. When one building in your portfolio spends $2.40/SF on R&M and the rest average $1.50/SF, that gap is worth investigating regardless of what BOMA says.
+
++<CTABox
++  title="See how your buildings compare"
++  description="CapVeri works out your cost per square foot by category. It does this as part of each reconciliation. You can compare every building you own. Find the ones that spend too much."
++  utmContent="benchmarking_opex_cta"
++/>
++
+ ---
+
+ ## Related Resources
+diff --git a/marketing/content/resources/operating-lease-accounting-entries.mdx b/marketing/content/resources/operating-lease-accounting-entries.mdx
+index 98e4b24b..62054791 100644
+--- a/marketing/content/resources/operating-lease-accounting-entries.mdx
++++ b/marketing/content/resources/operating-lease-accounting-entries.mdx
+@@ -344,6 +344,12 @@ The most common audit question around [ASC 842 and CAM](/blog/lease-accounting-s
+
+ Use CapVeri's import workflow to pull the landlord's reconciliation directly from Yardi/MRI CSV exports, match line items against your [pro-rata share calculation](/resources/pro-rata-share-calculation), and generate the final true-up entry with full audit documentation. The [CAM reconciliation template](/tools/cam-reconciliation-template) includes the entry templates above pre-populated for your lease terms.
+
++<CTABox
++  title="Get the CAM true-up right"
++  description="Your CAM true-up entry depends on the reconciliation behind it. CapVeri checks each CAM charge against the lease. It flags any charge that is too high or too low. Your first reconciliation is free."
++  utmContent="operating_lease_entries_cta"
++/>
++
+ ---
+
+ ## Related Resources
+diff --git a/marketing/content/resources/what-is-included-in-cam-expenses.mdx b/marketing/content/resources/what-is-included-in-cam-expenses.mdx
+index 80ea9b3a..4c921b36 100644
+--- a/marketing/content/resources/what-is-included-in-cam-expenses.mdx
++++ b/marketing/content/resources/what-is-included-in-cam-expenses.mdx
+@@ -96,10 +96,9 @@ For a broader view of the reconciliation process itself, [what is CAM reconcilia
+ If you want to estimate what a systematic pool review might find, the [CAM billing error estimator](/tools/cam-billing-error-estimator) uses building type and square footage to project typical recovery ranges.
+
+ <CTABox
+-  title="Verify Your CAM Pool Line by Line"
+-  description="CapVeri maps your GL accounts against your lease definitions and BOMA standards to surface recoverable expenses that were excluded and non-recoverable costs that were included. Upload a CSV or PDF export from your property management system to get started."
++  title="Check every line in your CAM pool"
++  description="CapVeri maps your GL accounts to your lease terms. It finds costs you should have billed back. It finds costs you should not have billed at all. Upload a CSV or PDF to start."
+   utmContent="u_cta"
+-  buttonText="Verify Your CAM Pool"
+ />
+
+ <FAQSection items={[
+diff --git a/marketing/src/app/resources/boma/page.tsx b/marketing/src/app/resources/boma/page.tsx
+index 740747a6..b2ab84f3 100644
+--- a/marketing/src/app/resources/boma/page.tsx
++++ b/marketing/src/app/resources/boma/page.tsx
+@@ -117,18 +117,18 @@ export default async function BomaHubPage() {
+         {/* CTA */}
+         <div className="rounded-lg border border-primary/20 bg-primary/5 p-6 mt-12 not-prose">
+           <h2 className="text-lg font-bold mb-2">
+-            Catch Measurement-Related Billing Errors
++            Catch billing errors before tenants do
+           </h2>
+           <p className="text-sm text-muted-foreground mb-4">
+-            CapVeri validates your CAM reconciliation against BOMA standards. It
+-            flags load factor inconsistencies, pro-rata share errors, and
+-            measurement mismatches before tenants dispute them.
++            CapVeri checks your CAM reconciliation against BOMA standards. It
++            flags load factor and pro-rata share errors. It catches them before
++            tenants dispute them.
+           </p>
+           <Link
+             href="/pricing"
+             className="inline-flex items-center rounded-button bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+           >
+-            Start free trial
++            See plans
+           </Link>
+         </div>
+       </div>

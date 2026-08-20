@@ -1,0 +1,151 @@
+{
+  "batch": "B",
+  "posts_reviewed": 95,
+  "issues_found": 12,
+  "posts": [
+    {
+      "file": "2026-05-19-0800-war-stories-098.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "CAM audit settlements cluster between 50% and 75% of the initial claim. The difference between 50% and 75% is almost entirely determined by how the first 30 days",
+          "fix": "Attribute this settlement-range stat to a named third-party source (e.g., a named law firm, IREM, or a named CRE publication) or remove the specific percentages. Source URL points to capveri.com blog, not a verifiable external study."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-19-1100-industry-news-101.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "Dallas-Fort Worth absorbed 180 million square feet of new industrial space between 2020 and 2025. Property tax increases of 8-11% are estimated for 2026. Hail damage insurance premiums are up 15-30%",
+          "fix": "All three statistics (180M SF absorption, 8-11% tax increase, 15-30% insurance premium increase) must be attributed to a named CRE publication or market research firm (e.g., CBRE, JLL, CoStar, a named appraisal firm). Source URL points only to capveri.com/blog/dfw-industrial-cam."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-19-1500-cam-math-105.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "A single contested dispute costs $23,000 to $70,000 in settlement and legal fees",
+          "fix": "This dollar range has no named third-party source. Either attribute it to a named law firm, BOMA, IREM, or a published CRE study, or remove the specific figures. The BOMA attribution in the same post covers only the 40% error-rate claim, not this cost range."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-20-0800-war-stories-113.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "Office buildings: Leakage range: 1.0-2.5% of annual operating expenses. Retail properties: Leakage range: 1.5-3.5%. Industrial properties: Leakage range: 0.5-1.5%. Medical office buildings (MOB): Leakage range: 2.0-3.5%",
+          "fix": "All four property-type leakage percentages are unattributed. No named third-party source (BOMA, IREM, NAIOP, or named CRE publication) is cited. Source URL points to capveri.com blog. Either attribute each range to a published benchmark study or remove the specific percentages."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-20-1600-anti-integration-121.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "Spreadsheet-based CAM reconciliation for a 10-property portfolio costs $31,500-$72,250 per year. Purpose-built software for the same portfolio costs $12,500-$36,300 per year.",
+          "fix": "These cost ranges are presented as factual benchmarks with no named third-party source. Source URL is capveri.com/blog/cam-build-vs-buy. Remove the specific ranges or attribute them to a published study or named analyst source."
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "Studies of spreadsheet accuracy find error rates of 1-5% in cells containing formulas",
+          "fix": "\"Studies\" is not a named third-party source. Name the study (e.g., the Panko spreadsheet error research, F1F9 report) or remove the specific error-rate claim."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-21-0900-anti-integration-129.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "Sixty-five percent of property controllers still use Excel for at least part of their CAM reconciliation",
+          "fix": "No named third-party source (IREM, BOMA, or a named survey/publication) is cited for this figure. Source URL is capveri.com. Remove the specific percentage or attribute it to a named survey."
+        },
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "A 2019 study found 88% of spreadsheets contain at least one error",
+          "fix": "\"A 2019 study\" is not a named third-party source. Name the study (commonly attributed to Panko or F1F9) and include author/publication details, or remove the specific figure."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-21-1600-anti-integration-136.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "A 2019 study found 88% of spreadsheets contain at least one error",
+          "fix": "\"A 2019 study\" is not a named third-party source. Name the study (e.g., Panko 2019, or EuSpRIG research) and include publication details, or remove the specific figure."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-22-0800-war-stories-143.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "Industry data shows 40% of reconciliations have material billing errors",
+          "fix": "\"Industry data\" is not a named third-party source. Attribute this figure to a named source (BOMA, IREM, or a named audit firm publication) or remove it. Contrast: when post 105 uses this stat it names BOMA as the source - use the same attribution here."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-22-0900-anti-integration-144.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "Eight tenant audit requests per year. A 65% finding rate. An average finding of $35,000. Settlement at 60%. That is $109,200 in annual audit cost",
+          "fix": "These specific scenario inputs (65% finding rate, $35,000 average finding, 60% settlement) are presented as real benchmarks with no named third-party source. Either label this explicitly as a modeled scenario (\"using conservative assumptions\") or attribute the underlying rates to a named source such as IREM or a named audit firm."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-23-1430-war-stories-161.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "The 40% growth in tenant audit firms since 2020 is not a story about adversarial tenants",
+          "fix": "No named third-party source is cited for this growth figure. Source URL is capveri.com/blog/rise-of-tenant-audit-firms. Attribute this to a named market research report, trade publication (e.g., NAIOP, Commercial Property Executive), or remove the specific percentage."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-24-2030-engagement-175.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "Commercial landlords miss an estimated 3-5% of operating expense recoveries every year",
+          "fix": "Source URL is \"original\" - no blog post or resource exists to validate this figure. No named third-party source is cited. Either attribute this to a published BOMA, IREM, or named audit firm report, or reframe as a CapVeri-observed estimate with explicit framing (\"based on our analysis of X reconciliations\")."
+        }
+      ]
+    }
+  ]
+}

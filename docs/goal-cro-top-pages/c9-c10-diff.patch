@@ -1,0 +1,76 @@
+diff --git a/marketing/content/resources/export-guide.mdx b/marketing/content/resources/export-guide.mdx
+index f961ecab..74b6f5b2 100644
+--- a/marketing/content/resources/export-guide.mdx
++++ b/marketing/content/resources/export-guide.mdx
+@@ -217,10 +217,10 @@ If the exports pass the checklist and totals still do not make sense:
+ That sequence is faster than manually combing through tenant statements.
+
+ <CTABox
+-  title="Run the exports through a real QA pass"
+-  description="Upload your rent roll, GL, and billing files to CapVeri. The platform checks export completeness, maps the files together, and flags the places where the reconciliation will fail before statements go out."
+-  utmContent="u_cta"
+-  buttonText="Get the Export Steps"
++  title="Check your exports before you reconcile"
++  description="Upload your rent roll, GL, and billing files to CapVeri. CapVeri checks them for gaps. It flags where the reconciliation would fail before statements go out."
++  utmContent="export_guide_cta"
++  buttonText="Start free trial"
+ />
+
+ ## Related Resources
+diff --git a/marketing/content/resources/cam-cap-types.mdx b/marketing/content/resources/cam-cap-types.mdx
+index 8ee4d519..c2ecf697 100644
+--- a/marketing/content/resources/cam-cap-types.mdx
++++ b/marketing/content/resources/cam-cap-types.mdx
+@@ -168,7 +168,7 @@ Non-cumulative 3-year billed: **$261,658** vs. actual $269,000. Landlord absorbs
+
+ <CTABox
+   title="Automate CAM cap enforcement across your portfolio"
+-  description="CapVeri enforces cumulative and non-cumulative caps per-lease, segregates controllable from uncontrollable pools automatically, and flags cap overages before statements go out."
++  description="CapVeri checks both cap types for every lease. It splits controllable and uncontrollable costs. It flags overages before statements go out."
+   utmContent="u_cta_cam_cap_types"
+   buttonText="See Pricing"
+   href="/pricing"
+diff --git a/marketing/content/resources/cam-reconciliation-cost.mdx b/marketing/content/resources/cam-reconciliation-cost.mdx
+index e25741f8..a39339f4 100644
+--- a/marketing/content/resources/cam-reconciliation-cost.mdx
++++ b/marketing/content/resources/cam-reconciliation-cost.mdx
+@@ -162,7 +162,7 @@ Even under conservative assumptions (50% lower recovery, 50% lower dispute avoid
+
+ <CTABox
+   title="See what manual reconciliation is costing your portfolio"
+-  description="CapVeri ingests your Yardi or MRI data, enforces lease-level rules for every tenant, and produces audit-defensible reconciliation packages at a fraction of the cost of consultant-managed reconciliation."
++  description="CapVeri reads your Yardi or MRI files. It checks lease rules for every tenant. It builds reconciliation packages you can defend. It costs far less than a consultant."
+   utmContent="u_cta_cam_reconciliation_cost"
+   buttonText="See Pricing"
+   href="/pricing"
+diff --git a/marketing/src/components/mdx/CTABox.tsx b/marketing/src/components/mdx/CTABox.tsx
+index d2ce0d92..710c3023 100644
+--- a/marketing/src/components/mdx/CTABox.tsx
++++ b/marketing/src/components/mdx/CTABox.tsx
+@@ -11,6 +11,7 @@ interface CTABoxProps {
+   description: string;
+   buttonText?: string;
+   utmContent?: string;
++  href?: string;
+ }
+
+ export function CTABox({
+@@ -18,7 +19,9 @@ export function CTABox({
+   description,
+   buttonText = "Start free trial",
+   utmContent = "mdx_cta",
++  href,
+ }: CTABoxProps) {
++  const linkHref = href ?? buildAuditLink({ content: utmContent });
+   return (
+     <section className="not-prose bg-primary/5 border border-primary/10 rounded-lg p-6 sm:p-8 text-center mb-8">
+       <h2 className="text-xl sm:text-2xl font-bold mb-3">{title}</h2>
+@@ -27,7 +30,7 @@ export function CTABox({
+       </p>
+       <Button asChild size="lg" className="w-full sm:w-auto">
+         <Link
+-          href={buildAuditLink({ content: utmContent })}
++          href={linkHref}
+           onClick={() =>
+             trackMarketingEvent("cta_clicked", {
+               button_text: buttonText,

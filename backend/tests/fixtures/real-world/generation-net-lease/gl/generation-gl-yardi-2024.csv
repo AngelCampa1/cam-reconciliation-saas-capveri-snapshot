@@ -1,0 +1,77 @@
+Yardi Systems - General Ledger Detail
+Property: Best Buy #812 - Ames (GIPR-812)
+Report Period: 01/01/2024 - 12/31/2024
+Run Date: 01/05/2025
+
+PROPERTY,UNIT,ACCT,ACCT DESC,DATE,REF,DESCRIPTION,DEBIT,CREDIT,BALANCE
+GIPR-812,,5110,Property Tax,01/15/2024,PT-2401,Semi-Annual Property Tax - 1st Half,47500.00,0.00,47500.00
+GIPR-812,,5110,Property Tax,07/15/2024,PT-2402,Semi-Annual Property Tax - 2nd Half,47500.00,0.00,95000.00
+GIPR-812,,5200,Property Insurance,01/01/2024,INS-2401,Annual Property Insurance Premium,28000.00,0.00,28000.00
+GIPR-812,,5300,Electric,01/31/2024,UT-2401,Monthly Electric - January,6800.00,0.00,6800.00
+GIPR-812,,5300,Electric,02/29/2024,UT-2402,Monthly Electric - February,6400.00,0.00,13200.00
+GIPR-812,,5300,Electric,03/31/2024,UT-2403,Monthly Electric - March,5800.00,0.00,19000.00
+GIPR-812,,5300,Electric,04/30/2024,UT-2404,Monthly Electric - April,5200.00,0.00,24200.00
+GIPR-812,,5300,Electric,05/31/2024,UT-2405,Monthly Electric - May,5600.00,0.00,29800.00
+GIPR-812,,5300,Electric,06/30/2024,UT-2406,Monthly Electric - June,6400.00,0.00,36200.00
+GIPR-812,,5300,Electric,07/31/2024,UT-2407,Monthly Electric - July,7200.00,0.00,43400.00
+GIPR-812,,5300,Electric,08/31/2024,UT-2408,Monthly Electric - August,7400.00,0.00,50800.00
+GIPR-812,,5300,Electric,09/30/2024,UT-2409,Monthly Electric - September,6600.00,0.00,57400.00
+GIPR-812,,5300,Electric,10/31/2024,UT-2410,Monthly Electric - October,5400.00,0.00,62800.00
+GIPR-812,,5300,Electric,11/30/2024,UT-2411,Monthly Electric - November,4800.00,0.00,67600.00
+GIPR-812,,5300,Electric,12/31/2024,UT-2412,Monthly Electric - December,4400.00,0.00,72000.00
+GIPR-812,,5310,Water/Sewer,01/31/2024,UT-2413,Monthly Water/Sewer - January,1000.00,0.00,1000.00
+GIPR-812,,5310,Water/Sewer,02/29/2024,UT-2414,Monthly Water/Sewer - February,950.00,0.00,1950.00
+GIPR-812,,5310,Water/Sewer,03/31/2024,UT-2415,Monthly Water/Sewer - March,900.00,0.00,2850.00
+GIPR-812,,5310,Water/Sewer,04/30/2024,UT-2416,Monthly Water/Sewer - April,1000.00,0.00,3850.00
+GIPR-812,,5310,Water/Sewer,05/31/2024,UT-2417,Monthly Water/Sewer - May,1050.00,0.00,4900.00
+GIPR-812,,5310,Water/Sewer,06/30/2024,UT-2418,Monthly Water/Sewer - June,1100.00,0.00,6000.00
+GIPR-812,,5310,Water/Sewer,07/31/2024,UT-2419,Monthly Water/Sewer - July,1100.00,0.00,7100.00
+GIPR-812,,5310,Water/Sewer,08/31/2024,UT-2420,Monthly Water/Sewer - August,1100.00,0.00,8200.00
+GIPR-812,,5310,Water/Sewer,09/30/2024,UT-2421,Monthly Water/Sewer - September,1050.00,0.00,9250.00
+GIPR-812,,5310,Water/Sewer,10/31/2024,UT-2422,Monthly Water/Sewer - October,1000.00,0.00,10250.00
+GIPR-812,,5310,Water/Sewer,11/30/2024,UT-2423,Monthly Water/Sewer - November,900.00,0.00,11150.00
+GIPR-812,,5310,Water/Sewer,12/31/2024,UT-2424,Monthly Water/Sewer - December,850.00,0.00,12000.00
+GIPR-812,,5320,Gas,01/31/2024,UT-2425,Monthly Gas - January,3200.00,0.00,3200.00
+GIPR-812,,5320,Gas,02/29/2024,UT-2426,Monthly Gas - February,3000.00,0.00,6200.00
+GIPR-812,,5320,Gas,03/31/2024,UT-2427,Monthly Gas - March,2600.00,0.00,8800.00
+GIPR-812,,5320,Gas,04/30/2024,UT-2428,Monthly Gas - April,1800.00,0.00,10600.00
+GIPR-812,,5320,Gas,05/31/2024,UT-2429,Monthly Gas - May,1200.00,0.00,11800.00
+GIPR-812,,5320,Gas,06/30/2024,UT-2430,Monthly Gas - June,800.00,0.00,12600.00
+GIPR-812,,5320,Gas,07/31/2024,UT-2431,Monthly Gas - July,600.00,0.00,13200.00
+GIPR-812,,5320,Gas,08/31/2024,UT-2432,Monthly Gas - August,600.00,0.00,13800.00
+GIPR-812,,5320,Gas,09/30/2024,UT-2433,Monthly Gas - September,1000.00,0.00,14800.00
+GIPR-812,,5320,Gas,10/31/2024,UT-2434,Monthly Gas - October,1800.00,0.00,16600.00
+GIPR-812,,5320,Gas,11/30/2024,UT-2435,Monthly Gas - November,3400.00,0.00,20000.00
+GIPR-812,,5320,Gas,12/31/2024,UT-2436,Monthly Gas - December,4000.00,0.00,24000.00
+GIPR-812,,5330,Trash Removal,01/31/2024,UT-2437,Monthly Trash Removal - January,800.00,0.00,800.00
+GIPR-812,,5330,Trash Removal,02/29/2024,UT-2438,Monthly Trash Removal - February,800.00,0.00,1600.00
+GIPR-812,,5330,Trash Removal,03/31/2024,UT-2439,Monthly Trash Removal - March,800.00,0.00,2400.00
+GIPR-812,,5330,Trash Removal,04/30/2024,UT-2440,Monthly Trash Removal - April,800.00,0.00,3200.00
+GIPR-812,,5330,Trash Removal,05/31/2024,UT-2441,Monthly Trash Removal - May,800.00,0.00,4000.00
+GIPR-812,,5330,Trash Removal,06/30/2024,UT-2442,Monthly Trash Removal - June,800.00,0.00,4800.00
+GIPR-812,,5330,Trash Removal,07/31/2024,UT-2443,Monthly Trash Removal - July,800.00,0.00,5600.00
+GIPR-812,,5330,Trash Removal,08/31/2024,UT-2444,Monthly Trash Removal - August,800.00,0.00,6400.00
+GIPR-812,,5330,Trash Removal,09/30/2024,UT-2445,Monthly Trash Removal - September,800.00,0.00,7200.00
+GIPR-812,,5330,Trash Removal,10/31/2024,UT-2446,Monthly Trash Removal - October,800.00,0.00,8000.00
+GIPR-812,,5330,Trash Removal,11/30/2024,UT-2447,Monthly Trash Removal - November,800.00,0.00,8800.00
+GIPR-812,,5330,Trash Removal,12/31/2024,UT-2448,Monthly Trash Removal - December,800.00,0.00,9600.00
+GIPR-812,,5410,Landscaping,04/30/2024,LND-2401,Monthly Landscaping - April,2000.00,0.00,2000.00
+GIPR-812,,5410,Landscaping,05/31/2024,LND-2402,Monthly Landscaping - May,2000.00,0.00,4000.00
+GIPR-812,,5410,Landscaping,06/30/2024,LND-2403,Monthly Landscaping - June,2000.00,0.00,6000.00
+GIPR-812,,5410,Landscaping,07/31/2024,LND-2404,Monthly Landscaping - July,2000.00,0.00,8000.00
+GIPR-812,,5410,Landscaping,08/31/2024,LND-2405,Monthly Landscaping - August,2000.00,0.00,10000.00
+GIPR-812,,5410,Landscaping,09/30/2024,LND-2406,Monthly Landscaping - September,2000.00,0.00,12000.00
+GIPR-812,,5410,Landscaping,10/31/2024,LND-2407,Monthly Landscaping - October,2000.00,0.00,14000.00
+GIPR-812,,5420,Snow Removal,01/31/2024,SNW-2401,Monthly Snow Removal - January,2400.00,0.00,2400.00
+GIPR-812,,5420,Snow Removal,02/29/2024,SNW-2402,Monthly Snow Removal - February,2200.00,0.00,4600.00
+GIPR-812,,5420,Snow Removal,03/31/2024,SNW-2403,Monthly Snow Removal - March,1800.00,0.00,6400.00
+GIPR-812,,5420,Snow Removal,11/30/2024,SNW-2404,Monthly Snow Removal - November,1600.00,0.00,8000.00
+GIPR-812,,5420,Snow Removal,12/31/2024,SNW-2405,Monthly Snow Removal - December,2000.00,0.00,10000.00
+GIPR-812,,5430,Parking Lot Maintenance,03/31/2024,PKG-2401,Q1 Parking Lot Maintenance,2000.00,0.00,2000.00
+GIPR-812,,5430,Parking Lot Maintenance,06/30/2024,PKG-2402,Q2 Parking Lot Maintenance,2000.00,0.00,4000.00
+GIPR-812,,5430,Parking Lot Maintenance,09/30/2024,PKG-2403,Q3 Parking Lot Maintenance,2000.00,0.00,6000.00
+GIPR-812,,5430,Parking Lot Maintenance,12/31/2024,PKG-2404,Q4 Parking Lot Maintenance,2000.00,0.00,8000.00
+GIPR-812,,5550,HVAC Maintenance,03/31/2024,HVC-2401,Q1 HVAC Maintenance,4500.00,0.00,4500.00
+GIPR-812,,5550,HVAC Maintenance,06/30/2024,HVC-2402,Q2 HVAC Maintenance,4500.00,0.00,9000.00
+GIPR-812,,5550,HVAC Maintenance,09/30/2024,HVC-2403,Q3 HVAC Maintenance,4500.00,0.00,13500.00
+GIPR-812,,5550,HVAC Maintenance,12/31/2024,HVC-2404,Q4 HVAC Maintenance,4500.00,0.00,18000.00

@@ -1,0 +1,116 @@
+Yardi Systems - General Ledger Detail
+Property: Stella Link Shopping Center (SLSC-001)
+Report Period: 01/01/2024 - 12/31/2024
+Run Date: 01/05/2025
+
+PROPERTY,UNIT,ACCT,ACCT DESC,DATE,REF,DESCRIPTION,DEBIT,CREDIT,BALANCE
+SLSC-001,,5110,Property Tax,03/31/2024,PT-2401,Q1 Property Tax,16250.00,0.00,16250.00
+SLSC-001,,5110,Property Tax,06/30/2024,PT-2402,Q2 Property Tax,16250.00,0.00,32500.00
+SLSC-001,,5110,Property Tax,09/30/2024,PT-2403,Q3 Property Tax,16250.00,0.00,48750.00
+SLSC-001,,5110,Property Tax,12/31/2024,PT-2404,Q4 Property Tax,16250.00,0.00,65000.00
+SLSC-001,,5200,Property Insurance,01/01/2024,INS-2401,Semi-Annual Insurance Premium - 1st Half,9000.00,0.00,9000.00
+SLSC-001,,5200,Property Insurance,07/01/2024,INS-2402,Semi-Annual Insurance Premium - 2nd Half,9000.00,0.00,18000.00
+SLSC-001,,5300,Electric,01/31/2024,UT-2401,Monthly Electric - January,2400.00,0.00,2400.00
+SLSC-001,,5300,Electric,02/29/2024,UT-2402,Monthly Electric - February,2300.00,0.00,4700.00
+SLSC-001,,5300,Electric,03/31/2024,UT-2403,Monthly Electric - March,2500.00,0.00,7200.00
+SLSC-001,,5300,Electric,04/30/2024,UT-2404,Monthly Electric - April,2700.00,0.00,9900.00
+SLSC-001,,5300,Electric,05/31/2024,UT-2405,Monthly Electric - May,2900.00,0.00,12800.00
+SLSC-001,,5300,Electric,06/30/2024,UT-2406,Monthly Electric - June,3200.00,0.00,16000.00
+SLSC-001,,5300,Electric,07/31/2024,UT-2407,Monthly Electric - July,3400.00,0.00,19400.00
+SLSC-001,,5300,Electric,08/31/2024,UT-2408,Monthly Electric - August,3300.00,0.00,22700.00
+SLSC-001,,5300,Electric,09/30/2024,UT-2409,Monthly Electric - September,3000.00,0.00,25700.00
+SLSC-001,,5300,Electric,10/31/2024,UT-2410,Monthly Electric - October,2600.00,0.00,28300.00
+SLSC-001,,5300,Electric,11/30/2024,UT-2411,Monthly Electric - November,2200.00,0.00,30500.00
+SLSC-001,,5300,Electric,12/31/2024,UT-2412,Monthly Electric - December,1500.00,0.00,32000.00
+SLSC-001,,5310,Water/Sewer,01/31/2024,UT-2413,Monthly Water/Sewer - January,1100.00,0.00,1100.00
+SLSC-001,,5310,Water/Sewer,02/29/2024,UT-2414,Monthly Water/Sewer - February,1100.00,0.00,2200.00
+SLSC-001,,5310,Water/Sewer,03/31/2024,UT-2415,Monthly Water/Sewer - March,1100.00,0.00,3300.00
+SLSC-001,,5310,Water/Sewer,04/30/2024,UT-2416,Monthly Water/Sewer - April,1200.00,0.00,4500.00
+SLSC-001,,5310,Water/Sewer,05/31/2024,UT-2417,Monthly Water/Sewer - May,1200.00,0.00,5700.00
+SLSC-001,,5310,Water/Sewer,06/30/2024,UT-2418,Monthly Water/Sewer - June,1250.00,0.00,6950.00
+SLSC-001,,5310,Water/Sewer,07/31/2024,UT-2419,Monthly Water/Sewer - July,1250.00,0.00,8200.00
+SLSC-001,,5310,Water/Sewer,08/31/2024,UT-2420,Monthly Water/Sewer - August,1250.00,0.00,9450.00
+SLSC-001,,5310,Water/Sewer,09/30/2024,UT-2421,Monthly Water/Sewer - September,1200.00,0.00,10650.00
+SLSC-001,,5310,Water/Sewer,10/31/2024,UT-2422,Monthly Water/Sewer - October,1150.00,0.00,11800.00
+SLSC-001,,5310,Water/Sewer,11/30/2024,UT-2423,Monthly Water/Sewer - November,1100.00,0.00,12900.00
+SLSC-001,,5310,Water/Sewer,12/31/2024,UT-2424,Monthly Water/Sewer - December,1100.00,0.00,14000.00
+SLSC-001,,5320,Gas,01/31/2024,UT-2425,Monthly Gas - January,1100.00,0.00,1100.00
+SLSC-001,,5320,Gas,02/29/2024,UT-2426,Monthly Gas - February,1000.00,0.00,2100.00
+SLSC-001,,5320,Gas,03/31/2024,UT-2427,Monthly Gas - March,900.00,0.00,3000.00
+SLSC-001,,5320,Gas,04/30/2024,UT-2428,Monthly Gas - April,700.00,0.00,3700.00
+SLSC-001,,5320,Gas,05/31/2024,UT-2429,Monthly Gas - May,500.00,0.00,4200.00
+SLSC-001,,5320,Gas,06/30/2024,UT-2430,Monthly Gas - June,400.00,0.00,4600.00
+SLSC-001,,5320,Gas,07/31/2024,UT-2431,Monthly Gas - July,400.00,0.00,5000.00
+SLSC-001,,5320,Gas,08/31/2024,UT-2432,Monthly Gas - August,400.00,0.00,5400.00
+SLSC-001,,5320,Gas,09/30/2024,UT-2433,Monthly Gas - September,500.00,0.00,5900.00
+SLSC-001,,5320,Gas,10/31/2024,UT-2434,Monthly Gas - October,800.00,0.00,6700.00
+SLSC-001,,5320,Gas,11/30/2024,UT-2435,Monthly Gas - November,1100.00,0.00,7800.00
+SLSC-001,,5320,Gas,12/31/2024,UT-2436,Monthly Gas - December,1200.00,0.00,9000.00
+SLSC-001,,5330,Trash Removal,01/31/2024,UT-2437,Monthly Trash Removal - January,600.00,0.00,600.00
+SLSC-001,,5330,Trash Removal,02/29/2024,UT-2438,Monthly Trash Removal - February,600.00,0.00,1200.00
+SLSC-001,,5330,Trash Removal,03/31/2024,UT-2439,Monthly Trash Removal - March,600.00,0.00,1800.00
+SLSC-001,,5330,Trash Removal,04/30/2024,UT-2440,Monthly Trash Removal - April,600.00,0.00,2400.00
+SLSC-001,,5330,Trash Removal,05/31/2024,UT-2441,Monthly Trash Removal - May,600.00,0.00,3000.00
+SLSC-001,,5330,Trash Removal,06/30/2024,UT-2442,Monthly Trash Removal - June,600.00,0.00,3600.00
+SLSC-001,,5330,Trash Removal,07/31/2024,UT-2443,Monthly Trash Removal - July,600.00,0.00,4200.00
+SLSC-001,,5330,Trash Removal,08/31/2024,UT-2444,Monthly Trash Removal - August,600.00,0.00,4800.00
+SLSC-001,,5330,Trash Removal,09/30/2024,UT-2445,Monthly Trash Removal - September,600.00,0.00,5400.00
+SLSC-001,,5330,Trash Removal,10/31/2024,UT-2446,Monthly Trash Removal - October,600.00,0.00,6000.00
+SLSC-001,,5330,Trash Removal,11/30/2024,UT-2447,Monthly Trash Removal - November,600.00,0.00,6600.00
+SLSC-001,,5330,Trash Removal,12/31/2024,UT-2448,Monthly Trash Removal - December,600.00,0.00,7200.00
+SLSC-001,,5410,Landscaping,01/31/2024,LND-2401,Monthly Landscaping - January,1000.00,0.00,1000.00
+SLSC-001,,5410,Landscaping,02/29/2024,LND-2402,Monthly Landscaping - February,1000.00,0.00,2000.00
+SLSC-001,,5410,Landscaping,03/31/2024,LND-2403,Monthly Landscaping - March,1000.00,0.00,3000.00
+SLSC-001,,5410,Landscaping,04/30/2024,LND-2404,Monthly Landscaping - April,1000.00,0.00,4000.00
+SLSC-001,,5410,Landscaping,05/31/2024,LND-2405,Monthly Landscaping - May,1000.00,0.00,5000.00
+SLSC-001,,5410,Landscaping,06/30/2024,LND-2406,Monthly Landscaping - June,1000.00,0.00,6000.00
+SLSC-001,,5410,Landscaping,07/31/2024,LND-2407,Monthly Landscaping - July,1000.00,0.00,7000.00
+SLSC-001,,5410,Landscaping,08/31/2024,LND-2408,Monthly Landscaping - August,1000.00,0.00,8000.00
+SLSC-001,,5410,Landscaping,09/30/2024,LND-2409,Monthly Landscaping - September,1000.00,0.00,9000.00
+SLSC-001,,5410,Landscaping,10/31/2024,LND-2410,Monthly Landscaping - October,1000.00,0.00,10000.00
+SLSC-001,,5410,Landscaping,11/30/2024,LND-2411,Monthly Landscaping - November,1000.00,0.00,11000.00
+SLSC-001,,5410,Landscaping,12/31/2024,LND-2412,Monthly Landscaping - December,1000.00,0.00,12000.00
+SLSC-001,,5430,Parking Lot Maintenance,03/31/2024,PKG-2401,Q1 Parking Lot Maintenance,1500.00,0.00,1500.00
+SLSC-001,,5430,Parking Lot Maintenance,06/30/2024,PKG-2402,Q2 Parking Lot Maintenance,1500.00,0.00,3000.00
+SLSC-001,,5430,Parking Lot Maintenance,09/30/2024,PKG-2403,Q3 Parking Lot Maintenance,1500.00,0.00,4500.00
+SLSC-001,,5430,Parking Lot Maintenance,12/31/2024,PKG-2404,Q4 Parking Lot Maintenance,1500.00,0.00,6000.00
+SLSC-001,,5500,Janitorial,01/31/2024,JAN-2401,Monthly Janitorial - January,1500.00,0.00,1500.00
+SLSC-001,,5500,Janitorial,02/29/2024,JAN-2402,Monthly Janitorial - February,1500.00,0.00,3000.00
+SLSC-001,,5500,Janitorial,03/31/2024,JAN-2403,Monthly Janitorial - March,1500.00,0.00,4500.00
+SLSC-001,,5500,Janitorial,04/30/2024,JAN-2404,Monthly Janitorial - April,1500.00,0.00,6000.00
+SLSC-001,,5500,Janitorial,05/31/2024,JAN-2405,Monthly Janitorial - May,1500.00,0.00,7500.00
+SLSC-001,,5500,Janitorial,06/30/2024,JAN-2406,Monthly Janitorial - June,1500.00,0.00,9000.00
+SLSC-001,,5500,Janitorial,07/31/2024,JAN-2407,Monthly Janitorial - July,1500.00,0.00,10500.00
+SLSC-001,,5500,Janitorial,08/31/2024,JAN-2408,Monthly Janitorial - August,1500.00,0.00,12000.00
+SLSC-001,,5500,Janitorial,09/30/2024,JAN-2409,Monthly Janitorial - September,1500.00,0.00,13500.00
+SLSC-001,,5500,Janitorial,10/31/2024,JAN-2410,Monthly Janitorial - October,1500.00,0.00,15000.00
+SLSC-001,,5500,Janitorial,11/30/2024,JAN-2411,Monthly Janitorial - November,1500.00,0.00,16500.00
+SLSC-001,,5500,Janitorial,12/31/2024,JAN-2412,Monthly Janitorial - December,1500.00,0.00,18000.00
+SLSC-001,,5510,Security,01/31/2024,SEC-2401,Monthly Security - January,1250.00,0.00,1250.00
+SLSC-001,,5510,Security,02/29/2024,SEC-2402,Monthly Security - February,1250.00,0.00,2500.00
+SLSC-001,,5510,Security,03/31/2024,SEC-2403,Monthly Security - March,1250.00,0.00,3750.00
+SLSC-001,,5510,Security,04/30/2024,SEC-2404,Monthly Security - April,1250.00,0.00,5000.00
+SLSC-001,,5510,Security,05/31/2024,SEC-2405,Monthly Security - May,1250.00,0.00,6250.00
+SLSC-001,,5510,Security,06/30/2024,SEC-2406,Monthly Security - June,1250.00,0.00,7500.00
+SLSC-001,,5510,Security,07/31/2024,SEC-2407,Monthly Security - July,1250.00,0.00,8750.00
+SLSC-001,,5510,Security,08/31/2024,SEC-2408,Monthly Security - August,1250.00,0.00,10000.00
+SLSC-001,,5510,Security,09/30/2024,SEC-2409,Monthly Security - September,1250.00,0.00,11250.00
+SLSC-001,,5510,Security,10/31/2024,SEC-2410,Monthly Security - October,1250.00,0.00,12500.00
+SLSC-001,,5510,Security,11/30/2024,SEC-2411,Monthly Security - November,1250.00,0.00,13750.00
+SLSC-001,,5510,Security,12/31/2024,SEC-2412,Monthly Security - December,1250.00,0.00,15000.00
+SLSC-001,,5550,HVAC Maintenance,03/31/2024,HVC-2401,Q1 HVAC Maintenance,2000.00,0.00,2000.00
+SLSC-001,,5550,HVAC Maintenance,06/30/2024,HVC-2402,Q2 HVAC Maintenance,2000.00,0.00,4000.00
+SLSC-001,,5550,HVAC Maintenance,09/30/2024,HVC-2403,Q3 HVAC Maintenance,2000.00,0.00,6000.00
+SLSC-001,,5550,HVAC Maintenance,12/31/2024,HVC-2404,Q4 HVAC Maintenance,2000.00,0.00,8000.00
+SLSC-001,,5700,Management Fee,01/31/2024,MGT-2401,Monthly Management Fee - January,2500.00,0.00,2500.00
+SLSC-001,,5700,Management Fee,02/29/2024,MGT-2402,Monthly Management Fee - February,2500.00,0.00,5000.00
+SLSC-001,,5700,Management Fee,03/31/2024,MGT-2403,Monthly Management Fee - March,2500.00,0.00,7500.00
+SLSC-001,,5700,Management Fee,04/30/2024,MGT-2404,Monthly Management Fee - April,2500.00,0.00,10000.00
+SLSC-001,,5700,Management Fee,05/31/2024,MGT-2405,Monthly Management Fee - May,2500.00,0.00,12500.00
+SLSC-001,,5700,Management Fee,06/30/2024,MGT-2406,Monthly Management Fee - June,2500.00,0.00,15000.00
+SLSC-001,,5700,Management Fee,07/31/2024,MGT-2407,Monthly Management Fee - July,2500.00,0.00,17500.00
+SLSC-001,,5700,Management Fee,08/31/2024,MGT-2408,Monthly Management Fee - August,2500.00,0.00,20000.00
+SLSC-001,,5700,Management Fee,09/30/2024,MGT-2409,Monthly Management Fee - September,2500.00,0.00,22500.00
+SLSC-001,,5700,Management Fee,10/31/2024,MGT-2410,Monthly Management Fee - October,2500.00,0.00,25000.00
+SLSC-001,,5700,Management Fee,11/30/2024,MGT-2411,Monthly Management Fee - November,2500.00,0.00,27500.00
+SLSC-001,,5700,Management Fee,12/31/2024,MGT-2412,Monthly Management Fee - December,2500.00,0.00,30000.00

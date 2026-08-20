@@ -1,0 +1,49 @@
+{
+  "scenario": "cap_cumulative_compounding",
+  "description": "Cumulative-compounding cap - base grows exponentially",
+  "cap_type": "cumulative_compounding",
+  "cap_rate": 0.05,
+  "base_year_expenses": 100000.0,
+  "years": [
+    {
+      "year": 1,
+      "actual_expenses": 100000.0,
+      "compounding_max": 100000.0,
+      "banked_capacity": 0.0,
+      "billable_amount": 100000.0
+    },
+    {
+      "year": 2,
+      "actual_expenses": 107000.0,
+      "compounding_max": 105000.0,
+      "prior_bank": 0.0,
+      "total_available": 105000.0,
+      "billable_amount": 105000.0,
+      "new_bank": 0.0
+    },
+    {
+      "year": 3,
+      "actual_expenses": 106000.0,
+      "compounding_max": 110250.0,
+      "prior_bank": 0.0,
+      "total_available": 110250.0,
+      "billable_amount": 106000.0,
+      "new_bank": 4250.0
+    },
+    {
+      "year": 4,
+      "actual_expenses": 114480.0,
+      "compounding_max": 115762.5,
+      "prior_bank": 4250.0,
+      "total_available": 120012.5,
+      "billable_amount": 114480.0,
+      "new_bank": 5532.5
+    }
+  ],
+  "summary": {
+    "total_actual": 427480.0,
+    "total_billable": 425480.0,
+    "final_bank_balance": 5532.5,
+    "total_landlord_absorbed": 2000.0
+  }
+}

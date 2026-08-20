@@ -1,0 +1,134 @@
+---
+title: "Batch CAM Reconciliation Across Multiple Properties: Workflow and Pitfalls"
+description: "How to batch CAM reconciliation for a multi-property portfolio. Prioritization framework, parallel processing strategies, and the common pitfalls that turn batch processing into a bottleneck."
+excerpt: "Running CAM reconciliation for 10, 20, or 30 properties at the same time requires a different process than doing one property at a time."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "operations"
+faq:
+  - q: "How should I prioritize which properties to reconcile first in a multi-property batch?"
+    a: "Prioritize by three factors: (1) Lease deadlines: properties with 90-day reconciliation deadlines should start before properties with 180-day deadlines. (2) Complexity: counter-intuitively, start complex properties first, not last. Complex properties take longer and need more review cycles, so starting them early ensures they don't become the final bottleneck. (3) Lease expiration dates: properties with tenants whose leases expire in Q1 or Q2 need reconciliations delivered while the lease relationship is still active."
+  - q: "What is the most common mistake in batch CAM reconciliation?"
+    a: "Context switching errors: applying methodology, data, or assumptions from one property to another because the analyst is working on multiple properties simultaneously. The fix is property-specific workspaces (separate folders, separate calculation files) and a checklist that requires confirming property-specific data at each step rather than copying from the prior property. The second most common mistake is inconsistent methodology across properties: one analyst uses Economic occupancy while another uses Physical on the same day."
+---
+
+When you're responsible for CAM reconciliation across 10, 20, or 30 commercial properties simultaneously, the process is categorically different from reconciling one property at a time. The complexity isn't additive. It's multiplicative. Data from different properties gets mixed up, methodology decisions made for one property accidentally get applied to others, and shared staff become bottlenecks in ways that don't appear in single-property processing.
+
+This guide covers the workflow and the pitfalls.
+
+## Why Batch Reconciliation Is Different
+
+Single-property reconciliation is linear: gather data, calculate, verify, draft statement, review, deliver. Batch reconciliation has interdependencies that make it more complex:
+
+**Resource constraints:** The same analysts, the same reviewer, and the same delivery systems handle all properties. When multiple properties are ready for review simultaneously, the reviewer becomes the bottleneck. When multiple tenants submit questions in the same week, response time degrades.
+
+**Data contamination risk:** Analysts working on 5 properties simultaneously are at risk of using data from Property A in Property B's calculation, particularly if GL exports look similar (same ERP, similar account structures). This is the primary source of systematic errors in batch processing.
+
+**Methodology consistency:** With multiple analysts working simultaneously, CAM methodology can drift across properties. One analyst applies the correct gross-up methodology; another defaults to a simpler approach. The output is inconsistent across the portfolio.
+
+**Sequencing dependencies:** Some properties can't start until others are complete. A property that shares a recovery pool with another (multi-property shared expense pools) requires the shared pool calculation to be finalized before either property's tenant statements can be drafted.
+
+## Property Prioritization Framework
+
+Not all properties should start at the same time, even in a batch process. Use this three-factor prioritization:
+
+**Factor 1: Lease deadlines**
+- Identify the reconciliation statement deadline for every property (typically in the lease: 90, 120, or 180 days after fiscal year end)
+- Properties with earlier deadlines go first
+- For calendar-year leases with a March 31 deadline, start in January
+- For properties with May 31 or June 30 deadlines, they can start in February without schedule risk
+
+**Factor 2: Complexity tier**
+- Tier 1 (simple): Single-tenant NNN leases, no gross-up, no caps. Start these first, complete quickly, build momentum.
+- Tier 2 (standard): Multi-tenant retail or office, standard recovery pool, some cap calculations. Start week 1 or 2.
+- Tier 3 (complex): Anchor tenant exclusions, multiple recovery pools, many tenants with different cap terms, shared expense allocations. Start these as early as Tier 1, not last.
+
+The counterintuitive point: start Tier 3 properties earliest, not last. Complex properties take 3-4x longer and require more review cycles. Starting them in week 1 when review capacity is fresh and time is available means they complete by week 5-6 rather than by week 8-9.
+
+**Factor 3: Lease expiration timing**
+- Tenants whose leases expire in Q1 or Q2 need their reconciliation statements delivered before the lease ends
+- Disputes about reconciliation are much harder to resolve after a lease expires and the tenant relationship ends
+- Flag any properties with Q1-Q2 lease expirations as top priority regardless of their deadline or complexity tier
+
+## Parallel Processing Strategy
+
+**What can run simultaneously:**
+- Data gathering across all properties (GL exports, lease abstract pulls): no sequencing dependency. Batch-extract lease terms across your portfolio with [Lextract.io](https://www.lextract.io) before starting reconciliations.
+- Tier 1 simple properties can all start simultaneously
+- Individual tenant calculations within a single property can often be done simultaneously by different analysts
+
+**What must be sequential:**
+- GL export must be final before calculation starts (no property can start on preliminary data)
+- Recovery pool calculation must be complete before tenant statement drafting begins
+- Review and approval must come after drafting. The reviewer cannot approve statements while calculations are still being checked.
+
+**Recommended phasing for a 20-property portfolio:**
+
+*Week 1:* Start data gathering for all 20 properties simultaneously. Begin calculations for all 5 Tier 1 properties and 3-4 of the most complex Tier 3 properties.
+
+*Week 2:* Complete Tier 1 properties. Begin Tier 2 properties. Continue Tier 3. First batch of statements (Tier 1) ready for review.
+
+*Week 3-4:* Complete Tier 2 and Tier 3 (most). Second batch (Tier 2) ready for review. Tier 3 in final review.
+
+*Week 5-6:* Remaining Tier 3 complete. Final review. Coordinated delivery of all statements.
+
+## The Common Pitfalls
+
+**Pitfall 1: Context switching errors**
+
+An analyst working on Property A (12% gross-up, 95% threshold) switches to Property B (no gross-up) and applies Property A's methodology to Property B because they forgot to check Property B's specific terms. This is the most common source of systematic errors in batch processing.
+
+Prevention: Property-specific checklists that require confirming key parameters at the start of each property (gross-up type, threshold, denominator definition, cap terms). Don't rely on memory. Require documented confirmation.
+
+**Pitfall 2: Inconsistent methodology across analysts**
+
+Analyst 1 uses Economic occupancy; Analyst 2 uses Physical. Analyst 1 includes management fees; Analyst 2 doesn't. The methodology diverges not because of different lease terms but because there's no enforced standard.
+
+Prevention: A single methodology document that defines the approach for each decision point, reviewed and approved before reconciliation season starts. The methodology document is property-agnostic: it defines what Yardi settings to use, how to verify gross-up results, how to check cap calculations.
+
+**Pitfall 3: Shared staff becoming bottlenecks**
+
+When the reviewing controller is the only person who can approve statements, and 8 properties become ready for review in the same week, statements back up in the queue. The portfolio finishes 2 weeks later than necessary because the bottleneck isn't analyst capacity. It's reviewer capacity.
+
+Prevention: Identify the reviewer bottleneck early in the planning process. For large batch portfolios, consider training a second reviewer for Tier 1 and Tier 2 properties, reserving the senior reviewer for Tier 3 properties and edge cases.
+
+**Pitfall 4: Data disorganization**
+
+When GL exports, lease abstracts, prior year calculations, and draft statements for 20 properties are stored in a flat folder structure (or worse, email attachments), finding the right file for the right property becomes a constant source of delay and error.
+
+Prevention: A folder structure enforced from the first day: one folder per property, named consistently, with subfolders for GL data, lease documents, calculations, and statements. No exceptions.
+
+## Quality Control for Batch Processing
+
+For a batch of 20+ properties, reviewing every tenant's calculation detail is impractical. Apply a sampling strategy:
+
+**Universal checks (every property):**
+- Recovery pool total matches GL expense total for the period
+- Pro-rata shares sum to 100% (or to the denominator percentage for anchor-excluded properties)
+- No tenants have changed lease terms without the denomination update reflected
+
+**Sample checks (3-5 tenants per property):**
+- Largest tenant by RSF
+- Tenant with the most complex cap terms
+- Any tenant who raised questions or disputes in the prior year
+
+**Full-detail checks (selected properties):**
+- Any property where a configuration change was made during the year
+- Any property where a new tenant moved in or a tenant expanded
+- Any property that was flagged in prior year reconciliation
+
+CapVeri's portfolio-level verification runs the full-detail check automatically for every property, flagging discrepancies across the entire batch so your review can focus on investigating issues rather than finding them.
+
+## Related Resources
+
+- [Portfolio-Level CAM Operations Workflow](/cam-reconciliation-guide)
+- [How to Speed Up CAM Reconciliation](/blog/speed-up-cam-reconciliation)
+- [CAM Billing Error Estimator](/tools/cam-billing-error-estimator)
+- [Property Controller Career Path in CRE FinOps](/blog/controller-career-path-cre-finops)
+
+## Sources
+
+1. [Fiserv: Reconciliation whitepaper](https://www.fiserv.com/content/dam/fiserv-ent/archive-files/final-files/white-papers/Frontier-Reconciliation_whitepaper_1020.pdf)
+2. [J.P. Morgan: What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

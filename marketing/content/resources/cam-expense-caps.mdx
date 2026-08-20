@@ -1,0 +1,144 @@
+---
+title: "CAM Expense Caps: Cumulative vs Non-Cumulative Cap Calculation Guide"
+description: "How CAM expense caps work in commercial leases. Cumulative vs. non-cumulative caps, compounding logic, carry-forward math, and the calculation errors that cost landlords thousands."
+datePublished: "2026-02-27"
+dateModified: "2026-03-22"
+author: "Angel Campa"
+buttonText: "Check Your Cap Math"
+order: 19
+faq:
+  - q: "What is a CAM expense cap in a commercial lease?"
+    a: "A CAM expense cap is a lease provision that limits how much a tenant's controllable CAM charges can increase from one year to the next. Caps are expressed as a fixed percentage, typically 3% to 5%, and apply only to expenses the landlord can influence directly. Property taxes, insurance, and utilities are almost always excluded from cap calculations."
+  - q: "What is the difference between a cumulative and non-cumulative CAM cap?"
+    a: "A non-cumulative cap sets a hard annual ceiling. If actual expense growth comes in below the cap, the unused portion disappears permanently. A cumulative cap lets the landlord bank the difference between actual growth and the cap limit and carry it forward to future years. A landlord with a 5% cap and 2% actual growth banks 3%. If expenses spike 8% the next year, the landlord can draw from the bank and pass through more than the base 5% would allow. The lease must specify which type applies; courts generally will not imply a cumulative structure if the lease is silent."
+  - q: "What expenses are excluded from CAM caps?"
+    a: "Commercial leases typically exclude property taxes, insurance premiums, and utility costs from cap calculations because landlords cannot control them. The lease should list explicitly which expense categories are controllable and which are not. When the lease is silent on a specific expense, disputes follow. Capital expenditures recovered through depreciation schedules are usually treated separately and excluded as well."
+  - q: "How is a compounding CAM cap calculated?"
+    a: "A compounding cap applies the cap percentage to the prior year's capped allowable amount, not to the prior year's actual expenses. Starting with a $100,000 base and a 5% cap: Year 1 cap ceiling is $105,000, Year 2 cap ceiling is $110,250, Year 3 cap ceiling is $115,763. Applying the 5% to actual expenses rather than to the capped allowable resets the ceiling lower every time actual expenses fall below the cap, which makes the cumulative protection the tenant negotiated worth less than it appears."
+  - q: "What happens if a landlord miscalculates a CAM cap?"
+    a: "If the miscalculation over-bills the tenant, the tenant can dispute the charges within the audit window specified in the lease, typically 12 to 36 months from delivery of the reconciliation statement. If the miscalculation under-bills the landlord by applying the cap incorrectly to actual expenses instead of the prior capped allowable, the landlord loses legitimate recovery every year the error persists. Both types of error compound over multi-year lease terms."
+---
+
+<Alert type="info" title="Quick Answer">
+A CAM expense cap limits how much a tenant's controllable CAM charges can grow each year. Caps protect tenants from cost swings but are among the most frequently miscalculated provisions in commercial leases. They often work against the landlord who negotiated them.
+</Alert>
+
+## What Expenses Are Subject to Caps
+
+Not every line item in a CAM pool falls under the cap. Leases draw a line between controllable and uncontrollable expenses. Only the controllable side is capped.
+
+<TwoColumnCard
+  left={{
+    title: "Controllable (subject to cap)",
+    items: [
+      "Landscaping and grounds maintenance",
+      "Management fees",
+      "Janitorial and cleaning services",
+      "Parking lot maintenance",
+      "General repairs and maintenance labor",
+      "Security services"
+    ]
+  }}
+  right={{
+    title: "Uncontrollable (typically excluded)",
+    items: [
+      "Property taxes and special assessments",
+      "Building insurance premiums",
+      "Utilities (electric, gas, water)",
+      "Snow removal (in many leases)",
+      "Capital expenditure amortization"
+    ],
+    variant: "warning"
+  }}
+/>
+
+The lease must specify which category each expense belongs to. When it does not, both sides claim the ambiguity works in their favor. That dispute does not get resolved cheaply.
+
+A common middle ground is to exclude any expense line that grew beyond a defined threshold regardless of category, though that creates its own calculation complexity. Either way, the classification needs to be written into the lease, not assumed.
+
+## Cumulative vs. Non-Cumulative: A Three-Year Scenario
+
+The difference between these two structures can be worth tens of thousands of dollars over a lease term. Most landlords and tenants sign without knowing which type they agreed to.
+
+A non-cumulative cap sets a hard annual ceiling. If actual expense growth comes in at 2% against a 5% cap, the unused 3% is gone. The next year starts fresh from the actual amount billed, not from what the cap would have allowed.
+
+A cumulative cap banks the unused portion. That same 2% year banks 3%, which the landlord can draw from in a future high-expense year.
+
+Here is what a three-year scenario looks like side by side, starting with a $100,000 base and a 5% cap:
+
+| Year | Actual Growth | Non-Cumulative Billed | Bank Balance | Cumulative Billed |
+|------|--------------|----------------------|--------------|-------------------|
+| Year 1 | 2% ($2,000) | $102,000 | +3% banked | $102,000 |
+| Year 2 | 3% ($3,060) | $105,060 | +5% banked (8% total) | $105,060 |
+| Year 3 | 10% ($11,556) | $110,313 (5% cap) | -8% drawn; $0 balance | $116,617 |
+
+In Year 3, the cumulative landlord recovers $6,304 more than the non-cumulative landlord, entirely from expenses both of them actually incurred. The cumulative bank was never free money. It was the landlord's deferred recovery.
+
+Courts generally will not imply a cumulative structure when the lease is silent. If the lease says "5% annual cap" without specifying cumulative mechanics, most jurisdictions treat it as non-cumulative. Lowndes Law notes that tenants frequently push for non-cumulative caps because they prevent the landlord from banking unused capacity and drawing it all down in one bad year.
+
+## The Compounding Error: How Most Landlords Miscalculate
+
+<Alert type="warning" title="The Most Expensive Cap Mistake">
+The cap must be applied to the prior year's capped allowable amount, not to the prior year's actual expenses. Applying the cap to actuals resets the ceiling lower every time expenses fall below the cap, which makes the landlord's own protection worth less each year without anyone noticing.
+</Alert>
+
+Here is how this plays out in practice. Start with a $100,000 base, a 5% cap, and two years where actual growth is 3%:
+
+Correct compounding:
+- Year 1 cap ceiling: $100,000 x 1.05 = $105,000. Actual: $103,000. Billed: $103,000.
+- Year 2 cap ceiling: $105,000 x 1.05 = $110,250. Actual growth of 3% from $103,000 = $106,090. Billed: $106,090.
+
+Incorrect compounding (cap applied to actuals):
+- Year 1 cap ceiling: $100,000 x 1.05 = $105,000. Actual: $103,000. Billed: $103,000.
+- Year 2 cap ceiling: $103,000 x 1.05 = $108,150 instead of $110,250. Actual: $106,090. Billed: $106,090.
+
+In Year 2 the error does not show up in the bill because actual expenses are still below both ceilings. But in Year 3, if expenses spike to $113,000:
+
+- Correct ceiling: $115,763 (based on $110,250 x 1.05). Billed: $113,000.
+- Incorrect ceiling: $113,558 (based on $108,150 x 1.05). Billed: $113,000. Still fine.
+
+By Year 5, the error shows up. The incorrectly compounded ceiling has drifted $4,000 to $7,000 below the correct one. In a high-expense year the landlord is capped lower than the lease requires. Best Lawyers notes that operating expense disputes involving compounding methodology are among the harder ones to resolve because both sides can produce internally consistent math from different starting assumptions.
+
+The fix is simple to describe: track two numbers every year. Track actual expenses billed and the capped allowable ceiling, regardless of which one was lower. CapVeri stores both and uses the allowable ceiling, not the billed amount, as the base for next year's calculation.
+
+## The Base Year Anomaly Trap
+
+A base-year lease anchors the tenant's contribution to what CAM expenses were in a specific year. The tenant pays only the increase above that floor. Set the floor during an artificially depressed period and every future year looks like a large spike, even when nothing unusual happened.
+
+The most common example is a lease signed during the 2020 pandemic lockdown with a 2020 base year. Common area costs that year were 20% to 30% below normal because buildings were underoccupied. By 2023, normal occupancy restored normal expense levels. Tenants with 2020 base years paid for that entire restoration as if it were growth.
+
+The same problem appears when a base year is set while a building is still under construction or in initial lease-up. Expenses are low not because costs are controlled but because the building is not yet fully operational. BDO's lease audit spotlight from 2020 identified base-year anomalies as one of the highest-value findings in commercial lease audits, because the error compounds across the entire remaining lease term.
+
+Base-year normalization corrects this: gross up the base-year expenses to what they would have been at target occupancy before locking in the floor. Leases negotiated during vacancy-heavy or construction periods should specify that the base year be normalized rather than taken at face value. Many do not. See the detailed breakdown at [/resources/base-year-cam-lease](/resources/base-year-cam-lease).
+
+## Why Spreadsheets Drop the Cumulative Bank
+
+Manual year-end closes are where cumulative cap banks disappear. The mechanics are simple in theory: record what the cap allowed, record what was billed, carry the difference forward. In practice, the bank lives in a worksheet tab that does not survive the handoff between property managers or the annual migration to a new spreadsheet template.
+
+When the bank disappears, the landlord loses the ability to recover in high-expense years what was legitimately deferred in low-expense years. The tenant gets a provision the landlord never intended to give away. There is no dispute, no audit finding, no visible error. The landlord just collects less than the lease allows, year after year.
+
+To be clear, this is not over-billing. The landlord is not taking money improperly. They are leaving their own money on the table because the tracking system could not maintain a running balance across fiscal years.
+
+It gets worse when ownership changes. A new owner inherits the spreadsheets, cannot reconstruct the bank history with confidence, and typically resets to zero. Three years of banked capacity, legitimately accumulated under the prior owner, disappears at closing. For a mid-size retail property with ten capped tenants, that can be $50,000 to $100,000 in lost recovery capacity.
+
+For a broader look at the reconciliation errors that generate tenant disputes, see [/blog/cam-reconciliation-errors](/blog/cam-reconciliation-errors). For an introduction to how CAM charges are structured before caps apply, see [/resources/common-area-maintenance-reconciliation-explained](/resources/common-area-maintenance-reconciliation-explained).
+
+<CTABox
+  title="Check Your Cap Math"
+  description="Upload your GL export and CapVeri checks your cap calculations against your lease terms: cumulative vs. non-cumulative structure, compounding base, and bank balance tracking. You get a variance report with dollar figures, not just flags."
+  utmContent="u_cta"
+  buttonText="Check Your Cap Math"
+/>
+
+<FAQSection items={[
+  { q: "What is a CAM expense cap in a commercial lease?", a: "A CAM expense cap is a lease provision that limits how much a tenant's controllable CAM charges can increase from one year to the next. Caps are expressed as a fixed percentage, typically 3% to 5%, and apply only to expenses the landlord can influence directly. Property taxes, insurance, and utilities are almost always excluded from cap calculations." },
+  { q: "What is the difference between a cumulative and non-cumulative CAM cap?", a: "A non-cumulative cap sets a hard annual ceiling. If actual expense growth comes in below the cap, the unused portion disappears permanently. A cumulative cap lets the landlord bank the difference between actual growth and the cap limit and carry it forward to future years. A landlord with a 5% cap and 2% actual growth banks 3%. If expenses spike 8% the next year, the landlord can draw from the bank and pass through more than the base 5% would allow. The lease must specify which type applies; courts generally will not imply a cumulative structure if the lease is silent." },
+  { q: "What expenses are excluded from CAM caps?", a: "Commercial leases typically exclude property taxes, insurance premiums, and utility costs from cap calculations because landlords cannot control them. The lease should list explicitly which expense categories are controllable and which are not. When the lease is silent on a specific expense, disputes follow. Capital expenditures recovered through depreciation schedules are usually treated separately and excluded as well." },
+  { q: "How is a compounding CAM cap calculated?", a: "A compounding cap applies the cap percentage to the prior year's capped allowable amount, not to the prior year's actual expenses. Starting with a $100,000 base and a 5% cap: Year 1 cap ceiling is $105,000, Year 2 cap ceiling is $110,250, Year 3 cap ceiling is $115,763. Applying the 5% to actual expenses rather than to the capped allowable resets the ceiling lower every time actual expenses fall below the cap, which makes the cumulative protection the tenant negotiated worth less than it appears." },
+  { q: "What happens if a landlord miscalculates a CAM cap?", a: "If the miscalculation over-bills the tenant, the tenant can dispute the charges within the audit window specified in the lease, typically 12 to 36 months from delivery of the reconciliation statement. If the miscalculation under-bills the landlord by applying the cap incorrectly to actual expenses instead of the prior capped allowable, the landlord loses legitimate recovery every year the error persists. Both types of error compound over multi-year lease terms." }
+]} />
+
+## Sources
+
+1. Lowndes Law - CAM Expenses: Cumulative vs. Non-Cumulative - [Lowndes](https://www.lowndes-law.com/newsroom/insights/cam-expenses-in-commercial-leases-cumulative-versus-non-cumulative)
+2. Cox Castle - Top 10 CAM Issues in Retail Leases - [Cox Castle](https://www.coxcastle.com/publication-top-10-issues-in-common-area-and-common-area-expense-provisions-in-retail-leases)

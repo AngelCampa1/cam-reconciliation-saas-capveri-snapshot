@@ -1,0 +1,202 @@
+---
+title: "Denominator Drift: The Silent Revenue Killer in CAM Billing"
+description: "How changes in building occupancy, remeasurement, tenant move-outs, and anchor space changes cause the pro-rata denominator to drift from lease terms. Detection and correction methods for property controllers."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 42
+faq:
+  - q: "What is denominator drift in CAM billing?"
+    a: "Denominator drift occurs when the total rentable square footage used to calculate tenant pro-rata shares changes over time without corresponding lease amendments. The drift can be caused by building remeasurement, anchor departures, common area reclassification, or kiosk additions. Each change recalculates every tenant's share, often without anyone noticing until a tenant auditor flags the discrepancy."
+  - q: "How much revenue can denominator drift cost a landlord?"
+    a: "On a 200,000 RSF building with $1.5M in recoverable CAM expenses, a 5,000 RSF denominator increase (from remeasurement) reduces total recovery by approximately $37,500 annually. A 15,000 RSF decrease (from anchor departure) can increase individual tenant shares by 8-12%, triggering disputes that cost time and credibility even when the math is correct."
+  - q: "How do I detect denominator drift?"
+    a: "Compare the total RSF in your property management system against the denominator specified in each tenant's lease. Pull the building's measurement history and check for remeasurements, BOMA standard transitions, or common area reclassifications that occurred after each lease was signed. Any difference between the system denominator and the lease denominator is drift."
+  - q: "Do I need to amend leases when the denominator changes?"
+    a: "It depends on the lease language. If the lease specifies a fixed denominator (e.g., 'based on total building area of 150,000 RSF'), the landlord must use that number unless both parties agree to an amendment. If the lease defines the denominator as the building's 'total rentable area as measured from time to time,' the landlord can update the denominator without an amendment but should provide documentation to affected tenants."
+---
+
+<Alert type="info" title="Quick Answer">
+Denominator drift is the gradual divergence between the total RSF your property management system uses for pro-rata share calculations and the RSF specified in each tenant's lease. A 3% drift on a 200,000 RSF building with $1.5M in CAM expenses shifts $45,000 in annual recovery. The drift is rarely a single event. It accumulates through remeasurements, anchor changes, and common area reclassifications over years.
+</Alert>
+
+The pro-rata share formula has two inputs: the tenant's square footage (numerator) and the building's total rentable square footage (denominator). Controllers spend significant time verifying the numerator, confirming each tenant's leased area, checking for expansion or contraction. Almost nobody verifies the denominator with the same rigor. That imbalance is where revenue disappears.
+
+## What Causes the Denominator to Move
+
+The denominator is not static. Five categories of change affect it, and each creates a different type of billing distortion.
+
+### 1. Building Remeasurement
+
+A building originally measured at 148,500 RSF under BOMA 1996 is remeasured at 153,200 RSF under BOMA 2024. The 4,700 RSF increase comes from newly included areas: outdoor amenity spaces, rooftop terraces, and single-tenant equipment shafts.
+
+The property management system updates to 153,200. Tenants whose leases predate the remeasurement still reference 148,500. The system applies 153,200 to everyone.
+
+Impact on a tenant with 15,000 RSF:
+- Old share: 15,000 / 148,500 = 10.10%
+- New share: 15,000 / 153,200 = 9.79%
+- On $1.5M CAM pool: tenant pays $4,650 less per year
+
+That $4,650 does not disappear. It is not recovered from anyone. The landlord absorbs it because the denominator grew but no new tenant occupies the additional measured area. Multiply by 20 tenants and the annual under-recovery is $93,000.
+
+### 2. Anchor Tenant Departure
+
+A 45,000 RSF anchor vacates a 200,000 RSF retail center. The property management system can handle this two ways:
+
+**Option A: Keep the denominator at 200,000 RSF.** Every tenant's share stays the same. The landlord absorbs the anchor's 22.5% share of CAM costs. On a $1.2M CAM pool, the landlord absorbs $270,000.
+
+**Option B: Reduce the denominator to 155,000 RSF.** Every remaining tenant's share increases proportionally. A tenant at 10,000 RSF goes from 5.0% to 6.45% (a 29% increase in their CAM bill).
+
+Neither option is "correct" without reading the lease. Some leases define the denominator as "total building area" (Option A). Others define it as "total occupied area" or "total leased area" (Option B). Many say nothing specific, which is where disputes start.
+
+The dollar swing between options for a 10,000 RSF tenant on a $1.2M pool:
+- Option A: $60,000/year
+- Option B: $77,419/year
+- Difference: **$17,419/year per tenant**
+
+### 3. Common Area Reclassification
+
+A building converts 3,000 RSF of common area into rentable storage units. The denominator increases by 3,000 RSF. Existing tenants' shares decrease slightly. The new storage tenants contribute to CAM but at a rate that may not offset the share reduction for existing tenants if the storage lease has different CAM terms.
+
+The reverse also happens: rentable space is converted to common area during a lobby renovation. The denominator shrinks. Every tenant's share increases. Neither change requires tenant notification in most lease structures, yet both affect billing.
+
+### 4. Kiosk and Temporary Tenant Changes
+
+Retail properties add and remove kiosk tenants seasonally. Each kiosk occupies 200-500 RSF. If kiosk space is included in the denominator, seasonal changes create quarterly fluctuations in every tenant's pro-rata share.
+
+Most controllers use an annual average for kiosk RSF. But the lease may not permit averaging. It may define the denominator at a point in time (January 1) or as of the reconciliation date. The method matters when kiosk occupancy varies by 2,000+ RSF between seasons.
+
+### 5. Self-Maintenance Exclusions
+
+An anchor tenant begins self-maintaining HVAC for their space. Their 40,000 RSF is excluded from the HVAC expense pool denominator. The remaining tenants' shares of HVAC costs increase, but their shares of other expense pools (where the anchor is still included) stay the same.
+
+This creates a per-pool denominator structure: different expense categories use different RSF denominators depending on which tenants self-maintain which services. Few property management systems handle per-pool denominators natively. Most controllers manage this through manual adjustments, which introduces error.
+
+## How Drift Accumulates
+
+Denominator drift is rarely a single event. It compounds through multiple small changes over years.
+
+Consider a 175,000 RSF office building over a 5-year period:
+
+| Year | Event | RSF Change | New Denominator |
+|------|-------|-----------|----------------|
+| Base | Lease signing | - | 175,000 |
+| 1 | Kiosk program adds 800 RSF | +800 | 175,800 |
+| 2 | BOMA remeasurement | +3,200 | 179,000 |
+| 3 | Tenant B vacates, space reclassified | -2,500 | 176,500 |
+| 4 | Common area converted to storage | +1,800 | 178,300 |
+| 5 | Anchor begins HVAC self-maintenance | -0 (pool-specific) | 178,300 (but 138,300 for HVAC pool) |
+
+A tenant with 12,000 RSF signed at 175,000 denominator:
+- Lease share: 12,000 / 175,000 = 6.857%
+- Year 5 system share: 12,000 / 178,300 = 6.730%
+- Year 5 HVAC pool share: 12,000 / 138,300 = 8.677%
+
+The tenant's overall share drifted 0.127 percentage points lower (costing the landlord money on most pools) while their HVAC share jumped 1.82 percentage points higher (costing the tenant money). Neither number matches the lease. Both create audit risk.
+
+On a $1.5M total CAM pool with $200,000 in HVAC costs:
+- Overall CAM under-recovery from drift: $1,905/year for this one tenant
+- HVAC over-billing from pool-specific denominator: $3,640/year
+- Net impact: $1,735 overbilling, and a tenant audit finding
+
+## The System vs. Lease Mismatch
+
+The core problem is structural: property management systems maintain one denominator per building (or per expense pool). Leases are written per tenant with potentially different denominator definitions.
+
+Common system-lease mismatches:
+
+| System Setting | Lease Definition | Problem |
+|---------------|-----------------|---------|
+| Current measured RSF | "Total building area of 175,000 RSF" | System denominator drifts from fixed lease value |
+| Total building RSF | "Occupied rentable area" | System includes vacant space; lease excludes it |
+| Single building-wide denominator | Different pools for different expense categories | System cannot represent per-pool exclusions |
+| Point-in-time measurement | "As measured from time to time" | System is frozen; lease permits updates |
+
+Every mismatch is either an overbilling risk (tenant auditor finding) or an under-recovery risk (landlord revenue loss). The direction depends on whether the system denominator is larger or smaller than the lease denominator.
+
+## Detection Methods
+
+### Method 1: Lease-to-System Reconciliation
+
+Pull two reports:
+1. The property management system's tenant roster showing each tenant's RSF, the building RSF denominator, and the calculated pro-rata share
+2. A lease abstract for each tenant showing the lease-defined premises RSF and the lease-defined building RSF (or the formula for determining it)
+
+Compare line by line. Flag every difference. Quantify the dollar impact of each difference using: Tenant Share Difference x Total CAM Pool = Annual billing variance.
+
+This is the most thorough method but requires current lease abstracts, which many portfolios do not maintain.
+
+### Method 2: Year-over-Year Share Trend
+
+Pull each tenant's pro-rata share for the last 5 years. Any share that changed without a corresponding lease amendment, expansion, or contraction indicates a denominator shift.
+
+This method catches drift but does not explain the source. It is a screening tool, not a root cause analysis.
+
+### Method 3: Denominator History Audit
+
+Reconstruct the building's denominator history: every remeasurement, every common area reclassification, every anchor departure. Map each change to the tenant leases that were active at the time. Identify which tenants were affected and whether their billing was adjusted.
+
+This is the most work but produces a complete picture of cumulative drift.
+
+## Correction Methods
+
+### For Fixed-Denominator Leases
+
+If the lease specifies a fixed RSF denominator (e.g., "based on total building area of 175,000 RSF"), the correction is straightforward: override the system denominator for that tenant's billing with the lease-specified value. The system's building-level denominator can change; the tenant-level override preserves the lease term.
+
+Check whether the lease permits the landlord to update the denominator upon remeasurement. If it does, the landlord can update, but must document the change and, in most cases, notify the tenant.
+
+### For Variable-Denominator Leases
+
+If the lease defines the denominator as "total rentable area as measured from time to time," the current measurement governs. Ensure the system reflects the current measurement and document the basis for each update.
+
+The risk here is the opposite: failing to update the denominator when the building is remeasured, which overbills tenants on a stale (lower) denominator.
+
+### For Pool-Specific Denominators
+
+When anchor self-maintenance exclusions create per-pool denominators, the correction requires:
+1. Identifying which expense pools each anchor is excluded from
+2. Calculating a separate denominator for each pool
+3. Applying the correct denominator to each pool in the reconciliation
+4. Documenting the exclusion basis in the reconciliation workpapers
+
+This is where spreadsheet-based reconciliation fails most often. The reconciliation template has one denominator field. Pool-specific denominators require either multiple reconciliation runs or manual overrides, both of which are error-prone.
+
+## Preventing Future Drift
+
+**Maintain a denominator change log.** Every time the building RSF changes for any reason, record the date, the cause, the old value, the new value, and the list of affected tenants. This log becomes the audit trail.
+
+**Review denominator settings at lease signing.** When a new tenant signs, verify that the system denominator matches the lease denominator for that tenant. If it does not, create a tenant-level override immediately, not at reconciliation time.
+
+**Audit denominators annually.** Before generating reconciliation statements, compare system denominators to lease denominators for every tenant. This takes 30 minutes for a 20-tenant building and prevents the most common audit findings.
+
+**Document pool-specific exclusions.** Maintain an exclusion matrix showing which tenants are excluded from which expense pools. Review the matrix when any tenant's self-maintenance provisions change.
+
+**Flag remeasurement events.** When the building is remeasured, trigger a review of every active lease to determine whether the new measurement applies. Do not assume the system update is correct for all tenants.
+
+<CTABox
+  title="Detect Denominator Drift"
+  description="Upload your rent roll and GL export. CapVeri compares system denominators against lease terms for every tenant, flags mismatches, and quantifies the annual dollar impact per tenant. Average detection time: 6 minutes per property."
+  utmContent="u_cta"
+  buttonText="Start Free Trial"
+/>
+
+<FAQSection items={[
+  { q: "What is denominator drift in CAM billing?", a: "Denominator drift occurs when the total rentable square footage used to calculate tenant pro-rata shares changes over time without corresponding lease amendments. The drift can be caused by building remeasurement, anchor departures, common area reclassification, or kiosk additions. Each change recalculates every tenant's share, often without anyone noticing until a tenant auditor flags the discrepancy." },
+  { q: "How much revenue can denominator drift cost a landlord?", a: "On a 200,000 RSF building with $1.5M in recoverable CAM expenses, a 5,000 RSF denominator increase (from remeasurement) reduces total recovery by approximately $37,500 annually. A 15,000 RSF decrease (from anchor departure) can increase individual tenant shares by 8-12%, triggering disputes that cost time and credibility even when the math is correct." },
+  { q: "How do I detect denominator drift?", a: "Compare the total RSF in your property management system against the denominator specified in each tenant's lease. Pull the building's measurement history and check for remeasurements, BOMA standard transitions, or common area reclassifications that occurred after each lease was signed. Any difference between the system denominator and the lease denominator is drift." },
+  { q: "Do I need to amend leases when the denominator changes?", a: "It depends on the lease language. If the lease specifies a fixed denominator (e.g., 'based on total building area of 150,000 RSF'), the landlord must use that number unless both parties agree to an amendment. If the lease defines the denominator as the building's 'total rentable area as measured from time to time,' the landlord can update the denominator without an amendment but should provide documentation to affected tenants." }
+]} />
+
+## Related Resources
+
+- [Why Did My Tenant's Pro-Rata Share Change?](/resources/denominator-change-guide)
+- [Pro-Rata Share Calculation Guide](/resources/pro-rata-share-calculation)
+- [Anchor Exclusion in CAM Reconciliation](/resources/anchor-exclusion-cam)
+- [The Landlord's Complete Guide to CAM Gross-Up Calculations](/resources/cam-gross-up-calculation-guide)
+
+## Sources
+
+1. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)
+2. [CapVeri Sources & Research - BOMA 2024 methodology](/sources#boma-2024)

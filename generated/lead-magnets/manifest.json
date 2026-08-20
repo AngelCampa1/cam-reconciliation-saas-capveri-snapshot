@@ -1,0 +1,513 @@
+{
+  "assets": [
+    {
+      "filename": "cam-gross-up-calculator.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "CAM Gross-Up Scenario Calculator",
+        "Gross-Up",
+        "CapVeri"
+      ],
+      "sha256": "3067d2d270fdbb69cd2c7e307c1486bbe016521490fc0f9cd8b71171ea7f4779",
+      "size_bytes": 8834,
+      "slug": "cam-gross-up-calculator",
+      "storage_path": "lead-magnets/2026-06-25/cam-gross-up-calculator.xlsx"
+    },
+    {
+      "filename": "lease-abstract-matrix.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "Lease Abstract Discrepancy Matrix",
+        "Abstract",
+        "CapVeri"
+      ],
+      "sha256": "d24e2457178411076d1e9165f7e0ddade235019dd0e95b2b54a95bc155930418",
+      "size_bytes": 8804,
+      "slug": "lease-abstract-matrix",
+      "storage_path": "lead-magnets/2026-06-25/lease-abstract-matrix.xlsx"
+    },
+    {
+      "filename": "cam-reconciliation-checklist.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "CAM Reconciliation Review Checklist",
+        "High-Risk CAM Checks",
+        "CapVeri"
+      ],
+      "sha256": "4b1e1baa63a570890a5f54313e9b4c42c81f1ad7e092d5e7f34a923c69ccee37",
+      "size_bytes": 5453,
+      "slug": "cam-reconciliation-checklist",
+      "storage_path": "lead-magnets/2026-06-25/cam-reconciliation-checklist.pdf"
+    },
+    {
+      "filename": "boma-2024-calculator.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "BOMA 2024",
+        "Remeasurement",
+        "CapVeri"
+      ],
+      "sha256": "18d2381dabb17f3d6b742147301689e69124c19205e502120676bf87d8b891f7",
+      "size_bytes": 5480,
+      "slug": "boma-2024-calculator",
+      "storage_path": "lead-magnets/2026-06-25/boma-2024-calculator.pdf"
+    },
+    {
+      "filename": "fixed-cam-vs-traditional.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "Fixed CAM",
+        "Traditional",
+        "CapVeri"
+      ],
+      "sha256": "5bff05e3455f8e401464c4b2be38ed9cf6796b6af93c1bb706a6cb34084a0a50",
+      "size_bytes": 5577,
+      "slug": "fixed-cam-vs-traditional",
+      "storage_path": "lead-magnets/2026-06-25/fixed-cam-vs-traditional.pdf"
+    },
+    {
+      "filename": "admin-fee-calculator.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "Admin Fee Calculator",
+        "Admin Fee",
+        "CapVeri"
+      ],
+      "sha256": "c19d852c01ca1a264992810b5f422db2a77bce6d74cd40ae16df5eaf1a4f666a",
+      "size_bytes": 8800,
+      "slug": "admin-fee-calculator",
+      "storage_path": "lead-magnets/2026-06-25/admin-fee-calculator.xlsx"
+    },
+    {
+      "filename": "cam-estimate-forecaster.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "CAM Estimate Forecaster",
+        "Forecast",
+        "CapVeri"
+      ],
+      "sha256": "fc4e771fd61dcb35a3ee7df5983eb77337dd7b28d661e6225fa446db39b47f92",
+      "size_bytes": 8776,
+      "slug": "cam-estimate-forecaster",
+      "storage_path": "lead-magnets/2026-06-25/cam-estimate-forecaster.xlsx"
+    },
+    {
+      "filename": "boma-remeasurement-impact.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "BOMA Remeasurement Impact Analyzer",
+        "BOMA",
+        "CapVeri"
+      ],
+      "sha256": "6b33166220512381b1ad2091ba878ed6f8d7ff0e6ac33838c84d7427fdd571b6",
+      "size_bytes": 8788,
+      "slug": "boma-remeasurement-impact",
+      "storage_path": "lead-magnets/2026-06-25/boma-remeasurement-impact.xlsx"
+    },
+    {
+      "filename": "cam-cap-calculator.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "CAM Cap Calculator",
+        "Cap",
+        "CapVeri"
+      ],
+      "sha256": "e512c5dcf13152892d36f19034a9ee4aa2e35bdde83cd7f0f134aee3d39a7698",
+      "size_bytes": 8780,
+      "slug": "cam-cap-calculator",
+      "storage_path": "lead-magnets/2026-06-25/cam-cap-calculator.xlsx"
+    },
+    {
+      "filename": "base-year-escalation.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "Base Year Escalation Calculator",
+        "Base Year",
+        "CapVeri"
+      ],
+      "sha256": "5c2d9c0bdce22ed684eaf34ef702ffa8a0a3a44c13cbf4ffbc2f9e8cb69fcec2",
+      "size_bytes": 8736,
+      "slug": "base-year-escalation",
+      "storage_path": "lead-magnets/2026-06-25/base-year-escalation.xlsx"
+    },
+    {
+      "filename": "reconciliation-statement-generator.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "Reconciliation Statement Generator",
+        "Statement",
+        "CapVeri"
+      ],
+      "sha256": "63fd8cb8c55d5e6495a40ca6555684158daf78aae8e40cd1590defd8ee93a864",
+      "size_bytes": 8814,
+      "slug": "reconciliation-statement-generator",
+      "storage_path": "lead-magnets/2026-06-25/reconciliation-statement-generator.xlsx"
+    },
+    {
+      "filename": "recovery-gap-analyzer.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "Recovery Gap Analyzer",
+        "Recovery Gap",
+        "CapVeri"
+      ],
+      "sha256": "c613cc9954ecc0420b1b9f73d3ecc988d31709d64b4b1d94aff9f84764081fc3",
+      "size_bytes": 8802,
+      "slug": "recovery-gap-analyzer",
+      "storage_path": "lead-magnets/2026-06-25/recovery-gap-analyzer.xlsx"
+    },
+    {
+      "filename": "pro-rata-calculator.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "Pro-Rata Share Calculator",
+        "Pro-Rata",
+        "CapVeri"
+      ],
+      "sha256": "678fe70515082163a4a07de828b1a57cf383524fe609174d679cccbd016c29d2",
+      "size_bytes": 8774,
+      "slug": "pro-rata-calculator",
+      "storage_path": "lead-magnets/2026-06-25/pro-rata-calculator.xlsx"
+    },
+    {
+      "filename": "hcad-tax-normalizer.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "HCAD Tax Normalizer",
+        "Tax",
+        "CapVeri"
+      ],
+      "sha256": "ec5ea3623fa074f5feccb21543598868a02d89526e282e84d1af1f4b732c71bc",
+      "size_bytes": 8797,
+      "slug": "hcad-tax-normalizer",
+      "storage_path": "lead-magnets/2026-06-25/hcad-tax-normalizer.xlsx"
+    },
+    {
+      "filename": "noi-impact-calculator.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "NOI Impact Calculator",
+        "NOI",
+        "CapVeri"
+      ],
+      "sha256": "2d2eedafd601b63c614ba27f7c584f2d17dfae833c9a87311414d934daad6398",
+      "size_bytes": 8784,
+      "slug": "noi-impact-calculator",
+      "storage_path": "lead-magnets/2026-06-25/noi-impact-calculator.xlsx"
+    },
+    {
+      "filename": "cam-leakage-estimator.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "CAM Leakage Estimator",
+        "Leakage",
+        "CapVeri"
+      ],
+      "sha256": "9d458093c8a47827f97b55e6685e998cdd3e7c9c5d1831390b619a8eb4d45914",
+      "size_bytes": 8763,
+      "slug": "cam-leakage-estimator",
+      "storage_path": "lead-magnets/2026-06-25/cam-leakage-estimator.xlsx"
+    },
+    {
+      "filename": "cam-overcharge-calculator.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "Tenant Challenge Exposure Calculator",
+        "Challenge",
+        "CapVeri"
+      ],
+      "sha256": "f78470d1f98f3e6bba9f4aac72d4dadf840f25332045f46aaa40bc235815decd",
+      "size_bytes": 5491,
+      "slug": "cam-overcharge-calculator",
+      "storage_path": "lead-magnets/2026-06-25/cam-overcharge-calculator.pdf"
+    },
+    {
+      "filename": "audit-risk-scorecard.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "Pre-Send Audit Exposure Scorecard",
+        "Risk",
+        "CapVeri"
+      ],
+      "sha256": "4bd26685afac746f57b65d9dbda5478a7eff302bff656aea9a3e6a7c6560d6de",
+      "size_bytes": 5460,
+      "slug": "audit-risk-scorecard",
+      "storage_path": "lead-magnets/2026-06-25/audit-risk-scorecard.pdf"
+    },
+    {
+      "filename": "sb-1103-checker.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "SB 1103 Compliance Checker",
+        "Compliance",
+        "CapVeri"
+      ],
+      "sha256": "c8191d17799d2844e73c985d9a6fb013c365f2629a076d0194397e44acf5c675",
+      "size_bytes": 4825,
+      "slug": "sb-1103-checker",
+      "storage_path": "lead-magnets/2026-06-25/sb-1103-checker.pdf"
+    },
+    {
+      "filename": "audit-risk-quiz.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "Pre-Send Audit Exposure Quiz",
+        "Exposure",
+        "CapVeri"
+      ],
+      "sha256": "306f65b49ccb4e2c371089ca0f4b34970578fbab469fb927e229ead36f8b6c28",
+      "size_bytes": 5061,
+      "slug": "audit-risk-quiz",
+      "storage_path": "lead-magnets/2026-06-25/audit-risk-quiz.pdf"
+    },
+    {
+      "filename": "cam-reconciliation-statement.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "Tenant CAM Statement Outline",
+        "Statement",
+        "CapVeri"
+      ],
+      "sha256": "08eb4a17d58fdedccfc11ed0267729db567e85a702e3b24f9a68c87e42c4a683",
+      "size_bytes": 4817,
+      "slug": "cam-reconciliation-statement",
+      "storage_path": "lead-magnets/2026-06-25/cam-reconciliation-statement.pdf"
+    },
+    {
+      "filename": "cam-reconciliation-excel.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "CAM Reconciliation Excel Template",
+        "Reconciliation",
+        "CapVeri"
+      ],
+      "sha256": "48f0382d19ff7e75e2ead398800a9e6d22621a4f0cf2a86ad8cd54c45e570ea7",
+      "size_bytes": 8786,
+      "slug": "cam-reconciliation-excel",
+      "storage_path": "lead-magnets/2026-06-25/cam-reconciliation-excel.xlsx"
+    },
+    {
+      "filename": "tenant-cam-reconciliation-letter.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "Landlord CAM Reconciliation Cover Letter",
+        "Tenant",
+        "CapVeri"
+      ],
+      "sha256": "d670b0b6f5c880b700247c3b88afad3e3b69e7264f7246bbcf4209009644f281",
+      "size_bytes": 4774,
+      "slug": "tenant-cam-reconciliation-letter",
+      "storage_path": "lead-magnets/2026-06-25/tenant-cam-reconciliation-letter.pdf"
+    },
+    {
+      "filename": "cam-reconciliation-california.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "California CAM Packet Starter",
+        "California",
+        "CapVeri"
+      ],
+      "sha256": "c2ade67de43003fd393bd1258790f485a356dbfcb6e66e02d6a0ef568315efc4",
+      "size_bytes": 4771,
+      "slug": "cam-reconciliation-california",
+      "storage_path": "lead-magnets/2026-06-25/cam-reconciliation-california.pdf"
+    },
+    {
+      "filename": "cam-reconciliation-texas.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "Texas CAM Packet Starter",
+        "Texas",
+        "CapVeri"
+      ],
+      "sha256": "8cd7f1b16cda974f7cc6fed2811254f12499fedbb216225e64b458a4d2f8ee33",
+      "size_bytes": 4747,
+      "slug": "cam-reconciliation-texas",
+      "storage_path": "lead-magnets/2026-06-25/cam-reconciliation-texas.pdf"
+    },
+    {
+      "filename": "cam-reconciliation-florida.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "Florida CAM Packet Starter",
+        "Florida",
+        "CapVeri"
+      ],
+      "sha256": "24d0c681dfb3b68e1db5abec4fda4e01db3ce4165760b7194bd49390a0cfcffb",
+      "size_bytes": 4755,
+      "slug": "cam-reconciliation-florida",
+      "storage_path": "lead-magnets/2026-06-25/cam-reconciliation-florida.pdf"
+    },
+    {
+      "filename": "nnn-lease-cam-reconciliation.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "NNN Lease CAM Reconciliation Template",
+        "NNN",
+        "CapVeri"
+      ],
+      "sha256": "0bf89858ce00e0f10d75d231f56f48500176c372c441fd67efc57a53321061fb",
+      "size_bytes": 5465,
+      "slug": "nnn-lease-cam-reconciliation",
+      "storage_path": "lead-magnets/2026-06-25/nnn-lease-cam-reconciliation.pdf"
+    },
+    {
+      "filename": "cam-dispute-response-template.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "CAM Dispute Response Template",
+        "Dispute",
+        "CapVeri"
+      ],
+      "sha256": "12c2e10ee539d744600b10bc17e4bff43d92e07fb10c52c97728e70e9078ae9c",
+      "size_bytes": 4797,
+      "slug": "cam-dispute-response-template",
+      "storage_path": "lead-magnets/2026-06-25/cam-dispute-response-template.pdf"
+    },
+    {
+      "filename": "cam-estimate-letter.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "CAM Estimate / Budget Letter",
+        "Estimate",
+        "CapVeri"
+      ],
+      "sha256": "9836e4e0cabc3d4ea924881bb62b35c3609a4d395b3866d0016f195eba7aa79c",
+      "size_bytes": 4780,
+      "slug": "cam-estimate-letter",
+      "storage_path": "lead-magnets/2026-06-25/cam-estimate-letter.pdf"
+    },
+    {
+      "filename": "cumulative-cap-bank-calculator.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "Cumulative CAM Cap Bank Calculator",
+        "Cap Bank",
+        "CapVeri"
+      ],
+      "sha256": "e9015146e1078cf0f49ba33ee8eb651be71e80f93fef1aaca8ae53f57cb8fbe1",
+      "size_bytes": 8831,
+      "slug": "cumulative-cap-bank-calculator",
+      "storage_path": "lead-magnets/2026-06-25/cumulative-cap-bank-calculator.xlsx"
+    },
+    {
+      "filename": "cam-pre-send-packet-checklist.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "CAM Pre-Send Packet Checklist",
+        "Packet",
+        "CapVeri"
+      ],
+      "sha256": "286a416d6f2260cd639b4e46f3c588145af0d055ad6ef940d3cd57d32942bf1e",
+      "size_bytes": 4719,
+      "slug": "cam-pre-send-packet-checklist",
+      "storage_path": "lead-magnets/2026-06-25/cam-pre-send-packet-checklist.pdf"
+    },
+    {
+      "filename": "yardi-export-qa-checklist.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "Yardi Export Error Checklist",
+        "Yardi",
+        "CapVeri"
+      ],
+      "sha256": "92cf473c9d218758b7220fa2bfe20cb320db31918fc320556b2b6f81c9a34f8c",
+      "size_bytes": 4692,
+      "slug": "yardi-export-qa-checklist",
+      "storage_path": "lead-magnets/2026-06-25/yardi-export-qa-checklist.pdf"
+    },
+    {
+      "filename": "mri-recovery-billing-qa-checklist.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "MRI Recovery Billing Error Checklist",
+        "MRI",
+        "CapVeri"
+      ],
+      "sha256": "a5e8c24df87ceed673700d51d644f7501df5ced5825d7c5f4d0976aef9de12dc",
+      "size_bytes": 4654,
+      "slug": "mri-recovery-billing-qa-checklist",
+      "storage_path": "lead-magnets/2026-06-25/mri-recovery-billing-qa-checklist.pdf"
+    },
+    {
+      "filename": "multi-state-cam-disclosure-matrix.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "Multi-State CAM Packet Review Checklist",
+        "Disclosure",
+        "CapVeri"
+      ],
+      "sha256": "2d0e50e90c9810ce2c699ad0b1c4d960045c4fe80e2d1f0aadace5c14587707d",
+      "size_bytes": 4613,
+      "slug": "multi-state-cam-disclosure-matrix",
+      "storage_path": "lead-magnets/2026-06-25/multi-state-cam-disclosure-matrix.pdf"
+    },
+    {
+      "filename": "cam-recovery-ratio-worksheet.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "CAM Recovery Ratio Benchmark Worksheet",
+        "Recovery Ratio",
+        "CapVeri"
+      ],
+      "sha256": "534fb290fbdbe03a27a5e8769668112312661200fe74d6a4243cbac27db0d2da",
+      "size_bytes": 8815,
+      "slug": "cam-recovery-ratio-worksheet",
+      "storage_path": "lead-magnets/2026-06-25/cam-recovery-ratio-worksheet.xlsx"
+    },
+    {
+      "filename": "property-tax-appeal-recovery-calculator.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "Property Tax Appeal Recovery Calculator",
+        "Tax Appeal",
+        "CapVeri"
+      ],
+      "sha256": "a035696c4c7bc7b862a3cbf880db28ab276efb5d8bab80a01a893e7a7df60107",
+      "size_bytes": 8816,
+      "slug": "property-tax-appeal-recovery-calculator",
+      "storage_path": "lead-magnets/2026-06-25/property-tax-appeal-recovery-calculator.xlsx"
+    },
+    {
+      "filename": "tenant-dispute-response-letter-template.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "Tenant CAM Dispute Response Letter",
+        "Dispute Letter",
+        "CapVeri"
+      ],
+      "sha256": "1f931042ced709f4e5259bf0a65acb045b359a2a4bc47e70b4a40a2d44f264c2",
+      "size_bytes": 4729,
+      "slug": "tenant-dispute-response-letter-template",
+      "storage_path": "lead-magnets/2026-06-25/tenant-dispute-response-letter-template.pdf"
+    },
+    {
+      "filename": "audit-defense-packet-builder.pdf",
+      "kind": "pdf",
+      "required_phrases": [
+        "Audit Defense Packet Builder",
+        "Audit Defense",
+        "CapVeri"
+      ],
+      "sha256": "ce1535d357be541dd919438c71ac25301ffd8710959e337c1ac5c17d74a3ca34",
+      "size_bytes": 4638,
+      "slug": "audit-defense-packet-builder",
+      "storage_path": "lead-magnets/2026-06-25/audit-defense-packet-builder.pdf"
+    },
+    {
+      "filename": "lease-clause-extraction-matrix.xlsx",
+      "kind": "xlsx",
+      "required_phrases": [
+        "Lease Clause Extraction Matrix",
+        "Clause Extraction",
+        "CapVeri"
+      ],
+      "sha256": "118ef564e3e55be899e656bd21aedb8d23ff05bdd77a1a29bce562953ca95df5",
+      "size_bytes": 8759,
+      "slug": "lease-clause-extraction-matrix",
+      "storage_path": "lead-magnets/2026-06-25/lease-clause-extraction-matrix.xlsx"
+    }
+  ],
+  "bucket": "capveri-lead-magnets",
+  "remote_verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "lease_terms": {
+    "base_year": null,
+    "base_year_amount": null,
+    "gross_up_base_year": false,
+    "pro_rata_share": 1.0,
+    "cap_type": "none",
+    "cap_rate": null,
+    "admin_fee_percent": 0.00,
+    "excluded_pools": ["capital"],
+    "accounting_basis": "accrual"
+  },
+  "premises": {
+    "rentable_sqft": 28000,
+    "usable_sqft": 24500,
+    "load_factor": 1.1429
+  },
+  "rent": {
+    "monthly_base_rent": 70000.00,
+    "annual_base_rent": 840000.00,
+    "psf_annual": 30.00
+  },
+  "dates": {
+    "commencement_date": "2022-01-01",
+    "expiration_date": "2037-12-31"
+  },
+  "extraction_confidence": {
+    "base_year": "high",
+    "pro_rata_share": "high",
+    "cap_type": "medium",
+    "cap_rate": "high",
+    "admin_fee_percent": "high",
+    "excluded_pools": "high",
+    "accounting_basis": "medium"
+  },
+  "notes": {
+    "pro_rata_share": "GSA full-building lease. Government is sole tenant paying 100% of operating costs via the Shell Rent / Operating Cost Escalation structure.",
+    "cap_type": "GSA leases use CPI-based annual escalation on the operating cost component of rent, not a traditional cap. The CPI adjustment is a floor/ceiling mechanism, not a cap on actual expenses. Classified as 'none' since there is no cap on actual pass-through costs.",
+    "admin_fee_percent": "GSA standard lease forms do not include management/admin fees as a separate pass-through. Operating costs are built into the shell rent structure.",
+    "excluded_pools": "Capital improvements and alterations are excluded from operating costs under GSA General Clauses (3517B). Government handles its own tenant improvements via separate TI allowance.",
+    "accounting_basis": "Inferred from GSA's federal accounting standards (accrual basis per OMB Circular A-136)"
+  }
+}

@@ -1,0 +1,23 @@
+{% extends "_base.html" %}
+{% from "_components.html" import button, video_card with context %}
+{% block content %}
+<h2 style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 22px; margin: 0 0 {{ t.SPACE_MD }};">
+  You're set up on CapVeri
+</h2>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  Hello {{ full_name }},
+</p>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  You're in as a <strong>{{ role_display }}</strong> at <strong>{{ organization_name }}</strong>.
+</p>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_LG }};">
+  You can see reports and team files. Ask {{ organization_name }}'s admin if you're unsure where to start.
+</p>
+{{ button(login_url, "Go to Dashboard") }}
+{% if video_team_welcome %}
+{{ video_card(video_team_welcome.thumbnail_url, video_team_welcome.watch_url, video_team_welcome.title, video_team_welcome.description) }}
+{% endif %}
+<p style="color: {{ t.TEXT_SECONDARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 12px; margin: 0;">
+  Questions? Your org admin can help, or reply here.
+</p>
+{% endblock %}

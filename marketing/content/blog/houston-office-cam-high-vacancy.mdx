@@ -1,0 +1,96 @@
+---
+title: "Houston Office Market: CAM Billing in a 26% Vacancy Environment"
+description: "Houston's 26.5% office vacancy rate means gross-up clauses are actively triggered on every lease. What property controllers need to know about reconciliation in a high-vacancy market."
+excerpt: "At 26.5% office vacancy, every Houston gross-up clause is active. One miscalculation on a 200,000 SF building can cost $75,000+ per year."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "market-trends"
+faq:
+  - q: "What is the current office vacancy rate in Houston?"
+    a: "As of Q4 2025, Houston office vacancy sits at approximately 26.5%, according to Partners Real Estate and CBRE market reports. The Energy Corridor submarket exceeds 35% in some buildings."
+  - q: "How does high vacancy affect CAM charges?"
+    a: "High vacancy triggers gross-up clauses in commercial leases. Variable operating expenses (janitorial, utilities, management fees) are adjusted upward to reflect what they would cost at the lease-defined occupancy threshold (typically 95%). This shifts a larger share of building operating costs to remaining tenants."
+---
+
+Houston's office market has been above 20% vacancy since 2016. The Energy Corridor, once home to the densest concentration of Class A office in the Sun Belt, peaked above 35% vacancy in some buildings.
+
+For property controllers, this creates a specific mathematical problem: gross-up calculations at 26% vacancy produce significantly different results than at 10% vacancy. And the margin for error is larger.
+
+## The Gross-Up Math at 26.5% Vacancy
+
+Consider a 200,000 SF Class A office building at 73.5% occupancy (26.5% vacant). The lease threshold for gross-up is 95%.
+
+| Expense Category | Actual Cost | Variable? | Grossed-Up Amount |
+|---|---|---|---|
+| Janitorial | $280,000 | Yes | $280,000 × (0.95/0.735) = $361,905 |
+| Utilities (common) | $195,000 | Yes | $195,000 × (0.95/0.735) = $252,041 |
+| Management fees | $165,000 | Yes | $165,000 × (0.95/0.735) = $213,265 |
+| Security | $120,000 | Partial | $90,000 variable → $116,327; $30,000 fixed |
+| Property taxes | $480,000 | No | $480,000 (no adjustment) |
+| Insurance | $210,000 | No | $210,000 (no adjustment) |
+
+Total gross-up adjustment on variable expenses: **$103,538 per year**.
+
+That $103K is additional recovery that the lease entitles you to collect from tenants. Miss it, and you've given up $103K in NOI (worth $1.7M at a 6% cap rate).
+
+## Where Houston Controllers Get It Wrong
+
+### 1. Grossing Up Property Taxes
+
+Harris County Appraisal District (HCAD) bills property tax based on assessed value, not occupancy. The tax is the same whether the building is 50% or 100% occupied. Grossing up a $480,000 tax bill adds $172,000 in phantom charges that no lease supports.
+
+This is the single most common gross-up error in Houston, and the first thing a tenant auditor checks.
+
+### 2. Using Stale Occupancy
+
+Occupancy fluctuates throughout the year. A building that was 80% occupied in January and 68% occupied by December shouldn't use either number. It should use the weighted average for the fiscal year.
+
+If your property management system snapshots occupancy at a single date (common in Yardi if the Recovery Pool isn't configured for weighted calculation), you're using the wrong denominator.
+
+### 3. Not Separating Variable from Fixed
+
+At 26.5% vacancy, the gross-up multiplier is 1.293× (95% / 73.5%). Applying that multiplier to expenses that shouldn't be grossed up creates a 29.3% overcharge on those items.
+
+The fix: tag every expense category as variable or fixed in your recovery pool configuration. Variable expenses adjust. Fixed expenses pass through at actuals.
+
+## The Harris County Tax Factor
+
+HCAD conducts annual reappraisals. In a declining market, assessed values don't always track market values downward. HCAD uses comparable sales, and distressed sales are often excluded from the analysis. Property controllers handling Houston portfolios should also be familiar with [Texas CAM compliance rules](/resources/texas-cam-compliance), which govern the broader legal framework for expense recovery in commercial leases across the state.
+
+This means your property tax bill may not reflect the vacancy-driven market reality. A $480,000 tax bill on a building worth 20% less than its assessed value is a $96,000 overpayment to the county.
+
+The protest opportunity: Houston properties with vacancy above 20% should be filed for appeal annually. Successful protests averaging 10–15% reductions on commercial properties save $48,000–$72,000 per year on a $480K bill.
+
+The CAM implication: if you win a tax protest, the refund must be credited back to tenants proportionally. Some landlords forget this, and that's another audit finding.
+
+## Energy Corridor: The Extreme Case
+
+Buildings in the Energy Corridor submarket face vacancy above 35%. At that level:
+
+- Gross-up multiplier: 95% / 65% = **1.462×**
+- A $200,000 variable expense pool becomes $292,308
+- The landlord is recovering nearly 50% more than actual cost from remaining tenants
+
+This is legally correct. The lease permits it. But it creates tenant relations pressure. Tenants paying $8/SF more than the building actually spends on cleaning will ask questions.
+
+Proactive communication matters more in high-vacancy buildings. Send the reconciliation statement with a cover letter explaining the gross-up adjustment, referencing the lease clause, and showing the calculation. Transparency prevents the audit request.
+
+## CapVeri in Houston
+
+CapVeri was built for exactly this market. The detection engine validates gross-up calculations against actual occupancy data, separates variable from fixed expenses automatically, and flags the specific errors that Houston's high-vacancy environment makes more likely.
+
+The 30-day free trial, no credit card required. If you're managing Houston office properties, run your reconciliation through CapVeri before sending statements this cycle.
+
+## Related Resources
+
+- [Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide): Step-by-step methodology
+- [Harris County Gross-Up](/resources/harris-county-gross-up): Texas-specific HCAD considerations
+- [HCAD Tax Normalizer](/tools/hcad-tax-normalizer): Model tax protest impact on CAM
+- [NOI Impact Calculator](/tools/noi-impact-calculator): Value impact of recovery improvements
+
+## Sources
+
+1. [BDO - Lease Audit Spotlight: Gross-Up Adjustments](https://www.bdo.com/insights/advisory/2020-lease-audit-spotlight-gain-clarity-on-gross-up-adjustments)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

@@ -1,0 +1,291 @@
+Yardi Voyager GL Detail Report
+Property: Downtown Tower (DT-001)
+Period: 01/01/2022 - 12/31/2024
+Run Date: 01/07/2026 07:12 AM
+
+Account Code,Account Description,Date,Vendor,Debit,Credit,Balance
+5100,Real Estate Taxes,01/01/2022,County Tax Assessor,,1257.34,-1257.34
+5110,Property Insurance,01/01/2022,Travelers Insurance,3135.23,,3135.23
+5120,General Liability Insurance,01/01/2022,State Farm Commercial,3246.22,,3246.22
+5200,Electric,01/01/2022,Xcel Energy,5162.28,,5162.28
+5210,Gas,01/01/2022,Public Service Co,4906.52,,4906.52
+5220,Water/Sewer,01/01/2022,Xcel Energy,5136.05,,5136.05
+5300,Janitorial Services,01/01/2022,ABC Janitorial Services,6514.36,,6514.36
+5310,Landscaping,01/01/2022,SecureWatch Security,6613.67,,6613.67
+5320,Snow Removal,01/01/2022,Asphalt Experts LLC,5458.21,,5458.21
+5330,HVAC Maintenance,01/01/2022,Asphalt Experts LLC,5028.75,,5028.75
+5340,Elevator Maintenance,01/01/2022,Rocky Mountain Plumbing,4776.03,,4776.03
+5350,Parking Lot Maintenance,01/01/2022,Denver Elevator Co,5058.26,,5058.26
+5400,Building Repairs,01/01/2022,Denver Elevator Co,5912.96,,5912.96
+5410,Plumbing Repairs,01/01/2022,Front Range Electric,4375.54,,4375.54
+5420,Electrical Repairs,01/01/2022,Rocky Mountain Plumbing,4266.98,,4266.98
+5500,Security Services,01/01/2022,SecureWatch Security,6189.33,,6189.33
+5600,Management Fee,01/01/2022,Property Management Inc,3990.04,,3990.04
+5610,Administrative Fee,01/01/2022,Property Management Inc,4030.10,,4030.10
+5700,Professional Fees,01/01/2022,SecureWatch Security,6867.53,,6867.53
+5100,Real Estate Taxes,01/01/2023,City of Denver Tax Collector,8207.05,,20360.44
+5110,Property Insurance,01/01/2023,State Farm Commercial,3210.93,,19018.95
+5120,General Liability Insurance,01/01/2023,Liberty Mutual,3232.11,,19327.78
+5200,Electric,01/01/2023,Denver Water,6380.13,,33030.32
+5210,Gas,01/01/2023,Public Service Co,4794.01,,30615.26
+5220,Water/Sewer,01/01/2023,Denver Water,5470.67,,31342.51
+5300,Janitorial Services,01/01/2023,GreenScape Landscaping,6096.48,,38998.14
+5310,Landscaping,01/01/2023,ABC Janitorial Services,6101.51,,31646.30
+5320,Snow Removal,01/01/2023,Mile High HVAC,5154.69,,26510.60
+5330,HVAC Maintenance,01/01/2023,Front Range Electric,5356.04,,24026.04
+5340,Elevator Maintenance,01/01/2023,Mile High HVAC,4893.10,,28559.77
+5350,Parking Lot Maintenance,01/01/2023,Front Range Electric,4467.83,,29183.54
+5400,Building Repairs,01/01/2023,Asphalt Experts LLC,3844.56,,31075.18
+5410,Plumbing Repairs,01/01/2023,Denver Elevator Co,4907.12,,27381.42
+5420,Electrical Repairs,01/01/2023,Rocky Mountain Plumbing,4014.65,,26845.32
+5500,Security Services,01/01/2023,ABC Janitorial Services,6149.49,,38266.08
+5600,Management Fee,01/01/2023,Property Management Inc,3995.28,,24049.59
+5610,Administrative Fee,01/01/2023,Property Management Inc,4012.54,,23909.16
+5700,Professional Fees,01/01/2023,SecureWatch Security,6167.27,,38653.75
+5100,Real Estate Taxes,01/01/2024,City of Denver Tax Collector,7663.04,,60039.24
+5110,Property Insurance,01/01/2024,State Farm Commercial,3192.10,,31286.46
+5120,General Liability Insurance,01/01/2024,Travelers Insurance,3174.20,,35159.37
+5200,Electric,01/01/2024,Xcel Energy,4772.08,,60181.00
+5210,Gas,01/01/2024,Denver Water,4852.54,,58041.21
+5220,Water/Sewer,01/01/2024,Xcel Energy,4940.52,,52594.41
+5300,Janitorial Services,01/01/2024,ABC Janitorial Services,6452.92,,70312.65
+5310,Landscaping,01/01/2024,GreenScape Landscaping,6116.61,,55955.43
+5320,Snow Removal,01/01/2024,Mile High HVAC,4999.02,,52490.55
+5330,HVAC Maintenance,01/01/2024,Asphalt Experts LLC,4737.31,,48870.56
+5340,Elevator Maintenance,01/01/2024,Rocky Mountain Plumbing,4788.95,,52585.61
+5350,Parking Lot Maintenance,01/01/2024,Denver Elevator Co,5092.88,,52904.77
+5400,Building Repairs,01/01/2024,Front Range Electric,3853.29,,54758.08
+5410,Plumbing Repairs,01/01/2024,Front Range Electric,4427.92,,49818.45
+5420,Electrical Repairs,01/01/2024,Mile High HVAC,5356.62,,45767.25
+5500,Security Services,01/01/2024,Premier Cleaning Co,6342.51,,70459.47
+5600,Management Fee,01/01/2024,Property Management Inc,4026.01,,44045.79
+5610,Administrative Fee,01/01/2024,Property Management Inc,3925.75,,43743.49
+5700,Professional Fees,01/01/2024,Premier Cleaning Co,6684.73,,63071.78
+5100,Real Estate Taxes,03/14/2024,County Tax Assessor,8061.88,,68101.12
+5110,Property Insurance,03/14/2024,Travelers Insurance,3247.04,,34533.50
+5120,General Liability Insurance,03/14/2024,State Farm Commercial,3161.46,,38320.83
+5200,Electric,03/14/2024,Atmos Energy,5144.62,,65325.62
+5210,Gas,03/14/2024,Denver Water,6416.82,,64458.03
+5220,Water/Sewer,03/14/2024,Atmos Energy,5026.46,,57620.87
+5300,Janitorial Services,03/14/2024,Premier Cleaning Co,6002.56,,76315.21
+5310,Landscaping,03/14/2024,GreenScape Landscaping,6209.47,,62164.90
+5320,Snow Removal,03/14/2024,Asphalt Experts LLC,4235.16,,56725.71
+5330,HVAC Maintenance,03/14/2024,Front Range Electric,5502.57,,54373.13
+5340,Elevator Maintenance,03/14/2024,Front Range Electric,4921.67,,57507.28
+5350,Parking Lot Maintenance,03/14/2024,Denver Elevator Co,5190.79,,58095.56
+5400,Building Repairs,03/14/2024,Asphalt Experts LLC,5297.54,,60055.62
+5410,Plumbing Repairs,03/14/2024,Asphalt Experts LLC,4902.67,,54721.12
+5420,Electrical Repairs,03/14/2024,Denver Elevator Co,4933.09,,50700.34
+5500,Security Services,03/14/2024,ABC Janitorial Services,6713.66,,77173.13
+5600,Management Fee,03/14/2024,Property Management Inc,3992.77,,48038.56
+5610,Administrative Fee,03/14/2024,Property Management Inc,4087.37,,47830.86
+5700,Professional Fees,03/14/2024,GreenScape Landscaping,5855.78,,68927.56
+5100,Real Estate Taxes,03/15/2022,County Tax Assessor,7711.63,,6454.29
+5110,Property Insurance,03/15/2022,Travelers Insurance,3155.26,,6290.49
+5120,General Liability Insurance,03/15/2022,State Farm Commercial,3237.39,,6483.61
+5200,Electric,03/15/2022,Xcel Energy,4903.90,,10066.18
+5210,Gas,03/15/2022,Xcel Energy,5273.63,,10180.15
+5220,Water/Sewer,03/15/2022,Atmos Energy,5706.42,,10842.47
+5300,Janitorial Services,03/15/2022,ABC Janitorial Services,6571.89,,13086.25
+5310,Landscaping,03/15/2022,Premier Cleaning Co,7006.51,,13620.18
+5320,Snow Removal,03/15/2022,Asphalt Experts LLC,6194.60,,11652.81
+5330,HVAC Maintenance,03/15/2022,Denver Elevator Co,4562.67,,9591.42
+5340,Elevator Maintenance,03/15/2022,Denver Elevator Co,4927.59,,9703.62
+5350,Parking Lot Maintenance,03/15/2022,Front Range Electric,5353.79,,10412.05
+5400,Building Repairs,03/15/2022,Mile High HVAC,5915.33,,11828.29
+5410,Plumbing Repairs,03/15/2022,Rocky Mountain Plumbing,4934.11,,9309.65
+5420,Electrical Repairs,03/15/2022,Asphalt Experts LLC,5188.08,,9455.06
+5500,Security Services,03/15/2022,SecureWatch Security,6713.73,,12903.06
+5600,Management Fee,03/15/2022,Property Management Inc,4037.53,,8027.57
+5610,Administrative Fee,03/15/2022,Property Management Inc,3944.09,,7974.19
+5700,Professional Fees,03/15/2022,SecureWatch Security,6201.76,,13069.29
+5100,Real Estate Taxes,03/15/2023,City of Denver Tax Collector,7872.20,,28232.64
+5110,Property Insurance,03/15/2023,Liberty Mutual,,513.41,18505.54
+5120,General Liability Insurance,03/15/2023,Liberty Mutual,3150.28,,22478.06
+5200,Electric,03/15/2023,Atmos Energy,5957.75,,38988.07
+5210,Gas,03/15/2023,Public Service Co,5039.57,,35654.83
+5220,Water/Sewer,03/15/2023,Atmos Energy,,664.17,30678.34
+5300,Janitorial Services,03/15/2023,ABC Janitorial Services,6405.54,,45403.68
+5310,Landscaping,03/15/2023,Premier Cleaning Co,,1213.29,30433.01
+5320,Snow Removal,03/15/2023,Rocky Mountain Plumbing,5432.89,,31943.49
+5330,HVAC Maintenance,03/15/2023,Mile High HVAC,4791.90,,28817.94
+5340,Elevator Maintenance,03/15/2023,Front Range Electric,4759.14,,33318.91
+5350,Parking Lot Maintenance,03/15/2023,Front Range Electric,4544.55,,33728.09
+5400,Building Repairs,03/15/2023,Asphalt Experts LLC,5533.27,,36608.45
+5410,Plumbing Repairs,03/15/2023,Front Range Electric,4004.38,,31385.80
+5420,Electrical Repairs,03/15/2023,Front Range Electric,5141.14,,31986.46
+5500,Security Services,03/15/2023,SecureWatch Security,6329.74,,44595.82
+5600,Management Fee,03/15/2023,Property Management Inc,3949.04,,27998.63
+5610,Administrative Fee,03/15/2023,Property Management Inc,3990.75,,27899.91
+5700,Professional Fees,03/15/2023,Premier Cleaning Co,6254.18,,44907.93
+5100,Real Estate Taxes,05/26/2024,County Tax Assessor,8129.01,,76230.13
+5110,Property Insurance,05/26/2024,Liberty Mutual,3216.24,,37749.74
+5120,General Liability Insurance,05/26/2024,Travelers Insurance,3205.04,,41525.87
+5200,Electric,05/26/2024,Public Service Co,4879.04,,70204.66
+5210,Gas,05/26/2024,Atmos Energy,5328.90,,69786.93
+5220,Water/Sewer,05/26/2024,Xcel Energy,5106.02,,62726.89
+5300,Janitorial Services,05/26/2024,Premier Cleaning Co,6446.68,,82761.89
+5310,Landscaping,05/26/2024,GreenScape Landscaping,6962.22,,69127.12
+5320,Snow Removal,05/26/2024,Front Range Electric,5107.19,,61832.90
+5330,HVAC Maintenance,05/26/2024,Asphalt Experts LLC,4962.22,,59335.35
+5340,Elevator Maintenance,05/26/2024,Asphalt Experts LLC,4818.35,,62325.63
+5350,Parking Lot Maintenance,05/26/2024,Asphalt Experts LLC,4369.41,,62464.97
+5400,Building Repairs,05/26/2024,Asphalt Experts LLC,5917.14,,65972.76
+5410,Plumbing Repairs,05/26/2024,Rocky Mountain Plumbing,4475.12,,59196.24
+5420,Electrical Repairs,05/26/2024,Rocky Mountain Plumbing,4193.81,,54894.15
+5500,Security Services,05/26/2024,GreenScape Landscaping,6061.80,,83234.93
+5600,Management Fee,05/26/2024,Property Management Inc,3938.55,,51977.11
+5610,Administrative Fee,05/26/2024,Property Management Inc,3961.57,,51792.43
+5700,Professional Fees,05/26/2024,ABC Janitorial Services,6193.36,,75120.92
+5100,Real Estate Taxes,05/27/2022,County Tax Assessor,,958.51,5495.78
+5110,Property Insurance,05/27/2022,Travelers Insurance,3117.71,,9408.20
+5120,General Liability Insurance,05/27/2022,Liberty Mutual,3185.25,,9668.86
+5200,Electric,05/27/2022,Denver Water,6403.01,,16469.19
+5210,Gas,05/27/2022,Xcel Energy,5988.34,,16168.49
+5220,Water/Sewer,05/27/2022,Denver Water,5004.83,,15847.30
+5300,Janitorial Services,05/27/2022,ABC Janitorial Services,6849.46,,19935.71
+5310,Landscaping,05/27/2022,Premier Cleaning Co,6866.70,,20486.88
+5320,Snow Removal,05/27/2022,Asphalt Experts LLC,,731.52,10921.29
+5330,HVAC Maintenance,05/27/2022,Denver Elevator Co,5048.83,,14640.25
+5340,Elevator Maintenance,05/27/2022,Rocky Mountain Plumbing,4691.81,,14395.43
+5350,Parking Lot Maintenance,05/27/2022,Mile High HVAC,4905.86,,15317.91
+5400,Building Repairs,05/27/2022,Front Range Electric,5829.33,,17657.62
+5410,Plumbing Repairs,05/27/2022,Denver Elevator Co,3895.10,,13204.75
+5420,Electrical Repairs,05/27/2022,Denver Elevator Co,4967.25,,14422.31
+5500,Security Services,05/27/2022,ABC Janitorial Services,6250.53,,19153.59
+5600,Management Fee,05/27/2022,Property Management Inc,3934.61,,11962.18
+5610,Administrative Fee,05/27/2022,Property Management Inc,3985.15,,11959.34
+5700,Professional Fees,05/27/2022,Premier Cleaning Co,6342.84,,19412.13
+5100,Real Estate Taxes,05/27/2023,City of Denver Tax Collector,7681.77,,35914.41
+5110,Property Insurance,05/27/2023,Travelers Insurance,3116.71,,21622.25
+5120,General Liability Insurance,05/27/2023,Travelers Insurance,3136.42,,25614.48
+5200,Electric,05/27/2023,Xcel Energy,5496.01,,44484.08
+5210,Gas,05/27/2023,Xcel Energy,6289.97,,41944.80
+5220,Water/Sewer,05/27/2023,Atmos Energy,6184.25,,36862.59
+5300,Janitorial Services,05/27/2023,GreenScape Landscaping,5982.51,,51386.19
+5310,Landscaping,05/27/2023,GreenScape Landscaping,6805.23,,37238.24
+5320,Snow Removal,05/27/2023,Rocky Mountain Plumbing,5280.65,,37224.14
+5330,HVAC Maintenance,05/27/2023,Mile High HVAC,5365.43,,34183.37
+5340,Elevator Maintenance,05/27/2023,Front Range Electric,4759.57,,38078.48
+5350,Parking Lot Maintenance,05/27/2023,Mile High HVAC,4514.62,,38242.71
+5400,Building Repairs,05/27/2023,Front Range Electric,5478.32,,42086.77
+5410,Plumbing Repairs,05/27/2023,Front Range Electric,4905.94,,36291.74
+5420,Electrical Repairs,05/27/2023,Front Range Electric,,645.24,31341.22
+5500,Security Services,05/27/2023,GreenScape Landscaping,6239.69,,50835.51
+5600,Management Fee,05/27/2023,Property Management Inc,4075.05,,32073.68
+5610,Administrative Fee,05/27/2023,Property Management Inc,3999.61,,31899.52
+5700,Professional Fees,05/27/2023,GreenScape Landscaping,,1281.73,43626.20
+5100,Real Estate Taxes,08/07/2024,City of Denver Tax Collector,8284.25,,84514.38
+5110,Property Insurance,08/07/2024,State Farm Commercial,3173.50,,40923.24
+5120,General Liability Insurance,08/07/2024,Liberty Mutual,3253.57,,44779.44
+5200,Electric,08/07/2024,Public Service Co,5119.92,,75324.58
+5210,Gas,08/07/2024,Atmos Energy,6555.40,,76342.33
+5220,Water/Sewer,08/07/2024,Denver Water,6109.74,,68836.63
+5300,Janitorial Services,08/07/2024,ABC Janitorial Services,,1094.32,81667.57
+5310,Landscaping,08/07/2024,GreenScape Landscaping,5988.57,,75115.69
+5320,Snow Removal,08/07/2024,Front Range Electric,4633.42,,66466.32
+5330,HVAC Maintenance,08/07/2024,Front Range Electric,4694.51,,64029.86
+5340,Elevator Maintenance,08/07/2024,Rocky Mountain Plumbing,4990.95,,67316.58
+5350,Parking Lot Maintenance,08/07/2024,Rocky Mountain Plumbing,5315.82,,67780.79
+5400,Building Repairs,08/07/2024,Asphalt Experts LLC,5459.14,,71431.90
+5410,Plumbing Repairs,08/07/2024,Denver Elevator Co,4428.72,,63624.96
+5420,Electrical Repairs,08/07/2024,Asphalt Experts LLC,4083.19,,58977.34
+5500,Security Services,08/07/2024,GreenScape Landscaping,6353.27,,89588.20
+5600,Management Fee,08/07/2024,Property Management Inc,4025.23,,56002.34
+5610,Administrative Fee,08/07/2024,Property Management Inc,4076.93,,55869.36
+5700,Professional Fees,08/07/2024,SecureWatch Security,6850.26,,81971.18
+5100,Real Estate Taxes,08/08/2022,City of Denver Tax Collector,,1118.74,4377.04
+5110,Property Insurance,08/08/2022,Liberty Mutual,3243.99,,12652.19
+5120,General Liability Insurance,08/08/2022,State Farm Commercial,3203.73,,12872.59
+5200,Electric,08/08/2022,Denver Water,4975.70,,21444.89
+5210,Gas,08/08/2022,Xcel Energy,4615.77,,20784.26
+5220,Water/Sewer,08/08/2022,Denver Water,5004.45,,20851.75
+5300,Janitorial Services,08/08/2022,Premier Cleaning Co,6799.07,,26734.78
+5310,Landscaping,08/08/2022,GreenScape Landscaping,,1703.54,18783.34
+5320,Snow Removal,08/08/2022,Denver Elevator Co,6025.66,,16946.95
+5330,HVAC Maintenance,08/08/2022,Asphalt Experts LLC,,1273.87,13366.38
+5340,Elevator Maintenance,08/08/2022,Asphalt Experts LLC,4672.56,,19067.99
+5350,Parking Lot Maintenance,08/08/2022,Front Range Electric,4964.45,,20282.36
+5400,Building Repairs,08/08/2022,Mile High HVAC,4551.97,,22209.59
+5410,Plumbing Repairs,08/08/2022,Rocky Mountain Plumbing,4776.10,,17980.85
+5420,Electrical Repairs,08/08/2022,Rocky Mountain Plumbing,4447.91,,18870.22
+5500,Security Services,08/08/2022,Premier Cleaning Co,6743.75,,25897.34
+5600,Management Fee,08/08/2022,Property Management Inc,4079.93,,16042.11
+5610,Administrative Fee,08/08/2022,Property Management Inc,3886.93,,15846.27
+5700,Professional Fees,08/08/2022,SecureWatch Security,7015.39,,26427.52
+5100,Real Estate Taxes,08/08/2023,County Tax Assessor,8278.00,,44192.41
+5110,Property Insurance,08/08/2023,Travelers Insurance,3272.26,,24894.51
+5120,General Liability Insurance,08/08/2023,State Farm Commercial,3169.71,,28784.19
+5200,Electric,08/08/2023,Xcel Energy,5176.48,,49660.56
+5210,Gas,08/08/2023,Xcel Energy,4593.32,,46538.12
+5220,Water/Sewer,08/08/2023,Atmos Energy,5248.79,,42111.38
+5300,Janitorial Services,08/08/2023,Premier Cleaning Co,5933.14,,57319.33
+5310,Landscaping,08/08/2023,Premier Cleaning Co,6810.29,,44048.53
+5320,Snow Removal,08/08/2023,Front Range Electric,4956.71,,42180.85
+5330,HVAC Maintenance,08/08/2023,Asphalt Experts LLC,5200.93,,39384.30
+5340,Elevator Maintenance,08/08/2023,Mile High HVAC,4746.95,,42825.43
+5350,Parking Lot Maintenance,08/08/2023,Rocky Mountain Plumbing,5086.88,,43329.59
+5400,Building Repairs,08/08/2023,Rocky Mountain Plumbing,5187.65,,47274.42
+5410,Plumbing Repairs,08/08/2023,Mile High HVAC,5080.13,,41371.87
+5420,Electrical Repairs,08/08/2023,Mile High HVAC,4697.13,,36038.35
+5500,Security Services,08/08/2023,Premier Cleaning Co,6555.89,,57391.40
+5600,Management Fee,08/08/2023,Property Management Inc,3973.33,,36047.01
+5610,Administrative Fee,08/08/2023,Property Management Inc,3979.72,,35879.24
+5700,Professional Fees,08/08/2023,SecureWatch Security,6873.22,,50499.42
+5100,Real Estate Taxes,10/19/2024,City of Denver Tax Collector,7822.38,,92336.76
+5110,Property Insurance,10/19/2024,State Farm Commercial,3201.83,,44125.07
+5120,General Liability Insurance,10/19/2024,Liberty Mutual,3138.49,,47917.93
+5200,Electric,10/19/2024,Public Service Co,5168.24,,80492.82
+5210,Gas,10/19/2024,Public Service Co,5427.54,,81769.87
+5220,Water/Sewer,10/19/2024,Atmos Energy,5516.92,,74353.55
+5300,Janitorial Services,10/19/2024,Premier Cleaning Co,6808.50,,88476.07
+5310,Landscaping,10/19/2024,GreenScape Landscaping,5808.97,,80924.66
+5320,Snow Removal,10/19/2024,Denver Elevator Co,5645.96,,72112.28
+5330,HVAC Maintenance,10/19/2024,Front Range Electric,5371.98,,69401.84
+5340,Elevator Maintenance,10/19/2024,Front Range Electric,,797.53,66519.05
+5350,Parking Lot Maintenance,10/19/2024,Asphalt Experts LLC,5107.47,,72888.26
+5400,Building Repairs,10/19/2024,Mile High HVAC,4244.15,,75676.05
+5410,Plumbing Repairs,10/19/2024,Denver Elevator Co,4445.85,,68070.81
+5420,Electrical Repairs,10/19/2024,Asphalt Experts LLC,5256.96,,64234.30
+5500,Security Services,10/19/2024,SecureWatch Security,6553.40,,96141.60
+5600,Management Fee,10/19/2024,Property Management Inc,3928.67,,59931.01
+5610,Administrative Fee,10/19/2024,Property Management Inc,4080.99,,59950.35
+5700,Professional Fees,10/19/2024,SecureWatch Security,6981.30,,88952.48
+5100,Real Estate Taxes,10/20/2022,County Tax Assessor,7776.35,,12153.39
+5110,Property Insurance,10/20/2022,Travelers Insurance,3155.83,,15808.02
+5120,General Liability Insurance,10/20/2022,Travelers Insurance,3223.08,,16095.67
+5200,Electric,10/20/2022,Public Service Co,5205.30,,26650.19
+5210,Gas,10/20/2022,Public Service Co,5036.99,,25821.25
+5220,Water/Sewer,10/20/2022,Denver Water,5020.09,,25871.84
+5300,Janitorial Services,10/20/2022,GreenScape Landscaping,6166.88,,32901.66
+5310,Landscaping,10/20/2022,Premier Cleaning Co,6761.45,,25544.79
+5320,Snow Removal,10/20/2022,Rocky Mountain Plumbing,4408.96,,21355.91
+5330,HVAC Maintenance,10/20/2022,Front Range Electric,5303.62,,18670.00
+5340,Elevator Maintenance,10/20/2022,Front Range Electric,4598.68,,23666.67
+5350,Parking Lot Maintenance,10/20/2022,Rocky Mountain Plumbing,4433.35,,24715.71
+5400,Building Repairs,10/20/2022,Denver Elevator Co,5021.03,,27230.62
+5410,Plumbing Repairs,10/20/2022,Rocky Mountain Plumbing,4493.45,,22474.30
+5420,Electrical Repairs,10/20/2022,Rocky Mountain Plumbing,3960.45,,22830.67
+5500,Security Services,10/20/2022,Premier Cleaning Co,6219.25,,32116.59
+5600,Management Fee,10/20/2022,Property Management Inc,4012.20,,20054.31
+5610,Administrative Fee,10/20/2022,Property Management Inc,4050.35,,19896.62
+5700,Professional Fees,10/20/2022,ABC Janitorial Services,6058.96,,32486.48
+5100,Real Estate Taxes,10/20/2023,City of Denver Tax Collector,8183.79,,52376.20
+5110,Property Insurance,10/20/2023,Travelers Insurance,3199.85,,28094.36
+5120,General Liability Insurance,10/20/2023,Travelers Insurance,3200.98,,31985.17
+5200,Electric,10/20/2023,Denver Water,5748.36,,55408.92
+5210,Gas,10/20/2023,Denver Water,6650.55,,53188.67
+5220,Water/Sewer,10/20/2023,Xcel Energy,5542.51,,47653.89
+5300,Janitorial Services,10/20/2023,SecureWatch Security,6540.40,,63859.73
+5310,Landscaping,10/20/2023,GreenScape Landscaping,5790.29,,49838.82
+5320,Snow Removal,10/20/2023,Asphalt Experts LLC,5310.68,,47491.53
+5330,HVAC Maintenance,10/20/2023,Mile High HVAC,4748.95,,44133.25
+5340,Elevator Maintenance,10/20/2023,Front Range Electric,4971.23,,47796.66
+5350,Parking Lot Maintenance,10/20/2023,Mile High HVAC,4482.30,,47811.89
+5400,Building Repairs,10/20/2023,Front Range Electric,3630.37,,50904.79
+5410,Plumbing Repairs,10/20/2023,Denver Elevator Co,4018.66,,45390.53
+5420,Electrical Repairs,10/20/2023,Mile High HVAC,4372.28,,40410.63
+5500,Security Services,10/20/2023,Premier Cleaning Co,6725.56,,64116.96
+5600,Management Fee,10/20/2023,Property Management Inc,3972.77,,40019.78
+5610,Administrative Fee,10/20/2023,Property Management Inc,3938.50,,39817.74
+5700,Professional Fees,10/20/2023,ABC Janitorial Services,5887.63,,56387.05

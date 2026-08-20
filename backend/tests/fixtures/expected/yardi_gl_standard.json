@@ -1,0 +1,15 @@
+{
+  "row_count": 2745,
+  "account_count": 21,
+  "total_debits": 8835779.23,
+  "total_credits": 417521.86,
+  "net_amount": 8418257.37,
+  "categories": [
+    "Taxes",
+    "Insurance",
+    "Utilities",
+    "CAM",
+    "R&M",
+    "Management Fee"
+  ]
+}

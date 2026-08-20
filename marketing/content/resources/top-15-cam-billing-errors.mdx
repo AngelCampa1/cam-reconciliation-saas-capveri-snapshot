@@ -1,0 +1,296 @@
+---
+title: "15 CAM Billing Errors That Cost Landlords the Most"
+description: "The 15 most common and expensive CAM billing errors, ranked by frequency and dollar impact. For each: what it is, how it happens, how to detect it, and how to prevent it."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 41
+faq:
+  - q: "What is the most common CAM billing error?"
+    a: "Grossing up fixed expenses. Property taxes and insurance are fixed costs that do not vary with occupancy, yet they are frequently included in gross-up calculations. On a building at 75% occupancy with $400,000 in fixed costs, this error adds $133,333 to the expense pool - overbilling that tenant auditors catch in over 40% of audits."
+  - q: "How much do CAM billing errors typically cost landlords?"
+    a: "Individual errors range from $2,000 to $150,000+ per property per year depending on the error type and building size. Tenant audit firms commonly report finding overcharges in a large share of reconciliation statements. When a tenant auditor identifies errors, the landlord refunds the overcharge, pays for the time to resolve the dispute, and often covers the auditor's fee."
+  - q: "What are the hardest CAM billing errors to detect?"
+    a: "Compounding base drift in cap calculations and denominator changes during mid-year tenant transitions are the hardest to detect because they produce small annual variances that compound over time. A cap compounding error of $500 in Year 1 becomes $3,000-$5,000 by Year 5. These errors rarely trigger audit flags until they have accumulated for several years."
+  - q: "How can landlords prevent CAM billing errors?"
+    a: "Three practices prevent most errors: (1) run a pre-send checklist before issuing reconciliation statements, (2) cross-reference every GL entry over $5,000 against the IRS BAR test for CapEx classification, and (3) maintain lease-level configuration for gross-up thresholds, cap structures, and pro-rata share denominators instead of applying building-wide defaults."
+---
+
+<Alert type="warning" title="The Cost of Being Wrong">
+Tenant audit firms commonly report finding overcharges in a large share of the CAM reconciliation statements they review. Every dollar they find comes directly from your NOI, plus the cost of resolving the dispute. The 15 errors below account for the vast majority of those findings.
+</Alert>
+
+These errors are ordered by a combination of frequency (how often they appear) and dollar impact (how much they cost when they do). The first five show up in the most audits and cost the most money.
+
+## Error 1: Grossing Up Fixed Expenses
+
+**Frequency:** Very high (over 40% of tenant audit findings)
+**Typical dollar impact:** $20,000-$150,000 per year per property
+
+**What it is:** Applying the gross-up calculation to property taxes, insurance, and other fixed costs that do not vary with occupancy. Only variable expenses (janitorial, utilities, landscaping) should be grossed up.
+
+**How it happens:** The property management system applies gross-up to the entire CAM pool instead of bifurcating fixed and variable expenses. The system setup was done once, years ago, and nobody has verified the configuration since.
+
+**How to detect it:** Pull the gross-up calculation detail. If the base includes GL accounts for property tax (typically 6100 range) or insurance (6150 range), the error is present.
+
+**How to prevent it:** Configure gross-up at the expense category level, not the building level. Review the configuration annually. See the full methodology at [/resources/cam-gross-up-calculation-guide](/resources/cam-gross-up-calculation-guide).
+
+---
+
+## Error 2: Capital Expenditures Coded as Operating Expenses
+
+**Frequency:** Very high (roughly 35% of audits)
+**Typical dollar impact:** $15,000-$100,000+ per occurrence
+
+**What it is:** A roof replacement, HVAC system installation, or parking lot repaving coded to an operating expense account and passed through to tenants in full during one reconciliation year instead of being amortized over its useful life.
+
+**How it happens:** The AP team codes the invoice to the same vendor account used for routine maintenance. A $180,000 roof replacement goes to "Roof Repair" instead of a capital account. Nobody reviews GL entries above a threshold before reconciliation.
+
+**How to detect it:** Sort the GL detail by dollar amount. Flag any single entry over $25,000. Apply the IRS BAR test: does it Better the asset, Adapt it to a new use, or Restore it to like-new condition? If yes, it is capital.
+
+**How to prevent it:** Establish a dollar threshold ($10,000 is common) above which all entries require CapEx classification review. Cross-reference vendor invoices for language like "replacement," "new installation," or "capital improvement." See [/resources/capex-detection-cam](/resources/capex-detection-cam).
+
+---
+
+## Error 3: Wrong Pro-Rata Share Denominator
+
+**Frequency:** High (25-30% of audits)
+**Typical dollar impact:** $5,000-$40,000 per tenant per year
+
+**What it is:** The total building RSF used to calculate each tenant's share does not match the lease definition. The lease says 148,500 RSF; the system says 152,000 RSF because the building was remeasured but tenant leases were not amended.
+
+**How it happens:** Building remeasurement under BOMA 2024, anchor tenant departure, or common area reclassification changes the system-level denominator. Individual leases reference the prior measurement. The system applies the new denominator to all tenants regardless of lease terms.
+
+**How to detect it:** Compare each tenant's lease-defined RSF and building RSF against the property management system's tenant record and building record. Any mismatch is a billing error.
+
+**How to prevent it:** Maintain a lease-level denominator override for tenants whose leases specify a fixed RSF or reference a prior measurement standard. See [/resources/denominator-change-guide](/resources/denominator-change-guide).
+
+---
+
+## Error 4: Management Fee Double-Counting
+
+**Frequency:** High (20-25% of audits)
+**Typical dollar impact:** $10,000-$90,000 per year
+
+**What it is:** The property management company's monthly invoice appears as a GL line item in operating expenses AND a management fee percentage is added on top during reconciliation. The management cost is recovered twice.
+
+**How it happens:** The accounting team codes the property manager's invoice to a CAM operating expense account. The reconciliation process adds the lease-specified management fee percentage to the total. Nobody cross-references the fee line against the GL detail.
+
+**How to detect it:** Search the GL for vendor payments to the property management company. If those payments appear as operating expense line items and a separate management fee is also calculated, the fee is double-counted.
+
+**How to prevent it:** Either include management costs as a GL line item OR calculate a fee percentage. Not both. Document the method and verify annually. See [/resources/admin-fee-calculation-methods](/resources/admin-fee-calculation-methods).
+
+---
+
+## Error 5: Wrong Gross-Up Occupancy Threshold
+
+**Frequency:** Medium-high (15-20% of audits)
+**Typical dollar impact:** $10,000-$50,000 per year
+
+**What it is:** The gross-up calculation uses a threshold (90%, 95%, 100%) that does not match the lease specification. Different tenants in the same building may have different thresholds, but the system applies a single building-wide setting.
+
+**How it happens:** The property management system has one gross-up field per building, not per tenant. When tenant leases specify 90% and others specify 95%, one group gets the wrong calculation.
+
+**How to detect it:** Pull each tenant's lease-specified gross-up threshold and compare to the system setting. Any mismatch is a billing error.
+
+**How to prevent it:** Use tenant-level gross-up configuration. If the system does not support per-tenant thresholds, calculate gross-up outside the system for tenants with non-standard thresholds.
+
+---
+
+## Error 6: Expense Cap Applied to Total Pool Instead of Controllable Only
+
+**Frequency:** Medium (15% of audits)
+**Typical dollar impact:** $5,000-$30,000 per year
+
+**What it is:** The annual expense cap runs against the full CAM pool (including property taxes and insurance) instead of only controllable expenses. This can either over-cap (limiting legitimate pass-through) or under-cap depending on the direction of tax and insurance changes.
+
+**How it happens:** The cap is configured at the pool level without separating controllable from uncontrollable expenses. The system tests total growth against the cap percentage.
+
+**How to detect it:** Calculate the cap ceiling using only controllable expenses. Compare to the system's cap ceiling. If the numbers differ, the system is including uncontrollable costs in the cap test.
+
+**How to prevent it:** Tag each expense category as controllable or uncontrollable. Run the cap test only on the controllable subtotal. Pass uncontrollable costs through at actuals.
+
+---
+
+## Error 7: Cap Compounding from Actuals Instead of Ceiling
+
+**Frequency:** Medium (12-15% of audits)
+**Typical dollar impact:** $2,000-$8,000 per tenant per year (compounds over lease term)
+
+**What it is:** The annual cap ceiling is calculated by applying the cap percentage to the prior year's actual billed amount instead of the prior year's cap ceiling. In years when actuals are below the ceiling, this resets the base lower and permanently reduces future recovery capacity.
+
+**How it happens:** The spreadsheet formula references the "Billed" column instead of the "Ceiling" column. The error is invisible in below-cap years and only surfaces when expenses spike.
+
+**How to detect it:** Reconstruct the cap ceiling independently using the cap percentage applied to the prior ceiling. Compare to the system's ceiling. Drift indicates the compounding base error.
+
+**How to prevent it:** Track two columns: actual billed and cap ceiling. Always derive next year's ceiling from the prior ceiling, regardless of what was actually billed. See [/resources/cumulative-vs-non-cumulative-cam-caps](/resources/cumulative-vs-non-cumulative-cam-caps).
+
+---
+
+## Error 8: Anchor Exclusion Not Applied
+
+**Frequency:** Medium (10-15% of audits)
+**Typical dollar impact:** $8,000-$35,000 per year for remaining tenants
+
+**What it is:** An anchor tenant who self-maintains certain CAM categories (HVAC, janitorial) is included in the denominator for those expense pools. The anchor's space should be excluded from pools where they self-maintain, reducing the denominator and correctly allocating costs to the tenants who benefit from the landlord-provided service.
+
+**How it happens:** The anchor's self-maintenance provision is in the lease but was never configured in the property management system. Or it was configured when the lease was signed and overwritten during a system migration.
+
+**How to detect it:** Review anchor leases for self-maintenance clauses. Verify that the system excludes anchor space from the applicable expense pools. See [/resources/anchor-exclusion-cam](/resources/anchor-exclusion-cam).
+
+**How to prevent it:** Maintain an anchor exclusion matrix documenting which tenants self-maintain which expense categories. Review at lease renewal and during system migrations.
+
+---
+
+## Error 9: Prior Year Adjustments Included in Current Year
+
+**Frequency:** Medium (10% of audits)
+**Typical dollar impact:** $3,000-$25,000 per year
+
+**What it is:** A prior-year expense adjustment (insurance refund, tax appeal credit, vendor rebate) is included in the current year's CAM pool instead of being allocated to the year it pertains to.
+
+**How it happens:** The credit or adjustment hits the GL in the current period. The reconciliation process picks up the current-period GL without checking whether entries are adjustments to prior years.
+
+**How to detect it:** Review GL entries for credits, adjustments, refunds, or entries with memo fields referencing prior years. Any entry that pertains to a prior period should be excluded from the current reconciliation and applied to the appropriate year.
+
+**How to prevent it:** Flag GL entries with keywords like "refund," "credit," "adjustment," "prior year," or "rebate" for manual review before reconciliation. Code prior-year adjustments to a separate GL account.
+
+---
+
+## Error 10: Incorrect Expense Year Allocation
+
+**Frequency:** Medium (8-10% of audits)
+**Typical dollar impact:** $5,000-$20,000 per year
+
+**What it is:** Expenses are allocated to the wrong reconciliation year. A December service performed in Year 1 but invoiced in January of Year 2 is included in Year 2's reconciliation instead of Year 1. The reverse also occurs.
+
+**How it happens:** Accrual-basis recognition requires matching expenses to the period of service, not the payment date. Cash-basis entries that cross year-end boundaries get allocated to the wrong period.
+
+**How to detect it:** Review large invoices dated in January and February for services performed in the prior year. Review December accruals for accuracy.
+
+**How to prevent it:** Maintain a year-end accrual checklist. Review all invoices received in the first 60 days of the new year for prior-year service dates.
+
+---
+
+## Error 11: Tenant Improvement Costs in CAM Pool
+
+**Frequency:** Low-medium (8% of audits)
+**Typical dollar impact:** $10,000-$75,000 per occurrence
+
+**What it is:** Costs related to tenant buildout, suite preparation, or leasing commissions are included in the recoverable CAM expense pool. These are landlord costs of acquiring or retaining tenants, not operating expenses.
+
+**How it happens:** Construction invoices for tenant improvements are coded to building maintenance or general contractor accounts. The AP team does not distinguish between building-level work and tenant-specific work.
+
+**How to detect it:** Review construction and contractor invoices for references to specific suite numbers, tenant names, or buildout specifications. These entries do not belong in the CAM pool.
+
+**How to prevent it:** Establish a separate GL account structure for tenant improvement costs. Train AP staff to route tenant-specific invoices to TI accounts, not operating expense accounts.
+
+---
+
+## Error 12: Non-Recoverable Expenses in the CAM Pool
+
+**Frequency:** Low-medium (7% of audits)
+**Typical dollar impact:** $3,000-$15,000 per year
+
+**What it is:** Expenses explicitly excluded from recovery under the lease appear in the CAM pool: legal fees, leasing costs, depreciation on the building itself, and mortgage interest.
+
+**How it happens:** The chart of accounts does not separate recoverable from non-recoverable expenses. All building-related costs flow into the same GL range and are swept into reconciliation.
+
+**How to detect it:** Cross-reference every GL account in the CAM pool against the lease's list of excluded expenses. Common exclusions: legal fees, leasing commissions, advertising, depreciation, debt service, and owner-specific costs.
+
+**How to prevent it:** Maintain a GL account mapping that flags each account as recoverable or non-recoverable. Review the mapping when new accounts are created.
+
+---
+
+## Error 13: Gross-Up Applied When Occupancy Exceeds Threshold
+
+**Frequency:** Low (5% of audits)
+**Typical dollar impact:** $5,000-$25,000 per year
+
+**What it is:** The gross-up formula is applied even though actual building occupancy meets or exceeds the lease-specified threshold. At 97% occupancy with a 95% threshold, no gross-up should apply. The system applies it anyway, inflating the expense pool.
+
+**How it happens:** The gross-up is configured as a static formula that runs regardless of occupancy. Nobody checks whether the condition for gross-up (occupancy below threshold) is actually met.
+
+**How to detect it:** Compare actual occupancy to the gross-up threshold. If actual occupancy equals or exceeds the threshold, the gross-up factor should be 1.0 (no adjustment). Any factor above 1.0 when occupancy is at or above threshold is an error.
+
+**How to prevent it:** Add an occupancy gate to the gross-up calculation. If actual occupancy >= threshold, set gross-up factor to 1.0.
+
+---
+
+## Error 14: Incorrect Base Year Expenses
+
+**Frequency:** Low (4% of audits)
+**Typical dollar impact:** $3,000-$20,000 per year (compounds every year)
+
+**What it is:** For base-year leases, the base year expense amount is wrong. The original number may have been entered incorrectly, the base year may not have been normalized for occupancy, or a prior-year adjustment changed the base amount without updating the lease record.
+
+**How it happens:** The base year amount is entered once at lease signing and never verified. If the base year included anomalous costs (pandemic-depressed expenses, construction-period low occupancy), every subsequent year overstates the tenant's incremental share.
+
+**How to detect it:** Pull the original base year reconciliation and compare to the system's stored base amount. Verify whether the base year should have been normalized per lease terms. See [/resources/base-year-cam-lease](/resources/base-year-cam-lease).
+
+**How to prevent it:** Verify base year amounts at lease execution. Flag any base year set during abnormal periods for normalization review.
+
+---
+
+## Error 15: Mid-Year Tenant Transition Proration Errors
+
+**Frequency:** Low (3% of audits)
+**Typical dollar impact:** $2,000-$10,000 per occurrence
+
+**What it is:** When a tenant moves in or out mid-year, their CAM share for that year should be prorated. Errors include using the wrong proration method (calendar days vs. months), failing to prorate at all, or double-billing the suite during the transition gap.
+
+**How it happens:** The property management system bills the departing tenant through their lease end date and the arriving tenant from their commencement date. If there is a vacancy gap, those costs may not be allocated to anyone (landlord absorbs) or may be incorrectly spread to other tenants. If the system prorates by month instead of by day, tenants who move mid-month are over- or under-billed.
+
+**How to detect it:** Pull all tenant move-in and move-out dates for the reconciliation year. Verify that the sum of all tenant prorated shares plus the landlord's vacancy absorption equals 100% of the expense pool for every day of the year.
+
+**How to prevent it:** Use day-based proration for mid-year transitions. Maintain a daily occupancy schedule that reconciles to the annual expense allocation.
+
+---
+
+## Summary: Error Impact Rankings
+
+| Rank | Error | Annual Impact Range | Detection Difficulty |
+|------|-------|-------------------|---------------------|
+| 1 | Gross-up on fixed expenses | $20K-$150K | Easy |
+| 2 | CapEx coded as OpEx | $15K-$100K+ | Easy |
+| 3 | Wrong denominator | $5K-$40K/tenant | Medium |
+| 4 | Management fee double-count | $10K-$90K | Easy |
+| 5 | Wrong gross-up threshold | $10K-$50K | Easy |
+| 6 | Cap on total pool | $5K-$30K | Medium |
+| 7 | Cap compounding error | $2K-$8K/yr (compounds) | Hard |
+| 8 | Anchor exclusion missing | $8K-$35K | Medium |
+| 9 | Prior year in current pool | $3K-$25K | Medium |
+| 10 | Wrong expense year | $5K-$20K | Medium |
+| 11 | TI costs in CAM pool | $10K-$75K | Easy |
+| 12 | Non-recoverable in pool | $3K-$15K | Easy |
+| 13 | Gross-up above threshold | $5K-$25K | Easy |
+| 14 | Wrong base year amount | $3K-$20K/yr | Hard |
+| 15 | Mid-year proration error | $2K-$10K | Medium |
+
+<CTABox
+  title="Find These Errors Before Your Tenants Do"
+  description="Upload your GL export and CapVeri runs all 15 checks automatically. You get a prioritized list of findings with dollar amounts, not just flags. Average detection time: 8 minutes per property."
+  utmContent="u_cta"
+  buttonText="Start Free Trial"
+/>
+
+<FAQSection items={[
+  { q: "What is the most common CAM billing error?", a: "Grossing up fixed expenses. Property taxes and insurance are fixed costs that do not vary with occupancy, yet they are frequently included in gross-up calculations. On a building at 75% occupancy with $400,000 in fixed costs, this error adds $133,333 to the expense pool - overbilling that tenant auditors catch in over 40% of audits." },
+  { q: "How much do CAM billing errors typically cost landlords?", a: "Individual errors range from $2,000 to $150,000+ per property per year depending on the error type and building size. Tenant audit firms commonly report finding overcharges in a large share of reconciliation statements. When a tenant auditor identifies errors, the landlord refunds the overcharge, pays for the time to resolve the dispute, and often covers the auditor's fee." },
+  { q: "What are the hardest CAM billing errors to detect?", a: "Compounding base drift in cap calculations and denominator changes during mid-year tenant transitions are the hardest to detect because they produce small annual variances that compound over time. A cap compounding error of $500 in Year 1 becomes $3,000-$5,000 by Year 5. These errors rarely trigger audit flags until they have accumulated for several years." },
+  { q: "How can landlords prevent CAM billing errors?", a: "Three practices prevent most errors: (1) run a pre-send checklist before issuing reconciliation statements, (2) cross-reference every GL entry over $5,000 against the IRS BAR test for CapEx classification, and (3) maintain lease-level configuration for gross-up thresholds, cap structures, and pro-rata share denominators instead of applying building-wide defaults." }
+]} />
+
+## Related Resources
+
+- [How to Audit Your Own CAM Billing Before Tenants Do](/resources/self-audit-cam-billing)
+- [The Landlord's Complete Guide to CAM Gross-Up Calculations](/resources/cam-gross-up-calculation-guide)
+- [CAM Pre-Send Checklist](/resources/cam-pre-send-packet-checklist)
+- [CapEx Detection in CAM Reconciliation](/resources/capex-detection-cam)
+- [GL Coding Guide for CAM Reconciliation](/resources/gl-coding-guide)
+
+## Sources
+
+1. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

@@ -1,0 +1,215 @@
+---
+title: "How to Calculate Net Operating Income in Real Estate"
+description: "Step-by-step guide to calculating net operating income for commercial real estate, including CAM recovery adjustments, occupancy normalization, and a worked example with real numbers."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 262
+faq:
+  - q: "How do you calculate net operating income in real estate?"
+    a: "Calculate NOI in six steps: (1) Sum all base rent from active leases. (2) Calculate recovery revenue: CAM billed, tax recovery, insurance recovery. (3) Add percentage rent and other income. (4) Sum all operating expenses: CAM incurred, taxes, insurance, management fee, non-recoverable costs. (5) Subtract total expenses from total revenue. (6) Verify your recovery ratio (recovery revenue ÷ expenses incurred) against your lease-weighted theoretical maximum. Most operators stop at step 5, which understates NOI. Step 6 reveals unbilled recovery that should have appeared in step 2. A recovery audit before finalizing NOI can lift the revenue figure on properties with billing gaps."
+  - q: "What do you need to calculate NOI for a commercial property?"
+    a: "You need four data sources: (1) rent roll (all active leases with square footage, base rent rates, and lease terms); (2) operating expense ledger (all costs incurred and how they're categorized: recoverable vs. non-recoverable, capital vs. operating); (3) CAM recovery billings (what you've actually invoiced tenants for expense recoveries); and (4) lease abstracts (to confirm which expenses are recoverable, which are excluded, and whether caps or stops apply). The mismatch between items 2 and 3 is the recovery gap: expenses incurred versus recovery billed. On most properties, this gap exists and is discoverable without major effort. The [cam-reconciliation](/resources/common-area-maintenance-reconciliation-explained) process reconciles these two data sources annually."
+  - q: "Can I calculate NOI without CAM recovery data?"
+    a: "You can calculate a partial NOI using base rent only, but it will understate true NOI for any property with expense recovery provisions. Base rent NOI (rent minus non-recoverable expenses and management fee) is a valid sub-metric but it's not property NOI. Many CRE investors use base rent NOI as the floor: the value you'd have if recovery machinery completely failed. True NOI adds the net recovery margin on top. For properties with strong NNN leases and no CAM management complexity, the difference is small. For retail centers and office buildings with gross lease components, the difference can be 15-25% of total NOI."
+  - q: "How do you normalize NOI for occupancy when calculating property value?"
+    a: "Stabilized NOI adjusts for current vacancy by projecting NOI at the property's stabilized occupancy (typically 93-95% for retail, 90-92% for office). The adjustment has three parts: (1) add projected rent for vacant spaces at market rates; (2) adjust management fee to reflect higher revenue; (3) adjust recovery ratio. At higher occupancy, the gross-up provision applies less aggressively, so recovery improves. Do not apply the full market rent for vacant spaces. Apply a lease-up period discount (typically 6-18 months of free rent plus TI costs amortized). The difference between as-is NOI and stabilized NOI is the upside underwriting: it tells you how much value creation is available through lease-up."
+  - q: "How does property tax affect NOI calculation?"
+    a: "Property taxes hit NOI twice: as an expense and as recovery revenue. In the expense column, the full tax bill reduces NOI. In the revenue column, tax recovery from tenants increases NOI. For NNN leases, 100% of taxes pass through and the net impact on NOI is zero. For gross leases, the landlord absorbs taxes directly. This is a meaningful NOI cost in jurisdictions with rapidly rising assessments. The [2026-property-tax-increases](/blog/2026-property-tax-increases) post covers how recent assessment increases are hitting property NOI in key markets. When underwriting, model property taxes forward using the assessment year cycle for the jurisdiction. Don't assume flat taxes."
+---
+
+<Alert type="info" title="Quick Answer">
+To calculate NOI for commercial real estate: sum all revenue (base rent + CAM recovery + tax and insurance recovery + other income), subtract all operating expenses (CAM costs incurred + taxes + insurance + management fee + non-recoverable maintenance), and verify your recovery ratio matches your lease entitlements. Most operators find 2-5% of NOI sitting in unbilled recoveries during their first reconciliation audit.
+</Alert>
+
+You can calculate a rough NOI in an afternoon using rent roll and expense ledger. Getting to accurate NOI (the kind that holds up under buyer due diligence) takes knowing where the recovery gaps are and how occupancy affects the calculation.
+
+Here's the complete process.
+
+## Step 1: Pull Your Revenue Inputs
+
+Start with the rent roll. You need:
+
+- **Tenant name** and lease dates (start, end, any options)
+- **Leased square footage**
+- **Base rent:** scheduled rate per the lease, not asking rent or market rate
+- **Percentage rent provision:** rate and breakpoint, if applicable
+- **Recovery type:** which CAM pool, any exclusions, any caps
+
+Build a row per tenant. The totals give you base rent and the recovery allocation framework.
+
+**Example rent roll summary (60,000 sf strip center, 95% occupied):**
+
+| Tenant | SF | Base Rent/sf | Annual Base Rent |
+|---|---|---|---|
+| Anchor | 22,000 | $13.00 | $286,000 |
+| Co-anchor | 10,000 | $19.50 | $195,000 |
+| Inline (7 tenants) | 25,200 | $28.75 | $724,500 |
+| **Total** | **57,200** | | **$1,205,500** |
+
+Vacant: 2,800 sf (4.7%). No base rent contribution.
+
+## Step 2: Calculate CAM Recovery Revenue
+
+This step is where most operators leave money on the table.
+
+**Sub-step 2a: Establish the CAM expense pool**
+
+Pull all operating expenses for the year and categorize:
+- Recoverable (goes into CAM pool for billing)
+- Excluded per lease (capital items, anchor exclusions, above-pool costs)
+- Non-recoverable (landlord absorbs, doesn't bill)
+
+For this property: $318,000 total CAM expenses incurred, $290,000 billable pool ($28,000 excluded: parking lot repaving capitalized, and anchor's management fee exclusion).
+
+**Sub-step 2b: Calculate each tenant's pro-rata share**
+
+Pro-rata = Tenant SF ÷ Total Denominator SF
+
+Denominator depends on the lease. Some use total GLA, some use only occupied space, some use a fixed denominator. Check each lease.
+
+For this example, denominator = total GLA (60,000 sf):
+- Anchor: 22,000 ÷ 60,000 = 36.67%
+- Co-anchor: 10,000 ÷ 60,000 = 16.67%
+- Inline avg (each): ~3,600 sf ÷ 60,000 = 6.0%
+
+See [pro-rata-share-calculation](/resources/pro-rata-share-calculation) for denominator variations and how to handle mid-year changes.
+
+**Sub-step 2c: Apply any caps**
+
+Check whether each tenant's CAM cap is binding this year. A 5% cumulative cap from a $3.80/sf base year (Year 3):
+- Cap ceiling: $3.80 × 1.05³ = $4.40/sf
+- Actual CAM this year: $290,000 ÷ 60,000 = $4.83/sf
+- Cap applies: tenant pays $4.40 instead of $4.83
+
+Track which tenants have binding caps. The aggregate shortfall from capped tenants reduces your effective recovery ratio. See [cam-cap-types](/resources/cam-cap-types) for the full cap structure taxonomy.
+
+**Sub-step 2d: Apply gross-up if permitted and applicable**
+
+At 95.3% occupancy, gross-up barely applies here. But if occupancy were 78%, the gross-up adjustment could add 5-8 percentage points to the billable pool. Method: Billable Pool ÷ Actual Occupancy % × Gross-Up Target % (usually 95%). See [cam-gross-up-calculation-guide](/resources/cam-gross-up-calculation-guide).
+
+**CAM Recovery Calculation Result:**
+
+| Tenant | Pro-Rata Share | Max CAM Billable | Cap Applies? | CAM Billed |
+|---|---|---|---|---|
+| Anchor | 36.67% | $106,367 | Yes ($4.40 cap) | $96,800 |
+| Co-anchor | 16.67% | $48,367 | No | $48,367 |
+| Inline (avg) | 6.0% × 7 | $17,400 each | Varies | $15,800 avg |
+| **Total** | | **$290,000** | | **$255,934** |
+
+**Recovery ratio: $255,934 ÷ $290,000 = 88.3%**
+
+The anchor's cap is driving 11.7% of unrecovered CAM. At current expense levels, the anchor cap costs $29,567/year in unrecovered cost. As costs rise, this gap grows. The [cam-cap-rate-multiplier](/resources/cam-cap-rate-multiplier) shows how cap binding accelerates over time.
+
+## Step 3: Add Tax and Insurance Recovery
+
+For most retail leases, these are 100% passable with no cap or exclusion:
+
+- Property tax bill: $195,000 → billed in full → **$195,000 recovery**
+- Insurance premium: $42,000 → billed in full → **$42,000 recovery**
+
+Cross-check: confirm each lease explicitly includes taxes and insurance as recoverable. Some older leases have expense stops that cap landlord contribution at a base year amount, above which tenant pays. For this example, all leases are NNN-style on taxes and insurance.
+
+## Step 4: Add Percentage Rent and Other Income
+
+- Percentage rent: Anchor's lease has a 1.5% rate. Natural breakpoint = $286,000 ÷ 0.015 = $19,067,000. At $14M in anchor sales, no trigger. Percentage rent = $0.
+- Parking lot (reserved spaces): $8,400/year
+- ATM income: $3,600/year
+
+Other income: **$12,000**
+
+## Step 5: Total Revenue
+
+| Revenue Line | Amount |
+|---|---|
+| Base Rent | $1,205,500 |
+| CAM Recovery | $255,934 |
+| Tax Recovery | $195,000 |
+| Insurance Recovery | $42,000 |
+| Other Income | $12,000 |
+| **Effective Gross Income** | **$1,710,434** |
+
+## Step 6: Operating Expenses
+
+| Expense | Amount |
+|---|---|
+| CAM (incurred) | $318,000 |
+| Property Taxes | $195,000 |
+| Insurance | $42,000 |
+| Management Fee (4%) | $68,417 |
+| Non-Recoverable Repairs | $22,000 |
+| Legal/Admin | $15,000 |
+| **Total** | **$660,417** |
+
+## Step 7: Calculate NOI
+
+**NOI = $1,710,434 − $660,417 = $1,050,017**
+
+At 7.0% cap rate: **$15.0M implied value**
+
+Recovery ratio: 88.3% (CAM); 100% (taxes, insurance)
+
+## Step 8: Verify Against Lease Entitlement
+
+This is the step most operators skip. Compare actual recovery ratio to theoretical maximum: the recovery rate if every billable dollar were billed correctly, before caps.
+
+For this property:
+- Theoretical max (ignoring caps): $290,000 ÷ $290,000 = 100%
+- After caps (anchor): 88.3%
+- Gap attributable to billing errors vs. lease structure: ~1-2% (estimated)
+
+If the gap between theoretical and actual is larger than the cap impact, you have billing errors (unbilled recoveries that should have been invoiced). On this property: 88.3% actual vs. 89.5% theoretical-after-caps = 1.2% gap. At $290,000 pool, that's $3,480 in missed billing. Small, but real.
+
+The [cam-reconciliation-errors](/blog/cam-reconciliation-errors) post covers the 12 most common sources of these gaps. The [recovery-ratio-analysis](/resources/recovery-ratio-analysis) framework shows how to benchmark your ratio against property type comps.
+
+## Occupancy-Normalized NOI
+
+For the 2,800 sf of vacancy: what does NOI look like at full occupancy (97.5%)?
+
+- Additional base rent at $28.75/sf (inline rate): $80,500
+- Additional management fee: $3,220
+- Additional CAM billing (2,800 sf at current rates, assuming new tenant has standard lease): ~$14,000
+- Net NOI addition: $80,500 + $14,000 − $3,220 = ~$91,280
+
+Stabilized NOI: $1,050,017 + $91,280 = **$1,141,297**
+
+Stabilized value at 7.0% cap: **$16.3M** (vs. $15.0M as-is). The $1.3M gap is your lease-up value creation target.
+
+For the full occupancy normalization methodology, including free rent periods and TI cost offsets, see [noi-calculation-example](/resources/noi-calculation-example).
+
+## Common Calculation Mistakes
+
+**Mistake 1: Using collection-basis CAM instead of accrual**
+
+If you had $50,000 in Q4 CAM true-ups uncollected at year-end, your cash NOI understates your accrual NOI. For property valuation, use accrual-basis recovery revenue (what you're entitled to bill, not just what's been paid). Then track AR aging separately.
+
+**Mistake 2: Including non-operating income above the NOI line**
+
+Tenant improvement allowance reimbursements, insurance proceeds, and lease termination fees are not operating revenue. Including them in NOI overstates it. Put them below the NOI line or in a separate capital events section.
+
+**Mistake 3: Netting management fees against recovery**
+
+Some operators reduce CAM recovery billings by the management fee rather than booking the fee separately as an expense. This understates both revenue and expense, but misrepresents the recovery ratio and distorts comparability.
+
+**Mistake 4: Using average occupancy instead of period-specific**
+
+If occupancy was 98% in Q1-Q3 and dropped to 85% in Q4 due to a major tenant departure, annual average is 95.25%. But your Q4 CAM billing used the wrong denominator for 3 months. Recalculate recovery quarterly or monthly for accuracy.
+
+## Using the NOI Impact Calculator
+
+Once you have the NOI baseline, model improvement scenarios using the [NOI impact calculator](/tools/noi-impact-calculator):
+
+- Input current vs. target recovery ratio
+- Set CAM pool size
+- Input cap rate
+- Get: annual NOI gain and implied value gain from the improvement
+
+This turns the abstract NOI formula into an actionable management target.
+
+For more worked examples across different property types, see [noi-calculation-example](/resources/noi-calculation-example). For how these numbers feed into property valuation, see [noi-to-value-commercial-property](/resources/noi-to-value-commercial-property) and [cap-rate-noi-relationship-cre](/blog/cap-rate-noi-relationship-cre).
+
+## Sources
+
+1. [IREM - Operating expense benchmark resources](https://www.irem.org/)
+2. [Partners Real Estate - Houston Office Q4 2025](https://partnersrealestate.com/research/houston-office-q4-2025-quarterly-market-report/)

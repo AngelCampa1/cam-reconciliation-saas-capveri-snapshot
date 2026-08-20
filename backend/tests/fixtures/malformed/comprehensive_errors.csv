@@ -1,0 +1,14 @@
+ï»¿Yardi Voyager GL Detail Report
+Property: Test Building
+
+Account Code,Account Description,Date,Debit,Credit
+5100,Property Taxes,01/15/2025,5000.00,
+5200,Utilities
+5300,Janitorial,NOT_A_DATE,800.00,
+5400,Management Fee,01/25/2025,INVALID,
+5500,Insurance — Liability,01/28/2025,3500.00,
+Account Code,Account Description,Date,Debit,Credit
+5600,Repairs,01/30/2025,1500.00,
+
+TOTAL,,,10800.00,
+Report Generated: 01/31/2025

@@ -1,0 +1,85 @@
+---
+title: "CapEx Detection in CAM Reconciliation: Catching Capital Expenditures Before They Enter Recoverable Pools"
+description: "Capital expenditure misclassification is the #1 trigger for forensic tenant audits. CapVeri's rules-based CapEx screening catches roof replacements, HVAC projects, and tenant improvements at the GL entry level, before aggregation."
+datePublished: "2026-03-02"
+dateModified: "2026-03-02"
+author: "Angel Campa"
+buttonText: "Screen Your GL Now"
+order: 13
+faq:
+  - q: "What is CapEx misclassification in CAM reconciliation?"
+    a: "CapEx misclassification occurs when a capital expenditure - a roof replacement, HVAC system overhaul, parking lot reconstruction, or tenant improvement - is coded to an operating expense account in the general ledger. When that happens, the capital cost flows into the recoverable CAM pool and gets allocated to tenants as if it were routine maintenance. This is the single most common trigger for forensic tenant audits, and it's a direct lease violation under most standard commercial leases."
+  - q: "How does CapVeri detect CapEx entries?"
+    a: "CapVeri uses five deterministic rules applied to each individual GL entry: amount thresholds (entries over $25K or $100K), account description keywords (capital improvement, replacement, renovation, construction), account code prefixes (15xx, 17xx, 18xx, standard CapEx ranges), vendor patterns (construction, roofing, paving contractors), and amount-plus-keyword combinations (over $10K with a CapEx keyword). No AI, no machine learning: just rules you can audit and verify."
+  - q: "Does CapEx screening block my reconciliation?"
+    a: "No. CapEx flags are advisory. The reconciliation proceeds regardless of unreviewed flags. If pending flags exist, the reconciliation job includes a warning ('12 potential CapEx entries not yet reviewed') so your team can review them before sending statements. The calculation engine is never modified by CapEx screening."
+  - q: "What's the difference between CapEx screening and GL analysis?"
+    a: "GL analysis is CapVeri's AI-powered narrative review that sends aggregated account data to Claude for advisory analysis covering CapEx/OpEx, non-recoverable expenses, and audit risk patterns. CapEx screening is a separate, fully deterministic rules engine that evaluates each individual GL entry, with no AI involved. They complement each other: CapEx screening catches line-item issues, GL analysis catches pattern-level risks."
+  - q: "What confidence scores mean for CapEx flags"
+    a: "Each flag includes a confidence score from 0.55 to 0.90 based on the rule strength. High confidence (0.85–0.90): amount over $100K, or explicit CapEx keywords like 'capital improvement' or 'tenant improvement.' Medium confidence (0.60–0.80): amount over $25K, CapEx account code prefix, or amount-plus-keyword combinations. Lower confidence (0.55): vendor name matches only. Higher confidence flags should be reviewed first."
+  - q: "How do I handle confirmed CapEx entries?"
+    a: "When you confirm a CapEx flag, you're creating an audit trail that this entry was reviewed and determined to be a capital expenditure. The next step is to reclassify the entry in your ERP (Yardi, MRI, AppFolio) so it doesn't flow into the recoverable CAM pool. CapVeri surfaces the problem. Your ERP is where the GL correction happens."
+---
+
+<Alert type="info" title="Deterministic Rules, Not AI">
+CapEx screening uses five rules-based detectors applied to individual GL entries. No machine learning, no LLM calls, no statistical models. Every flag can be traced back to a specific rule and threshold you can verify.
+</Alert>
+
+## Why CapEx Misclassification Matters
+
+Capital expenditure misclassification is the #1 trigger for forensic tenant audits in commercial real estate. When a $200,000 roof replacement gets coded to account 5400 (Building Maintenance) instead of 1500 (Building Improvements), it silently enters the recoverable CAM pool. Every tenant in the building pays their pro-rata share of a capital project that should have been excluded.
+
+The problem is structural: ERP systems like Yardi and MRI don't validate GL coding against lease recovery rules. They run the math on whatever is in the GL. By the time a year-over-year variance flags the spike, the capital expenditure is already inside the pool and the burden of proof has shifted to you.
+
+## How CapEx Screening Works
+
+CapVeri's CapEx classifier evaluates every GL entry individually, before pool aggregation, using five rules:
+
+### 1. Amount Threshold
+
+Large one-time charges are the most visible CapEx signal. Entries at or above $25,000 are flagged at moderate confidence (0.60). Entries at or above $100,000 are flagged at high confidence (0.85). The rule uses absolute values, so credits and reversals are also caught.
+
+### 2. Account Description Keywords
+
+The classifier scans account descriptions and entry descriptions for known CapEx indicators:
+
+- **High confidence (0.90):** "capital improvement," "capex," "tenant improvement," "leasehold improvement"
+- **Medium confidence (0.65):** "replacement," "installation," "renovation," "construction," "remodel," "upgrade"
+
+### 3. Account Code Prefix
+
+Standard chart-of-accounts conventions place capital assets in specific ranges. Codes starting with 15xx, 17xx, or 18xx are flagged at 0.75 confidence. This catches entries that are correctly coded to CapEx accounts but may still be flowing into recoverable pools due to mapping errors.
+
+### 4. Vendor Pattern
+
+Vendors whose names contain "construction," "roofing," "paving," "demolition," "waterproofing," or contractor-type designations are flagged at 0.55 confidence. This is a lower-confidence signal. A roofing contractor may be doing a legitimate repair, but it's worth a second look when combined with other signals.
+
+### 5. Amount + Keyword Combination
+
+Entries over $10,000 that also contain a CapEx keyword are flagged at 0.80 confidence. This combination rule catches mid-range entries that individually might not trigger the amount threshold or keyword rule alone but together indicate probable capital work.
+
+## Real-World Examples
+
+### Roof Replacement Coded to Maintenance
+
+A $180,000 charge for "Complete roof tear-off and replacement - Building C" coded to account 5420 (Roof Maintenance). The amount threshold rule flags it at 0.85, the keyword rule flags "replacement" at 0.65, and the vendor (a roofing contractor) adds a 0.55 flag. Three independent signals, all pointing to the same conclusion.
+
+### HVAC System Replacement
+
+A $95,000 charge for "RTU replacement - units 3, 4, 7" coded to account 5410 (HVAC Repairs). The keyword rule catches "replacement" at 0.65, and the amount-keyword combo rule fires at 0.80. The IRS Betterment/Restoration/Adaptation test under Rev. Proc. 2015-82 would classify a full RTU replacement as a restoration: capital, not operating.
+
+### Parking Lot Reconstruction
+
+A $250,000 charge for "Mill and overlay - main parking structure" from "National Paving Inc" coded to account 5500 (Grounds Maintenance). Every rule fires: amount threshold (0.85), vendor pattern (0.55), and amount-keyword combo (0.80). A full mill-and-overlay is a capital project under both GAAP and IRS regulations.
+
+## Integration with Reconciliation
+
+CapEx screening runs independently of the reconciliation calculation. When you run a reconciliation and unreviewed CapEx flags exist for that property/year, the job includes an advisory warning. The calculation proceeds with no gates, no blocks, but your team sees the warning before finalizing.
+
+This is intentional. Blocking reconciliation on unreviewed CapEx flags would create operational friction. The goal is visibility: surface the problem, let your team decide the priority, and create an audit trail of the review decision.
+
+## Sources
+
+1. IRS §162 routine maintenance safe harbor - [Cornell Law](https://www.law.cornell.edu/uscode/text/26/162)
+2. IRS §263(a) capital expenditures - [Cornell Law](https://www.law.cornell.edu/uscode/text/26/263)
+3. KBA Lease Services - Capital Expenditures: Includable or Not? - [KBA Lease Services](https://www.kbalease.com/leasetips-blog/2016/10/2/capital-expenditures-includable-or-not)

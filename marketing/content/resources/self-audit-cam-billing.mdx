@@ -1,0 +1,169 @@
+---
+title: "How to Audit Your Own CAM Billing Before Tenants Do"
+description: "A self-audit framework for property controllers. Catch gross-up errors, CapEx miscoding, cap violations, and pro-rata share mistakes before reconciliation statements go out."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 33
+faq:
+  - q: "How long does a CAM self-audit take?"
+    a: "A thorough self-audit for a single property takes 2-4 hours manually, depending on the number of tenants and complexity of lease terms. CapVeri reduces this to under 10 minutes per property by automating the detection rules."
+  - q: "What is the most common error found in CAM self-audits?"
+    a: "Gross-up applied to fixed expenses (property taxes, insurance) instead of only variable expenses. This is also the most common finding by tenant auditors. The dollar impact is often $10,000-$50,000 per year per property."
+  - q: "Should I self-audit before or after year-end close?"
+    a: "After year-end close but before generating reconciliation statements. You need final expense numbers, but you want to catch errors before statements reach tenants."
+---
+
+## Why Self-Audit
+
+Tenant auditors recover money for tenants. Every dollar they find comes out of your NOI. The math is simple: catching your own errors before statements go out costs nothing. Having a tenant's auditor find them costs the error amount plus your time, your credibility, and potentially the audit fee.
+
+Tenant audit firms commonly report finding overcharges in a large share of the reconciliation statements they review, though those firms tend to get hired when a problem is already suspected. The question is not whether your statements have errors. It is whether you find them first.
+
+---
+
+## The 10-Point Self-Audit Checklist
+
+### 1. Expense Classification Review
+
+**What to check:** Every GL entry over $5,000 in your recoverable expense accounts.
+
+**How to check:** Pull a GL detail report filtered to CAM expense accounts for the reconciliation year. Sort by dollar amount, descending. For each entry over $5,000, ask: is this a capital expenditure or an operating expense?
+
+Apply the IRS BAR test:
+- **Betterment** - Does it make the asset materially better? (New roof = CapEx. Roof patch = OpEx.)
+- **Adaptation** - Does it adapt the asset to a new use? (Converting storage to office = CapEx.)
+- **Restoration** - Does it restore the asset after a casualty or to like-new condition? (Full HVAC replacement = CapEx. Compressor repair = OpEx.)
+
+**Red flags:** Any single maintenance expense over $25,000, any expense described as "replacement" or "new installation," any expense coded to R&M that has a vendor invoice labeled "capital improvement."
+
+### 2. Gross-Up Validation
+
+**What to check:** That your gross-up calculation adjusts only variable expenses, uses the correct occupancy threshold, and uses the correct actual occupancy.
+
+**How to check:**
+1. Identify your building's actual occupancy for the reconciliation year (occupied SF / total rentable SF)
+2. Check your lease-defined gross-up threshold (typically 95%)
+3. Verify that your property management system's gross-up setting applies only to variable expense categories
+4. Confirm that fixed costs (property taxes, insurance) are passed through at actuals, not grossed up
+
+**Red flags:** Total grossed-up expenses higher than actual expenses multiplied by (threshold/actual occupancy). Any gross-up applied to GL accounts in the 6100 range (taxes) or 6150 range (insurance).
+
+### 3. Pro-Rata Share Verification
+
+**What to check:** That each tenant's proportionate share matches their lease terms and current building measurements.
+
+**How to check:**
+1. Pull the rent roll and compare each tenant's square footage to their lease
+2. Check that the denominator (building rentable area) matches the lease definition. Some leases use different denominators.
+3. Verify anchor exclusions are properly applied (if an anchor pays CAM directly, their space may be excluded from the denominator)
+4. Confirm that any mid-year changes (move-ins, move-outs, expansions) are prorated correctly
+
+**Red flags:** Pro-rata shares that do not sum to approximately 100% (within rounding). Any tenant's share that changed from prior year without a lease event explaining it.
+
+### 4. CAM Cap Compliance
+
+**What to check:** That year-over-year CAM increases stay within lease-defined caps, and that cumulative caps carry forward unused amounts correctly.
+
+**How to check:**
+1. For each tenant with a CAM cap, compare this year's CAM to last year's
+2. Calculate the maximum allowable increase per the cap provision
+3. For cumulative caps: check the carry-forward balance. Unused cap amount from prior years rolls forward.
+4. For non-cumulative caps: the cap resets each year. No carry-forward.
+
+**Red flags:** Any tenant whose year-over-year CAM increase exceeds their cap rate. Cumulative cap carry-forward balances that have not been tracked at all (common when reconciliation is done in Excel).
+
+### 5. Base Year Accuracy
+
+**What to check:** That base year expenses are correct and have not been retroactively changed, and that current-year charges properly reflect the base year excess.
+
+**How to check:**
+1. Confirm the base year amount matches the reconciliation statement from that year
+2. Verify the base year was not an anomaly year (unusually low due to construction, vacancy, or one-time credits)
+3. Calculate the current year excess: (Current year expenses - Base year expenses) x tenant's pro-rata share
+4. Ensure any base year adjustments (from gross-up, amendments) are documented
+
+**Red flags:** Base year amounts that differ from the original reconciliation for that year. Tenants with base year leases where the base year had below-normal expenses.
+
+### 6. Management Fee Calculation
+
+**What to check:** That the management fee is calculated on the correct base and at the correct rate.
+
+**How to check:**
+1. Read the lease: is the management fee a percentage of gross revenue, net operating income, or the CAM pool?
+2. Read the management agreement: what is the actual fee structure?
+3. Verify these two numbers match. The amount charged to the CAM pool should equal what the management agreement defines.
+4. Check whether the management fee itself is included in the CAM cap calculation or excluded
+
+**Red flags:** Management fee calculated on a different base than the lease specifies. Admin fee charged in addition to management fee when the lease only allows one.
+
+### 7. Insurance Premium Verification
+
+**What to check:** That insurance pass-throughs match actual premiums, not estimates or prior-year amounts.
+
+**How to check:**
+1. Compare the GL insurance expense to the actual policy premium declaration page
+2. Verify the allocation between multiple properties if the policy covers a portfolio
+3. Check for mid-year policy changes or renewals that affect the annual total
+4. Confirm that non-recoverable insurance (e.g., environmental liability) is excluded
+
+**Red flags:** Insurance expense that does not change year over year (suggests estimates instead of actuals). Premium allocations that do not match property-level certificates.
+
+### 8. Tax Pass-Through Validation
+
+**What to check:** That property tax charges reflect actual assessed amounts, protests and refunds are properly credited, and any tax abatements are handled per the lease.
+
+**How to check:**
+1. Compare the GL tax expense to the county tax bill
+2. If a tax protest was successful, verify the refund was credited back to tenants proportionally
+3. Check whether tax protest fees are included in CAM (lease dependent)
+4. If the property has a tax abatement, verify the lease addresses how abated amounts affect CAM
+
+**Red flags:** Tax expense that does not match the county assessment record. Successful tax protests where refunds were not credited to tenants.
+
+### 9. Utility Allocation Review
+
+**What to check:** That common area utilities are separated from tenant-direct utilities, and that the allocation method matches the lease.
+
+**How to check:**
+1. Identify which utility accounts are common area vs. direct-billed to tenants
+2. If sub-metered, verify meter readings against the allocation
+3. Check that any after-hours HVAC charges are billed directly to the requesting tenant, not to the common pool
+4. Confirm that tenant-direct utility costs are not also included in the CAM pool
+
+**Red flags:** Total utility expense significantly higher than prior year without an explanation (possible double-counting). After-hours HVAC costs in the common area pool.
+
+### 10. Year-Over-Year Comparison
+
+**What to check:** That total CAM charges and per-tenant true-ups are reasonable compared to the prior year.
+
+**How to check:**
+1. Compare total building expenses line by line to prior year
+2. Flag any category that changed more than 10% for investigation
+3. Compare each tenant's true-up amount to prior year
+4. Check whether total building expenses increased faster than your CAM cap allows
+
+**Red flags:** Any tenant's true-up that swung more than 20% from prior year without a clear cause. Total building expenses declining while individual tenant charges increased.
+
+---
+
+## From Manual to Automated
+
+This 10-point checklist works. The problem is that it takes 2-4 hours per property, and it depends on the controller catching their own mistakes.
+
+CapVeri automates all 10 checks (and more) by applying detection rules to your GL export and lease data. The system flags every finding with the specific dollar impact and the lease clause it violates. What takes hours manually takes minutes with CapVeri. It catches patterns that human reviewers miss because it applies the same rules consistently across every tenant in every property.
+
+---
+
+## Related Resources
+
+- [CAM Pre-Send Checklist](/resources/cam-pre-send-packet-checklist) - Quick 12-point QA before sending statements
+- [Top CAM Billing Errors](/resources/top-15-cam-billing-errors) - The 7 costliest mistakes
+- [CapEx Detection in CAM](/resources/capex-detection-cam) - IRS BAR test and GL screening
+- [Recovery Ratio Analysis](/resources/recovery-ratio-analysis) - Measure your billing effectiveness
+
+## Sources
+
+1. [RIW - Audit rights and restrictions](https://www.riw.com/2024/09/four-strategies-to-understand-and-defend-against-poor-audit-rights-and-restrictions/)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

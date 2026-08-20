@@ -1,0 +1,199 @@
+---
+title: "7 CAM Reconciliation Errors That Cost Landlords the Most"
+description: "The most common CAM reconciliation errors: gross-up mistakes, cap rate typos, zero prior year traps, and admin fee logic flaws, with dollar impacts and fixes."
+excerpt: "The most common CAM reconciliation errors: gross-up mistakes, cap rate typos, zero prior year traps, and admin fee logic flaws, with dollar impacts and fixes."
+datePublished: "2026-02-23"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "cam-errors"
+faq:
+  - q: "What is the most common CAM reconciliation error?"
+    a: "Two data-entry mistakes show up more than anything else: gross-up applied to a building that's already at target occupancy, and cap rates typed as whole numbers (5 instead of 0.05). Billing systems accept both without complaint. The first over-bills tenants on every reconciliation where actual occupancy meets the target. The second makes the cap meaningless."
+  - q: "How do I know if my CAM statement has a gross-up error?"
+    a: "Divide your target occupancy by actual occupancy. If actual is at or above target, the result should be exactly 1.0. Any factor above 1.0 in that situation is wrong. On a $200,000 pool, even a factor of 1.03 adds $6,000 in charges that should not exist."
+  - q: "Can a tenant dispute a CAM reconciliation error?"
+    a: "Yes, within the audit window: typically 12 to 36 months from when the statement was delivered. Tenants can request supporting documentation and dispute specific charges. Gross-up and cap errors are recurring tenant audit findings. In California, SB 1103 (Civil Code Section 1950.9) gives qualifying small-business tenants the right to request documentation in writing, and the landlord has 30 days to produce it. Once the contractual window closes, the right to challenge prior-year statements is usually gone. Tenants in multi-year dispute postures may have challenged multiple years simultaneously."
+  - q: "Which CAM errors are most likely to result in a tenant audit?"
+    a: "Three errors generate the most formal dispute letters: gross-up applied to fixed costs (insurance, taxes, and fixed-contract landscaping should not be in the variable pool), CapEx/OpEx misclassification (a full roof replacement billed as operating expense is the highest-yield finding for tenant auditors), and management fee double-billing (a percentage fee on a base that improperly includes CapEx or taxes, often alongside direct staff costs already in the CAM pool). These three are the first items any professional tenant auditor checks. See the step-by-step dispute response guide at https://www.capveri.com/resources/tenant-cam-dispute."
+  - q: "What is a cumulative CAM cap and how does the cap bank work?"
+    a: "When actual CAM growth comes in below the cap limit, the difference carries forward as a bank. If the cap is 5% but expenses only grew 2%, the landlord banks 3%. In a later year with 8% growth, the landlord can draw from the bank and pass through more than the base cap would allow. Once drawn, the banked capacity is gone. Landlords sometimes treat it as indefinitely accumulating; tenants sometimes don't know it exists. Both create disputes."
+  - q: "How does CapVeri detect these errors automatically?"
+    a: "Upload your GL export and CapVeri runs each of the seven checks against your lease terms: gross-up factor vs. actual occupancy, cap rate format, zero prior-year traps, overlapping and reversed lease dates, admin fee sequence, and base year anomalies. Each issue gets a dollar-impact estimate, not just a flag."
+---
+
+<Alert type="info" title="Quick Answer">
+  Seven specific errors cause most of the dollar damage in CAM reconciliations:
+  gross-up applied to a building already at target occupancy, cap rates typed as
+  whole numbers instead of decimals, a zero prior-year that zeroes out the cap
+  entirely, the cumulative cap bank treated as unlimited, occupancy records
+  thrown off by overlapping or reversed lease dates, admin fees calculated
+  before the cap reduces the tenant's share, and a base year set during an
+  anomaly year. Most go unnoticed for years.
+</Alert>
+
+<StatGrid
+  stats={[
+    {
+      value: "$25K",
+      caption: "Average uncollected CAM per building per year",
+      source: "CapVeri sources methodology",
+    },
+    {
+      value: "28%",
+      caption: "Tenants who find CAM discrepancies without hiring an auditor",
+      source: "CapVeri sources methodology",
+    },
+    {
+      value: "$300K-$500K",
+      caption: "Annual leakage across a typical mid-size portfolio",
+      source: "Modeled portfolio estimate",
+    },
+  ]}
+/>
+
+## 1. Applying Gross-Up When the Building Is Already Full
+
+The gross-up adjustment normalizes CAM expenses to what they would be at full occupancy. Tenants in a half-empty building should not benefit from artificially low costs. They pay based on what the building would cost to run when fully occupied. The formula is:
+
+```
+factor = target_occupancy / actual_occupancy
+```
+
+The error is straightforward: when actual occupancy already meets or exceeds the target, the formula produces a factor above 1.0. That means expenses are grossed up past what they would be at 100% occupancy, which is not possible. No gross-up should apply when actual occupancy >= target.
+
+On a $200,000 CAM pool, a factor of 1.03 adds $6,000 in charges that should not be there. Tenants who eventually audit will demand that back, sometimes with interest.
+
+## 2. Cap Rate Entered as a Percentage Instead of a Decimal
+
+Lease abstracts say things like "5% annual cap." The calculation engine wants `0.05`, not `5`. Entering `5` sets a 500% cap, which is no cap at all.
+
+The inverse also happens: entering `105` instead of `1.05`. Some systems interpret cap rates above 1.0 as "105% of prior year." Others reject the value outright. Either way, the result is wrong.
+
+Pull your cap rates from the billing system and check them against the leases. A value above 2.0 is almost certainly a data entry error. A value of exactly 5 or 10 is the textbook version of this mistake.
+
+## 3. Zero Prior Year Locking Tenants Out of CAM Charges
+
+Non-cumulative cap calculations determine the maximum allowed charge as:
+
+```
+max_allowed = prior_year_cam * (1 + cap_rate)
+```
+
+New tenants have no prior year. Prior year CAM = $0, so max_allowed = $0. The tenant owes nothing regardless of actual CAM expenses. Mathematically correct. Economically nonsensical. The intent was to cap growth from a starting baseline, not to set the entire cap at zero.
+
+When prior year CAM is $0, skip the cap and bill the full pro-rata share. The cap should only apply starting Year 2. Many billing systems handle this wrong and will not tell you.
+
+## 4. Misunderstanding the Cumulative Cap Bank
+
+A cumulative cap lets landlords bank the difference between actual growth and the cap limit. Spend less than the cap allows and the difference carries forward. Here is what that looks like over three years with a 5% cap and a $100,000 starting base:
+
+| Year   | Actual Growth | Cap Limit          | Bank Balance          | Amount Billed |
+| ------ | ------------- | ------------------ | --------------------- | ------------- |
+| Year 1 | 2%            | 5%                 | +3% banked            | $102,000      |
+| Year 2 | 3%            | 5%                 | +5% banked (8% total) | $105,060      |
+| Year 3 | 10%           | 5% + 8% bank = 13% | -8% drawn; $0 balance | $116,617      |
+
+Once the bank is drawn, it is gone. Landlords who think it accumulates indefinitely will over-collect when expenses spike. Tenants who do not understand the bank will dispute a Year 3 bill that looks like a 10% increase when the cap said 5%.
+
+CapVeri includes a **cumulative cap bank ledger** in the package tiers that support portfolio controls. The ledger shows the year-by-year bank balance across every finalized reconciliation period. Each row shows what was banked, drawn down, and carried forward, giving both landlords and tenant auditors a transparent, verifiable timeline instead of a black box formula buried in a spreadsheet.
+
+## 5. Occupancy Miscalculations from Overlapping or Reversed Lease Dates
+
+Pro-rata calculations start with occupancy. Get occupancy wrong and every tenant's share is wrong. Two data entry mistakes do this without any error message:
+
+- **Overlapping leases** - two tenants recorded in the same space during the same period. Building occupancy exceeds 100%, which breaks the denominator for every tenant, not just the two with the conflict.
+- **Reversed dates** - end date before start date. Most billing systems silently skip these leases. Enough skipped leases and the building looks nearly vacant, sending the gross-up factor to extreme values.
+
+Before every reconciliation, total the active lease square footage for each billing period. It should never exceed the building's rentable area. Any lease where the end date is on or before the start date needs fixing before the numbers touch a reconciliation.
+
+## 6. Admin Fee Calculated Before Caps Are Applied
+
+Admin fees cover the landlord's cost of managing common areas. They should apply to what the tenant actually owes after cap reduction, not to the full expense pool before any cap is applied.
+
+```
+Wrong:   admin_fee = expense_pool * 0.15
+Correct: admin_fee = tenant_share_after_cap * 0.15
+```
+
+Say the cap reduces a tenant's share from $30,000 to $22,000. Admin fee on the gross pool: $4,500. Admin fee on the capped share: $3,300. That $1,200 error repeats every year, across every capped tenant in the building. Most leases are explicit that admin fees apply to the reconciled share, not the pool.
+
+## 7. Base Year Selected During an Anomaly Year
+
+In a base-year lease, the tenant pays only for CAM increases above the base. Set the base during a year with 20-30% vacancy and you have locked in an artificially low floor. Every subsequent year, normal occupancy-level expenses look like a large spike.
+
+A tenant who signed in 2021 with a 2021 base might have base year CAM of $8/SF. By 2025, fully occupied, the building runs $12/SF. The tenant pays $4/SF more than they should every year, not because anything grew abnormally but because the floor was wrong from the start.
+
+The fix is base-year normalization: gross up the base year expenses to what they would have been at target occupancy, then use that as the baseline. Leases negotiated during vacancy-heavy years should spell this out explicitly. Many do not. The landlord collects the difference until the tenant audits.
+
+## What Triggers a Tenant CAM Dispute
+
+<Alert type="info" title="Dispute trigger definition">
+  A tenant CAM dispute is a formal written objection invoking the audit rights
+  clause in the lease. It is not a phone call asking questions. Formal disputes
+  give the landlord an obligation to produce documentation and start a clock
+  on response time. Most are triggered by one of three things: a billing
+  increase that looks anomalous, a lease renewal that prompts the tenant to
+  review prior years, or a corporate acquisition that puts the lease under legal
+  scrutiny for the first time.
+</Alert>
+
+The seven errors on this page are the ones auditors flag most often. If your reconciliation has any of them, the tenant's auditor will find it. For the full landlord response process after a dispute letter arrives, see the [step-by-step dispute response guide](/resources/tenant-cam-dispute).
+
+## Bonus: Denominator Shifts as Dispute Triggers
+
+Beyond calculation errors, unexplained denominator changes are one of the fastest paths to a tenant dispute. When the building is re-measured, an anchor tenant vacates, or a BOMA standard transition changes the total RSF, every tenant's pro-rata share shifts even if expenses stay flat. Tenants see a higher bill with no corresponding expense increase and immediately suspect an error. The fix is proactive documentation: show what changed, why, and exactly how it affected each tenant's share. See our full guide on [why pro-rata shares change](/resources/denominator-change-guide).
+
+<FAQSection
+  items={[
+    {
+      q: "What is the most common CAM reconciliation error?",
+      a: "Two data-entry mistakes show up more than anything else: gross-up applied to a building that's already at target occupancy, and cap rates typed as whole numbers (5 instead of 0.05). Billing systems accept both without complaint. The first over-bills tenants on every reconciliation where actual occupancy meets the target. The second makes the cap meaningless.",
+    },
+    {
+      q: "How do I know if my CAM statement has a gross-up error?",
+      a: "Divide your target occupancy by actual occupancy. If actual is at or above target, the result should be exactly 1.0. Any factor above 1.0 in that situation is wrong. On a $200,000 pool, even a factor of 1.03 adds $6,000 in charges that should not exist.",
+    },
+    {
+      q: "Can a tenant dispute a CAM reconciliation error?",
+      a: "Yes, within the audit window: typically 12 to 36 months from when the statement was delivered. Tenants can request supporting documentation and dispute specific charges. Gross-up and cap errors are recurring tenant audit findings. In California, SB 1103 (Civil Code Section 1950.9) gives qualifying small-business tenants the right to request documentation in writing, and the landlord has 30 days to produce it. Once the contractual window closes, the right to challenge prior-year statements is usually gone. Tenants in multi-year dispute postures may have challenged multiple years simultaneously.",
+    },
+    {
+      q: "Which CAM errors are most likely to result in a tenant audit?",
+      a: "Three errors generate the most formal dispute letters: gross-up applied to fixed costs (insurance, taxes, and fixed-contract landscaping should not be in the variable pool), CapEx/OpEx misclassification (a full roof replacement billed as operating expense is the highest-yield finding for tenant auditors), and management fee double-billing (a percentage fee on a base that improperly includes CapEx or taxes, often alongside direct staff costs already in the CAM pool). These three are the first items any professional tenant auditor checks. See the step-by-step dispute response guide at https://www.capveri.com/resources/tenant-cam-dispute.",
+    },
+    {
+      q: "What is a cumulative CAM cap and how does the cap bank work?",
+      a: "When actual CAM growth comes in below the cap limit, the difference carries forward as a bank. If the cap is 5% but expenses only grew 2%, the landlord banks 3%. In a later year with 8% growth, the landlord can draw from the bank and pass through more than the base cap would allow. Once drawn, the banked capacity is gone. Landlords sometimes treat it as indefinitely accumulating; tenants sometimes don't know it exists. Both create disputes.",
+    },
+    {
+      q: "How does CapVeri detect these errors automatically?",
+      a: "Upload your GL export and CapVeri runs each of the seven checks against your lease terms: gross-up factor vs. actual occupancy, cap rate format, zero prior-year traps, overlapping and reversed lease dates, admin fee sequence, and base year anomalies. Each issue gets a dollar-impact estimate, not just a flag.",
+    },
+  ]}
+/>
+
+<CTABox
+  title="Find These Errors in Your CAM Statements"
+  description="Upload your GL export and CapVeri checks all seven of these patterns against your lease terms. You get a variance report with dollar figures attached. No spreadsheets, no ERP integration."
+  utmContent="u_cta"
+  buttonText="Spot These Errors"
+/>
+
+## Related Resources
+
+- [CAM Reconciliation Guide](/cam-reconciliation-guide) - Complete step-by-step reconciliation process
+
+- [CAM Gross-Up Calculator](/tools/cam-gross-up-calculator) - Calculate correct gross-up amounts
+- [CAM Cap Calculator](/tools/cam-cap-calculator) - Model cumulative vs non-cumulative caps
+- [Pro Rata Share Calculator](/tools/pro-rata-calculator) - Verify pro-rata allocations
+- [CAM Billing Error Estimator](/tools/cam-billing-error-estimator) - Quantify total error exposure
+- [Annual CAM Reconciliation Workflow](/cam-reconciliation-guide) - Prevent errors systematically
+
+## Sources
+
+1. "40% of CAM reconciliations contain material errors" - [Sources & methodology](/sources#cam-errors-40-percent)
+2. "15-20% of billed CAM charges recovered by tenant auditors" - [Sources & methodology](/sources#tenant-audit-recovery-15-20-percent)
+3. PredictAP CAM error data - [PredictAP (2026)](https://blog.predictap.com/the-15-billion-problem-hiding-in-plain-sight)
+4. Springbord tenant audit recovery data - [Springbord (2025)](https://www.springbord.com/blog/how-cam-audits-help-tenants-control-real-estate-expenses/)
+5. BDO gross-up audit findings - [BDO (2020)](https://www.bdo.com/insights/advisory/2020-lease-audit-spotlight-gain-clarity-on-gross-up-adjustments)

@@ -1,0 +1,197 @@
+---
+title: "Catch CapEx Before Your Tenants Do: A Pre-Reconciliation GL Review Checklist"
+description: "Capital expenditure misclassification is the #1 finding in tenant audits. This checklist covers dollar thresholds, GL patterns, the IRS BAR test, and red flags to review before finalizing CAM reconciliation statements."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 66
+faq:
+  - q: "What is the most common CapEx misclassification in CAM reconciliation?"
+    a: "Roof replacements coded to maintenance accounts. A full roof tear-off and replacement is a capital expenditure under both GAAP and IRS rules, but it often gets coded to GL 6110 (Roof Maintenance) because the vendor invoice says 'roofing' and the AP clerk does not distinguish between a $3,000 patch and a $180,000 replacement. The dollar amount is the first signal. Any single roofing invoice over $15,000 warrants a second look at the scope of work."
+  - q: "How do I apply the IRS BAR test to property maintenance expenses?"
+    a: "The IRS Betterment-Adaptation-Restoration (BAR) test under Treasury Reg. 1.263(a)-3 asks three questions: (1) Does the expenditure fix a material condition or defect that existed before the taxpayer acquired the property? If yes, it is a Betterment and must be capitalized. (2) Does the expenditure adapt the property to a new or different use? If yes, it is an Adaptation and must be capitalized. (3) Does the expenditure return the property to its ordinarily efficient operating condition after the property has deteriorated to a state of disrepair? If yes, it is a Restoration and must be capitalized. If the answer to all three is no, the expenditure is a deductible repair under §162."
+---
+
+Tenant auditors look for one thing first: large expenses that should not be in the recoverable pool. Capital expenditures coded as operating expenses are the easiest finding to document, the hardest to defend, and the most expensive to remediate. A single misclassified HVAC replacement can trigger a multi-year lookback audit that costs more in staff time than the original expense.
+
+The fix is straightforward: review the GL before you finalize reconciliation statements. Not after. Not when the tenant's auditor sends the first request letter. Before.
+
+This is not a comprehensive capital policy review. It is a targeted pre-reconciliation checklist designed to catch the most common CapEx misclassifications before they reach tenant statements.
+
+## Why CapEx Misclassification Happens
+
+Capital expenditure misclassification is not fraud. It is a classification problem at the point of entry.
+
+The AP clerk receives a $95,000 invoice from an HVAC contractor. The invoice description says "HVAC services - Building 7." The clerk codes it to GL 6120 (HVAC Repairs) because that is where HVAC invoices go. The clerk does not know, and has no reason to know, that this particular invoice covers a complete rooftop unit replacement, which is a capital expenditure, not a repair.
+
+The expense posts to the GL. The property accountant runs the reconciliation. The recoverable pool includes GL 6120. The $95,000 flows into tenant bills. Nobody catches it because the line item is aggregated into "HVAC Maintenance - $142,000" on the reconciliation statement, and the year-over-year variance looks reasonable because last year also had a large HVAC project.
+
+The problem is structural: the people who code invoices do not understand capital policy, and the people who understand capital policy do not review individual invoices before reconciliation.
+
+## The Dollar Threshold Screen
+
+Start with the simplest filter: dollar amount. Capital expenditures are almost always large relative to routine maintenance. While there is no universal threshold, these ranges catch the majority of misclassifications:
+
+| Threshold | Action | Rationale |
+|---|---|---|
+| Single entry over $25,000 | Review scope of work | Exceeds routine maintenance for most property types |
+| Single entry over $50,000 | Mandatory CapEx review | Very few routine repairs cost this much |
+| Single entry over $100,000 | Presumptive CapEx | Virtually all entries at this level are capital |
+| Single vendor over $75,000/year | Review aggregate scope | Multiple invoices from one contractor may be one capital project |
+| Any entry with round-number amount ($50,000, $100,000) | Flag for review | Round numbers often indicate contract/bid amounts, not repair invoices |
+
+**Example:** Your GL shows $67,000 to "National Roofing Inc" in GL 6110 (Roof Maintenance). A $67,000 roofing expense is almost certainly not a patch job. Pull the invoice. If the scope of work says "tear-off and replacement" or "new TPO membrane," it is capital. If it says "repair flashing sections A-D and reseal penetrations," it is maintenance.
+
+The dollar threshold is a screening tool, not a classification rule. A $30,000 HVAC expense could be a capital replacement or it could be an annual PM contract with parts. The threshold tells you which entries to investigate, not how to classify them.
+
+## GL Pattern Red Flags
+
+Beyond dollar amounts, certain GL patterns signal probable CapEx misclassification:
+
+### Red Flag #1: Maintenance Account with "Replacement" in the Description
+
+Search your GL entry descriptions for these keywords in operating expense accounts (6000-series):
+
+- "Replacement" or "replace"
+- "New installation" or "install new"
+- "Complete overhaul"
+- "Renovation" or "remodel"
+- "Construction"
+- "Capital" or "CapEx" (someone knew it was capital and coded it to operating anyway)
+
+Any entry in a 6000-series account containing these words needs review. The description is often the most reliable indicator of scope because it comes directly from the invoice.
+
+### Red Flag #2: Contractor Type Mismatch
+
+Certain vendor types rarely perform routine maintenance:
+
+| Vendor Type | Expected Account | Red Flag Account |
+|---|---|---|
+| General contractor | 1500 (Building Improvements) | 6100 (R&M General) |
+| Roofing contractor (large scope) | 1510 (Roof Capital) | 6110 (Roof Maintenance) |
+| Paving contractor | 1530 (Parking Capital) | 6130 (Parking Maintenance) |
+| Demolition company | 1500 (Building Improvements) | Any 6000-series |
+| Architectural/engineering firm | 1500 (Building Improvements) | 6100 (R&M General) |
+
+A $200,000 payment to a general contractor coded to R&M General is almost certainly a capital project. General contractors do not perform routine maintenance. They build things.
+
+### Red Flag #3: Multiple Large Entries to the Same Account in the Same Month
+
+Three entries of $40,000 each to GL 6120 (HVAC Repairs) in October likely represent a single capital project split across multiple invoices (progress billings, materials + labor, or contractor/subcontractor). The individual entries may fall below your dollar threshold, but the aggregate clearly signals capital work.
+
+### Red Flag #4: Year-over-Year Spike in a Single Account
+
+If GL 6130 (Parking Maintenance) ran $22,000 in each of the past three years and suddenly shows $185,000 this year, something changed. That something is almost certainly a capital project. Pull the detail and review.
+
+### Red Flag #5: Entries Near Year-End or Period-End
+
+Large operating expense entries booked in December or at fiscal year-end sometimes represent capital projects that were expensed to stay within a department's operating budget. Not common, but worth screening.
+
+## The IRS BAR Test Applied to Property Maintenance
+
+The IRS Betterment-Adaptation-Restoration (BAR) test under Treasury Reg. 1.263(a)-3 is the definitive framework for classifying property expenditures as capital or operating. Tenant auditors use it. Your classification should too.
+
+### Betterment
+
+Does the expenditure ameliorate a material condition or defect that existed before you acquired the property, or does it materially increase the capacity, productivity, efficiency, strength, or quality of the unit of property?
+
+**Property examples:**
+- Replacing a 15-SEER HVAC system with a 20-SEER system: Betterment (increased efficiency)
+- Expanding a parking lot from 200 to 280 spaces: Betterment (increased capacity)
+- Upgrading electrical service from 200A to 400A: Betterment (increased capacity)
+
+### Adaptation
+
+Does the expenditure adapt the property to a new or different use?
+
+**Property examples:**
+- Converting office space to medical exam rooms: Adaptation
+- Adding a fitness center to a common area that was storage: Adaptation
+- Installing EV charging stations in a parking structure: Adaptation (arguably)
+
+### Restoration
+
+Does the expenditure restore the property to its ordinarily efficient operating condition after it has deteriorated to a state of disrepair, or does it rebuild the property to a like-new condition?
+
+**Property examples:**
+- Full roof tear-off and replacement: Restoration
+- Complete parking lot mill-and-overlay: Restoration
+- Replacing all RTUs on a building simultaneously: Restoration
+- Replacing a single RTU in a multi-unit system: Likely NOT restoration (partial replacement of a UOP)
+
+### The Unit of Property (UOP) Question
+
+The BAR test is applied to the "unit of property," not the individual component. For buildings, the IRS defines these UOPs:
+
+1. Building structure (walls, floors, ceilings, roof)
+2. HVAC system
+3. Plumbing system
+4. Electrical system
+5. Elevators/escalators
+6. Fire protection/alarm system
+7. Security system
+8. Gas distribution system
+
+Replacing one RTU in a 12-unit HVAC system is a component replacement within the HVAC UOP, likely a deductible repair. Replacing all 12 RTUs is a restoration of the entire UOP: capital.
+
+This distinction matters enormously for CAM. A $30,000 single-RTU replacement is a recoverable operating expense. A $360,000 full-system replacement (12 x $30,000) is capital. Same vendor, same type of work, same unit cost. Completely different classification.
+
+## Pre-Reconciliation CapEx Checklist
+
+Run this checklist before finalizing any CAM reconciliation statement:
+
+**Dollar threshold screen:**
+- [ ] Identify all single GL entries over $25,000 in recoverable accounts
+- [ ] Identify all single GL entries over $50,000 in recoverable accounts (mandatory review)
+- [ ] Identify all vendors with aggregate charges over $75,000/year to operating accounts
+- [ ] Review any round-number entries over $10,000
+
+**Description keyword scan:**
+- [ ] Search operating account entries for "replacement," "new," "install," "construction," "renovation," "capital"
+- [ ] Review flagged entries against invoice scope of work
+
+**Vendor type review:**
+- [ ] Identify payments to general contractors, construction companies, and specialty contractors in operating accounts
+- [ ] Verify the work performed was maintenance, not capital improvement
+
+**Pattern analysis:**
+- [ ] Compare each operating account balance to prior-year actuals
+- [ ] Investigate any account with a year-over-year increase exceeding 50%
+- [ ] Review any account with multiple large entries in a single month
+
+**BAR test application:**
+- [ ] For each flagged entry, apply the Betterment-Adaptation-Restoration test
+- [ ] For entries near the boundary, determine the unit of property and whether the work constitutes a partial repair or a full restoration
+- [ ] Document the classification decision and rationale
+
+**Reclassification:**
+- [ ] Reclassify confirmed CapEx from operating to capital accounts in the GL
+- [ ] Verify reclassified entries are excluded from the CAM recoverable pool
+- [ ] Document the reclassification with invoice backup for audit trail
+
+## What Happens When You Miss One
+
+A missed CapEx entry does not just cost money in the year it occurs. It creates compounding exposure:
+
+**Year 1:** $120,000 parking lot mill-and-overlay coded to GL 6130 (Parking Maintenance). Flows into CAM pool. Tenants billed their share. No complaints.
+
+**Year 2:** The inflated Year 1 actual becomes the baseline for year-over-year comparisons. The bump looks like it was "just a high expense year." The error is now embedded.
+
+**Year 3:** Tenant exercises audit rights with a 2-year lookback. Auditor pulls invoices over $25,000 in operating accounts. Finds the paving invoice. Scope of work says "mill existing surface to 2-inch depth, install 3-inch asphalt overlay." That is a restoration under the BAR test: capital, not operating.
+
+**Exposure:** The landlord owes a refund of the tenant's pro-rata share of $120,000 for Year 1, plus interest if the lease requires it. If the error inflated the cumulative cap base, the refund calculation cascades into Year 2 as well. A 10% tenant on a $120,000 error is $12,000 in direct refund, before legal costs, audit response time, and the reputational damage of having your reconciliation challenged.
+
+The pre-reconciliation review takes a few hours. The audit defense takes weeks.
+
+## Related Resources
+
+- [CapEx Detection in CAM](/resources/capex-detection-cam) - Automated rules-based CapEx screening
+- [GL Coding Guide](/resources/gl-coding-guide) - Recoverable vs. non-recoverable classification rules
+- [Tenant Audit Defense Playbook](/resources/tenant-audit-defense-playbook) - How to respond when the auditor calls
+- [CAM Pre-Send Checklist](/resources/cam-pre-send-packet-checklist) - Full quality review before statements go out
+
+## Sources
+
+1. [Cornell Legal Information Institute - 26 U.S. Code Section 162](https://www.law.cornell.edu/uscode/text/26/162)
+2. [Cornell Legal Information Institute - 26 U.S. Code Section 263](https://www.law.cornell.edu/uscode/text/26/263)

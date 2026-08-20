@@ -1,0 +1,12 @@
+{
+  "error_type": "structural",
+  "description": "CSV with rows having extra columns",
+  "parseable": true,
+  "expected_behavior": "Parser should ignore extra columns and parse valid rows",
+  "expected_warnings": [
+    "Dropped rows with extra columns"
+  ],
+  "expected_rows": 2,
+  "valid_rows": 2,
+  "invalid_rows": 1
+}

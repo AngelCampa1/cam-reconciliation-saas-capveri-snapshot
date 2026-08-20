@@ -1,0 +1,8 @@
+GL Export Report
+
+Acct,Name,Trans Date,Supplier,Dr,Cr,Bal
+,Some Expense,01/15/2024,Vendor A,1000.00,,
+5100,Taxes,NOT_A_DATE,Vendor B,500.00,,
+5200,Electric,02/15/2024,Vendor C,INVALID,,
+,,,,,,
+5300,Janitorial,03/15/2024,Vendor D,100.00,100.00,

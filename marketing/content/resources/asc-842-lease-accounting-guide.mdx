@@ -1,0 +1,401 @@
+---
+title: "ASC 842 Lease Accounting Guide: Implementation, CAM Treatment, and Disclosures"
+description: "Comprehensive ASC 842 lease accounting guide covering ROU asset recognition, CAM variable payment treatment, practical expedients, year-end true-up entries, and disclosure requirements."
+datePublished: "2026-04-24"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 280
+faq:
+  - q: "What is ASC 842 and what does it require for operating leases?"
+    a: "ASC 842 is the FASB lease accounting standard that replaced ASC 840. Its core requirement: lessees must recognize a right-of-use (ROU) asset and lease liability on the balance sheet for all leases with terms exceeding 12 months, with limited exceptions. For operating leases - which cover virtually all commercial real estate - the income statement shows a single straight-line lease cost. For finance leases (formerly capital leases), you show separate interest expense and amortization. Variable payments like CAM charges are excluded from the balance sheet recognition and expensed as incurred. ASC 842 was effective for public companies for fiscal years beginning after December 15, 2018, and for private companies after December 15, 2021."
+  - q: "How does ASC 842 treat variable CAM charges in commercial leases?"
+    a: "Variable CAM charges - amounts that depend on actual property operating expenses rather than a fixed contractual amount - are excluded from the lease liability and ROU asset calculation under ASC 842-20-30-5. You expense them as they're incurred. Monthly CAM estimates hit the income statement when paid. The year-end reconciliation true-up (whether an additional charge or a credit) is recognized in the period the reconciliation is finalized. The only exception: if your lease specifies a fixed CAM amount (a hard dollar commitment per the contract), that fixed portion gets capitalized into the lease payment stream and affects the liability measurement."
+  - q: "What practical expedients are available under ASC 842?"
+    a: "ASC 842 offers several practical expedients: (1) The transition package of three expedients (not reassessing prior classification, initial direct costs, or existing land easements) - must be elected as a package; (2) Short-term lease exemption - leases with terms of 12 months or less at commencement skip ROU recognition; (3) Lease and non-lease component combination - treat CAM services as part of the lease component; (4) Portfolio approach - apply accounting to a portfolio of similar leases rather than lease by lease; (5) Hindsight - use hindsight to determine lease terms and impairment at transition. Most CRE tenants elect (1), (2), and (4) but not (3) because keeping CAM off the balance sheet is generally preferred."
+  - q: "How do you calculate the incremental borrowing rate for ASC 842?"
+    a: "The IBR is the rate you'd pay to borrow, on a collateralized basis, over the same term in the same currency in a similar economic environment. Practical approaches for CRE tenants: (a) Use the rate on your actual outstanding CRE-collateralized debt of similar maturity if you have it; (b) Build up from risk-free rate (SOFR) plus a credit spread based on your credit quality and the lease term; (c) Use a published reference rate for companies of similar credit quality and industry. The IBR is fixed at commencement and only changes on a reassessment event. Document the methodology and support in your lease file - auditors test this calculation."
+  - q: "What are the ASC 842 disclosure requirements for CRE tenants?"
+    a: "Required quantitative disclosures include: operating lease cost by period, variable lease cost (CAM, etc.) by period, weighted-average remaining lease term, weighted-average discount rate, cash paid for operating leases (classified in operating activities), and the maturity analysis of lease liabilities (undiscounted payments by year for five years plus thereafter, reconciled to the balance sheet). Required qualitative disclosures include: nature of leases, significant assumptions and judgments (IBR methodology), options (renewal, termination, purchase), and restrictions or covenants. Public companies have more granular requirements under Regulation S-K; private companies have some disclosure relief."
+---
+
+<Alert type="info" title="Quick Answer">
+ASC 842 requires all leases over 12 months on the balance sheet as a right-of-use asset and lease liability. Variable CAM charges are excluded from the balance sheet and expensed as incurred. The five key decisions for CRE tenants: lease classification (operating vs finance), IBR methodology, practical expedient elections, fixed vs variable component split for CAM, and year-end true-up cutoff policy.
+</Alert>
+
+## ASC 842 Lease Accounting: Why This Standard Still Trips Up CRE Finance Teams
+
+ASC 842 has been live for years (public companies since 2019, private companies since 2022). But CRE finance teams still struggle with it, specifically because commercial leases have moving parts that do not fit cleanly into the standard's framework: multi-year escalations, variable CAM charges, landlord TI allowances, renewal options that affect the term, and annual reconciliation true-ups that cut across fiscal years.
+
+This guide covers the full implementation for CRE tenants. For a worked example with month-by-month entries, see our [ASC 842 lease accounting example](/resources/asc-842-lease-accounting-example). For the journal entry templates, see [operating lease accounting entries](/resources/operating-lease-accounting-entries).
+
+---
+
+## Part 1: Scope and Classification
+
+### Does This Lease Meet the ASC 842 Definition?
+
+ASC 842 applies when a contract conveys the right to control the use of an **identified asset** for a **period of time** in exchange for **consideration**. For commercial real estate leases, the answer is almost always yes:
+
+- Is the asset identified? Yes (the specific space described in the lease)
+- Does the tenant direct use? Yes (the tenant decides how to use the space within the permitted use)
+- Does the tenant obtain substantially all economic benefits? Yes (during the lease term)
+
+The only common exception: short-term leases (12 months or less at commencement). If you're in a month-to-month holdover, you can skip ROU recognition.
+
+### Operating vs Finance Lease
+
+Apply the five criteria at commencement. For commercial real estate, virtually all leases are operating:
+
+| Criterion | Finance Lease Trigger | CRE Reality |
+|---|---|---|
+| Ownership transfer | Transfers before term end | Almost never in commercial leases |
+| Purchase option | Reasonably certain to exercise | Uncommon in standard office/retail |
+| Economic life | Term ≥ 75% of asset life | 5-10 year lease vs 30+ year building: never |
+| Fair value | PV ≥ 90% of asset fair value | Market-rate leases rarely approach this |
+| Specialized nature | No alternative use for lessor | Standard office/retail: no |
+
+Document the classification conclusion in your lease file with the quantitative support (especially the PV calculation if criterion 4 is close).
+
+For a detailed comparison, see [operating lease vs finance lease](/resources/operating-lease-vs-finance-lease).
+
+---
+
+## Part 2: Practical Expedient Elections
+
+Make these elections once, consistently, for the entire class of underlying assets (i.e., real property).
+
+### The Transition Package (Three-in-One)
+
+Available at adoption only. Elect or skip as a unit:
+1. Don't reassess whether existing contracts are or contain leases
+2. Don't reassess prior lease classification
+3. Don't reassess initial direct costs
+
+**Recommendation:** Elect if you're doing initial adoption. Saves significant work re-examining every historical lease.
+
+### Short-Term Lease Exemption
+
+For leases with a 12-month-or-less term at commencement (and no purchase option reasonably certain to exercise), skip ROU recognition. Payments expense straight to the income statement.
+
+**Watch the definition:** A 2-year lease with a 12-month renewal option is not short-term unless the renewal option is not reasonably certain to be exercised. If you're in a 3-year lease with 18 months remaining and you extend month to month at the end, the holdover period gets evaluated on its own.
+
+### Lease and Non-Lease Component Combination
+
+For real property, you can elect to treat the lease component (the right to use the space) and non-lease components (CAM services) as a single combined unit. The entire payment gets capitalized.
+
+**Why most CRE tenants don't elect this:** CAM amounts can be material. Capitalizing them inflates the ROU asset and lease liability, increasing debt ratios. It also removes flexibility: if you want to dispute a CAM line item, you've already baked the estimate into your balance sheet. Keeping CAM as variable (expensed as incurred) preserves the clean separation.
+
+**Exception:** If your leases have trivial CAM amounts and the administrative burden of separating components is real, the expedient can simplify things.
+
+### Portfolio Approach
+
+Apply lease accounting to a portfolio of similar leases (similar lease terms, asset types, and IBRs) rather than lease by lease. Useful for companies with 50+ standardized retail leases. Must document portfolio characteristics and assess materiality.
+
+---
+
+## Part 3: Initial Measurement
+
+### The Lease Term Determination
+
+The lease term is the non-cancellable period plus:
+- Option periods the lessee is **reasonably certain** to exercise
+- Periods covered by landlord termination options the lessee is reasonably certain to not permit
+
+"Reasonably certain" is a high threshold, significantly higher than "more likely than not." In practice, include renewal periods only when economic incentives make non-renewal unlikely (major leasehold improvements with value tied to remaining term, no comparable alternative space, below-market rent).
+
+**The CAM implication:** Including a renewal option in the lease term extends the payment stream, increases the ROU asset and lease liability, and also extends the period over which you'd estimate variable CAM. But since CAM is variable, it doesn't flow through the liability calculation. The lease term determination only affects the fixed rent stream.
+
+### Incremental Borrowing Rate Methodology
+
+ASC 842 prefers the rate implicit in the lease (the lessor's implicit rate). For CRE leases, this rate is almost never determinable from the tenant's perspective. You'd need to know the lessor's unguaranteed residual value assumption. Use the IBR.
+
+**IBR build-up approach:**
+
+1. Start with the risk-free rate for the lease term (current SOFR for a 5-year lease: approximately 4.0–4.5% as of early 2026)
+2. Add a credit spread based on your company's creditworthiness (investment grade corporate: +100–200 bps; sub-investment grade: wider)
+3. Adjust for collateralization (secured debt rates, since the lease is effectively collateralized by the asset)
+
+**Practical example:**
+- 5-year lease
+- 5-year SOFR: 4.2%
+- Credit spread (BB-rated company): +200 bps
+- IBR: **6.2%**
+
+Document the IBR calculation in a memo. Auditors test this; they want to see the support, not just the rate.
+
+### Fixed vs Variable Payment Split
+
+This is the critical CAM decision.
+
+**Include in lease liability (fixed):**
+- Base rent per the lease agreement
+- CAM amounts specified as a fixed dollar amount in the lease (rare)
+- Lease incentive repayments (if structured as fixed payments)
+- In-substance fixed payments (amounts labeled variable but with no genuine variability)
+
+**Exclude from lease liability (variable):**
+- Estimated CAM based on annual actual operating costs
+- Property tax pass-throughs based on actual tax bills
+- Insurance pass-throughs based on actual premiums
+- Utilities billed based on actual consumption
+- Year-end reconciliation true-ups
+
+**Red flag:** Some leases state "estimated CAM of $X per month, subject to annual reconciliation." If the lease language makes clear the amount can go up or down based on actual costs, it's variable. If it reads "CAM contribution of $X per month, non-refundable," that's fixed.
+
+### Lease Liability Calculation
+
+Present value of all future fixed lease payments, discounted monthly using the IBR.
+
+For a 60-month lease with annual escalations:
+
+```python
+# Monthly payment schedule
+payments = (
+    [6,300] * 12 +   # Year 1
+    [6,489] * 12 +   # Year 2 (+3%)
+    [6,684] * 12 +   # Year 3
+    [6,884] * 12 +   # Year 4
+    [7,091] * 12     # Year 5
+)
+
+monthly_rate = 0.062 / 12  # 6.2% IBR
+
+# Standard PV calculation
+pv = sum(p / (1 + monthly_rate) ** (i + 1) for i, p in enumerate(payments))
+# Result: approximately $346,200
+```
+
+### ROU Asset Calculation
+
+```
+Initial Lease Liability:          $346,200
++ Initial Direct Costs:               $0
++ Prepaid Lease Payments:             $0
+− Lease Incentives Received:     $35,000   (TIA received before commencement)
+= Initial ROU Asset:              $311,200
+```
+
+---
+
+## Part 4: Subsequent Measurement
+
+### Monthly Accounting Cycle (Operating Lease)
+
+Each period:
+1. **Interest accrual**: Ending liability balance × monthly IBR → debit lease cost, credit lease liability
+2. **ROU asset amortization**: Straight-line total cost minus interest accrual → debit lease cost, credit ROU asset
+3. **Cash payment**: Actual period payment → debit lease liability, credit cash
+
+The straight-line cost is: total undiscounted payments ÷ lease term in months.
+
+See [operating lease accounting entries](/resources/operating-lease-accounting-entries) for the full entry templates with worked examples.
+
+### Variable CAM - Monthly Estimates
+
+```
+DR  Variable Lease Cost / CAM Expense   [monthly estimate]
+  CR  Cash                                               [monthly estimate]
+```
+
+No balance sheet impact. No lease liability adjustment.
+
+### Variable CAM - Year-End Accrual
+
+Accrue the estimated true-up at December 31 based on available operating cost data:
+
+```
+DR  Variable Lease Cost / CAM Expense   [estimated true-up]
+  CR  CAM Accrual (Accrued Liabilities)                  [estimated true-up]
+```
+
+### Variable CAM - True-Up Settlement
+
+When the landlord's reconciliation arrives (typically 60–90 days after year-end):
+
+```
+[Reverse December accrual]
+DR  CAM Accrual                         [accrued amount]
+  CR  Variable Lease Cost                               [accrued amount]
+
+[Book actual true-up]
+DR  Variable Lease Cost                 [actual true-up]
+  CR  Accounts Payable                                  [actual true-up]
+```
+
+The variance between accrual and actual hits Q1. See [CAM true-up accounting](/resources/cam-true-up) for the full policy template.
+
+---
+
+## Part 5: Reassessment and Modification
+
+### When to Reassess
+
+Reassess the lease term and IBR when a significant event occurs:
+- Tenant or landlord exercises or doesn't exercise an option contrary to what was previously assumed
+- A significant economic event affecting the likelihood of option exercise
+- A lease modification that's not a separate contract
+
+### Modifications
+
+**Separate contract test:** Does the modification grant an additional right not in the original lease, and is the price commensurate with the standalone value? If yes, it's a separate contract. Account for it independently.
+
+If not a separate contract:
+- Remeasure lease liability at revised payments using a revised discount rate
+- Adjust ROU asset by the same amount as the liability change
+- No P&L impact at modification date
+
+**Space reduction modification:**
+- Remeasure the remaining liability at revised terms
+- Derecognize the proportionate ROU asset
+- Recognize gain or loss for the difference
+
+---
+
+## Part 6: Impairment Testing
+
+ROU assets are subject to the long-lived asset impairment guidance in ASC 360. Triggering events include:
+- Decision to exit the space before term end
+- Significant adverse change in the use of the space
+- Significant adverse change in the business climate
+
+If impairment indicators exist, test recoverability. The carrying amount of the ROU asset is compared to the undiscounted future cash flows expected from the use and eventual disposition. If carrying amount exceeds those, measure impairment as the excess over fair value.
+
+**CRE context:** Remote-work-driven space reductions post-COVID created a wave of ROU asset impairments. If you've subleased part of your space or are not using it, test for impairment at each reporting date.
+
+---
+
+## Part 7: CAM Reconciliation Best Practices Under ASC 842
+
+The annual [CAM reconciliation](/resources/common-area-maintenance-reconciliation-explained) process is more structured under ASC 842 because you've already documented the fixed vs variable split. Use that infrastructure:
+
+**Review the reconciliation before paying:**
+- Check [pro-rata share calculation](/resources/pro-rata-share-calculation): is the denominator the full leasable area per your lease?
+- Identify [controllable vs non-controllable expenses](/resources/controllable-vs-non-controllable-expenses): are controllable expenses subject to a cap in your lease?
+- Verify [gross-up calculation](/resources/cam-gross-up-calculation-guide): was the occupancy rate applied correctly?
+- Check [CAM caps](/resources/cam-cap-types): if you have an annual cap on controllable expense increases, was it applied?
+
+**Document the review:**
+- Memo confirming variable treatment (no balance sheet adjustment required)
+- Entry memo for the true-up with period reference
+- Correspondence with landlord if any items are disputed
+
+---
+
+## Part 8: Disclosure Requirements
+
+### Quantitative Disclosures (Annual)
+
+Under ASC 842-20-50, lessees must disclose:
+
+| Disclosure | Operating Lease |
+|---|---|
+| Lease cost components | Operating + variable + short-term + sublease income |
+| Cash paid (operating activities) | Fixed payments + variable payments |
+| ROU assets obtained in exchange for new liabilities | Yes |
+| Weighted-average remaining term | Yes |
+| Weighted-average discount rate | Yes |
+| Lease liability maturity schedule | 5 years + thereafter |
+
+**Sample disclosure format:**
+
+> For the year ended December 31, 2026:
+> Operating lease cost: $80,268
+> Variable lease cost: $21,100
+> Total lease cost: $101,368
+>
+> Cash paid for amounts included in lease liabilities: $94,500
+> Weighted-average remaining lease term: 4.0 years
+> Weighted-average discount rate: 6.5%
+
+### Maturity Analysis
+
+The maturity schedule shows undiscounted future minimum payments by year:
+
+```
+2027:   $77,868
+2028:   $80,204
+2029:   $82,610
+2030:   $85,089
+Total:  $325,771
+Less: Imputed interest: $(35,674)
+Present value: $290,097
+```
+
+### Qualitative Disclosures
+
+Include description of:
+- Nature of leases
+- Renewal and termination options and their significance
+- Significant assumptions (IBR methodology, lease term determination rationale)
+- Variable payment structures
+- Residual value guarantees
+- Restrictions or covenants
+
+---
+
+## Part 9: IFRS 16 vs ASC 842: Key Differences for Multi-Jurisdiction Teams
+
+| Aspect | ASC 842 | IFRS 16 |
+|---|---|---|
+| Lessee model | Dual (operating + finance) | Single model (all leases = finance-type) |
+| Income statement (operating) | Single lease cost (flat) | Depreciation + interest (front-loaded) |
+| Variable CAM | Expensed as incurred | Expensed as incurred |
+| Short-term exemption | ≤12 months | ≤12 months |
+| Low-value exemption | No | Yes (≤ ~$5,000 asset value) |
+| Lessor accounting | Similar to ASC 840 | Different from IFRS lessee model |
+
+The EBITDA impact: ASC 842 operating leases preserve the old operating expense treatment on the income statement. IFRS 16 moves all lease costs below EBITDA (as depreciation + interest), which inflates EBITDA. For companies reporting under both standards, this creates a material reconciling difference that needs clear disclosure.
+
+For the full GAAP treatment, see our [US GAAP lease accounting guide](/resources/us-gaap-lease-accounting-guide).
+
+---
+
+## Part 10: Implementation Checklist for CRE Tenants
+
+**Phase 1 - Inventory (2–4 weeks)**
+- [ ] Pull all executed leases from file
+- [ ] Identify lease term, payment escalations, options, and CAM structures
+- [ ] Classify each lease (operating vs finance)
+- [ ] Identify any leases within scope of short-term exemption
+
+**Phase 2 - IBR Determination (1–2 weeks)**
+- [ ] Document IBR methodology
+- [ ] Calculate IBR for each lease tenor represented in portfolio
+- [ ] Get CFO/Treasury sign-off on methodology
+
+**Phase 3 - Practical Expedient Elections**
+- [ ] Elect transition package (if adopting for the first time)
+- [ ] Elect short-term lease exemption
+- [ ] Decide on lease/non-lease component combination (recommend: do not elect for CRE)
+- [ ] Decide on portfolio approach
+
+**Phase 4 - Initial Measurement**
+- [ ] Build lease amortization schedules (ROU asset and lease liability)
+- [ ] Document fixed vs variable payment split for each lease
+- [ ] Record commencement entries
+
+**Phase 5 - Ongoing Processes**
+- [ ] Set up monthly journal entry workflow
+- [ ] Establish CAM true-up accrual policy
+- [ ] Set up disclosure template
+- [ ] Document reassessment triggers
+
+---
+
+## Related Resources
+
+- [Operating Lease vs Finance Lease](/resources/operating-lease-vs-finance-lease) - classification comparison
+- [Operating Lease Accounting Entries](/resources/operating-lease-accounting-entries) - journal entry templates
+- [ASC 842 Lease Accounting Example](/resources/asc-842-lease-accounting-example) - full worked example
+- [Finance Lease Accounting ASC 842](/resources/finance-lease-accounting-asc-842) - finance lease mechanics
+- [US GAAP Lease Accounting Guide](/resources/us-gaap-lease-accounting-guide) - GAAP vs IFRS comparison
+- [Lease Accounting Standards ASC 842](/blog/lease-accounting-standards-asc-842) - how ASC 842 changed CAM treatment
+- [CAM Reconciliation Software Guide 2026](/blog/cam-reconciliation-software-guide-2026) - tools for managing the workflow
+- [CAM Gross-Up Calculator](/tools/cam-gross-up-calculator) - verify landlord's gross-up
+- [CAM Cap Calculator](/tools/cam-cap-calculator) - check if caps were applied correctly
+
+## Sources
+
+1. [Deloitte DART - Roadmap: Leases](https://dart.deloitte.com/USDART/home/publications/roadmap/leasing?id=us%3A2el%3A3dp%3Armleases%3Aeng%3Aaud%3A121823%3Aiaspl)
+2. [Deloitte - Lease Accounting Guide: Roadmap for ASC 842](https://www.deloitte.com/us/en/services/audit-assurance/articles/roadmap-to-applying-the-new-leasing-standard.html?icid=top_roadmap-to-applying-the-new-leasing-standard)

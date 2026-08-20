@@ -1,0 +1,12 @@
+{
+  "error_type": "structural",
+  "description": "CSV with headers but no data rows",
+  "parseable": true,
+  "expected_behavior": "Parser should successfully parse but return empty DataFrame",
+  "expected_warnings": [
+    "File contains only headers, no data rows"
+  ],
+  "expected_rows": 0,
+  "valid_rows": 0,
+  "invalid_rows": 0
+}

@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CapVeri Executive Brochure</title>
+  <style>
+    :root {
+      --blue: #304476;
+      --blue-ink: #0f172a;
+      --blue-soft: #e9eef8;
+      --gold: #f59e0b;
+      --gold-soft: #fef3c7;
+      --green: #16a34a;
+      --slate: #64748b;
+      --surface: #f8fafc;
+      --border: #dbe3ee;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--blue-ink);
+      background: #eef2f7;
+      font-family: -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto,"Helvetica Neue", Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.45;
+    }
+
+    @page {
+      size: Letter;
+      margin: 0;
+    }
+
+    .page {
+      position: relative;
+      width: 8.5in;
+      height: 11in;
+      margin: 0 auto;
+      overflow: hidden;
+      background: var(--white);
+      page-break-after: always;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+    }
+
+    .frame {
+      padding: 0.54in 0.58in 0.5in;
+      height: 100%;
+    }
+
+    .cover {
+      color: var(--blue-ink);
+      background:
+        linear-gradient(180deg, #ffffff 0%, #ffffff 66%, #f8fafc 100%);
+    }
+
+    .brandbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 0.6in;
+    }
+
+    .logo {
+      width: 174px;
+      height: auto;
+      display: block;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 12px;
+      color: var(--blue);
+      background: white;
+      font-size: 8.7pt;
+      font-weight: 650;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #067a76;
+      box-shadow: 0 0 0 4px rgba(6, 122, 118, 0.14);
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 6.9in;
+      margin-top: 0.22in;
+      font-size: 39pt;
+      line-height: 0.98;
+      letter-spacing: 0;
+      font-weight: 800;
+      color: var(--blue);
+    }
+
+    .cover-subtitle {
+      max-width: 6.5in;
+      margin-top: 0.24in;
+      color: #334155;
+      font-size: 14pt;
+      line-height: 1.38;
+    }
+
+    .cover-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 0.54in;
+    }
+
+    .metric {
+      min-height: 1.04in;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--blue);
+      font-size: 17pt;
+      line-height: 1.05;
+      margin-bottom: 7px;
+    }
+
+    .metric span {
+      color: #475569;
+      font-size: 8.9pt;
+    }
+
+    .cover-bottom {
+      position: absolute;
+      left: 0.58in;
+      right: 0.58in;
+      bottom: 0.5in;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 0.25in;
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.78in;
+      border-radius: 7px;
+      padding: 12px 18px;
+      color: white;
+      background: var(--blue);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .cover-note {
+      max-width: 4.15in;
+      color: var(--slate);
+      font-size: 8.8pt;
+    }
+
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.3in;
+      color: var(--slate);
+      font-size: 8.5pt;
+      font-weight: 650;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .topline img {
+      width: 128px;
+      height: auto;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: var(--blue-deep);
+    }
+
+    h2 {
+      color: var(--blue);
+      font-size: 25pt;
+      line-height: 1.05;
+      margin-bottom: 0.12in;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 6.75in;
+      color: #334155;
+      font-size: 12.2pt;
+      line-height: 1.45;
+      margin-bottom: 0.28in;
+    }
+
+    .section-label {
+      color: var(--blue);
+      font-size: 8.5pt;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: white;
+      padding: 15px;
+    }
+
+    .card.blue {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    .card.gold {
+      background: var(--gold-soft);
+      border-color: #f7d78b;
+    }
+
+    .card h3 {
+      color: var(--blue);
+      font-size: 12.2pt;
+      line-height: 1.2;
+      margin-bottom: 7px;
+    }
+
+    .card.blue h3 {
+      color: white;
+    }
+
+    .card p {
+      color: #475569;
+      font-size: 9.3pt;
+    }
+
+    .card.blue p {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .role {
+      min-height: 1.52in;
+      padding: 14px;
+      border-radius: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+
+    .role strong {
+      display: block;
+      color: var(--blue);
+      font-size: 12pt;
+      margin-bottom: 5px;
+    }
+
+    .role span {
+      display: block;
+      color: var(--slate);
+      font-size: 8.7pt;
+      font-weight: 700;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 17px;
+    }
+
+    li {
+      margin: 0 0 5px;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    .step {
+      position: relative;
+      min-height: 1.46in;
+      padding: 14px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: white;
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      color: white;
+      background: var(--blue);
+      font-weight: 800;
+      font-size: 8.8pt;
+      margin-bottom: 9px;
+    }
+
+    .step strong {
+      display: block;
+      color: var(--blue-ink);
+      font-size: 10.1pt;
+      margin-bottom: 5px;
+    }
+
+    .step p {
+      color: var(--slate);
+      font-size: 8.6pt;
+      line-height: 1.35;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      margin-top: 12px;
+      font-size: 8.5pt;
+    }
+
+    th {
+      padding: 10px 8px;
+      color: white;
+      background: var(--blue);
+      text-align: left;
+      vertical-align: middle;
+      font-weight: 800;
+    }
+
+    th:first-child {
+      border-top-left-radius: 6px;
+    }
+
+    th:last-child {
+      border-top-right-radius: 6px;
+    }
+
+    td {
+      padding: 9px 8px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+      color: #334155;
+    }
+
+    tr:nth-child(even) td {
+      background: var(--surface);
+    }
+
+    .price {
+      color: var(--blue);
+      font-size: 15pt;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .fit {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 3px 8px;
+      color: #17432a;
+      background: #dcfce7;
+      font-size: 7.7pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 5px;
+    }
+
+    .best {
+      color: #7c4a03;
+      background: var(--gold-soft);
+    }
+
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 16px 0 18px;
+    }
+
+    .coverage {
+      min-height: 1.05in;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .coverage strong {
+      display: block;
+      color: var(--blue);
+      font-size: 10.4pt;
+      margin-bottom: 5px;
+    }
+
+    .coverage span {
+      display: block;
+      color: #475569;
+      font-size: 8.25pt;
+      line-height: 1.34;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .plan-card {
+      display: grid;
+      grid-template-columns: 1.26in 1fr;
+      min-height: 2.1in;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: white;
+    }
+
+    .plan-side {
+      padding: 14px 12px;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+    }
+
+    .plan-side strong {
+      display: block;
+      color: var(--blue-ink);
+      font-size: 12pt;
+      margin-top: 7px;
+    }
+
+    .plan-main {
+      padding: 14px 14px 13px;
+    }
+
+    .plan-price {
+      color: var(--blue);
+      font-size: 20pt;
+      line-height: 1;
+      font-weight: 850;
+      margin-bottom: 3px;
+    }
+
+    .plan-annual {
+      display: block;
+      color: var(--slate);
+      font-size: 8.4pt;
+      margin-bottom: 10px;
+    }
+
+    .plan-fit {
+      color: #334155;
+      font-size: 8.6pt;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .plan-features {
+      color: #475569;
+      font-size: 8.1pt;
+      line-height: 1.34;
+    }
+
+    .comparison td:first-child,
+    .comparison th:first-child {
+      width: 1.28in;
+      font-weight: 800;
+      color: var(--blue);
+    }
+
+    .comparison td:last-child {
+      background: #fff8e1;
+      border-color: #f7d78b;
+    }
+
+    .decision-band {
+      margin-top: 18px;
+      padding: 17px 18px;
+      border-radius: 8px;
+      color: white;
+      background: linear-gradient(135deg, var(--blue-deep), var(--blue));
+    }
+
+    .decision-band h3 {
+      color: white;
+      font-size: 14pt;
+      margin-bottom: 6px;
+    }
+
+    .decision-band p {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 9.5pt;
+    }
+
+    .footer {
+      position: absolute;
+      left: 0.58in;
+      right: 0.58in;
+      bottom: 0.26in;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: #94a3b8;
+      font-size: 7.4pt;
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+    }
+
+    .sources {
+      margin-top: 14px;
+      color: #64748b;
+      font-size: 7.5pt;
+      line-height: 1.35;
+    }
+
+    .page-number {
+      color: #64748b;
+      font-weight: 750;
+    }
+
+    .mini {
+      color: var(--slate);
+      font-size: 8.3pt;
+      line-height: 1.35;
+    }
+
+    .nowrap {
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <section class="page cover">
+    <div class="frame">
+      <div class="brandbar">
+        <img class="logo" src="../../marketing/public/icons/logo.svg" alt="CapVeri">
+        <div class="eyebrow"><span class="dot"></span> Executive Decision Brief</div>
+      </div>
+
+      <div class="eyebrow"><span class="dot"></span> CRE FinOps control platform</div>
+      <h1>Find, verify, and defend every recoverable dollar.</h1>
+      <p class="cover-subtitle">CapVeri helps commercial landlords control the full CAM and lease-recovery workflow: reconciliation, leakage detection, cap enforcement, lease extraction, GL analysis, portfolio exceptions, compliance support, and tenant dispute defense.</p>
+
+      <div class="cover-grid">
+        <div class="metric">
+          <strong>Revenue recovery</strong>
+          <span>Find leakage from CAM pools, caps, admin fees, pro-rata shares, base years, gross-up logic, and billing variances.</span>
+        </div>
+        <div class="metric">
+          <strong>Portfolio controls</strong>
+          <span>Track recurring close, anomalies, cap banks, NOI impact, HCAD tax protest normalization, warranty and COI exposure.</span>
+        </div>
+        <div class="metric">
+          <strong>Audit-ready defense</strong>
+          <span>Produce reports, exports, tenant portal workflows, compliance packets, demand letters, and immutable audit trails.</span>
+        </div>
+      </div>
+
+      <div class="cover-bottom">
+        <p class="cover-note">Built for property controllers, asset managers, CFOs, CEOs, and technical leaders who need faster close, cleaner evidence, and fewer spreadsheet-dependent revenue controls.</p>
+        <a class="cta" href="https://www.capveri.com/auth/register">Start Free Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="frame">
+      <div class="topline">
+        <img src="../../marketing/public/email-logo.png" alt="CapVeri">
+        <span>Problem and buying case</span>
+      </div>
+
+      <h2>The core problem: recoverable revenue is trapped in fragile workflows.</h2>
+      <p class="lead">Most commercial landlords already have the data. The failure point is the control layer around it: amended lease terms, expense pools, occupancy denominators, cap logic, base-year treatment, compliance rules, dispute records, and spreadsheet formulas drift away from what the lease actually allows.</p>
+
+      <div class="two-col">
+        <div class="card gold">
+          <div class="section-label">What breaks</div>
+          <ul>
+            <li>Gross-up factors applied to fixed expenses that should not be grossed up.</li>
+            <li>Caps calculated from the wrong base year, cap type, or amendment version.</li>
+            <li>Pro-rata shares that miss mid-year move-ins, expansions, contractions, or denominator changes.</li>
+            <li>Errors that compound year after year because old workbook logic is copied forward.</li>
+            <li>GL anomalies, CapEx screening, tax normalization, compliance exports, and tenant audit packets handled manually after risk appears.</li>
+          </ul>
+        </div>
+        <div class="card blue">
+          <div class="section-label" style="color: rgba(255,255,255,.72)">What CapVeri changes</div>
+          <h3>A control layer for landlord revenue operations.</h3>
+          <p>CapVeri sits beside the existing property management system and turns exports into verified findings, portfolio exceptions, defensible calculations, compliance support, and evidence that finance, operations, and legal teams can use.</p>
+        </div>
+      </div>
+
+      <div class="role-grid">
+        <div class="role">
+          <span>CFO</span>
+          <strong>Recover NOI and reduce dispute exposure.</strong>
+          <p class="mini">Model annual benefit from leakage recovery, cleaner close, tax normalization, cap controls, and fewer escalated disputes.</p>
+        </div>
+        <div class="role">
+          <span>CTO</span>
+          <strong>Approve without an integration project.</strong>
+          <p class="mini">No direct ERP API. No replacement of core accounting systems. Financial math is deterministic; AI is limited to extraction workflows with human review.</p>
+        </div>
+        <div class="role">
+          <span>CEO</span>
+          <strong>Turn CRE FinOps from seasonal cleanup into operating leverage.</strong>
+          <p class="mini">Faster answers, fewer surprises, and a credible path from first audit to portfolio-wide revenue control.</p>
+        </div>
+      </div>
+
+      <div class="decision-band">
+        <h3>The practical decision</h3>
+        <p>If one building is clean, you have evidence that your process is sound. If CapVeri finds leakage or logic errors, you have a quantified business case for rollout.</p>
+      </div>
+    </div>
+    <div class="footer"><span>CapVeri executive brochure</span><span class="page-number">2</span></div>
+  </section>
+
+  <section class="page">
+    <div class="frame">
+      <div class="topline">
+        <img src="../../marketing/public/email-logo.png" alt="CapVeri">
+        <span>How it works</span>
+      </div>
+
+      <h2>One workflow for recovery, exceptions, compliance, and defense.</h2>
+      <p class="lead">CapVeri is intentionally designed as an anti-integration workflow. Your team uses the reports they already pull for close, CAM season, tax review, or tenant support, then CapVeri validates the logic and turns exceptions into action.</p>
+
+      <div class="process">
+        <div class="step">
+          <div class="step-num">1</div>
+          <strong>Export</strong>
+          <p>Pull GL, rent roll, recovery, lease, or PDF support from Yardi, MRI, RealPage, AppFolio, or another system.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <strong>Upload</strong>
+          <p>CapVeri parses CSV, Excel, and PDF files, including optimized workflows for common CRE exports.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <strong>Verify</strong>
+          <p>The engine checks lease math, leakage, caps, gross-up, pro-rata shares, GL anomalies, CapEx risk, and portfolio trends.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <strong>Defend</strong>
+          <p>Finalize work with snapshots, reports, exports, compliance files, demand letters, and dispute-ready evidence packets.</p>
+        </div>
+      </div>
+
+      <div class="section-label">What CapVeri covers</div>
+      <div class="coverage-grid">
+        <div class="coverage">
+          <strong>CAM reconciliation</strong>
+          <span>Gross-up, base years, expense pools, pro-rata shares, admin fees, and tenant-level summaries.</span>
+        </div>
+        <div class="coverage">
+          <strong>Leakage and anomaly detection</strong>
+          <span>Portfolio dashboards, year-over-year trends, variance alerts, NOI impact, and actual-vs-billed gaps.</span>
+        </div>
+        <div class="coverage">
+          <strong>Lease and cap controls</strong>
+          <span>Lease versioning, amendments, cumulative cap bank tracking, AI lease extraction, and human review.</span>
+        </div>
+        <div class="coverage">
+          <strong>GL and CapEx screening</strong>
+          <span>AI-assisted GL review, CapEx flags, expense classification checks, and exportable support.</span>
+        </div>
+        <div class="coverage">
+          <strong>Tax, warranty, and COI operations</strong>
+          <span>HCAD tax protest normalization, warranty tracking, COI expiration tracking, and related exception workflows.</span>
+        </div>
+        <div class="coverage">
+          <strong>Disputes and compliance</strong>
+          <span>Tenant portal, dispute trails, SB 1103 export, demand letters, audit defense packets, and immutable snapshots.</span>
+        </div>
+      </div>
+
+      <div class="decision-band">
+        <h3>Technology posture</h3>
+        <p>No ERP replacement, no direct API dependency, deterministic financial math, human-reviewed extraction, organization-scoped controls, and exportable evidence for every finalized workflow.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Architecture: anti-integration by design</span><span class="page-number">3</span></div>
+  </section>
+
+  <section class="page">
+    <div class="frame">
+      <div class="topline">
+        <img src="../../marketing/public/email-logo.png" alt="CapVeri">
+        <span>Plans and pricing</span>
+      </div>
+
+      <h2>Start with Reconcile. Scale by rentable unit count.</h2>
+      <p class="lead">Reconcile includes a 30-day free trial with no credit card required. Pricing below reflects 80OFF limited offer pricing and current list prices.</p>
+
+      <div class="plans-grid">
+        <div class="plan-card">
+          <div class="plan-side">
+            <span class="fit">Reconcile</span>
+            <strong>Reconcile</strong>
+          </div>
+          <div class="plan-main">
+            <div class="plan-price">$998/yr</div>
+            <span class="plan-annual">$998/year with 80OFF - $4,990/year list for up to 25 rentable units</span>
+            <div class="plan-fit">26-150 units: $179 per extra unit/year; 151-500: $169; 501-2500: $159; 2501+: $149</div>
+            <div class="plan-features">GL import, CAM reconciliation, leakage summary, expense pools, lease versioning, rent roll upload, summaries, CSV exports, portfolio controls, tenant workflows, AI-assisted review, and unlimited team members.</div>
+          </div>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top: 18px">
+        <div class="card">
+          <div class="section-label">Recommended path</div>
+          <h3>Run the free audit first.</h3>
+          <p>Use one building to validate the finding rate, data quality, operator fit, and internal business case. Then select the rentable unit count that matches the portfolio before adding billing details.</p>
+        </div>
+        <div class="card gold">
+          <div class="section-label">ROI frame</div>
+          <h3>Annual benefit = recovery + control value + dispute avoidance.</h3>
+          <p>For CFO review, model recoverable pool x leakage rate x capture rate, then add avoided escalation cost and operational control value from cleaner documentation, faster exception review, and stronger compliance records.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>Pricing source: marketing/public/pricing.md, updated for 80OFF</span><span class="page-number">4</span></div>
+  </section>
+
+  <section class="page">
+    <div class="frame">
+      <div class="topline">
+        <img src="../../marketing/public/email-logo.png" alt="CapVeri">
+        <span>Competitive comparison</span>
+      </div>
+
+      <h2>CapVeri wins by verifying the systems you already use.</h2>
+      <p class="lead">The market is full of systems that store property data, run accounting, manage leases, or support accounting teams. CapVeri is narrower and sharper: an independent CRE FinOps control layer without requiring a platform replacement.</p>
+
+      <table class="comparison">
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>What they are good at</th>
+            <th>Where decisions stall</th>
+            <th>Why CapVeri wins</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Yardi, MRI, RealPage</td>
+            <td>Core property management, accounting, leasing, and broad operational workflows.</td>
+            <td>CAM logic depends on configuration quality, staff knowledge, and module setup. Replacing or extending the system can become a long IT/vendor project.</td>
+            <td>Keep the ERP. CapVeri independently audits exports, catches drift, manages exceptions, and produces traceable findings without API integration.</td>
+          </tr>
+          <tr>
+            <td>Spreadsheets</td>
+            <td>Flexible, familiar, and fast for one-off analysis.</td>
+            <td>Formula drift, weak version control, hidden workbook assumptions, and fragile handoffs when staff changes.</td>
+            <td>CapVeri preserves operator speed while adding consistent calculation logic, audit trails, snapshots, portfolio visibility, and repeatable exception workflows.</td>
+          </tr>
+          <tr>
+            <td>Consultants and BPO</td>
+            <td>Useful for complex cleanups, historical reviews, and outsourced accounting capacity.</td>
+            <td>Expensive to repeat, hard to scale across every building every year, and dependent on external availability.</td>
+            <td>CapVeri turns recurring checks into software. Use consultants for exceptions, not for every routine reconciliation, variance review, or defense packet.</td>
+          </tr>
+          <tr>
+            <td>Lease accounting platforms</td>
+            <td>Centralize lease records and support accounting compliance workflows.</td>
+            <td>Often not purpose-built for landlord-side CAM leakage, gross-up, cap bank, pro-rata, and tenant dispute packet workflows.</td>
+            <td>CapVeri focuses on landlord recovery accuracy, operational exceptions, tenant evidence, and compliance support, not general lease accounting alone.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="three-col" style="margin-top: 18px">
+        <div class="card">
+          <h3>Positioning</h3>
+          <p>Not an ERP. Not another spreadsheet. Not a tenant-auditor tool. CapVeri is the landlord's control layer for CRE revenue accuracy.</p>
+        </div>
+        <div class="card">
+          <h3>Proof mechanism</h3>
+          <p>The product creates trust by showing inputs, formulas, exceptions, finalized snapshots, and exportable support.</p>
+        </div>
+        <div class="card">
+          <h3>Switching logic</h3>
+          <p>The first audit removes buying anxiety. Prospects do not need to migrate systems to see whether the value exists.</p>
+        </div>
+      </div>
+
+      <p class="sources">Source checks: official pages from Yardi, MRI, RealPage, and Visual Lease support the category comparison. CapVeri is positioned as the landlord-side CRE FinOps control layer, not a replacement property management system.</p>
+    </div>
+    <div class="footer"><span>Competitive claim standard: compare category fit, workflow, and implementation burden</span><span class="page-number">5</span></div>
+  </section>
+
+  <section class="page">
+    <div class="frame">
+      <div class="topline">
+        <img src="../../marketing/public/email-logo.png" alt="CapVeri">
+        <span>Decision checklist</span>
+      </div>
+
+      <h2>What a leadership team needs to approve CapVeri.</h2>
+      <p class="lead">The safest buying motion is measurable: pick one representative building, run the audit, review the output with finance and operations, then approve rollout based on findings, exception coverage, and control value.</p>
+
+      <div class="two-col">
+        <div>
+          <div class="section-label">Pilot success criteria</div>
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 1.45in">Criterion</th>
+                <th>Executive question</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Data fit</td>
+                <td>Can our team produce the required exports without IT or vendor tickets?</td>
+              </tr>
+              <tr>
+                <td>Finding quality</td>
+                <td>Are the flagged issues material, explainable, and tied to lease logic?</td>
+              </tr>
+              <tr>
+                <td>Operator workflow</td>
+                <td>Can property accounting use this during CAM season without adding complexity?</td>
+              </tr>
+              <tr>
+                <td>Evidence quality</td>
+                <td>Would we be comfortable sending the support to a tenant, auditor, or attorney?</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <div class="section-label">Objections answered</div>
+          <div class="card">
+            <h3>"We already use Yardi/MRI."</h3>
+            <p>Good. CapVeri audits exported outputs; it does not require replacing your source system.</p>
+          </div>
+          <div class="card" style="margin-top: 10px">
+            <h3>"Spreadsheets work fine."</h3>
+            <p>Run one building free. If the findings are clean, you lose nothing and gain confidence.</p>
+          </div>
+          <div class="card" style="margin-top: 10px">
+            <h3>"How do we trust the math?"</h3>
+            <p>Financial calculations are deterministic and traceable. AI does not perform committed money math.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="decision-band" style="margin-top: 20px">
+        <h3>Recommended next step: Start Free Audit</h3>
+        <p>Choose one representative property, upload existing exports, and review the finding packet. If CapVeri identifies recoverable leakage, exception risk, compliance exposure, or control gaps, use that packet as the internal business case for the right plan.</p>
+      </div>
+
+      <div class="three-col" style="margin-top: 16px">
+        <div class="card">
+          <h3>For finance</h3>
+          <p>Quantified leakage, NOI impact, cap bank logic, tax normalization, and audit-ready support.</p>
+        </div>
+        <div class="card">
+          <h3>For operations</h3>
+          <p>Repeatable reconciliation, anomaly, lease, warranty, COI, and dispute workflows that fit current export habits.</p>
+        </div>
+        <div class="card">
+          <h3>For technology</h3>
+          <p>No ERP replacement, no direct API dependency, and clear data-control posture.</p>
+        </div>
+      </div>
+
+      <p class="sources">Prepared as executive-facing sales collateral for CapVeri. Public claims use current repository pricing and documented CapVeri messaging. Monetary ROI examples should be modeled with prospect-specific portfolio data before proposal use. Contact: https://www.capveri.com</p>
+    </div>
+    <div class="footer"><span>CapVeri - CRE FinOps control platform</span><span class="page-number">6</span></div>
+  </section>
+</body>
+</html>

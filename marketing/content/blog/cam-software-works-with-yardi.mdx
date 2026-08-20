@@ -1,0 +1,122 @@
+---
+title: "CAM Software That Works With Yardi (No API Required)"
+description: "IT Director-friendly guide to CAM reconciliation software that works with Yardi via CSV export. No API credentials, no VPN, no implementation project."
+excerpt: "Most software that claims to 'integrate with Yardi' requires API credentials, a VPN connection, and an implementation project. There's a better way."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "Does CapVeri require API access to Yardi?"
+    a: "No. CapVeri connects to Yardi through standard CSV or Excel exports, the same reports your team already produces for internal analysis. There are no API credentials to provision, no VPN connections to maintain, and no integration to build or maintain. Your property team exports GL data from Yardi the same way they always have, and uploads it to CapVeri. IT involvement is zero."
+  - q: "What are the security implications of CSV-based integration vs. API integration with Yardi?"
+    a: "CSV-based integration has a significantly better security profile than API integration for most organizations. With API integration, a third-party system has persistent, authenticated access to your Yardi environment - which must be maintained, monitored, and revoked when you stop using the vendor. With CSV-based integration, there is no persistent connection, no stored credentials, and no access to your Yardi environment at any time. The vendor only sees the specific data exported for a specific purpose."
+---
+
+The phrase "integrates with Yardi" covers a wide spectrum of what vendors actually mean. At one end: deep API integration requiring credential provisioning, VPN setup, firewall rules, and months of implementation work. At the other end: your property manager exports a CSV report from Yardi and uploads it. Both are described as "Yardi integration." They are not the same thing.
+
+For most property management companies evaluating CAM reconciliation software, the right question isn't "does it integrate with Yardi?" It's "what does that integration actually require from my IT team?"
+
+## The IT Department's Concerns with ERP Integrations
+
+When an IT Director reviews a software vendor's integration proposal, the concerns are predictable:
+
+**API credentials:** Creating and maintaining API access to production systems introduces attack surface. API credentials can be stolen, misused, or not revoked when the vendor relationship ends. Who monitors API activity? Who revokes access when the contract ends?
+
+**VPN and network access:** Some "integrations" require VPN access to the internal network or direct database connections. This is a significant security and compliance concern for any organization with formal security policies.
+
+**Firewall rules:** API integrations typically require opening specific firewall ports. Each new rule is a new potential vulnerability and a maintenance burden.
+
+**Maintenance over time:** When Yardi updates its API (which happens), integrations break. Someone, either your team or the vendor, has to fix them. Integration maintenance becomes a recurring IT cost that wasn't in the original budget.
+
+**Vendor access management:** If the vendor's staff has direct system access for troubleshooting, that access must be provisioned, monitored, and revoked according to your access management policies.
+
+**Data residency and privacy:** API integrations often involve the vendor pulling and storing data in their own systems. Where does that data live? What are the retention policies? Can the vendor use it for training AI models?
+
+These are not hypothetical concerns. They are the standard objections that IT teams raise when asked to approve a SaaS integration. They're legitimate.
+
+## How CapVeri Works Without an API
+
+CapVeri was built with these concerns in mind. The idea is simple: use a file your system already exports, instead of building a live API connection.
+
+Every property management ERP (Yardi, MRI, RealPage, and others) can export the files controllers already use. Financial controllers pull GL detail exports for reconciliation, trial balance exports for audit, and rent roll exports for reporting. These exports are a known, trusted, already-audited data path.
+
+CapVeri uses this path rather than creating a new one.
+
+**The file-based data flow:**
+
+1. Property team exports GL detail from Yardi (same report they run for monthly close review)
+2. Export is saved as CSV or Excel (standard Yardi output)
+3. Property team uploads to CapVeri (same as uploading any document to a cloud storage service)
+4. CapVeri processes the export and runs independent CAM calculations
+5. Results are available in CapVeri's interface. No data flows back to Yardi.
+
+There is no persistent connection, no API, no credentials, and no access to the Yardi environment at any point in this flow.
+
+## What CapVeri Requires from IT
+
+Nothing.
+
+The setup process for CapVeri is completed entirely by the property management team, without IT involvement:
+
+- No API credentials to provision
+- No VPN access to configure
+- No firewall rules to update
+- No integration to build or test
+- No access management policies to update
+
+From IT's perspective, CapVeri is a web application accessed via a browser with SSO (single sign-on) or standard enterprise authentication. It receives file uploads from your property team. That is the entire IT footprint.
+
+## Security Profile
+
+For organizations with formal security review processes:
+
+**No persistent Yardi access:** CapVeri never connects to the Yardi environment. There are no credentials stored, no connections to close if the vendor relationship ends.
+
+**Data isolation:** Uploads are processed in isolated compute environments. CapVeri does not share data between client organizations. Row-level security (RLS) enforces multi-tenant data isolation at the database layer.
+
+**Data is not used for model training:** CapVeri does not use client financial data to train AI models. Your GL data and lease terms are used solely for calculating your reconciliation.
+
+**Access control:** CapVeri supports SSO integration and role-based access control. Your IT team can enforce MFA through your existing identity provider.
+
+**Data retention:** Client data is retained according to configurable retention policies, with deletion on contract termination.
+
+## How CSV Export Works for CAM Data
+
+The CSV export path for Yardi GL data is straightforward:
+
+1. In Yardi Voyager, navigate to Reports > General Ledger > GL Detail
+2. Set the date range (typically the full reconciliation year)
+3. Filter to the entity or property being reconciled
+4. Export as CSV or Excel
+
+This is a report that property controllers already run. It contains all operating expenses for the period, including account numbers, dates, amounts, and vendor references. That's everything CapVeri needs to independently recalculate CAM.
+
+For MRI and RealPage, equivalent GL detail exports are available through their respective report modules. The upload and processing workflow is identical.
+
+## Comparison: API Integration vs. File Import
+
+| Factor | API Integration | File Import (CapVeri) |
+|---|---|---|
+| IT setup time | 3-12 months | 0 |
+| Ongoing maintenance | Vendor + IT | 0 |
+| API credential risk | Yes | None |
+| VPN/network access | Often required | Never |
+| Data stored in vendor system | Yes | Only uploaded files |
+| Yardi version dependency | Yes (API changes) | None |
+| Audit footprint | API logs, access records | File upload log only |
+
+For an IT Director reviewing a software vendor for CAM reconciliation, CapVeri's file-based approach eliminates every line item on the standard security objection list.
+
+## Related Resources
+- [CAM Reconciliation Guide](/cam-reconciliation-guide): Complete step-by-step reconciliation process
+
+- [CapVeri vs. Yardi](/vs/yardi)
+- [Yardi CAM Recovery Pool Setup Guide](/resources/software/yardi-voyager/cam-setup)
+- [GL Export Guide](/resources/export-guide)
+
+## Sources
+
+1. [Yardi - Voyager Commercial property management](https://www.yardi.com/products/yardi-voyager-commercial/)
+2. [CapVeri Sources & Research - Yardi interface program pricing](/sources#yardi-interface-program-pricing)

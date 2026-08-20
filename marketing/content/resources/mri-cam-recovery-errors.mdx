@@ -1,0 +1,243 @@
+---
+title: "Common MRI Software CAM Recovery Errors and How to Fix Them"
+description: "Recovery analysis settings, charge code mapping, GL account assignment errors, and validation techniques for MRI Software CAM calculations. How to export MRI recovery data and cross-check it against manual calculations before sending statements."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 68
+faq:
+  - q: "Why does my MRI recovery analysis not match my manual spreadsheet?"
+    a: "The most common causes are: (1) the recovery analysis expense group includes or excludes GL accounts that differ from your manual mapping, (2) the allocation method uses a different occupancy basis than your spreadsheet, (3) the charge code setup does not correctly link to the expense group, (4) gross-up parameters are missing or set to the wrong occupancy target, and (5) cap calculations use a different compounding method than the lease specifies. Export the MRI recovery analysis detail and compare each component (expense total, denominator, pro-rata share, gross-up, and cap) against your spreadsheet to isolate the discrepancy."
+  - q: "How do I validate MRI CAM output before sending reconciliation statements?"
+    a: "Select three tenants per property: one large-footprint tenant, one small tenant, and one with a mid-year lease event (move-in, move-out, or expansion). Export the MRI Recovery Analysis Detail report for each. Rebuild the calculation in a spreadsheet using the same GL data, the same occupancy data, and the lease terms from the abstract. Compare each step: total recoverable expenses, tenant's share percentage, gross-up adjustment, cap application, and base year comparison. Any variance over $100 indicates a configuration issue that needs investigation."
+---
+
+MRI Software is the second most widely deployed property management platform in commercial real estate, with particularly strong adoption among institutional owners and REITs. Its CAM recovery module (Recovery Analysis) handles expense pooling, allocation, cap calculations, and reconciliation statement generation.
+
+Like any ERP, MRI produces accurate output only when it is configured accurately. The system does not validate its own configuration against lease terms. It runs the math on whatever settings exist. When those settings are wrong, the reconciliation is wrong, and the error persists silently until someone runs a manual cross-check or a tenant auditor finds it.
+
+MRI's architecture differs from Yardi's in several ways that affect where configuration errors occur. Understanding these differences matters even if you only use one platform, because many portfolios operate on both (especially after acquisitions) and data migration between the two is a common source of configuration drift.
+
+## MRI's Recovery Architecture
+
+MRI's CAM recovery module is built around these core components:
+
+- **Expense Groups:** Collections of GL accounts that define what expenses are included in each recovery pool
+- **Recovery Analysis:** The calculation engine that allocates expense group totals to tenants
+- **Charge Codes:** The billing codes that link recovery calculations to tenant charges
+- **Allocation Methods:** Rules that determine how expenses are divided among tenants (pro-rata by SF, fixed amount, percentage, etc.)
+- **Recovery Parameters:** Settings for gross-up, caps, base years, and proration
+
+Configuration errors can occur at any layer. The most damaging errors are in expense group setup and recovery parameters because they affect every tenant in the building simultaneously.
+
+## Error #1: Expense Group GL Account Gaps
+
+### What Goes Wrong
+
+An expense group in MRI defines which GL accounts feed into a recovery pool. When a GL account is not assigned to any expense group, the expense exists in the GL but never reaches the recovery calculation. The landlord paid the expense, the lease authorizes recovery, but MRI does not know to include it.
+
+This happens most often when:
+
+- New GL accounts are created and not added to the expense group
+- The chart of accounts is restructured during a system upgrade
+- A property is migrated from another platform and the GL mapping is incomplete
+- Sub-accounts are added below a parent account that is in the expense group, but the sub-accounts are not
+
+### How to Detect It
+
+Run the GL Account Listing report filtered by property. Export the Expense Group Detail report. Compare the two lists. Any GL account with activity that does not appear in any expense group is a gap.
+
+Pay particular attention to:
+
+- Accounts created in the last 12 months
+- Sub-accounts (child accounts under a parent)
+- Accounts that were renamed or renumbered during a chart restructuring
+
+### Real Cost
+
+A 180,000 SF suburban office building migrates from Yardi to MRI. The migration maps 85 of 92 active GL accounts to expense groups. The seven unmapped accounts have a combined balance of $61,000 (snow removal in a new sub-account, elevator maintenance under a renamed account, and four utility sub-accounts split during migration). Annual leakage: $53,700 after management fee adjustment. Nobody notices because the total CAM charge is within 5% of the prior year, and 5% swings are normal.
+
+### Fix
+
+Add missing GL accounts to the appropriate expense group. Rerun recovery analysis for affected periods. Issue supplemental billings within the lease lookback window.
+
+## Error #2: Allocation Method Mismatch
+
+### What Goes Wrong
+
+MRI supports multiple allocation methods for distributing expenses to tenants:
+
+| Method | How It Works | When to Use |
+|---|---|---|
+| Pro-Rata (SF) | Tenant SF / Building SF | Standard NNN leases |
+| Pro-Rata (Occupied SF) | Tenant SF / Occupied SF | Buildings without gross-up provisions |
+| Fixed Percentage | Lease-specified percentage | Anchor tenants with negotiated shares |
+| Fixed Amount | Dollar amount per period | Flat-fee CAM structures |
+| Tiered/Custom | Formula-based | Complex lease structures |
+
+The error occurs when the wrong allocation method is applied. The most common mismatch: using Pro-Rata (Occupied SF) when the lease calls for Pro-Rata (Total SF) with gross-up. These produce different results at any occupancy below 100%.
+
+### Example
+
+Building: 120,000 total SF, 96,000 occupied (80% occupancy). Tenant: 12,000 SF. Recoverable expenses: $840,000.
+
+| Method | Tenant Share | Tenant Allocation |
+|---|---|---|
+| Pro-Rata by Total SF | 12,000 / 120,000 = 10.00% | $84,000 |
+| Pro-Rata by Occupied SF | 12,000 / 96,000 = 12.50% | $105,000 |
+| Pro-Rata by Total SF + Gross-Up to 95% | 10.00% of grossed-up pool | $92,100* |
+
+*Assumes 60% of expenses are variable, grossed up from 80% to 95% occupancy.
+
+The difference between method 1 and method 2 is $21,000 for a single tenant. Multiply across all tenants and the aggregate error is substantial. The wrong method may also violate the lease terms, creating either overbilling exposure or leakage depending on which direction the error goes.
+
+### How to Detect It
+
+1. Open Recovery Analysis Setup for each property
+2. Check the Allocation Method field
+3. Compare to the lease abstract for the largest tenants
+4. If the lease says "pro-rata share based on rentable square footage of the Building" (total SF), the allocation method should be Pro-Rata by Total SF, not Occupied SF
+
+### Fix
+
+Change the allocation method to match lease terms. If different tenants in the same building have different allocation methods (common in retail), configure tenant-level overrides rather than changing the property-level default.
+
+## Error #3: Recovery Parameter Configuration
+
+### Gross-Up Settings
+
+MRI's gross-up configuration requires three inputs:
+
+1. **Enable/disable toggle** - Must be enabled for buildings below target occupancy
+2. **Target occupancy percentage** - Typically 95% or 100%, per lease terms
+3. **Variable/fixed classification** - Each GL account in the expense group must be flagged as variable (subject to gross-up) or fixed (not grossed up)
+
+**Common errors:**
+
+- Gross-up disabled for a building at 78% occupancy: landlord absorbs all vacancy-related cost variance
+- Target set to 100% when leases specify 95%: tenants overbilled on gross-up
+- Utilities flagged as fixed when they are clearly variable: gross-up understated
+- Management fee flagged as variable when it is a fixed percentage of revenue: gross-up overstated
+
+**Detection:** Run recovery analysis with gross-up detail. Verify the grossed-up total equals: (Variable expenses / Actual occupancy) x Target occupancy + Fixed expenses.
+
+### Cap Settings
+
+MRI's cap configuration requires:
+
+1. **Cap type** - Cumulative or non-cumulative
+2. **Cap percentage** - Annual escalation rate
+3. **Base year** - Year from which the cap compounds
+4. **Base year amount** - The starting dollar amount for cap calculations
+5. **Compounding basis** - Compound from capped amount or from actual expenses
+
+**Common errors:**
+
+- Base year amount manually entered incorrectly (transposition, wrong year's data)
+- Cumulative cap configured as non-cumulative
+- Compounding from actuals instead of capped amounts on non-cumulative caps
+- Cap not configured at all for tenants whose leases include one
+
+**Detection:** Export the cap calculation detail for each tenant. Manually compute the cap for Years 1-3 using the lease terms. Compare. Year 1 mismatches indicate a wrong base amount. Year 2+ divergence with a correct Year 1 indicates a compounding method error.
+
+### Base Year Settings
+
+For modified gross leases, MRI needs the base year and base year expense amount for each tenant. The tenant pays their share of expenses that exceed the base year amount.
+
+**Common errors:**
+
+- Base year amount not grossed up to target occupancy for a year with low occupancy
+- Base year not updated after lease renewal with base year reset
+- Base year expense amount includes non-recoverable items that were in the pool at the time but have since been reclassified
+
+**Detection:** Verify the base year amount against the actual GL data for the base year, applying the same expense group mapping and gross-up rules that apply to the current year.
+
+## Error #4: Charge Code Linking
+
+### What Goes Wrong
+
+MRI uses charge codes to generate tenant billings from recovery analysis results. If the charge code is not linked to the correct recovery analysis, the tenant receives no bill, or receives a bill calculated from the wrong expense pool.
+
+The linking chain in MRI:
+
+**Expense Group > Recovery Analysis > Charge Code > Tenant Charge**
+
+A break at any point produces incorrect output. The most common break: a new recovery analysis is created (perhaps after a pool restructuring) but the charge code still points to the old recovery analysis.
+
+### How to Detect It
+
+1. For each property, list all active charge codes related to CAM, tax, and insurance recovery
+2. For each charge code, verify it links to the correct recovery analysis
+3. For each recovery analysis, verify it references the correct expense group
+4. Run a test billing for one tenant and trace the calculation back through the chain
+
+### Symptoms of Broken Links
+
+| Symptom | Likely Cause |
+|---|---|
+| Tenant receives no CAM charge | Charge code not linked to any recovery analysis |
+| CAM charge is stale (same as last year despite expense changes) | Charge code linked to an old/inactive recovery analysis |
+| CAM and tax charges are swapped | Charge codes linked to wrong recovery analyses |
+| One tenant has correct CAM, another does not | Tenant-level charge code override pointing to wrong analysis |
+
+## Error #5: Period and Timing Issues
+
+### Fiscal Year Mismatch
+
+MRI allows properties to operate on different fiscal years. If the recovery analysis fiscal year does not match the lease year for CAM reconciliation, the expense totals used in the calculation will be wrong.
+
+Most commercial leases reconcile on a calendar year basis (January through December). If MRI is configured for a July through June fiscal year for the property, the recovery analysis pulls 12 months of data from the wrong 12 months.
+
+### Proration Method
+
+MRI offers daily and monthly proration for mid-year lease events. The setting must match the lease terms. A tenant moving in on March 15 is billed for either 291 days (daily proration) or 9 months (monthly proration, first full month = April). On a $10/SF annual CAM rate for 8,000 SF:
+
+- Daily: $80,000 x (291/365) = $63,781
+- Monthly (excluding March): $80,000 x (9/12) = $60,000
+- Monthly (including March): $80,000 x (10/12) = $66,667
+
+The $6,667 difference between the two monthly methods (and the $3,781 difference between daily and monthly) is real money. The lease controls which method applies.
+
+### Accrual Cutoff
+
+MRI recovery analysis uses GL balances as of the analysis run date. If December expenses have not been accrued when the recovery analysis runs in January, the full-year expense total is understated. The reconciliation goes out with 11 months of actual expenses and a missing December.
+
+**Detection:** Compare the total expenses in the recovery analysis to the final GL trial balance for the property. If the recovery analysis total is lower, accruals may be missing.
+
+## MRI Export and Validation Workflow
+
+Before sending MRI-generated reconciliation statements:
+
+1. **Export Recovery Analysis Detail** - The full calculation for each tenant, showing expense totals, allocation percentages, gross-up adjustments, cap calculations, and base year comparisons
+2. **Export GL Trial Balance** - The final expense totals by account for the same property and period
+3. **Compare expense totals** - The sum of expenses in the recovery analysis should match the sum of recoverable accounts in the GL trial balance
+4. **Select three tenants for manual cross-check** - Rebuild the calculation in a spreadsheet using GL data and lease terms
+5. **Compare each component** - Total expenses, share percentage, gross-up, cap, base year excess
+6. **Document the validation** - Keep the comparison workpapers as part of the reconciliation file
+
+This validation takes 3-4 hours per property. It is the single most effective quality control step in the reconciliation process.
+
+## Migrating Between MRI and Yardi
+
+Portfolio acquisitions frequently involve migrating properties between MRI and Yardi. The migration creates configuration risk because:
+
+- GL account numbers change (different charts of accounts)
+- Expense group/recovery pool structures differ
+- Cap calculation history must be manually transferred
+- Base year amounts must be re-entered
+- Allocation methods must be reconfigured
+
+After any MRI-to-Yardi or Yardi-to-MRI migration, run a full validation for the first reconciliation period. Compare the new system's output to the prior system's last reconciliation and to a manual calculation. Do not assume the migration preserved the CAM configuration accurately.
+
+## Related Resources
+
+- [GL Code Mapping for CAM](/resources/gl-code-mapping-cam) - Building the mapping table MRI needs
+- [Yardi CAM Configuration Errors](/resources/yardi-cam-configuration-errors) - The parallel guide for Yardi users
+- [CAM Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide) - Manual gross-up math for validation
+- [Data Migration Off Excel](/resources/data-migration-off-excel) - Moving from spreadsheets to ERP
+
+## Sources
+
+1. [MRI Software - Property Management](https://www.mrisoftware.com/products/mri-property-management/)
+2. [CapVeri Sources & Research - MRI public procurement pricing](/sources#mri-gcloud-pricing)

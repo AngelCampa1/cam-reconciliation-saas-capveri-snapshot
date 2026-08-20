@@ -1,0 +1,126 @@
+---
+title: "CPA Guide to CAM Reconciliation Audit: What to Review and Why"
+description: "A guide for CPAs and property accountants auditing CAM reconciliations. What to look for, key risk areas, and how to efficiently verify commercial real estate CAM math."
+excerpt: "CPAs reviewing CAM reconciliations for commercial real estate clients face a specialized verification challenge. This guide covers the key risk areas and verification techniques."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "What's the biggest risk area in CAM reconciliation from an accounting perspective?"
+    a: "Gross-up methodology is consistently the highest-risk area in office property CAM reconciliation. It requires both an understanding of the specific lease language (which expenses are grossable, what threshold applies, how occupancy is defined) and correct arithmetic application. Errors in gross-up can be material: a 10-percentage-point occupancy difference at a property with $2 million in variable CAM expenses produces a $200,000+ gross-up error."
+  - q: "How do CPAs handle CAM audits when lease terms vary across tenants?"
+    a: "By creating a lease matrix, a structured document that captures the key CAM terms for each tenant: denominator definition, gross-up provisions, cap type and scope, key exclusions, and audit rights. This matrix becomes the reference document for every tenant-specific calculation check. Without it, auditing a multi-tenant property means re-reading each lease for each verification step, which is inefficient and error-prone."
+---
+
+Commercial real estate CAM reconciliation sits at the intersection of real estate law, accounting standards, and property operations. Most CPAs encounter it less frequently than standard financial auditing. When a CPA is engaged to review a CAM reconciliation, they're verifying not just arithmetic, but compliance with specific lease terms that vary by tenant and by property type.
+
+This guide is for CPAs and property accountants who need a structured approach to CAM reconciliation review, covering the key risk areas, what documents to request, and how to sequence the review efficiently.
+
+## What Makes CAM Reconciliation Different from Standard Financial Review
+
+Standard financial auditing tests whether financial statements fairly present the entity's financial position under applicable accounting standards. CAM reconciliation review is different in three important ways:
+
+**Legal contract compliance.** The standard isn't GAAP. It's the specific terms of each tenant's lease. A CAM calculation that's mathematically correct under one tenant's lease may be completely wrong for another tenant in the same building. The CPA must understand and apply multiple different contractual frameworks simultaneously.
+
+**Tenant-specific calculations.** Unlike financial statement review where a single set of numbers represents the entity, CAM review involves N parallel calculations (one for each tenant), each with potentially different lease terms.
+
+**Operational data integration.** CAM calculations integrate financial data (expense GL) with operational data (square footage, occupancy rates, lease dates). Errors at the data integration point (wrong SF, wrong occupancy rate, wrong lease term dates) are common and material.
+
+## Key Risk Area 1: Gross-Up Methodology
+
+Gross-up is the most technically complex and most frequently incorrect element of office property CAM reconciliation. CPAs should spend disproportionate time here.
+
+The verification sequence:
+1. **Occupancy threshold:** What does the lease specify? 90%? 95%? Some leases use different thresholds for different expense types.
+2. **Occupancy rate used:** Economic occupancy (tenants under lease and paying rent) is typically correct; physical occupancy (tenants physically in the space) may understate occupancy. Verify which definition applies and which number was used.
+3. **Eligible expense base:** Only variable expenses are gross-up eligible. Has each expense been correctly classified? Is the gross-up applied to the variable expense total, not the total CAM pool?
+4. **Arithmetic:** Grossed-up amount = Actual variable expenses × (Target occupancy / Actual occupancy). Is the formula applied correctly?
+
+Red flag: gross-up applied to fixed expenses (property taxes, insurance). This is incorrect and material.
+
+## Key Risk Area 2: Pro-Rata Denominator Definition
+
+Each tenant's lease defines the denominator for their pro-rata share. CPAs must verify that the denominator used in the calculation matches what the lease requires.
+
+Common denominator definitions:
+- **Building RSF:** Total rentable square footage of the entire building, fixed
+- **Pool RSF:** Total RSF of the defined recovery pool (may exclude some areas)
+- **Occupied RSF:** Total occupied RSF, variable with tenancy changes
+- **Tenant-Defined:** Some leases define a specific denominator number rather than a formula
+
+Verify each tenant's denominator against the lease definition. Pay particular attention to:
+- Whether the denominator is fixed or variable
+- Whether mid-year changes in occupancy triggered denominator updates
+- Whether the BOMA measurement basis used matches what the lease specifies
+
+## Key Risk Area 3: Capital vs. Operating Expense Classification
+
+Capital expenditures that have been incorrectly classified as operating expenses are recoverable from the landlord through tenant credits. CPAs review the expense GL looking for items that meet the IRS Section 263(a) criteria for capitalization.
+
+Practical identification approach:
+- Flag any vendor payment over $20,000 with no recurring counterpart in prior years
+- Review large "Repairs & Maintenance" invoices for scope (system replacement vs. component repair)
+- Cross-reference against the property's capitalized asset additions for the year. Any item capitalized for accounting purposes should not also appear in the operating expense CAM pool.
+
+Common misclassifications: HVAC system replacement (capital) billed as HVAC maintenance (operating); full roof replacement (capital) billed as roof repairs (operating).
+
+## Key Risk Area 4: CAM Cap Application
+
+Cap calculation errors are particularly insidious because they're invisible without explicit verification. The ERP produces a capped number but doesn't show the uncapped baseline for comparison.
+
+The CPA verification sequence:
+1. **Identify cap type** from the lease: cumulative or non-cumulative, controllable only or total CAM
+2. **Reconstruct the uncapped calculation** independently, without ERP output
+3. **Apply the cap** with the correct type, scope, and base
+4. **Compare to ERP output** - if different, identify the source of discrepancy
+
+For cumulative caps, verify carryforward tracking. The cap is based on the prior year's capped amount, not the prior year's actual. If the cap wasn't binding in prior years, the calculation is straightforward. If it was binding, the carryforward must be tracked and applied.
+
+## Key Risk Area 5: Lease Compliance (Tenant-Specific Provisions)
+
+Each tenant's lease may contain provisions that affect their specific calculation: expense exclusions, management fee caps, audit rights timing, statement delivery deadlines, and base year definitions.
+
+Efficient approach: create a lease compliance matrix before beginning detailed testing. Document for each tenant:
+- Key CAM definitions (denominator, gross-up terms, controllable expense definition)
+- Cap type, scope, and base year
+- Top 5 expense exclusions most likely to be relevant for this property type
+- Any unusual or non-standard provisions
+
+Use this matrix as a checklist during review. Without it, you're reading each lease from scratch during the most time-pressured part of the review.
+
+## Efficient Review Techniques
+
+**Sample-based vs. full-population testing.** For properties with many tenants using similar lease forms, sampling is appropriate for routine verification steps (denominator checks, statement tie-out). For complex provisions like gross-up and cap calculations, test the full population. These calculations vary by lease and errors tend to cluster.
+
+**High-risk tenant prioritization.** Anchor tenants with large square footage have the largest CAM obligations and the largest impact when errors occur. Review these tenants first, in full, before sampling smaller tenants.
+
+**Year-over-year change analysis.** Compare this year's CAM rates (per SF, by expense category) against prior years. Unexplained changes (a 30% increase in janitorial costs, a new expense category that didn't exist before) are signals to investigate.
+
+**GL to pool bridge.** Build a bridge from the total GL expense to the total pool amount, explaining every difference. If you can't explain the bridge, there's an error.
+
+## Tools for CPA-Assisted CAM Review
+
+CapVeri generates an automated verification report that covers gross-up arithmetic, pro-rata denominator validation, and mathematical tie-out from GL to tenant statements. CPAs working on landlord-side reviews use this to accelerate the computational verification steps, freeing time for lease compliance review and judgment-intensive analysis.
+
+The automated report flags:
+- Gross-up calculations where occupancy used differs from economic occupancy
+- Denominator figures that don't match lease-stated areas
+- Statement amounts that don't arithmetically tie from the pool calculation
+- Pool line items that match known exclusion categories
+
+This doesn't replace professional judgment. It surfaces the items requiring it.
+
+---
+
+## Related Resources
+
+- [How CPAs Verify CAM Charges](/blog/how-cpas-verify-cam-charges)
+- [Pre-Send Audit Exposure Scorecard](/tools/audit-risk-scorecard)
+- [CAM Reconciliation Audit Trail Guide](/blog/cam-reconciliation-audit-trail)
+
+## Sources
+
+1. [RIW - Audit rights and restrictions](https://www.riw.com/2024/09/four-strategies-to-understand-and-defend-against-poor-audit-rights-and-restrictions/)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

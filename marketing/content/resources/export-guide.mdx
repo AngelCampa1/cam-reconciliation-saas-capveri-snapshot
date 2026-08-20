@@ -1,0 +1,240 @@
+---
+title: "CAM Export Guide: Which Files to Pull from Yardi, MRI, AppFolio, and RealPage"
+description: "The export guide for CAM reconciliation. Which three files matter, what columns they need, and how to avoid incomplete exports before you run reconciliation math."
+datePublished: "2026-01-15"
+dateModified: "2026-05-08"
+author: "Angel Campa"
+buttonText: "Get the Export Steps"
+order: 7
+faq:
+  - q: "What files do I need to run a CAM reconciliation?"
+    a: "In most cases you need three files: a rent roll, a full-year GL detail export, and a recovery or billing export that shows what tenants were charged. Those three files let you verify who should pay, what was spent, and what was billed."
+  - q: "What is the most common export mistake?"
+    a: "The most common mistake is exporting a report that looks right on screen but is missing critical rows because the date basis, account filter, or report detail level is wrong. The second most common mistake is sending a subtotal-heavy Excel file instead of a flat data export."
+---
+
+<Alert type="info" title="Quick Answer">
+For CAM reconciliation, start with three files: **rent roll**, **full-year GL detail**, and **recovery or billing detail**. If one of those exports is incomplete, the reconciliation is already compromised before any gross-up, cap, or pro-rata math begins.
+</Alert>
+
+This page is the operating checklist for export prep. Use it before you run the reconciliation, before you send files to an auditor, and before you conclude the math is wrong. In practice, bad exports create more reconciliation noise than bad formulas.
+
+## The Three Files That Actually Matter
+
+| File | Why it matters | Minimum fields |
+|---|---|---|
+| Rent roll | Defines the tenant roster and denominator side of the allocation. | Suite or unit, tenant name, rentable SF, lease start, lease end |
+| GL detail | Proves what hit the expense pool during the year. | Account code, account description, date, amount, reference |
+| Recovery or billing detail | Shows what was estimated or billed to each tenant. | Tenant, suite, pool or charge code, billed amount, period |
+
+If you do not have all three, you can still do limited diagnostics, but you cannot defend a full reconciliation file.
+
+## Which File to Pull First
+
+Pull the **GL detail first** if:
+
+- the reconciliation variance looks too large;
+- your team changed account mappings during the year;
+- a controller suspects non-recoverable expenses are in the pool.
+
+Pull the **rent roll first** if:
+
+- occupancy changed materially during the year;
+- suites were expanded, split, or recombined;
+- tenants are disputing pro-rata share.
+
+Pull the **recovery or billing file first** if:
+
+- the math ties but billed totals look off;
+- estimates changed mid-year;
+- the issue is "what we charged" rather than "what we spent."
+
+## Export Standard by System
+
+| System | Date basis to confirm | Detail level | Report names to check first |
+|---|---|---|---|
+| Yardi Voyager | Posting period plus year-end accrual period | Transaction-level GL and tenant-level recovery detail | Rent Roll with Lease Charges, General Ledger Analytics, Recovery Analysis |
+| MRI Software | Fiscal period range, including adjustment periods | GL transaction detail and Recovery Reconciliation detail | Rent Roll, GL Transaction Detail, Recovery Reconciliation |
+| AppFolio | Transaction date for GL and tenant charge date for billings | Visible-column export, not summary owner report | Rent Roll, General Ledger, CAM Charges |
+| RealPage | Fiscal year and CAM billing period | Tenant-level CAM export plus GL detail | Rent Roll, General Ledger Export, CAM Reconciliation Summary |
+
+### Yardi Voyager
+
+Use these three reports:
+
+1. **Rent Roll with Lease Charges**
+2. **General Ledger Analytics**
+3. **Recovery Analysis** or **Charge Schedule**
+
+<Steps>
+  <Step title="Pull the rent roll">Go to Leasing -> Reports -> Rent Roll with Lease Charges and export with rentable SF and lease dates visible.</Step>
+  <Step title="Pull the GL detail">Go to Accounting -> General Ledger Analytics, use the full reconciliation year, and export the transaction-level view.</Step>
+  <Step title="Pull billed or recovery data">Use Commercial -> Recovery -> Recovery Analysis for actual-versus-estimated detail, or Charge Schedule when you need invoice-level estimate history.</Step>
+  <Step title="Flatten the files">Export to Excel, then save as CSV after removing Yardi headers, page totals, and footer rows.</Step>
+</Steps>
+
+**What goes wrong in practice**
+
+- Posting-date filters exclude January-posted accruals that belong to December.
+- The Recovery Analysis is exported in summary mode instead of detail mode.
+- The Excel file still contains page totals, subtotal bands, or title rows that break import logic.
+
+For the system-specific walkthrough, use [How to Export CAM Reconciliation Data from Yardi Voyager](/resources/export-cam-yardi-voyager).
+
+### MRI Software
+
+Use these reports:
+
+1. **Rent Roll**
+2. **GL Transaction Detail**
+3. **Recovery Reconciliation**
+4. **Tenant Billing History** when you need invoice-level support
+
+<Steps>
+  <Step title="Pull the rent roll">Run the Commercial rent roll with rentable SF, lease term, and tenant ID columns included.</Step>
+  <Step title="Pull GL transaction detail">Use the full-year period range and include all recoverable operating accounts.</Step>
+  <Step title="Pull the recovery report">Run Recovery Reconciliation in detail mode so each tenant, pool, and expense line remains visible.</Step>
+  <Step title="Export directly to CSV">MRI CSV exports are usually cleaner than other systems, but still confirm the report is detail-level and period-complete.</Step>
+</Steps>
+
+**What goes wrong in practice**
+
+- Period 13 and 14 adjustments are omitted.
+- The recovery report is run at summary level, hiding the line items you need to classify expenses.
+- Tenant ID is missing, making file matching unreliable when tenant names vary.
+
+For the full MRI workflow, use [How to Export CAM Data from MRI Software](/resources/export-cam-mri).
+
+### AppFolio
+
+Use:
+
+1. **Rent Roll**
+2. **General Ledger**
+3. **CAM Charges** or the closest owner report that shows billed recoveries
+
+<Steps>
+  <Step title="Customize before you export">Turn on the columns you need before downloading. AppFolio exports exactly what is visible.</Step>
+  <Step title="Use a full-year GL export">Filter by property and full reconciliation year.</Step>
+  <Step title="Verify billed-charge detail">If a dedicated reconciliation report is unavailable, use the charge report that preserves tenant-level CAM billing history.</Step>
+</Steps>
+
+**Watch for**
+
+- missing square footage because the rent roll was exported with default columns;
+- charge exports that summarize by property instead of tenant;
+- owner-facing reports that flatten lease dates away.
+
+### RealPage
+
+Use:
+
+1. **Rent Roll**
+2. **General Ledger**
+3. **CAM Reconciliation Summary** or the report your team uses for billed recoveries
+
+<Steps>
+  <Step title="Run the rent roll for the exact period">Use the correct property and year-end date.</Step>
+  <Step title="Pull GL detail with account and date columns">Do not settle for a summary export.</Step>
+  <Step title="Confirm tenant-level CAM charge output">The reconciliation export needs tenant, suite, pool, and total charged or billed columns.</Step>
+</Steps>
+
+**Watch for**
+
+- summary reports that look complete but collapse tenant-level charge detail;
+- exports where the suite field is omitted;
+- inconsistent charge-code naming across properties.
+
+## Required Column Checklist
+
+Use this checklist before you send files anywhere.
+
+### Flat-file rules that prevent false exceptions
+
+A CAM export can contain the right numbers and still fail reconciliation if the file shape is wrong. Before uploading or sending files for review, check for these issues:
+
+| File problem | Why it matters | Fix before reconciliation |
+|---|---|---|
+| Subtotal rows mixed with transaction rows | Doubles expenses when the import reads both detail and summary rows. | Remove subtotals, page totals, and grand-total rows. |
+| Hidden filters in Excel | Makes the export look complete while rows are still excluded. | Clear filters and compare row counts to the source report. |
+| Missing property identifier | Breaks multi-property imports and can combine pools across buildings. | Include property code or property name on every row. |
+| Date basis mismatch | Posting date, invoice date, and service period can produce different year totals. | Use the date basis that ties to the reconciliation statement. |
+| Account-range gaps | New GL accounts added mid-year can be omitted from saved report filters. | Compare the export account list to the current chart of accounts. |
+
+The most useful QA test is simple: total the flat GL export by account and compare it to the same-period trial balance or financial statement. If the totals do not tie, fix the export before reviewing gross-up, cap, or pro-rata math.
+
+### Rent roll
+
+- Suite or unit
+- Tenant name
+- Rentable square footage
+- Lease start
+- Lease end
+
+### GL detail
+
+- Account code
+- Account description
+- Transaction date
+- Amount
+- Reference or source
+
+Example flat GL row:
+
+| property_code | account_code | account_name | transaction_date | reference | amount |
+|---|---|---|---|---|---:|
+| DAL-001 | 6025 | Parking lot repairs | 2026-12-18 | INV-18422 | 4250.00 |
+
+### Recovery or billing detail
+
+- Tenant
+- Suite
+- Recovery pool or charge code
+- Amount billed
+- Period or bill date
+
+If any of those are missing, the file is not ready.
+
+## QA Checks Before You Move On
+
+Run these checks before you start troubleshooting formulas:
+
+1. Confirm the date range matches the reconciliation year exactly.
+2. Confirm the export is detail-level, not summary-level.
+3. Confirm the rent roll reflects the tenant roster you expect at year-end.
+4. Confirm the GL export includes every operating account that should feed CAM.
+5. Confirm billed or recovery totals are tenant-level, not property-level.
+
+## What to Do If the Numbers Still Look Wrong
+
+If the exports pass the checklist and totals still do not make sense:
+
+- compare the GL export to the financial statements for the same period;
+- inspect [gross-up logic](/resources/cam-gross-up-calculation-guide);
+- verify [pro-rata share logic](/resources/pro-rata-share-calculation);
+- confirm recovery pools and charge codes in your ERP setup guide.
+
+That sequence is faster than manually combing through tenant statements.
+
+<CTABox
+  title="Check your exports before you reconcile"
+  description="Upload your rent roll, GL, and billing files to CapVeri. CapVeri checks them for gaps. It flags where the reconciliation would fail before statements go out."
+  utmContent="export_guide_cta"
+  buttonText="Start free trial"
+/>
+
+## Related Resources
+
+- [How to Export CAM Reconciliation Data from Yardi Voyager](/resources/export-cam-yardi-voyager)
+- [How to Export CAM Data from MRI Software](/resources/export-cam-mri)
+- [CAM Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide)
+- [Pro Rata Share Calculation Guide](/resources/pro-rata-share-calculation)
+
+## Sources
+
+1. IREM CAM reconciliation verification procedures - [IREM Oregon CAM Reconciliation: Art or Science](/sources#irem-cam-presentation)
+2. Yardi workflow reference - [How to Export CAM Reconciliation Data from Yardi Voyager](/resources/export-cam-yardi-voyager)
+3. MRI workflow reference - [How to Export CAM Data from MRI Software](/resources/export-cam-mri)
+4. RealPage workflow reference - [How to Export CAM Reconciliation Data from RealPage](/resources/export-cam-realpage)
+5. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+6. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

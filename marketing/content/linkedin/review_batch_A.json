@@ -1,0 +1,115 @@
+{
+  "batch": "A",
+  "posts_reviewed": 75,
+  "issues_found": 9,
+  "posts": [
+    {
+      "file": "2026-05-12-0600-cam-math-001.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "Most landlords think CAM reconciliation is a paperwork problem. It isn't.",
+          "fix": "Open with a specific number, named system, dollar amount, or concrete scenario. E.g., 'A 20-property portfolio with $500,000 walking out the door every year - not from fraud, but from configuration drift between Yardi and the lease.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-13-2000-engagement-030.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "A take worth pushing back on: most CAM disputes are not really disputes about the math.",
+          "fix": "Replace the vague 'A take worth pushing back on' opener with a specific figure or named error type. E.g., 'Gross-up applied to $420,000 in fixed expenses, cap type misread for 11 tenants - neither dispute was about the formula.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-14-1700-founder-042.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "3 to 5 percent. That's the industry-estimated share of operating expense recoveries that commercial landlords miss each year",
+          "fix": "Remove or replace with a sourced figure. CapVeri's own resources (cam-leakage-benchmarks-property-type.mdx) cite BOMA EER and IREM data at 0.5–3.5% by property type. The '3-5%' figure is not attributable to any named source (BOMA, IREM, NAIOP) and the source_url is 'original'. Either attribute to a named third party (BOMA/IREM) or use a figure traceable to a published capveri.com resource."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-15-0600-cam-math-046.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "missing-frontmatter",
+          "severity": "revise",
+          "excerpt": "source_url: https://www.capveri.com/blog/cam-reconciliation-questions-property-managers-ask",
+          "fix": "The '28% of tenants find CAM errors without retaining a professional auditor' stat does not appear in the specified source_url (cam-reconciliation-questions-property-managers-ask.mdx). The stat exists in cam-overbilling-liability.mdx and is attributed there to JLL 2023 via PredictAP. Update source_url to https://www.capveri.com/blog/cam-overbilling-liability or add the named attribution to the post body."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-15-1700-founder-057.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "the gap between what's owed and what's actually collected is persistently wide, estimated at 3-5% of the total recovery pool each year",
+          "fix": "The '3-5%' leakage figure is not attributed to any named third party (BOMA, IREM, NAIOP, or named CRE publication) and has no source_url (source is 'original'). CapVeri's own benchmarking resource cites BOMA EER and IREM data at 0.5–3.5% by property type - the 3-5% range overstates these figures. Replace with 'up to 3.5% by property type, according to BOMA EER and IREM benchmarks' or attribute to a named source."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-16-2030-engagement-070.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "A scenario that comes up more than people expect:",
+          "fix": "The opening two lines have no specifics. Replace with a concrete setup: e.g., 'Four years of signed CAM statements, no dispute. Year 5, the tenant hires an auditor. The exclusion was in the lease exhibit from day one - management fees above 3% of gross revenues.' Lead with the specific detail that creates tension."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-17-0700-cam-math-071.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "gross-up on fixed costs shows up in 30-40% of manually prepared reconciliations",
+          "fix": "This specific percentage range does not appear in the stated source_url (cam-gross-up-calculation-guide.mdx), which describes the error as 'most expensive and most common' without citing a rate. No named third-party source (BOMA, IREM, PredictAP) is referenced in the post body. Replace with the language from the source resource ('the most common error in tenant audits') or attribute the rate to a named source if one exists."
+        }
+      ]
+    },
+    {
+      "file": "2026-05-17-1430-war-stories-076.md",
+      "status": "revise",
+      "issues": [
+        {
+          "rule": "generic-hook",
+          "severity": "revise",
+          "excerpt": "A spreadsheet is not an audit trail.",
+          "fix": "The opening sentence contains no number, dollar amount, building type, named system, or named error type. While punchy, it fails the specificity test for the opening line. Strengthen with context: e.g., 'A spreadsheet changed cell B47 from $142,000 to $0 in November. No log. No name. No reason. That change is now in arbitration.'"
+        }
+      ]
+    },
+    {
+      "file": "2026-05-18-1700-founder-092.md",
+      "status": "reject",
+      "issues": [
+        {
+          "rule": "fabricated-stat",
+          "severity": "reject",
+          "excerpt": "Industry estimates put CAM recovery leakage at 3-5% of the total operating expense recovery pool for commercial landlords.",
+          "fix": "The '3-5%' figure is attributed to unnamed 'industry estimates' with source_url: original. CapVeri's own resource (cam-leakage-benchmarks-property-type.mdx) cites BOMA EER and IREM data, placing typical rates at 0.5–3.5% by property type. The 3-5% range exceeds verified benchmarks and lacks a named source. Replace with 'up to 3.5% depending on property type, based on BOMA EER and IREM Income/Expense Analysis benchmarks' and cite those sources by name."
+        }
+      ]
+    }
+  ]
+}

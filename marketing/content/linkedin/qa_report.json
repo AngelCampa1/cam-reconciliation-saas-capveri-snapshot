@@ -1,0 +1,1227 @@
+{
+  "total_processed": 285,
+  "total_changed": 196,
+  "total_truth_issues_fixed": 1,
+  "total_style_issues_fixed": 0,
+  "total_info_flags": 4,
+  "per_file": [
+    {
+      "filename": "2026-05-12-0600-cam-math-001.md",
+      "truth_issues": [],
+      "style_issues": [
+        {
+          "type": "generic_hook",
+          "detail": "most landlords think cam reconciliation is a paperwork problem. it isn't. it's a",
+          "verdict": "info"
+        }
+      ],
+      "changed": false
+    },
+    {
+      "filename": "2026-05-12-0700-erp-workarounds-002.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-12-0800-war-stories-003.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-12-1100-industry-news-006.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-12-1200-cam-math-007.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-12-1300-erp-workarounds-008.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-12-1400-war-stories-009.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-12-1500-cam-math-010.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-12-1600-anti-integration-011.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-13-0600-cam-math-016.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-13-0700-erp-workarounds-017.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-13-0900-anti-integration-019.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-13-1000-cam-math-020.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-13-1100-industry-news-021.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-13-1300-erp-workarounds-023.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-13-1500-cam-math-025.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-13-1600-anti-integration-026.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-13-1800-cam-math-028.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-14-0600-cam-math-031.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-14-0700-erp-workarounds-032.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-14-0800-war-stories-033.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-14-0900-anti-integration-034.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-14-1000-cam-math-035.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-14-1100-industry-news-036.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-14-1300-erp-workarounds-038.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-14-1400-war-stories-039.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-14-1500-cam-math-040.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-14-1600-anti-integration-041.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-15-0700-erp-workarounds-047.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-15-0800-war-stories-048.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-15-0900-anti-integration-049.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-15-1000-cam-math-050.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-15-1100-industry-news-051.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-15-1200-cam-math-052.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-15-1300-erp-workarounds-053.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-15-1400-war-stories-054.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-15-1500-cam-math-055.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-15-1600-anti-integration-056.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-15-1800-cam-math-058.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-16-0700-cam-math-061.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-16-0830-war-stories-062.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-16-1000-cam-math-063.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-16-1430-war-stories-066.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-16-1600-cam-math-067.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-16-1900-anti-integration-069.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-17-0700-cam-math-071.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-17-0830-war-stories-072.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-17-1000-cam-math-073.md",
+      "truth_issues": [],
+      "style_issues": [
+        {
+          "type": "generic_hook",
+          "detail": "most landlords understand that a 5% cam cap limits how much they can charge. alm",
+          "verdict": "info"
+        }
+      ],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-17-1130-anti-integration-074.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-17-1300-cam-math-075.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-17-1430-war-stories-076.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-17-1600-cam-math-077.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-18-0600-cam-math-081.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-18-0700-erp-workarounds-082.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-18-0800-war-stories-083.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-18-0900-anti-integration-084.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-18-1100-industry-news-086.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-18-1200-cam-math-087.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-18-1300-erp-workarounds-088.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-18-1400-war-stories-089.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-18-1500-cam-math-090.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-18-1800-cam-math-093.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-19-0600-cam-math-096.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-19-0700-erp-workarounds-097.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-19-0800-war-stories-098.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-19-0900-anti-integration-099.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-19-1000-cam-math-100.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-19-1100-industry-news-101.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-19-1200-cam-math-102.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-19-1400-war-stories-104.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-19-1600-anti-integration-106.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-19-1800-cam-math-108.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-20-0600-cam-math-111.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-20-0800-war-stories-113.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-20-1000-cam-math-115.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-20-1100-industry-news-116.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-20-1200-cam-math-117.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-20-1300-erp-workarounds-118.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-20-1400-war-stories-119.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-20-1500-cam-math-120.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-21-0600-cam-math-126.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-21-0700-erp-workarounds-127.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-21-0800-war-stories-128.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-21-0900-anti-integration-129.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-21-1000-cam-math-130.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-21-1100-industry-news-131.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-21-1200-cam-math-132.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-21-1400-war-stories-134.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-21-1500-cam-math-135.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-21-1600-anti-integration-136.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-21-1800-cam-math-138.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-22-0700-erp-workarounds-142.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-22-0800-war-stories-143.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-22-1100-industry-news-146.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-22-1200-cam-math-147.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-22-1400-war-stories-149.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-22-1500-cam-math-150.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-22-1600-anti-integration-151.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-22-1800-cam-math-153.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-23-0700-cam-math-156.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-23-0830-war-stories-157.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-23-1000-cam-math-158.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-23-1130-anti-integration-159.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-23-1430-war-stories-161.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-23-1600-cam-math-162.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-23-1900-anti-integration-164.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-24-0700-cam-math-166.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-24-0830-war-stories-167.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-24-1000-cam-math-168.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-24-1130-anti-integration-169.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-24-1300-cam-math-170.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-24-1430-war-stories-171.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-24-1600-cam-math-172.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-24-1730-founder-173.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-24-1900-anti-integration-174.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-25-0600-cam-math-176.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-25-0700-erp-workarounds-177.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-25-0800-war-stories-178.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-25-1000-cam-math-180.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-25-1100-industry-news-181.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-25-1200-cam-math-182.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-25-1300-erp-workarounds-183.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-25-1400-war-stories-184.md",
+      "truth_issues": [],
+      "style_issues": [
+        {
+          "type": "generic_hook",
+          "detail": "most property managers think cpa-reviewed cam reconciliations are what tenants h",
+          "verdict": "info"
+        }
+      ],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-25-1500-cam-math-185.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-25-1600-anti-integration-186.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-25-1800-cam-math-188.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-26-0700-erp-workarounds-192.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-26-0800-war-stories-193.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-26-0900-anti-integration-194.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-26-1100-industry-news-196.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-26-1200-cam-math-197.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-26-1300-erp-workarounds-198.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-26-1400-war-stories-199.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-26-1500-cam-math-200.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-26-1600-anti-integration-201.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-26-1800-cam-math-203.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-26-2000-engagement-205.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-27-0600-cam-math-206.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-27-0700-erp-workarounds-207.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-27-0800-war-stories-208.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-27-0900-anti-integration-209.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-27-1000-cam-math-210.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-27-1100-industry-news-211.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-27-1200-cam-math-212.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-27-1400-war-stories-214.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-27-1500-cam-math-215.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-27-1600-anti-integration-216.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-27-1800-cam-math-218.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-28-0600-cam-math-221.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-28-0700-erp-workarounds-222.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-28-0800-war-stories-223.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-28-0900-anti-integration-224.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-28-1100-industry-news-226.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-28-1200-cam-math-227.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-28-1300-erp-workarounds-228.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-28-1400-war-stories-229.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-28-1500-cam-math-230.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-28-1600-anti-integration-231.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-28-1800-cam-math-233.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-29-0600-cam-math-236.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-29-0700-erp-workarounds-237.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-29-0800-war-stories-238.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-29-0900-anti-integration-239.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-29-1000-cam-math-240.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-29-1100-industry-news-241.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-29-1200-cam-math-242.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-29-1300-erp-workarounds-243.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-29-1400-war-stories-244.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-29-1500-cam-math-245.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-29-1600-anti-integration-246.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-29-1800-cam-math-248.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-30-0700-cam-math-251.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-30-0830-war-stories-252.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-30-1000-cam-math-253.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-30-1130-anti-integration-254.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-30-1430-war-stories-256.md",
+      "truth_issues": [],
+      "style_issues": [
+        {
+          "type": "generic_hook",
+          "detail": "most property managers think a cam dispute starts when the tenant sends a letter",
+          "verdict": "info"
+        }
+      ],
+      "changed": false
+    },
+    {
+      "filename": "2026-05-30-1600-cam-math-257.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-30-1900-anti-integration-259.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-31-0700-cam-math-261.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-31-0830-war-stories-262.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-31-1000-cam-math-263.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-31-1130-anti-integration-264.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-31-1300-cam-math-265.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-31-1430-war-stories-266.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-31-1600-cam-math-267.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-05-31-1730-founder-268.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-06-01-0600-cam-math-271.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-06-01-0700-erp-workarounds-272.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-06-01-0800-war-stories-273.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-06-01-0900-anti-integration-274.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-06-01-1000-cam-math-275.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-06-01-1100-industry-news-276.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-06-01-1300-erp-workarounds-278.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-06-01-1400-war-stories-279.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-06-01-1500-cam-math-280.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-06-01-1600-anti-integration-281.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-06-01-1700-founder-282.md",
+      "truth_issues": [
+        {
+          "type": "invented_client",
+          "detail": "Matches pattern: one customer",
+          "verdict": "revise"
+        }
+      ],
+      "style_issues": [],
+      "changed": true
+    },
+    {
+      "filename": "2026-06-01-1800-cam-math-283.md",
+      "truth_issues": [],
+      "style_issues": [],
+      "changed": true
+    }
+  ]
+}

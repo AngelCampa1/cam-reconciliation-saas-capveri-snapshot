@@ -1,0 +1,53 @@
+{
+  "scenario": "cap_cumulative",
+  "description": "Cumulative cap - unused capacity carries forward linearly",
+  "cap_type": "cumulative",
+  "cap_rate": 0.05,
+  "base_year_expenses": 100000.0,
+  "years": [
+    {
+      "year": 1,
+      "actual_expenses": 100000.0,
+      "cumulative_max_from_base": 100000.0,
+      "cumulative_spent": 100000.0,
+      "banked_capacity": 0.0,
+      "billable_amount": 100000.0
+    },
+    {
+      "year": 2,
+      "actual_expenses": 107000.0,
+      "cumulative_max_from_base": 105000.0,
+      "prior_bank": 0.0,
+      "total_available": 105000.0,
+      "billable_amount": 105000.0,
+      "new_bank": 0.0,
+      "note": "Capped. No banking because fully utilized."
+    },
+    {
+      "year": 3,
+      "actual_expenses": 106000.0,
+      "cumulative_max_from_base": 110000.0,
+      "prior_bank": 0.0,
+      "total_available": 110000.0,
+      "billable_amount": 106000.0,
+      "new_bank": 4000.0,
+      "note": "Under cap. Bank $4000 unused capacity."
+    },
+    {
+      "year": 4,
+      "actual_expenses": 114480.0,
+      "cumulative_max_from_base": 115000.0,
+      "prior_bank": 4000.0,
+      "total_available": 119000.0,
+      "billable_amount": 114480.0,
+      "new_bank": 4520.0,
+      "note": "Uses banked capacity. Bank increases to $4520."
+    }
+  ],
+  "summary": {
+    "total_actual": 427480.0,
+    "total_billable": 425480.0,
+    "final_bank_balance": 4520.0,
+    "total_landlord_absorbed": 2000.0
+  }
+}

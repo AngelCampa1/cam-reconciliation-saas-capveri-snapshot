@@ -1,0 +1,14 @@
+{
+  "error_type": "data",
+  "description": "CSV with non-numeric amount values",
+  "parseable": true,
+  "expected_behavior": "Parser should handle non-numeric amounts by coercing to null/0",
+  "expected_warnings": [
+    "Row 2: Non-numeric amount 'INVALID'",
+    "Row 3: Invalid amount format '$1,200.50' (contains currency symbol)",
+    "Row 4: Non-numeric credit 'N/A'"
+  ],
+  "expected_rows": 5,
+  "valid_rows": 2,
+  "invalid_rows": 3
+}

@@ -1,0 +1,265 @@
+---
+title: "How to Evaluate Lease Accounting Software for CAM Reconciliation"
+description: "A buyer's guide to lease accounting software covering ASC 842 compliance, operating expense tracking, CAM recoveries, and what to look for beyond the basics."
+excerpt: "ASC 842 compliance is table stakes. The real differentiator for property managers is whether the software handles operating expense recoveries, gross-up calculations, and CAM reconciliation, not just right-of-use asset amortization."
+datePublished: "2026-04-24"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "technology"
+faq:
+  - q: "What is lease accounting software?"
+    a: "Lease accounting software automates compliance with ASC 842 (US GAAP) and IFRS 16 lease accounting standards, which require lessees to recognize most operating leases on the balance sheet as right-of-use assets and lease liabilities. For lessors (landlords and property managers), lease accounting software typically handles rent roll management, CAM charge billing, and operating expense recovery tracking. The distinction matters: lessee-focused tools (like those used by corporate real estate teams) and lessor-focused tools (like property accounting systems) solve different problems. Make sure you're evaluating the right category for your use case."
+  - q: "Does lease accounting software handle CAM reconciliation?"
+    a: "Some does, some doesn't. Lessee-focused lease accounting tools (primarily designed for ASC 842 balance sheet compliance) generally don't handle CAM reconciliation. They track rent payments and right-of-use assets, not expense recovery calculations. Lessor-focused tools and property management systems are more likely to handle CAM reconciliation. Even among those, capability varies: some handle simple pro-rata allocations but not gross-up calculations or cap structures. Always verify CAM-specific capabilities before purchasing. A dedicated CAM reconciliation tool like CapVeri may be a better fit than a general lease accounting system if CAM accuracy is your primary concern."
+  - q: "What is ASC 842 and why does it matter for property managers?"
+    a: "ASC 842 is the FASB lease accounting standard that took effect for public companies in 2019 and for most private companies in 2022. It requires lessees to put most leases on the balance sheet. For property managers and landlords (the lessors), ASC 842 doesn't directly change how you record rent income, but it affects your tenants. Some tenants, particularly larger corporations, will be more focused on how their lease terms are structured (fixed vs. variable payments, embedded leases in service agreements) because it affects their balance sheet presentation. Understanding ASC 842 helps you have more productive conversations with sophisticated tenants about lease structure and expense recovery mechanisms."
+  - q: "What features should property managers prioritize in lease accounting software?"
+    a: "For landlords and property managers, prioritize in this order: (1) operating expense recovery and CAM reconciliation accuracy (can it handle gross-up, caps, and custom exclusions?) (2) rent roll management and critical date alerts, (3) lease abstraction data storage with all CAM-relevant fields, (4) audit trail for billing calculations, (5) ASC 842/IFRS 16 compliance reports if your organization needs them for external reporting. Don't let the accounting standard compliance features crowd out evaluation of the property accounting fundamentals. Most PM firms care far more about accurate CAM billing than they do about right-of-use asset amortization schedules."
+  - q: "How much does lease accounting software cost?"
+    a: "Pricing varies widely by product category and portfolio size. Lessee-focused ASC 842 compliance tools for corporate real estate typically run $5,000 to $30,000+ per year for enterprise deployments. Property management platforms with integrated lease accounting (like Yardi or MRI) are priced per unit and typically run $5 to $15 per unit per month at mid-market scale, with significant variation based on modules selected. Purpose-built CAM reconciliation tools are typically priced per property or per portfolio, with options starting under $100/month for smaller portfolios. The right comparison isn't just price. It's cost per reconciliation error caught, which is hard to quantify but real."
+---
+
+The decision criterion for lease accounting software is not "does it produce ASC 842 reports." Every serious product on the market does that. The real question is whether it handles the operational complexity of managing a commercial portfolio (rent escalations, CAM recovery calculations, gross-up mechanics, and cap structures) accurately enough to trust without manual verification.
+
+That's a much higher bar than most buyers apply, and it's where most disappointment happens after go-live.
+
+## Why "Lease Accounting Software" Means Different Things to Different Buyers
+
+There are two distinct software categories that both go by the name "lease accounting software":
+
+**Category 1: ASC 842 / IFRS 16 compliance tools**. These are primarily used by corporate real estate and accounting teams at companies that lease space (the tenants). They track lease liabilities, right-of-use assets, discount rates, and generate the journal entries and disclosures required by accounting standards. They're not designed to manage a landlord's portfolio.
+
+**Category 2: Property accounting and lease administration systems**. These are used by landlords, property managers, and their accounting teams. They track rent rolls, bill tenants, manage CAM reconciliations, and produce property-level financial statements. They may have some ASC 842 features, but that's not their primary purpose.
+
+If you're a property manager trying to improve CAM reconciliation accuracy, you're in Category 2. Make sure the products you're evaluating are designed for it.
+
+This guide focuses on Category 2: what landlords and property managers need when evaluating lease accounting and property accounting software for a commercial portfolio.
+
+---
+
+## The Evaluation Framework: Start with CAM
+
+Most software evaluations start with a feature list. That's backwards. Start with your most painful operational problems.
+
+For most commercial property managers, the ranking looks something like this:
+
+1. **CAM reconciliation accuracy:** getting the annual statement right without manual spreadsheet work
+2. **Lease data management:** storing and maintaining all the lease terms that drive billing
+3. **Critical date management:** not missing renewal notices, option deadlines, or rent escalations
+4. **Financial reporting:** property-level income statements, budget vs. actual, recovery ratios
+5. **Compliance reporting:** ASC 842, tax, audit support
+
+If you weight these in the wrong order (putting ASC 842 compliance first because it is what your CFO asked about), you will end up with a system that handles the accounting standards beautifully but still requires someone to manually reconcile CAM in Excel every year.
+
+---
+
+## CAM Reconciliation Capabilities: What to Verify
+
+This is the most important evaluation area and the one where most demos gloss over the details. Demand specifics.
+
+### Gross-Up Calculation
+
+Ask to see the gross-up calculation in the system, not in a slide deck. Make the vendor walk you through:
+
+- Where does the occupancy percentage come from? Is it set per lease or globally?
+- Which expenses does the system treat as variable (and thus eligible for gross-up)?
+- Can you configure which expenses are grossed up on a lease-by-lease basis?
+- Does the system show the grossed-up pool separately from the actual pool in reports?
+
+Many systems claim to handle gross-up but store the deemed occupancy percentage as a property-level setting rather than a lease-level setting. That is wrong. Different leases in the same building can have different gross-up terms.
+
+For the mechanics of how this should work, see our [CAM gross-up calculation guide](/resources/cam-gross-up-calculation-guide).
+
+### Expense Cap Management
+
+This is where more systems fail than vendors will admit. Ask:
+
+- Does the system support both cumulative and non-cumulative cap structures?
+- Can you configure which expense categories are subject to the cap and which are excluded (controllable vs. uncapped)?
+- How does the system calculate the base year amount for base-year caps?
+- Does the system track cap carryforward for cumulative caps automatically?
+
+If the demo system shows you a single "cap percentage" field without the cumulative/non-cumulative distinction, that's a significant limitation. The difference between these two structures can amount to tens of thousands of dollars per tenant over a 10-year lease.
+
+See [CAM cap types](/resources/cam-cap-types) for the full explanation of why this matters.
+
+### Pro-Rata Share Handling
+
+- Can the system store a variable denominator (one that changes with occupancy) or only a fixed denominator?
+- Does it support both formula-based and stated pro-rata shares?
+- How does the system handle pro-rata share changes mid-year (expansion, contraction)?
+
+### Exclusion Management
+
+- Can you store a custom exclusion list per lease?
+- Does the system apply exclusions before calculating allocations?
+- Is there an audit trail showing which expenses were excluded and why?
+
+---
+
+## Lease Administration Data Quality
+
+The best CAM calculation engine in the world fails if the lease data feeding it is wrong. Evaluate how the system handles lease data:
+
+### Data Capture Completeness
+
+Run through the fields from our [lease abstract template guide](/resources/lease-abstract-template-guide) and verify the system has fields for all of them. At minimum:
+
+- Gross-up provision (occupancy %, applicable expense categories)
+- Cap structure (type, percentage, cumulative/non-cumulative, controllable expense definition)
+- Full exclusion list storage
+- Pro-rata share formula and denominator definition
+- Critical dates with alert functionality
+
+Systems that store only basic lease information (term, rent, RSF) and handle CAM through manual overrides are not lease administration systems. They are rent roll trackers.
+
+### Amendment Tracking
+
+Does the system maintain a full history of lease changes? Can you see what a field contained before an amendment? This matters for audit defense.
+
+### Data Import
+
+If you're migrating from Yardi, MRI, or spreadsheets, how does the import process work? What data mappings are required? Can you import lease abstracts or do you have to re-enter everything manually?
+
+See [/resources/data-migration-off-excel](/resources/data-migration-off-excel) for what to expect in a data migration.
+
+---
+
+## The Major Product Categories and Their CAM Tradeoffs
+
+Rather than reviewing specific vendors (pricing and capabilities change quarterly), here's how the categories compare on CAM-specific functionality:
+
+### Enterprise Property Management Platforms (Yardi Voyager, MRI Software)
+
+**CAM strengths**: Battle-tested CAM reconciliation modules with support for gross-up, caps, and complex allocation structures. Large support ecosystems and training resources. Integrates with AP and GL naturally.
+
+**CAM weaknesses**: Configuration complexity is high. Getting gross-up and cap structures set up correctly often requires a consultant. The reconciliation module can produce incorrect results if the lease setup is wrong, and the system won't tell you it's wrong. Annual reconciliation is often still partially manual despite the software.
+
+**Best for**: Portfolios of 200+ units with dedicated property accounting staff and budget for implementation.
+
+**CAM-specific note**: These systems are capable but not forgiving. They require correct lease setup to produce correct results. Many firms running Yardi or MRI still reconcile CAM in spreadsheets because the system configuration is too complex to maintain accurately.
+
+### Mid-Market Property Management Software (AppFolio, Buildium, Propertyware)
+
+**CAM strengths**: Much lower implementation complexity than enterprise platforms. Good for standard recoveries.
+
+**CAM weaknesses**: Limited support for complex CAM structures (non-cumulative caps, per-lease gross-up settings, multi-tier exclusion lists). These systems are designed for residential and simple commercial. If your leases have negotiated CAM provisions, you will run into limitations quickly.
+
+**Best for**: Smaller commercial portfolios with straightforward NNN leases, or mixed residential/commercial portfolios where CAM complexity is low.
+
+### Dedicated Lease Administration Systems (LeaseQuery, CoStar Real Estate Manager, Visual Lease)
+
+**CAM strengths**: Strong lease data management with good field coverage for complex lease terms. ASC 842/IFRS 16 compliance built in.
+
+**CAM weaknesses**: These are primarily lessee-focused platforms. CAM billing and reconciliation is not their core use case. If you're a landlord, verify carefully whether the system handles lessor-side CAM reconciliation or primarily handles tenant-side lease accounting.
+
+**Best for**: Corporate real estate teams managing lease portfolios as lessees. Not typically the right choice for landlords.
+
+### Dedicated CAM Reconciliation Tools (CapVeri)
+
+**CAM strengths**: Purpose-built for the reconciliation workflow. Handles gross-up, caps, exclusions, and pro-rata share with lease-level configuration. Produces audit-ready statements. Can work alongside existing property management systems rather than replacing them.
+
+**CAM weaknesses**: Not a full property management system. If you need AP, maintenance management, and tenant portal in addition to CAM reconciliation, you'll still need a core PM platform.
+
+**Best for**: Property managers who need accurate CAM reconciliation without a full platform replacement. Particularly effective for portfolios using Yardi or MRI who are frustrated with the reconciliation module complexity.
+
+For a side-by-side comparison of CAM-specific software options, see [/blog/cam-reconciliation-software-comparison-2026](/blog/cam-reconciliation-software-comparison-2026).
+
+---
+
+## ASC 842 Features: What Actually Matters for Property Managers
+
+Most landlords and property managers don't need deep ASC 842 functionality. Here's what's actually relevant:
+
+**What you probably need**:
+- Understanding that your tenants' ASC 842 reporting may affect how they want to structure leases (shorter terms, more variable payments)
+- Ability to produce the supporting schedules that tenants need for their ASC 842 analysis (detailed rent and CAM schedules)
+- If you lease corporate office space yourself (not from you, but that you occupy), ASC 842 compliance for your own leases
+
+**What you probably don't need** (unless you have external reporting requirements):
+- Right-of-use asset amortization schedules
+- Lease liability rollforward reports
+- IFRS 16 dual reporting
+
+If a vendor is spending 60% of your demo on ASC 842 features and 20% on CAM reconciliation, ask yourself which problem you're actually trying to solve.
+
+---
+
+## Integration Requirements
+
+Before finalizing a vendor, map out your integration requirements:
+
+| System | Integration Type | Minimum Requirement |
+|--------|-----------------|---------------------|
+| General ledger / ERP | Expense data import | Automated GL import with account mapping |
+| Existing property management system | Lease data sync | API or file-based import |
+| Document management | Lease document storage | Link to stored PDFs |
+| AP system | Invoice approval | Depends on workflow |
+
+The most important integration is usually the GL import: getting actual expense data from your accounting system into the CAM pool without manual re-entry. Verify that the import handles account mapping flexibility (your chart of accounts won't match the vendor's default mapping).
+
+If you're running Yardi or MRI and evaluating whether to add a dedicated reconciliation tool, see [/blog/cam-software-works-with-yardi](/blog/cam-software-works-with-yardi) for how that integration typically works.
+
+---
+
+## Pricing and TCO
+
+The sticker price is rarely the full cost. Factor in:
+
+**Implementation**: Enterprise platforms often cost 50-100% of first-year licensing just for implementation. Mid-market tools are lower. Purpose-built reconciliation tools are typically lower still, under $5,000 for a portfolio of 50 properties.
+
+**Data migration**: If you're moving from spreadsheets or a legacy system, someone has to clean and migrate your lease data. This takes more time than vendors typically quote.
+
+**Training**: How long before your team is self-sufficient? Enterprise platforms typically require 3-6 months of active training. Purpose-built tools designed around the reconciliation workflow are typically operational within weeks.
+
+**Annual increases**: SaaS pricing typically increases 5-15% annually. Get multi-year pricing locked if you can.
+
+**Per-property vs. per-unit pricing**: Understand the scaling model before you sign. A $500/month tool that charges per unit might be fine at 50 units and expensive at 500.
+
+---
+
+## Evaluation Process Recommendation
+
+Here's a practical evaluation process that surfaces CAM capability gaps before you sign:
+
+1. **Define your must-haves** from the CAM section above. For each must-have, write a specific test scenario.
+
+2. **Run a scripted demo** using your actual lease data. Don't let vendors demo with their sample data. Use a real lease from your portfolio with a non-standard gross-up or cap structure.
+
+3. **Ask for customer references** at similar portfolio size and complexity. Specifically ask those references about CAM reconciliation accuracy and the annual reconciliation process.
+
+4. **Request a pilot** on 2-3 properties before full commitment. Most vendors will accommodate this for qualified buyers.
+
+5. **Evaluate the audit trail**: Run a reconciliation and then ask "if a tenant audited this statement, what documentation does the system produce to support it?"
+
+For a downloadable version of evaluation criteria with scoring guidance, see our [CAM software evaluation checklist](/resources/cam-software-evaluation-checklist).
+
+---
+
+## The Build vs. Buy Question
+
+For some firms, particularly those with complex portfolio structures or very specific workflow requirements, custom-built reconciliation tools are on the table. This is rarely the right answer, but it is worth acknowledging.
+
+The case for buying: maintaining custom software requires dedicated engineering resources; product vendors have invested years of domain expertise in edge cases you haven't encountered yet; support and bug fixes are included in the subscription.
+
+The case for building: very specific integration requirements; unique portfolio structure that off-the-shelf software can't handle; internal technical capability.
+
+For a realistic assessment of this decision, see [/resources/cam-build-vs-buy](/resources/cam-build-vs-buy) and [/blog/business-case-cam-software](/blog/business-case-cam-software).
+
+---
+
+## Bottom Line
+
+The right lease accounting software for a property manager is the one that gets CAM reconciliation right, not the one with the most impressive ASC 842 compliance deck.
+
+Evaluate gross-up mechanics, cap structure handling, and exclusion list flexibility before you evaluate anything else. Use scripted demos with your actual lease data. Ask for references who have audited their reconciliations.
+
+If you're running more than 30 leases and still doing CAM reconciliation in Excel, you have a real cost and risk exposure from errors. See [/blog/death-of-spreadsheet-cam](/blog/death-of-spreadsheet-cam) for what that exposure typically looks like.
+
+And if you're unsure what your current reconciliation process is missing, [start with the audit risk quiz](/tools/audit-risk-quiz). It takes 5 minutes and surfaces the most common gaps.
+
+## Sources
+
+1. [Deloitte DART - Roadmap: Leases](https://dart.deloitte.com/USDART/home/publications/roadmap/leasing?id=us%3A2el%3A3dp%3Armleases%3Aeng%3Aaud%3A121823%3Aiaspl)
+2. [Deloitte - Lease Accounting Guide: Roadmap for ASC 842](https://www.deloitte.com/us/en/services/audit-assurance/articles/roadmap-to-applying-the-new-leasing-standard.html?icid=top_roadmap-to-applying-the-new-leasing-standard)

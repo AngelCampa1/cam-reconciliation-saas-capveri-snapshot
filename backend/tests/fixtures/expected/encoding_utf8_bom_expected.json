@@ -1,0 +1,12 @@
+{
+  "error_type": "encoding",
+  "description": "CSV file with UTF-8 BOM (Byte Order Mark)",
+  "parseable": true,
+  "expected_behavior": "Parser should handle BOM gracefully by detecting and skipping it",
+  "expected_warnings": [
+    "UTF-8 BOM detected and removed"
+  ],
+  "expected_rows": 2,
+  "valid_rows": 2,
+  "invalid_rows": 0
+}

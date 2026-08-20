@@ -1,0 +1,176 @@
+---
+title: "How to Export CAM Reconciliation Data from Yardi Voyager"
+description: "The Yardi Voyager export playbook for CAM reconciliation: which reports to run, which fields to keep, and how to fix incomplete or misleading exports before validation."
+datePublished: "2026-03-17"
+dateModified: "2026-04-17"
+author: "Angel Campa"
+buttonText: "Read export guide"
+order: 73
+faq:
+  - q: "What Yardi reports do I need for CAM reconciliation?"
+    a: "In most cases you need three core exports: Recovery Analysis, General Ledger Analytics, and Rent Roll with Lease Charges. Charge Schedule is the main supporting export when you need invoice-level estimate history."
+  - q: "Why does my Yardi export look right but still fail reconciliation?"
+    a: "Because Yardi exports often fail in the setup layer, not the math layer. The common causes are summary mode instead of detail mode, posting-date filters instead of transaction-date logic, missing recovery-pool mappings, or Excel files that still contain header rows and totals."
+---
+
+<Alert type="info" title="Quick Answer">
+For Yardi Voyager, export **Recovery Analysis**, **General Ledger Analytics**, and **Rent Roll with Lease Charges** for the same property and reconciliation year. Use detail-level reports, flatten the files to CSV, and verify the export is complete before you trust any reconciliation totals.
+</Alert>
+
+This guide is for property accountants and controllers who need a defensible export workflow, not just a report that "looks close enough." If the file coming out of Yardi is incomplete, every downstream variance discussion gets harder.
+
+## The Yardi Export Stack
+
+| Report | Why you need it | Menu path |
+|---|---|---|
+| Recovery Analysis | Shows what Yardi thinks each tenant owes by pool. | Commercial -> Recovery -> Recovery Analysis |
+| General Ledger Analytics | Shows the expense detail feeding the recovery pools. | Accounting -> General Ledger Analytics |
+| Rent Roll with Lease Charges | Confirms tenant roster, square footage, and lease timing. | Leasing -> Reports -> Rent Roll with Lease Charges |
+| Charge Schedule | Useful for tenant-level estimate billing support. | Commercial -> Recovery -> Charge Schedule |
+
+If your team skips one of the first three, you are no longer validating a full reconciliation.
+
+## Before You Export
+
+Confirm four things first:
+
+1. the property code is consistent across all reports;
+2. the reconciliation period is the same on every export;
+3. the recovery pools are mapped correctly in Yardi;
+4. the person exporting knows whether your close process relies on posting date or transaction date.
+
+Those checks prevent most "Yardi is wrong" escalations.
+
+## Export 1: Recovery Analysis
+
+This is the main reconciliation report. It is where Yardi brings together actual expenses, estimated billings, and tenant allocation logic.
+
+<Steps>
+  <Step title="Open Recovery Analysis">Go to Commercial -> Recovery -> Recovery Analysis.</Step>
+  <Step title="Choose the property and year">Set the property and use the full reconciliation period, typically January 1 through December 31.</Step>
+  <Step title="Select all relevant recovery pools">Include CAM, tax, insurance, and any other recoverable pools that should be reconciled together.</Step>
+  <Step title="Use detail mode">Run the report in detail mode. Summary mode hides the line items you need when something does not tie.</Step>
+  <Step title="Export to Excel and flatten to CSV">Use the spreadsheet icon, then remove title rows, subtotal rows, and footer rows before saving to CSV.</Step>
+</Steps>
+
+**What to check immediately**
+
+- Tenant names and suites are populated.
+- Pool totals are present by tenant.
+- Actual, billed, and variance columns all exist.
+- The file is flat data, not paginated report output.
+
+## Export 2: General Ledger Analytics
+
+This report proves what actually hit the expense pool.
+
+<Steps>
+  <Step title="Open General Ledger Analytics">Go to Accounting -> General Ledger Analytics.</Step>
+  <Step title="Use the full reconciliation year">Match the exact period used in Recovery Analysis.</Step>
+  <Step title="Set the correct account scope">Include all recoverable operating accounts. Do not assume an old saved filter still covers the current chart of accounts.</Step>
+  <Step title="Use transaction-level detail">The output should include account, date, description, and debit or credit detail.</Step>
+  <Step title="Export and flatten">Export to Excel, then save a clean CSV after removing non-data rows.</Step>
+</Steps>
+
+**What to check immediately**
+
+- Account codes are visible.
+- Transaction descriptions and dates are visible.
+- Manual journal entries are not missing.
+- Totals broadly agree with the financial statements for the same period.
+
+## Export 3: Rent Roll with Lease Charges
+
+This file drives denominator logic and tenant roster validation.
+
+<Steps>
+  <Step title="Open the rent roll report">Go to Leasing -> Reports -> Rent Roll with Lease Charges.</Step>
+  <Step title="Set the as-of date">Use year-end unless you are testing a mid-year snapshot intentionally.</Step>
+  <Step title="Include lease fields">Make sure rentable SF, lease dates, unit or suite, and tenant name are in the output.</Step>
+  <Step title="Export and flatten">Export to Excel and save a clean CSV after stripping any report headers.</Step>
+</Steps>
+
+**What to check immediately**
+
+- Rentable SF exists for every active tenant.
+- Lease start and end dates are populated.
+- Suite labels match the recovery export.
+- Mid-year move-ins and move-outs are represented correctly.
+
+## When to Use Charge Schedule
+
+Use Charge Schedule when the problem is "what did we bill?" rather than "what did we spend?" It is the best supporting export for:
+
+- mid-year estimate changes;
+- charge-code disputes;
+- invoice-level audit support;
+- proving that the billed side of the reconciliation moved when the budget changed.
+
+## What Goes Wrong in Practice
+
+### 1. Summary mode hides the problem
+
+The report totals look plausible, but the export has no line-item support. When a tenant asks why one pool jumped, your team has nothing to trace.
+
+### 2. Posting-date logic cuts off year-end accruals
+
+A December expense posted in January may belong in the reconciliation year. If the export is filtered the wrong way, Yardi excludes it and your statements do not tie to final close.
+
+### 3. Recovery pool mappings are stale
+
+The GL has a recoverable expense, but the recovery setup never mapped that account into the pool. Yardi is not "miscalculating." It is calculating from incomplete setup.
+
+### 4. The Excel file still contains report furniture
+
+Yardi header rows, page totals, and title bands often survive the export. That is fine for human reading and bad for machine validation.
+
+### 5. Saved filters are trusted too long
+
+The filter worked last year. The chart of accounts changed this year. The export quietly drops the new accounts.
+
+## The QA Sequence That Saves Time
+
+Run this in order:
+
+1. compare GL totals to the same-period financial statements;
+2. confirm Recovery Analysis is detail-level and pool-complete;
+3. confirm the rent roll has the expected tenant roster and square footage;
+4. only then inspect gross-up, caps, or pro-rata math.
+
+That order is faster than jumping straight into formulas.
+
+## Yardi Export Checklist
+
+- Same property on all files
+- Same reconciliation period on all files
+- Detail-level output
+- Flat CSV, not a report view
+- Recoverable GL accounts included
+- Year-end accrual logic understood
+- Rent roll includes rentable SF and lease dates
+
+If one box is unchecked, fix the export before you debug the reconciliation.
+
+## Related Resources
+
+- [CAM Export Guide](/resources/export-guide)
+- [How to Export CAM Data from MRI Software](/resources/export-cam-mri)
+- [CAM Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide)
+- [Pro Rata Share Calculation Guide](/resources/pro-rata-share-calculation)
+
+<CTABox
+  title="Run your Yardi files through a real validation pass"
+  description="Upload Recovery Analysis, GL detail, and rent roll exports from Voyager. CapVeri maps the files together, checks the setup layer, and flags the gaps before a bad statement goes out."
+  utmContent="u_cta"
+  buttonText="Start Free Trial"
+/>
+
+<FAQSection items={[
+  { q: "What Yardi reports do I need for CAM reconciliation?", a: "In most cases you need three core exports: Recovery Analysis, General Ledger Analytics, and Rent Roll with Lease Charges. Charge Schedule is the main supporting export when you need invoice-level estimate history." },
+  { q: "Why does my Yardi export look right but still fail reconciliation?", a: "Because Yardi exports often fail in the setup layer, not the math layer. The common causes are summary mode instead of detail mode, posting-date filters instead of transaction-date logic, missing recovery-pool mappings, or Excel files that still contain header rows and totals." }
+]} />
+
+## Sources
+
+1. [Yardi - Voyager Commercial property management](https://www.yardi.com/products/yardi-voyager-commercial/)
+2. [CapVeri Sources & Research - Yardi interface program pricing](/sources#yardi-interface-program-pricing)

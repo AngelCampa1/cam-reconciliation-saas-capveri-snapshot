@@ -1,0 +1,17 @@
+{% extends "_base.html" %}
+{% from "_components.html" import button with context %}
+{% block content %}
+<h2 style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 22px; margin: 0 0 {{ t.SPACE_MD }};">
+  Dispute Status Update
+</h2>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  Hello {{ tenant_name }},
+</p>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  Your dispute for <strong>{{ property_name }}</strong> has been updated:
+</p>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_LG }};">
+  <strong>Status:</strong> {{ dispute_status }}
+</p>
+{{ button(portal_url, "View Details") }}
+{% endblock %}

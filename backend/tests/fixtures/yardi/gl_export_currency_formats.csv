@@ -1,0 +1,12 @@
+Yardi Systems General Ledger Export
+Property: Test Property
+Run Date: 12/31/2024
+Period: 01/01/2024 - 12/31/2024
+
+Account,Description,Date,Debit,Credit,Balance
+6000-100,Utilities - Main,2024-01-15,"1,234.56",,
+6000-200,Utilities - Parking,2024-01-16,,567.89,
+6100-100,Janitorial Services,2024-01-17,"2,500.00 ",,
+6100-200,Janitorial Supplies,2024-01-18,," 1,000.50 ",
+7000-100,Property Taxes,2024-01-19,"50,000.00",,
+7000-200,Property Insurance,2024-01-20,,"25,000.00",

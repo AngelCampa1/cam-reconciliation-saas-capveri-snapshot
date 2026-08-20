@@ -1,0 +1,15 @@
+{
+  "scenario": "edge_zero_prorate",
+  "description": "Zero pro-rata share - configuration error",
+  "inputs": {
+    "expense_increase": 15000.0,
+    "pro_rata_share": 0.0
+  },
+  "expected_behavior": "ERROR",
+  "expected_error": {
+    "type": "ValidationError",
+    "message": "Pro-rata share must be greater than zero",
+    "field": "pro_rata_share"
+  },
+  "note": "System should reject zero or negative pro-rata shares during lease creation"
+}

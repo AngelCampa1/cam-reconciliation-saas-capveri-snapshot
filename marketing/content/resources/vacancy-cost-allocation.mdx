@@ -1,0 +1,268 @@
+---
+title: "Vacancy Cost Allocation: Who Pays When Space Is Empty"
+description: "The three models for allocating CAM costs during vacancy: gross-up, absorption, and direct allocation. When each applies, how lease language determines the model, and the financial impact at different vacancy levels."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 43
+faq:
+  - q: "What are the three vacancy cost allocation models in CAM?"
+    a: "Gross-up adjusts variable expenses upward to a target occupancy threshold, spreading vacancy costs across all tenants proportionally. Absorption means the landlord bears 100% of the vacant space's share of CAM. Direct allocation charges each tenant only for their proportional share of actual expenses with no vacancy adjustment. Most commercial leases use gross-up; the other models apply when the lease is silent or explicitly assigns vacancy risk to the landlord."
+  - q: "How does gross-up work for vacancy cost allocation?"
+    a: "The gross-up formula divides variable expenses by actual occupancy and multiplies by the target occupancy threshold (typically 90-95%). This increases the expense pool to approximate what it would cost if the building were at the target occupancy. Only variable expenses are grossed up; fixed costs pass through at actuals. The landlord still absorbs the gap between the gross-up threshold and 100% occupancy."
+  - q: "When does the landlord absorb all vacancy costs?"
+    a: "The landlord absorbs all vacancy costs when the lease has no gross-up clause and uses total building RSF as the pro-rata denominator. Each tenant's share is calculated on the full building, but no one pays the vacant space's share. The landlord also absorbs costs when actual occupancy exceeds the gross-up threshold, since gross-up does not apply above the threshold."
+  - q: "How much does vacancy cost allocation affect NOI?"
+    a: "On a 200,000 RSF building with $700,000 in variable CAM expenses at 75% occupancy, the difference between full absorption and gross-up to 95% is $163,333 annually. At 60% occupancy, the difference grows to $408,333. Vacancy cost allocation is one of the largest determinants of net operating income for properties below 85% occupancy."
+---
+
+<Alert type="info" title="Quick Answer">
+When space is vacant, someone pays for the CAM costs attributable to that space. The three allocation models: gross-up (tenants share the normalized cost), absorption (landlord bears it), and direct allocation (tenants pay only their actual share, landlord absorbs the rest). On a 200,000 RSF building at 75% occupancy with $700,000 in variable costs, the difference between absorption and gross-up to 95% is $163,333 per year. The lease determines which model applies.
+</Alert>
+
+A 200,000 RSF building at 75% occupancy still needs its common areas maintained, its parking lot plowed, and its HVAC system running. The 50,000 RSF of vacant space generates zero revenue but still consumes building services. The question every controller faces at reconciliation: who pays for the vacant space's share?
+
+The answer is never simple because it depends on three variables that interact: what the lease says about gross-up, how the lease defines the pro-rata denominator, and whether expenses are classified as fixed or variable. Get any one of those wrong and the billing is either overbilling tenants (audit finding) or under-recovering for the landlord (NOI loss).
+
+## Model 1: Gross-Up (Most Common)
+
+Gross-up is the standard mechanism for vacancy cost allocation in institutional-quality commercial leases. The concept: adjust variable expenses upward to what they would be at a target occupancy level, then allocate the adjusted pool to tenants.
+
+### How It Works
+
+Start with a concrete example. A 200,000 RSF Class B office building:
+- Actual occupancy: 75% (150,000 RSF leased)
+- Fixed expenses (taxes, insurance): $800,000
+- Variable expenses (janitorial, utilities, landscaping, security): $700,000
+- Gross-up threshold per lease: 95%
+
+**Step 1: Gross up variable expenses only.**
+
+```
+Grossed-up variable = $700,000 / 0.75 x 0.95 = $886,667
+```
+
+**Step 2: Add fixed expenses at actuals.**
+
+```
+Total adjusted pool = $800,000 + $886,667 = $1,686,667
+```
+
+**Step 3: Compare to unadjusted pool.**
+
+```
+Unadjusted pool = $800,000 + $700,000 = $1,500,000
+Gross-up addition = $186,667
+```
+
+**Step 4: Allocate to tenants by pro-rata share.**
+
+A tenant with 20,000 RSF (10% share based on 200,000 RSF denominator):
+- Without gross-up: $1,500,000 x 10% = $150,000
+- With gross-up: $1,686,667 x 10% = $168,667
+- Difference: $18,667
+
+The $18,667 is the tenant's share of normalized vacancy costs for variable expenses. The landlord still absorbs the gap between 95% and 100% occupancy, plus 100% of the fixed cost share attributable to vacant space.
+
+### What the Landlord Still Absorbs
+
+Gross-up does not make the landlord whole. It covers the variable cost gap between actual occupancy and the threshold, but three components remain unrecovered:
+
+| Component | Amount | Why |
+|-----------|--------|-----|
+| Variable costs above 95% threshold | $700,000 / 0.75 x 0.05 = $46,667 | Gross-up stops at the threshold |
+| Fixed cost share of vacant space | $800,000 x 25% = $200,000 | Fixed costs are never grossed up |
+| Reduced rent from vacant suites | Varies | Not a CAM issue but compounds the NOI hit |
+
+Total landlord absorption at 75% occupancy even with gross-up: **$246,667** on this building. Without gross-up, the landlord absorbs $246,667 + $186,667 = $433,334.
+
+### Gross-Up Constraints
+
+The gross-up amount must never exceed what expenses would actually be at 100% occupancy. If the building would spend $933,333 on variable costs at full occupancy ($700,000 / 0.75), the grossed-up amount of $886,667 passes this test. But if someone applies gross-up to fixed expenses or uses the wrong formula, the adjusted pool can exceed the 100% occupancy cost, which is an overbilling error.
+
+See the full calculation methodology at [/resources/cam-gross-up-calculation-guide](/resources/cam-gross-up-calculation-guide).
+
+## Model 2: Absorption (Landlord Bears All)
+
+Under the absorption model, the landlord pays 100% of the CAM costs attributable to vacant space. Tenants pay only their pro-rata share of actual expenses based on total building area.
+
+### How It Works
+
+Same building: 200,000 RSF, 75% occupied, $1,500,000 total expenses.
+
+The 20,000 RSF tenant (10% share):
+- Tenant pays: $1,500,000 x 10% = $150,000
+
+The landlord absorbs the remaining 25% not covered by tenant payments. Whether this is explicit depends on the lease structure:
+
+**If the denominator is total building RSF (200,000):** Tenant shares sum to 75%. The landlord collects $1,125,000 and absorbs $375,000.
+
+**If the denominator is occupied RSF (150,000):** The same tenant's share becomes 20,000 / 150,000 = 13.33%. They pay $200,000. All tenants collectively pay 100% of expenses. The landlord absorbs nothing through CAM but loses the rent on vacant space.
+
+The denominator definition determines whether absorption is explicit (landlord covers a share gap) or implicit (tenants cover 100% of expenses on a smaller denominator, but the denominator itself is smaller because of vacancy).
+
+### When Absorption Applies
+
+Absorption is the default when:
+- The lease has no gross-up clause
+- The lease uses total building RSF as the denominator
+- Both conditions above are met
+
+It also applies to fixed expenses in any lease, since fixed costs are never subject to gross-up. Even in a gross-up lease, the landlord absorbs 100% of the fixed cost share for vacant space.
+
+### The Financial Impact
+
+| Occupancy | Total Expenses | Tenant Recovery (no gross-up) | Landlord Absorbs |
+|-----------|---------------|------------------------------|-----------------|
+| 95% | $1,500,000 | $1,425,000 | $75,000 |
+| 85% | $1,500,000 | $1,275,000 | $225,000 |
+| 75% | $1,500,000 | $1,125,000 | $375,000 |
+| 60% | $1,500,000 | $900,000 | $600,000 |
+
+At 60% occupancy with full absorption, the landlord loses $600,000 in CAM recovery on top of the lost rent from vacant suites. This is why institutional landlords insist on gross-up clauses, and why gross-up thresholds matter.
+
+## Model 3: Direct Allocation
+
+Direct allocation charges each tenant only for their proportional share of expenses that directly relate to their occupancy. Unlike gross-up, it does not normalize expenses upward. Unlike absorption on total RSF, it does not leave a gap.
+
+### How It Works
+
+The denominator is **occupied RSF only**. Each tenant's share is calculated against occupied space, not total building space.
+
+Same building at 75% occupancy:
+
+| Tenant | RSF | Share (of 150,000 occupied) | CAM Charge |
+|--------|-----|---------------------------|------------|
+| A | 20,000 | 13.33% | $200,000 |
+| B | 35,000 | 23.33% | $350,000 |
+| C | 15,000 | 10.00% | $150,000 |
+| Others | 80,000 | 53.33% | $800,000 |
+| **Total** | **150,000** | **100%** | **$1,500,000** |
+
+The full $1,500,000 is recovered from tenants. The landlord absorbs nothing through CAM.
+
+### The Catch
+
+Tenant A's CAM charge is $200,000 under direct allocation versus $150,000 under absorption (total RSF denominator). That is a 33% increase, and the increase grows as vacancy grows. At 60% occupancy, Tenant A's share becomes $166,667 under direct allocation versus $150,000 under absorption.
+
+Tenants resist direct allocation because their costs increase when neighbors leave, which is completely outside their control. This is functionally the same complaint tenants have about gross-up, but more extreme because direct allocation passes through 100% of costs while gross-up only adjusts variable expenses to a threshold.
+
+### When Direct Allocation Applies
+
+Direct allocation is most common in:
+- Small multi-tenant properties without institutional lease forms
+- Older leases that predate gross-up clause standardization
+- Situations where the lease defines the denominator as "occupied" or "leased" area
+- Net lease structures where the landlord passes through all costs without adjustment
+
+It is the simplest model to calculate but produces the most volatile tenant bills.
+
+## Side-by-Side Comparison at Different Vacancy Levels
+
+For a 200,000 RSF building with $800,000 fixed and $700,000 variable expenses, showing the impact on a 20,000 RSF tenant (10% of total RSF):
+
+### At 85% Occupancy
+
+| Model | Tenant's CAM | Landlord Absorbs (total building) |
+|-------|-------------|----------------------------------|
+| Gross-up to 95% | $161,765 | $161,765 |
+| Absorption (total RSF denom) | $150,000 | $225,000 |
+| Direct allocation (occupied denom) | $176,471 | $0 |
+
+### At 75% Occupancy
+
+| Model | Tenant's CAM | Landlord Absorbs (total building) |
+|-------|-------------|----------------------------------|
+| Gross-up to 95% | $168,667 | $246,667 |
+| Absorption (total RSF denom) | $150,000 | $375,000 |
+| Direct allocation (occupied denom) | $200,000 | $0 |
+
+### At 60% Occupancy
+
+| Model | Tenant's CAM | Landlord Absorbs (total building) |
+|-------|-------------|----------------------------------|
+| Gross-up to 95% | $179,167 | $363,333 |
+| Absorption (total RSF denom) | $150,000 | $600,000 |
+| Direct allocation (occupied denom) | $250,000 | $0 |
+
+The pattern is clear: as vacancy increases, direct allocation transfers more cost to tenants, absorption transfers more to the landlord, and gross-up splits the difference based on the threshold and the fixed/variable expense mix.
+
+At 60% occupancy, the spread between direct allocation and absorption for this single tenant is $100,000 per year. Across 10 tenants over a 5-year vacancy period, the model choice determines whether the landlord absorbs $3M or $0 in unrecovered CAM.
+
+## How Lease Language Determines the Model
+
+The model is rarely stated explicitly. Instead, it is the interaction of two or three lease clauses:
+
+### Clause 1: The Gross-Up Provision
+
+If present, gross-up governs variable expense allocation. The threshold (90%, 95%, 100%) determines how much vacancy cost shifts to tenants.
+
+**"Variable operating expenses shall be adjusted to reflect occupancy of not less than 95% of the rentable area"**: gross-up to 95%.
+
+**No gross-up clause**: absorption or direct allocation depending on Clause 2.
+
+### Clause 2: The Denominator Definition
+
+This determines whether the pro-rata share is based on total building area or occupied area.
+
+**"Tenant's proportionate share shall be the ratio of Tenant's rentable area to total rentable area of the Building"**: total RSF denominator. Combined with no gross-up = absorption model.
+
+**"Tenant's proportionate share shall be the ratio of Tenant's rentable area to total leased area of the Building"**: occupied RSF denominator. This is direct allocation.
+
+### Clause 3: The Expense Stop or Base Year
+
+If the lease has an expense stop, the vacancy allocation model only matters for expenses above the stop. Below the stop, the landlord bears all costs regardless.
+
+If the lease has a base year, the model affects only the incremental expenses above the base year amount.
+
+## Common Configuration Errors
+
+**Error 1: Gross-up applied to all expenses instead of variable only.** This is the single most common CAM billing error. Fixed expenses should pass through at actuals regardless of vacancy. Grossing up property taxes or insurance inflates the pool beyond what it would be at 100% occupancy.
+
+**Error 2: Using the wrong denominator for the model.** A lease with a gross-up clause and a total-building-RSF denominator should use the grossed-up pool divided by total RSF. Using occupied RSF as the denominator after grossing up effectively double-counts the vacancy adjustment.
+
+**Error 3: Gross-up applied when occupancy exceeds the threshold.** At 97% occupancy with a 95% threshold, no gross-up applies. The gross-up factor should be 1.0. Any factor above 1.0 at or above the threshold is overbilling.
+
+**Error 4: Mixing models across tenants without lease basis.** Some controllers apply gross-up for large tenants and direct allocation for small tenants within the same building. Unless the leases specify different models, all tenants in the same expense pool should use the same allocation methodology.
+
+**Error 5: Not adjusting variable expenses for actual vacancy patterns.** Variable expenses at 60% occupancy are not 60% of what they would be at 100%. They might be 75% due to base-load costs. Using a linear relationship between occupancy and variable costs overstates the gross-up adjustment. The gross-up formula assumes linearity. Actual expenses may not follow that assumption.
+
+## Choosing the Right Model for New Leases
+
+For landlords drafting lease language:
+
+**Gross-up is the standard** for institutional-quality properties. It balances tenant and landlord risk: tenants pay normalized costs, landlords absorb the gap above the threshold. The threshold should reflect realistic stabilized occupancy: 95% for Class A office, 90% for Class B, 85% for retail with seasonal anchors.
+
+**Absorption** is acceptable when the building is fully stabilized and vacancy risk is minimal. It becomes expensive quickly if occupancy drops below 85%.
+
+**Direct allocation** is the riskiest for tenants and the most favorable for landlords during vacancy. It is rare in institutional leases because sophisticated tenants will not accept uncapped vacancy cost exposure.
+
+The optimal approach for most properties: gross-up on variable expenses with a clearly defined threshold, total building RSF as the denominator, and explicit language listing which expense categories are fixed versus variable.
+
+<CTABox
+  title="Validate Your Vacancy Cost Allocation"
+  description="Upload your GL export and lease terms. CapVeri identifies the applicable allocation model for each tenant, validates gross-up calculations, checks denominator consistency, and flags errors that cause overbilling or under-recovery."
+  utmContent="u_cta"
+  buttonText="Start Free Trial"
+/>
+
+<FAQSection items={[
+  { q: "What are the three vacancy cost allocation models in CAM?", a: "Gross-up adjusts variable expenses upward to a target occupancy threshold, spreading vacancy costs across all tenants proportionally. Absorption means the landlord bears 100% of the vacant space's share of CAM. Direct allocation charges each tenant only for their proportional share of actual expenses with no vacancy adjustment. Most commercial leases use gross-up; the other models apply when the lease is silent or explicitly assigns vacancy risk to the landlord." },
+  { q: "How does gross-up work for vacancy cost allocation?", a: "The gross-up formula divides variable expenses by actual occupancy and multiplies by the target occupancy threshold (typically 90-95%). This increases the expense pool to approximate what it would cost if the building were at the target occupancy. Only variable expenses are grossed up; fixed costs pass through at actuals. The landlord still absorbs the gap between the gross-up threshold and 100% occupancy." },
+  { q: "When does the landlord absorb all vacancy costs?", a: "The landlord absorbs all vacancy costs when the lease has no gross-up clause and uses total building RSF as the pro-rata denominator. Each tenant's share is calculated on the full building, but no one pays the vacant space's share. The landlord also absorbs costs when actual occupancy exceeds the gross-up threshold, since gross-up does not apply above the threshold." },
+  { q: "How much does vacancy cost allocation affect NOI?", a: "On a 200,000 RSF building with $700,000 in variable CAM expenses at 75% occupancy, the difference between full absorption and gross-up to 95% is $163,333 annually. At 60% occupancy, the difference grows to $408,333. Vacancy cost allocation is one of the largest determinants of net operating income for properties below 85% occupancy." }
+]} />
+
+## Related Resources
+
+- [The Landlord's Complete Guide to CAM Gross-Up Calculations](/resources/cam-gross-up-calculation-guide)
+- [Gross-Up Clause in Commercial Leases](/resources/gross-up-clause-commercial-lease)
+- [Pro-Rata Share Calculation Guide](/resources/pro-rata-share-calculation)
+- [Denominator Drift: The Silent Revenue Killer in CAM Billing](/resources/denominator-drift)
+- [Why Did My Tenant's Pro-Rata Share Change?](/resources/denominator-change-guide)
+
+## Sources
+
+1. [BDO - Lease Audit Spotlight: Gross-Up Adjustments](https://www.bdo.com/insights/advisory/2020-lease-audit-spotlight-gain-clarity-on-gross-up-adjustments)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

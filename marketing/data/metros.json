@@ -1,0 +1,1981 @@
+{
+  "lastUpdated": "2026-03-21",
+  "metros": [
+    {
+      "slug": "new-york-ny",
+      "name": "New York, NY",
+      "state": "New York",
+      "vacancyRates": {
+        "office": 22.8,
+        "retail": 4.5,
+        "industrial": 5.2,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 28.5,
+        "retail": 18.75,
+        "industrial": 9.5
+      },
+      "taxAssessmentAuthority": "NYC Department of Finance",
+      "taxProtestProcedure": "File with NYC Tax Commission by March 1 (Class 4 commercial). RPIE filing required annually. Administrative review then Small Claims or full hearing.",
+      "propertyTaxRate": "~10.7% of assessed value (Class 4); effective rate ~2.5-4% of market value due to assessment ratio",
+      "keySubmarkets": [
+        "Midtown Manhattan",
+        "Hudson Yards",
+        "SoHo/NoHo",
+        "Brooklyn Navy Yard",
+        "Long Island City",
+        "Jersey City Waterfront"
+      ],
+      "localBomaChapter": "BOMA New York",
+      "marketSpecificIssues": [
+        "Extremely complex escalation clauses with base-year stops",
+        "RPIE compliance required for tax protest eligibility",
+        "Highest CAM costs in nation due to union labor requirements",
+        "NYC commercial rent tax applies below 96th Street in Manhattan",
+        "Multiple assessment classes create valuation complexity"
+      ],
+      "notes": "New York is the largest US CRE market by total value. CAM reconciliation is complex here. Base-year escalation structures, union labor requirements, and layered municipal taxes all add up. Office vacancy remains elevated post-COVID, so gross-up calculations are active on most leases.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "los-angeles-ca",
+      "name": "Los Angeles, CA",
+      "state": "California",
+      "vacancyRates": {
+        "office": 24.1,
+        "retail": 5.8,
+        "industrial": 6.3,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 16.75,
+        "retail": 11.5,
+        "industrial": 5.75
+      },
+      "taxAssessmentAuthority": "Los Angeles County Assessor",
+      "taxProtestProcedure": "File Assessment Appeal Application with Assessment Appeals Board within 60 days of assessment notice (typically July-November). Prop 13 limits annual increases to 2%.",
+      "propertyTaxRate": "~1.25% effective rate (Prop 13 base + local overrides)",
+      "keySubmarkets": [
+        "Downtown LA",
+        "West LA/Century City",
+        "Burbank/Glendale",
+        "El Segundo/LAX",
+        "Inland Empire",
+        "Santa Monica"
+      ],
+      "localBomaChapter": "BOMA Greater Los Angeles",
+      "marketSpecificIssues": [
+        "Prop 13 creates dramatic tax basis disparities between long-held and recently traded properties",
+        "Earthquake insurance as CAM pass-through is contentious",
+        "Entertainment industry vacancy concentration in Burbank/Hollywood corridors",
+        "Measure ULA transfer tax (4.45%/5.45%) affects acquisition basis"
+      ],
+      "notes": "Prop 13 means neighboring buildings can have very different tax bases, so CAM tax pass-throughs vary widely. Earthquake insurance allocation is a frequent audit finding.",
+      "relatedResources": [
+        "/resources/commercial-tenant-cam-disclosure-by-state",
+        "/resources/expenses",
+        "/blog/sb-1103-one-year-later"
+      ],
+      "relatedTools": [
+        "/tools/sb-1103-checker",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "chicago-il",
+      "name": "Chicago, IL",
+      "state": "Illinois",
+      "vacancyRates": {
+        "office": 24.5,
+        "retail": 6.1,
+        "industrial": 6.8,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 15.25,
+        "retail": 10.0,
+        "industrial": 5.0
+      },
+      "taxAssessmentAuthority": "Cook County Assessor's Office",
+      "taxProtestProcedure": "File with Cook County Board of Review during 30-day township window. Two levels of administrative appeal before PTAB. Triennial reassessment cycle.",
+      "propertyTaxRate": "~3.5-4.5% effective rate (among highest in nation)",
+      "keySubmarkets": [
+        "The Loop",
+        "West Loop/Fulton Market",
+        "River North",
+        "O'Hare Corridor",
+        "Suburban East-West Tollway",
+        "Lake County"
+      ],
+      "localBomaChapter": "BOMA Chicago",
+      "marketSpecificIssues": [
+        "Cook County triennial reassessment creates lumpy tax adjustments",
+        "Among highest effective property tax rates in the US",
+        "Tax protest is near-universal: 60%+ of commercial owners appeal",
+        "Incentive classification system (Class 7/8) reduces assessments for qualifying properties",
+        "Severe office vacancy in Loop submarket"
+      ],
+      "notes": "Chicago's high and volatile property taxes make tax pass-throughs the largest CAM issue. The triennial assessment cycle causes big year-over-year swings that tenants often challenge.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "houston-tx",
+      "name": "Houston, TX",
+      "state": "Texas",
+      "vacancyRates": {
+        "office": 26.5,
+        "retail": 5.2,
+        "industrial": 7.8,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 12.5,
+        "retail": 8.75,
+        "industrial": 4.25
+      },
+      "taxAssessmentAuthority": "Harris County Appraisal District (HCAD)",
+      "taxProtestProcedure": "File protest by May 15 with HCAD; ARB hearing within 90 days. Professional agents common.",
+      "propertyTaxRate": "~2.2% effective rate (no state income tax)",
+      "keySubmarkets": [
+        "Energy Corridor",
+        "The Woodlands",
+        "Galleria/Uptown",
+        "Westchase",
+        "Katy Freeway"
+      ],
+      "localBomaChapter": "BOMA Houston",
+      "marketSpecificIssues": [
+        "Energy sector vacancy concentration in Energy Corridor",
+        "Hurricane insurance premium volatility",
+        "High gross-up prevalence due to 26.5% vacancy",
+        "No state income tax. Property taxes are the primary revenue source.",
+        "Flooding risk drives insurance cost allocations"
+      ],
+      "notes": "Houston has 26.5% office vacancy. Gross-up clauses are triggered on nearly every lease. Hurricane and flood insurance pass-throughs are a major audit focus.",
+      "relatedResources": [
+        "/resources/commercial-tenant-cam-disclosure-by-state",
+        "/resources/expenses",
+        "/blog/houston-office-cam-high-vacancy"
+      ],
+      "relatedTools": [
+        "/tools/hcad-tax-normalizer",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "dallas-fort-worth-tx",
+      "name": "Dallas-Fort Worth, TX",
+      "state": "Texas",
+      "vacancyRates": {
+        "office": 23.8,
+        "retail": 4.9,
+        "industrial": 8.5,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 11.75,
+        "retail": 8.25,
+        "industrial": 4.0
+      },
+      "taxAssessmentAuthority": "Dallas Central Appraisal District (DCAD) / Tarrant Appraisal District (TAD)",
+      "taxProtestProcedure": "File protest by May 15 (or 30 days after notice). ARB hearings; binding arbitration available for properties under $5M. Chapter 42 district court appeal for larger properties.",
+      "propertyTaxRate": "~2.0-2.3% effective rate (no state income tax)",
+      "keySubmarkets": [
+        "Uptown Dallas",
+        "Las Colinas",
+        "Frisco/Plano",
+        "Fort Worth CBD",
+        "Alliance/North Fort Worth",
+        "Richardson/Telecom Corridor"
+      ],
+      "localBomaChapter": "BOMA Dallas / BOMA Fort Worth",
+      "marketSpecificIssues": [
+        "Massive industrial pipeline creates volatile industrial vacancy",
+        "Corporate relocation boom drives rapid submarket shifts",
+        "Split metro across multiple appraisal districts complicates tax analysis",
+        "Tornado/hail insurance premiums are significant CAM line item",
+        "Chapter 313/328 abatements create uneven tax burdens in industrial parks"
+      ],
+      "notes": "DFW's growth and industrial expansion create active CAM reconciliation work. The split across Dallas and Tarrant counties means different appraisal timelines and protest procedures for a single portfolio.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "washington-dc",
+      "name": "Washington, DC",
+      "state": "District of Columbia",
+      "vacancyRates": {
+        "office": 21.9,
+        "retail": 4.2,
+        "industrial": 5.0,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 19.5,
+        "retail": 14.0,
+        "industrial": 6.5
+      },
+      "taxAssessmentAuthority": "DC Office of Tax and Revenue (OTR) / County assessors in VA and MD suburbs",
+      "taxProtestProcedure": "DC: File with Board of Real Property Assessments by April 1. VA: File with Board of Equalization. MD: File with SDAT within 45 days of notice.",
+      "propertyTaxRate": "DC: ~1.89% commercial; VA suburbs: ~1.0-1.2%; MD suburbs: ~1.0-1.3%",
+      "keySubmarkets": [
+        "DC CBD/East End",
+        "NoMa/Capitol Riverfront",
+        "Tysons Corner",
+        "Reston/Dulles Corridor",
+        "Bethesda/Silver Spring",
+        "Crystal City/National Landing"
+      ],
+      "localBomaChapter": "BOMA International (HQ) / BOMA Suburban Maryland",
+      "marketSpecificIssues": [
+        "Federal government lease expirations driving vacancy spikes",
+        "Three-jurisdiction metro (DC/VA/MD) with different tax systems",
+        "LEED/green building mandates affect operating expense structures",
+        "BRAC and federal telework policies create unique demand patterns",
+        "DC Clean Energy Omnibus Act compliance costs in CAM"
+      ],
+      "notes": "The DC metro spans three jurisdictions. A single portfolio may cover DC, Virginia, and Maryland. Each has different tax assessment systems, appeal processes, and escalation calendars.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "san-francisco-ca",
+      "name": "San Francisco, CA",
+      "state": "California",
+      "vacancyRates": {
+        "office": 33.5,
+        "retail": 6.5,
+        "industrial": 5.8,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 22.0,
+        "retail": 15.5,
+        "industrial": 7.25
+      },
+      "taxAssessmentAuthority": "San Francisco Assessor-Recorder / County Assessors (San Mateo, Alameda, Contra Costa)",
+      "taxProtestProcedure": "File Assessment Appeal Application with county Assessment Appeals Board. Prop 13 limits; Prop 8 temporary decline-in-value claims common in current market.",
+      "propertyTaxRate": "~1.18-1.25% effective rate (Prop 13)",
+      "keySubmarkets": [
+        "Financial District/SoMa",
+        "South Financial District",
+        "Mission Bay",
+        "Oakland CBD",
+        "Palo Alto/Mountain View",
+        "Fremont/Milpitas"
+      ],
+      "localBomaChapter": "BOMA San Francisco",
+      "marketSpecificIssues": [
+        "Highest office vacancy among major metros, creating extreme gross-up exposure",
+        "Prop 8 decline-in-value claims being filed aggressively",
+        "Tech sector downsizing created unprecedented sublease overhang",
+        "Earthquake insurance allocation disputes",
+        "SF business tax reform (Prop F) affects operating cost structures"
+      ],
+      "notes": "San Francisco has 33.5% office vacancy, the highest among major US metros. Gross-up calculations are the defining CAM issue here. Prop 8 decline-in-value claims are common where assessed values exceed market values.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "boston-ma",
+      "name": "Boston, MA",
+      "state": "Massachusetts",
+      "vacancyRates": {
+        "office": 19.2,
+        "retail": 3.8,
+        "industrial": 5.5,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 20.5,
+        "retail": 14.25,
+        "industrial": 6.75
+      },
+      "taxAssessmentAuthority": "City of Boston Assessing Department / Municipal assessors",
+      "taxProtestProcedure": "File abatement application with local assessor by February 1. Appeal to Appellate Tax Board (ATB) if denied. Annual reassessment.",
+      "propertyTaxRate": "~1.7-2.5% (varies by municipality; Boston commercial rate ~2.5%)",
+      "keySubmarkets": [
+        "Back Bay/Prudential",
+        "Seaport/Innovation District",
+        "Cambridge/Kendall Square",
+        "Financial District",
+        "Route 128/Burlington",
+        "Waltham/Watertown"
+      ],
+      "localBomaChapter": "BOMA Boston",
+      "marketSpecificIssues": [
+        "Life science/lab space creates unique CAM categories (HVAC intensity, clean rooms)",
+        "Split tax rates: commercial rate higher than residential in Boston",
+        "Seaport District flood/climate resilience costs emerging as CAM items",
+        "Kendall Square lab space has specialized operating expense structures",
+        "Older Back Bay buildings have complex base-year escalation structures"
+      ],
+      "notes": "Boston has a high concentration of life science and lab space. This creates CAM categories not found in typical office buildings. The split tax rate means commercial properties pay more than residential, making tax pass-throughs a key audit focus.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "atlanta-ga",
+      "name": "Atlanta, GA",
+      "state": "Georgia",
+      "vacancyRates": {
+        "office": 23.4,
+        "retail": 4.6,
+        "industrial": 7.2,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 11.0,
+        "retail": 7.75,
+        "industrial": 3.75
+      },
+      "taxAssessmentAuthority": "Fulton County Board of Assessors / DeKalb County Tax Assessor",
+      "taxProtestProcedure": "File appeal within 45 days of assessment notice with county Board of Equalization. Can escalate to Superior Court. Annual reassessment.",
+      "propertyTaxRate": "~1.2-1.5% effective rate (40% assessment ratio applied to FMV)",
+      "keySubmarkets": [
+        "Buckhead",
+        "Midtown",
+        "Central Perimeter",
+        "Cumberland/Galleria",
+        "Alpharetta/North Fulton",
+        "Airport/South Atlanta Industrial"
+      ],
+      "localBomaChapter": "BOMA Georgia",
+      "marketSpecificIssues": [
+        "Sprawling metro crosses 10+ counties with different tax systems",
+        "Industrial/logistics boom around Hartsfield-Jackson airport",
+        "Georgia's 40% assessment ratio can obscure true tax burden",
+        "TAD (Tax Allocation District) abatements in Midtown/Downtown complicate reconciliation",
+        "High suburban vacancy versus tight Midtown/Buckhead market"
+      ],
+      "notes": "Atlanta spreads across dozens of counties, each with its own assessment authority. Georgia's 40% assessment ratio requires careful conversion when comparing tax burdens to other markets.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "phoenix-az",
+      "name": "Phoenix, AZ",
+      "state": "Arizona",
+      "vacancyRates": {
+        "office": 21.6,
+        "retail": 5.5,
+        "industrial": 9.2,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 9.75,
+        "retail": 7.0,
+        "industrial": 3.5
+      },
+      "taxAssessmentAuthority": "Maricopa County Assessor",
+      "taxProtestProcedure": "File petition with County Assessor by September (informal) or State Board of Equalization by April. GPLET (government property lease excise tax) available for qualifying projects.",
+      "propertyTaxRate": "~0.8-1.2% effective rate (limited property value = 10% of FMV for commercial)",
+      "keySubmarkets": [
+        "Tempe/ASU Research Park",
+        "Scottsdale Airpark",
+        "Chandler/Gilbert Tech Corridor",
+        "Downtown Phoenix",
+        "Deer Valley/North I-17",
+        "Mesa Gateway"
+      ],
+      "localBomaChapter": "BOMA Phoenix",
+      "marketSpecificIssues": [
+        "GPLET (government lease-excise tax) creates alternative tax structures for qualifying developments",
+        "Massive industrial pipeline driven by semiconductor and EV manufacturing",
+        "Extreme cooling costs are dominant CAM line item (summer peaks)",
+        "Water costs increasingly material as CAM pass-through",
+        "Arizona's dual valuation system (full cash value vs. limited property value)"
+      ],
+      "notes": "Phoenix's extreme summer heat makes HVAC and cooling the largest CAM expense. The GPLET program creates an alternative tax structure that affects CAM reconciliation for qualifying properties.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "seattle-wa",
+      "name": "Seattle, WA",
+      "state": "Washington",
+      "vacancyRates": {
+        "office": 24.8,
+        "retail": 4.0,
+        "industrial": 6.5,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 17.25,
+        "retail": 12.0,
+        "industrial": 5.5
+      },
+      "taxAssessmentAuthority": "King County Assessor",
+      "taxProtestProcedure": "File appeal with King County Board of Equalization by July 1 (or 60 days after value notice). Can escalate to State Board of Tax Appeals.",
+      "propertyTaxRate": "~1.0-1.2% effective rate (no state income tax)",
+      "keySubmarkets": [
+        "South Lake Union",
+        "Downtown/Pioneer Square",
+        "Bellevue CBD",
+        "Redmond/Eastside",
+        "Tacoma/Fife Industrial",
+        "Kent Valley"
+      ],
+      "localBomaChapter": "BOMA Seattle King County",
+      "marketSpecificIssues": [
+        "Tech sector concentration drives volatile demand cycles",
+        "No state income tax. Property tax is the primary commercial revenue source.",
+        "Seattle head tax / JumpStart Payroll tax affects operating budgets",
+        "Amazon campus dominance in South Lake Union distorts submarket metrics",
+        "Seismic retrofit costs emerging as CAM capital recovery items"
+      ],
+      "notes": "Seattle's tech concentration creates boom-bust demand cycles. The 24.8% vacancy reflects post-COVID tech sector contraction. No state income tax makes property taxes a larger share of total government revenue.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "denver-co",
+      "name": "Denver, CO",
+      "state": "Colorado",
+      "vacancyRates": {
+        "office": 22.3,
+        "retail": 4.8,
+        "industrial": 7.6,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 12.0,
+        "retail": 8.5,
+        "industrial": 4.0
+      },
+      "taxAssessmentAuthority": "Denver County Assessor / Adams County Assessor / Arapahoe County Assessor",
+      "taxProtestProcedure": "File protest within 50 days of Notice of Valuation (typically June 1). County Board of Equalization hearing. Biennial reassessment for commercial (odd years).",
+      "propertyTaxRate": "~0.5-0.8% effective rate (29% assessment ratio for commercial, but varies with Gallagher Amendment changes)",
+      "keySubmarkets": [
+        "Downtown/LoDo",
+        "Denver Tech Center",
+        "RiNo/Five Points",
+        "Cherry Creek",
+        "Boulder/US-36 Corridor",
+        "Airport/Pe\u00c3\u00b1a Boulevard"
+      ],
+      "localBomaChapter": "BOMA Denver",
+      "marketSpecificIssues": [
+        "Gallagher Amendment repeal (2020) is shifting assessment ratios for commercial property",
+        "TABOR limits constrain local government revenue, affecting service levels",
+        "Biennial reassessment cycle creates two-year lag in value adjustments",
+        "Hail/severe weather insurance costs are significant in metro area",
+        "Rapid growth in airport submarket near DIA"
+      ],
+      "notes": "Denver's constitutional framework (TABOR plus the former Gallagher Amendment) creates a property tax environment unlike any other state. The biennial commercial reassessment cycle means values can lag market shifts by two years.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "miami-fort-lauderdale-fl",
+      "name": "Miami-Fort Lauderdale, FL",
+      "state": "Florida",
+      "vacancyRates": {
+        "office": 17.8,
+        "retail": 3.9,
+        "industrial": 5.6,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 15.0,
+        "retail": 12.25,
+        "industrial": 5.25
+      },
+      "taxAssessmentAuthority": "Miami-Dade County Property Appraiser / Broward County Property Appraiser",
+      "taxProtestProcedure": "File petition with Value Adjustment Board (VAB) by September 15 (or 25 days after TRIM notice). Magistrate hearing; can appeal to circuit court.",
+      "propertyTaxRate": "~1.8-2.2% effective rate (no state income tax, Save Our Homes does not apply to commercial)",
+      "keySubmarkets": [
+        "Brickell/Downtown Miami",
+        "Coral Gables",
+        "Aventura/Sunny Isles",
+        "Fort Lauderdale CBD",
+        "Doral/Airport West",
+        "Sawgrass/Sunrise"
+      ],
+      "localBomaChapter": "BOMA Fort Lauderdale / BOMA Miami",
+      "marketSpecificIssues": [
+        "Hurricane/windstorm insurance is the single largest variable CAM expense",
+        "Citizens Insurance assessments can create surprise CAM charges",
+        "International tenant base creates unique lease structure complexity",
+        "Flood insurance requirements (NFIP and private) add CAM layers",
+        "Rapid condo-to-office conversion market complicates comparables"
+      ],
+      "notes": "Miami's insurance costs drive CAM reconciliation disputes. Hurricane and flood insurance premiums can swing 20-40% year over year. Accurate pass-through allocation is critical. Office vacancy is tight due to inbound corporate migration.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "minneapolis-mn",
+      "name": "Minneapolis, MN",
+      "state": "Minnesota",
+      "vacancyRates": {
+        "office": 22.0,
+        "retail": 4.4,
+        "industrial": 5.8,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 13.5,
+        "retail": 9.25,
+        "industrial": 4.5
+      },
+      "taxAssessmentAuthority": "Hennepin County Assessor / Ramsey County Assessor",
+      "taxProtestProcedure": "File with County Board of Appeal and Equalization by June. Can appeal to Minnesota Tax Court. Annual reassessment.",
+      "propertyTaxRate": "~2.5-3.5% effective rate (among higher rates nationally; state general tax applies to commercial)",
+      "keySubmarkets": [
+        "Downtown Minneapolis",
+        "Bloomington/494 Strip",
+        "St. Paul CBD",
+        "Plymouth/Golden Valley",
+        "Maple Grove/Rogers",
+        "Eagan/Mendota Heights"
+      ],
+      "localBomaChapter": "BOMA Minneapolis",
+      "marketSpecificIssues": [
+        "Minnesota state general property tax adds layer on top of local levies for commercial",
+        "Skyway system creates unique common area cost allocation for connected buildings",
+        "Heavy snow removal costs are major seasonal CAM item",
+        "Fiscal disparities program redistributes tax base across metro, affecting levies",
+        "Corporate departures (Target HQ downsizing) impacting downtown vacancy"
+      ],
+      "notes": "Minneapolis's skyway-connected buildings create a CAM allocation challenge. Shared infrastructure costs must be split among connected buildings. Snow removal and heating are the dominant seasonal CAM items.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "philadelphia-pa",
+      "name": "Philadelphia, PA",
+      "state": "Pennsylvania",
+      "vacancyRates": {
+        "office": 21.5,
+        "retail": 5.0,
+        "industrial": 6.0,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 14.0,
+        "retail": 9.5,
+        "industrial": 4.75
+      },
+      "taxAssessmentAuthority": "Philadelphia Office of Property Assessment (OPA)",
+      "taxProtestProcedure": "File appeal with Board of Revision of Taxes (BRT) by first Monday in October. Can appeal to Court of Common Pleas. City completed reassessment in 2023 after decades of stale values.",
+      "propertyTaxRate": "~1.4% effective rate (but Philadelphia also levies BIRT and NPT business taxes)",
+      "keySubmarkets": [
+        "Center City/Market Street",
+        "University City",
+        "Navy Yard",
+        "King of Prussia",
+        "Conshohocken/Main Line",
+        "Camden Waterfront (NJ)"
+      ],
+      "localBomaChapter": "BOMA Philadelphia",
+      "marketSpecificIssues": [
+        "Recent citywide reassessment (2023) after decades caused massive value shifts",
+        "BIRT (Business Income & Receipts Tax) and NPT layer on operating costs",
+        "10-year tax abatement program for new construction distorts comparables",
+        "Cross-state metro (NJ suburbs) adds jurisdictional complexity",
+        "Older building stock means higher maintenance CAM per SF"
+      ],
+      "notes": "Philadelphia completed its first comprehensive reassessment in decades in 2023, creating major property tax disruption. The 10-year tax abatement for new construction creates big gaps in tax pass-throughs between abated and non-abated properties.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "san-diego-ca",
+      "name": "San Diego, CA",
+      "state": "California",
+      "vacancyRates": {
+        "office": 19.8,
+        "retail": 4.3,
+        "industrial": 6.1,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 14.5,
+        "retail": 10.75,
+        "industrial": 5.5
+      },
+      "taxAssessmentAuthority": "San Diego County Assessor",
+      "taxProtestProcedure": "File Assessment Appeal Application with county Assessment Appeals Board. Prop 13 base; Prop 8 decline-in-value claims available. Annual or supplemental assessment on transfers.",
+      "propertyTaxRate": "~1.1-1.2% effective rate (Prop 13)",
+      "keySubmarkets": [
+        "Downtown/Little Italy",
+        "UTC/Sorrento Valley",
+        "Kearny Mesa",
+        "Carlsbad/Oceanside",
+        "Rancho Bernardo",
+        "Otay Mesa/Border Zone"
+      ],
+      "localBomaChapter": "BOMA San Diego",
+      "marketSpecificIssues": [
+        "Defense/military sector concentration creates specialized tenant requirements",
+        "Life science cluster in Torrey Pines/UTC has lab-specific CAM structures",
+        "Prop 13 basis disparities between long-held and recent acquisitions",
+        "Coastal properties face higher insurance costs and climate adaptation requirements",
+        "Cross-border proximity to Tijuana creates unique industrial demand in Otay Mesa"
+      ],
+      "notes": "San Diego's mix of defense, life science, and tourism creates varied CAM profiles. Lab and R&D space has specialized HVAC and utility allocations that differ from standard office CAM.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "austin-tx",
+      "name": "Austin, TX",
+      "state": "Texas",
+      "vacancyRates": {
+        "office": 24.2,
+        "retail": 4.1,
+        "industrial": 8.0,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 11.25,
+        "retail": 8.0,
+        "industrial": 3.75
+      },
+      "taxAssessmentAuthority": "Travis Central Appraisal District (TCAD) / Williamson Central Appraisal District",
+      "taxProtestProcedure": "File protest by May 15 (or 30 days after notice) with TCAD. ARB hearing; binding arbitration available for properties under $5M.",
+      "propertyTaxRate": "~1.8-2.2% effective rate (no state income tax)",
+      "keySubmarkets": [
+        "Downtown/2nd Street",
+        "Domain/North Austin",
+        "East Austin",
+        "Round Rock/Williamson County",
+        "Southwest/MoPac Corridor",
+        "Cedar Park"
+      ],
+      "localBomaChapter": "BOMA Austin",
+      "marketSpecificIssues": [
+        "Explosive supply pipeline created rapid vacancy spike from 2023-2025",
+        "Samsung/Tesla/Apple campus expansions distort submarket metrics",
+        "No state income tax means aggressive property tax levies",
+        "Flash flood risk drives insurance costs in certain corridors",
+        "Rapid suburban growth outpacing infrastructure"
+      ],
+      "notes": "Austin had the sharpest office vacancy increase of any Sun Belt metro as new construction delivered into falling demand. Tax protests are common given aggressive TCAD valuations.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "tampa-bay-fl",
+      "name": "Tampa Bay, FL",
+      "state": "Florida",
+      "vacancyRates": {
+        "office": 16.5,
+        "retail": 3.7,
+        "industrial": 6.8,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 10.5,
+        "retail": 8.25,
+        "industrial": 3.75
+      },
+      "taxAssessmentAuthority": "Hillsborough County Property Appraiser / Pinellas County Property Appraiser",
+      "taxProtestProcedure": "File petition with Value Adjustment Board (VAB) by September 15 (or 25 days after TRIM notice). Magistrate hearing process.",
+      "propertyTaxRate": "~1.5-2.0% effective rate (no state income tax)",
+      "keySubmarkets": [
+        "Downtown Tampa/Water Street",
+        "Westshore",
+        "St. Petersburg CBD",
+        "Clearwater",
+        "Brandon/I-75 Corridor",
+        "Lakeland/Polk County"
+      ],
+      "localBomaChapter": "BOMA Tampa Bay",
+      "marketSpecificIssues": [
+        "Hurricane insurance costs dominate CAM variance year-over-year",
+        "Rapid corporate in-migration tightening office market vs. national trends",
+        "Flood zone mapping changes affect insurance requirements and costs",
+        "Water Street Tampa mega-development reshaping downtown market",
+        "Citizens Insurance surcharges as pass-through CAM items"
+      ],
+      "notes": "Tampa Bay has tighter office vacancy than most US markets due to corporate in-migration. Hurricane and flood insurance remain the key variable in CAM reconciliation, with premiums subject to large annual swings.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "charlotte-nc",
+      "name": "Charlotte, NC",
+      "state": "North Carolina",
+      "vacancyRates": {
+        "office": 19.5,
+        "retail": 3.5,
+        "industrial": 6.8,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 10.25,
+        "retail": 7.5,
+        "industrial": 3.5
+      },
+      "taxAssessmentAuthority": "Mecklenburg County Assessor's Office",
+      "taxProtestProcedure": "File informal appeal within 30 days of revaluation notice. Formal appeal to Board of Equalization and Review. Revaluation every 4 years (North Carolina mandate, Mecklenburg may do more frequently).",
+      "propertyTaxRate": "~1.0-1.2% effective rate",
+      "keySubmarkets": [
+        "Uptown Charlotte",
+        "South End",
+        "Ballantyne",
+        "University City",
+        "Airport/West Charlotte",
+        "Lake Norman/Mooresville"
+      ],
+      "localBomaChapter": "BOMA Charlotte",
+      "marketSpecificIssues": [
+        "Banking sector concentration (BofA, Wells Fargo, Truist) drives office demand",
+        "Periodic revaluation cycles (every 4 years) create step-function tax changes",
+        "Rapid South End development adding significant new supply",
+        "Hurricane risk (inland wind damage) affects insurance structures",
+        "North Carolina Machinery Act governs assessment procedures statewide"
+      ],
+      "notes": "Charlotte's revaluation cycle (typically every 4 years) creates predictable but large step-changes in property tax assessments. CAM reconciliation is more complex in revaluation years.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "nashville-tn",
+      "name": "Nashville, TN",
+      "state": "Tennessee",
+      "vacancyRates": {
+        "office": 20.8,
+        "retail": 3.8,
+        "industrial": 5.9,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 10.75,
+        "retail": 8.0,
+        "industrial": 3.5
+      },
+      "taxAssessmentAuthority": "Metropolitan Nashville/Davidson County Assessor of Property",
+      "taxProtestProcedure": "File appeal with County Board of Equalization by June 1 (reappraisal years). Can appeal to State Board of Equalization. Reappraisal every 4 years.",
+      "propertyTaxRate": "~1.3-1.6% effective rate (no state income tax on wages)",
+      "keySubmarkets": [
+        "Downtown/The Gulch",
+        "Green Hills/Music Row",
+        "Cool Springs/Franklin",
+        "MetroCenter",
+        "Airport/Donelson",
+        "Hendersonville/Gallatin"
+      ],
+      "localBomaChapter": "BOMA Nashville",
+      "marketSpecificIssues": [
+        "No state income tax drives reliance on property and sales tax",
+        "Tourism/hospitality sector creates mixed-use CAM complexity",
+        "4-year reappraisal cycle creates lumpy tax adjustments",
+        "Tornado risk (2020 event demonstrated vulnerability) affects insurance costs",
+        "Oracle campus development reshaping East Bank market"
+      ],
+      "notes": "Nashville's rapid growth has created a construction boom that is starting to push vacancy rates up. The 4-year reappraisal cycle means tax adjustments arrive in large steps rather than gradually.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "portland-or",
+      "name": "Portland, OR",
+      "state": "Oregon",
+      "vacancyRates": {
+        "office": 25.6,
+        "retail": 5.2,
+        "industrial": 6.4,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 13.0,
+        "retail": 9.0,
+        "industrial": 4.5
+      },
+      "taxAssessmentAuthority": "Multnomah County Assessor",
+      "taxProtestProcedure": "File appeal with Multnomah County Board of Property Tax Appeals by December 31. Can appeal to Oregon Tax Court (Magistrate Division).",
+      "propertyTaxRate": "~1.2-1.5% effective rate (Measure 5 caps at 1.5% of RMV for general government, but compression can apply)",
+      "keySubmarkets": [
+        "Pearl District",
+        "Downtown/CBD",
+        "Lloyd District",
+        "Kruse Way/Lake Oswego",
+        "Hillsboro/Sunset Corridor",
+        "Swan Island/Industrial NW"
+      ],
+      "localBomaChapter": "BOMA Portland",
+      "marketSpecificIssues": [
+        "Oregon Measure 5 & 50 create dual-value system (RMV vs. MAV) complicating assessments",
+        "Portland Clean Energy Fund surcharge on large businesses affects operating costs",
+        "Severe downtown vacancy and urban livability concerns impacting valuations",
+        "No sales tax but higher income tax creates a different fiscal structure than most markets",
+        "Earthquake risk (Cascadia subduction zone) increasingly priced into insurance"
+      ],
+      "notes": "Portland's dual-value assessment system (Real Market Value vs. Maximum Assessed Value) under Measures 5 and 50 creates Oregon-specific complexity for property tax CAM pass-throughs. This structure exists nowhere else in the US.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "raleigh-durham-nc",
+      "name": "Raleigh-Durham, NC",
+      "state": "North Carolina",
+      "vacancyRates": {
+        "office": 18.5,
+        "retail": 3.2,
+        "industrial": 6.2,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 9.75,
+        "retail": 7.0,
+        "industrial": 3.25
+      },
+      "taxAssessmentAuthority": "Wake County Revenue Department / Durham County Tax Administration",
+      "taxProtestProcedure": "File informal review, then formal appeal to county Board of Equalization and Review. NC Machinery Act governs. Revaluation every 4-8 years (Wake County typically every 4).",
+      "propertyTaxRate": "~0.9-1.1% effective rate",
+      "keySubmarkets": [
+        "Research Triangle Park",
+        "Downtown Raleigh",
+        "Downtown Durham",
+        "Cary/Morrisville",
+        "Chapel Hill",
+        "Wake Forest/Rolesville"
+      ],
+      "localBomaChapter": "BOMA Raleigh-Durham",
+      "marketSpecificIssues": [
+        "Research Triangle Park campus-style properties have unique CAM structures",
+        "Life science/biotech lab space expanding rapidly with specialized costs",
+        "Split metro across Wake and Durham counties with different revaluation schedules",
+        "Apple, Google, and Epic Games campuses driving demand shifts",
+        "Lower cost basis than peer tech markets keeps CAM per SF modest"
+      ],
+      "notes": "Research Triangle's R&D campus format creates CAM allocation challenges that differ from traditional multi-tenant office. Two county assessment schedules add reconciliation complexity for portfolios spanning the metro.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "salt-lake-city-ut",
+      "name": "Salt Lake City, UT",
+      "state": "Utah",
+      "vacancyRates": {
+        "office": 19.0,
+        "retail": 3.5,
+        "industrial": 6.0,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 10.0,
+        "retail": 7.25,
+        "industrial": 3.5
+      },
+      "taxAssessmentAuthority": "Salt Lake County Assessor",
+      "taxProtestProcedure": "File appeal with County Board of Equalization by September 15. Can appeal to State Tax Commission. Annual reassessment at 100% fair market value.",
+      "propertyTaxRate": "~0.7-1.0% effective rate (truth in taxation process constrains increases)",
+      "keySubmarkets": [
+        "Downtown SLC",
+        "Sandy/Draper",
+        "Lehi/Silicon Slopes",
+        "Airport/North Temple",
+        "Ogden",
+        "Provo/Orem"
+      ],
+      "localBomaChapter": "BOMA Utah",
+      "marketSpecificIssues": [
+        "Silicon Slopes tech corridor driving rapid suburban growth",
+        "Utah's Truth in Taxation process limits tax rate increases without public hearing",
+        "Air quality issues (inversions) may drive future building compliance costs",
+        "Inland Port development creating new industrial market dynamics",
+        "Low vacancy relative to national average despite recent supply additions"
+      ],
+      "notes": "Salt Lake City's Truth in Taxation framework provides more transparency into property tax rate changes than most states offer. CAM tax pass-throughs are more predictable here as a result.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "san-antonio-tx",
+      "name": "San Antonio, TX",
+      "state": "Texas",
+      "vacancyRates": {
+        "office": 20.2,
+        "retail": 4.5,
+        "industrial": 7.5,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 9.5,
+        "retail": 7.0,
+        "industrial": 3.25
+      },
+      "taxAssessmentAuthority": "Bexar Appraisal District",
+      "taxProtestProcedure": "File protest by May 15 (or 30 days after notice) with Bexar Appraisal District. ARB hearing; binding arbitration for properties under $5M.",
+      "propertyTaxRate": "~2.0-2.4% effective rate (no state income tax)",
+      "keySubmarkets": [
+        "Downtown/River Walk",
+        "North Central/Stone Oak",
+        "La Cantera/The Rim",
+        "Brooks/Southeast",
+        "Port San Antonio",
+        "New Braunfels/I-35 Corridor"
+      ],
+      "localBomaChapter": "BOMA San Antonio",
+      "marketSpecificIssues": [
+        "Military base (JBSA) influence on surrounding market demand",
+        "Lower cost market with value-oriented tenants sensitive to CAM increases",
+        "SAWS (water utility) costs increasingly material as CAM item",
+        "No state income tax drives aggressive property tax valuations",
+        "Growing data center market around outer loop corridors"
+      ],
+      "notes": "San Antonio is a cost-sensitive market. Even modest CAM overcharges affect tenant economics here. Property tax protests are common given aggressive Bexar Appraisal District valuations.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "orlando-fl",
+      "name": "Orlando, FL",
+      "state": "Florida",
+      "vacancyRates": {
+        "office": 16.8,
+        "retail": 3.5,
+        "industrial": 6.4,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 10.0,
+        "retail": 9.0,
+        "industrial": 3.5
+      },
+      "taxAssessmentAuthority": "Orange County Property Appraiser",
+      "taxProtestProcedure": "File petition with Value Adjustment Board (VAB) by September 15 (or 25 days after TRIM notice). Magistrate hearing; circuit court appeal available.",
+      "propertyTaxRate": "~1.5-1.9% effective rate (no state income tax)",
+      "keySubmarkets": [
+        "Downtown Orlando",
+        "Lake Nona/Medical City",
+        "International Drive",
+        "Maitland/Altamonte Springs",
+        "Lake Mary/Heathrow",
+        "Airport/OIA Corridor"
+      ],
+      "localBomaChapter": "BOMA Central Florida",
+      "marketSpecificIssues": [
+        "Tourism/hospitality adjacency creates mixed-use CAM complexity",
+        "Hurricane insurance costs as major variable CAM expense",
+        "Lake Nona medical/life science cluster with specialized operating costs",
+        "Rapid population growth driving retail and industrial demand",
+        "RCID (Reedy Creek/Central Florida Tourism Oversight District) creates unique governance for theme park-adjacent properties"
+      ],
+      "notes": "Orlando's tourism-driven economy produces mixed-use properties where hospitality and office CAM allocations overlap. Hurricane insurance is the key variable expense in reconciliation.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "las-vegas-nv",
+      "name": "Las Vegas, NV",
+      "state": "Nevada",
+      "vacancyRates": {
+        "office": 20.5,
+        "retail": 5.0,
+        "industrial": 7.2,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 9.0,
+        "retail": 7.5,
+        "industrial": 3.25
+      },
+      "taxAssessmentAuthority": "Clark County Assessor",
+      "taxProtestProcedure": "File appeal with County Board of Equalization by January 15. Can escalate to State Board of Equalization. Tax cap limits annual increases.",
+      "propertyTaxRate": "~0.7-1.0% effective rate (constitutional cap of 3.64% of assessed value; assessed at 35% of taxable value)",
+      "keySubmarkets": [
+        "Downtown/Arts District",
+        "Summerlin",
+        "Henderson/Green Valley",
+        "Southwest/215 Beltway",
+        "North Las Vegas Industrial",
+        "Strip-adjacent"
+      ],
+      "localBomaChapter": "BOMA Las Vegas",
+      "marketSpecificIssues": [
+        "Nevada's tax abatement cap limits annual property tax increases (3% for commercial)",
+        "Extreme cooling costs dominate summer CAM expenses",
+        "No state income tax creates a favorable business cost structure",
+        "Water costs increasingly material given Colorado River constraints",
+        "Sports venue developments (Raiders, F1, A's) reshaping commercial demand patterns"
+      ],
+      "notes": "Nevada's 3% annual tax cap on commercial properties gives CAM tax budgeting more predictability than most states. Extreme summer cooling costs and growing water costs are the top variable CAM expenses.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "indianapolis-in",
+      "name": "Indianapolis, IN",
+      "state": "Indiana",
+      "vacancyRates": {
+        "office": 20.8,
+        "retail": 4.2,
+        "industrial": 6.5,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 9.5,
+        "retail": 6.75,
+        "industrial": 3.0
+      },
+      "taxAssessmentAuthority": "Marion County Assessor",
+      "taxProtestProcedure": "File Form 130 petition with county Property Tax Assessment Board of Appeals (PTABOA) within 45 days of Form 11 notice. Can appeal to Indiana Board of Tax Review, then Tax Court.",
+      "propertyTaxRate": "~1.5-2.5% effective rate (circuit breakers cap tax bills at percentages of gross assessed value)",
+      "keySubmarkets": [
+        "Downtown/Mile Square",
+        "Carmel/North Meridian",
+        "Fishers/Geist",
+        "Keystone at the Crossing",
+        "Airport/Plainfield",
+        "Greenwood/Southside"
+      ],
+      "localBomaChapter": "BOMA Indianapolis",
+      "marketSpecificIssues": [
+        "Indiana circuit breaker caps (3% of assessed value for commercial) limit tax liability",
+        "Life sciences corridor (Lilly, Roche) drives specialized lab space demand",
+        "Massive logistics/distribution hub: Indianapolis is a top US industrial market per capita",
+        "Trending-based reassessment model can lag market significantly",
+        "County assessor consolidation has created uneven assessment quality"
+      ],
+      "notes": "Indiana's circuit breaker caps property tax at 3% of assessed value for commercial properties. This puts a hard ceiling on tax pass-throughs that you won't find in uncapped states.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "columbus-oh",
+      "name": "Columbus, OH",
+      "state": "Ohio",
+      "vacancyRates": {
+        "office": 19.5,
+        "retail": 4.0,
+        "industrial": 5.8,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 10.0,
+        "retail": 7.0,
+        "industrial": 3.25
+      },
+      "taxAssessmentAuthority": "Franklin County Auditor",
+      "taxProtestProcedure": "File complaint with County Board of Revision by March 31. Can appeal to Board of Tax Appeals, then Ohio Supreme Court. Triennial reassessment with sexennial reappraisal.",
+      "propertyTaxRate": "~1.5-2.0% effective rate (35% assessment ratio applied to market value)",
+      "keySubmarkets": [
+        "Downtown/Short North",
+        "Dublin/Bridge Street",
+        "New Albany/Intel Corridor",
+        "Easton/Polaris",
+        "Rickenbacker Industrial",
+        "Westerville/Uptown"
+      ],
+      "localBomaChapter": "BOMA Columbus",
+      "marketSpecificIssues": [
+        "Intel Ohio fabrication facilities transforming New Albany submarket",
+        "Ohio's triennial/sexennial assessment cycle creates predictable adjustment windows",
+        "Ohio Enterprise Zone and CRA abatements widely used, creating uneven tax bases",
+        "State capital stability anchors government-leased office demand",
+        "Honda/logistics sector drives industrial demand"
+      ],
+      "notes": "Columbus has stable demand from state government and diversified employers. Ohio's triennial reassessment cycle with sexennial reappraisal creates a predictable calendar for CAM tax pass-through adjustments.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "jacksonville-fl",
+      "name": "Jacksonville, FL",
+      "state": "Florida",
+      "vacancyRates": {
+        "office": 17.5,
+        "retail": 4.0,
+        "industrial": 6.0,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 9.25,
+        "retail": 7.0,
+        "industrial": 3.0
+      },
+      "taxAssessmentAuthority": "Duval County Property Appraiser",
+      "taxProtestProcedure": "File petition with Value Adjustment Board (VAB) by September 15 (or 25 days after TRIM notice). Magistrate hearing; circuit court appeal.",
+      "propertyTaxRate": "~1.4-1.8% effective rate (no state income tax; consolidated city-county)",
+      "keySubmarkets": [
+        "Downtown/Northbank",
+        "Southside/St. Johns Town Center",
+        "Ponte Vedra/Nocatee",
+        "Westside/Cecil Commerce",
+        "Airport/Imeson",
+        "Town Center/Deerwood"
+      ],
+      "localBomaChapter": "BOMA Northeast Florida",
+      "marketSpecificIssues": [
+        "Consolidated city-county government simplifies jurisdictional complexity",
+        "Major port expansion driving industrial/logistics growth",
+        "Hurricane insurance as variable CAM expense (less exposed than South Florida)",
+        "Financial services sector concentration (FIS, SS&C, Deutsche Bank)",
+        "Relatively affordable market where CAM overcharges have an outsized tenant impact"
+      ],
+      "notes": "Jacksonville's consolidated city-county government means simpler jurisdictional dynamics than most Florida metros. Port expansion is driving industrial growth and new CAM complexity.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "kansas-city-mo",
+      "name": "Kansas City, MO",
+      "state": "Missouri",
+      "vacancyRates": {
+        "office": 19.8,
+        "retail": 4.5,
+        "industrial": 5.5,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 10.0,
+        "retail": 7.25,
+        "industrial": 3.25
+      },
+      "taxAssessmentAuthority": "Jackson County Assessment Department / Johnson County (KS) Appraiser",
+      "taxProtestProcedure": "MO: File appeal with County Board of Equalization by July (even-year reassessment). KS: File with county appraiser by March 15, then State Board of Tax Appeals. Two-state metro.",
+      "propertyTaxRate": "MO: ~1.5-2.0%; KS: ~1.4-1.8% (32% assessment ratio in MO; 25% in KS for commercial)",
+      "keySubmarkets": [
+        "Country Club Plaza",
+        "Crown Center/Downtown",
+        "Overland Park/College Blvd",
+        "Lenexa/Olathe",
+        "North Kansas City/Chouteau",
+        "Lee's Summit"
+      ],
+      "localBomaChapter": "BOMA Kansas City",
+      "marketSpecificIssues": [
+        "Two-state metro (MO/KS) with completely different assessment systems and schedules",
+        "Missouri reassesses in even years only; Kansas annually",
+        "Kansas STAR bonds and Missouri TIF districts create tax incentive complexity",
+        "Tornado alley location makes severe weather insurance costs material",
+        "Jackson County assessment controversies have caused major value swings"
+      ],
+      "notes": "Kansas City straddles Missouri and Kansas. The two states have different assessment ratios, schedules, and appeal processes. A portfolio spanning both states requires two separate reconciliation approaches.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "pittsburgh-pa",
+      "name": "Pittsburgh, PA",
+      "state": "Pennsylvania",
+      "vacancyRates": {
+        "office": 21.0,
+        "retail": 4.8,
+        "industrial": 5.5,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 11.0,
+        "retail": 7.5,
+        "industrial": 3.75
+      },
+      "taxAssessmentAuthority": "Allegheny County Office of Property Assessments",
+      "taxProtestProcedure": "File appeal with Allegheny County Board of Property Assessment Appeals and Review by March 31. Can appeal to Court of Common Pleas. Base-year system (no regular reassessment).",
+      "propertyTaxRate": "~2.0-2.5% effective rate (county + municipality + school district)",
+      "keySubmarkets": [
+        "Downtown/Golden Triangle",
+        "Strip District",
+        "Oakland/University",
+        "Cranberry Township",
+        "Southpointe/Canonsburg",
+        "Robinson Township"
+      ],
+      "localBomaChapter": "BOMA Pittsburgh",
+      "marketSpecificIssues": [
+        "Base-year assessment system with no regular reassessment means values can become stale",
+        "Triple-levy system (county, municipality, school) creates complex tax bills",
+        "eds and meds (universities, UPMC) dominate market but many are tax-exempt, shifting burden",
+        "Legacy industrial properties with environmental remediation as CAM capital recovery",
+        "Tech sector growth (Robotics Row) creating new Class A demand"
+      ],
+      "notes": "Pittsburgh uses a base-year assessment system with no regular reassessment. Property tax values can fall far behind market values. This creates CAM reconciliation challenges and frequent appeals.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "cincinnati-oh",
+      "name": "Cincinnati, OH",
+      "state": "Ohio",
+      "vacancyRates": {
+        "office": 20.5,
+        "retail": 4.5,
+        "industrial": 5.2,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 9.75,
+        "retail": 6.75,
+        "industrial": 3.0
+      },
+      "taxAssessmentAuthority": "Hamilton County Auditor",
+      "taxProtestProcedure": "File complaint with County Board of Revision by March 31. Ohio triennial update/sexennial reappraisal cycle. Appeal to Board of Tax Appeals if needed.",
+      "propertyTaxRate": "~1.8-2.5% effective rate (35% assessment ratio)",
+      "keySubmarkets": [
+        "Downtown/The Banks",
+        "Over-the-Rhine/Pendleton",
+        "Blue Ash/Kenwood",
+        "Mason/West Chester",
+        "Covington/Newport (KY)",
+        "Florence/I-75 KY Corridor"
+      ],
+      "localBomaChapter": "BOMA Cincinnati",
+      "marketSpecificIssues": [
+        "Tri-state metro (OH/KY/IN) adds jurisdictional complexity",
+        "Ohio CRA and Enterprise Zone abatements widely used downtown",
+        "Kentucky side operates under different assessment rules (100% FMV, annual)",
+        "P&G and Kroger corporate presence anchors office demand",
+        "Historic building renovation drives mixed-use CAM allocation complexity"
+      ],
+      "notes": "Cincinnati spans three states. A single portfolio may cover Ohio, Kentucky, and Indiana. Each state has a different property tax assessment system, which adds reconciliation complexity.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "sacramento-ca",
+      "name": "Sacramento, CA",
+      "state": "California",
+      "vacancyRates": {
+        "office": 18.5,
+        "retail": 4.8,
+        "industrial": 5.5,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 10.5,
+        "retail": 7.75,
+        "industrial": 3.75
+      },
+      "taxAssessmentAuthority": "Sacramento County Assessor",
+      "taxProtestProcedure": "File Assessment Appeal Application with county Assessment Appeals Board. Prop 13 base; Prop 8 decline-in-value claims available for properties below purchase-price basis.",
+      "propertyTaxRate": "~1.1-1.2% effective rate (Prop 13)",
+      "keySubmarkets": [
+        "Downtown/Midtown",
+        "Rancho Cordova",
+        "Roseville/Rocklin",
+        "Natomas",
+        "Elk Grove",
+        "West Sacramento"
+      ],
+      "localBomaChapter": "BOMA Sacramento",
+      "marketSpecificIssues": [
+        "State government anchors significant office demand but with stable/declining headcount",
+        "Prop 13 basis disparities between state-owned and private properties",
+        "Wildfire smoke/air quality concerns emerging as building operations issue",
+        "Lower cost alternative to Bay Area driving some corporate relocation",
+        "Flood risk (Sacramento River confluence) affects insurance structures"
+      ],
+      "notes": "Sacramento's state capital role provides stable but slow-growing office demand. It attracts corporate relocations from the Bay Area. Tenants in this market are cost-sensitive to CAM charges.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "san-jose-ca",
+      "name": "San Jose, CA",
+      "state": "California",
+      "vacancyRates": {
+        "office": 27.5,
+        "retail": 4.0,
+        "industrial": 5.8,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 18.5,
+        "retail": 12.0,
+        "industrial": 7.0
+      },
+      "taxAssessmentAuthority": "Santa Clara County Assessor",
+      "taxProtestProcedure": "File Assessment Appeal Application with county Assessment Appeals Board. Prop 13/Prop 8 apply. Large tech campus assessments are frequently contested.",
+      "propertyTaxRate": "~1.2-1.3% effective rate (Prop 13 plus local overrides)",
+      "keySubmarkets": [
+        "Downtown San Jose",
+        "North San Jose/Alviso",
+        "Santa Clara/Great America",
+        "Cupertino/Sunnyvale",
+        "Milpitas",
+        "Campbell/Los Gatos"
+      ],
+      "localBomaChapter": "BOMA Silicon Valley",
+      "marketSpecificIssues": [
+        "Tech campus format dominates, with single-tenant properties and complex operating agreements",
+        "Extremely high vacancy due to tech layoffs and work-from-home",
+        "Prop 8 claims being filed aggressively as values decline from 2021 peaks",
+        "Data center power costs as specialized CAM category",
+        "Google Downtown West mega-project reshaping central San Jose market"
+      ],
+      "notes": "San Jose has 27.5% office vacancy due to tech sector contraction. Campus-format properties with single-tenant operating structures create CAM reconciliation challenges that differ from multi-tenant office.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "milwaukee-wi",
+      "name": "Milwaukee, WI",
+      "state": "Wisconsin",
+      "vacancyRates": {
+        "office": 20.0,
+        "retail": 5.0,
+        "industrial": 4.8,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 10.5,
+        "retail": 7.0,
+        "industrial": 3.25
+      },
+      "taxAssessmentAuthority": "City of Milwaukee Assessor's Office / County-level assessors",
+      "taxProtestProcedure": "File objection with local Board of Review by first Monday in May. Can appeal to Wisconsin Department of Revenue, then circuit court. Annual reassessment.",
+      "propertyTaxRate": "~2.5-3.0% effective rate (among higher rates nationally)",
+      "keySubmarkets": [
+        "Downtown/Third Ward",
+        "Wauwatosa/Mayfair",
+        "Brookfield/I-94 Corridor",
+        "Oak Creek/Airport",
+        "Menomonee Falls",
+        "Racine/Kenosha"
+      ],
+      "localBomaChapter": "BOMA Milwaukee",
+      "marketSpecificIssues": [
+        "High property tax rates, among the highest in the Midwest",
+        "Manufacturing/industrial legacy creates specialized building stock",
+        "TIF district prevalence affects tax increment flow-through",
+        "Fiserv Forum district development reshaping downtown",
+        "Snow removal and heating dominant seasonal CAM costs"
+      ],
+      "notes": "Milwaukee's high property tax rates make tax pass-throughs the top CAM issue. Extensive TIF district usage means many properties have tax dynamics that differ from standard assessment.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "baltimore-md",
+      "name": "Baltimore, MD",
+      "state": "Maryland",
+      "vacancyRates": {
+        "office": 20.5,
+        "retail": 4.8,
+        "industrial": 5.0,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 12.0,
+        "retail": 8.0,
+        "industrial": 4.0
+      },
+      "taxAssessmentAuthority": "Maryland State Department of Assessments and Taxation (SDAT)",
+      "taxProtestProcedure": "File with SDAT within 45 days of assessment notice. Triennial reassessment cycle (assessed value phased in over 3 years). Can appeal to Property Tax Assessment Appeals Board, then Maryland Tax Court.",
+      "propertyTaxRate": "~2.2-2.5% effective rate (Baltimore City rate is among highest in MD at ~$2.25 per $100 assessed)",
+      "keySubmarkets": [
+        "Downtown/Inner Harbor",
+        "Harbor East/Fells Point",
+        "Columbia/Howard County",
+        "BWI/Airport Corridor",
+        "Hunt Valley/Timonium",
+        "White Marsh/Perry Hall"
+      ],
+      "localBomaChapter": "BOMA Baltimore",
+      "marketSpecificIssues": [
+        "Baltimore City property tax rate is roughly double surrounding county rates",
+        "Triennial reassessment with 3-year phase-in creates predictable but lagging adjustments",
+        "PILOT (payment in lieu of taxes) agreements common for major developments",
+        "Enterprise Zone credits available in designated areas",
+        "Federal/military (Fort Meade, NSA) demand anchors suburban markets"
+      ],
+      "notes": "Baltimore City's property tax rate (about $2.25 per $100 assessed) is roughly double the surrounding county rates. Portfolios spanning the metro face large CAM disparities. The 3-year phase-in of reassessment changes smooths but delays tax adjustments.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "st-louis-mo",
+      "name": "St. Louis, MO",
+      "state": "Missouri",
+      "vacancyRates": {
+        "office": 22.5,
+        "retail": 5.5,
+        "industrial": 5.0,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 9.5,
+        "retail": 6.5,
+        "industrial": 3.0
+      },
+      "taxAssessmentAuthority": "St. Louis City Assessor / St. Louis County Assessor",
+      "taxProtestProcedure": "File appeal with County Board of Equalization by July (reassessment in odd years in MO). Can appeal to State Tax Commission. Independent city operates separately from county.",
+      "propertyTaxRate": "~2.0-3.0% effective rate (32% commercial assessment ratio; independent city rates differ from county)",
+      "keySubmarkets": [
+        "Downtown/Gateway Arch",
+        "Clayton/Central West End",
+        "Westport/Maryland Heights",
+        "Chesterfield/I-64 Corridor",
+        "Earth City/Hazelwood",
+        "St. Charles/O'Fallon"
+      ],
+      "localBomaChapter": "BOMA St. Louis",
+      "marketSpecificIssues": [
+        "St. Louis City is an independent city, not part of St. Louis County (unique in US)",
+        "High vacancy and population decline create persistent assessment challenges",
+        "Missouri Hancock Amendment limits tax revenue increases",
+        "TIF district usage is extensive, creating tax flow-through complexity",
+        "Tornado/severe weather insurance costs in metro area"
+      ],
+      "notes": "St. Louis City is separate from St. Louis County. This jurisdictional split exists almost nowhere else in the US. The city and county have different tax rates, assessment practices, and appeal processes.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "cleveland-oh",
+      "name": "Cleveland, OH",
+      "state": "Ohio",
+      "vacancyRates": {
+        "office": 23.0,
+        "retail": 5.5,
+        "industrial": 4.8,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 9.5,
+        "retail": 6.25,
+        "industrial": 3.0
+      },
+      "taxAssessmentAuthority": "Cuyahoga County Fiscal Office",
+      "taxProtestProcedure": "File complaint with County Board of Revision by March 31. Ohio triennial/sexennial cycle. Appeal to Board of Tax Appeals, then Ohio Supreme Court.",
+      "propertyTaxRate": "~2.0-2.8% effective rate (35% assessment ratio; among higher in Ohio)",
+      "keySubmarkets": [
+        "Downtown/Flats",
+        "University Circle/Health Tech Corridor",
+        "Independence/Rockside Road",
+        "Beachwood/Chagrin Highlands",
+        "Westlake/Crocker Park",
+        "Solon/Aurora Industrial"
+      ],
+      "localBomaChapter": "BOMA Greater Cleveland",
+      "marketSpecificIssues": [
+        "Cleveland Clinic and University Hospitals create major medical campus demand",
+        "Ohio triennial reassessment cycle with sexennial reappraisal",
+        "High vacancy creates significant gross-up exposure",
+        "CRA (Community Reinvestment Area) abatements widely used",
+        "Legacy industrial properties with environmental remediation cost recovery"
+      ],
+      "notes": "Cleveland's healthcare sector (Cleveland Clinic, University Hospitals) creates specialized medical office CAM structures. High overall vacancy means gross-up clauses are triggered on many leases.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "hartford-ct",
+      "name": "Hartford, CT",
+      "state": "Connecticut",
+      "vacancyRates": {
+        "office": 24.0,
+        "retail": 5.8,
+        "industrial": 5.0,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 11.5,
+        "retail": 7.5,
+        "industrial": 4.0
+      },
+      "taxAssessmentAuthority": "City of Hartford Assessor / Municipal assessors",
+      "taxProtestProcedure": "File appeal with local Board of Assessment Appeals by February 20. Can appeal to Superior Court within 2 months of board decision. Revaluation every 5 years (Connecticut mandate).",
+      "propertyTaxRate": "~3.0-7.0% effective rate (Hartford has among highest mill rates in CT at ~74 mills; 70% assessment ratio)",
+      "keySubmarkets": [
+        "Downtown Hartford",
+        "Farmington/West Hartford",
+        "Rocky Hill/Wethersfield",
+        "Windsor/Bradley Airport",
+        "Glastonbury/South Glastonbury",
+        "Manchester/Vernon"
+      ],
+      "localBomaChapter": "BOMA Connecticut",
+      "marketSpecificIssues": [
+        "Hartford has among the highest mill rates in the US (insurance industry tax-exempt buildings shift burden)",
+        "Insurance industry headquarters create large tax-exempt footprint, increasing effective rates",
+        "Connecticut's 5-year revaluation cycle creates significant adjustment events",
+        "Personal property tax on business equipment compounds operating costs",
+        "Suburban flight to Farmington/West Hartford corridor intensifying"
+      ],
+      "notes": "Hartford's high mill rate is driven by large insurance company tax exemptions that shrink the commercial tax base. This makes property tax pass-throughs expensive relative to property value.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "richmond-va",
+      "name": "Richmond, VA",
+      "state": "Virginia",
+      "vacancyRates": {
+        "office": 17.0,
+        "retail": 3.8,
+        "industrial": 4.5,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 10.0,
+        "retail": 7.0,
+        "industrial": 3.25
+      },
+      "taxAssessmentAuthority": "City of Richmond Assessor / Henrico County, Chesterfield County assessors",
+      "taxProtestProcedure": "File appeal with local Board of Equalization (deadlines vary by jurisdiction). Virginia independent cities assess separately from counties. Annual reassessment in most jurisdictions.",
+      "propertyTaxRate": "~0.8-1.2% effective rate (varies significantly by jurisdiction)",
+      "keySubmarkets": [
+        "Downtown/Shockoe Bottom",
+        "Innsbrook/West End",
+        "Short Pump/Glen Allen",
+        "Midlothian/Hull Street",
+        "Scott's Addition",
+        "Chester/I-95 Corridor"
+      ],
+      "localBomaChapter": "BOMA Richmond",
+      "marketSpecificIssues": [
+        "Virginia independent city system means Richmond is separate from surrounding counties",
+        "State capital and federal contractor presence provides demand stability",
+        "Data center growth along I-95/I-64 corridor increasingly significant",
+        "BPOL (business, professional, and occupational license) tax adds to operating costs",
+        "Machine-readable land value tax discussions could reshape assessment approach"
+      ],
+      "notes": "Richmond benefits from Virginia's independent city system. Jurisdictional boundaries are clear, though tax rates vary across the metro. State government and defense contractor demand provide stability not common in markets this size.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "omaha-ne",
+      "name": "Omaha, NE",
+      "state": "Nebraska",
+      "vacancyRates": {
+        "office": 19.5,
+        "retail": 5.5,
+        "industrial": 4.5,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 8.5,
+        "retail": 6.25,
+        "industrial": 2.75
+      },
+      "taxAssessmentAuthority": "Douglas County Assessor / Register of Deeds",
+      "taxProtestProcedure": "File protest with County Board of Equalization by June 30. Can appeal to Nebraska Tax Equalization and Review Commission (TERC), then Nebraska Supreme Court. Annual assessment cycle.",
+      "propertyTaxRate": "~1.8-2.3% effective rate (Douglas County; no state income tax exemption but competitive overall burden)",
+      "keySubmarkets": [
+        "Downtown/Old Market",
+        "Midtown Crossing",
+        "West Omaha/180th Street",
+        "Aksarben Village",
+        "Council Bluffs (IA)",
+        "Papillion/La Vista"
+      ],
+      "localBomaChapter": "BOMA Nebraska",
+      "marketSpecificIssues": [
+        "Annual assessment cycle creates year-over-year volatility in tax pass-throughs",
+        "Two-state metro (NE/IA) with different assessment systems and appeal processes",
+        "Financial services concentration (Berkshire Hathaway, Union Pacific, TD Ameritrade) anchors office demand",
+        "Nebraska Opportunity Zone and TIF incentives complicate tax basis",
+        "Tornado/severe weather insurance costs are material given plains geography"
+      ],
+      "notes": "Omaha's stable, diversified economy and Fortune 500 headquarters provide consistent commercial real estate demand. Annual property assessment creates frequent CAM tax reconciliation activity. The cross-state metro with Council Bluffs requires managing both Iowa and Nebraska assessment regimes.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "birmingham-al",
+      "name": "Birmingham, AL",
+      "state": "Alabama",
+      "vacancyRates": {
+        "office": 22.0,
+        "retail": 6.0,
+        "industrial": 5.5,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 7.5,
+        "retail": 5.5,
+        "industrial": 2.5
+      },
+      "taxAssessmentAuthority": "Jefferson County Revenue Department / Alabama Department of Revenue",
+      "taxProtestProcedure": "File appeal with County Board of Equalization within 30 days of assessment notice. Can appeal to Alabama Tax Tribunal, then circuit court. Annual assessment; commercial property assessed at 20% of fair market value.",
+      "propertyTaxRate": "~0.6-1.0% effective rate (Alabama has among the lowest property tax rates in the US; 20% assessment ratio for commercial)",
+      "keySubmarkets": [
+        "Downtown/Five Points South",
+        "Vestavia Hills/Hoover",
+        "Inverness/Highway 280",
+        "Fultondale/North Jefferson County",
+        "Bessemer/I-20 West",
+        "Trussville/Eastern Jefferson County"
+      ],
+      "localBomaChapter": null,
+      "marketSpecificIssues": [
+        "Alabama's 20% commercial assessment ratio creates one of the lowest effective tax rates nationally",
+        "No dedicated BOMA chapter - landlords rely on BOMA national resources",
+        "UAB (University of Alabama at Birmingham) medical campus drives specialized healthcare real estate demand",
+        "Secondary market with cost-sensitive tenants where CAM overcharges are disproportionately impactful",
+        "Tornado and severe weather risk drives insurance cost volatility"
+      ],
+      "notes": "Birmingham's low effective property tax rate (driven by Alabama's 20% commercial assessment ratio) means tax pass-throughs rarely drive CAM disputes here. Insurance cost allocations and operating expense transparency are the main reconciliation issues in this cost-sensitive market.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "memphis-tn",
+      "name": "Memphis, TN",
+      "state": "Tennessee",
+      "vacancyRates": {
+        "office": 21.5,
+        "retail": 6.5,
+        "industrial": 5.0,
+        "source": "CBRE/JLL Q4 2025 Market Reports",
+        "asOf": "Q4 2025"
+      },
+      "avgCamPerSF": {
+        "office": 7.25,
+        "retail": 5.75,
+        "industrial": 2.5
+      },
+      "taxAssessmentAuthority": "Shelby County Assessor of Property",
+      "taxProtestProcedure": "File informal appeal with Shelby County Assessor, then formal appeal to County Board of Equalization by August 1. Can appeal to Tennessee Assessment Appeals Commission, then circuit court. Quadrennial reappraisal cycle.",
+      "propertyTaxRate": "~1.5-2.0% effective rate (Shelby County; 40% assessment ratio for commercial; no state income tax on wages)",
+      "keySubmarkets": [
+        "Downtown/South Main",
+        "East Memphis/Poplar Corridor",
+        "Germantown/Collierville",
+        "Bartlett/Stage Road",
+        "DeSoto County (MS)/Olive Branch",
+        "Airport/Nonconnah Logistics Corridor"
+      ],
+      "localBomaChapter": "BOMA Memphis",
+      "marketSpecificIssues": [
+        "Quadrennial reappraisal cycle creates concentrated tax adjustment events every four years",
+        "Two-state metro (TN/MS) with different assessment rules in DeSoto County, Mississippi",
+        "FedEx global headquarters and logistics hub create massive industrial CAM volume",
+        "Secondary market with persistent office vacancy challenging landlord gross-up economics",
+        "Tornado and severe weather (Mid-South geography) drive insurance cost variability"
+      ],
+      "notes": "Memphis is a logistics and distribution hub. FedEx's presence has made it one of the largest US industrial markets per capita. CAM reconciliation complexity is concentrated in warehouse and distribution facilities. Quadrennial reappraisal cycles create predictable windows for large tax adjustment disputes.",
+      "relatedResources": [
+        "/resources/expenses",
+        "/resources/expenses",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    }
+  ]
+}

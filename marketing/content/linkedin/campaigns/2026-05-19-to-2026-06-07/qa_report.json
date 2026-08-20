@@ -1,0 +1,52 @@
+{
+  "total_posts": 300,
+  "date_range": [
+    "2026-05-19",
+    "2026-06-07"
+  ],
+  "expected_dates": 20,
+  "date_counts": {
+    "2026-05-19": 15,
+    "2026-05-20": 15,
+    "2026-05-21": 15,
+    "2026-05-22": 15,
+    "2026-05-23": 15,
+    "2026-05-24": 15,
+    "2026-05-25": 15,
+    "2026-05-26": 15,
+    "2026-05-27": 15,
+    "2026-05-28": 15,
+    "2026-05-29": 15,
+    "2026-05-30": 15,
+    "2026-05-31": 15,
+    "2026-06-01": 15,
+    "2026-06-02": 15,
+    "2026-06-03": 15,
+    "2026-06-04": 15,
+    "2026-06-05": 15,
+    "2026-06-06": 15,
+    "2026-06-07": 15
+  },
+  "missing_or_wrong_date_counts": [],
+  "duplicate_slots": [],
+  "pillar_counts": {
+    "anti-integration": 40,
+    "cam-math": 100,
+    "engagement": 20,
+    "erp-workarounds": 40,
+    "founder": 20,
+    "industry-news": 20,
+    "product": 20,
+    "war-stories": 40
+  },
+  "format_counts": {
+    "carousel": 40,
+    "image-quote": 20,
+    "poll": 20,
+    "text-long": 64,
+    "text-short": 136,
+    "video": 20
+  },
+  "issues": [],
+  "passed": true
+}

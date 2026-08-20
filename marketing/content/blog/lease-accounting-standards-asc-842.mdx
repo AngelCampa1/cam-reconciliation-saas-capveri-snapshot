@@ -1,0 +1,193 @@
+---
+title: "Lease Accounting Standards ASC 842: What Changed for CAM Reconciliation"
+description: "How lease accounting standards under ASC 842 changed how tenants track operating expenses, and the direct implications for approving CAM reconciliation statements."
+excerpt: "ASC 842 didn't just move leases onto the balance sheet. It changed how CRE tenants account for variable operating expenses including CAM. Here's what the controller needs to know at year-end."
+datePublished: "2026-04-24"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "What did ASC 842 change about how CAM charges are recorded?"
+    a: "Under the old ASC 840, operating lease payments (including CAM) were often just expensed as paid with no balance sheet impact. ASC 842 requires you to separate fixed lease components (which go into the ROU asset and liability) from variable lease components (which are expensed as incurred). Most CAM charges are variable because they depend on actual annual operating expenses. The practical change: you now need to document which portion of what you pay to the landlord each month is 'fixed' versus variable, and the year-end CAM true-up is explicitly treated as a variable lease payment expensed in the period settled."
+  - q: "Does ASC 842 apply to leases where the landlord passes through CAM expenses?"
+    a: "Yes. ASC 842 applies to all leases meeting the definition: an identified asset that the customer controls the right to use. NNN leases, gross leases with CAM caps, and modified gross leases all qualify. The CAM pass-through treatment depends on whether the charges are fixed (rare) or variable (usual). If the lease specifies a fixed CAM contribution per square foot regardless of actual costs, that fixed amount gets capitalized into the lease liability. Most CAM structures are variable by nature because they're tied to actual property operating expenses for the year."
+  - q: "How does IFRS 16 differ from ASC 842 in CAM treatment?"
+    a: "IFRS 16 eliminated the operating/finance lease distinction for lessees entirely. All leases with terms over 12 months go on the balance sheet as a single model (similar to ASC 842 finance leases). Variable lease payments under IFRS 16 are excluded from the lease liability and recognized in profit or loss in the same period as the related variable condition, which is effectively the same treatment as ASC 842 for variable CAM. The main GAAP/IFRS gap is income statement presentation: IFRS 16 shows depreciation and interest separately (even for what US GAAP calls operating leases), while ASC 842 preserves the single straight-line lease cost line for operating leases."
+  - q: "When is the CAM true-up recognized under ASC 842?"
+    a: "The year-end CAM reconciliation true-up is a variable lease payment recognized in the period the reconciliation is finalized, not the period the underlying costs were incurred. If your landlord sends the reconciliation in February 2026 for calendar year 2025, you book the true-up in Q1 2026 when you receive and approve the statement. This creates a common audit point: the cutoff between what's accrued at December 31 versus what's recognized in the new year. The practical approach is to accrue an estimate at year-end based on your best knowledge of annual operating costs, then true-up to actual when the statement arrives."
+  - q: "Does the lease component practical expedient simplify CAM accounting under ASC 842?"
+    a: "It can, but most sophisticated CRE tenants don't elect it for property leases. The practical expedient lets you treat lease and non-lease components (like CAM services) as a single unit: you'd capitalize the CAM estimate along with the fixed rent into the ROU asset. That inflates your balance sheet and gives you less flexibility to dispute individual CAM line items. Most controllers prefer to keep CAM as a variable component, expense it as incurred, and maintain a clean paper trail for the annual reconciliation review."
+---
+
+ASC 842 (effective for public companies in 2019 and private companies in 2022) is widely understood as the standard that moved operating leases onto the balance sheet. What gets less attention is how it changed the accounting treatment for variable operating expenses, including CAM charges. If you're a controller managing CRE leases, the shift matters at year-end when the landlord's [CAM reconciliation statement](/resources/common-area-maintenance-reconciliation-explained) arrives.
+
+## What Changed Under Lease Accounting Standards ASC 842
+
+### The Old World: ASC 840
+
+Under ASC 840, the operating lease vs capital lease distinction controlled balance sheet presentation. Operating leases (which covered the vast majority of commercial real estate) stayed off the balance sheet. You disclosed the future minimum rental payments in the footnotes, and that was it. Monthly rent including CAM estimates got debited to rent expense; year-end CAM true-ups hit the same line.
+
+The accounting was simple. The problem: it understated tenant obligations for anyone reading the financial statements. A company with $50 million in operating lease commitments showed none of that on the balance sheet.
+
+### The New World: ASC 842
+
+ASC 842 requires all leases longer than 12 months to be recognized as:
+
+- A **right-of-use (ROU) asset** representing the lessee's right to use the underlying asset
+- A **lease liability** representing the present value of future lease payments
+
+The classification still matters ([operating lease vs finance lease](/resources/operating-lease-vs-finance-lease) determines income statement presentation), but both now land on the balance sheet.
+
+For CAM-heavy leases, the critical change is in how you measure the lease liability. The standard distinguishes between:
+
+1. **Lease components**: the right to use the identified asset (your space)
+2. **Non-lease components**: services like CAM (property management, landscaping, cleaning of common areas)
+3. **Variable lease payments**: amounts that vary based on conditions other than passage of time
+
+Most CAM structures fall into category 3. Because CAM charges depend on the landlord's actual operating expenses for the year, they're variable, and variable lease payments are explicitly **excluded** from the ROU asset and lease liability calculation.
+
+## The CAM Accounting Flow Under ASC 842
+
+Here's how the journal entries work for a typical [NNN lease](/resources/nnn-lease-cam-reconciliation) with monthly CAM estimates.
+
+**Lease commencement: Initial ROU asset and liability (fixed rent only):**
+
+```
+Assume: $20,000/month base rent, 60-month term, 6% IBR
+PV of 60 payments = $1,034,511
+
+DR  Right-of-Use Asset (Operating)    $1,034,511
+  CR  Lease Liability                              $1,034,511
+```
+
+Note: the estimated $2,000/month CAM charges are excluded from this calculation.
+
+**Monthly operating: Base rent payment:**
+
+```
+DR  Lease Cost (Operating)             $20,000
+  CR  Cash                                           $20,000
+
+[Liability accretion and ROU asset amortization recorded separately
+to maintain straight-line cost - see operating lease entries guide]
+```
+
+**Monthly operating: CAM estimate payment:**
+
+```
+DR  CAM Expense / Variable Lease Cost   $2,000
+  CR  Cash                                            $2,000
+```
+
+**Year-end CAM true-up: Additional amount owed:**
+
+The reconciliation comes in from the landlord. Actual CAM was $28,400 for the year; tenant paid estimates of $24,000 ($2,000 × 12). Tenant owes $4,400.
+
+```
+DR  CAM Expense / Variable Lease Cost   $4,400
+  CR  Accounts Payable                              $4,400
+
+[Upon payment:]
+DR  Accounts Payable                     $4,400
+  CR  Cash                                            $4,400
+```
+
+**Year-end CAM true-up: Credit due back:**
+
+If actual CAM was $21,600 and tenant paid $24,000, landlord owes $2,400.
+
+```
+DR  Accounts Receivable / Prepaid       $2,400
+  CR  CAM Expense / Variable Lease Cost             $2,400
+```
+
+The true-up entry lands in the period the reconciliation is finalized, typically Q1 of the following year. If you want to match expenses to the period they relate to, accrue an estimate at December 31 and reverse it when the final statement arrives.
+
+## How ASC 842 Changed the Year-End CAM Review Process
+
+Before ASC 842, a sloppy CAM reconciliation had limited accounting consequences. You debited expense and moved on. Under ASC 842, controllers need to:
+
+**1. Confirm the fixed vs variable split matches the lease**
+
+If any CAM charges are written into the lease as fixed amounts, they should be in the lease liability. Many leases have "estimated CAM" language that sounds fixed but is actually variable. Read the lease definition carefully before you set up the amortization schedule.
+
+**2. Verify you haven't double-counted**
+
+Some leases bundle estimates into the "base rent" for simplicity. If you capitalized those estimates as part of the fixed rent in your ROU asset, you'll double-count when the monthly variable estimate checks also hit expense. Check your lease abstract against what went into the IBR calculation.
+
+**3. Document the true-up cutoff**
+
+Auditors will ask whether the CAM true-up relates to the prior year or current year expenses. You need a clear memo: "The 2025 CAM reconciliation was received February 14, 2026. Per ASC 842-20-30-5 (variable lease payments excluded from lease liability and expensed as incurred), this variable lease payment is recognized in Q1 2026." If the amount is material, accrue it at December 31 and reverse when the statement clears.
+
+**4. Flag overbilled items before you approve payment**
+
+ASC 842 documentation requirements create a paper trail that makes disputed CAM charges harder to ignore. If you've capitalized a clean lease liability based on fixed rent, and then you approve an inflated variable CAM payment, the variance shows up clearly in your reconciliation. Use the [CAM overbilling liability](/blog/cam-overbilling-liability) framework to assess whether to dispute before paying.
+
+## IFRS 16 vs ASC 842: CAM Treatment for International Operations
+
+If you have operations under IFRS, the CAM treatment is similar but with one important structural difference.
+
+Under IFRS 16, there's no operating/finance lease distinction for lessees. Every lease goes on the balance sheet as a single model (essentially what ASC 842 calls a finance lease). That means:
+
+| Aspect | ASC 842 (Operating Lease) | IFRS 16 |
+|---|---|---|
+| Balance sheet | ROU asset + liability | ROU asset + liability |
+| Lease cost presentation | Single straight-line cost | Depreciation + interest (separate lines) |
+| Variable CAM treatment | Expensed as incurred | Expensed as incurred |
+| CAM in lease liability | Fixed amounts only | Fixed amounts only |
+| Short-term exemption | ≤12 months | ≤12 months |
+
+The variable CAM treatment is effectively identical. The income statement difference matters for EBITDA calculations. IFRS 16 reduces operating expenses and increases D&A plus interest, which inflates EBITDA. ASC 842 operating leases preserve the pre-842 EBITDA treatment because the single lease cost line flows through operating expenses.
+
+For more detail on the GAAP framework, see our [US GAAP lease accounting guide](/resources/us-gaap-lease-accounting-guide).
+
+## The Practical Expedients That Matter for CRE Tenants
+
+**Short-term lease exemption**: If a lease has a 12-month or shorter term at commencement (and no purchase option you'll exercise), skip ROU asset recognition entirely. Month-to-month renewals often qualify. CAM charges on those leases stay as simple operating expenses.
+
+**Portfolio approach**: ASC 842 allows applying lease accounting at a portfolio level for similar leases if the effect wouldn't differ materially from individual treatment. For a portfolio of 50 retail locations with similar lease structures, this can simplify the work significantly. Document the portfolio characteristics and materiality assessment.
+
+**Lease component practical expedient**: You can elect to combine lease and non-lease components (CAM services) and capitalize the bundle. Most controllers don't elect this for commercial real estate because it inflates the balance sheet and removes flexibility for CAM disputes. The only scenario where it makes sense: you have very small, homogeneous leases where the administrative burden of separating components exceeds the balance sheet impact.
+
+## CAM Reconciliation Software and ASC 842 Documentation
+
+The administrative burden of ASC 842 (documenting fixed vs variable components, maintaining amortization schedules, recording true-ups with proper cutoff) means the annual CAM reconciliation review can't be a manual spreadsheet exercise anymore.
+
+CRE finance teams need a workflow that:
+- Captures lease terms (fixed vs variable CAM language) at lease setup
+- Tracks monthly CAM estimates against the amounts excluded from the liability calculation
+- Imports the landlord's year-end reconciliation for line-item review
+- Generates the journal entry for the true-up with proper period documentation
+
+See our [CAM reconciliation software comparison](/blog/cam-reconciliation-software-comparison-2026) for how current tools handle the ASC 842 documentation layer. And if you're working through the initial implementation of the standard, the [ASC 842 lease accounting guide](/resources/asc-842-lease-accounting-guide) covers the full adoption approach with practical expedient elections.
+
+## The FASB ASC 842 Impact on CAM Disputes
+
+One underappreciated effect of ASC 842: it creates better documentation infrastructure for disputing CAM charges. When you've set up your lease in an ASC 842-compliant system with clean separation of fixed rent and variable CAM, the year-end reconciliation review is structured around actual vs budgeted variable charges, not a single rent expense line that buries everything.
+
+Controllers who adopt this workflow find it easier to flag anomalies like:
+- [Controllable expenses](/resources/controllable-vs-non-controllable-expenses) being passed through as non-controllable
+- [Pro-rata share calculations](/resources/pro-rata-share-calculation) that use a smaller denominator than the full leasable area
+- [CAM gross-up calculations](/resources/cam-gross-up-calculation-guide) applied to already-gross expenses
+- Capital items amortized through operating CAM pools
+
+The accounting discipline ASC 842 requires is actually an asset when it comes to enforcing your lease rights at reconciliation time. If your team isn't using it that way, [our CAM reconciliation errors post](/blog/cam-reconciliation-errors) walks through the most common landlord billing mistakes and how to catch them systematically.
+
+---
+
+## Related Resources
+
+- [Operating Lease vs Finance Lease](/resources/operating-lease-vs-finance-lease): balance sheet treatment comparison
+- [ASC 842 Lease Accounting Guide](/resources/asc-842-lease-accounting-guide): comprehensive implementation reference
+- [Operating Lease Journal Entries](/resources/operating-lease-accounting-entries): full entry templates
+- [ASC 842 Worked Example](/resources/asc-842-lease-accounting-example): end-to-end example with CAM variable payments
+- [CAM True-Up](/resources/cam-true-up): year-end reconciliation payment treatment
+- [FASB ASC 842 CAM Impact](/blog/fasb-asc-842-cam-impact): detailed FASB analysis
+- [CAM Reconciliation Deadlines](/blog/cam-reconciliation-deadlines): timing and cutoff guidance
+- [NOI Impact Calculator](/tools/noi-impact-calculator): model the effect of CAM charges on property returns
+
+## Sources
+
+1. [Deloitte DART - Roadmap: Leases](https://dart.deloitte.com/USDART/home/publications/roadmap/leasing?id=us%3A2el%3A3dp%3Armleases%3Aeng%3Aaud%3A121823%3Aiaspl)
+2. [Deloitte - Lease Accounting Guide: Roadmap for ASC 842](https://www.deloitte.com/us/en/services/audit-assurance/articles/roadmap-to-applying-the-new-leasing-standard.html?icid=top_roadmap-to-applying-the-new-leasing-standard)

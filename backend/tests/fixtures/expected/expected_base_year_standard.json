@@ -1,0 +1,31 @@
+{
+  "scenario": "base_year_standard",
+  "description": "Standard base year with expenses above base",
+  "inputs": {
+    "base_year_expenses": 100000.0,
+    "current_year_expenses": 115000.0,
+    "pro_rata_share": 0.0312
+  },
+  "calculation_steps": [
+    {
+      "step": 1,
+      "description": "Calculate expense increase over base",
+      "formula": "current_expenses - base_expenses",
+      "calculation": "115000.00 - 100000.00 = 15000.00",
+      "result": 15000.0
+    },
+    {
+      "step": 2,
+      "description": "Apply pro-rata share",
+      "formula": "expense_increase * pro_rata_share",
+      "calculation": "15000.00 * 0.0312 = 468.00",
+      "result": 468.0
+    }
+  ],
+  "expected_output": {
+    "expense_increase": 15000.0,
+    "tenant_share": 468.0,
+    "base_year_expenses": 100000.0,
+    "current_year_expenses": 115000.0
+  }
+}

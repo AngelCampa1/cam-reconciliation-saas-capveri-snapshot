@@ -1,0 +1,46 @@
+{% extends "_base.html" %}
+{% block content %}
+{#
+  SECURITY NOTE: `original_html | safe`
+  ======================================
+  `original_html` arrives from the Resend inbound webhook (an unauthenticated
+  HTTP endpoint) and is rendered verbatim here via `| safe`.
+
+  Threat model:
+  - An attacker who controls the inbound email body can inject arbitrary HTML
+    into the outgoing *forwarded* email.
+  - This forwarded email is delivered exclusively to an internal CapVeri
+    address ({{ internal_forward_recipient }}). It is NEVER sent to tenants or
+    external recipients.
+  - Risk: an attacker can craft a phishing-looking forwarded email that
+    arrives in the internal inbox, or embed tracking pixels.
+
+  Decision: accept this risk because:
+  1. Recipient is a single known internal address.
+  2. A content-stripped version would lose formatting context needed to
+     triage support requests.
+  3. Adding `bleach` sanitization is deferred until the forwarding path
+     serves a broader audience.
+
+  If the forwarding destination ever changes to include external addresses,
+  sanitize `original_html` with `bleach.clean()` before passing it here.
+
+  Metadata fields (`original_from`, `original_to`, `subject`) are rendered
+  via standard Jinja2 interpolation and are therefore HTML-escaped by the
+  autoescape engine, so they are safe.
+#}
+<div style="
+  background-color: {{ t.SURFACE }};
+  border-left: 4px solid {{ t.PRIMARY }};
+  font-family: {{ t.FONT_FAMILY }};
+  margin-bottom: {{ t.SPACE_LG }};
+  padding: {{ t.SPACE_MD }};">
+  <p style="color: {{ t.TEXT_PRIMARY }}; font-size: 14px; font-weight: 600; margin: 0 0 {{ t.SPACE_SM }};">Forwarded Message</p>
+  <p style="color: {{ t.TEXT_PRIMARY }}; font-size: 13px; margin: 0 0 4px;"><strong>From:</strong> {{ original_from }}</p>
+  <p style="color: {{ t.TEXT_PRIMARY }}; font-size: 13px; margin: 0 0 4px;"><strong>To:</strong> {{ original_to }}</p>
+  <p style="color: {{ t.TEXT_PRIMARY }}; font-size: 13px; margin: 0;"><strong>Subject:</strong> {{ subject }}</p>
+</div>
+{% if original_html %}
+{{ original_html | safe }}
+{% endif %}
+{% endblock %}

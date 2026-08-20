@@ -1,0 +1,126 @@
+---
+title: "RealPage CAM Pool Setup: Config Guide and Common Errors"
+description: "How to set up CAM pools in RealPage Commercial. The most common config errors: missing cap rules, wrong allocation basis, mixed residential/commercial accounts, and GL account exclusions."
+excerpt: "RealPage's CAM pool wizard is easy to start but easy to misconfigure. Here are the errors we see most often."
+datePublished: "2026-03-19"
+dateModified: "2026-03-19"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "How are CAM pools structured in RealPage Commercial?"
+    a: "RealPage Commercial organizes CAM recovery through Expense Pools, which aggregate GL accounts into recoverable expense categories. Each pool has an allocation basis (RSF, USF, or custom), gross-up settings, and cap rules. Pools are then linked to lease recovery schedules, which define each tenant's share calculation method. A single property can have multiple pools (for example, a base building pool and a retail-specific pool)."
+  - q: "What is the most common RealPage CAM pool configuration error?"
+    a: "The most common error is missing or misconfigured cap rules. RealPage supports both cumulative and non-cumulative caps, but defaults to non-cumulative. Leases that require cumulative caps (where unused cap headroom carries forward) will systematically overcharge tenants if the pool is set to non-cumulative. Always verify cap type against lease language before finalizing pool setup."
+  - q: "How do I prevent residential accounts from contaminating commercial CAM pools in RealPage?"
+    a: "RealPage allows properties with mixed-use portfolios to exist in the same database. The risk is GL accounts that were originally set up for residential properties being mapped to commercial CAM pools (particularly management fees, amenity costs, and residential common area expenses). Prevent this by using a strict account numbering convention that separates residential and commercial accounts, and auditing pool GL account mappings against your chart of accounts when you onboard a new commercial property."
+---
+
+RealPage Commercial's CAM pool wizard walks you through setup step by step. That makes it easy to get started, but it also makes it easy to accept defaults that don't match your leases. The errors that result aren't obvious right away. They show up when reconciliation statements go out and tenants ask why their numbers don't match the lease.
+
+## RealPage CAM Pool Architecture Overview
+
+RealPage structures CAM recovery in three layers:
+
+1. **Expense Pools:** Aggregate GL accounts → calculate total recoverable expenses for a category
+2. **Recovery Schedules:** Define allocation methodology (how the pool total is divided among tenants)
+3. **Lease Recovery Records:** Apply the recovery schedule to each tenant, with tenant-specific overrides
+
+Each layer can be configured correctly or incorrectly. Errors at the pool layer affect every tenant in the pool. Errors at the lease record layer affect only that tenant.
+
+Understanding this layered structure is essential for diagnosing problems. Before you can fix an error, you need to know which layer it lives in.
+
+## Step 1: GL Account Assignment
+
+The GL Account Mapping tab in each Expense Pool controls which accounts contribute to the recoverable expense total. This is where the most costly errors occur. Every dollar that is miscategorized (included when it should not be, or excluded when it should) affects every tenant's reconciliation.
+
+**What belongs in a CAM pool:**
+- Common area maintenance (janitorial, landscaping, snow removal)
+- Common area utilities
+- Management fees (per lease terms, typically a percentage of operating expenses)
+- Insurance (if the lease includes it as recoverable)
+- Real estate taxes (if the lease includes them as recoverable, often in a separate pool)
+- Repairs and maintenance for common areas
+
+**What does not belong:**
+- Capital expenditures (replacements rather than repairs; confirm with lease language)
+- Tenant improvement costs
+- Leasing commissions
+- Mortgage payments or debt service
+- Depreciation and amortization
+- Corporate overhead not attributable to the property
+- Residential amenity costs (if the property is mixed-use)
+
+**Validation step:** After mapping accounts, run a test expense total for the prior year and compare to your manually calculated recoverable expense total for that year. Any difference indicates a mapping error.
+
+## Step 2: Allocation Basis
+
+RealPage supports three primary allocation bases:
+
+- **RSF (Rentable Square Footage):** Most common. Pro-rata share = tenant RSF / building RSF.
+- **USF (Usable Square Footage):** Used when leases define share by usable area rather than rentable.
+- **Custom:** Allows a manually defined numerator and denominator for special lease situations.
+
+**Common allocation basis errors:**
+
+*Using USF when the lease says RSF:* In a 100,000 RSF building with a 10% load factor, USF is ~90,000. A tenant with 10,000 RSF would have 11.1% share under USF vs. 10% under RSF. Over a $500,000 pool, that's a $5,500 annual overcharge.
+
+*Not updating RSF after TI construction:* If a tenant expansion changes their RSF and RealPage isn't updated, every subsequent billing uses the old number.
+
+*Wrong building total:* RealPage uses the denominator defined in the pool setup, not automatically from all active leases. If you add or remove space from the building, update the pool denominator manually.
+
+## Step 3: Cap Rules
+
+RealPage supports multiple cap configurations, and this is where defaults are most dangerous. The wizard defaults to non-cumulative cap logic, but many commercial leases (particularly office leases from 2015 onward) specify cumulative caps.
+
+**Non-cumulative cap:** CAM cannot increase more than X% per year, regardless of what happened in prior years. Unused headroom disappears.
+
+**Cumulative cap:** CAM cannot increase more than X% per year compounded. Unused headroom carries forward. If CAM increased only 2% in a 5%-cap year, the 3% unused headroom accumulates and can be applied in future years.
+
+**Financial impact over time:** In a 5-year lease with a 5% cumulative cap and actual CAM increases of 3%, 3%, 3%, 8%, 8%:
+
+- Non-cumulative cap: Year 4 and 5 capped at 5%. Landlord collects less.
+- Cumulative cap: Unused capacity from years 1-3 (2%+2%+2%=6%) allows year 4 to increase 8% without hitting the cap. Year 5 still has remaining headroom.
+
+The difference compounds. For a tenant with $100,000 annual CAM, the five-year billing difference between cumulative and non-cumulative can exceed $15,000.
+
+**How to configure in RealPage:** Navigate to the tenant's Lease Recovery Record → Cap Settings tab. Confirm:
+- Cap Type: Cumulative or Non-Cumulative (match your lease)
+- Cap Base Amount: The base period's CAM amount
+- Cap Base Year: Should match lease commencement or renewal date
+- Cap Percentage: Must match lease exactly (not rounded)
+
+## Common Configuration Errors
+
+**No cap rules configured at all:** The pool calculates an uncapped amount, and RealPage sends it to tenants who have cap protection in their leases. This is the single most common RealPage overbilling scenario. Always configure cap rules for any lease that contains CAM cap language.
+
+**Mixed-use account contamination:** Properties with both residential and commercial tenants in the same RealPage database are at risk of residential-specific GL accounts being mapped to commercial CAM pools. Audit the account list for any amenity costs, residential maintenance, or apartment-specific accounts.
+
+**Wrong allocation basis for anchor tenants:** Major tenants (grocery anchors, big-box retailers) frequently negotiate a fixed CAM contribution or an excluded-from-denominator status rather than pro-rata billing. If RealPage has them contributing to the denominator when they shouldn't be, all remaining tenants are undercharged.
+
+**Cap base year not updated at renewal:** When a lease renews and the CAM cap resets, RealPage requires manual update of the base year in the lease record. This does not happen automatically. If the base year is still set to the original lease commencement, cap calculations are wrong for the renewal term.
+
+## Validation Checklist
+
+Before sending reconciliation statements, verify:
+
+- [ ] GL account mapping reviewed against chart of accounts (no capital accounts included)
+- [ ] Allocation basis matches lease definitions (RSF or USF confirmed per lease)
+- [ ] Denominator is correct (updated for any space changes)
+- [ ] Cap type is correct (cumulative vs. non-cumulative per lease language)
+- [ ] Cap base year is current (updated for any renewals)
+- [ ] Cap base amount is correct (matches actual CAM billed in base year)
+- [ ] Mixed-use accounts excluded (no residential-specific accounts in commercial pools)
+- [ ] Anchor tenant denominator treatment is correct per lease
+
+CapVeri's CAM cap calculator models cumulative vs. non-cumulative cap scenarios against your actual expense history. It shows the correct cap limit for each tenant before statements go out.
+
+## Related Resources
+
+- [RealPage CAM Setup Guide](/resources/software/realpage/cam-setup)
+- [CAM Cap Calculator](/tools/cam-cap-calculator)
+
+## Sources
+
+1. [RealPage - Commercial Property Management](https://www.realpage.com/commercial/commercial-property-management/)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

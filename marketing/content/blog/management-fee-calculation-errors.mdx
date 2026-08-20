@@ -1,0 +1,105 @@
+---
+title: "Why Your Management Fee Calculation Might Be Wrong"
+description: "Three common management fee calculation errors in CAM reconciliation: wrong base, circularity, and double-charging. Each one can become a tenant audit finding."
+excerpt: "Management fee errors are common tenant audit findings. The difference between 'percentage of gross' and 'percentage of net' on a $1M pool is $12,000 per year."
+datePublished: "2026-03-17"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "cam-errors"
+faq:
+  - q: "What is a typical management fee in commercial real estate?"
+    a: "Management fees commonly vary by property type, size, and market. The critical question for CAM isn't the percentage. It's the base on which it's calculated."
+  - q: "Should the management fee be included in the CAM cap?"
+    a: "This depends entirely on the lease. Some leases explicitly exclude management fees from the cap calculation. Others include them. Read your lease. The distinction can mean thousands of dollars per tenant per year."
+---
+
+Management fees sit in a strange position in CAM reconciliation. They're a real cost (you pay your property manager), but the calculation method determines whether you're billing correctly.
+
+Three errors show up repeatedly in tenant audits. Each one is easy to catch if you know what to look for.
+
+## Error 1: Wrong Base
+
+The lease says: "Management fee equal to 3% of Operating Expenses."
+
+The management agreement says: "Fee equal to 3% of Effective Gross Revenue."
+
+These are different numbers. Operating Expenses for a building might be $1.2M. Effective Gross Revenue might be $4M. The management fee is either $36,000 or $120,000 depending on which base you use.
+
+The lease controls what you can pass through to tenants. The management agreement controls what you actually pay. If your management agreement fee is higher than what the lease allows you to recover, the difference is a landlord cost and is not recoverable through CAM.
+
+**How to check:** Pull the lease clause defining management fees. Pull the management agreement. Compare the bases. If they don't match, use the lease-defined base for CAM billing and absorb the difference.
+
+## Error 2: The Circularity Problem
+
+Some leases define the management fee as "3% of total Operating Expenses including the management fee." This creates a circular reference: the fee is part of the pool, but the pool includes the fee.
+
+The correct formula breaks the circularity:
+
+**Management Fee = Operating Expenses (excluding fee) × Fee Rate / (1 - Fee Rate)**
+
+For $1M in expenses and a 3% fee:
+- Incorrect (simple): $1,000,000 × 3% = $30,000
+- Correct (circular): $1,000,000 × 0.03 / (1 - 0.03) = $30,928
+
+The difference is $928 per year. Small on one building, but it compounds across a portfolio and over multi-year lease terms.
+
+Most property management systems handle this correctly if configured properly. The error occurs when someone overrides the system calculation with a manual entry.
+
+## Error 3: Admin Fee Plus Management Fee
+
+Some leases include an "administrative fee" provision. Others include a "management fee" provision. A few include both.
+
+The error: charging both when the lease only allows one.
+
+An administrative fee of 15% on a $1M CAM pool adds $150,000. A management fee of 4% on the same base adds $40,000. Charging both adds $190,000. But if the lease says "administrative fee OR management fee, whichever is less," you owe $40,000.
+
+**How to check:** Search the lease for "administrative," "admin," "management fee," and "overhead." Determine whether the lease allows one, the other, or both. Map this to what's actually being charged in the reconciliation.
+
+## Lease Language Patterns to Watch
+
+The calculation risk usually starts in one of four lease patterns:
+
+1. **Percentage of operating expenses:** the fee is recoverable only on the expense pool defined by the lease.
+2. **Percentage of gross receipts:** the fee may be tied to revenue, but that does not automatically make the full amount recoverable through CAM.
+3. **Actual third-party management cost:** the recoverable amount follows the management agreement, subject to exclusions and caps in the lease.
+4. **Administrative fee in lieu of management fee:** the lease allows one overhead charge, not both.
+
+Each pattern produces a different formula. A billing system configured for one pattern will overbill or underbill tenants when the lease uses another.
+
+## Portfolio Control
+
+For multi-property teams, the control should live above the individual statement. Keep a management fee matrix with one row per lease:
+
+- Lease recovery authority
+- Fee base
+- Fee rate
+- Whether the fee is included in the CAM cap
+- Whether admin fees are separately allowed
+- Whether exclusions reduce the fee base
+- Billing system configuration
+
+Review the matrix before final statements are issued. The most common failure is not a hard math error; it is reusing last year's configuration after a lease amendment, tenant expansion, or management agreement change.
+
+## Prevention
+
+For each property in your portfolio, document three things:
+
+1. What the lease says about management/admin fees (the recovery authority)
+2. What the management agreement says (the actual cost)
+3. What the billing system is configured to charge (the implementation)
+
+If all three align, you're clean. If any of them diverge, you have a finding waiting to happen.
+
+CapVeri flags management fee discrepancies by comparing the billed amount against the lease-defined base and rate. It catches all three error types (wrong base, circularity, and double-charging) before your statements go out.
+
+## Related Resources
+
+- [Admin Fee Calculation Methods](/resources/admin-fee-calculation-methods) - Gross, net, and capped methods compared
+- [Self-Audit CAM Billing](/resources/self-audit-cam-billing) - Full 10-point self-audit checklist
+- [What Tenant Auditors Look For](/blog/what-tenant-auditors-look-for) - The 7 highest-frequency findings
+
+## Sources
+
+1. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

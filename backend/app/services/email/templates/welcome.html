@@ -1,0 +1,25 @@
+{% extends "_base.html" %}
+{% from "_components.html" import button, video_card with context %}
+{% block content %}
+<h2 style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 22px; margin: 0 0 {{ t.SPACE_MD }};">
+  Your draft reconciliation is ready
+</h2>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  Hi {{ organization_name }},
+</p>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  Your GL files are in. CapVeri built the draft. Check it before you finish.
+</p>
+<ol style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_LG }}; padding-left: {{ t.SPACE_XL }};">
+  <li style="margin-bottom: {{ t.SPACE_SM }};"><strong>Check tenant charges</strong> in your reconciliation workspace.</li>
+  <li style="margin-bottom: {{ t.SPACE_SM }};"><strong>Confirm pools, caps, and gross-up logic</strong> look right.</li>
+  <li style="margin-bottom: {{ t.SPACE_SM }};"><strong>Finalize and export</strong> statements.</li>
+</ol>
+{{ button(reconciliations_url, "Review Draft Reconciliation") }}
+{% if video_welcome %}
+{{ video_card(video_welcome.thumbnail_url, video_welcome.watch_url, video_welcome.title, video_welcome.description) }}
+{% endif %}
+<p style="color: {{ t.TEXT_SECONDARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 12px; margin: 0;">
+  Anything look off? Reply and we'll help you read it.
+</p>
+{% endblock %}

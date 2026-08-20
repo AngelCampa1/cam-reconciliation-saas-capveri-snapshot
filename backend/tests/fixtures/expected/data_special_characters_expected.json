@@ -1,0 +1,13 @@
+{
+  "error_type": "data",
+  "description": "CSV with special characters (em dashes, smart quotes, newlines, null bytes)",
+  "parseable": true,
+  "expected_behavior": "Parser should handle special characters without crashing",
+  "expected_warnings": [
+    "Row 4: Embedded newline in field detected",
+    "Row 5: Null byte character detected and removed"
+  ],
+  "expected_rows": 5,
+  "valid_rows": 2,
+  "invalid_rows": 3
+}

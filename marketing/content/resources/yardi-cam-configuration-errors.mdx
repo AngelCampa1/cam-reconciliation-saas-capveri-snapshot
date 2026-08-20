@@ -1,0 +1,222 @@
+---
+title: "Common Yardi Voyager CAM Configuration Errors and How to Fix Them"
+description: "Recovery pool mismatches, charge code mapping errors, and occupancy settings in Yardi Voyager that silently break CAM reconciliation. How to validate Yardi output against manual calculations and catch configuration drift before statements go out."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 67
+faq:
+  - q: "Why does Yardi CAM recovery not match my manual calculation?"
+    a: "The most common causes are: (1) the recovery pool includes or excludes GL accounts that differ from your manual mapping, (2) the occupancy denominator uses a snapshot date instead of weighted-average occupancy, (3) charge code mappings do not match recovery codes, (4) the gross-up setting is disabled or uses the wrong occupancy threshold, and (5) cap escalation is compounding from the wrong base. Export the Yardi recovery detail report and compare line by line against your spreadsheet. The discrepancy is almost always in the configuration, not the math engine."
+  - q: "How do I audit my Yardi recovery pool setup?"
+    a: "Run the Recovery Pool Detail report for each property and each pool. Compare the GL accounts listed in the pool against your GL-to-CAM mapping table. Check that each account is assigned to the correct pool (CAM vs. tax/insurance vs. utility). Verify the controllable/uncontrollable flag on each account matches the lease definition. Then run a test reconciliation for a single tenant and compare the output to a manual calculation using the same inputs. If the numbers match, the pool is configured correctly."
+---
+
+Yardi Voyager is the most widely used property management ERP in commercial real estate. It handles CAM recovery calculations, tenant billing, and reconciliation statement generation. When configured correctly, it produces accurate, lease-compliant reconciliation output.
+
+The problem is that "configured correctly" is doing a lot of work in that sentence. Yardi's CAM module has dozens of settings that interact with each other: recovery pools, charge codes, recovery codes, occupancy methods, gross-up toggles, cap structures, and proration rules. A single misconfigured setting can silently produce incorrect reconciliation statements for every tenant in a building, every year, until someone runs a manual check.
+
+Most Yardi CAM configuration errors originate during one of three events: initial property setup, ERP migration from another system, or property manager turnover where the new team inherits configuration they did not build and do not fully understand.
+
+## Error #1: Recovery Pool GL Account Mismatch
+
+### What Goes Wrong
+
+The recovery pool defines which GL accounts are included in the CAM reconciliation. When a GL account is missing from the pool, the expense is excluded from tenant billing. When a non-recoverable account is included, tenants are overbilled.
+
+The most common trigger is chart of accounts changes. A new GL sub-account is created (say, 6315 for Ice Management split out from 6310 for Snow Removal) but nobody adds 6315 to the recovery pool. The $18,000 in ice management costs disappear from the reconciliation.
+
+### How to Detect It
+
+1. Export the recovery pool detail for each property (Recovery Pool Setup > GL Account List)
+2. Export all GL accounts with non-zero balances for the same property and fiscal year
+3. Compare the two lists. Any GL account with a balance that does not appear in the recovery pool is a potential gap
+
+### Real Cost
+
+A 200,000 SF office building adds three new GL sub-accounts during a mid-year chart restructuring. Total expenses in the unmapped accounts: $47,000. At 88% occupancy with a 5% management fee, the unrecovered amount is approximately $43,200 per year. At a 6% cap rate, that is $720,000 in lost property value.
+
+### Fix
+
+Add the missing GL accounts to the appropriate recovery pool. Rerun the reconciliation for the affected period. If statements have already been sent, issue supplemental billings if lease lookback provisions allow.
+
+## Error #2: Charge Code to Recovery Code Mismatch
+
+### What Goes Wrong
+
+Yardi uses charge codes to categorize tenant charges and recovery codes to link those charges to the recovery calculation. If the charge code for CAM recovery is not linked to the correct recovery code, the system either does not generate the charge or generates it against the wrong pool.
+
+This error is subtle because the tenant still receives a CAM charge. It just calculates from the wrong expense base. The statement looks normal. The amount is wrong.
+
+### How to Detect It
+
+1. Open Charge Code Setup for the property
+2. For each CAM-related charge code, verify the linked Recovery Code
+3. Verify the Recovery Code points to the correct Recovery Pool
+4. Trace the chain: Charge Code > Recovery Code > Recovery Pool > GL Accounts
+
+A break at any point in this chain produces incorrect calculations.
+
+### Common Mismatches
+
+| Symptom | Likely Cause |
+|---|---|
+| Tenant billed for CAM but not tax/insurance | Tax recovery code not linked to charge code |
+| CAM amount includes taxes | Tax GL accounts in CAM pool instead of tax pool |
+| Two tenants in same building get different CAM rates | Different charge codes linked to different recovery codes |
+| CAM charge is zero despite expenses in GL | Recovery code not linked to any charge code |
+
+### Fix
+
+Correct the charge code > recovery code > recovery pool chain. Rerun recovery calculations for all affected tenants and periods.
+
+## Error #3: Occupancy Snapshot vs. Weighted Average
+
+### What Goes Wrong
+
+Yardi offers two methods for calculating the denominator in CAM allocation:
+
+- **Snapshot:** Uses occupancy as of a single date (typically December 31 or the reconciliation date)
+- **Weighted Average:** Calculates occupancy based on actual lease dates throughout the year
+
+The difference matters when tenants move in or out during the year. A snapshot method can either overcount or undercount occupied SF depending on when the snapshot is taken versus when the tenant transitions occurred.
+
+### Example
+
+A 100,000 SF building. Tenant A (10,000 SF) vacates June 30. Tenant B (10,000 SF) moves in October 1.
+
+| Method | Occupied SF Used | Impact |
+|---|---|---|
+| Snapshot (Dec 31) | 100,000 SF (Tenant B in) | Ignores 3-month vacancy |
+| Snapshot (June 30) | 90,000 SF (Tenant A just left, B not yet in) | Overstates vacancy |
+| Weighted Average | 95,833 SF (92.5K for 6 mo, 90K for 3 mo, 100K for 3 mo) | Reflects actual occupancy |
+
+The denominator difference between snapshot and weighted average changes every tenant's pro-rata share. On a $1.1M expense pool, the difference between a 95,833 SF denominator and a 100,000 SF denominator is approximately $0.48/SF, roughly $48,000 in total recovery variance.
+
+### How to Detect It
+
+1. Check the Recovery Pool Setup > Proration Method setting
+2. Compare to lease language. Most leases specify or imply a weighted-average methodology
+3. If the setting says "As of Date" or "Snapshot," verify this matches the lease requirements
+
+### Fix
+
+Change the proration method to match lease terms. For most commercial leases, weighted-average occupancy produces the most defensible results. Recalculate affected periods after the change.
+
+## Error #4: Gross-Up Configuration
+
+### What Goes Wrong
+
+Gross-up adjusts variable operating expenses to reflect what they would cost at a target occupancy level (typically 95% or 100%). When Yardi's gross-up setting is disabled, misconfigured, or set to the wrong occupancy threshold, tenants in partially occupied buildings are underbilled for variable expenses.
+
+Three specific configuration issues:
+
+**Gross-up disabled entirely:** The toggle is off. Variable expenses are allocated based on actual costs at actual occupancy. If the building is 70% occupied, variable expenses are 70% of what they would be at full occupancy, and tenants pay proportionally less. The landlord absorbs the variance.
+
+**Wrong target occupancy:** The gross-up target is set to 100% but the lease says 95%. Or it is set to 95% but the building has never exceeded 85% occupancy, which may trigger a reasonableness challenge from tenants.
+
+**Wrong expense classification:** Gross-up should only apply to variable expenses (janitorial, utilities, landscaping). Fixed expenses (taxes, insurance, management fee) do not vary with occupancy and should not be grossed up. If Yardi's variable/fixed flags are wrong, the gross-up calculation is wrong.
+
+### How to Detect It
+
+1. Check Property Setup > Recovery > Gross-Up settings
+2. Verify the target occupancy percentage matches lease terms
+3. Review the variable/fixed flag on each GL account in the recovery pool
+4. Run a test: manually calculate gross-up for one variable expense category and compare to Yardi's output
+
+### Real Cost
+
+A 150,000 SF building at 72% occupancy. Variable operating expenses total $380,000. Gross-up to 95% occupancy should produce $501,300 ($380,000 / 0.72 x 0.95). Without gross-up, tenants split only the $380,000 actual. The difference is $121,300 in unrecovered variable expenses, absorbed entirely by the landlord.
+
+### Fix
+
+Enable gross-up, set the correct target occupancy, and verify variable/fixed classification for each GL account in the pool. Rerun recovery calculations.
+
+## Error #5: Cap Escalation Base and Method
+
+### What Goes Wrong
+
+Yardi supports both cumulative and non-cumulative CAM caps. The configuration requires:
+
+- Cap percentage (e.g., 5%)
+- Cap type (cumulative or non-cumulative)
+- Base year and base year amount
+- Compounding method (applies to base or prior year actual)
+
+The most common errors:
+
+**Wrong base year amount:** The initial cap base was entered manually and does not match the actual base year expenses. Every subsequent year's cap calculation is wrong because it compounds from the wrong starting point.
+
+**Cumulative vs. non-cumulative mismatch:** The lease says cumulative but Yardi is set to non-cumulative (or vice versa). This produces different cap amounts starting in Year 2 and diverges further each subsequent year.
+
+**Compounding from actual instead of capped:** Non-cumulative caps should compound from the prior year's capped amount, not the prior year's actual expenses. If configured to compound from actuals, the cap resets higher every year the actuals exceed the cap, defeating the purpose of the cap.
+
+### Example: Compounding Error Over 5 Years
+
+Base year expenses: $10.00/SF. Cap: 5% non-cumulative.
+
+| Year | Correct (compound from capped) | Error (compound from actual) | Actual Expenses | Variance |
+|---|---|---|---|---|
+| 1 (base) | $10.00 | $10.00 | $10.00 | $0.00 |
+| 2 | $10.50 | $10.50 | $10.80 | $0.00 |
+| 3 | $11.03 | $11.34 | $11.34 | $0.31/SF |
+| 4 | $11.58 | $11.91 | $11.60 | $0.33/SF |
+| 5 | $12.16 | $12.18 | $12.50 | $0.02/SF |
+
+On 10,000 SF, the Year 3-4 compounding error alone costs $6,400. The error direction can flip depending on whether actuals exceed the cap. Sometimes the landlord overbills, sometimes underbills. Either way, the calculation does not match the lease.
+
+### How to Detect It
+
+1. Export Yardi's cap calculation detail for each tenant
+2. Manually calculate the cap for Years 1-3 using lease terms
+3. Compare. If Year 1 matches but Year 2+ diverges, the compounding method is wrong
+4. If Year 1 does not match, the base year amount is wrong
+
+### Fix
+
+Correct the base year amount, cap type, and compounding method in Recovery Pool Setup. Rerun all affected periods. If tenants were overbilled due to incorrect caps, issue credits. If underbilled, issue supplemental charges within the lookback window.
+
+## Error #6: Proration for Mid-Year Lease Events
+
+### What Goes Wrong
+
+When a tenant moves in or out mid-year, Yardi must prorate their CAM obligation for the partial year. The proration method (daily, monthly, or as-of-date) affects the calculation.
+
+**Daily proration** divides the annual obligation by 365 and multiplies by days occupied. This is the most precise method.
+
+**Monthly proration** uses full months. A tenant moving in on March 15 is billed for either 9 months (excluding March) or 10 months (including March), depending on whether the setting uses move-in month or first-full-month.
+
+**As-of-date** uses the occupancy status on the reconciliation date, with no proration at all.
+
+A tenant who moved in on November 1 and is billed for a full year of CAM under the as-of-date method is overbilled by 10 months. A tenant who moved out on February 28 and is billed for zero under the same method loses the landlord 2 months of recovery.
+
+### How to Detect It
+
+1. Pull the lease roster with move-in and move-out dates
+2. For any tenant with a mid-year event, compare Yardi's billed amount to a manual proration
+3. If the amounts differ, check the proration method in Recovery Pool Setup
+
+## Validation Workflow
+
+Before sending any Yardi-generated reconciliation statements, validate the output:
+
+1. **Pick three tenants**: one large, one small, one mid-year move-in or move-out
+2. **Export the Yardi recovery detail** for each tenant
+3. **Rebuild the calculation manually** using the same GL data, occupancy, and lease terms
+4. **Compare line by line**: total recoverable expenses, pro-rata share, gross-up amount, cap calculation, base year comparison
+5. **If any line differs by more than $50**, investigate the configuration
+
+This takes 2-3 hours per property. It catches configuration errors that would otherwise persist for years.
+
+## Related Resources
+
+- [GL Code Mapping for CAM](/resources/gl-code-mapping-cam) - Building the mapping table Yardi needs
+- [CAM Gross-Up Calculation Guide](/resources/cam-gross-up-calculation-guide) - The math behind gross-up
+- [Export Guide](/resources/export-guide) - Getting data out of Yardi for validation
+- [Top 15 CAM Billing Errors](/resources/top-15-cam-billing-errors) - The full list of common mistakes
+
+## Sources
+
+1. [Yardi - Voyager Commercial property management](https://www.yardi.com/products/yardi-voyager-commercial/)
+2. [CapVeri Sources & Research - Yardi interface program pricing](/sources#yardi-interface-program-pricing)

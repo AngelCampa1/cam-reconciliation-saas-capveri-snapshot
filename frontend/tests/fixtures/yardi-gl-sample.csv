@@ -1,0 +1,11 @@
+Property,Account,Account Description,Debit,Credit,Period,Ref,Source,Trans Date
+Sunset Plaza,6000,Janitorial Services,1250.00,,202401,INV-001,AP,2024-01-15
+Sunset Plaza,6100,Utilities - Electric,3500.00,,202401,INV-002,AP,2024-01-20
+Sunset Plaza,6200,Property Insurance,,4200.00,202401,INV-003,AP,2024-01-10
+Sunset Plaza,6300,Property Taxes,8500.00,,202401,INV-004,AP,2024-01-25
+Sunset Plaza,6400,Landscaping,850.00,,202401,INV-005,AP,2024-01-18
+Sunset Plaza,6000,Janitorial Services,1250.00,,202402,INV-006,AP,2024-02-15
+Sunset Plaza,6100,Utilities - Electric,3200.00,,202402,INV-007,AP,2024-02-20
+Sunset Plaza,6200,Property Insurance,,4200.00,202402,INV-008,AP,2024-02-10
+Sunset Plaza,6300,Property Taxes,8500.00,,202402,INV-009,AP,2024-02-25
+Sunset Plaza,6400,Landscaping,850.00,,202402,INV-010,AP,2024-02-18

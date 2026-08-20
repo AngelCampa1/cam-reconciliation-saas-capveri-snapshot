@@ -1,0 +1,166 @@
+Property,Account Code,Account Description,Date,Debit,Credit,Reference,Vendor
+EEC-01,5100.10,Janitorial - Contract,01/01/2024,3500.00,,TR-200100,Pritchard Industries
+EEC-01,5100.10,Janitorial - Contract,02/01/2024,3500.00,,TR-200150,Pritchard Industries
+EEC-01,5100.10,Janitorial - Contract,03/01/2024,3500.00,,TR-200210,Pritchard Industries
+EEC-01,5100.10,Janitorial - Contract,04/01/2024,3500.00,,TR-200280,Pritchard Industries
+EEC-01,5100.10,Janitorial - Contract,05/01/2024,3500.00,,TR-200350,Pritchard Industries
+EEC-01,5100.10,Janitorial - Contract,06/01/2024,3500.00,,TR-200420,Pritchard Industries
+EEC-01,5100.10,Janitorial - Contract,07/01/2024,3500.00,,TR-200490,Pritchard Industries
+EEC-01,5100.10,Janitorial - Contract,08/01/2024,3500.00,,TR-200560,Pritchard Industries
+EEC-01,5100.10,Janitorial - Contract,09/01/2024,3500.00,,TR-200630,Pritchard Industries
+EEC-01,5100.10,Janitorial - Contract,10/01/2024,3500.00,,TR-200700,Pritchard Industries
+EEC-01,5100.10,Janitorial - Contract,11/01/2024,3500.00,,TR-200770,Pritchard Industries
+EEC-01,5100.10,Janitorial - Contract,12/01/2024,3500.00,,TR-200840,Pritchard Industries
+EEC-01,5100.20,Janitorial - Supplies,01/22/2024,810.45,,TR-200110,Grainger
+EEC-01,5100.20,Janitorial - Supplies,04/19/2024,792.30,,TR-200295,Grainger
+EEC-01,5100.20,Janitorial - Supplies,07/18/2024,835.60,,TR-200505,Grainger
+EEC-01,5100.20,Janitorial - Supplies,10/17/2024,778.25,,TR-200715,Grainger
+EEC-01,5110.00,Window Washing,02/08/2024,4150.00,,TR-200165,Clearly Windows
+EEC-01,5110.00,Window Washing,08/12/2024,4150.00,,TR-200575,Clearly Windows
+EEC-01,5120.00,Pest Control,01/15/2024,350.00,,TR-200120,Orkin
+EEC-01,5120.00,Pest Control,04/15/2024,350.00,,TR-200290,Orkin
+EEC-01,5120.00,Pest Control,07/15/2024,350.00,,TR-200500,Orkin
+EEC-01,5120.00,Pest Control,10/15/2024,350.00,,TR-200710,Orkin
+EEC-01,5200.10,Utilities - Electricity,01/15/2024,24180.00,,TR-200130,Reliant Energy
+EEC-01,5200.10,Utilities - Electricity,02/14/2024,22950.00,,TR-200200,Reliant Energy
+EEC-01,5200.10,Utilities - Electricity,03/14/2024,21340.00,,TR-200265,Reliant Energy
+EEC-01,5200.10,Utilities - Electricity,04/15/2024,26700.00,,TR-200320,Reliant Energy
+EEC-01,5200.10,Utilities - Electricity,05/15/2024,33420.00,,TR-200390,Reliant Energy
+EEC-01,5200.10,Utilities - Electricity,06/15/2024,44580.00,,TR-200445,Reliant Energy
+EEC-01,5200.10,Utilities - Electricity,07/15/2024,47920.00,,TR-200510,Reliant Energy
+EEC-01,5200.10,Utilities - Electricity,08/15/2024,51340.00,,TR-200580,Reliant Energy
+EEC-01,5200.10,Utilities - Electricity,09/15/2024,43100.00,,TR-200645,Reliant Energy
+EEC-01,5200.10,Utilities - Electricity,10/15/2024,31200.00,,TR-200720,Reliant Energy
+EEC-01,5200.10,Utilities - Electricity,11/15/2024,25640.00,,TR-200790,Reliant Energy
+EEC-01,5200.10,Utilities - Electricity,12/15/2024,22880.00,,TR-200860,Reliant Energy
+EEC-01,5200.10,Utilities - Electricity,08/22/2024,185.00,,TR-200585,Reliant Energy - Late Payment Fee Jul Invoice
+EEC-01,5200.20,Utilities - Water/Sewer,01/28/2024,1380.45,,TR-200140,City of Houston
+EEC-01,5200.20,Utilities - Water/Sewer,04/29/2024,1520.80,,TR-200330,City of Houston
+EEC-01,5200.20,Utilities - Water/Sewer,07/30/2024,1890.25,,TR-200520,City of Houston
+EEC-01,5200.20,Utilities - Water/Sewer,10/28/2024,1340.60,,TR-200730,City of Houston
+EEC-01,5200.30,Utilities - Gas,01/08/2024,2840.00,,TR-200145,CenterPoint Energy
+EEC-01,5200.30,Utilities - Gas,02/07/2024,3120.00,,TR-200205,CenterPoint Energy
+EEC-01,5200.30,Utilities - Gas,03/07/2024,1940.00,,TR-200270,CenterPoint Energy
+EEC-01,5200.30,Utilities - Gas,11/06/2024,1680.00,,TR-200795,CenterPoint Energy
+EEC-01,5200.30,Utilities - Gas,12/06/2024,2460.00,,TR-200865,CenterPoint Energy
+EEC-01,5300.10,R&M - HVAC Contract,01/01/2024,5500.00,,TR-200155,TDIndustries
+EEC-01,5300.10,R&M - HVAC Contract,02/01/2024,5500.00,,TR-200215,TDIndustries
+EEC-01,5300.10,R&M - HVAC Contract,03/01/2024,5500.00,,TR-200275,TDIndustries
+EEC-01,5300.10,R&M - HVAC Contract,04/01/2024,5500.00,,TR-200340,TDIndustries
+EEC-01,5300.10,R&M - HVAC Contract,05/01/2024,5500.00,,TR-200405,TDIndustries
+EEC-01,5300.10,R&M - HVAC Contract,06/01/2024,5500.00,,TR-200460,TDIndustries
+EEC-01,5300.10,R&M - HVAC Contract,07/01/2024,5500.00,,TR-200525,TDIndustries
+EEC-01,5300.10,R&M - HVAC Contract,08/01/2024,5500.00,,TR-200590,TDIndustries
+EEC-01,5300.10,R&M - HVAC Contract,09/01/2024,5500.00,,TR-200655,TDIndustries
+EEC-01,5300.10,R&M - HVAC Contract,10/01/2024,5500.00,,TR-200740,TDIndustries
+EEC-01,5300.10,R&M - HVAC Contract,11/01/2024,5500.00,,TR-200805,TDIndustries
+EEC-01,5300.10,R&M - HVAC Contract,12/01/2024,5500.00,,TR-200870,TDIndustries
+EEC-01,5300.15,R&M - HVAC Repairs,03/18/2024,2850.00,,TR-200280,TDIndustries - Chiller valve replacement Bldg B
+EEC-01,5300.15,R&M - HVAC Repairs,07/22/2024,125000.00,,TR-200533,TDIndustries - HVAC Chiller Full Replacement Bldg A (400-ton unit)
+EEC-01,5310.00,R&M - Elevator Contract,01/10/2024,6200.00,,TR-200160,Schindler Elevator
+EEC-01,5310.00,R&M - Elevator Contract,04/10/2024,6200.00,,TR-200340,Schindler Elevator
+EEC-01,5310.00,R&M - Elevator Contract,07/10/2024,6200.00,,TR-200540,Schindler Elevator
+EEC-01,5310.00,R&M - Elevator Contract,10/10/2024,6200.00,,TR-200750,Schindler Elevator
+EEC-01,5320.00,R&M - Plumbing,02/14/2024,1240.00,,TR-200225,Roto-Rooter - 3rd floor restroom
+EEC-01,5320.00,R&M - Plumbing,06/03/2024,4200.00,,TR-200455,Roto-Rooter - HOU-02 Water Main Emergency Repair (mis-coded)
+EEC-01,5320.00,R&M - Plumbing,11/19/2024,680.00,,TR-200810,Roto-Rooter - Lobby fountain
+EEC-01,5330.00,R&M - Electrical,03/05/2024,1420.75,,TR-200285,Houston Electric - Lobby lighting
+EEC-01,5330.00,R&M - Electrical,09/23/2024,2180.50,,TR-200665,Houston Electric - Parking garage panel
+EEC-01,5340.00,R&M - Roof,04/30/2024,3800.00,,TR-200360,Chamberlin Roof - Flashing repair Bldg B
+EEC-01,5340.00,R&M - Roof,09/09/2024,178000.00,,TR-200660,Chamberlin Roof - Complete Roof Replacement Buildings A&B (40-year TPO membrane)
+EEC-01,5350.00,R&M - General Bldg,05/08/2024,620.40,,TR-200415,Home Depot - Hardware/supplies
+EEC-01,5350.00,R&M - General Bldg,10/22/2024,450.20,,TR-200755,Home Depot - Hardware/supplies
+EEC-01,5400.10,Landscaping - Contract,01/05/2024,2100.00,,TR-200165,Yellowstone Landscape
+EEC-01,5400.10,Landscaping - Contract,02/05/2024,2100.00,,TR-200230,Yellowstone Landscape
+EEC-01,5400.10,Landscaping - Contract,03/05/2024,2100.00,,TR-200295,Yellowstone Landscape
+EEC-01,5400.10,Landscaping - Contract,04/05/2024,2100.00,,TR-200360,Yellowstone Landscape
+EEC-01,5400.10,Landscaping - Contract,05/05/2024,2100.00,,TR-200425,Yellowstone Landscape
+EEC-01,5400.10,Landscaping - Contract,06/05/2024,2100.00,,TR-200480,Yellowstone Landscape
+EEC-01,5400.10,Landscaping - Contract,07/05/2024,2100.00,,TR-200545,Yellowstone Landscape
+EEC-01,5400.10,Landscaping - Contract,08/05/2024,2100.00,,TR-200610,Yellowstone Landscape
+EEC-01,5400.10,Landscaping - Contract,09/05/2024,2100.00,,TR-200675,Yellowstone Landscape
+EEC-01,5400.10,Landscaping - Contract,10/05/2024,2100.00,,TR-200760,Yellowstone Landscape
+EEC-01,5400.10,Landscaping - Contract,11/05/2024,2100.00,,TR-200825,Yellowstone Landscape
+EEC-01,5400.10,Landscaping - Contract,12/05/2024,2100.00,,TR-200885,Yellowstone Landscape
+EEC-01,5400.20,Landscaping - Extras,03/20/2024,1400.00,,TR-200300,Yellowstone Landscape - Spring color install
+EEC-01,5400.20,Landscaping - Extras,09/18/2024,1200.00,,TR-200680,Yellowstone Landscape - Fall color install
+EEC-01,5410.00,Parking Lot Sweeping,01/04/2024,650.00,,TR-200170,Sweeping Corp of America
+EEC-01,5410.00,Parking Lot Sweeping,04/04/2024,650.00,,TR-200365,Sweeping Corp of America
+EEC-01,5410.00,Parking Lot Sweeping,07/04/2024,650.00,,TR-200550,Sweeping Corp of America
+EEC-01,5410.00,Parking Lot Sweeping,10/04/2024,650.00,,TR-200765,Sweeping Corp of America
+EEC-01,5420.00,Parking Lot R&M,06/20/2024,3200.00,,TR-200485,Texas Asphalt - Pothole patching & sealcoat
+EEC-01,5420.00,Parking Lot R&M,11/14/2024,1850.00,,TR-200815,Texas Asphalt - Line re-striping
+EEC-01,5500.10,Security - Guard Service,01/01/2024,22400.00,,TR-200175,Allied Universal Security
+EEC-01,5500.10,Security - Guard Service,02/01/2024,22400.00,,TR-200240,Allied Universal Security
+EEC-01,5500.10,Security - Guard Service,03/01/2024,22400.00,,TR-200305,Allied Universal Security
+EEC-01,5500.10,Security - Guard Service,04/01/2024,22400.00,,TR-200370,Allied Universal Security
+EEC-01,5500.10,Security - Guard Service,05/01/2024,22400.00,,TR-200435,Allied Universal Security
+EEC-01,5500.10,Security - Guard Service,06/01/2024,22400.00,,TR-200490,Allied Universal Security
+EEC-01,5500.10,Security - Guard Service,07/01/2024,22400.00,,TR-200555,Allied Universal Security
+EEC-01,5500.10,Security - Guard Service,08/01/2024,22400.00,,TR-200620,Allied Universal Security
+EEC-01,5500.10,Security - Guard Service,09/01/2024,22400.00,,TR-200685,Allied Universal Security
+EEC-01,5500.10,Security - Guard Service,10/01/2024,22400.00,,TR-200770,Allied Universal Security
+EEC-01,5500.10,Security - Guard Service,11/01/2024,22400.00,,TR-200835,Allied Universal Security
+EEC-01,5500.10,Security - Guard Service,12/01/2024,22400.00,,TR-200895,Allied Universal Security
+EEC-01,5500.20,Security - Systems,03/01/2024,1150.00,,TR-200310,Kastle Systems
+EEC-01,5500.20,Security - Systems,09/01/2024,1150.00,,TR-200690,Kastle Systems
+EEC-01,5510.00,Access Control,04/01/2024,890.00,,TR-200375,Brivo - Keycard management
+EEC-01,5510.00,Access Control,10/01/2024,890.00,,TR-200775,Brivo - Keycard management
+EEC-01,5600.00,Fire & Life Safety,01/08/2024,2400.00,,TR-200180,SimplexGrinnell - Annual inspection
+EEC-01,5600.00,Fire & Life Safety,07/08/2024,1800.00,,TR-200560,SimplexGrinnell - Semi-annual sprinkler test
+EEC-01,5700.10,Insurance - Property,01/01/2024,78000.00,,TR-200185,FM Global - Annual hazard/wind premium 2024
+EEC-01,5700.20,Insurance - Liability,01/01/2024,12000.00,,TR-200190,Travelers - General liability premium 2024
+EEC-01,5800.10,Taxes - Real Estate,01/31/2024,142500.00,,TR-200195,HCAD - 1st installment 2024 property tax
+EEC-01,5800.10,Taxes - Real Estate,07/31/2024,142500.00,,TR-200565,HCAD - 2nd installment 2024 property tax
+EEC-01,5900.10,Management Fees,01/01/2024,5170.00,,TR-200198,Transwestern - Monthly management fee
+EEC-01,5900.10,Management Fees,02/01/2024,5170.00,,TR-200255,Transwestern - Monthly management fee
+EEC-01,5900.10,Management Fees,03/01/2024,5170.00,,TR-200315,Transwestern - Monthly management fee
+EEC-01,5900.10,Management Fees,04/01/2024,5170.00,,TR-200380,Transwestern - Monthly management fee
+EEC-01,5900.10,Management Fees,05/01/2024,5170.00,,TR-200445,Transwestern - Monthly management fee
+EEC-01,5900.10,Management Fees,06/01/2024,5170.00,,TR-200500,Transwestern - Monthly management fee
+EEC-01,5900.10,Management Fees,07/01/2024,5170.00,,TR-200565,Transwestern - Monthly management fee
+EEC-01,5900.10,Management Fees,08/01/2024,5170.00,,TR-200630,Transwestern - Monthly management fee
+EEC-01,5900.10,Management Fees,09/01/2024,5170.00,,TR-200695,Transwestern - Monthly management fee
+EEC-01,5900.10,Management Fees,10/01/2024,5170.00,,TR-200780,Transwestern - Monthly management fee
+EEC-01,5900.10,Management Fees,11/01/2024,5170.00,,TR-200845,Transwestern - Monthly management fee
+EEC-01,5900.10,Management Fees,12/01/2024,5170.00,,TR-200905,Transwestern - Monthly management fee
+EEC-01,5910.00,Admin / Office Expense,01/31/2024,125.50,,TR-200199,FedEx - Postage/mailing
+EEC-01,5910.00,Admin / Office Expense,02/28/2024,3500.00,,TR-200260,ADP - Regional Asset Manager Salary Allocation Feb
+EEC-01,5910.00,Admin / Office Expense,03/31/2024,3500.00,,TR-200320,ADP - Regional Asset Manager Salary Allocation Mar
+EEC-01,5910.00,Admin / Office Expense,04/30/2024,3500.00,,TR-200385,ADP - Regional Asset Manager Salary Allocation Apr
+EEC-01,5910.00,Admin / Office Expense,05/31/2024,3500.00,,TR-200450,ADP - Regional Asset Manager Salary Allocation May
+EEC-01,5910.00,Admin / Office Expense,06/30/2024,3500.00,,TR-200505,ADP - Regional Asset Manager Salary Allocation Jun
+EEC-01,5910.00,Admin / Office Expense,07/31/2024,3500.00,,TR-200570,ADP - Regional Asset Manager Salary Allocation Jul
+EEC-01,5910.00,Admin / Office Expense,08/31/2024,3500.00,,TR-200635,ADP - Regional Asset Manager Salary Allocation Aug
+EEC-01,5910.00,Admin / Office Expense,09/30/2024,3500.00,,TR-200700,ADP - Regional Asset Manager Salary Allocation Sep
+EEC-01,5910.00,Admin / Office Expense,10/31/2024,3500.00,,TR-200785,ADP - Regional Asset Manager Salary Allocation Oct
+EEC-01,5910.00,Admin / Office Expense,11/30/2024,3500.00,,TR-200850,ADP - Regional Asset Manager Salary Allocation Nov
+EEC-01,5910.00,Admin / Office Expense,12/31/2024,3500.00,,TR-200910,ADP - Regional Asset Manager Salary Allocation Dec
+EEC-01,5920.00,Payroll - Building Eng,01/15/2024,14500.00,,TR-200200,ADP - Building Engineer wages & benefits
+EEC-01,5920.00,Payroll - Building Eng,02/15/2024,14500.00,,TR-200265,ADP - Building Engineer wages & benefits
+EEC-01,5920.00,Payroll - Building Eng,03/15/2024,14500.00,,TR-200325,ADP - Building Engineer wages & benefits
+EEC-01,5920.00,Payroll - Building Eng,04/15/2024,14500.00,,TR-200390,ADP - Building Engineer wages & benefits
+EEC-01,5920.00,Payroll - Building Eng,05/15/2024,14500.00,,TR-200455,ADP - Building Engineer wages & benefits
+EEC-01,5920.00,Payroll - Building Eng,06/15/2024,14500.00,,TR-200510,ADP - Building Engineer wages & benefits
+EEC-01,5920.00,Payroll - Building Eng,07/15/2024,14500.00,,TR-200575,ADP - Building Engineer wages & benefits
+EEC-01,5920.00,Payroll - Building Eng,08/15/2024,14500.00,,TR-200640,ADP - Building Engineer wages & benefits
+EEC-01,5920.00,Payroll - Building Eng,09/15/2024,14500.00,,TR-200705,ADP - Building Engineer wages & benefits
+EEC-01,5920.00,Payroll - Building Eng,10/15/2024,14500.00,,TR-200790,ADP - Building Engineer wages & benefits
+EEC-01,5920.00,Payroll - Building Eng,11/15/2024,14500.00,,TR-200855,ADP - Building Engineer wages & benefits
+EEC-01,5920.00,Payroll - Building Eng,12/15/2024,14500.00,,TR-200915,ADP - Building Engineer wages & benefits
+EEC-01,5930.00,Trash Removal,01/20/2024,1850.00,,TR-200205,Waste Management
+EEC-01,5930.00,Trash Removal,02/20/2024,1850.00,,TR-200270,Waste Management
+EEC-01,5930.00,Trash Removal,03/20/2024,1850.00,,TR-200330,Waste Management
+EEC-01,5930.00,Trash Removal,04/20/2024,1850.00,,TR-200395,Waste Management
+EEC-01,5930.00,Trash Removal,05/20/2024,1850.00,,TR-200460,Waste Management
+EEC-01,5930.00,Trash Removal,06/20/2024,1850.00,,TR-200515,Waste Management
+EEC-01,5930.00,Trash Removal,07/20/2024,1850.00,,TR-200580,Waste Management
+EEC-01,5930.00,Trash Removal,08/20/2024,1850.00,,TR-200645,Waste Management
+EEC-01,5930.00,Trash Removal,09/20/2024,1850.00,,TR-200710,Waste Management
+EEC-01,5930.00,Trash Removal,10/20/2024,1850.00,,TR-200795,Waste Management
+EEC-01,5930.00,Trash Removal,11/20/2024,1850.00,,TR-200860,Waste Management
+EEC-01,5930.00,Trash Removal,12/20/2024,1850.00,,TR-200920,Waste Management
+EEC-01,5940.00,Legal & Professional,03/15/2024,5500.00,,TR-200335,Baker Botts - Property tax protest fee 2023 HCAD
+EEC-01,5940.00,Legal & Professional,05/31/2024,42000.00,,TR-200465,Stream Realty Partners - Leasing Commission Q1-Q2 (Murphy Oil renewal)
+EEC-01,5940.00,Legal & Professional,08/15/2024,8500.00,,TR-200650,Baker Botts - Tenant TI lease negotiation & drafting (Subsea 7 expansion)
+EEC-01,5940.00,Legal & Professional,12/31/2024,3200.00,,TR-200925,Baker Botts - CAM audit defense (Western Midstream dispute)

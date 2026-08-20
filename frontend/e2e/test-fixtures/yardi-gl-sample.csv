@@ -1,0 +1,16 @@
+Yardi Systems General Ledger Export
+Run Date: 01/31/2024
+Property: Test Property ABC
+Period: January 2024
+
+Account,Description,Date,Reference,Debit,Credit,Balance
+6000,Janitorial Services - Monthly Contract,2024-01-15,INV-2024-001,1500.00,,1500.00
+6100,Utilities - Electric - Common Areas,2024-01-20,BILL-5678,,"850.50",649.50
+6200,Property Insurance - General Liability,2024-02-05,POL-2024-Q1,2000.00,,2649.50
+6000,Janitorial Supplies - Cleaning Products,2024-02-10,INV-2024-015,250.00,,2899.50
+7000,Property Tax Payment - Q1 2024,2024-02-15,TAX-2024-Q1,,"5000.00",-2100.50
+6300,Security Services - Night Patrol,2024-02-20,SEC-2024-002,1800.00,,"-300.50"
+6100,Utilities - Water & Sewer,2024-02-25,BILL-5690,425.75,,125.25
+6400,Landscaping - Monthly Maintenance,2024-03-01,LAND-2024-003,950.00,,1075.25
+6500,Elevator Maintenance - Annual Contract,2024-03-05,ELEV-2024-001,3500.00,,4575.25
+6600,HVAC Repairs - Unit 205,2024-03-10,HVAC-2024-012,875.50,,5450.75

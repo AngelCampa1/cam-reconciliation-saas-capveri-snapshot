@@ -1,0 +1,48 @@
+{% extends "_base.html" %}
+{% from "_components.html" import button, callout_box, video_card with context %}
+{% block content %}
+<h2 style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 22px; margin: 0 0 {{ t.SPACE_MD }};">
+  {{ property_name }}: reconciliation complete
+</h2>
+{% if recovery_amount > 0 %}
+{% set formatted = "${:,.0f}".format(recovery_amount) %}
+{% set roi_multiple = (recovery_amount / roi_divisor) | round(1) %}
+
+{% call callout_box(bg_color=t.WARNING_BG, border_color=t.WARNING) %}
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 28px; font-weight: 700; margin: 0;">{{ formatted }}</p>
+<p style="color: {{ t.TEXT_SECONDARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 13px; margin: 4px 0 0;">in CAM billing errors found on {{ property_name }}</p>
+{% endcall %}
+
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_LG }};">
+  We found <strong>{{ formatted }}</strong> in CAM billing errors on <strong>{{ property_name }}</strong>.
+  Against Reconcile first-year offer pricing, that's <strong>{{ roi_multiple }}x</strong> back in year one.
+</p>
+{{ button(billing_url, "Start Recovering Across Your Portfolio") }}
+<p style="margin: 0 0 {{ t.SPACE_LG }};">
+  <a href="{{ findings_url }}" style="color: {{ t.PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 14px;">
+    View your full findings
+  </a>
+</p>
+{% else %}
+{% call callout_box(bg_color=t.SUCCESS_BG, border_color=t.SUCCESS) %}
+<p style="color: {{ t.SUCCESS }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; font-weight: 600; margin: 0;">No billing errors found</p>
+{% endcall %}
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  {{ property_name }} came back clean. No billing errors found.
+</p>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_LG }};">
+  This building looks clean. Run your other properties. Check this one again when leases renew.
+</p>
+{{ button(billing_url, "Monitor as Leases Change") }}
+{% endif %}
+{% if video_audit_results %}
+{{ video_card(video_audit_results.thumbnail_url, video_audit_results.watch_url, video_audit_results.title, video_audit_results.description) }}
+{% endif %}
+<p style="color: {{ t.TEXT_SECONDARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 12px; margin: {{ t.SPACE_LG }} 0 0;">
+  Questions on the numbers? Reply here.
+</p>
+<p style="color: {{ t.TEXT_SECONDARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 11px; line-height: 1.5; margin: {{ t.SPACE_MD }} 0 0;">
+  These findings are generated automatically and may contain errors. Review and
+  verify them before billing a tenant or acting on them.
+</p>
+{% endblock %}

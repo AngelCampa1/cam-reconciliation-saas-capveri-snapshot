@@ -1,0 +1,16 @@
+MRI Software - Rent Roll Report
+Generated: 01/15/2024
+
+PERIOD,REF NUM,SOURCE,TENANT,UNIT,ACCOUNT,DESCRIPTION,DEBIT,CREDIT
+2024-01,10001,AR,Acme Corp,Suite 100,4100-000,Rent Revenue,,5000.00
+2024-01,10002,AR,Tech Startup Inc,Suite 200,4100-000,Rent Revenue,,3500.00
+2024-01,10003,AR,Legal Services LLC,Suite 300,4100-000,Rent Revenue,,4200.00
+2024-01,10004,GL,Acme Corp,Suite 100,4200-000,CAM Recovery,,850.00
+2024-01,10005,GL,Tech Startup Inc,Suite 200,4200-000,CAM Recovery,,650.00
+2024-01,10006,GL,Legal Services LLC,Suite 300,4200-000,CAM Recovery,,750.00
+2024-01,10007,GL,,Building,5100-000,Utilities Expense,2150.00,
+2024-01,10008,GL,,Building,5200-000,Janitorial Expense,1500.00,
+2024-01,10009,GL,,Building,5300-000,Insurance Expense,1800.00,
+2024-01,10010,GL,,Building,5400-000,Repairs & Maintenance,950.00,
+2024-01,10011,AP,Acme Corp,Suite 100,1200-000,Tenant Deposit Credit,,2500.00
+2024-01,10012,AP,Tech Startup Inc,Suite 200,1200-000,Tenant Deposit Credit,,1750.00

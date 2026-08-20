@@ -1,0 +1,31 @@
+Property,Account Code,Account Description,Date,Debit,Credit,Reference,Vendor
+HOU-01,5100.10,Janitorial - Contract,01/15/2024,18500.00,,TR-104992,Pritchard Ind
+HOU-01,5100.20,Janitorial - Supplies,01/22/2024,3240.55,,TR-105012,Grainger
+HOU-01,5110.00,Window Washing,02/05/2024,4150.00,,TR-105088,Clearly Windows
+HOU-01,5200.10,Utilities - Electricity,02/12/2024,28450.30,,TR-105103,Reliant Energy
+HOU-01,5200.20,Utilities - Water/Sewer,02/28/2024,4890.12,,TR-105155,City of Houston
+HOU-01,5200.30,Utilities - Gas,03/04/2024,1120.00,,TR-105210,CenterPoint Energy
+HOU-01,5300.10,R&M - HVAC Contract,03/15/2024,5500.00,,TR-105244,TDIndustries
+HOU-01,5300.15,R&M - HVAC Repairs,03/22/2024,12000.00,,TR-105301,TDIndustries - HVAC Chiller Full Overhaul
+HOU-01,5310.00,R&M - Elevator Contract,04/05/2024,6200.00,,TR-105350,Schindler
+HOU-01,5320.00,R&M - Plumbing,04/18/2024,850.00,,TR-105399,Roto-Rooter
+HOU-01,5330.00,R&M - Electrical,05/02/2024,1420.75,,TR-105412,Houston Electric
+HOU-01,5400.10,Landscaping - Contract,05/15/2024,2100.00,,TR-105488,Yellowstone Landscape
+HOU-01,5400.20,Landscaping - Extras,05/20/2024,850.00,,TR-105505,Yellowstone
+HOU-01,5410.00,Parking Lot Sweeping,06/05/2024,650.00,,TR-105560,Sweeping Corp of America
+HOU-01,5420.00,Parking Lot R&M,06/18/2024,3200.00,,TR-105610,Texas Asphalt
+HOU-01,5500.10,Security - Guard Service,07/02/2024,22400.00,,TR-105675,Allied Universal
+HOU-01,5500.20,Security - Systems,07/15/2024,1150.00,,TR-105722,Kastle Systems
+HOU-01,5600.00,Fire & Life Safety,08/05/2024,2400.00,,TR-105801,SimplexGrinnell
+HOU-01,5700.10,Insurance - Property,08/22/2024,45000.00,,TR-105855,FM Global
+HOU-01,5700.20,Insurance - Liability,09/05/2024,8500.00,,TR-105902,Travelers
+HOU-01,5800.10,Taxes - Real Estate,09/15/2024,95000.00,,TR-105940,HCAD
+HOU-01,5900.10,Management Fees,10/02/2024,18450.00,,TR-105999,Transwestern
+HOU-01,5910.00,Admin / Office Expense,10/18/2024,125.50,,TR-106045,FedEx
+HOU-01,5920.00,Payroll - Building Eng,11/05/2024,14500.00,,TR-106090,ADP
+HOU-01,5930.00,Trash Removal,11/20/2024,1850.00,,TR-106130,Waste Management
+HOU-01,5340.00,R&M - Roof,12/05/2024,2200.00,,TR-106188,Chamberlin Roof
+HOU-01,5350.00,R&M - General Bldg,12/10/2024,450.20,,TR-106210,Home Depot
+HOU-01,5120.00,Pest Control,12/15/2024,350.00,,TR-106245,Orkin
+HOU-01,5510.00,Access Control,12/28/2024,890.00,,TR-106290,Brivo
+HOU-01,5940.00,Legal & Professional,12/31/2024,5500.00,,TR-106310,Baker Botts

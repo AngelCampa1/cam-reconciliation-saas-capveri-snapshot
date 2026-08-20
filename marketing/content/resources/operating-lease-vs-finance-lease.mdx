@@ -1,0 +1,232 @@
+---
+title: "Operating Lease vs Finance Lease: ASC 842 Plain-Language Comparison"
+description: "Operating lease vs finance lease under ASC 842: balance sheet treatment, journal entries, CAM pass-through differences, and when each classification applies."
+datePublished: "2026-04-24"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 270
+faq:
+  - q: "What's the main difference between an operating lease and a finance lease under ASC 842?"
+    a: "The core distinction is how the income statement looks. A finance lease (the old capital lease) front-loads expense. You record separate interest expense and amortization, which means higher total expense in early periods. An operating lease posts a single straight-line lease cost each period, with the ROU asset amortization calculated as a plug to make that happen. Both lease types create a right-of-use asset and lease liability on the balance sheet. That is the big change ASC 842 brought versus the old ASC 840 world."
+  - q: "Does the lease classification affect how CAM charges are treated?"
+    a: "Yes, in a meaningful way. Under both lease types, variable lease payments (including most CAM reconciliation true-ups) are excluded from the lease liability calculation and expensed as incurred. But the timing matters differently. For finance leases the fixed payment stream is clearly separated from variable charges. For operating leases the single-line lease cost presentation means the controller needs to be especially careful not to double-count CAM estimates already baked into the fixed payment when the year-end reconciliation arrives. See our guide on CAM true-up treatment for the journal entry mechanics."
+  - q: "Can a CRE operating lease ever be classified as a finance lease?"
+    a: "Rarely, but yes. ASC 842-20-25-2 lists five criteria. If any one is met, the lease is a finance lease. The most likely trigger in CRE is criterion (d): present value of lease payments is substantially all (generally 90%+) of the asset's fair value. Long-term ground leases or leases with purchase options struck at a nominal price can cross that threshold. Standard office or retail NNN leases almost never do. The lease term is short relative to the building's economic life and the fixed payments rarely approach 90% of fair value."
+  - q: "What happens to an operating lease's ROU asset amortization calculation?"
+    a: "Unlike a finance lease where straight-line amortization of the ROU asset is recorded directly, an operating lease ROU asset amortization is a derived number. You compute the period's total lease cost (the straight-line amount), subtract the interest portion of the lease liability accretion, and the remainder is the ROU asset reduction. This means the ROU asset declines on an accelerating basis. It looks front-loaded on the asset side even though the income statement shows a flat expense line."
+  - q: "How do you transition an operating lease with CAM true-ups to ASC 842?"
+    a: "At transition (or commencement), you include the fixed CAM estimates in the lease payment stream if those amounts are written into the lease. Variable CAM charges (amounts that depend on actual operating expense outcomes) are excluded from the initial measurement. When the annual reconciliation settles, any true-up payment is expensed in the period paid, not capitalized into the ROU asset. Use the practical expedient for short-term leases (12 months or less) to skip the balance sheet recognition entirely if eligible."
+---
+
+<Alert type="info" title="Quick Answer">
+Under ASC 842, both operating leases and finance leases create a right-of-use asset and lease liability on the balance sheet. The difference is income statement presentation: operating leases show a single straight-line lease cost; finance leases show separate interest expense and amortization that front-load total expense. For CRE tenants, the classification rarely changes how CAM reconciliation charges flow through, but it does affect which GL accounts you debit.
+</Alert>
+
+## Operating Lease vs Finance Lease: What ASC 842 Actually Changed
+
+Before ASC 842, the distinction between operating and capital leases determined whether a liability showed up on your balance sheet at all. Capital leases landed on the balance sheet; operating leases stayed off it. That changed. Under ASC 842, both lease types get balance sheet recognition. The right-of-use (ROU) asset and the corresponding lease liability appear regardless of classification.
+
+What classification still controls is how the expense flows through your income statement and how the ROU asset runs off over time. For CRE finance teams managing a portfolio of NNN leases or gross leases with CAM pass-throughs, understanding this distinction matters when you're setting up the lease accounting schedule and reconciling year-end [CAM true-up](/resources/cam-true-up) payments.
+
+---
+
+## The Five Classification Tests
+
+ASC 842-20-25-2 lists five criteria. If any one applies at lease commencement, you have a finance lease. If none apply, it's an operating lease.
+
+| Criterion | Finance Lease Trigger |
+|---|---|
+| Transfer of ownership | Lease transfers title to lessee before end of term |
+| Purchase option | Lessee is reasonably certain to exercise a purchase option |
+| Lease term | Lease term is major part of remaining economic life (generally ≥75%) |
+| Present value | PV of payments is substantially all of fair value (generally ≥90%) |
+| Specialized nature | Asset has no alternative use to lessor at end of term |
+
+For a standard retail or office NNN lease, you'll almost never trip any of these criteria. A 10-year office lease on a 40-year building clears criterion three easily. And unless the landlord built the space to the tenant's highly specific spec with no alternative use, criterion five doesn't apply either. The practical result: virtually all commercial real estate leases are operating leases under ASC 842.
+
+---
+
+## Balance Sheet Treatment: They Look More Alike Than Different
+
+At commencement, the initial measurement calculation is the same for both lease types.
+
+**Lease liability** = present value of future lease payments, discounted at the implicit rate (or IBR if the implicit rate isn't determinable).
+
+**ROU asset** = lease liability + initial direct costs + prepaid lease payments − lease incentives received.
+
+For a $10,000/month lease with 60 months remaining, discounted at a 6% IBR:
+
+```
+PV of 60 payments at 6%/12 = $517,255
+ROU Asset = $517,255 (assuming no IDC or prepaid)
+Lease Liability = $517,255
+```
+
+The opening journal entry is identical whether it's an operating or finance lease:
+
+```
+DR  Right-of-Use Asset        $517,255
+  CR  Lease Liability                       $517,255
+```
+
+That's where the similarity ends.
+
+---
+
+## Income Statement Treatment: Where They Diverge
+
+### Operating Lease
+
+The defining feature of operating lease accounting is a **single straight-line lease cost** each period. The standard requires this even though the actual cash payments may vary (if there are rent escalations built into the lease).
+
+For month 1 of our 60-month, $10,000/month lease (assume flat payments for simplicity):
+
+```
+Total straight-line cost per month = $10,000
+
+Interest on lease liability (month 1):
+$517,255 × 6% / 12 = $2,586
+
+ROU asset amortization (plug):
+$10,000 − $2,586 = $7,414
+```
+
+For an **operating** lease, you don't post interest expense as a separate P&L line. The single lease cost line absorbs everything. The liability accretion and ROU asset amortization both run through the same "Lease Cost" account, netting to the flat straight-line amount. The three-entry method looks like this:
+
+```
+Month 1 - Interest accrual on lease liability (non-cash):
+DR  Lease Cost (interest component)          $2,586
+  CR  Lease Liability                                   $2,586
+
+Month 1 - ROU asset amortization (plug for straight-line cost):
+DR  Lease Cost (amortization component)      $7,414
+  CR  Right-of-Use Asset                               $7,414
+
+Month 1 - Cash payment applied to principal:
+DR  Lease Liability                         $10,000
+  CR  Cash                                            $10,000
+```
+
+Total Lease Cost = $2,586 + $7,414 = **$10,000** (straight-line, as required). The lease liability moves: +$2,586 interest accrual − $10,000 cash = net $7,414 principal reduction. Net liability after Month 1: $517,255 − $7,414 = $509,841.
+
+### Finance Lease
+
+Finance leases separate the two expense components explicitly:
+
+```
+Month 1 - Finance Lease Payment:
+DR  Interest Expense            $2,586
+DR  Lease Liability             $7,414
+  CR  Cash                                  $10,000
+
+Month 1 - ROU Asset Amortization:
+DR  Amortization Expense        $8,621   [$517,255 / 60 months]
+  CR  Right-of-Use Asset                   $8,621
+```
+
+Total expense in month 1 for the finance lease: $2,586 + $8,621 = **$11,207**
+Total expense in month 1 for the operating lease: **$10,000**
+
+By month 60, that relationship flips. Interest on the finance lease is nearly zero, so total expense is just the $8,621 amortization. The operating lease stays at $10,000 flat throughout.
+
+---
+
+## CAM Pass-Through Treatment Under Both Classifications
+
+Here's where [CAM reconciliation](/resources/common-area-maintenance-reconciliation-explained) intersects with ASC 842. The standard distinguishes between:
+
+1. **Fixed lease payments**: included in the lease liability measurement
+2. **Variable lease payments**: excluded from the liability, expensed as incurred
+
+Most CAM charges in [NNN leases](/resources/nnn-lease-cam-reconciliation) are variable because they depend on actual operating expenses for the year. The landlord estimates them, the tenant pays monthly estimates, and then the [true-up](/resources/cam-true-up) happens at year-end.
+
+The ASC 842 treatment for variable CAM is the same regardless of operating vs finance classification:
+
+```
+Monthly estimated CAM payment - both lease types:
+DR  Variable Lease Cost / CAM Expense    $1,500
+  CR  Cash                                         $1,500
+
+Year-end CAM true-up (additional amount owed):
+DR  Variable Lease Cost / CAM Expense    $3,200
+  CR  Accounts Payable                             $3,200
+
+Year-end CAM true-up (credit due back):
+DR  Accounts Receivable / Prepaid CAM   $1,800
+  CR  Variable Lease Cost / CAM Expense           $1,800
+```
+
+The true-up amount (whether a charge or a credit) hits the income statement in the period the reconciliation is finalized, not when the original monthly estimates were paid. See our [CAM true-up vs CAM reconciliation](/blog/cam-true-up-vs-cam-reconciliation) post for how to handle the cutoff properly.
+
+**One exception**: if your lease has a fixed CAM component written in as a set dollar amount regardless of actual expenses, that fixed portion goes into the lease liability calculation. Check your lease language carefully. Some older leases have "CAM not to exceed $X/sf" clauses that can be treated as fixed caps.
+
+---
+
+## Practical Expedients That Affect Both Classifications
+
+ASC 842 offers several practical expedients that reduce the accounting burden. Two matter most for CRE leases:
+
+**Short-term lease exemption**: If a lease has a term of 12 months or less at commencement (and no purchase option the lessee is reasonably certain to exercise), you can skip ROU asset/liability recognition entirely. Payments go straight to the income statement. This applies equally to operating and finance leases.
+
+**Lease and non-lease component practical expedient**: For most asset classes, you can elect to treat lease and non-lease components (like CAM services) as a single combined component. If you make this election, you do not have to separate the property management services from the pure lease payment. You capitalize the whole thing. This simplifies the accounting but inflates your ROU asset. Many CRE tenants skip this election specifically because CAM amounts can be large and they prefer to keep variable costs off the balance sheet.
+
+---
+
+## Disclosure Requirements
+
+Both lease types require balance sheet line items and the lease liability maturity schedule. Finance leases have slightly more disclosure burden:
+
+| Disclosure | Operating | Finance |
+|---|---|---|
+| ROU asset on balance sheet | Yes | Yes |
+| Lease liability (current/non-current) | Yes | Yes |
+| Weighted avg remaining term | Yes | Yes |
+| Weighted avg discount rate | Yes | Yes |
+| Separate interest expense | No | Yes |
+| Separate amortization expense | No | Yes |
+| Cash paid for operating activities | Operating lease cost | Interest portion |
+| Cash paid for financing activities | N/A | Principal portion |
+
+The cash flow statement treatment is another key difference. Operating lease payments flow through operating activities. Finance lease principal payments flow through financing activities, with just the interest portion in operating activities.
+
+---
+
+## Which Classification Applies to Your CRE Leases
+
+Run this quick checklist at lease commencement for every new property:
+
+1. Does the lease transfer ownership? (Almost certainly no for commercial office/retail)
+2. Is there a purchase option the tenant will almost certainly exercise? (Check lease terms)
+3. Is the lease term ≥75% of the building's remaining economic life? (For a 40-year building, that is 30 years, rare for commercial leases)
+4. Is the PV of payments ≥90% of the building's fair value? (Run the numbers; typically no for market-rate leases)
+5. Is the space so specialized it has no alternative use? (Specific to highly customized buildouts)
+
+If you answered no to all five, you have an operating lease. Document that conclusion in your lease file. Auditors will ask.
+
+---
+
+## How CapVeri Handles the ASC 842 Timing Problem
+
+The friction point for CRE finance teams is not the initial classification. It is the year-end CAM reconciliation timing. Your lease accounting system has a neat amortization schedule. Your landlord sends a CAM reconciliation statement in February for the prior year. You need to book the true-up, verify the charges were not already baked into your fixed lease payments, and flag any errors before you pay.
+
+CapVeri ingests CAM reconciliation statements directly from Yardi and MRI CSV exports, matches line items against your lease abstracts, and flags [controllable vs non-controllable expenses](/resources/controllable-vs-non-controllable-expenses) that may be overbilled. The output is a clean, auditable variance report, not a spreadsheet you built at 11pm before the payment deadline.
+
+Explore more on our [ASC 842 lease accounting guide](/resources/asc-842-lease-accounting-guide) and the [operating lease journal entries](/resources/operating-lease-accounting-entries) reference for the full entry templates.
+
+---
+
+## Related Resources
+
+- [ASC 842 Lease Accounting Guide](/resources/asc-842-lease-accounting-guide): comprehensive implementation reference
+- [Operating Lease Journal Entries](/resources/operating-lease-accounting-entries): full entry templates for accountants
+- [Finance Lease Accounting Under ASC 842](/resources/finance-lease-accounting-asc-842): ROU asset, interest calculation, CAM interaction
+- [CAM True-Up](/resources/cam-true-up): how year-end reconciliation payments are recorded
+- [CAM Reconciliation Template](/tools/cam-reconciliation-template): start your reconciliation
+- [NNN Lease CAM Reconciliation](/resources/nnn-lease-cam-reconciliation): full walkthrough for triple-net leases
+- [GAAP vs Cash CAM Reconciliation](/resources/gaap-vs-cash-cam-reconciliation): timing differences explained
+
+## Sources
+
+1. [Deloitte DART - Roadmap: Leases](https://dart.deloitte.com/USDART/home/publications/roadmap/leasing?id=us%3A2el%3A3dp%3Armleases%3Aeng%3Aaud%3A121823%3Aiaspl)
+2. [Deloitte - Lease Accounting Guide: Roadmap for ASC 842](https://www.deloitte.com/us/en/services/audit-assurance/articles/roadmap-to-applying-the-new-leasing-standard.html?icid=top_roadmap-to-applying-the-new-leasing-standard)

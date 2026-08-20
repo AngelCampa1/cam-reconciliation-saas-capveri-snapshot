@@ -1,0 +1,121 @@
+---
+title: "Deterministic vs AI CAM Reconciliation"
+description: "Why CAM reconciliation math needs deterministic calculation, where AI fits in lease extraction, and what landlords need for audit-ready CAM support."
+datePublished: "2026-01-15"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+buttonText: "Compare the Approaches"
+order: 10
+faq:
+  - q: "Can AI software accurately calculate CAM reconciliation charges?"
+    a: "AI can assist with CAM workflows, especially document extraction and classification, but CAM math should not depend on a probabilistic answer. OpenAI describes chat completions as non-deterministic by default, and even seed-based reproducibility is described as mostly deterministic rather than guaranteed. CAM charges need a calculation ledger that can be rerun from the same inputs."
+  - q: "What makes a CAM reconciliation audit trail defensible?"
+    a: "A defensible audit trail shows every step of the calculation: the gross-up formula and inputs, each expense category determination, the pro-rata share calculation, cap application, and the final settlement figure. It should be reproducible, stored, and tied back to source records so an accountant or tenant auditor can verify the result later."
+  - q: "How does deterministic calculation differ from AI-powered reconciliation?"
+    a: "A deterministic calculation engine applies explicit formulas to inputs and produces the same output every time. If you run a $2.1 million expense pool with a 73.4% occupancy rate and a 95% gross-up cap, the answer should be the same today, tomorrow, and three years from now. AI models generate outputs from model behavior and inference settings; the answer may be useful, but it is not the calculation record."
+  - q: "Can a tenant dispute an AI-generated CAM reconciliation?"
+    a: "Yes. The issue is not whether AI was involved somewhere in the workflow. The issue is whether the landlord can produce source support, explicit formulas, and a calculation path that an independent reviewer can verify. If the landlord cannot show how each charge was calculated, the reconciliation is easier to dispute."
+  - q: "What is the risk of using AI for CAM math in commercial leases?"
+    a: "The main risk is auditability. A CAM statement needs a source-to-statement path: lease terms, GL entries, expense exclusions, gross-up inputs, pro-rata shares, caps, estimates paid, and settlement amounts. If the final number comes from a model output without a deterministic calculation ledger, it is harder to reproduce, review, or correct."
+  - q: "Does CapVeri use AI for calculations?"
+    a: "No. CapVeri uses AI for document extraction and classification, with human verification before values enter the calculation pipeline. The calculations run on a deterministic Python engine using Decimal arithmetic. Every step is logged, stored, and reproducible."
+---
+
+<Alert type="info" title="The Short Version">
+AI can help read leases, classify GL entries, and surface anomalies. CAM math is different. It needs explicit formulas, exact decimal arithmetic, and a ledger that produces the same result from the same inputs. Use AI to speed up review. Use deterministic calculation for the bill.
+</Alert>
+
+## The Audit Test: Can Someone Rebuild Your Reconciliation?
+
+When a tenant's auditor requests support for a $47,000 CAM charge, the question is not just "is the math right?" It is "can you prove it, step by step, from source records?"
+
+That is the audit test. AI-assisted software can help gather and classify information, but the final CAM calculation still needs to be reproducible. If the answer depends on a model output that cannot be rerun and tied to a formula ledger, the landlord has a documentation problem.
+
+OpenAI describes chat completions as non-deterministic by default, meaning outputs may differ from request to request. Its seed guidance is narrower: matching the seed, parameters, and system fingerprint can make outputs mostly identical, but the documentation still notes a small chance of different responses. That is acceptable for drafting or extraction review. It is not sufficient on its own for CAM settlement math.
+
+For more on what a CAM reconciliation process involves, see our [CAM reconciliation guide](/resources/common-area-maintenance-reconciliation-explained).
+
+## What "Deterministic" Means for Finance
+
+A deterministic calculation uses explicit rules: the same inputs produce the same output. Not approximately the same. The same.
+
+For CAM math, that means every expense allocation, gross-up adjustment, cap calculation, and tenant settlement traces back to a formula and source input. A reviewer can take the lease terms, GL detail, rent roll, occupancy assumptions, and estimated payments, then rebuild the result.
+
+FASB's conceptual framework describes verifiability as different knowledgeable and independent observers being able to reach consensus that a depiction is faithfully represented. CAM reconciliation is not a financial statement by itself, but the same practical standard applies. A charge is easier to defend when independent reviewers can trace and reproduce the calculation.
+
+At a technical level, deterministic engines should use exact decimal arithmetic for money. Python's `decimal` module is designed for decimal fixed-point and floating-point arithmetic and avoids common binary floating-point surprises such as `1.1 + 2.2` displaying as `3.3000000000000003`. In CAM, those details matter because small rounding differences can multiply across tenants, expense pools, and years.
+
+## The Audit Trail Problem with Probabilistic AI
+
+<Alert type="warning" title="How AI models work">
+AI language models generate text from model behavior and inference settings. Providers can offer controls that make outputs more consistent, but model responses are not a substitute for a stored calculation ledger.
+</Alert>
+
+This is not a flaw in AI. It is a mismatch between the tool and the task. A proper CAM reconciliation audit trail requires:
+
+- The gross-up formula applied, including the specific occupancy percentage used
+- Each expense category and whether it was included, excluded, or capped
+- The pro-rata share calculation, with denominator and numerator
+- The cap calculation, showing base year, cumulative increases, and any floor adjustments
+- The tenant's estimated payments versus the calculated actual
+- The final settlement amount and how it was derived
+
+A deterministic engine can produce all of this as structured records. An LLM can explain a number, but the explanation is not the same thing as a calculation ledger. When a tenant's auditor asks for the support, those are very different artifacts.
+
+## Side-by-Side Comparison
+
+| Dimension | Deterministic Engine | AI/LLM Calculation |
+|-----------|---------------------|-------------------|
+| Arithmetic | Explicit formulas and exact decimal handling | Generated output from model behavior |
+| Reproducibility | Same inputs produce the same calculation | Output may vary unless tightly controlled, and even then is not guaranteed |
+| Audit trail | Step-by-step calculation ledger | Explanation may not prove each dollar allocation |
+| Reviewability | CPA or tenant auditor can rerun the math | Reviewer must inspect prompt, output, and supporting records separately |
+| Edge cases | Handled by explicit business rules | May need human review to catch unsupported assumptions |
+
+The reproducibility row matters most in practice. If two runs of the same workflow can produce different settlement support, the issue is not a small technical quirk. It is a documentation failure.
+
+## When AI Is Appropriate: Document Extraction, Not Math
+
+AI is useful in the CAM reconciliation workflow. Just not as the final authority for the math.
+
+Document extraction is where AI earns its place. OCR and intelligent classification can parse a long PDF lease, identify CAM clauses, and flag which GL codes may map to which expense categories. Done manually, that work takes hours. AI cuts that review time.
+
+CapVeri uses AI for extraction and classification, with human verification required before any extracted value feeds into a calculation. The math itself runs on a deterministic Python engine using `Decimal` arithmetic.
+
+<Steps>
+  <Step title="Extract">
+    AI reads the lease and identifies CAM inclusions, exclusions, caps, and gross-up provisions.
+  </Step>
+  <Step title="Verify">
+    A human reviews and confirms the extracted values before they enter the pipeline.
+  </Step>
+  <Step title="Calculate">
+    The deterministic engine runs the math with the same result every time.
+  </Step>
+  <Step title="Audit">
+    The full calculation ledger is stored and retrievable for disputes or audits.
+  </Step>
+</Steps>
+
+<FAQSection items={[
+  { q: "Can AI software accurately calculate CAM reconciliation charges?", a: "AI can assist with CAM workflows, especially document extraction and classification, but CAM math should not depend on a probabilistic answer. OpenAI describes chat completions as non-deterministic by default, and even seed-based reproducibility is described as mostly deterministic rather than guaranteed. CAM charges need a calculation ledger that can be rerun from the same inputs." },
+  { q: "What makes a CAM reconciliation audit trail defensible?", a: "A defensible audit trail shows every step of the calculation: the gross-up formula and inputs, each expense category determination, the pro-rata share calculation, cap application, and the final settlement figure. It should be reproducible, stored, and tied back to source records so an accountant or tenant auditor can verify the result later." },
+  { q: "How does deterministic calculation differ from AI-powered reconciliation?", a: "A deterministic calculation engine applies explicit formulas to inputs and produces the same output every time. If you run a $2.1 million expense pool with a 73.4% occupancy rate and a 95% gross-up cap, the answer should be the same today, tomorrow, and three years from now. AI models generate outputs from model behavior and inference settings; the answer may be useful, but it is not the calculation record." },
+  { q: "Can a tenant dispute an AI-generated CAM reconciliation?", a: "Yes. The issue is not whether AI was involved somewhere in the workflow. The issue is whether the landlord can produce source support, explicit formulas, and a calculation path that an independent reviewer can verify. If the landlord cannot show how each charge was calculated, the reconciliation is easier to dispute." },
+  { q: "What is the risk of using AI for CAM math in commercial leases?", a: "The main risk is auditability. A CAM statement needs a source-to-statement path: lease terms, GL entries, expense exclusions, gross-up inputs, pro-rata shares, caps, estimates paid, and settlement amounts. If the final number comes from a model output without a deterministic calculation ledger, it is harder to reproduce, review, or correct." },
+  { q: "Does CapVeri use AI for calculations?", a: "No. CapVeri uses AI for document extraction and classification, with human verification before values enter the calculation pipeline. The calculations run on a deterministic Python engine using Decimal arithmetic. Every step is logged, stored, and reproducible." }
+]} />
+
+<CTABox
+  title="See CapVeri's Calculation Engine in Action"
+  description="CAM reconciliation errors are rarely caught until a tenant hires an auditor. CapVeri runs your reconciliation with the same rigor a tenant's auditor would apply and gives you a full calculation ledger before the statements go out."
+  utmContent="u_cta"
+  buttonText="Start Free Trial"
+/>
+
+## Sources
+
+1. [OpenAI API - Advanced Usage: Deterministic Outputs](https://platform.openai.com/docs/guides/advanced-usage)
+2. [OpenAI Cookbook - Reproducible Outputs with the Seed Parameter](https://cookbook.openai.com/examples/reproducible_outputs_with_the_seed_parameter)
+3. [Python Documentation - Decimal Fixed-Point and Floating-Point Arithmetic](https://docs.python.org/3/library/decimal.html)
+4. [FASB - Conceptual Framework for Financial Reporting](https://storage.fasb.org/Conceptual%20Framework%20for%20Financial%20Reporting%20%28September%202024%29.pdf)

@@ -1,0 +1,185 @@
+---
+title: "Cumulative vs. Non-Cumulative CAM Caps: A Landlord's Guide"
+description: "Compare cumulative and non-cumulative CAM caps, calculate each structure, and see how cap errors affect landlord NOI recovery."
+datePublished: "2026-03-21"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+buttonText: "Read Guide"
+order: 95
+faq:
+  - q: "What expenses are excluded from CAM caps?"
+    a: "The expenses most commonly excluded from CAM caps (called uncontrollable expenses) are real estate taxes, property insurance, utilities (when billed through the CAM pool), and costs mandated by government authority such as ADA compliance work or environmental remediation. These categories are excluded because the landlord has no meaningful ability to control them through management decisions. The cap applies only to controllable expenses: management fees, janitorial, landscaping, routine maintenance, and similar vendor-driven costs where competitive bidding and operational efficiency can hold costs in check."
+  - q: "Which cap type is better for landlords: cumulative or non-cumulative?"
+    a: "Non-cumulative caps are better for landlords. A non-cumulative cap resets each year to the prior year's capped amount, which means the cap ceiling compounds over time even when actual expenses grow slowly. In contrast, a cumulative cap ties the ceiling permanently to the base year, so years of low actual growth leave unused capacity that cannot be recovered in high-growth years. Over a 10-year lease at 5% cap, the cumulative ceiling reaches 163% of base year. The non-cumulative ceiling reaches the same 163% only in theory. In practice it may be higher if actual expenses in some years come in below the cap, because the baseline for next year resets to actual capped amounts billed, not the ceiling."
+  - q: "Does the CAM cap apply to the gross amount billed or only the increase over base year?"
+    a: "In most commercial leases, the CAM cap applies to the gross controllable expense pool per tenant lease year, not just the incremental increase. The cap limits the total controllable CAM the tenant can be charged, expressed as a ceiling computed from the base year controllable amount. Some leases are drafted to cap only the year-over-year increase (a 'delta cap'), which is a materially different and less common structure. Always verify against the lease language: 'Tenant's share of controllable expenses shall not increase by more than X%' is a delta cap; 'Tenant's share of controllable expenses shall not exceed Base Year x (1 + X%)^n' is a ceiling cap."
+  - q: "What happens when actual expenses fall below the cap ceiling in a given year?"
+    a: "For a non-cumulative cap, the prior year's actual capped charge becomes the new baseline for the following year's ceiling calculation, not the prior year's ceiling. If actual expenses were $95,000 against a ceiling of $100,000, the following year's ceiling is $95,000 x 1.05 = $99,750, not $100,000 x 1.05 = $105,000. This means low-expense years permanently suppress future ceilings in non-cumulative structures. For cumulative caps, the ceiling formula is fixed to the base year regardless of actuals, so low-expense years have no effect on future ceilings."
+---
+
+_Updated: March 2026 · For property controllers and lease administrators_
+
+<Alert type="info" title="What this is">
+A CAM cap is a lease provision that limits the amount of controllable operating expenses a tenant can be charged in any given lease year, expressed as a maximum annual increase percentage applied to a defined base. This guide explains how the two dominant cap structures (cumulative and non-cumulative) work mechanically, how to calculate each, and what the difference means for NOI recovery across a multi-year lease.
+</Alert>
+
+## What Is a CAM Cap?
+
+**A CAM cap is a contractual ceiling on the amount of controllable common area maintenance expenses a tenant can be charged in a given lease year.** The cap rate (typically 3%–8% annually) applies to a defined base amount and limits how much the landlord can pass through regardless of actual expense growth.
+
+CAM caps apply only to **controllable expenses**: costs the landlord can influence through management decisions. Uncontrollable expenses (taxes, insurance, utilities, government-mandated work) are excluded from the cap pool and passed through at actual cost without limitation.
+
+Two structural variants dominate commercial leases:
+
+- **Cumulative cap**: The ceiling compounds from a fixed base year, applied to the original base year amount each year
+- **Non-cumulative cap**: The ceiling applies year-over-year to the prior year's actual billed amount
+
+The distinction has material NOI consequences over a multi-year lease.
+
+---
+
+## The Cumulative CAM Cap
+
+### Definition and Formula
+
+A cumulative cap anchors every future year's ceiling to the original base year controllable expense amount. The formula compounds forward from that fixed starting point:
+
+```
+Capped CAM_n ≤ Base Year CAM × (1 + Cap Rate)^n
+```
+
+**Variables:**
+- `Capped CAM_n`: maximum controllable CAM the tenant may be charged in year n
+- `Base Year CAM`: controllable CAM expense in the lease's base year (year 0)
+- `Cap Rate`: annual maximum increase percentage (expressed as a decimal, e.g., 5% = 0.05)
+- `n`: number of years elapsed since the base year
+
+**Key characteristic:** Years where actual expenses grow slowly do not reduce future ceilings. The ceiling for year 5 is always `Base Year CAM × (1.05)^5`, regardless of what happened in years 2–4.
+
+### Why Cumulative Caps Hurt Landlords
+
+If actual expenses are flat for three years and spike in year four, the cumulative cap ceiling may still be below actual expenses. The landlord absorbs the difference. Conversely, if expenses consistently run below the cumulative ceiling, the landlord collects actual expenses (not the ceiling), but the ceiling is not reduced for future years.
+
+---
+
+## The Non-Cumulative CAM Cap
+
+### Definition and Formula
+
+A non-cumulative cap applies the increase limitation year-over-year, using the prior year's actual billed controllable amount as the new base:
+
+```
+Capped CAM_n ≤ CAM_{n-1} × (1 + Cap Rate)
+```
+
+**Variables:**
+- `Capped CAM_n`: maximum controllable CAM the tenant may be charged in year n
+- `CAM_{n-1}`: actual controllable CAM billed to the tenant in the prior lease year (not the ceiling; the actual amount collected)
+- `Cap Rate`: annual maximum increase percentage
+
+**Key characteristic:** If actual expenses fall below the ceiling in any year, the next year's ceiling is computed from the lower actual figure, permanently suppressing future ceilings. Conversely, if actual expenses consistently hit the ceiling, the non-cumulative cap compounds in the same direction as the cumulative cap.
+
+---
+
+## Side-by-Side: 5-Year Comparison
+
+Assumptions: Base Year controllable CAM = **$100,000**, Cap Rate = **5%**, actual controllable expenses grow at **8% per year**.
+
+| Year | Actual Expenses | Cumulative Ceiling | Cumulative Billed | Non-Cumulative Ceiling | Non-Cumulative Billed |
+|------|----------------|-------------------|-------------------|----------------------|----------------------|
+| Base | $100,000 | $100,000 | $100,000 | $100,000 | $100,000 |
+| 1 | $108,000 | $105,000 | $105,000 | $105,000 | $105,000 |
+| 2 | $116,640 | $110,250 | $110,250 | $110,250 | $110,250 |
+| 3 | $125,971 | $115,763 | $115,763 | $115,763 | $115,763 |
+| 4 | $136,049 | $121,551 | $121,551 | $121,551 | $121,551 |
+| 5 | $146,933 | $127,628 | $127,628 | $127,628 | $127,628 |
+| **5-Year Total** | **$633,593** | - | **$580,442** | - | **$580,442** |
+
+> In this scenario, actual expenses grew faster than the cap rate every year, so both cap structures produce identical ceilings. The cumulative cap and non-cumulative cap diverge when actual expenses fall **below** the ceiling in some years. See the worked example below.
+
+**Landlord shortfall vs. uncapped recovery: $53,151 over 5 years on a single tenant's share of $100,000 base.** Multiply by tenant count for portfolio-level NOI impact.
+
+---
+
+## Controllable vs. Uncontrollable Expenses
+
+The cap applies only to controllable expenses. Getting this classification wrong (applying the cap to taxes or insurance) is one of the most common CAM billing errors and can constitute an over-credit to tenants.
+
+| Category | Controllable (Subject to Cap) | Uncontrollable (Excluded from Cap) |
+|----------|------------------------------|-----------------------------------|
+| Janitorial | Yes | - |
+| Landscaping and snow removal | Yes | - |
+| Routine repairs and maintenance | Yes | - |
+| Property management fee | Yes (when capped by lease) | - |
+| Security (contracted) | Yes | - |
+| Real estate taxes | - | Yes |
+| Property insurance premiums | - | Yes |
+| Utilities (electricity, water, gas) | - | Yes (typically) |
+| Government-mandated compliance | - | Yes |
+| Environmental remediation | - | Yes |
+
+**Boundary condition:** The controllable/uncontrollable split must be defined in the lease. Absent explicit language, property management fees are frequently disputed. Some tenants argue the management fee is uncontrollable because it is set by contract; most courts and practitioners classify it as controllable. Always reference the lease's defined terms before segmenting the expense pool.
+
+---
+
+## Common Mistakes in CAM Cap Administration
+
+**Mistake 1: Applying the cap to real estate taxes or insurance.** These are uncontrollable expenses excluded from the cap by standard lease language. Capping them under-recovers expenses and creates under-billing that tenants may not dispute, but that quietly erodes NOI.
+
+**Mistake 2: Confusing cumulative compounding with simple compounding.** A cumulative cap at 5% over 5 years does not add 25% to the base. It compounds to 27.6%. Using simple math (`Base × (1 + n × Cap Rate)`) understates the ceiling and over-credits tenants.
+
+**Mistake 3: Using the cap ceiling as the basis for the next year's non-cumulative cap instead of the actual billed amount.** If actual controllable expenses were $95,000 and the ceiling was $100,000, the next year's non-cumulative ceiling is $95,000 × 1.05 = $99,750, not $100,000 × 1.05 = $105,000.
+
+**Mistake 4: Failing to segregate the controllable and uncontrollable pools in the GL before reconciliation.** Many property accounting systems mix these expense categories into a single CAM pool, requiring manual segregation at year-end. Errors in this segregation propagate into cap calculations.
+
+---
+
+## Worked Example: 3-Year Scenario with Both Cap Types
+
+**Setup:**
+- Base Year controllable CAM: $80,000
+- Cap Rate: 5% (both structures)
+- Actual controllable expenses: Year 1 = $83,000 (below ceiling), Year 2 = $91,000 (above ceiling), Year 3 = $95,000 (above ceiling)
+
+**Cumulative cap ceiling:**
+- Year 1: $80,000 × 1.05 = **$84,000** (Actual $83,000 < ceiling, tenant billed $83,000)
+- Year 2: $80,000 × 1.05² = **$88,200** (Actual $91,000 > ceiling, tenant billed $88,200)
+- Year 3: $80,000 × 1.05³ = **$92,610** (Actual $95,000 > ceiling, tenant billed $92,610)
+
+Cumulative 3-year billed: **$263,810** vs. actual $269,000. Landlord absorbs **$5,190**.
+
+**Non-cumulative cap ceiling:**
+- Year 1: $80,000 × 1.05 = **$84,000** (Actual $83,000 < ceiling, tenant billed $83,000)
+- Year 2: **$83,000 × 1.05 = $87,150** (ceiling resets from Year 1 actual $83,000, not ceiling $84,000; Actual $91,000 > ceiling, tenant billed $87,150)
+- Year 3: **$87,150 × 1.05 = $91,508** (ceiling resets from Year 2 billed $87,150; Actual $95,000 > ceiling, tenant billed $91,508)
+
+Non-cumulative 3-year billed: **$261,658** vs. actual $269,000. Landlord absorbs **$7,342**.
+
+**Result:** The year of low actual expenses (Year 1) permanently suppressed future ceilings under the non-cumulative structure, costing the landlord an additional $2,152 over 3 years compared to the cumulative structure. At scale (50 tenants, 10-year lease) this differential compounds significantly.
+
+---
+
+<FAQSection items={[
+  { q: "What expenses are excluded from CAM caps?", a: "The expenses most commonly excluded from CAM caps (called uncontrollable expenses) are real estate taxes, property insurance, utilities (when billed through the CAM pool), and costs mandated by government authority such as ADA compliance work or environmental remediation. These categories are excluded because the landlord has no meaningful ability to control them through management decisions. The cap applies only to controllable expenses: management fees, janitorial, landscaping, routine maintenance, and similar vendor-driven costs where competitive bidding and operational efficiency can hold costs in check." },
+  { q: "Which cap type is better for landlords: cumulative or non-cumulative?", a: "Non-cumulative caps are better for landlords. A non-cumulative cap resets each year to the prior year's capped amount, which means the cap ceiling compounds over time even when actual expenses grow slowly. In contrast, a cumulative cap ties the ceiling permanently to the base year, so years of low actual growth leave unused capacity that cannot be recovered in high-growth years. Over a 10-year lease at 5% cap, the cumulative ceiling reaches 163% of base year. The non-cumulative ceiling reaches the same 163% only in theory. In practice it may be higher if actual expenses in some years come in below the cap, because the baseline for next year resets to actual capped amounts billed, not the ceiling." },
+  { q: "Does the CAM cap apply to the gross amount billed or only the increase over base year?", a: "In most commercial leases, the CAM cap applies to the gross controllable expense pool per tenant lease year, not just the incremental increase. The cap limits the total controllable CAM the tenant can be charged, expressed as a ceiling computed from the base year controllable amount. Some leases are drafted to cap only the year-over-year increase (a 'delta cap'), which is a materially different and less common structure. Always verify against the lease language: 'Tenant's share of controllable expenses shall not increase by more than X%' is a delta cap; 'Tenant's share of controllable expenses shall not exceed Base Year x (1 + X%)^n' is a ceiling cap." },
+  { q: "What happens when actual expenses fall below the cap ceiling in a given year?", a: "For a non-cumulative cap, the prior year's actual capped charge becomes the new baseline for the following year's ceiling calculation, not the prior year's ceiling. If actual expenses were $95,000 against a ceiling of $100,000, the following year's ceiling is $95,000 x 1.05 = $99,750, not $100,000 x 1.05 = $105,000. This means low-expense years permanently suppress future ceilings in non-cumulative structures. For cumulative caps, the ceiling formula is fixed to the base year regardless of actuals, so low-expense years have no effect on future ceilings." }
+]} />
+
+<CTABox
+  title="Automate CAM cap enforcement across your portfolio"
+  description="CapVeri checks both cap types for every lease. It splits controllable and uncontrollable costs. It flags overages before statements go out."
+  utmContent="u_cta_cam_cap_types"
+  buttonText="See Pricing"
+  href="/pricing"
+/>
+
+Related: [Controllable vs. Non-Controllable CAM Expenses](/resources/controllable-vs-non-controllable-expenses) · [CAM Expense Caps Overview](/resources/cam-expense-caps) · [CAM Cap Rate Multiplier Guide](/resources/cam-cap-rate-multiplier)
+
+## Sources
+
+1. BOMA International, _Experience Exchange Report_, 2024: industry benchmarks for controllable expense categories
+2. IREM, _Income/Expense Analysis: Commercial Properties_, 2023: CAM cap prevalence data
+3. Angel Campa, Founder of CapVeri: operational analysis from processing 10,000+ commercial lease CAM reconciliations
+4. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+5. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

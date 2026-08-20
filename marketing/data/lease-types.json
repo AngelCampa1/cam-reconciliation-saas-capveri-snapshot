@@ -1,0 +1,469 @@
+{
+  "lastUpdated": "2026-03-21",
+  "leaseTypes": [
+    {
+      "slug": "nnn-lease",
+      "name": "Triple Net (NNN) Lease",
+      "abbreviation": "NNN",
+      "metaTitle": "Triple Net (NNN) Lease CAM Reconciliation Guide for Landlords",
+      "metaDescription": "How CAM reconciliation works in a triple net lease: expense pools, gross-up rules, cap provisions, and annual statement requirements. Includes formula and worked example.",
+      "headline": "Triple Net (NNN) Lease: CAM Reconciliation Guide for Landlords",
+      "subheadline": "What landlords need to know about CAM pass-throughs, gross-up applicability, and annual reconciliation requirements under a triple net lease.",
+      "definition": "A triple net (NNN) lease is a commercial lease structure where the tenant pays base rent plus their pro-rata share of all three operating expense categories: property taxes, property insurance, and maintenance/common area expenses. The tenant is responsible for virtually all building operating costs.",
+      "whoBearsExpenses": "Tenant bears all operating expenses: property taxes, property insurance, utilities, maintenance, janitorial, landscaping, management fees, and CAM charges. Landlord is responsible for structural repairs and capital improvements unless excluded by lease.",
+      "camIncluded": true,
+      "camNotes": "NNN leases require full annual CAM reconciliation. The landlord collects monthly CAM estimates throughout the year and reconciles actual expenses against estimates in the first 90-120 days of the following year. Tenants have audit rights under most NNN leases, typically requiring written notice within 90-180 days of statement delivery.",
+      "reconciliationRequired": true,
+      "grossUpApplicable": true,
+      "capApplicable": true,
+      "commonFor": ["retail", "industrial", "suburban office", "strip centers", "big-box retail", "flex space"],
+      "landlordRisks": [
+        "Failing to gross up variable expenses when occupancy drops below the lease threshold (typically 90-95%), leaving CAM underrecovered from remaining tenants",
+        "Applying caps to fixed expenses (property taxes, insurance) that should not be capped under most lease structures",
+        "Using the wrong pro-rata denominator, especially in multi-tenant retail centers where anchor exclusions reduce the billable area",
+        "Missing the reconciliation delivery deadline specified in the lease, which can waive the right to collect underpayments in some jurisdictions",
+        "Including capital expenditures in the CAM pool that are explicitly excluded by lease or statute"
+      ],
+      "commonMistakes": [
+        "Grossing up property taxes - taxes are fixed expenses and must not be grossed up regardless of occupancy",
+        "Ignoring cumulative vs. non-cumulative cap distinctions, resulting in either over- or under-enforcement of expense limits",
+        "Failing to update the pro-rata denominator when new tenants take occupancy or tenants expand",
+        "Including management fees above the contractually permitted administrative fee percentage",
+        "Sending reconciliation statements after the lease-specified deadline, creating collection risk"
+      ],
+      "formulaBlocks": [
+        {
+          "label": "Tenant CAM Charge",
+          "formula": "Tenant CAM = Total CAM Pool x (Tenant RSF / Building Denominator RSF)",
+          "variables": {
+            "Total CAM Pool": "Sum of all recoverable operating expenses for the year, after exclusions",
+            "Tenant RSF": "Tenant's rentable square footage as defined in the lease",
+            "Building Denominator RSF": "Total leasable or rentable area used as the divisor. May exclude anchor tenants or vacant space per lease terms"
+          }
+        },
+        {
+          "label": "Gross-Up for Variable Expenses",
+          "formula": "Grossed-Up Variable Expense = Actual Variable Expense x (Gross-Up % / Actual Occupancy %)",
+          "variables": {
+            "Actual Variable Expense": "Variable operating expenses (utilities, janitorial, maintenance) at actual occupancy",
+            "Gross-Up %": "Occupancy threshold specified in lease, typically 90%, 95%, or 100%",
+            "Actual Occupancy %": "Occupied RSF / Total RSF at time of calculation"
+          }
+        },
+        {
+          "label": "Annual Reconciliation Settlement",
+          "formula": "Amount Due (or Credit) = Actual CAM Charge - Total Monthly Estimates Paid",
+          "variables": {
+            "Actual CAM Charge": "Tenant's final share based on actual expenses and reconciliation",
+            "Total Monthly Estimates Paid": "Sum of monthly CAM estimate payments collected during the year"
+          }
+        }
+      ],
+      "workedExample": "A 50,000 SF retail center has three tenants. Tenant A leases 10,000 SF. Total actual CAM expenses for the year: $400,000. Building occupancy was 80% for most of the year. Gross-up threshold in Tenant A's lease: 95%. Variable expenses: $200,000. Fixed expenses (taxes + insurance): $200,000.\n\nStep 1. Gross up variable expenses: $200,000 x (95% / 80%) = $237,500.\nStep 2. Total grossed-up CAM pool: $237,500 + $200,000 = $437,500.\nStep 3. Tenant A's pro-rata share: 10,000 / 50,000 = 20%.\nStep 4. Tenant A's CAM charge: $437,500 x 20% = $87,500.\nStep 5. Tenant A paid $70,000 in monthly estimates. Balance due: $17,500.\n\nWithout gross-up, Tenant A would have been billed $80,000, a $7,500 underrecovery for the landlord.",
+      "faqs": [
+        {
+          "question": "Does a triple net lease require annual CAM reconciliation?",
+          "answer": "Yes. NNN leases require annual reconciliation of actual operating expenses against estimated payments collected during the year. The landlord must deliver a reconciliation statement, typically within 90 to 120 days after year-end, showing actual expenses, each tenant's pro-rata share, and any balance due or credit owed. The exact deadline is specified in the lease and varies by property type and market."
+        },
+        {
+          "question": "What expenses can be included in a NNN CAM pool?",
+          "answer": "Includable expenses under a standard NNN lease include property taxes, property insurance, utilities for common areas, landscaping and snow removal, parking lot maintenance and restriping, roof and building exterior maintenance (unless lease caps or excludes), janitorial services for common areas, security, property management fees (subject to lease-specified caps), and HVAC maintenance. Typically excluded: capital expenditures above a certain threshold, costs benefiting only one tenant, costs covered by insurance proceeds, and costs resulting from landlord's negligence."
+        },
+        {
+          "question": "Can a NNN lease have a CAM cap?",
+          "answer": "Yes. Many NNN leases include controllable expense caps, typically 3-5% annually, that limit how much the landlord can increase the controllable portion of CAM (janitorial, maintenance, management fees) year-over-year. Uncontrollable expenses (property taxes, insurance, utilities) are usually excluded from the cap. The cap may be cumulative (unused cap carries forward) or non-cumulative (forfeited each year). Non-cumulative caps are more favorable to the landlord."
+        },
+        {
+          "question": "How does gross-up work in a triple net lease?",
+          "answer": "A gross-up provision requires the landlord to adjust variable operating expenses as if the building were occupied at a specified threshold, typically 90, 95, or 100 percent. Only variable expenses (those that increase with occupancy, like janitorial, utilities, and maintenance) are grossed up. Fixed expenses like property taxes and insurance are never grossed up. The gross-up prevents remaining tenants from subsidizing vacant space when the building is less than fully occupied."
+        },
+        {
+          "question": "What audit rights do tenants have under a NNN lease?",
+          "answer": "Most NNN leases grant tenants the right to audit CAM reconciliation statements, typically requiring written notice within 90 to 180 days of statement delivery. The audit window varies by lease. The landlord must then make supporting records available within a specified period. Some leases specify that the reconciliation becomes final if no audit request is received within the window. Audit rights are limited to the current and immediately prior reconciliation year in most standard leases."
+        }
+      ],
+      "relatedTools": ["/tools/cam-gross-up-calculator", "/tools/cam-cap-calculator", "/tools/pro-rata-calculator", "/tools/audit-risk-quiz"],
+      "relatedResources": ["/resources/calculations/gross-up-adjustment", "/resources/calculations/proration-by-sqft", "/resources/cam-cap-types", "/resources/lease-clauses/gross-up-clause", "/resources/lease-clauses/cumulative-cam-cap"],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "gross-lease",
+      "name": "Gross Lease",
+      "abbreviation": "GL",
+      "metaTitle": "Gross Lease CAM Guide for Landlords: Do You Need to Reconcile?",
+      "metaDescription": "Does a gross lease require CAM reconciliation? When expense escalations and partial pass-throughs create hidden reconciliation obligations landlords miss.",
+      "headline": "Gross Lease: When CAM Reconciliation Is (and Isn't) Required",
+      "subheadline": "Most gross leases do not require CAM reconciliation, but expense escalation riders and partial pass-throughs create hidden obligations that many landlords miss.",
+      "definition": "A gross lease is a commercial lease where the tenant pays a fixed base rent and the landlord covers all operating expenses - property taxes, insurance, utilities, and maintenance - out of that rent, with no separate CAM billing or annual reconciliation.",
+      "whoBearsExpenses": "Landlord bears all operating expenses. Tenant pays only the agreed base rent. No separate expense line items, no CAM pool, no annual reconciliation in a pure gross lease.",
+      "camIncluded": false,
+      "camNotes": "Pure gross leases have no CAM reconciliation. However, many commercial leases marketed as 'gross' include expense stop provisions, operating expense escalation riders, or partial pass-throughs for taxes and insurance. These hybrid structures require reconciliation for the pass-through components. Always read the full operating expense section of any 'gross' lease before assuming no reconciliation obligation exists.",
+      "reconciliationRequired": false,
+      "grossUpApplicable": false,
+      "capApplicable": false,
+      "commonFor": ["office", "medical office", "creative office", "government tenants", "non-profit tenants"],
+      "landlordRisks": [
+        "Absorbing rising operating costs without any pass-through mechanism, especially in high-inflation or high-vacancy environments",
+        "Failing to include an expense stop provision, which would allow the landlord to pass through increases above a base level",
+        "Underpricing base rent without accounting for long-term expense growth, eroding NOI over the lease term",
+        "Missing hidden pass-through obligations in leases that use 'gross' language but include tax and insurance escalation riders"
+      ],
+      "commonMistakes": [
+        "Assuming all gross leases are identical, as many contain expense stop provisions that create partial reconciliation obligations",
+        "Failing to model long-term expense escalation when setting gross rent, leading to NOI compression in later lease years",
+        "Confusing a 'gross lease' with a 'full service gross lease'. The latter explicitly bundles janitorial and utilities, while the former may not.",
+        "Not tracking actual operating expenses against the gross rent amount. Even without formal reconciliation, landlords should monitor expense trends."
+      ],
+      "formulaBlocks": [
+        {
+          "label": "Expense Stop Pass-Through (if applicable)",
+          "formula": "Tenant Expense Contribution = (Actual Expenses - Expense Stop) x Tenant Pro-Rata Share",
+          "variables": {
+            "Actual Expenses": "Total building operating expenses for the year",
+            "Expense Stop": "The dollar-per-SF threshold above which expenses are passed through to tenants",
+            "Tenant Pro-Rata Share": "Tenant RSF / Total Building RSF"
+          }
+        }
+      ],
+      "workedExample": "A 20,000 SF office building is leased entirely to one tenant on a gross lease with a $12/SF expense stop. Actual operating expenses for the year: $280,000 ($14/SF). Tenant's pro-rata share: 100% (sole tenant).\n\nExpense stop threshold: $12 x 20,000 = $240,000.\nPass-through amount: $280,000 - $240,000 = $40,000.\nTenant's contribution: $40,000 x 100% = $40,000.\n\nIn a pure gross lease (no expense stop), the landlord absorbs the full $280,000 and the tenant pays only base rent.",
+      "faqs": [
+        {
+          "question": "Does a gross lease require CAM reconciliation?",
+          "answer": "A pure gross lease does not require CAM reconciliation. The landlord absorbs all operating expenses into base rent. However, many commercial leases labeled 'gross' include expense stop provisions, tax and insurance escalation riders, or partial operating expense pass-throughs. These hybrid structures create reconciliation obligations for the pass-through components. Read the full operating expense section of any lease before concluding no reconciliation is required."
+        },
+        {
+          "question": "What is the difference between a gross lease and a full service lease?",
+          "answer": "The terms are often used interchangeably, but 'full service gross lease' typically signals that all services (janitorial, utilities, maintenance, taxes, and insurance) are bundled into base rent. A standard gross lease may not include janitorial or utilities. In practice, the distinction matters most in office markets: a full service gross lease in a Class A office building includes all services, while a gross lease in a suburban office park may exclude some."
+        },
+        {
+          "question": "Can a gross lease have an escalation clause?",
+          "answer": "Yes. Most gross leases include annual base rent escalation (typically 2-3% per year or CPI-indexed). Some also include expense stop provisions that pass through operating expense increases above a threshold to tenants. An expense stop effectively converts part of the gross lease to a net structure above the stop amount, requiring a limited reconciliation for the pass-through component."
+        }
+      ],
+      "relatedTools": ["/tools/noi-impact-calculator", "/tools/cam-billing-error-estimator"],
+      "relatedResources": ["/resources/lease-clauses/cumulative-cam-cap", "/resources/calculations/proration-by-sqft", "/resources/expenses"],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "modified-gross-lease",
+      "name": "Modified Gross Lease",
+      "abbreviation": "MG",
+      "metaTitle": "Modified Gross Lease CAM Reconciliation: What Landlords Must Track",
+      "metaDescription": "Modified gross leases split operating expenses between landlord and tenant. Learn which expenses require annual reconciliation and how to calculate the tenant's share correctly.",
+      "headline": "Modified Gross Lease: Which Expenses Require Reconciliation?",
+      "subheadline": "Modified gross leases split operating expenses between landlord and tenant. The specific split determines which expenses need annual reconciliation and which the landlord absorbs.",
+      "definition": "A modified gross lease is a commercial lease where the landlord and tenant split operating expenses. The tenant pays base rent plus some (but not all) operating expenses, with the specific pass-through categories negotiated and defined in the lease agreement.",
+      "whoBearsExpenses": "Split between landlord and tenant per lease negotiation. Common structures: tenant pays utilities only; tenant pays utilities plus janitorial; tenant pays utilities, janitorial, and their pro-rata share of taxes and insurance above a base year; landlord covers structural repairs and roof. The exact split must be defined in the lease.",
+      "camIncluded": true,
+      "camNotes": "Modified gross leases require partial reconciliation for the pass-through expense categories. The landlord must reconcile actual costs against estimates for those specific categories. Reconciliation is not required for expenses the landlord retains. Clarity in the lease about which expenses are 'pass-through' vs. 'landlord-borne' is essential. Ambiguity in this language is a frequent source of disputes.",
+      "reconciliationRequired": true,
+      "grossUpApplicable": true,
+      "capApplicable": true,
+      "commonFor": ["office", "medical office", "flex space", "creative office", "mid-size commercial buildings"],
+      "landlordRisks": [
+        "Lease language that is ambiguous about which expense categories are passed through, creating dispute risk",
+        "Failing to reconcile the pass-through categories annually, allowing underpayments to accumulate",
+        "Omitting gross-up provisions for the variable pass-through expenses, resulting in underrecovery during high-vacancy periods"
+      ],
+      "commonMistakes": [
+        "Treating a modified gross lease as a full gross lease and skipping reconciliation entirely for the pass-through categories",
+        "Including expenses in the reconciliation that the lease specifies as landlord-borne (e.g., structural repairs, roof replacement)",
+        "Not documenting the expense split clearly at lease commencement, making year-end reconciliation difficult to defend"
+      ],
+      "formulaBlocks": [
+        {
+          "label": "Pass-Through Expense Reconciliation",
+          "formula": "Tenant Settlement = (Actual Pass-Through Expenses x Tenant Pro-Rata Share) - Estimates Paid",
+          "variables": {
+            "Actual Pass-Through Expenses": "Total actual costs for only the expense categories specified as tenant pass-throughs in the lease",
+            "Tenant Pro-Rata Share": "Tenant RSF / Applicable Building Denominator",
+            "Estimates Paid": "Monthly pass-through estimate payments collected during the year"
+          }
+        }
+      ],
+      "workedExample": "A 15,000 SF office building. Tenant leases 5,000 SF on a modified gross lease: tenant pays utilities and property taxes as pass-throughs; landlord retains insurance, maintenance, and janitorial. Total actual utilities: $60,000. Total actual property taxes: $90,000. Tenant pro-rata share: 5,000/15,000 = 33.3%. Estimates collected from tenant: $45,000.\n\nActual pass-through charges: ($60,000 + $90,000) x 33.3% = $50,000.\nBalance due from tenant: $50,000 - $45,000 = $5,000.",
+      "faqs": [
+        {
+          "question": "Does a modified gross lease require CAM reconciliation?",
+          "answer": "Yes, but only for the expense categories specified as tenant pass-throughs in the lease. The landlord must reconcile actual costs for those specific categories against estimates collected. Expenses retained by the landlord (typically structural repairs, some maintenance) are not reconciled. The reconciliation scope is defined by the lease's operating expense section."
+        },
+        {
+          "question": "How do I know which expenses to reconcile in a modified gross lease?",
+          "answer": "Read the lease's operating expense section carefully. It should specify a list of 'pass-through' or 'tenant expense' categories. Common pass-through categories in modified gross leases include utilities, property taxes, and insurance. Less commonly, janitorial, landscaping, or maintenance may be passed through. If the lease is ambiguous, document your interpretation in writing and have tenant acknowledge it before the first reconciliation."
+        }
+      ],
+      "relatedTools": ["/tools/pro-rata-calculator", "/tools/cam-cap-calculator"],
+      "relatedResources": ["/resources/lease-clauses/cumulative-cam-cap", "/resources/expenses/utilities-common-area", "/resources/expenses/property-taxes"],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "full-service-lease",
+      "name": "Full Service Lease",
+      "abbreviation": "FSG",
+      "metaTitle": "Full Service Gross Lease: No CAM Reconciliation Required",
+      "metaDescription": "Full service gross leases bundle all operating expenses into base rent. No CAM reconciliation, but expense stops and escalation clauses can create hidden obligations.",
+      "headline": "Full Service Lease: When No CAM Reconciliation Is Required",
+      "subheadline": "Full service gross leases bundle all operating expenses into base rent with no separate CAM billing. But expense stops and escalation riders create hidden reconciliation obligations landlords overlook.",
+      "definition": "A full service gross (FSG) lease is a commercial lease where base rent includes all building operating expenses (property taxes, insurance, utilities, maintenance, and janitorial), leaving the tenant with no additional expense obligations beyond the negotiated rent.",
+      "whoBearsExpenses": "Landlord covers all operating expenses from base rent revenue: property taxes, property insurance, common area utilities, janitorial, maintenance, landscaping, management fees, and all other building operating costs.",
+      "camIncluded": false,
+      "camNotes": "Pure FSG leases require no annual CAM reconciliation. However, most full service leases include an expense stop provision (also called an operating expense escalation clause) that converts any expenses above the stop level into a tenant pass-through. Additionally, many FSG leases convert to a partial net structure upon renewal, adding reconciliation obligations. Always verify whether an expense stop or base year provision exists before concluding no reconciliation is needed.",
+      "reconciliationRequired": false,
+      "grossUpApplicable": false,
+      "capApplicable": false,
+      "commonFor": ["Class A office", "trophy office", "downtown office buildings", "government-leased space", "large corporate tenants"],
+      "landlordRisks": [
+        "Operating expense growth eroding NOI over a multi-year lease term if no expense stop was negotiated",
+        "Omitting expense stop language, leaving the landlord fully exposed to unlimited expense escalation",
+        "Tenants demanding full service terms on renewal when the building's operating cost structure has shifted significantly"
+      ],
+      "commonMistakes": [
+        "Failing to negotiate an expense stop, creating full landlord exposure for all future expense growth",
+        "Confusing a full service lease with a modified gross lease. The latter has specific pass-through categories.",
+        "Not tracking actual operating expenses against the base rent amount, obscuring whether the lease is profitable"
+      ],
+      "formulaBlocks": [
+        {
+          "label": "Expense Stop Pass-Through",
+          "formula": "Tenant Pass-Through = (Actual Expenses - Expense Stop Base) x Tenant Pro-Rata Share",
+          "variables": {
+            "Actual Expenses": "Total building operating expenses for the year",
+            "Expense Stop Base": "Operating expense level per SF above which tenant pays the incremental cost",
+            "Tenant Pro-Rata Share": "Tenant RSF / Total Building RSF"
+          }
+        }
+      ],
+      "workedExample": "Class A office building, 100,000 RSF. A tenant occupies 25,000 RSF under a full service lease with a $22/SF expense stop. Actual operating expenses for the year: $2,500,000 ($25/SF). Tenant pro-rata share: 25%.\n\nExpense stop threshold: $22 x 100,000 = $2,200,000.\nPass-through pool: $2,500,000 - $2,200,000 = $300,000.\nTenant's share: $300,000 x 25% = $75,000.\n\nIn a pure FSG lease with no expense stop, the landlord absorbs the full $2,500,000.",
+      "faqs": [
+        {
+          "question": "What is the difference between a full service lease and a gross lease?",
+          "answer": "Both terms describe leases where base rent includes operating expenses. 'Full service gross lease' is a more specific designation - it explicitly includes services like janitorial, utilities, and maintenance in the rent. 'Gross lease' is a broader category that may or may not include all services. In practice, full service is the standard term in Class A office markets, while gross lease is used more broadly across commercial property types."
+        },
+        {
+          "question": "Does a full service lease ever require reconciliation?",
+          "answer": "A pure full service lease with no expense stop requires no reconciliation. However, most full service leases include an expense stop provision that passes through operating expenses above a threshold. When actual expenses exceed the stop, the landlord must calculate and bill the tenant for the overage, which is a limited form of operating expense reconciliation for the pass-through amount."
+        }
+      ],
+      "relatedTools": ["/tools/noi-impact-calculator"],
+      "relatedResources": ["/resources/expenses", "/resources/lease-clauses/cumulative-cam-cap"],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "double-net-lease",
+      "name": "Double Net (NN) Lease",
+      "abbreviation": "NN",
+      "metaTitle": "Double Net (NN) Lease CAM Guide: What Landlords Reconcile",
+      "metaDescription": "In a double net lease, tenants pay taxes and insurance but landlords retain maintenance. Learn what requires reconciliation and how NN differs from NNN.",
+      "headline": "Double Net (NN) Lease: Reconciliation Requirements for Landlords",
+      "subheadline": "In a double net lease, tenants pay property taxes and insurance while landlords retain maintenance and operating expenses. Annual reconciliation applies to the tax and insurance pass-throughs.",
+      "definition": "A double net (NN) lease is a commercial lease where the tenant pays base rent plus property taxes and property insurance as pass-throughs, while the landlord retains responsibility for all maintenance, utilities, and other building operating expenses.",
+      "whoBearsExpenses": "Tenant pays: base rent, property taxes (pro-rata share), property insurance (pro-rata share). Landlord pays: all maintenance, utilities, janitorial, landscaping, management fees, structural repairs, and all other operating expenses.",
+      "camIncluded": true,
+      "camNotes": "NN leases require annual reconciliation for property taxes and insurance only. The landlord must reconcile actual tax and insurance costs against estimates collected. Maintenance and other operating expenses are not passed through and do not require reconciliation. This is significantly simpler than NNN reconciliation but still requires documentation of actual tax assessments and insurance premiums.",
+      "reconciliationRequired": true,
+      "grossUpApplicable": false,
+      "capApplicable": false,
+      "commonFor": ["retail", "single-tenant retail", "bank branches", "fast food/QSR pads", "standalone commercial buildings"],
+      "landlordRisks": [
+        "Unexpected increases in maintenance costs that cannot be passed through to tenants, directly reducing NOI",
+        "Structural repairs and capital expenditures landing entirely on the landlord without contribution from tenants",
+        "Property tax increases flowing through to tenants without proper reconciliation documentation"
+      ],
+      "commonMistakes": [
+        "Attempting to pass through maintenance or utility costs that the lease specifies as landlord obligations",
+        "Failing to reconcile property tax actuals when HCAD or other appraisal districts issue retroactive corrections",
+        "Conflating NN lease obligations with NNN and attempting to charge maintenance or CAM costs the lease does not permit"
+      ],
+      "formulaBlocks": [
+        {
+          "label": "Tenant Tax and Insurance Contribution",
+          "formula": "Tenant Share = (Actual Taxes + Actual Insurance) x (Tenant RSF / Building RSF)",
+          "variables": {
+            "Actual Taxes": "Total property tax assessed and paid for the calendar year",
+            "Actual Insurance": "Total property insurance premiums paid for the year",
+            "Tenant RSF / Building RSF": "Tenant's pro-rata share of the building"
+          }
+        }
+      ],
+      "workedExample": "Single-tenant retail building, 8,000 RSF. Tenant leases the entire building under a NN lease. Annual property taxes: $48,000. Annual insurance: $12,000. Tenant pro-rata share: 100%.\n\nTax and insurance pass-through: ($48,000 + $12,000) x 100% = $60,000.\nMonthly estimates collected: $4,500/month x 12 = $54,000.\nBalance due: $60,000 - $54,000 = $6,000.",
+      "faqs": [
+        {
+          "question": "What is the difference between a double net and triple net lease?",
+          "answer": "In a double net (NN) lease, the tenant pays property taxes and property insurance while the landlord retains maintenance and all other operating expenses. In a triple net (NNN) lease, the tenant pays all three: property taxes, insurance, and maintenance/common area expenses. NNN leases require full CAM reconciliation. NN leases require reconciliation only for the tax and insurance pass-throughs."
+        },
+        {
+          "question": "Does a double net lease require gross-up?",
+          "answer": "Generally no. Property taxes and insurance are fixed expenses that do not vary with building occupancy and therefore do not require gross-up. Gross-up provisions apply to variable operating expenses (utilities, janitorial, maintenance) that would be higher at full occupancy. Since those expenses are landlord-borne under a NN lease, gross-up is typically not applicable."
+        }
+      ],
+      "relatedTools": ["/tools/pro-rata-calculator", "/tools/hcad-tax-normalizer"],
+      "relatedResources": ["/resources/expenses/property-taxes", "/resources/expenses/building-insurance", "/resources/lease-types/nnn-lease/cam-guide"],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "percentage-lease",
+      "name": "Percentage Lease",
+      "abbreviation": "PL",
+      "metaTitle": "Percentage Lease CAM Reconciliation Guide for Retail Landlords",
+      "metaDescription": "How CAM reconciliation works alongside percentage rent in retail leases. Expense pass-throughs, anchor exclusions, breakpoint calculations, and reconciliation requirements.",
+      "headline": "Percentage Lease: CAM Reconciliation in Retail Percentage-Rent Structures",
+      "subheadline": "Retail percentage leases combine base rent with a percentage of tenant gross sales. CAM is billed separately. Reconciliation follows standard NNN procedures but with unique anchor exclusion and sales-reporting considerations.",
+      "definition": "A percentage lease is a retail lease where the tenant pays a base rent plus a percentage of their gross sales above a specified natural breakpoint. It is used primarily in regional malls and high-traffic retail centers to tie landlord income to tenant performance.",
+      "whoBearsExpenses": "Tenant pays base rent + percentage rent + CAM charges (typically NNN or modified gross structure). Landlord covers costs above the CAM pool as specified in the lease. Anchor tenants frequently negotiate exclusion from the general CAM pool.",
+      "camIncluded": true,
+      "camNotes": "Percentage leases use separate CAM billing alongside the percentage rent structure. CAM reconciliation follows NNN or modified gross procedures depending on the lease. The primary complexity is anchor exclusions: anchor tenants (department stores, large-format retailers) frequently negotiate separate CAM arrangements or exclusions that reduce the denominator available for in-line tenants. This can significantly increase per-SF CAM charges for smaller tenants.",
+      "reconciliationRequired": true,
+      "grossUpApplicable": true,
+      "capApplicable": true,
+      "commonFor": ["regional malls", "power centers", "strip malls", "lifestyle centers", "outlet centers", "neighborhood shopping centers"],
+      "landlordRisks": [
+        "Anchor exclusions reducing the CAM denominator and creating disproportionate CAM charges for in-line tenants",
+        "Natural breakpoint calculations being disputed by tenants if gross sales reporting is incomplete or late",
+        "CAM pool contamination from including costs associated with the anchor's exclusive areas in the in-line tenant pool"
+      ],
+      "commonMistakes": [
+        "Including anchor tenant areas in the CAM denominator when the anchor is excluded from CAM contributions",
+        "Failing to separate anchor-exclusive maintenance costs from the shared CAM pool",
+        "Missing the reconciliation deadline while also waiting for tenant gross sales reports. These processes should run on separate timelines."
+      ],
+      "formulaBlocks": [
+        {
+          "label": "Percentage Rent Calculation",
+          "formula": "Percentage Rent = max(0, Gross Sales - Natural Breakpoint) x Percentage Rate",
+          "variables": {
+            "Gross Sales": "Tenant's total reported gross sales for the lease year",
+            "Natural Breakpoint": "Base Rent / Percentage Rate (the sales level at which percentage rent begins)",
+            "Percentage Rate": "Percentage of sales above breakpoint due to landlord, typically 5-7% for retail"
+          }
+        },
+        {
+          "label": "In-Line Tenant CAM Charge (with Anchor Exclusion)",
+          "formula": "Tenant CAM = CAM Pool x (Tenant RSF / Denominator Excluding Anchor RSF)",
+          "variables": {
+            "CAM Pool": "Total CAM expenses less any anchor-exclusive costs",
+            "Tenant RSF": "In-line tenant's rentable square footage",
+            "Denominator Excluding Anchor RSF": "Total leasable area minus anchor tenant areas excluded per their lease"
+          }
+        }
+      ],
+      "workedExample": "A 200,000 SF strip center has an anchor tenant (80,000 SF) excluded from CAM contributions by their lease. In-line GLA: 120,000 SF. One in-line tenant has 10,000 SF. Total annual CAM pool: $600,000.\n\nDenominator (anchor excluded): 120,000 SF.\nIn-line tenant pro-rata share: 10,000 / 120,000 = 8.3%.\nCAM charge: $600,000 x 8.3% = $50,000.\n\nIf anchor were included in denominator: $600,000 x (10,000/200,000) = $30,000.\nAnchor exclusion costs this tenant an extra $20,000/year.",
+      "faqs": [
+        {
+          "question": "How does CAM reconciliation work in a percentage lease?",
+          "answer": "CAM in a percentage lease operates independently from the percentage rent calculation. CAM charges are billed monthly as estimates and reconciled annually against actual expenses - exactly as in a standard NNN or modified gross lease. The percentage rent calculation is separate and based on reported gross sales. Both reconciliations typically happen in Q1 of the following year, but on separate billing timelines."
+        },
+        {
+          "question": "What is an anchor exclusion and how does it affect CAM?",
+          "answer": "An anchor exclusion is a lease provision where a major tenant (department store, big-box retailer) is excluded from contributing to - and sometimes from being counted in - the shared CAM pool. When the anchor is excluded from the denominator, the remaining in-line tenants pay a higher per-SF CAM rate because the total CAM pool is divided across fewer square feet. Anchor exclusions are a significant source of tenant disputes in retail centers."
+        }
+      ],
+      "relatedTools": ["/tools/pro-rata-calculator", "/tools/cam-cap-calculator", "/tools/cam-gross-up-calculator"],
+      "relatedResources": ["/resources/expenses", "/resources/lease-clauses/gross-up-clause", "/resources/expenses/management-fees"],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "ground-lease",
+      "name": "Ground Lease",
+      "abbreviation": "GL",
+      "metaTitle": "Ground Lease CAM Obligations: What Landlords and Tenants Owe",
+      "metaDescription": "Ground leases involve tenants owning the building while landlords own the land. Learn who bears operating expenses and when CAM reconciliation is required.",
+      "headline": "Ground Lease: Operating Expense Obligations for Land Landlords",
+      "subheadline": "In a ground lease, the tenant constructs and owns the building while the landlord owns the land. Operating expense obligations and CAM requirements depend on the lease structure: net ground leases versus participating ground leases.",
+      "definition": "A ground lease is a long-term lease (typically 50-99 years) where the landowner leases land to a tenant who constructs and owns the building, with the building reverting to the landowner at lease expiration.",
+      "whoBearsExpenses": "In a standard net ground lease, the tenant bears all operating expenses for the building they own: property taxes on improvements, insurance, maintenance, and all operating costs. The ground lease rent is paid to the landowner for use of the land only.",
+      "camIncluded": false,
+      "camNotes": "Standard net ground leases do not require CAM reconciliation. The tenant owns the building and bears all building expenses directly. However, some ground leases (particularly in retail and mixed-use) include participating rent provisions or expense participation clauses that create reconciliation obligations. Additionally, any sub-leases the building tenant enters with occupants are subject to CAM reconciliation under those sub-leases.",
+      "reconciliationRequired": false,
+      "grossUpApplicable": false,
+      "capApplicable": false,
+      "commonFor": ["retail pads", "fast food", "gas stations", "net-leased single-tenant retail", "mixed-use development", "institutional real estate"],
+      "landlordRisks": [
+        "Building reversion value risk: the landowner has limited control over how the building is maintained during the lease term",
+        "Participating rent disputes if the ground lease includes a percentage of tenant revenues",
+        "Property tax assessment complexity when improvements and land are owned and assessed separately"
+      ],
+      "commonMistakes": [
+        "Land landlords attempting to pass through building operating expenses. In a net ground lease, the tenant owns the building and all expenses are theirs.",
+        "Failing to specify in the ground lease who bears property taxes on the land vs. improvements (often assessed separately)",
+        "Not reconciling participating rent components when the ground lease includes them"
+      ],
+      "formulaBlocks": [
+        {
+          "label": "Ground Lease Rent",
+          "formula": "Ground Rent = Land Value x Capitalization Rate (or Fixed Rent per Lease Terms)",
+          "variables": {
+            "Land Value": "Fair market value of the land at commencement",
+            "Capitalization Rate": "Agreed return rate, typically 6-8% on institutional ground leases"
+          }
+        }
+      ],
+      "workedExample": "A retail pad site (1 acre) is ground-leased to a fast food operator. Land value: $800,000. Ground rent rate: 7%. Annual ground rent: $56,000/year. The tenant constructs a 3,000 SF building, owns it, and is responsible for all building operating expenses, property taxes on the improvements, insurance, and maintenance. The landowner receives only the $56,000 annual rent with no CAM reconciliation.",
+      "faqs": [
+        {
+          "question": "Who pays operating expenses in a ground lease?",
+          "answer": "In a standard net ground lease, the tenant who owns the building pays all building operating expenses: property taxes on improvements, insurance, utilities, maintenance, and all other costs. The landowner receives only the ground rent for use of the land. The landowner typically has no CAM reconciliation obligations under a pure net ground lease."
+        },
+        {
+          "question": "Does a ground lease require CAM reconciliation?",
+          "answer": "Standard net ground leases do not require CAM reconciliation from the landowner's perspective. The building tenant bears all operating expenses directly. However, if the ground lease includes participating rent provisions, the landowner may need to reconcile percentage rent based on tenant revenues. Additionally, if the building tenant sub-leases space to occupants, those sub-leases are subject to CAM reconciliation under their own terms."
+        }
+      ],
+      "relatedTools": ["/tools/noi-impact-calculator"],
+      "relatedResources": ["/resources/expenses", "/resources/lease-clauses/cumulative-cam-cap"],
+      "lastUpdated": "2026-03-21"
+    },
+    {
+      "slug": "industrial-gross-lease",
+      "name": "Industrial Gross Lease",
+      "abbreviation": "IGL",
+      "metaTitle": "Industrial Gross Lease CAM Guide: What Flex/Industrial Landlords Reconcile",
+      "metaDescription": "Industrial gross leases in flex and warehouse space often include partial CAM pass-throughs for exterior and common area maintenance. Learn what requires reconciliation.",
+      "headline": "Industrial Gross Lease: CAM Reconciliation in Flex and Warehouse Properties",
+      "subheadline": "Industrial gross leases bundle most expenses into base rent but commonly pass through exterior maintenance, landscaping, and taxes. Knowing which expenses require reconciliation prevents billing disputes.",
+      "definition": "An industrial gross lease is a commercial lease common in flex and warehouse properties where base rent includes interior maintenance and utilities, but exterior maintenance, landscaping, parking lot repairs, property taxes, and insurance may be passed through to tenants as a partial CAM charge.",
+      "whoBearsExpenses": "Landlord covers: interior utilities (often separately metered to tenant), HVAC maintenance (sometimes), roof and structural. Tenant typically pays: exterior maintenance, parking lot, landscaping, property taxes (pro-rata), and insurance (pro-rata) as separate pass-throughs, plus their own interior utilities.",
+      "camIncluded": true,
+      "camNotes": "Industrial gross leases vary significantly. Some flex leases pass through only taxes and insurance. Others include exterior CAM (landscaping, parking lot) as a separate monthly charge with annual reconciliation. The CAM pool is typically much smaller than in office or retail, often limited to exterior grounds and shared parking areas. Gross-up provisions are less common but should be verified in each lease.",
+      "reconciliationRequired": true,
+      "grossUpApplicable": false,
+      "capApplicable": false,
+      "commonFor": ["flex/R&D", "light industrial", "warehouse", "distribution centers", "multi-tenant industrial parks", "business parks"],
+      "landlordRisks": [
+        "Parking lot and exterior maintenance costs that exceed estimates without a mechanism to recover the overage",
+        "Property tax reassessment events (especially after sale) that significantly increase the tax pass-through",
+        "Ambiguous lease language about which maintenance categories are included in the CAM pass-through vs. landlord-borne"
+      ],
+      "commonMistakes": [
+        "Including interior maintenance costs in the CAM pass-through when the lease specifies they are landlord-borne",
+        "Failing to reconcile property taxes annually, especially critical in jurisdictions with frequent reassessments",
+        "Treating all industrial leases identically. Even within the same property, lease terms may differ significantly between tenants."
+      ],
+      "formulaBlocks": [
+        {
+          "label": "Industrial CAM Charge",
+          "formula": "Tenant CAM = (Exterior Maintenance + Taxes + Insurance) x (Tenant RSF / Total Building RSF)",
+          "variables": {
+            "Exterior Maintenance": "Landscaping, parking lot, exterior lighting, and shared building exterior costs",
+            "Taxes": "Pro-rata property taxes attributable to the building and land",
+            "Insurance": "Pro-rata property insurance premiums",
+            "Tenant RSF / Total Building RSF": "Tenant's proportionate share of the multi-tenant facility"
+          }
+        }
+      ],
+      "workedExample": "A 60,000 SF multi-tenant industrial building. Tenant occupies 15,000 SF (25%). Annual pass-through expenses: landscaping/parking $30,000, property taxes $60,000, insurance $18,000. Total: $108,000.\n\nTenant's share: $108,000 x 25% = $27,000.\nMonthly estimates collected: $2,000 x 12 = $24,000.\nBalance due: $3,000.",
+      "faqs": [
+        {
+          "question": "Do industrial leases require CAM reconciliation?",
+          "answer": "It depends on the lease structure. Pure industrial gross leases with no pass-throughs require no reconciliation. However, many industrial leases - including most multi-tenant flex and business park leases - pass through property taxes, insurance, and exterior maintenance as separate charges. Those pass-through categories require annual reconciliation against actuals. The reconciliation scope is defined by the lease's operating expense section."
+        },
+        {
+          "question": "What is typically included in industrial CAM?",
+          "answer": "Industrial CAM pools are narrower than office or retail. Common inclusions: landscaping and grounds maintenance, parking lot sweeping and restriping, exterior lighting, shared dock maintenance, property taxes (pro-rata), property insurance (pro-rata), and sometimes property management fees. Unlike office CAM, industrial CAM rarely includes interior utilities, janitorial, or HVAC maintenance - those are typically direct tenant expenses."
+        }
+      ],
+      "relatedTools": ["/tools/pro-rata-calculator", "/tools/cam-cap-calculator"],
+      "relatedResources": ["/resources/expenses", "/resources/expenses/property-taxes", "/resources/lease-clauses/opex-exclusions"],
+      "lastUpdated": "2026-03-21"
+    }
+  ]
+}

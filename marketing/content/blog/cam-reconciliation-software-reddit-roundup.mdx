@@ -1,0 +1,112 @@
+---
+title: "What Property Accountants Actually Say About CAM Reconciliation Software"
+description: "Real pain points from property accountants and managers on CAM reconciliation software: what breaks in Yardi and MRI, what tools are missing, and where CapVeri fits."
+excerpt: "The honest truth about CAM reconciliation software is scattered across Reddit threads, CRE forums, and LinkedIn comment sections. Not in vendor demos. Here's what practitioners actually say."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "market-trends"
+faq:
+  - q: "What is the most common complaint about CAM reconciliation in Yardi?"
+    a: "The most common complaint about Yardi's CAM reconciliation module is that it requires extensive manual setup for each tenant's lease terms - exclusion lists, cap calculations, gross-up parameters - and that configuration errors are difficult to catch without independent verification. Property accountants report spending 3–6 hours per tenant on reconciliation setup in a new Yardi instance, with errors often discovered only after reconciliation statements go out to tenants. The module is powerful but assumes the operator has deep Yardi-specific knowledge and verifies outputs independently."
+  - q: "Is there a simpler alternative to Yardi for CAM reconciliation?"
+    a: "Several tools target the CAM reconciliation workflow specifically, rather than the full property management suite. CapVeri is built specifically for CAM reconciliation - it ingests GL exports from Yardi or MRI, applies lease-specific rules for exclusions, gross-up, and caps, and generates tenant-ready reconciliation statements. For property managers who already have Yardi or MRI for the broader property management workflow, a purpose-built reconciliation tool running alongside it gives you independent verification and a faster reconciliation cycle without replacing your existing system."
+  - q: "How long does CAM reconciliation typically take without dedicated software?"
+    a: "Without dedicated reconciliation software, property accountants typically spend 8–20 hours per property completing an annual CAM reconciliation - gathering vendor invoices, categorizing expenses by lease definition, calculating pro-rata shares, applying caps and gross-up, generating tenant statements, and handling tenant questions. For a portfolio of 15–20 properties, that's 120–400 hours of reconciliation work concentrated in January through April. Properties with complex lease structures (multiple cap types, anchor exclusions, gross-up for multi-tenant buildings) are at the high end of that range."
+  - q: "What do property managers say about Excel-based CAM reconciliation?"
+    a: "The consistent feedback from practitioners is that Excel works until it doesn't - meaning it handles simple, small portfolios but breaks down as lease complexity, tenant count, and portfolio size increase. Common Excel-specific complaints: formula errors that propagate through the reconciliation undetected, version control problems when multiple people work on the same file, no audit trail when numbers are changed after the fact, and inability to produce professional-quality tenant statements without significant formatting work. Most practitioners who've moved from Excel to purpose-built tools describe the shift as immediate and significant."
+  - q: "What CAM reconciliation features do property accountants most want in software?"
+    a: "Based on practitioner discussions, the most wanted features in CAM reconciliation software are: (1) automatic GL import from Yardi/MRI without manual data entry; (2) lease-specific configuration that applies exclusions, caps, and gross-up automatically; (3) year-over-year variance flagging that highlights unusual expense changes before statements go out; (4) professional tenant statement generation without formatting work; (5) audit trail for every calculation; and (6) ability to handle complex lease structures like anchor exclusions, multi-tenant gross-up, and controllable/non-controllable cap splits."
+---
+
+Property accountants don't talk about CAM reconciliation software in press releases. They talk about it in CRE accounting forums, BOMA education sessions, LinkedIn comment sections, and online communities where someone vents about a 3-month reconciliation backlog. The picture that emerges from those conversations is consistent and candid: the existing tools have significant gaps, the spreadsheet approach stops scaling around 5–8 properties, and everyone has war stories.
+
+This post synthesizes what practitioners actually say: the pain points, the tool gaps, and what good looks like when you find it.
+
+## "Yardi Does Everything Except the Thing I Need It To Do"
+
+The most consistent theme across property accounting discussions is frustration with Yardi's CAM reconciliation module specifically. Not Yardi overall, which practitioners generally accept as the industry standard for property management, but the reconciliation module in particular.
+
+The complaints cluster around a few consistent issues:
+
+**Configuration burden.** Getting Yardi's CAM module to correctly apply a specific tenant's exclusion list, gross-up methodology, and cap calculation requires manual setup for every tenant. For a property manager handling 30 tenants across five properties, that's 30 separate lease configurations. Get one wrong (say, applying gross-up to a tenant whose lease prohibits it) and you don't find out until the tenant audits.
+
+A consistent practitioner observation: "Yardi will do exactly what you tell it to do. The problem is knowing what to tell it. If you don't set up the lease terms correctly, the reconciliation is wrong and you have no way of knowing."
+
+**Output quality.** Yardi's default reconciliation output is functional but not designed for tenant communication. Property managers routinely export the data and reformat it in Excel or Word before sending to tenants, adding another step and another opportunity for error.
+
+**No independent verification.** The biggest gap: Yardi doesn't tell you if your reconciliation is correct relative to market benchmarks or lease terms. It calculates what you configure it to calculate. A property manager who inadvertently included capital expenditures in operating expenses will get a reconciliation that looks perfectly formatted and is wrong.
+
+## "MRI Is Powerful but It's Not a Reconciliation Tool"
+
+MRI users echo similar themes. MRI is a full property management and accounting system, and its reconciliation capabilities are built as a component of that broader system, not as a purpose-built reconciliation workflow.
+
+The practical effect: running a reconciliation in MRI requires navigating multiple modules, and the output is designed for the property management workflow rather than for tenant communication. Practitioners report that MRI reconciliations are accurate when configured correctly, but the configuration process requires MRI-specific expertise that many mid-market property managers don't have in-house.
+
+A mid-market property manager perspective that comes up repeatedly: "We use MRI for everything else. For reconciliations, we export the GL and run it in Excel because it's faster and we can control the output. MRI's reconciliation module takes longer to set up than doing it manually."
+
+## The Excel Reality
+
+For portfolios under 5–8 properties with straightforward lease structures, Excel remains the most common reconciliation tool. It's not because practitioners prefer it. It's because it's what they already know, it's free, and for simple cases it works well enough.
+
+The Excel approach breaks down in predictable ways:
+
+**Formula errors.** A copy-paste error in a VLOOKUP, a pro-rata share formula that references the wrong denominator, a cap calculation that doesn't update when the base year changes. These errors are common and, critically, often invisible until a tenant audits.
+
+**Version control.** When multiple people touch the reconciliation file (the property manager, the property accountant, the senior accountant who reviews), tracking which version is final is harder than it should be. "We have a folder called 'CAM Reconciliations Final' with 11 files in it and I'm not sure which one we sent to tenants." That's a real problem.
+
+**Scale.** A 10-property portfolio with 150 tenants means 150 individual reconciliation calculations, 150 tenant statements, and 150 potential tenant questions. Excel at that scale is a full-time job for two people for three months.
+
+**Audit trail.** When a tenant questions a number, being able to trace it back to the source vendor invoice and explain the methodology requires documentation that Excel doesn't create automatically. "I can tell you what the number is. I can't always show you where it came from." That's not an adequate response to a formal audit demand.
+
+## The Spreadsheet-to-Spreadsheet Migration Trap
+
+A pattern that comes up repeatedly in practitioner discussions: moving from Excel to a different Excel-based approach without solving the underlying workflow problems. Custom reconciliation spreadsheets from consultants, elaborate multi-tab workbooks from accounting firms, Google Sheets equivalents that claim to be "systems."
+
+These intermediate solutions often add complexity without adding accuracy. The core problem (manual data entry, no lease-specific configuration, no verification layer) persists because the tool is still fundamentally a spreadsheet.
+
+The practitioners who describe their biggest quality improvement all describe the same transition: moving to a workflow where GL data is imported (not typed in), lease terms are configured (not approximated), and the output is compared against expectations (not just formatted for sending).
+
+## What Practitioners Actually Want
+
+Across the CRE accounting discussions, the feature wishlist is consistent:
+
+**Direct GL import.** The single biggest time sink in CAM reconciliation is re-entering data that already exists in Yardi or MRI. Every reconciliation tool that eliminates this step gets immediate credit. "If I could import the Yardi GL export and have it categorized automatically, I'd save 40% of my reconciliation time."
+
+**Lease-specific rules without manual configuration.** The tool should apply the right exclusion list, gross-up methodology, and cap calculation for each tenant based on their specific lease, not a generic template that requires per-tenant customization.
+
+**Variance flagging before it goes out.** "The thing I actually want is something that tells me this expense category went up 40% year-over-year before I send the statement, so I can investigate instead of fielding a tenant complaint." This is a gap in every existing tool at the mid-market level.
+
+**Professional tenant statements.** The output should be ready to send without reformatting. Not a data dump that requires 30 minutes of formatting in Word.
+
+**Audit trail.** Every calculation traceable to source data. When a tenant sends a formal audit request, the ability to pull up the methodology and show it in 10 minutes rather than 10 days.
+
+## Where CapVeri Fits
+
+CapVeri was built specifically to address the reconciliation workflow gap: the step between "GL export from Yardi/MRI" and "tenant statement." It's not a replacement for your property management system. It's the reconciliation layer that sits on top of it.
+
+It ingests your Yardi or MRI GL export directly. It applies your lease-specific rules: exclusion lists, gross-up, controllable expense caps, anchor denominator adjustments. It flags year-over-year variances before you send statements. It generates professional tenant-ready reconciliation statements without reformatting work.
+
+For property managers dealing with [complex retail CAM](/resources/cam-charges-retail-lease-guide) with anchor exclusions, [office gross-up calculations](/resources/cam-charges-office-building-guide), or [industrial capital vs. maintenance disputes](/resources/cam-charges-industrial-lease-guide), the automation is more than time savings. It's an accuracy layer that catches configuration errors before they become tenant disputes.
+
+The [CAM reconciliation errors](/blog/cam-reconciliation-errors) that generate the most tenant pushback (wrong pro-rata denominators, capital expenses in operating costs, management fees above lease caps) are exactly the categories that CapVeri flags automatically.
+
+For a broader look at what [CAM overbilling](/blog/cam-overbilling-liability) looks like and what your liability exposure is, see our audit and compliance guides. If you're evaluating tools for your portfolio, the best starting point is running your last reconciliation through CapVeri's import workflow and seeing what it catches. [Start a free trial](/) and see your first result in about 15 minutes.
+
+## The Honest Assessment
+
+No CAM reconciliation software is perfect. The choice isn't between a perfect tool and an imperfect one. It's between different tradeoffs.
+
+Yardi and MRI: powerful, complex, expensive, and requiring deep configuration expertise. Best for portfolios where IT support and Yardi-certified staff are available.
+
+Excel: free, flexible, familiar, and doesn't scale. No verification layer, audit exposure.
+
+Purpose-built reconciliation tools like CapVeri: fast to start, focused on the reconciliation workflow, best for portfolios where the pain point is reconciliation speed and accuracy rather than full property management functionality.
+
+The practitioners who are most satisfied with their CAM reconciliation workflow share one thing: they've separated the reconciliation function from the general property management system and given it dedicated attention, either with dedicated staff, dedicated tools, or both. The [commercial lease audit procedures](/blog/commercial-lease-audit-procedures) that tenants use to challenge reconciliations are sophisticated. The tools landlords use to prepare them should be too.
+
+## Sources
+
+1. [Fiserv - Reconciliation whitepaper](https://www.fiserv.com/content/dam/fiserv-ent/archive-files/final-files/white-papers/Frontier-Reconciliation_whitepaper_1020.pdf)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

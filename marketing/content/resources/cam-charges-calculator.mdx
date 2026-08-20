@@ -1,0 +1,192 @@
+---
+title: "CAM Charges Calculator: Pro-Rata Share, Gross-Up Adjustment, and Annual Cap"
+description: "How to calculate CAM charges manually: pro-rata share formula, gross-up adjustment at 95% occupancy, and applying the annual cap. Walkthrough with real numbers."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+buttonText: "Try the CAM Calculator"
+order: 240
+audience: tenant
+faq:
+  - q: "How do you calculate CAM charges for a commercial tenant?"
+    a: "CAM charges are calculated in three steps: (1) determine the total CAM expense pool for the property, (2) calculate the tenant's pro-rata share as their demised square footage divided by the total leasable or leased area, and (3) multiply the pro-rata share by the total expense pool. If the lease includes a gross-up provision, variable expenses are adjusted before the pro-rata calculation runs. If a cap provision applies, compare the resulting charge to the capped amount and bill the lesser of the two."
+  - q: "What is the pro-rata share formula for CAM?"
+    a: "Pro-rata share = tenant demised square footage divided by building total leasable square footage x 100. For example, a 3,500 SF tenant in a 70,000 SF building has a pro-rata share of 5%. If total CAM expenses are $630,000, that tenant's CAM charge is 5% x $630,000 = $31,500 annually, or $2,625 per month. The denominator definition (whether it's leasable, leased, or rentable area) varies by lease and can significantly affect the calculation."
+  - q: "How does the gross-up adjustment change the CAM calculation?"
+    a: "Gross-up adjusts variable expenses upward to reflect what they would be if the building were at a specified occupancy level (typically 90-95%). If a building is 70% occupied and variable expenses are $300,000, grossing up to 95% produces $300,000 / 70% x 95% = $407,143. This higher amount goes into the expense pool before the pro-rata calculation, increasing each tenant's share. Only variable expenses should be grossed up. Fixed expenses like taxes and insurance are unchanged."
+  - q: "How does a CAM cap affect the final charge to a tenant?"
+    a: "A CAM cap limits how much a tenant's share can increase year-over-year for controllable expenses. After calculating the tenant's pro-rata share of controllable expenses, compare that amount to the capped maximum. If the cap is 5% non-cumulative, the tenant's controllable CAM cannot exceed prior year controllable CAM × 1.05. If the calculated amount exceeds the cap, the tenant pays the capped amount and the landlord absorbs the difference. Non-controllable expenses (taxes, insurance) are typically excluded from cap calculations."
+  - q: "Should I use leasable or leased area in the denominator for CAM?"
+    a: "This depends on your lease language. 'Leasable area' means total building GLA, including vacant space. The denominator is fixed regardless of occupancy. 'Leased area' or 'occupied area' means only space currently under lease. The denominator shrinks when there are vacancies, increasing each tenant's pro-rata share. Tenants prefer leasable area denominators because they're stable. Landlords sometimes prefer leased area because it increases recovery when a building is nearly full. Check the exact language in Section [CAM/Operating Expenses] of your lease."
+---
+
+<Alert type="info" title="Quick Answer">
+CAM charges = (tenant SF / building total SF) x total CAM expense pool. If gross-up applies, adjust variable expenses before dividing. If a cap applies, compare the calculated charge to prior year controllable CAM x (1 + cap%) and bill the lower amount. The three steps (pro-rata share, gross-up adjustment, cap comparison) should be done in that order.
+</Alert>
+
+## Step 1: Calculate the Pro-Rata Share
+
+Every CAM calculation starts with the pro-rata share. It's the fraction of the building that the tenant occupies, expressed as a percentage.
+
+**Formula:**
+> Pro-Rata Share = Tenant Demised SF ÷ Building Denominator SF
+
+**Example:**
+- Tenant space: 4,200 SF
+- Building total leasable area (GLA): 84,000 SF
+- Pro-rata share: 4,200 ÷ 84,000 = 5.00%
+
+The denominator is where disputes arise. Your lease will use one of these definitions:
+
+| Denominator Type | Definition | Tenant Impact |
+|-----------------|------------|---------------|
+| Gross leasable area (GLA) | Total building area, including vacant | Stable; doesn't change with occupancy |
+| Leased area | Only space currently under signed leases | Increases when vacancies exist |
+| Rentable area | BOMA-defined standard, may include load factor | Varies by building; defined in lease |
+| Occupied area | Space physically occupied by tenants | Can change more frequently than leased |
+
+For a full explanation of how the denominator affects your calculations, see [pro-rata share calculation](/resources/pro-rata-share-calculation).
+
+## Step 2: Determine the Total CAM Expense Pool
+
+The expense pool is total qualifying operating expenses for the property during the lease year. This is where exclusions and inclusions matter.
+
+**Building the expense pool:**
+
+Start with total operating expenses from the landlord's general ledger. Then remove:
+- Excluded expenses (as defined in your lease's exclusion list)
+- Capital expenditures (unless the lease allows amortization)
+- Management fees above the lease cap
+- Any expense not related to common area maintenance
+
+**Detailed example for a 84,000 SF community retail center:**
+
+| Expense Category | Gross Amount | Adjustment | Included in Pool |
+|-----------------|-------------|------------|-----------------|
+| Janitorial | $95,000 | - | $95,000 |
+| Landscaping | $68,000 | - | $68,000 |
+| Parking lot maintenance | $54,000 | - | $54,000 |
+| Repairs and maintenance | $112,000 | -$22,000 capital item | $90,000 |
+| Security | $43,000 | - | $43,000 |
+| Common area utilities | $87,000 | - | $87,000 |
+| Management fee | $96,000 | -$16,000 over 3% cap | $80,000 |
+| Property taxes | $185,000 | - | $185,000 |
+| Property insurance | $74,000 | - | $74,000 |
+| **Total** | **$814,000** | **-$38,000** | **$776,000** |
+
+Review [what is included in CAM expenses](/resources/what-is-included-in-cam-expenses) for the full list of eligible and ineligible expense categories.
+
+## Step 3: Apply Gross-Up (If Your Lease Requires It)
+
+If your lease has a [gross-up provision](/resources/gross-up-clause-commercial-lease), you need to adjust variable expenses before running the pro-rata calculation.
+
+**Gross-up calculation:**
+
+First, separate variable from fixed expenses:
+
+| Expense | Amount | Variable? |
+|---------|--------|-----------|
+| Janitorial | $95,000 | Yes |
+| Landscaping | $68,000 | No (fixed contract) |
+| Parking lot maintenance | $54,000 | No |
+| Repairs and maintenance | $90,000 | Partially - $40,000 variable |
+| Security | $43,000 | Yes |
+| Common area utilities | $87,000 | Yes |
+| Management fee | $80,000 | No |
+| Property taxes | $185,000 | No |
+| Insurance | $74,000 | No |
+| **Variable subtotal** | **$265,000** | |
+| **Fixed subtotal** | **$511,000** | |
+
+**Apply gross-up to variable expenses:**
+- Actual building occupancy: 78%
+- Gross-up occupancy assumption (per lease): 95%
+- Gross-up factor: 95% ÷ 78% = 1.2179
+- Variable expenses grossed up: $265,000 ÷ 78% × 95% = $322,757
+
+**Total gross-up adjusted CAM pool:**
+$322,757 (grossed-up variable) + $511,000 (fixed) = $833,757
+
+**Tenant's share (5%):**
+5% × $833,757 = $41,688 annual CAM
+vs. $38,800 without gross-up. That's a $2,888 difference per year on a single tenant.
+
+Use the [CAM gross-up calculator](/tools/cam-gross-up-calculator) to verify the math on any landlord-provided gross-up calculation.
+
+## Step 4: Apply the CAM Cap
+
+If the tenant's lease includes a cap on controllable expense increases, compare the calculated controllable CAM to the prior year controllable CAM plus the allowed increase.
+
+**Cap example (non-cumulative, 5%):**
+
+| Item | Amount |
+|------|--------|
+| Prior year controllable CAM (tenant's share) | $28,500 |
+| Cap limit (5% increase): $28,500 × 1.05 | $29,925 |
+| Current year calculated controllable CAM | $32,150 |
+| Excess over cap (non-recoverable) | $2,225 |
+| Billable controllable CAM (capped) | $29,925 |
+
+**Adding non-controllable CAM (not subject to cap):**
+- Tenant's share of taxes + insurance: $12,950
+- Total billable CAM: $29,925 + $12,950 = $42,875
+
+For the full cap calculation mechanics, see [CAM expense caps](/resources/cam-expense-caps) and try the [CAM cap calculator](/tools/cam-cap-calculator).
+
+## Putting It All Together: The Complete Calculation
+
+Here's the full calculation for our example tenant (4,200 SF in 84,000 SF building):
+
+| Step | Calculation | Result |
+|------|-------------|--------|
+| 1. Pro-rata share | 4,200 ÷ 84,000 | 5.00% |
+| 2. Base expense pool | After exclusions | $776,000 |
+| 3. Gross-up adjusted pool | Variable grossed to 95% occupancy | $833,757 |
+| 4. Tenant's gross CAM | 5% × $833,757 | $41,688 |
+| 5. Split controllable / non-controllable | Per lease | $28,738 controllable / $12,950 non-controllable |
+| 6. Apply cap (5% NC) | Prior year $27,370 × 1.05 = $28,739 | $28,738 (under cap) |
+| 7. Total billable CAM | $28,738 + $12,950 | **$41,688** |
+| 8. Monthly estimate | $41,688 ÷ 12 | **$3,474** |
+
+## Checking the Landlord's Calculation Against Your Lease
+
+When you receive a CAM reconciliation, verify the landlord's calculation step by step:
+
+**Check 1: Expense pool.** Are excluded items present? Calculate total expenses from the statement and compare to invoices you can verify.
+
+**Check 2: Pro-rata share.** Confirm the denominator matches your lease definition. If it's leasable area, verify against the lease exhibit. If it's leased area, request the rent roll to verify.
+
+**Check 3: Gross-up.** If gross-up was applied, request the calculation. Verify the occupancy figure, the variable/fixed classification, and the gross-up factor arithmetic.
+
+**Check 4: Cap compliance.** Pull prior year's reconciliation. Compare the increase in controllable CAM to the cap percentage. Calculate the maximum allowable charge and verify the landlord didn't exceed it.
+
+If any step doesn't match, you may have grounds for a refund. See [CAM overbilling liability](/blog/cam-overbilling-liability) and [CAM demand letter](/blog/cam-demand-letter) for how to proceed.
+
+## Common Calculation Errors to Watch For
+
+**Wrong denominator.** A landlord using leased area instead of leasable area in a partially vacant building inflates every tenant's pro-rata share. On a building that's 80% leased, this error alone increases each tenant's share by approximately 25%.
+
+**Gross-up applied to fixed expenses.** Taxes and insurance don't scale with occupancy. If they appear in the variable expense pool for gross-up purposes, the landlord is overcollecting.
+
+**Cap applied to non-controllable expenses.** Some landlords apply the cap calculation to total CAM rather than just controllable CAM. This incorrectly shields the tenant from legitimate non-controllable expense increases.
+
+**Management fee calculated on incorrect base.** If the management fee is 4% of gross revenues but the landlord calculated it on scheduled rents rather than collected rents (and some tenants were on free rent), the fee base is wrong.
+
+**Year-end reconciliation includes expenses from wrong period.** Invoices received in January for December services should be allocated to the year they relate to, not the year paid. This is especially common with annual insurance premiums.
+
+## Using CAM Tools to Verify Your Charges
+
+The [pro-rata calculator](/tools/pro-rata-calculator) lets you input building and tenant square footage to verify the pro-rata share independently. The [CAM gross-up calculator](/tools/cam-gross-up-calculator) walks through the variable/fixed separation and occupancy adjustment calculation. The [CAM cap calculator](/tools/cam-cap-calculator) verifies cap compliance given prior year charges and the lease cap structure.
+
+Run these calculations independently against the landlord's reconciliation statement. If the numbers don't match, request the landlord's calculation methodology in writing.
+
+For context on how CAM charges connect to the full reconciliation process, see [what is CAM reconciliation](/resources/common-area-maintenance-reconciliation-explained). For what to do when the numbers don't add up, see [CAM reconciliation errors](/blog/cam-reconciliation-errors).
+
+---
+
+*CapVeri automates CAM reconciliation for landlords and property managers, checking statements against lease terms, pro-rata calculations, and cap provisions. [Start a free trial](/pricing) to run your first analysis.*
+
+## Sources
+
+1. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

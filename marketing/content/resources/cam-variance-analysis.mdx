@@ -1,0 +1,190 @@
+---
+title: "CAM Variance Analysis: Year-over-Year and Budget-to-Actual Methods"
+description: "How to run meaningful variance analysis on CAM expenses: year-over-year trending, budget-to-actual comparisons, per-SF benchmarking, and category-level drill-downs that prevent tenant audit findings."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 88
+faq:
+  - q: "What is a meaningful CAM expense variance?"
+    a: "A variance is meaningful when it exceeds both a percentage threshold (typically 10–15%) and a dollar threshold (typically $5,000–$10,000). A $200 line item jumping 50% is noise. A $80,000 line item jumping 12% is $9,600. That warrants investigation. Always apply both tests to avoid chasing immaterial fluctuations."
+  - q: "How do I explain CAM variances to tenants?"
+    a: "Lead with the category, the dollar amount, and the cause. Example: 'Janitorial increased $0.42/SF ($18,200 total) due to contract renewal with a new vendor at market rates.' Tenants accept increases when explanations are specific and documented. They dispute when the statement shows a 25% jump with no context."
+---
+
+## Why Variance Analysis Is the First Line of Defense
+
+Every tenant auditor starts with the same exercise: compare this year's CAM charges to last year's. Any line item that jumps materially gets flagged for investigation. If you haven't already identified and documented those variances, you're handing the auditor their roadmap.
+
+Variance analysis isn't just about preventing disputes. It catches internal errors (a miscoded invoice, a CapEx item in the wrong GL account, a vendor invoice posted twice) before they reach tenant statements. Done well, it's the single highest-value QA step in the reconciliation process.
+
+---
+
+## Two Types of Variance Analysis
+
+### Year-over-Year (YoY) Variance
+
+Compares the current reconciliation year to the prior year. This is what tenants and their auditors care about most.
+
+**Example - 120,000 SF suburban office building:**
+
+| Expense Category | 2024 Actual | 2025 Actual | $ Variance | % Variance | Per SF Change |
+|---|---|---|---|---|---|
+| Janitorial | $156,000 | $174,200 | $18,200 | 11.7% | +$0.15 |
+| Landscaping | $42,000 | $43,800 | $1,800 | 4.3% | +$0.02 |
+| HVAC Maintenance | $89,000 | $138,500 | $49,500 | 55.6% | +$0.41 |
+| Property Insurance | $67,000 | $71,400 | $4,400 | 6.6% | +$0.04 |
+| Utilities - Electric | $210,000 | $198,000 | ($12,000) | (5.7%) | ($0.10) |
+| Security | $48,000 | $48,000 | $0 | 0.0% | $0.00 |
+| Property Taxes | $320,000 | $336,000 | $16,000 | 5.0% | +$0.13 |
+| Management Fee | $118,000 | $122,500 | $4,500 | 3.8% | +$0.04 |
+| **Total** | **$1,050,000** | **$1,132,400** | **$82,400** | **7.8%** | **+$0.69** |
+
+Two items stand out: HVAC Maintenance (+55.6%) and Janitorial (+11.7%). The HVAC line is almost certainly a classification issue: a compressor replacement or rooftop unit overhaul that should have been coded to CapEx. The janitorial increase is a contract renewal at market rates.
+
+### Budget-to-Actual Variance
+
+Compares actual expenses to the budget used to set tenant estimates. This matters for two reasons: (1) large unfavorable variances mean big true-up invoices that trigger disputes, and (2) the budget is a forward-looking promise to tenants about what expenses will look like.
+
+**Same building, budget comparison:**
+
+| Expense Category | 2025 Budget | 2025 Actual | $ Variance | % Variance |
+|---|---|---|---|---|
+| Janitorial | $160,000 | $174,200 | ($14,200) | (8.9%) |
+| HVAC Maintenance | $92,000 | $138,500 | ($46,500) | (50.5%) |
+| Utilities - Electric | $215,000 | $198,000 | $17,000 | 7.9% |
+| Property Taxes | $330,000 | $336,000 | ($6,000) | (1.8%) |
+| **Total** | **$1,075,000** | **$1,132,400** | **($57,400)** | **(5.3%)** |
+
+The total budget variance is 5.3% unfavorable. The HVAC line is going to produce a disproportionate true-up hit for tenants. If that $46,500 CapEx item gets properly reclassified, the remaining budget variance drops to under 1%.
+
+---
+
+## Setting Materiality Thresholds
+
+Not every variance deserves investigation. You need two thresholds working together:
+
+**Percentage threshold:** 10–15% is standard. Below 10%, variances are generally within normal operating fluctuation. Above 15%, something changed: new vendor, rate increase, classification error, or one-time event.
+
+**Dollar threshold:** $5,000–$10,000 depending on building size. For a 50,000 SF building with $400,000 in operating expenses, a $3,000 variance on a $15,000 line item (20%) is worth a note but not a deep investigation. For a 500,000 SF building, set the dollar threshold higher, maybe $15,000–$25,000.
+
+**The combined test:** Flag a variance only when it exceeds BOTH thresholds. This filters out small-dollar percentage spikes and large-dollar items with minor fluctuations.
+
+| Building Size | % Threshold | $ Threshold |
+|---|---|---|
+| Under 75,000 SF | 15% | $5,000 |
+| 75,000–200,000 SF | 10% | $10,000 |
+| Over 200,000 SF | 10% | $25,000 |
+
+---
+
+## Per-SF Benchmarking
+
+Dollar comparisons can mislead when occupancy or building area changes between years. Per-SF analysis normalizes the comparison.
+
+**When to use per-SF analysis:**
+- Building had a major tenant move-in or move-out (denominator changes)
+- Gross-up was applied differently between years
+- Comparing expenses across properties in a portfolio
+
+**Example:** A building's total janitorial cost increased from $156,000 to $174,200 (11.7%). But occupancy also increased from 82% to 91%, adding 10,800 SF of occupied space. On a per-occupied-SF basis, the cost went from $1.59/SF to $1.60/SF, essentially flat. The increase is driven by serving more space, not by cost inflation.
+
+---
+
+## Category-Level Deep Dives
+
+### Property Taxes
+
+Property tax increases should match assessment increases. If your building's assessed value went up 4% but the tax line increased 12%, check for: supplemental assessments, new special district levies, or posting errors (prior year refund not reversed, current year payment duplicated).
+
+### Insurance
+
+Insurance premiums are contract-driven and change once per year at renewal. A mid-year variance usually means the prior year's actual premium was accrued incorrectly. Pull the actual policy declarations page and compare to what's in the GL.
+
+### Utilities
+
+Utility variances should correlate with weather (degree days), occupancy changes, and rate changes. A 20% electric increase with no occupancy change and a mild winter suggests a rate increase, equipment issue, or billing error from the utility company. Pull the utility bills.
+
+### Repairs and Maintenance
+
+This is the most common category for CapEx misclassification. Any single invoice over $10,000 in the R&M accounts should be reviewed for capitalization. Common offenders: roof repairs, parking lot resurfacing, elevator modernization, HVAC equipment replacement.
+
+### Management Fees
+
+Management fees are calculated on a defined base, usually gross revenue or total operating expenses. If the fee percentage hasn't changed but the fee amount increased more than the base, the calculation is wrong. Verify the base, the percentage, and the math.
+
+---
+
+## Building the Variance Memo
+
+Every property should have a variance memo before statements go out. This memo serves three purposes: (1) internal QA documentation, (2) ready-made answers when tenants ask questions, and (3) audit defense.
+
+**What to include for each flagged variance:**
+
+1. **Category name and GL account range**
+2. **Prior year actual, current year actual, dollar and percentage variance**
+3. **Per-SF impact**
+4. **Root cause**: specific vendor, contract, event, or classification change
+5. **Supporting documentation reference**: invoice number, contract, assessment notice
+6. **Whether the item is recoverable**: confirm it belongs in the CAM pool
+
+A well-documented variance memo turns a 4-hour tenant inquiry response into a 15-minute email with attachments.
+
+---
+
+## Using Variance Analysis to Prevent Audit Findings
+
+Tenant auditors look for specific patterns:
+
+**Pattern 1: Unexplained spikes.** Any category that increased 20%+ without a documented reason will get investigated. If you can produce the vendor contract or invoice that explains the increase, the auditor moves on.
+
+**Pattern 2: CapEx in the CAM pool.** Auditors will pull every invoice over a dollar threshold (usually $5,000–$15,000) in the R&M accounts. If you've already reviewed and documented these, you're ahead.
+
+**Pattern 3: Inconsistent classification.** If snow removal was in "Landscaping" last year and "R&M" this year, the auditor will question both years. Keep classifications consistent and document any reclassifications.
+
+**Pattern 4: Budget-to-actual gaps.** Large unfavorable variances (especially when the budget was set low to attract or retain tenants) signal that estimates were deliberately underestimated. This creates legal exposure and destroys tenant trust.
+
+---
+
+## Building a Variance Dashboard
+
+For portfolio controllers managing multiple properties, a variance dashboard shows where to focus attention:
+
+| Property | Total CAM | YoY % Change | Largest Category Variance | Status |
+|---|---|---|---|---|
+| Westpark Tower | $1,132,400 | +7.8% | HVAC +55.6% | Needs Review |
+| Meridian Plaza | $890,000 | +3.2% | Insurance +8.1% | Clean |
+| Lakeside Commons | $2,100,000 | +4.5% | Property Tax +6.2% | Clean |
+| Gateway Business Park | $680,000 | +15.2% | R&M +42.0% | Needs Review |
+| North Ridge Office | $1,450,000 | -1.1% | Utilities -8.3% | Verify |
+
+Properties with a total variance under 5% and no category over 10% are likely clean. Focus your review hours on the outliers.
+
+---
+
+## How CapVeri Automates Variance Analysis
+
+CapVeri runs both YoY and budget-to-actual variance analysis automatically when you upload GL data. The system:
+
+- Flags any category exceeding your materiality thresholds
+- Calculates per-SF metrics using your building's correct denominator
+- Highlights potential CapEx items in recoverable expense pools
+- Generates a variance memo template with the numbers pre-populated
+- Compares results across your portfolio to identify outlier properties
+
+The goal isn't to replace controller judgment. It's to eliminate the 4–6 hours of spreadsheet work per building that goes into producing the variance report so you can spend that time on analysis and documentation.
+
+---
+
+## Related Resources
+
+- [Self-Audit CAM Billing](/resources/self-audit-cam-billing) - Broader QA checklist that includes variance analysis
+- [CapEx Detection in CAM](/resources/capex-detection-cam) - How to catch misclassified capital expenses
+- [CAM Billing KPIs](/resources/cam-billing-kpis) - Track error rate and dispute rate alongside variances
+- [CAM Reconciliation Timeline](/resources/cam-reconciliation-timeline-checklist) - Where variance analysis fits in the annual cycle
+
+## Sources
+
+1. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

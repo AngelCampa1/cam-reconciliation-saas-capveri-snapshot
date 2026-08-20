@@ -1,0 +1,225 @@
+---
+title: "CAM Cap Calculation Guide: Cumulative and Non-Cumulative Caps"
+description: "How to calculate CAM caps: step-by-step for cumulative and non-cumulative structures, base year resets, tenant negotiation levers, and worked dollar examples."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 249
+faq:
+  - q: "How do you calculate a non-cumulative CAM cap?"
+    a: "A non-cumulative CAM cap is calculated as: prior year actual controllable expenses × (1 + cap percentage). If your controllable expenses were $80,000 last year and the cap is 5%, your maximum controllable CAM this year is $84,000. If the landlord's actual controllable expenses were $90,000, you pay only $84,000. The $6,000 difference is capped - the landlord absorbs it, not you. The calculation resets each year using the prior year actual (not the prior year capped amount, and not the base year amount)."
+  - q: "How do you calculate a cumulative CAM cap?"
+    a: "A cumulative CAM cap works like a non-cumulative cap in years when the cap is triggered, but it banks unused capacity in low-increase years. For example, if the cap is 5% and actual controllable expenses only increase 2%, the landlord banks 3% for future use. In subsequent years, the banked percentage can be deployed on top of the annual 5% cap. The calculation is: permitted increase = this year's cap % + any carried-forward unused cap from prior years. This can allow double-digit increases in a single year despite a 5% annual cap."
+  - q: "What is the base for a CAM cap calculation?"
+    a: "The base is what the cap percentage applies to - either the prior year's actual controllable expenses or a specified base year's controllable expenses. Prior-year basis is more common and tenant-friendly because each year's calculation starts from the previous year's real number. Base year structures fix the starting point, which can be either better or worse than prior-year depending on expense trends. In base year structures, the compound growth calculation from the fixed base year determines the maximum allowable amount in any given year."
+  - q: "What expenses are excluded from the CAM cap calculation?"
+    a: "Almost all CAM caps exclude non-controllable expenses: real estate taxes, insurance, utilities, and sometimes snow removal and other weather-dependent services. The key question is how the lease defines 'controllable' - the broader the non-controllable carve-out, the less effective the cap. Some leases also exclude management fees from the cap. Tenants should push for a narrow non-controllable definition: only taxes, insurance, and utilities should be excluded, with management fees and all other services subject to the cap."
+  - q: "Can a CAM cap apply to total expenses rather than just controllable expenses?"
+    a: "Rarely, but yes. An overall expense cap (sometimes called a gross rent stop or expense stop) limits the tenant's total CAM obligation to a fixed dollar amount or percentage above a base, regardless of what expenses actually are. These are more common in older gross lease conversions and some modified gross leases than in standard net leases. For most commercial tenants today, the CAM cap applies only to controllable expenses, with non-controllable flowing through at actual cost."
+---
+
+<Alert type="info" title="Quick Answer">
+A CAM cap limits how much your controllable operating expense charges can increase each year. The calculation for a non-cumulative cap is: prior year controllable expenses × (1 + cap %). If the landlord's actual controllable expenses exceed that, you pay only the capped amount. Cumulative caps work the same way but allow the landlord to carry forward unused cap capacity from prior years, which can allow much larger increases in a single year despite the nominal cap percentage.
+</Alert>
+
+## CAM Cap Calculation: The Foundation
+
+The CAM cap calculation has three inputs:
+1. **The base amount**: this year's cap applies to last year's number (or a fixed base year amount)
+2. **The cap percentage**: typically 3%, 5%, or 7% of controllable expenses
+3. **The carryover rule**: cumulative (unused cap banks forward) or non-cumulative (resets annually)
+
+Get these three right and the math is straightforward. Get them wrong (or misread the lease language) and you either overpay or miscalculate your dispute position.
+
+## Non-Cumulative CAM Cap: Step-by-Step Calculation
+
+Non-cumulative caps reset each year. There's no banking, no carryforward, no catch-up.
+
+### The Formula
+
+```
+Cap Limit (Year N) = Prior Year Actual Controllable × (1 + Cap %)
+```
+
+### Worked Example: 5% Non-Cumulative Cap
+
+**Lease terms:**
+- Cap: 5% on controllable expenses
+- Controllable = all expenses except real estate taxes, insurance, utilities
+- Prior year actual controllable expenses: $140,000
+
+**Current year:**
+- Landlord's actual controllable expenses: $158,000
+- Cap limit: $140,000 × 1.05 = $147,000
+- Tenant pays: $147,000 (cap applies, saves $11,000)
+
+**Next year:**
+- Cap applies to the prior year ACTUAL ($140,000), not the prior year capped amount ($147,000)
+- Wait: check your lease. Does the cap compound from actual or from the capped amount?
+
+This is a critical question. If the cap applies to prior year actual:
+- Year 2 cap limit: $140,000 × 1.05 × 1.05 = $154,350
+
+If the cap applies to what you actually paid (the prior year capped amount):
+- Year 2 cap limit: $147,000 × 1.05 = $154,350
+
+In this example they produce the same result because year 1's capped amount equals year 1 actual multiplied by 1.05. But if year 1's cap wasn't triggered (actual increase was less than 5%), the prior year actual basis and the prior year billed basis can diverge.
+
+**The tenant-favorable reading:** Cap applies to the lesser of prior year actual or prior year capped. This ensures you're never paying more than the cap intended.
+
+### Multi-Year Non-Cumulative Cap Table
+
+Starting from $140,000 controllable in year 1, 5% cap, two actual growth scenarios:
+
+| Year | Actual Expenses (8% growth) | Actual Expenses (3% growth) | Cap Limit | Tenant Pays (8%) | Tenant Pays (3%) |
+|---|---|---|---|---|---|
+| 1 | $140,000 | $140,000 | Base year | $140,000 | $140,000 |
+| 2 | $151,200 | $144,200 | $147,000 | $147,000 | $144,200 |
+| 3 | $163,296 | $148,526 | $154,350 | $154,350 | $148,526 |
+| 4 | $176,360 | $152,982 | $162,068 | $162,068 | $152,982 |
+| 5 | $190,469 | $157,571 | $170,171 | $170,171 | $157,571 |
+
+In the 8% growth scenario, the cap saves the tenant $20,298 in year 5 alone. Cumulative savings over years 2 through 5: approximately $47,700 at the property level.
+
+In the 3% growth scenario, the cap is never triggered. Expenses grow below the cap. No savings, but also no cap-related disputes.
+
+Use the [CAM cap calculator](/tools/cam-cap-calculator) to run this for your specific numbers.
+
+## Cumulative CAM Cap: Step-by-Step Calculation
+
+The cumulative cap has the same annual formula but adds a carryforward mechanism. Unused cap capacity in low-increase years becomes available in high-increase years.
+
+### The Formula
+
+```
+Available Cap (Year N) = Base Cap % + Unused Cap from Prior Years
+Permitted Increase = min(Actual Increase, Available Cap)
+Carryforward to Year N+1 = Available Cap - Permitted Increase
+```
+
+### Worked Example: 5% Cumulative Cap
+
+**Starting controllable expenses:** $140,000
+**Cap:** 5% cumulative
+
+| Year | Actual Expenses | Actual Increase % | Available Cap | Permitted Increase | Tenant Pays | Carryforward |
+|---|---|---|---|---|---|---|
+| 1 | $140,000 | Base | - | - | $140,000 | 0% |
+| 2 | $143,500 | 2.5% | 5.0% | 2.5% | $143,500 | 2.5% |
+| 3 | $146,370 | 2.0% | 7.5% | 2.0% | $146,370 | 5.5% |
+| 4 | $150,741 | 3.0% | 10.5% | 3.0% | $150,741 | 7.5% |
+| 5 | $163,301 | 8.3% | 12.5% | 8.3% | $163,301 | 4.2% |
+| 6 | $179,631 | 10.0% | 9.2% | 9.2% | $178,325 | 0% |
+
+Note what happened: in years 2–4, expenses grew below the 5% cap. The unused cap (2.5% + 3% + 2%) banked to 7.5%. In year 5 the landlord deployed banked capacity, permitting an 8.3% increase. In year 6, actual expenses rose 10.0% but the available cap was only 9.2%, so the cap was triggered. Tenant pays $163,301 × 1.092 = $178,325 rather than the full actual $179,631. The cumulative bank is exhausted at 0%.
+
+Under a non-cumulative cap in year 5, the tenant would pay:
+```
+$150,741 × 1.05 = $158,278
+```
+
+Under the cumulative cap, the tenant pays $163,301 - $5,023 more in a single year, just because of the cumulative carryforward.
+
+### Why Cumulative Caps Are Landlord-Favorable
+
+The banking mechanism means that in a building where expenses are volatile, the cumulative cap provides almost no protection in high-increase years. Landlords with deliberately low expense bases in early lease years (perhaps deferring maintenance) can build up significant carryforward capacity for later years.
+
+Always negotiate for non-cumulative caps. See [cumulative vs. non-cumulative CAM caps](/resources/cumulative-vs-non-cumulative-cam-caps) for a deeper treatment.
+
+## Base Year Cap Structures
+
+Some leases use a base year structure instead of prior-year-actual compounding. The math works differently:
+
+```
+Cap Limit (Year N) = Base Year Controllable × (1 + Cap %)^(N - Base Year)
+```
+
+**Example:** Base year controllable = $130,000, cap = 5%, 5 years from base year:
+```
+Cap Limit = $130,000 × (1.05)^5 = $130,000 × 1.27628 = $165,917
+```
+
+Base year structures create a fixed growth curve. If actual expenses track above this curve, you benefit. If actual expenses are below the curve (as happens in the early years of a new building), the landlord may never trigger the cap.
+
+**Base year traps:**
+- Base year in the first year of building operation (often artificially low; building not yet fully occupied or operational)
+- Base year with deferred maintenance (unusually low expenses that will normalize later)
+- Base year normalized to a different occupancy level than current occupancy
+
+To protect against these, negotiate that the base year is grossed up to 95% occupancy if the building was less than 95% occupied during the base year.
+
+## Identifying Your Controllable vs. Non-Controllable Split
+
+Before you apply the cap calculation, you need to know which expenses are controllable. Pull your reconciliation and categorize:
+
+| Expense Category | Typically Controllable? | Notes |
+|---|---|---|
+| Janitorial and cleaning | Yes | |
+| Landscaping | Yes | Some leases treat snow removal as non-controllable |
+| Security | Yes | |
+| Building maintenance and repairs | Yes | |
+| Management fee | Depends | Check whether lease includes or excludes from cap |
+| Property accounting | Depends | |
+| Real estate taxes | No | |
+| Insurance premiums | No | |
+| Utilities | No | |
+| Snow and ice removal | Sometimes | Weather-dependent; check your lease |
+
+For guidance on this distinction, see [controllable vs. non-controllable expenses](/resources/controllable-vs-non-controllable-expenses).
+
+## Verifying Cap Compliance on Your Reconciliation
+
+When you receive a CAM reconciliation, verify cap compliance in four steps:
+
+**Step 1:** Separate the reconciliation into controllable and non-controllable expenses. Total each.
+
+**Step 2:** Pull prior year's reconciliation. Total prior year controllable expenses.
+
+**Step 3:** Calculate the cap limit:
+```
+Cap limit = Prior year controllable × (1 + cap %)
+```
+
+If cumulative: add any banked carryforward first.
+
+**Step 4:** Compare:
+- If current year controllable ≤ cap limit → cap not triggered, no adjustment
+- If current year controllable > cap limit → you should be billed only the cap limit
+
+**Step 5:** Check the landlord's reconciliation. Did they actually apply the cap? Some landlords don't apply the cap unless the tenant asks. This is an error. The cap is automatic once triggered.
+
+**Common landlord cap application errors:**
+- Applied the cap to total expenses rather than just controllable
+- Used the prior year capped amount as the base (fine in most cases, but check your lease)
+- Used a different occupancy adjustment in the gross-up that interacts with the cap (complex; see [CAM gross-up calculation guide](/resources/cam-gross-up-calculation-guide))
+- Forgot to apply the cap entirely
+
+## Negotiating Better Cap Terms
+
+**Best terms for tenants:**
+- 3% annual cap, non-cumulative
+- Prior-year actual as the base (not base year)
+- Controllable defined narrowly (only taxes, insurance, utilities excluded)
+- Management fee included in controllable
+- No management fee carve-out or administrative charge exemption
+
+**Getting from a landlord's form to tenant-favorable terms:**
+
+Landlords typically start with 5% cumulative or no cap at all. The negotiation path:
+
+1. Get non-cumulative as a first priority (bigger dollar impact than moving from 5% to 3%)
+2. Negotiate management fee into the controllable definition
+3. Reduce the cap percentage if bargaining power allows (from 5% to 3%)
+4. Narrow the non-controllable definition (make snow removal controllable, exclude only taxes, insurance, utilities)
+
+For context on how caps interact with the exclusion list, see [CAM exclusions negotiation guide](/resources/cam-exclusions-negotiation-guide). For a practical example of how caps protect tenants over a full lease term, see [CAM charges cap limits explained](/resources/cam-charges-cap-limits-explained).
+
+For verifying cap compliance as part of a full lease audit, use the [tenant lease audit checklist](/resources/tenant-lease-audit-checklist) and the [commercial lease expense audit guide](/resources/commercial-lease-expense-audit-guide).
+
+If you're modeling whether a formal audit is worth the investment, the [CAM billing error estimator](/tools/cam-billing-error-estimator) incorporates cap-related recovery estimates into the overall exposure calculation.
+
+## Sources
+
+1. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)

@@ -1,0 +1,119 @@
+---
+title: "Why Did My Tenant's Pro-Rata Share Change?"
+description: "When the CAM denominator shifts (RSF re-measurement, anchor vacancy, BOMA 2024 adoption), every tenant's pro-rata share moves. Here is how to explain it and document it."
+datePublished: "2026-02-27"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+buttonText: "Understand the Shift"
+order: 13
+faq:
+  - q: "What causes a tenant's pro-rata share to change?"
+    a: "Five things move the denominator: (1) building re-measurement under a new BOMA standard, (2) an anchor tenant vacating or arriving that changes the occupied/total RSF ratio, (3) a tenant starting or stopping self-maintenance exclusions, (4) kiosk or storage space added or removed from the rentable pool, and (5) common area reclassification. Any of these changes the total rentable SF denominator, which recalculates every tenant's share."
+  - q: "How much can a pro-rata share change from a denominator shift?"
+    a: "On a typical 150,000 RSF building, a 5,000 SF re-measurement moves every tenant's share by roughly 3.3%. For a tenant paying $50,000 in annual CAM, that's a $1,650 increase with no change in actual expenses. Anchor departures can produce 10-20% share swings for remaining tenants."
+  - q: "Do I need to notify tenants when the denominator changes?"
+    a: "Most commercial leases require the landlord to provide CAM reconciliation statements showing the calculation methodology. When the denominator shifts, tenants will see the share change on their next statement. Proactive disclosure with a denominator change report prevents disputes and builds trust."
+  - q: "Can a tenant dispute a pro-rata share change?"
+    a: "Yes. Tenants can challenge the underlying measurement or classification change. The most common disputes arise from BOMA standard transitions where the tenant's lease specifies the prior standard, anchor departure scenarios where tenants argue the vacant space should still be included in the denominator, and self-maintenance exclusions that the tenant believes were applied incorrectly."
+  - q: "How does CapVeri document denominator changes?"
+    a: "CapVeri automatically compares finalized reconciliation snapshots between periods. When the total RSF, lease roster, or exclusion configuration changes, it generates a Denominator Change Audit Report showing exactly what changed, the prior and current values, and the per-tenant impact on pro-rata shares and estimated recovery amounts. The report is available in-app and as a downloadable PDF."
+---
+
+When a tenant's CAM bill jumps from $50,000 to $58,000 and their lease terms haven't changed, the first question is always the same: "Why did my share go up?" The answer is almost never that expenses increased. It's that the denominator moved.
+
+## What Is the Denominator?
+
+In CAM reconciliation, each tenant's share is calculated as:
+
+**Tenant's RSF / Total Rentable SF = Pro-Rata Share**
+
+The "Total Rentable SF" is the denominator. When it changes, every tenant's share recalculates, even if their own space and the total expense pool stay exactly the same.
+
+## Five Triggers That Shift the Denominator
+
+### 1. RSF Re-measurement
+
+A building re-measured under BOMA 2024 typically gains 2-5% in total RSF. Outdoor amenities, rooftop terraces, and single-tenant equipment shafts that were previously excluded now count. That larger denominator dilutes every existing tenant's share slightly, but the total recovered CAM stays the same, so remaining tenants pay proportionally less per SF.
+
+### 2. Anchor Tenant Departure
+
+When an anchor tenant occupying 30% of the building vacates, the remaining tenants' shares increase proportionally. A tenant who was at 10% of occupied space might jump to 14.3% overnight. This is the single largest source of tenant payment disputes.
+
+### 3. Self-Maintenance Conversions
+
+When a tenant starts self-maintaining their HVAC or janitorial, their space may be excluded from certain expense pools. The denominator for those pools shrinks, concentrating costs on the remaining tenants.
+
+### 4. Kiosk or Storage Changes
+
+Adding kiosk space to the rentable pool or reclassifying storage areas changes the denominator. These are small individually but compound across multiple changes.
+
+### 5. Common Area Reclassification
+
+When common areas are converted to rentable space (or vice versa), the denominator shifts. This often happens during renovations or when temporary structures become permanent.
+
+## The Communication Problem
+
+Denominator changes are a communication problem, not a math problem. The math is straightforward: new RSF divided by old RSF gives you the impact factor. The problem is that tenants receive a bill with a different share percentage and no explanation of why.
+
+Without documentation, the conversation goes like this:
+
+> **Tenant**: "My share went from 10% to 12%. That's a 20% increase in my CAM bill."
+>
+> **Property manager**: "The building was re-measured."
+>
+> **Tenant**: "Show me the documentation."
+
+If the documentation doesn't exist, the tenant halts payment. If it does exist but wasn't provided proactively, the tenant feels misled.
+
+## How to Document Denominator Changes
+
+A proper denominator change audit trail includes:
+
+1. **What changed**: The specific trigger (re-measurement, tenant departure, exclusion change)
+2. **Prior vs. current values**: Total RSF before and after, with the delta
+3. **Per-tenant impact**: Each tenant's prior share, new share, and the dollar impact
+4. **Timeline**: When the change took effect and which reconciliation periods are affected
+5. **Supporting evidence**: The measurement certificate, lease termination, or BOMA classification document
+
+## What to Tell Tenants
+
+The explanation should be direct. Tenants do not need a theory lesson; they need to know what changed, why it changed, and how it affected their bill.
+
+Use this structure:
+
+1. State the trigger: "The building rentable square footage changed because the property was re-measured under BOMA 2024."
+2. Show the old and new denominator: "Total rentable SF changed from 150,000 to 154,200."
+3. Show the tenant impact: "Your pro-rata share changed from 10.00% to 9.73%."
+4. Tie it to dollars: "On the final recoverable pool, that changed your annual CAM charge by $1,350."
+5. Attach support: include the measurement report, lease event, or exclusion schedule.
+
+Avoid phrases such as "system update" or "annual adjustment" when the real issue is a denominator change. Vague language invites audit requests because the tenant has to ask for the underlying calculation.
+
+## Controls by Trigger
+
+Different denominator changes require different support:
+
+- **BOMA re-measurement:** keep the measurement certificate, standard used, effective date, and prior measurement basis.
+- **Anchor vacancy:** keep the lease expiration or termination record and confirm whether the lease requires vacant anchor space to remain in the denominator.
+- **Self-maintenance exclusion:** keep the tenant notice, service boundary, affected expense pools, and the date the exclusion starts.
+- **Storage or kiosk change:** keep the amendment, floor plan, and billing start date.
+- **Common area conversion:** keep the project approval, updated area schedule, and lease clause allowing the reclassification.
+
+The highest-risk scenario is mixing triggers in one year. For example, a BOMA re-measurement plus an anchor vacancy can make a tenant's percentage appear to move twice. In that case, separate the report into two steps so the tenant can see each driver independently.
+
+## How CapVeri Automates This
+
+CapVeri compares finalized reconciliation snapshots between periods. When the denominator shifts, it automatically generates a report showing:
+
+- Every detected change (RSF re-measurement, tenant added/removed, exclusion changes, BOMA standard transitions)
+- The prior and current denominator values with percentage change
+- Per-tenant pro-rata share impact with dollar amounts
+- A downloadable PDF for tenant communication or audit defense
+
+The report is available as an in-app panel alongside the reconciliation grid and as a standalone PDF export. No manual spreadsheet comparison required.
+
+## Sources
+
+1. BOMA 2024 Office Standard (ANSI/BOMA Z65.1-2024) - [BOMA](https://boma.org/boma-standards/)
+2. [BOMA International - BOMA Standards](https://boma.org/boma-standards/)
+3. [CapVeri Sources & Research - BOMA 2024 methodology](/sources#boma-2024)

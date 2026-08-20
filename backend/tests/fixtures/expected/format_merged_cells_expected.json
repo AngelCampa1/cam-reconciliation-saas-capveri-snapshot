@@ -1,0 +1,12 @@
+{
+  "error_type": "format",
+  "description": "CSV simulating merged cells (blank values that should inherit from above)",
+  "parseable": true,
+  "expected_behavior": "Parser should use forward-fill to populate merged cell values",
+  "expected_warnings": [
+    "Merged cells detected in column 'Property', applying forward-fill"
+  ],
+  "expected_rows": 5,
+  "valid_rows": 5,
+  "invalid_rows": 0
+}

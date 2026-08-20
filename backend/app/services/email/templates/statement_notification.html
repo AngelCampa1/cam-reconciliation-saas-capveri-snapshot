@@ -1,0 +1,30 @@
+{% extends "_base.html" %}
+{% from "_components.html" import button, data_card_row with context %}
+{% block content %}
+<h2 style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 22px; margin: 0 0 {{ t.SPACE_MD }};">
+  New CAM statement for {{ property_name }}
+</h2>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  Hello {{ tenant_name }},
+</p>
+<p style="color: {{ t.TEXT_PRIMARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 15px; line-height: 1.6; margin: 0 0 {{ t.SPACE_MD }};">
+  A new statement is posted. Here's what it covers:
+</p>
+<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="
+  background-color: {{ t.SURFACE }};
+  border: 1px solid {{ t.BORDER }};
+  border-radius: {{ t.RADIUS_MD }};
+  margin-bottom: {{ t.SPACE_LG }};">
+  {{ data_card_row("Property", property_name) }}
+  {{ data_card_row("Period", period) }}
+  {{ data_card_row("Your Share", amount, last=True) }}
+</table>
+{{ button(portal_url, "View Statement") }}
+<p style="color: {{ t.TEXT_SECONDARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 12px; margin: 0;">
+  If you have questions about this statement, you can submit a dispute
+  through the tenant portal.
+</p>
+<p style="color: {{ t.TEXT_SECONDARY }}; font-family: {{ t.FONT_FAMILY }}; font-size: 11px; margin: {{ t.SPACE_MD }} 0 0;">
+  We calculated this amount for you. Please check it against your lease. Ask your property manager if something looks off.
+</p>
+{% endblock %}

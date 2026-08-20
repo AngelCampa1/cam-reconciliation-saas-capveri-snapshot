@@ -1,0 +1,194 @@
+---
+title: "Cap Rate and NOI Relationship in CRE: A Due Diligence Guide"
+description: "How CAM under-recovery suppresses NOI and distorts cap rate in commercial real estate. A due diligence guide for CRE investors showing the math behind valuation gaps."
+excerpt: "A 200 basis point cap rate compression story gets written every quarter. The NOI story gets less attention. CAM under-recovery systematically understates the numerator, and fixing it is in your control."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "cre-finops"
+faq:
+  - q: "What is the relationship between cap rate and NOI in real estate?"
+    a: "Cap rate and NOI have a direct mathematical relationship: Property Value = NOI / Cap Rate. This means NOI and property value move in the same direction (higher NOI = higher value at a given cap rate), while cap rate and property value move inversely (lower cap rate = higher value at the same NOI). A $1,000,000 NOI property at a 7.0% cap is worth $14.29M; at 6.5% it's worth $15.38M. This is why market cap rate compression gets so much attention. 50 basis points at $1M NOI = $1.1M in value. The NOI side of the equation is equally powerful and more controllable: improving NOI by $70,000 at a 7.0% cap creates the same $1M in value as the 50 bps compression."
+  - q: "How does CAM under-recovery distort cap rate calculations?"
+    a: "When a property's NOI is understated due to under-recovery of CAM expenses, the implied cap rate looks lower than reality. Example: A property advertised at $15.5M with $1.085M NOI appears to trade at a 7.0% cap rate. If due diligence reveals $120,000/year in recoverable but unbilled CAM, true NOI is $1.205M. That makes the asset worth $17.2M at 7.0%, meaning the buyer is actually getting it at a 7.78% cap (good deal) or the seller's $15.5M price represents a 7.78% cap on understated NOI. CAM under-recovery can shift effective cap rates by 50-100+ basis points depending on the magnitude of the billing gap. Always audit CAM recovery ratios during due diligence before accepting a seller's stated cap rate."
+  - q: "How do I calculate property value from NOI and cap rate?"
+    a: "Property Value = NOI / Cap Rate. This is the income approach to valuation. Steps: (1) Confirm NOI is calculated correctly, including all recovery revenue at the appropriate ratio. (2) Research market cap rates for comparable properties in the same submarket. Sources include broker surveys, CBRE/JLL market reports, and transaction comps. (3) Divide. For a 120,000 sf retail center with $1.8M in verified NOI and market cap rates of 6.75%: Value = $1,800,000 / 0.0675 = $26.67M. The most common error is accepting seller-stated NOI without auditing CAM recovery accuracy. A 10% gap in recovery ratio on a $600,000 CAM pool is $60,000 in NOI, worth $889,000 at 6.75% cap."
+  - q: "What makes CRE cap rates move in 2026?"
+    a: "Cap rates in 2026 are being shaped by several forces: elevated interest rates maintaining a spread discipline (cap rates can't compress too far below lending rates), property type divergence (industrial and logistics remain compressed at 4.5-5.5%; suburban office is still wide at 7.5-9%), retail bifurcation (grocery-anchored community centers trade at 6-7%, unanchored strip is 7.5-9%), and risk repricing around tenant credit following several mid-market retailer bankruptcies. The NOI side is being pressured by rapid CAM expense inflation: insurance up 15-25% in coastal markets, property taxes up in reassessment years. Recovery ratio discipline has become more important because the CAM pool is growing faster than tenants expect, creating both cap exposure and billing disputes."
+  - q: "Can fixing CAM reconciliation change a property's cap rate?"
+    a: "No. Cap rates are market-determined and reflect supply/demand dynamics, interest rate spreads, and risk perceptions. Fixing CAM reconciliation changes NOI, not the cap rate. But because Value = NOI / Cap Rate, a higher NOI at the same cap rate produces higher value. On a property with $400,000 in CAM expenses and a 10% under-recovery rate, fixing billing adds $40,000/year to NOI. At a 7.0% market cap: that's $571,000 in additional property value. The cap rate stays at 7.0%. The value increases because the numerator improved. This is the core ROI case for CAM reconciliation software. Every dollar of recoverable billing that's currently being missed is worth 14x in property value at a 7% cap rate."
+---
+
+At a 7% cap rate, one dollar of annual NOI equals $14.29 in property value. Every year you under-bill CAM recoveries, you leave that multiplier on the table. The cost compounds.
+
+The **cap rate and NOI relationship** is the most fundamental equation in CRE investing: Value = NOI / Cap Rate. Investors spend enormous energy tracking cap rate movements. For operators, the NOI side is where real value gets built or destroyed. CAM under-recovery is one of the most systematic ways NOI gets suppressed.
+
+## The Math: Why Every NOI Dollar Multiplies
+
+**Value = NOI ÷ Cap Rate**
+
+A property generating $1,200,000 in NOI:
+
+| Cap Rate | Implied Value |
+|---|---|
+| 5.5% | $21,818,182 |
+| 6.0% | $20,000,000 |
+| 6.5% | $18,461,538 |
+| 7.0% | $17,142,857 |
+| 7.5% | $16,000,000 |
+| 8.0% | $15,000,000 |
+
+A 100 bps cap rate move from 7.0% to 6.0% adds $2.86M in value. That's the compression story everyone talks about.
+
+Now the NOI story: that same property improves its CAM recovery ratio from 84% to 95% on a $600,000 expense pool. Additional NOI: $66,000/year. At the 7.0% cap rate:
+
+**Value gain = $66,000 ÷ 7.0% = $942,857**
+
+Nearly $1 million in value from correcting billing discipline. No refinancing, no renovation, no lease restructuring. Just recovering what the leases already entitle you to.
+
+## How CAM Under-Recovery Distorts Cap Rate Analysis
+
+This is where due diligence can miss a significant value disconnect.
+
+**Scenario:** You're evaluating a 95,000 sf retail center offered at $16.5M.
+
+Seller's financials:
+- NOI: $1,155,000
+- Implied cap rate: $1,155,000 ÷ $16,500,000 = **7.0%**
+
+Your CAM audit during due diligence finds:
+
+1. CAM pool: $620,000/year incurred
+2. CAM billed: $496,000 (80.0% recovery ratio)
+3. Lease-theoretical maximum (after caps): 93.5%
+4. Gap: 13.5 percentage points = $83,700/year in recoverable but unbilled CAM
+
+Two interpretations:
+
+**If you can correct billing to 93.5%:**
+True NOI = $1,155,000 + $83,700 = $1,238,700
+At $16.5M price: **effective cap rate = 7.51%** (51 bps better than stated)
+At seller's 7.0% cap: **true value = $17.69M** ($1.19M above asking price)
+
+**If billing correction is impossible (lease errors, missing records):**
+As-is NOI stays at $1,155,000, but now you know 13.5% of the potential recovery is lost, likely permanently. The property is correctly priced at 7.0% cap on impaired operations.
+
+The difference between these two interpretations is whether the under-recovery is a billing discipline problem (fixable) or a structural lease problem (permanent). That's what the [recovery-ratio-analysis](/resources/recovery-ratio-analysis) framework determines.
+
+## Three Due Diligence Scenarios
+
+### Scenario A: Billing Error (Correctable Value Gap)
+
+A 180,000 sf power center with $940,000 CAM pool, reporting 78% recovery.
+
+Analysis: Lease review shows theoretical max 91% (anchor exclusions cap the upside). Current 78% vs. 91% theoretical = 13% gap = $122,200/year.
+
+Root cause found: Property manager was using outdated pro-rata denominators that hadn't been updated after a major tenant left in 2023. All remaining tenants are being undercharged by 8-9%.
+
+Fix: Update denominators, re-bill the 2025 reconciliation period. Some tenants may dispute the size of the true-up. Budget for 60% collection of the correction.
+
+Expected corrected NOI gain: $73,320/year (60% × $122,200)
+
+At 7.25% cap: **$1.01M in value recovery** from a denominator update.
+
+The [cam-reconciliation-errors](/blog/cam-reconciliation-errors) post covers this and 11 other common errors. The [pro-rata-share-calculation](/resources/pro-rata-share-calculation) guide explains how denominator errors compound over time.
+
+### Scenario B: Overbilling Liability (Negative Value Adjustment)
+
+A retail strip where the seller reports $1.1M NOI on $420,000 CAM pool at 98% recovery.
+
+That 98% looks strong, but it's a red flag. Theoretical maximum given the anchor's exclusions should be around 91%. 98% > 91% means either the seller is billing items the leases don't allow, or the denominator is wrong in a way that overbills tenants.
+
+Lease audit finds: seller has been including $65,000/year in property management overhead as CAM, a category explicitly excluded in 4 of the 6 leases. Two leases are ambiguous.
+
+Liability: 3-year look-back × $65,000 × 67% (the 4 clear leases, allocating proportionally) = $130,650 in refund exposure.
+
+Corrected NOI: Remove the improper $65,000 recovery → NOI drops to $1,035,000.
+
+At 7.0% cap: value drops from $15.71M to $14.79M ($920K off the price), plus the $130,650 liability. Total value adjustment: ~$1.05M.
+
+This is the [cam-overbilling-liability](/blog/cam-overbilling-liability) scenario: high apparent recovery that masks billing errors creating legal exposure. Recovery ratio above theoretical maximum is a due diligence trigger.
+
+### Scenario C: Structural Cap Binding (Permanent NOI Gap)
+
+A 75,000 sf center where 60% of tenants (by sf) have binding CAM caps from 2018-2020 leases with 3% annual limits.
+
+Analysis: By 2026, those caps have compounded to $4.87/sf maximum. Actual CAM costs run $7.90/sf. Gap: $3.03/sf on 45,000 sf = $136,350/year permanently un-recoverable from capped tenants.
+
+This isn't fixable without lease renegotiation. It's a structural NOI cost embedded in the lease vintage.
+
+At 7.0% cap: $136,350 gap = **$1.95M in permanent value discount** vs. an equivalent property without binding caps.
+
+The [cam-cap-types](/resources/cam-cap-types) guide shows how to model cap binding timelines: which leases hit their ceiling when, and how the cumulative effect grows. The [cam-cap-calculator](/tools/cam-cap-calculator) automates this for portfolio analysis.
+
+## Building the Cap Rate/NOI Matrix for Underwriting
+
+Use a sensitivity table to show value across NOI scenarios and cap rate scenarios simultaneously:
+
+**Value Matrix - Retail Center ($ millions)**
+
+| NOI → | $1.0M | $1.1M | $1.2M | $1.3M |
+|---|---|---|---|---|
+| **6.0% cap** | $16.67 | $18.33 | $20.00 | $21.67 |
+| **6.5% cap** | $15.38 | $16.92 | $18.46 | $20.00 |
+| **7.0% cap** | $14.29 | $15.71 | $17.14 | $18.57 |
+| **7.5% cap** | $13.33 | $14.67 | $16.00 | $17.33 |
+| **8.0% cap** | $12.50 | $13.75 | $15.00 | $16.25 |
+
+The $1.0M NOI is "as-is with current billing errors." The $1.2M NOI is "corrected billing at market cap recovery rates." The horizontal movement from $1.0M to $1.2M at any given cap rate shows the NOI correction value. The vertical movement at a given NOI shows cap rate sensitivity.
+
+For a property where the NOI correction is achievable and the exit cap rate could compress, you're stacking two value drivers. That's the underwriting thesis for buying below-par management properties and improving CRE FinOps discipline.
+
+## How Cap Rate Affects the ROI of CAM Recovery Improvements
+
+The lower the cap rate, the more each dollar of NOI improvement is worth:
+
+| Cap Rate | Value per $1 of Annual NOI |
+|---|---|
+| 5.0% | $20.00 |
+| 5.5% | $18.18 |
+| 6.0% | $16.67 |
+| 6.5% | $15.38 |
+| 7.0% | $14.29 |
+| 7.5% | $13.33 |
+| 8.0% | $12.50 |
+| 9.0% | $11.11 |
+
+In core markets at 5.5% cap rates (grocery-anchored, infill), every dollar of recoverable CAM you start billing is worth $18.18 in property value. That's before you've improved operations at all. You've only corrected the billing.
+
+This is the case for investing in CAM reconciliation technology. If software and process improvements cost $15,000/year and recover $45,000/year in previously unbilled CAM, at a 6.5% cap rate the NOI improvement is worth $692,000 in asset value on an ongoing basis. The payback period is measured in months, not years.
+
+The [noi-formula-calculation-guide](/resources/noi-formula-calculation-guide) shows how to build this calculation into your annual NOI model. The [NOI impact calculator](/tools/noi-impact-calculator) runs the sensitivity automatically. Input recovery ratio improvement targets and see value impact by cap rate.
+
+## Cap Rate Movements Don't Cancel NOI Improvements
+
+One misunderstanding: "If cap rates rise, NOI improvements matter less." That's backward.
+
+Rising cap rates mean: (1) the absolute value per dollar of NOI decreases, and (2) the price you paid for the asset may be above current market value. Both are real concerns.
+
+But the relative importance of NOI management increases in rising cap rate environments. Why? Because cap rate compression isn't available as a value-creation lever when rates are rising. The only paths to value maintenance or growth are: NOI improvement, lease mark-to-market, or operational expense reduction. CAM recovery improvement is the fastest of these to implement with no cap-ex.
+
+In a 7.5-8.0% cap rate environment, every dollar of NOI improvement still creates $12.50-$13.33 in value. That's not "less valuable" in absolute terms. It's still real money. And in a high-rate environment where buyers are scrutinizing NOI quality aggressively, clean, defensible CAM recovery ratios matter more, not less, for transaction execution.
+
+## The FASB ASC 842 Angle
+
+FASB ASC 842 requires most operating leases onto the balance sheet. That requirement has made tenants far more sophisticated about CAM charges. They're running their own analysis of what they owe and what they've been billed. Any billing irregularity is more likely to generate a formal dispute today than it was five years ago.
+
+For landlords, this means: the era of letting CAM bills go out loosely and getting away with it is over. Tenants have lease administration software tracking every charge. Under-recovery remains a landlord problem; overbilling is increasingly a legal exposure. The [fasb-asc-842-cam-impact](/blog/fasb-asc-842-cam-impact) post covers the operational implications in detail.
+
+The net effect on cap rate/NOI analysis: NOI quality (the defensibility and accuracy of recovery revenue) is a component of how buyers assess risk and price assets. Two properties with identical reported NOI but one with clean CAM processes and one with a history of disputes will price differently at transaction.
+
+## What This Means for Operators
+
+1. **Model recovery ratio explicitly** in every NOI statement. Don't bury it in a single revenue line.
+2. **Know your lease-theoretical maximum** and the gap to actual. That gap is the value at stake.
+3. **Audit before selling.** Pre-sale CAM reconciliation catches billing errors you'd rather fix than negotiate away.
+4. **Audit before buying.** Post-close CAM adjustments affect returns and create complexity.
+
+For the full NOI model structure, see [noi-real-estate-formula](/resources/noi-real-estate-formula). For property valuation mechanics from NOI, see [noi-to-value-commercial-property](/resources/noi-to-value-commercial-property). And for benchmarking your recovery ratios against market, see [cam-benchmarks-portfolio-comparison](/blog/cam-benchmarks-portfolio-comparison).
+
+## Sources
+
+1. [IREM - Operating expense benchmark resources](https://www.irem.org/)
+2. [Partners Real Estate - Houston Office Q4 2025](https://partnersrealestate.com/research/houston-office-q4-2025-quarterly-market-report/)

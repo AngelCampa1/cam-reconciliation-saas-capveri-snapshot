@@ -1,0 +1,130 @@
+---
+title: "Documenting Lease Exclusions: The Matrix That Saves Your Reconciliation"
+description: "Every tenant's lease excludes different expenses from CAM. Without a systematic exclusion matrix, controllers either over-bill (audit risk) or under-bill (lost recovery). Here's how to build one."
+excerpt: "In a 15-tenant building, you might have 15 different exclusion lists. Tenant A excludes CapEx over $10,000. Tenant B excludes all CapEx. Tenant C has no CapEx exclusion. Miss one and you're writing a refund check."
+datePublished: "2026-03-17"
+dateModified: "2026-03-17"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "What are lease exclusions in CAM billing?"
+    a: "Lease exclusions are specific expense categories that a tenant's lease removes from their share of operating expenses. Common exclusions include capital expenditures (or CapEx above a threshold), leasing commissions, executive compensation, depreciation, ground rent, debt service, and above-standard tenant services. Each tenant's exclusion list is unique to their lease."
+  - q: "How do I track different exclusions for different tenants in the same building?"
+    a: "Build an exclusion matrix: a spreadsheet or table that lists every expense category on one axis and every tenant on the other. Each cell indicates whether that expense is recoverable from that specific tenant. Update the matrix when leases are signed, renewed, or amended. Use it as the reference during reconciliation to ensure each tenant is only billed for expenses their lease allows."
+---
+
+## The Problem
+
+A commercial office building with 12 tenants has 12 different leases. Each lease was negotiated at a different time, by a different broker, with different counsel. The operating expense provisions reflect those different negotiations.
+
+Tenant A's lease, signed in 2018, excludes "capital expenditures in excess of $15,000 per item." Tenant B's lease, signed in 2021, excludes "all capital expenditures as defined under GAAP." Tenant C's lease, signed in 2023, has no CapEx exclusion at all.
+
+The building incurs a $22,000 elevator modernization expense. Is it recoverable?
+
+- From Tenant A: No (exceeds $15,000 threshold)
+- From Tenant B: No (capital expenditure under GAAP)
+- From Tenant C: Yes (no exclusion)
+
+Now multiply this by 15-20 common exclusion categories across 12 tenants. That's 180-240 individual determinations, each of which must be correct on every reconciliation statement.
+
+Most controllers handle this from memory, or by re-reading the lease during reconciliation. Both approaches produce errors.
+
+## Building the Exclusion Matrix
+
+### Step 1: Identify Common Exclusion Categories
+
+Start with the categories that appear most frequently in commercial leases:
+
+| # | Exclusion Category | Frequency in Leases |
+|---|---|---|
+| 1 | Capital expenditures (various thresholds) | 85% |
+| 2 | Leasing commissions and costs | 75% |
+| 3 | Depreciation and amortization | 70% |
+| 4 | Mortgage interest / debt service | 65% |
+| 5 | Ground rent | 55% |
+| 6 | Executive / officer compensation | 50% |
+| 7 | Advertising and marketing | 45% |
+| 8 | Legal fees (landlord's disputes) | 40% |
+| 9 | Above-standard tenant services | 35% |
+| 10 | Artwork, sculptures, decorations | 30% |
+| 11 | Charitable contributions | 25% |
+| 12 | Bad debt / rent write-offs | 20% |
+| 13 | Fines and penalties | 20% |
+| 14 | Environmental remediation (pre-existing) | 15% |
+| 15 | Political contributions | 10% |
+
+### Step 2: Abstract Each Lease
+
+For each tenant, pull the operating expense exclusions from the lease and record them precisely. Don't paraphrase. Capture the exact language, because nuance matters.
+
+"Capital expenditures" means something different from "capital improvements." "Costs of a capital nature as determined under GAAP" is different from "expenditures that should be capitalized under the Internal Revenue Code."
+
+Record:
+- The exact exclusion language from the lease
+- The section and page number (for reference during disputes)
+- Any thresholds or conditions (e.g., "CapEx over $10,000" vs. "all CapEx")
+- Any exceptions to the exclusion (e.g., "excluding capital expenditures required by governmental regulations enacted after the lease date")
+
+### Step 3: Build the Matrix
+
+Create a table with tenants as columns and exclusion categories as rows:
+
+| Expense Category | Tenant A | Tenant B | Tenant C | Tenant D |
+|---|---|---|---|---|
+| CapEx > $15K | **Excluded** | - | - | - |
+| All CapEx (GAAP) | - | **Excluded** | - | - |
+| CapEx (no exclusion) | - | - | Recoverable | - |
+| CapEx > $25K | - | - | - | **Excluded** |
+| Leasing costs | **Excluded** | **Excluded** | - | **Excluded** |
+| Depreciation | **Excluded** | - | - | **Excluded** |
+| Executive comp | - | **Excluded** | - | - |
+| Above-standard services | **Excluded** | **Excluded** | **Excluded** | - |
+
+Each cell is either "Excluded," "Recoverable," or has a conditional note.
+
+### Step 4: Integrate Into Reconciliation Workflow
+
+During reconciliation, use the matrix to build tenant-specific expense pools:
+
+1. Start with the total building expense pool
+2. For each tenant, subtract the expenses that fall under their exclusion list
+3. Apply pro-rata share to the tenant's specific recoverable pool
+4. Apply cap, gross-up, and other lease-specific adjustments
+
+This means the total recoverable amount may differ by tenant. That's correct. It reflects the lease terms.
+
+## Maintaining the Matrix
+
+**Update triggers:**
+- New lease execution
+- Lease renewal (terms may change)
+- Lease amendment
+- Blend-and-extend
+- Assignment (new tenant inherits the lease, but verify)
+
+**Annual review:** Before starting reconciliation, review the matrix against the current rent roll. Confirm no leases have changed since the last update.
+
+**Version control:** Date each version of the matrix. Keep prior versions. If a tenant dispute arises, you need to show what exclusions were applied and when.
+
+## The Cost of Getting It Wrong
+
+**Under-excluding (over-billing):** Billing a tenant for an expense their lease excludes is a refund liability. If the tenant hires an auditor, the finding is easy to prove. The lease language is clear, and the expense is identifiable in the GL.
+
+Example: $22,000 elevator modernization billed to Tenant A (whose lease excludes CapEx > $15,000). Tenant A's share at 8% pro-rata: $1,760 refund. Multiply by three years of the same error: $5,280 plus interest.
+
+**Over-excluding (under-billing):** Not billing a tenant for an expense they should pay is lost revenue. There's no refund check. It is money the landlord absorbs unnecessarily.
+
+Example: $45,000 in janitorial costs not billed to Tenant D because the controller confused "above-standard cleaning" (excluded) with "standard janitorial service" (recoverable). Tenant D's share at 12%: $5,400 per year in lost recovery.
+
+## Related Resources
+
+- [Lease Exclusions in CAM Billing](/resources/lease-exclusions-cam-billing): Detailed exclusion category analysis
+- [Catch CapEx Before Tenants Do](/resources/catch-capex-before-tenants): CapEx classification methodology
+- [Operating Expense Audit Rights](/resources/operating-expense-audit-rights-landlord): When exclusion disputes escalate
+- [Top 15 CAM Billing Errors](/resources/top-15-cam-billing-errors): Exclusion errors rank #4
+
+## Sources
+
+1. [RIW - Audit rights and restrictions](https://www.riw.com/2024/09/four-strategies-to-understand-and-defend-against-poor-audit-rights-and-restrictions/)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

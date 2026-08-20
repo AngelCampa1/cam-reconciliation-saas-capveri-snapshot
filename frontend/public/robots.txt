@@ -1,0 +1,21 @@
+# CapVeri Robots.txt
+# https://www.capveri.com
+
+User-agent: *
+Allow: /
+
+# Disallow authenticated/app areas
+Disallow: /app/
+Disallow: /dashboard/
+Disallow: /settings/
+Disallow: /properties/
+Disallow: /reconciliations/
+Disallow: /admin/
+Disallow: /billing/
+Disallow: /organization/
+Disallow: /onboarding/
+Disallow: /tenant-portal/
+
+# Training-only crawler (not a search bot — blocks AI training w/o citation benefit)
+User-agent: CCBot
+Disallow: /

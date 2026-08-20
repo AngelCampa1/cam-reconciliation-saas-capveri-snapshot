@@ -1,0 +1,919 @@
+# NOTE: absolute local build paths on the author's machine were normalized below to <repo> and <site-packages> placeholders. Nothing else in this log was altered: no test names, counts, timings, or outcomes changed.
+bringing up nodes...
+bringing up nodes...
+
+........................................................................ [  0%]
+........................................................................ [  1%]
+........................................................................ [  2%]
+........................................................................ [  3%]
+........................................................................ [  4%]
+........................................................................ [  5%]
+........................................................................ [  6%]
+........................................................................ [  7%]
+........................................................................ [  8%]
+........................................................................ [  9%]
+........................................................................ [ 10%]
+........................................................................ [ 11%]
+........................................................................ [ 12%]
+........................................................................ [ 13%]
+........................................................................ [ 14%]
+........................................................................ [ 15%]
+........................................................................ [ 16%]
+........................................................................ [ 17%]
+........................................................................ [ 18%]
+........................................................................ [ 19%]
+........................................................................ [ 20%]
+........................................................................ [ 21%]
+.....................ssssssssssss....................................... [ 22%]
+........................................................................ [ 23%]
+........................................................................ [ 24%]
+........................................................................ [ 25%]
+........................................................................ [ 26%]
+........................................................................ [ 27%]
+........................................................................ [ 28%]
+........................................................................ [ 29%]
+........................................................................ [ 30%]
+........................................................................ [ 31%]
+........................................................................ [ 31%]
+........................................................................ [ 32%]
+........................................................................ [ 33%]
+........................................................................ [ 34%]
+........................................................................ [ 35%]
+........................................................................ [ 36%]
+........................................................................ [ 37%]
+........................................................................ [ 38%]
+........................................................................ [ 39%]
+........................................................................ [ 40%]
+........................................................................ [ 41%]
+........................................................................ [ 42%]
+........................................................................ [ 43%]
+........................................................................ [ 44%]
+........................................................................ [ 45%]
+........................................................................ [ 46%]
+........................................................................ [ 47%]
+........................................................................ [ 48%]
+........................................................................ [ 49%]
+........................................................................ [ 50%]
+........................................................................ [ 51%]
+........................................................................ [ 52%]
+........................................................................ [ 53%]
+........................................................................ [ 54%]
+........................................................................ [ 55%]
+........................................................................ [ 56%]
+........................................................................ [ 57%]
+........................................................................ [ 58%]
+.......................................s.sss.s.......................... [ 59%]
+........................................................................ [ 60%]
+........................................................................ [ 61%]
+........................................................................ [ 62%]
+........................................................................ [ 63%]
+........................................................................ [ 63%]
+........................................................................ [ 64%]
+........................................................................ [ 65%]
+........................................................................ [ 66%]
+........................................................................ [ 67%]
+........................................................................ [ 68%]
+........................................................................ [ 69%]
+........................................................................ [ 70%]
+........................................................................ [ 71%]
+........................................................................ [ 72%]
+........................................................................ [ 73%]
+........................................................................ [ 74%]
+........................................................................ [ 75%]
+........................................................................ [ 76%]
+........................................................................ [ 77%]
+........................................................................ [ 78%]
+........................................................................ [ 79%]
+........................................................................ [ 80%]
+........................................................................ [ 81%]
+........................................................................ [ 82%]
+........................................................................ [ 83%]
+........................................................................ [ 84%]
+........................................................................ [ 85%]
+........................................................................ [ 86%]
+........................................................................ [ 87%]
+........................................................................ [ 88%]
+........................................................................ [ 89%]
+........................................................................ [ 90%]
+........................................................................ [ 91%]
+........................................................................ [ 92%]
+..........ss............................................................ [ 93%]
+........................................................................ [ 94%]
+........................................................................ [ 94%]
+........................................................................ [ 95%]
+........................................................................ [ 96%]
+........................................................................ [ 97%]
+...........................s....s....................................... [ 98%]
+........................................................................ [ 99%]
+............                                                             [100%]
+============================== warnings summary ===============================
+<site-packages>\pyiceberg\expressions\parser.py:72: 13 warnings
+  <site-packages>\pyiceberg\expressions\parser.py:72: DeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+<site-packages>\pyiceberg\expressions\parser.py:85: 13 warnings
+  <site-packages>\pyiceberg\expressions\parser.py:85: DeprecationWarning: 'escChar' argument is deprecated, use 'esc_char'
+    quoted_identifier = QuotedString('"', escChar="\\", unquoteResults=True)
+
+<site-packages>\pyiceberg\expressions\parser.py:85: 13 warnings
+  <site-packages>\pyiceberg\expressions\parser.py:85: DeprecationWarning: 'unquoteResults' argument is deprecated, use 'unquote_results'
+    quoted_identifier = QuotedString('"', escChar="\\", unquoteResults=True)
+
+<site-packages>\pyiceberg\table\metadata.py:365: 13 warnings
+  <site-packages>\pyiceberg\table\metadata.py:365: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.12/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
+    @model_validator(mode="after")
+
+<site-packages>\pyiceberg\table\metadata.py:494: 13 warnings
+  <site-packages>\pyiceberg\table\metadata.py:494: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.12/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
+    @model_validator(mode="after")
+
+<site-packages>\pyiceberg\table\metadata.py:498: 13 warnings
+  <site-packages>\pyiceberg\table\metadata.py:498: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.12/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
+    @model_validator(mode="after")
+
+<site-packages>\pyiceberg\table\metadata.py:502: 13 warnings
+  <site-packages>\pyiceberg\table\metadata.py:502: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.12/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
+    @model_validator(mode="after")
+
+<site-packages>\pyiceberg\table\metadata.py:506: 13 warnings
+  <site-packages>\pyiceberg\table\metadata.py:506: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.12/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
+    @model_validator(mode="after")
+
+<site-packages>\pyiceberg\table\metadata.py:538: 13 warnings
+  <site-packages>\pyiceberg\table\metadata.py:538: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.12/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
+    @model_validator(mode="after")
+
+<site-packages>\pyiceberg\table\metadata.py:542: 13 warnings
+  <site-packages>\pyiceberg\table\metadata.py:542: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.12/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
+    @model_validator(mode="after")
+
+<site-packages>\pyiceberg\table\metadata.py:546: 13 warnings
+  <site-packages>\pyiceberg\table\metadata.py:546: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.12/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
+    @model_validator(mode="after")
+
+<site-packages>\pyiceberg\table\metadata.py:550: 13 warnings
+  <site-packages>\pyiceberg\table\metadata.py:550: PydanticDeprecatedSince212: Using `@model_validator` with mode='after' on a classmethod is deprecated. Instead, use an instance method. See the documentation at https://docs.pydantic.dev/2.12/concepts/validators/#model-after-validator. Deprecated in Pydantic V2.12 to be removed in V3.0.
+    @model_validator(mode="after")
+
+app\schemas\analysis.py:10: 13 warnings
+  <repo>\backend\app\schemas\analysis.py:10: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class DetectedAnomalySchema(BaseModel):
+
+app\schemas\ingestion.py:13: 13 warnings
+  <repo>\backend\app\schemas\ingestion.py:13: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class ImportBatchSummary(BaseModel):
+
+app\schemas\ingestion.py:63: 13 warnings
+  <repo>\backend\app\schemas\ingestion.py:63: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class ImportListResponse(BaseModel):
+
+app\schemas\ingestion.py:103: 13 warnings
+  <repo>\backend\app\schemas\ingestion.py:103: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class ColumnMappingResponse(BaseModel):
+
+app\schemas\ingestion.py:138: 13 warnings
+  <repo>\backend\app\schemas\ingestion.py:138: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class ColumnMappingListResponse(BaseModel):
+
+app\schemas\ingestion.py:172: 13 warnings
+  <repo>\backend\app\schemas\ingestion.py:172: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class CreateColumnMappingRequest(BaseModel):
+
+app\schemas\ingestion.py:204: 13 warnings
+  <repo>\backend\app\schemas\ingestion.py:204: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class RetryBatchResponse(BaseModel):
+
+tests\services\calculation\test_orchestrator_edge_cases.py:382: 12 warnings
+  <repo>\backend\tests\services\calculation\test_orchestrator_edge_cases.py:382: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow  # Mark as slow test (optional, can be skipped in quick runs)
+
+<site-packages>\PyPDF2\__init__.py:21: 12 warnings
+  <site-packages>\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+    warnings.warn(
+
+<repo>\backend\tests\verification\test_calculation_performance.py:29: 12 warnings
+  <repo>\backend\tests\verification\test_calculation_performance.py:29: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+<repo>\backend\tests\verification\test_calculation_performance.py:50: 12 warnings
+  <repo>\backend\tests\verification\test_calculation_performance.py:50: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+<repo>\backend\tests\verification\test_calculation_performance.py:73: 12 warnings
+  <repo>\backend\tests\verification\test_calculation_performance.py:73: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+<repo>\backend\tests\verification\test_calculation_performance.py:94: 12 warnings
+  <repo>\backend\tests\verification\test_calculation_performance.py:94: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+<repo>\backend\tests\verification\test_calculation_performance.py:121: 12 warnings
+  <repo>\backend\tests\verification\test_calculation_performance.py:121: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+tests/api/v1/test_leads.py: 4 warnings
+tests/api/v1/test_actual_billed_api.py: 1 warning
+tests/api/v1/test_ingestion.py: 2 warnings
+tests/api/test_expense_pools_crud.py: 1 warning
+tests/api/test_pool_mappings_crud.py: 1 warning
+tests/api/test_reconciliation_endpoints.py: 1 warning
+tests/api/v1/test_boma_calculator.py: 1 warning
+tests/api/v1/test_cross_doc_analysis.py: 1 warning
+tests/api/v1/test_free_audit_gating.py: 1 warning
+tests/stress/test_public_tools_api_stress.py: 309 warnings
+tests/api/v1/test_tools_fixed_cam.py: 1 warning
+  <site-packages>\fastapi\routing.py:243: DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+    return await dependant.call(**values)
+
+tests/api/v1/test_leads.py: 4 warnings
+tests/security/test_xss_prevention.py: 21 warnings
+tests/security/test_sql_injection.py: 39 warnings
+tests/api/v1/test_team_invitations.py: 9 warnings
+tests/api/test_export_v2.py: 8 warnings
+tests/api/test_reconciliation_endpoints.py: 4 warnings
+tests/api/v1/test_auth_welcome.py: 1 warning
+tests/api/test_expense_pools_crud.py: 2 warnings
+tests/api/test_demand_letter.py: 1 warning
+tests/integration/test_billing_checkout.py: 2 warnings
+tests/test_exception_handlers.py: 10 warnings
+tests/test_properties_crud.py: 9 warnings
+tests/test_units_crud.py: 9 warnings
+tests/api/test_compliance_sb1103.py: 1 warning
+tests/api/test_pool_mappings_crud.py: 1 warning
+tests/api/v1/test_reconciliation_cell_update.py: 1 warning
+tests/test_contact_requests.py: 8 warnings
+tests/test_leases_crud.py: 6 warnings
+tests/api/v1/test_feedback.py: 1 warning
+tests/api/v1/tenant/test_signup.py: 8 warnings
+tests/api/test_tenant_invitations_create.py: 1 warning
+tests/test_feedback_api.py: 4 warnings
+tests/api/v1/test_analysis_denominator_change.py: 1 warning
+tests/api/v1/test_cross_doc_analysis.py: 5 warnings
+tests/api/v1/test_audit_requests.py: 2 warnings
+tests/api/v1/test_boma_calculator.py: 5 warnings
+tests/integration/test_reconciliation_api_e2e.py: 2 warnings
+tests/test_hcad_tax_normalizer.py: 2 warnings
+tests/api/v1/test_analysis.py: 3 warnings
+tests/api/v1/test_analysis_gl.py: 2 warnings
+tests/api/v1/test_disputes.py: 4 warnings
+tests/api/test_organization_settings.py: 1 warning
+tests/api/test_analysis_capex.py: 3 warnings
+tests/api/v1/tenant/test_disputes.py: 2 warnings
+tests/api/v1/test_lease_recovery_profile_api.py: 2 warnings
+tests/security/test_auth_edge_cases.py: 3 warnings
+tests/security/test_cross_org_isolation.py: 2 warnings
+tests/api/v1/test_tools_fixed_cam.py: 1 warning
+tests/integration/test_ingestion_e2e.py: 1 warning
+  <site-packages>\starlette\_exception_handler.py:59: DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+    response = await handler(conn, exc)
+
+tests/api/test_pool_allocations_crud.py: 6 warnings
+tests/api/test_expense_pools_crud.py: 3 warnings
+tests/integration/test_billing_checkout.py: 2 warnings
+tests/test_properties_crud.py: 9 warnings
+tests/test_file_upload_endpoint.py: 2 warnings
+tests/test_units_crud.py: 9 warnings
+tests/api/test_compliance_sb1103.py: 2 warnings
+tests/api/test_pool_mappings_crud.py: 2 warnings
+tests/test_contact_requests.py: 8 warnings
+tests/test_leases_crud.py: 7 warnings
+tests/test_feedback_api.py: 4 warnings
+tests/security/test_auth_edge_cases.py: 4 warnings
+tests/security/test_cross_org_isolation.py: 2 warnings
+tests/integration/test_ingestion_e2e.py: 2 warnings
+  <site-packages>\_pytest\python.py:166: DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+    result = testfunction(**testargs)
+
+tests/api/v1/test_extraction_api.py: 3 warnings
+tests/test_job_queue.py: 28 warnings
+  <site-packages>\pydantic\main.py:250: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+
+tests/api/v1/test_actual_billed_api.py: 1 warning
+tests/test_dashboard.py: 1 warning
+tests/api/test_demand_letter.py: 1 warning
+tests/test_file_upload_endpoint.py: 1 warning
+tests/api/test_tax_protest.py: 1 warning
+tests/api/test_tenant_invitations_create.py: 1 warning
+tests/api/v1/test_analysis.py: 1 warning
+tests/api/test_compliance_sb1103.py: 1 warning
+tests/api/v1/test_disputes.py: 1 warning
+tests/integration/test_ingestion_e2e.py: 2 warnings
+tests/test_paywall_gate.py: 1 warning
+  <site-packages>\supabase\_sync\client.py:309: DeprecationWarning: The 'timeout' parameter is deprecated. Please configure it in the http client instead.
+    return SyncPostgrestClient(
+
+tests/api/v1/test_actual_billed_api.py: 1 warning
+tests/test_dashboard.py: 1 warning
+tests/api/test_demand_letter.py: 1 warning
+tests/test_file_upload_endpoint.py: 1 warning
+tests/api/test_tax_protest.py: 1 warning
+tests/api/test_tenant_invitations_create.py: 1 warning
+tests/api/v1/test_analysis.py: 1 warning
+tests/api/test_compliance_sb1103.py: 1 warning
+tests/api/v1/test_disputes.py: 1 warning
+tests/integration/test_ingestion_e2e.py: 2 warnings
+tests/test_paywall_gate.py: 1 warning
+  <site-packages>\supabase\_sync\client.py:309: DeprecationWarning: The 'verify' parameter is deprecated. Please configure it in the http client instead.
+    return SyncPostgrestClient(
+
+tests/security/test_sql_injection.py::test_time_based_blind_injection_prevented
+tests/security/test_sql_injection.py::test_time_based_blind_injection_prevented
+tests/security/test_sql_injection.py::test_time_based_blind_injection_prevented
+  <site-packages>\starlette\testclient.py:439: DeprecationWarning: You should not use the 'timeout' argument with the TestClient. See https://github.com/Kludex/starlette/issues/1108 for more information.
+    warnings.warn(
+
+tests/api/v1/test_auth_welcome.py::TestPostAuthWelcome::test_rejects_stale_terms_acceptance
+  <repo>\backend\app\api\v1\auth.py:186: DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+    assert_current_terms_acceptance(
+
+tests/api/v1/test_ingestion.py::TestApplyBatchMapping::test_apply_mapping_parse_failure_marks_failed_and_returns_422
+tests/api/v1/test_ingestion.py::TestApplyBatchMapping::test_apply_mapping_unsuccessful_result_marks_failed_and_returns_422
+  <repo>\backend\app\api\v1\ingestion.py:550: DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+    result = _parse_or_fail(
+
+tests/test_file_upload_endpoint.py::TestUploadEndpoint::test_parse_failure_returns_422
+tests/test_file_upload_endpoint.py::TestUploadEndpoint::test_malformed_file_parser_error_returns_422
+  <repo>\backend\app\api\v1\ingestion.py:384: DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+    result = _parse_or_fail(
+
+tests/services/ingestion/test_cleaners.py: 1 warning
+tests/stress/test_ingestion_fuzz_stress.py: 139 warnings
+tests/stress/test_date_period_cleaner_stress.py: 129 warnings
+tests/test_parser_fuzzing.py: 72 warnings
+  <repo>\backend\app\services\ingestion\cleaners.py:122: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+    inferred = pd.to_datetime(series, dayfirst=False, errors="coerce")
+
+tests/api/v1/test_ingestion.py::TestUploadFile::test_upload_rejects_oversized_file
+  <site-packages>\fastapi\routing.py:243: DeprecationWarning: 'HTTP_413_REQUEST_ENTITY_TOO_LARGE' is deprecated. Use 'HTTP_413_CONTENT_TOO_LARGE' instead.
+    return await dependant.call(**values)
+
+tests/models/test_tenant.py::TestTenantInvitation::test_valid_invitation
+  <repo>\backend\tests\models\test_tenant.py:125: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    expires_at=datetime.utcnow() + timedelta(days=7),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_valid_invitation
+  <repo>\backend\tests\models\test_tenant.py:128: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    created_at=datetime.utcnow(),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_valid_unused_not_expired
+  <repo>\backend\tests\models\test_tenant.py:142: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    expires_at=datetime.utcnow() + timedelta(days=7),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_valid_unused_not_expired
+  <repo>\backend\tests\models\test_tenant.py:145: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    created_at=datetime.utcnow(),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_valid_unused_not_expired
+tests/models/test_tenant.py::TestTenantInvitation::test_is_valid_expired
+  <repo>\backend\app\models\tenant.py:137: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    and self.expires_at > datetime.utcnow()
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_valid_expired
+  <repo>\backend\tests\models\test_tenant.py:158: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    expires_at=datetime.utcnow() - timedelta(days=1),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_valid_expired
+  <repo>\backend\tests\models\test_tenant.py:161: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    created_at=datetime.utcnow(),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_valid_revoked
+  <repo>\backend\tests\models\test_tenant.py:174: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    expires_at=datetime.utcnow() + timedelta(days=7),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_valid_revoked
+  <repo>\backend\tests\models\test_tenant.py:177: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    created_at=datetime.utcnow(),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_valid_used
+  <repo>\backend\tests\models\test_tenant.py:190: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    expires_at=datetime.utcnow() + timedelta(days=7),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_valid_used
+  <repo>\backend\tests\models\test_tenant.py:191: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    used_at=datetime.utcnow(),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_valid_used
+  <repo>\backend\tests\models\test_tenant.py:193: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    created_at=datetime.utcnow(),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_expired
+  <repo>\backend\tests\models\test_tenant.py:206: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    expires_at=datetime.utcnow() - timedelta(hours=1),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_expired
+  <repo>\backend\tests\models\test_tenant.py:209: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    created_at=datetime.utcnow(),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_expired
+tests/models/test_tenant.py::TestTenantInvitation::test_is_not_expired
+  <repo>\backend\app\models\tenant.py:143: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    return self.expires_at <= datetime.utcnow()
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_not_expired
+  <repo>\backend\tests\models\test_tenant.py:222: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    expires_at=datetime.utcnow() + timedelta(days=7),
+
+tests/models/test_tenant.py::TestTenantInvitation::test_is_not_expired
+  <repo>\backend\tests\models\test_tenant.py:225: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    created_at=datetime.utcnow(),
+
+tests/api/v1/test_ingestion.py::TestUploadFile::test_upload_rejects_file_when_no_valid_gl_rows_persist
+  <repo>\backend\app\api\v1\ingestion.py:393: DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+    return _persist_and_complete_batch(
+
+tests/test_job_queue.py::TestProcessExtractionTask::test_create_extraction_job_enqueues_task
+  <repo>\backend\tests\test_job_queue.py:459: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "created_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestProcessExtractionTask::test_create_extraction_job_marks_document_failed_when_enqueue_fails
+  <repo>\backend\tests\test_job_queue.py:503: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "created_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_get_extraction_job_returns_job
+  <repo>\backend\tests\test_job_queue.py:859: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "created_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_get_extraction_job_returns_job
+  <repo>\backend\tests\test_job_queue.py:860: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "started_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_get_extraction_job_filters_by_organization
+  <repo>\backend\tests\test_job_queue.py:894: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "created_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_get_extraction_job_filters_by_organization
+  <repo>\backend\tests\test_job_queue.py:895: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "started_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_update_job_auto_populates_started_at
+  <repo>\backend\tests\test_job_queue.py:931: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "created_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_update_job_auto_populates_started_at
+  <repo>\backend\tests\test_job_queue.py:932: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "started_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_update_job_auto_populates_completed_at
+  <repo>\backend\tests\test_job_queue.py:968: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "created_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_update_job_auto_populates_completed_at
+  <repo>\backend\tests\test_job_queue.py:969: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "started_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_update_job_auto_populates_completed_at
+  <repo>\backend\tests\test_job_queue.py:970: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "completed_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_update_job_auto_populates_completed_at_for_failed
+  <repo>\backend\tests\test_job_queue.py:1011: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "created_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_update_job_auto_populates_completed_at_for_failed
+  <repo>\backend\tests\test_job_queue.py:1012: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "started_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_update_job_auto_populates_completed_at_for_failed
+  <repo>\backend\tests\test_job_queue.py:1013: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "completed_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_that_cannot_retry
+  <repo>\backend\tests\test_job_queue.py:1051: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "created_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_that_cannot_retry
+  <repo>\backend\tests\test_job_queue.py:1052: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "started_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_that_cannot_retry
+  <repo>\backend\tests\test_job_queue.py:1053: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "completed_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_success
+  <repo>\backend\tests\test_job_queue.py:1087: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "created_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_success
+  <repo>\backend\tests\test_job_queue.py:1088: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "started_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_success
+  <repo>\backend\tests\test_job_queue.py:1089: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "completed_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_success
+  <repo>\backend\tests\test_job_queue.py:1104: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "created_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_success
+  <repo>\backend\tests\test_job_queue.py:1105: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "started_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_success
+  <repo>\backend\tests\test_job_queue.py:1106: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "completed_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_success
+  <repo>\backend\tests\test_job_queue.py:1107: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "next_retry_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_success
+  <repo>\backend\tests\test_job_queue.py:1121: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "created_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_success
+  <repo>\backend\tests\test_job_queue.py:1122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "started_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_success
+  <repo>\backend\tests\test_job_queue.py:1123: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "completed_at": datetime.utcnow().isoformat(),
+
+tests/test_job_queue.py::TestJobQueueEdgeCases::test_retry_job_success
+  <repo>\backend\tests\test_job_queue.py:1124: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "next_retry_at": datetime.utcnow().isoformat(),
+
+tests/api/v1/test_pool_mappings_additional.py::test_update_pool_mapping_validates_pattern
+  <repo>\backend\tests\api\v1\test_pool_mappings_additional.py:148: DeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+    await update_pool_mapping(
+
+tests/test_ocr_persistence.py::TestOCRResultRepository::test_save_results
+  <repo>\backend\tests\test_ocr_persistence.py:431: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+tests/test_ocr_persistence.py::TestOCRResultRepository::test_get_by_document
+  <repo>\backend\tests\test_ocr_persistence.py:482: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+tests/test_ocr_persistence.py::TestOCRResultRepository::test_get_by_page
+  <repo>\backend\tests\test_ocr_persistence.py:512: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+tests/test_ocr_persistence.py::TestOCRResultRepository::test_search_full_text
+  <repo>\backend\tests\test_ocr_persistence.py:561: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+tests/stress/test_ingestion_fuzz_stress.py::test_run_all_quality_checks_never_raises
+tests/stress/test_ingestion_fuzz_stress.py::test_run_all_quality_checks_never_raises
+tests/stress/test_ingestion_fuzz_stress.py::test_run_all_quality_checks_never_raises
+tests/stress/test_ingestion_fuzz_stress.py::test_run_all_quality_checks_never_raises
+tests/stress/test_ingestion_fuzz_stress.py::test_run_all_quality_checks_never_raises
+tests/stress/test_ingestion_fuzz_stress.py::test_run_all_quality_checks_never_raises
+tests/stress/test_ingestion_fuzz_stress.py::test_run_all_quality_checks_never_raises
+  <site-packages>\numpy\_core\_methods.py:49: RuntimeWarning: invalid value encountered in reduce
+    return umr_sum(a, axis, dtype, out, keepdims, initial, where)
+
+tests/test_job_queue.py::TestExtractionJobModel::test_job_with_all_fields
+  <repo>\backend\tests\test_job_queue.py:65: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+tests/test_job_queue.py::TestExtractionJobModel::test_processing_duration_property
+  <repo>\backend\tests\test_job_queue.py:185: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+tests/test_ocr_persistence.py::TestPrepareOCRResults::test_prepares_multi_page_results
+tests/test_ocr_persistence.py::TestPrepareOCRResults::test_empty_document
+tests/test_ocr_persistence.py::TestPrepareOCRResults::test_defaults_to_parsed_document_tables
+tests/test_ocr_persistence.py::TestPrepareOCRResults::test_explicit_tables_override_parsed_document_tables
+tests/test_ocr_persistence.py::TestPrepareOCRResults::test_explicit_empty_tables_override_parsed_document_tables
+  <repo>\backend\app\services\extraction\persistence.py:166: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    extracted_at = datetime.utcnow()
+
+tests/test_job_queue.py::TestJobManagementFunctions::test_create_extraction_job
+  <repo>\backend\tests\test_job_queue.py:736: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "created_at": datetime.utcnow().isoformat(),
+
+tests/test_ocr_result_model.py::TestOCRResult::test_valid_ocr_result
+  <repo>\backend\tests\test_ocr_result_model.py:126: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+tests/test_ocr_result_model.py::TestOCRResult::test_default_values
+  <repo>\backend\tests\test_ocr_result_model.py:148: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+tests/test_ocr_result_model.py::TestDocumentOCRSummary::test_valid_document_summary
+  <repo>\backend\tests\test_ocr_result_model.py:224: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    extracted_at=datetime.utcnow(),
+
+tests/models/test_tenant.py::TestTenantUser::test_valid_tenant_user
+  <repo>\backend\tests\models\test_tenant.py:54: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    created_at=datetime.utcnow(),
+
+tests/models/test_tenant.py::TestTenantLeaseLink::test_valid_tenant_lease_link
+  <repo>\backend\tests\models\test_tenant.py:81: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    created_at=datetime.utcnow(),
+
+tests/test_job_queue.py::TestExtractionJobSummary::test_summary_fields
+  <repo>\backend\tests\test_job_queue.py:279: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+tests/test_ocr_persistence.py::TestCreateDocumentSummary::test_creates_summary
+  <repo>\backend\tests\test_ocr_persistence.py:361: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+tests/test_ocr_result_model.py::TestOCRResultSummary::test_valid_summary
+  <repo>\backend\tests\test_ocr_result_model.py:205: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    extracted_at=datetime.utcnow(),
+
+tests/test_ocr_result_model.py::TestOCRResultResponse::test_valid_response
+  <repo>\backend\tests\test_ocr_result_model.py:253: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.13.5-final-0 _______________
+
+Name                                                     Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------------------------------------------
+app\__init__.py                                              1      0      0      0   100%
+app\api\__init__.py                                          5      0      0      0   100%
+app\api\deps.py                                             12      1      0      0    92%   92
+app\api\routes\__init__.py                                   2      0      0      0   100%
+app\api\routes\webhooks.py                                 484     37    146     20    90%   171->173, 425-427, 449->451, 470->472, 496-501, 537-540, 758-760, 763-764, 774-779, 851, 868->871, 901-902, 907, 916->912, 932, 966, 1038-1039, 1051-1052, 1159->1158, 1167, 1193-1195, 1207, 1221->1220, 1238-1239, 1270-1271
+app\api\v1\__init__.py                                      95      0      0      0   100%
+app\api\v1\actual_billed.py                                124      0     30      4    97%   186->206, 383->386, 386->388, 388->391
+app\api\v1\ai_cs.py                                         91      2     28      2    97%   45, 192
+app\api\v1\ai_sdr.py                                       104      0     22      0   100%
+app\api\v1\analysis.py                                     175     20      8      1    87%   315-317, 431-434, 478-479, 570-571, 607-608, 653-654, 708-720
+app\api\v1\audit_requests.py                               127     12     34      8    84%   116, 190, 249, 273->286, 279-284, 290, 293, 296
+app\api\v1\audit_trail.py                                   44      0     12      0   100%
+app\api\v1\auth.py                                         103      5     10      1    95%   199-200, 211->216, 287-298
+app\api\v1\billing.py                                      515     20     94      8    95%   65, 191, 207, 374, 825-826, 835-836, 864-865, 876, 942-948, 1484, 1521->1537, 1541, 1613, 1689, 1709, 1748
+app\api\v1\campaigns.py                                     80      1     14      3    96%   85->90, 125->128, 133
+app\api\v1\comparison.py                                    55      1      8      1    97%   248
+app\api\v1\compliance.py                                   114      3     24      1    97%   239-240, 306
+app\api\v1\contact_requests.py                              49      0      6      0   100%
+app\api\v1\cross_doc_analysis.py                            82      0     12      0   100%
+app\api\v1\dashboard.py                                     94     10     28      2    87%   144-152, 214, 237
+app\api\v1\demand_letter.py                                 55      0      6      0   100%
+app\api\v1\disputes.py                                      71      2      6      0    97%   84-85
+app\api\v1\documents.py                                     92      7     36      3    89%   39-41, 49-51, 351, 354->364
+app\api\v1\expense_pools.py                                103      5     36      6    92%   77->79, 250, 256, 279, 291, 355
+app\api\v1\export.py                                       421      4     76      6    98%   230, 252, 790->793, 847->850, 1075, 1174
+app\api\v1\exports.py                                      459     16    128     17    94%   48, 390->402, 404->422, 438->452, 449->452, 453, 463, 512->523, 541->546, 606, 665, 670, 699, 705, 756->758, 765-769, 869, 879, 889, 1292, 1378
+app\api\v1\extraction.py                                   177      2     64      2    98%   75, 803
+app\api\v1\feedback.py                                     173      6     48      4    95%   83-88, 92, 127, 587
+app\api\v1\ingestion.py                                    222      6     60      5    96%   225-226, 457, 465, 488, 497, 779->790
+app\api\v1\leads.py                                        240     17     46      5    90%   172, 175-181, 282, 351-352, 429, 491-492, 512-513, 557
+app\api\v1\leakage.py                                      119     13     36     10    85%   31, 121, 123->118, 162, 165, 179, 182, 202, 205, 229-233
+app\api\v1\lease_term_versions.py                           41      6      6      1    81%   71-78, 117
+app\api\v1\leases.py                                        92      3     30      3    95%   204, 263, 368
+app\api\v1\onboard.py                                       90      9     20      3    89%   74-75, 162-163, 200, 209-211, 219
+app\api\v1\organization.py                                  32      0      0      0   100%
+app\api\v1\pool_allocations.py                             111      8     40      8    89%   32, 56, 100, 148, 193, 196, 264, 299
+app\api\v1\pool_mappings.py                                 86      1     32      1    98%   297
+app\api\v1\pool_templates.py                                66      0     12      0   100%
+app\api\v1\portfolio.py                                    118     13     48     13    84%   30, 38-40, 95, 97->92, 140, 142->137, 146, 164, 172, 178, 196, 199, 202
+app\api\v1\properties.py                                    77      0     16      0   100%
+app\api\v1\property_access.py                                7      0      2      0   100%
+app\api\v1\reconciliation.py                               326     23    104     12    90%   134, 143-145, 165-167, 243, 275, 366->364, 394, 409-414, 1158->1219, 1196-1216, 1223, 1230->1248, 1493
+app\api\v1\rent_roll.py                                     88      3      6      1    96%   241-242, 250
+app\api\v1\reports.py                                       77     11      4      0    86%   257-290
+app\api\v1\schemas\extraction_schemas.py                    71      0      0      0   100%
+app\api\v1\tax_protest.py                                  145      2     30      4    97%   121->120, 123->121, 137, 334
+app\api\v1\team\__init__.py                                  4      0      0      0   100%
+app\api\v1\team\invitations.py                              81     10      6      1    87%   73-90, 207-208
+app\api\v1\team\members.py                                  61      0     12      0   100%
+app\api\v1\team\signup.py                                   23      1      0      0    96%   75
+app\api\v1\tenant\__init__.py                                6      0      0      0   100%
+app\api\v1\tenant\dashboard.py                             119      9     40     12    87%   36, 55, 66, 69->71, 71->76, 75, 96, 185->183, 239-243, 255->274, 266->274, 316-320
+app\api\v1\tenant\disputes.py                              109     18     20      2    78%   63-71, 90-91, 471-472, 495-504
+app\api\v1\tenant\invitations.py                            49      0      4      0   100%
+app\api\v1\tenant\notifications.py                          62      2     18      2    95%   207, 242
+app\api\v1\tenant\signup.py                                 17      0      0      0   100%
+app\api\v1\tools.py                                         35      0      0      0   100%
+app\api\v1\units.py                                         86      1     16      1    98%   282
+app\api\v1\uploads.py                                       16      0      6      1    95%   9->exit
+app\auth\__init__.py                                         2      0      0      0   100%
+app\auth\dependencies.py                                   137     11     40      6    88%   53, 220, 231-236, 248, 266-267, 348, 479, 501
+app\celery_app.py                                           40     26      2      0    33%   17-62
+app\config.py                                              113      0     10      1    99%   242->241
+app\core\__init__.py                                         0      0      0      0   100%
+app\core\circuit_breakers.py                                46      4      6      2    88%   56, 61, 64, 105
+app\core\log_scrubber.py                                    21      0      8      0   100%
+app\core\logging.py                                         73      4     12      3    92%   107, 157-158, 165
+app\core\rate_limiting.py                                   27      0      4      1    97%   52->56
+app\core\retention.py                                       40      0      0      0   100%
+app\core\sentry.py                                          88      3     38      2    96%   24-25, 80, 82->78
+app\core\versioning.py                                      15      0      2      0   100%
+app\database\__init__.py                                     2      0      0      0   100%
+app\database\client.py                                      51      3      2      0    94%   136-138
+app\database\pagination.py                                  48      1     18      1    97%   23
+app\exceptions\__init__.py                                   2      0      0      0   100%
+app\exceptions\handlers.py                                 108      1     10      2    97%   307, 392->399
+app\legal_terms.py                                           4      0      0      0   100%
+app\main.py                                                119      2     38      3    97%   63, 182, 195->194
+app\middleware\__init__.py                                   3      0      0      0   100%
+app\middleware\correlation.py                               16      0      0      0   100%
+app\middleware\rate_limit.py                                20      0      4      0   100%
+app\models\__init__.py                                      27      0      0      0   100%
+app\models\calculation_job.py                               73      0      4      0   100%
+app\models\calculation_step.py                              51      0     12      0   100%
+app\models\cancel_attempt.py                                24      0      0      0   100%
+app\models\capex_flag.py                                    43      0      0      0   100%
+app\models\denominator_change.py                            45      0      0      0   100%
+app\models\dispute.py                                       96      0      0      0   100%
+app\models\document.py                                      63      0      0      0   100%
+app\models\enums.py                                        118      0      0      0   100%
+app\models\expense_pool.py                                  72      0      6      0   100%
+app\models\feedback.py                                      44      0      0      0   100%
+app\models\gl_analysis.py                                   28      0      0      0   100%
+app\models\gl_entry.py                                      43      0      0      0   100%
+app\models\historical_analysis.py                           29      0      0      0   100%
+app\models\invoice.py                                       52      0      0      0   100%
+app\models\lease.py                                         54      0      4      0   100%
+app\models\lease_recovery_profile.py                        73      0      8      0   100%
+app\models\lease_term_version.py                            59      0      4      0   100%
+app\models\ocr_result.py                                    75      0      0      0   100%
+app\models\organization.py                                  46      0      0      0   100%
+app\models\pool_allocation.py                               65      1     30      5    94%   54->57, 91->94, 127, 131->136, 134->136
+app\models\pool_copy.py                                     34      0      6      1    98%   38->45
+app\models\pool_mapping.py                                  62      0      8      0   100%
+app\models\pool_template.py                                 75      0     10      0   100%
+app\models\promotion.py                                     71      0      4      0   100%
+app\models\property.py                                      57      0      2      0   100%
+app\models\reconciliation_campaign.py                       37      0      0      0   100%
+app\models\reconciliation_snapshot.py                      188      0     18      2    99%   151->155, 155->160
+app\models\responses.py                                     48      0      2      0   100%
+app\models\sb1103.py                                        65      0      0      0   100%
+app\models\schemas\team_auth.py                             65      1      8      1    97%   48
+app\models\schemas\tenant_auth.py                           59      0      8      0   100%
+app\models\subscription.py                                  87      0      0      0   100%
+app\models\team_invitation.py                               33      3      0      0    91%   86, 95, 100
+app\models\tenant.py                                        47      0      0      0   100%
+app\models\tenant_notification.py                           37      0      0      0   100%
+app\models\unit.py                                          38      0      2      0   100%
+app\models\user.py                                          29      0      0      0   100%
+app\schemas\__init__.py                                      7      0      0      0   100%
+app\schemas\analysis.py                                     30      0      0      0   100%
+app\schemas\dashboard.py                                    35      0      0      0   100%
+app\schemas\denominator_change.py                           14      0      0      0   100%
+app\schemas\errors.py                                       66      0      0      0   100%
+app\schemas\expense_pool.py                                 38      0      0      0   100%
+app\schemas\ingestion.py                                    53      0      0      0   100%
+app\schemas\lease.py                                         9      0      0      0   100%
+app\schemas\property.py                                      8      0      0      0   100%
+app\schemas\reconciliation_campaign.py                       9      0      0      0   100%
+app\schemas\sb1103.py                                        3      0      0      0   100%
+app\schemas\tenant.py                                       38      0      0      0   100%
+app\schemas\unit.py                                         11      0      0      0   100%
+app\services\__init__.py                                     0      0      0      0   100%
+app\services\admin_notifications.py                         25      0      4      0   100%
+app\services\analysis\__init__.py                            4      0      0      0   100%
+app\services\analysis\anomaly_detection.py                 234      4     86      4    98%   136, 140, 542, 605
+app\services\analysis\capex_classifier.py                  124      1     46      4    97%   39->exit, 239->235, 273->294, 319
+app\services\analysis\denominator_change.py                177      9     78      2    94%   105, 218-233, 503->483
+app\services\analysis\gl_analysis_service.py                87      2     20      1    97%   268-269, 276->278
+app\services\analysis\historical_analysis.py               171      8     78      9    93%   121-122, 134, 249->244, 279->282, 290, 339-340, 353-354, 382->377, 389->397
+app\services\analysis\pool_matching.py                      36      0     10      0   100%
+app\services\analysis\statement_detail_advisor.py          118      1     36      1    99%   181
+app\services\analytics\__init__.py                           0      0      0      0   100%
+app\services\analytics\api_usage.py                        100      7     50      7    91%   49, 53, 59, 63, 84, 106, 147
+app\services\analytics\posthog.py                           81      6     30      3    92%   56, 63-64, 70, 158-159
+app\services\apollo\__init__.py                              0      0      0      0   100%
+app\services\billing\__init__.py                            12      0      0      0   100%
+app\services\billing\activation.py                          35      0      4      0   100%
+app\services\billing\building_sync.py                      143      3     60      5    96%   173, 176, 191, 264->266, 283->287
+app\services\billing\config.py                              31      0      0      0   100%
+app\services\billing\credits.py                             67      1     20      1    98%   217
+app\services\billing\customers.py                           40      0     14      1    98%   52->57
+app\services\billing\entitlements.py                        94      1     42      1    99%   36
+app\services\billing\feature_usage.py                       26      0      4      0   100%
+app\services\billing\free_audit.py                          45      7     12      3    79%   20, 23-24, 109-119
+app\services\billing\generated_plan_tiers.py                97      9     24      4    86%   245, 260-264, 282-284
+app\services\billing\guarantee.py                           68      3     20      3    93%   83, 160, 181
+app\services\billing\launch_phase.py                        80      4     14      2    94%   61, 103, 108, 151
+app\services\billing\offer_tokens.py                        33      1     10      1    95%   100
+app\services\billing\payment_methods.py                     48      1     12      1    97%   126
+app\services\billing\plans.py                               24      0      8      0   100%
+app\services\billing\quota_enforcement.py                   46      3     16      2    92%   13->12, 15, 65-71
+app\services\billing\save_offers.py                         45      0     10      0   100%
+app\services\billing\stripe_client.py                       83     28      6      1    67%   56-57, 68-69, 88, 125-126, 144-145, 152-160, 164-172, 181-193, 206-211, 270-271
+app\services\billing\subscriptions.py                       83      4     22      2    94%   218-219, 232->237, 238->243, 274-275
+app\services\calculation\__init__.py                        13      0      0      0   100%
+app\services\calculation\base_year.py                       75      0     26      0   100%
+app\services\calculation\boma_2024.py                       30      0      2      0   100%
+app\services\calculation\cap_bank_ledger.py                 88      3     32      3    95%   199, 255, 262
+app\services\calculation\caps.py                           193      1     94      1    99%   519
+app\services\calculation\data_fetcher.py                   151      5     56      5    95%   331, 346, 370, 382, 384
+app\services\calculation\expense_filter.py                  28      0      4      0   100%
+app\services\calculation\expense_stop.py                    36      0     10      0   100%
+app\services\calculation\fiscal_year.py                     17      0      6      0   100%
+app\services\calculation\fixed_cam_modeler.py               58      1     10      1    97%   99
+app\services\calculation\gl_date_filter.py                  21      0     14      0   100%
+app\services\calculation\gross_up.py                        54      0     28      0   100%
+app\services\calculation\gross_up_orchestrator.py           54      0      6      0   100%
+app\services\calculation\hcad_tax_normalizer.py             39      0      4      0   100%
+app\services\calculation\leakage.py                         99      6     32      6    91%   23, 138, 158, 161, 174, 204
+app\services\calculation\models.py                          71      0      6      0   100%
+app\services\calculation\noi_impact.py                      18      0      2      0   100%
+app\services\calculation\occupancy.py                       41      0     10      0   100%
+app\services\calculation\orchestrator.py                   140      0     38      0   100%
+app\services\calculation\pool_aggregator.py                189      1     98      2    99%   221, 525->527
+app\services\calculation\pool_allocation.py                 78      1     28      1    98%   86
+app\services\calculation\tenant_share.py                   175      0     46      0   100%
+app\services\calculation\trace_persistence.py               36      0     10      0   100%
+app\services\campaigns\__init__.py                           0      0      0      0   100%
+app\services\campaigns\transition.py                         7      0      2      0   100%
+app\services\comparison\__init__.py                          3      0      0      0   100%
+app\services\comparison\engine.py                          271     10    108     15    93%   80, 305, 308, 354, 357, 388, 391, 393->385, 416, 419->413, 475, 591->594, 797->790, 802, 944->947
+app\services\comparison\models.py                           70      0      4      0   100%
+app\services\comparison\persistence.py                      79      3     22      4    93%   136->150, 143-144, 179, 246->244, 294->292
+app\services\compliance\__init__.py                          0      0      0      0   100%
+app\services\compliance\sb1103_service.py                  278      3     48      7    97%   150, 161, 181->183, 380, 573->576, 680->678, 714->708
+app\services\email\__init__.py                               3      0      0      0   100%
+app\services\email\factory.py                               22      0      6      0   100%
+app\services\email\renderer.py                              34      3      8      3    86%   30, 33, 51
+app\services\email\resend_service.py                       229     16      6      1    93%   55, 363-370, 682-689, 725-732, 768-775, 807-814
+app\services\email\tokens.py                                20      0      0      0   100%
+app\services\email\videos.py                                36      0      8      0   100%
+app\services\export\__init__.py                              0      0      0      0   100%
+app\services\export\csv_safety.py                           11      0      2      0   100%
+app\services\export\gl_category_csv.py                      24      0      4      0   100%
+app\services\export\variance_pdf.py                         47      0      6      0   100%
+app\services\extraction\__init__.py                         13      0      0      0   100%
+app\services\extraction\confidence.py                       29      0      6      0   100%
+app\services\extraction\cross_doc_assembler.py             180      5     64      6    95%   217, 241, 277, 386, 404, 414->418
+app\services\extraction\cross_doc_models.py                 85      0      0      0   100%
+app\services\extraction\cross_doc_orchestrator.py           86      4     32      8    90%   54, 57, 71, 74, 76->72, 161->163, 163->165, 193->192
+app\services\extraction\cross_doc_persistence.py           101      4     40      3    95%   164->exit, 171, 249-250, 298
+app\services\extraction\cross_doc_prompt.py                 11      0      2      0   100%
+app\services\extraction\dual\__init__.py                     3      0      0      0   100%
+app\services\extraction\dual\dual_merger.py                 73      0     34      0   100%
+app\services\extraction\dual\dual_models.py                 37      0      4      0   100%
+app\services\extraction\dual\dual_orchestrator.py           91      0     18      0   100%
+app\services\extraction\dual\judge.py                       72      0     20      0   100%
+app\services\extraction\extraction_models.py                39      0      6      0   100%
+app\services\extraction\forensic_store.py                   22      0      0      0   100%
+app\services\extraction\gap_filler.py                       31      0      8      0   100%
+app\services\extraction\gap_filler_prompts.py                2      0      0      0   100%
+app\services\extraction\gl_analysis_prompt.py                8      0      2      0   100%
+app\services\extraction\job_queue.py                       165     11     28      2    91%   116, 261-271, 276-288, 319->323
+app\services\extraction\json_utils.py                       87      3     44      5    94%   76->82, 88->93, 170, 178-179, 184->182
+app\services\extraction\openrouter_client.py                93      5     20      5    91%   175->178, 205->209, 252->254, 255, 256->259, 266-273
+app\services\extraction\persistence.py                      92      1     24      3    97%   103->110, 118, 165->169
+app\services\extraction\pipeline_events.py                  22      0      2      0   100%
+app\services\extraction\processor.py                       123      0     16      0   100%
+app\services\extraction\prompts.py                           3      0      0      0   100%
+app\services\extraction\result_parser.py                   206      9     52      0    97%   393-396, 429-432, 494-497
+app\services\extraction\s3_client.py                       158      0     26      0   100%
+app\services\extraction\table_handler.py                   100      2     38      4    96%   159->158, 184-185, 206->205, 209->207, 239->238
+app\services\extraction\validation.py                       53      3     20      3    92%   144, 173, 189
+app\services\extraction\validation_reprompt.py              56      0     16      0   100%
+app\services\extraction\validation_reprompt_prompts.py      16      0      4      0   100%
+app\services\formatting\__init__.py                          3      0      0      0   100%
+app\services\formatting\currency.py                         20      2     12      2    88%   33, 46
+app\services\formatting\trace.py                            43      5     24      5    85%   34, 40, 58, 63, 68
+app\services\health.py                                      91      0     24      0   100%
+app\services\ingestion\__init__.py                           6      0      0      0   100%
+app\services\ingestion\base.py                              63      0     46      2    98%   203->206, 245->244
+app\services\ingestion\batch.py                             88      2     24      2    96%   178->191, 184-185, 188->191
+app\services\ingestion\cleaners.py                         122      0     52      0   100%
+app\services\ingestion\dispatcher.py                        60      2     16      0    97%   209-210
+app\services\ingestion\fingerprint.py                       80      2     22      0    98%   161-162
+app\services\ingestion\parsers\__init__.py                   4      0      0      0   100%
+app\services\ingestion\parsers\billing.py                  122     10     46      3    92%   75, 114, 129-130, 231->234, 243-245, 270-272
+app\services\ingestion\parsers\generic.py                   81      7     32      4    90%   138->141, 148-149, 152, 199, 276-278
+app\services\ingestion\parsers\generic_rent_roll.py        203      8    102      9    94%   83, 258->267, 272->277, 408, 431, 438, 450-451, 460, 480, 503->509
+app\services\ingestion\parsers\mri.py                      159      1     68      1    99%   202
+app\services\ingestion\parsers\mri_rent_roll.py            224     10    100      6    94%   98, 482, 515, 523, 533-534, 551, 581, 603-604
+app\services\ingestion\parsers\yardi.py                    128      5     54      2    96%   119-121, 200, 293
+app\services\ingestion\parsers\yardi_rent_roll.py          221      8     96      9    94%   73, 89, 91, 292->295, 295->298, 307->310, 504, 535, 565, 587-588
+app\services\ingestion\persistence.py                      110      5     48      7    92%   100, 109, 171, 176->183, 221, 227->235, 313
+app\services\ingestion\quality_checks.py                    99      0     42      0   100%
+app\services\ingestion\schemas.py                           71      0      4      0   100%
+app\services\ingestion\validation.py                       141      0     52      1    99%   315->294
+app\services\leads\__init__.py                               0      0      0      0   100%
+app\services\leads\asset_registry.py                        17      0      0      0   100%
+app\services\leads\asset_storage.py                         16      0      4      1    95%   23->29
+app\services\leads\unsubscribe.py                           17      0      2      0   100%
+app\services\lease_terms.py                                 41      0     12      0   100%
+app\services\legal\__init__.py                               0      0      0      0   100%
+app\services\legal\demand_letter_generator.py               72      0      8      0   100%
+app\services\legal\demand_letter_templates.py                6      0      0      0   100%
+app\services\legal_acceptance.py                            12      0      2      0   100%
+app\services\pools\auto_setup.py                            82      2     40      3    96%   192, 247->253, 259
+app\services\pools\copy_service.py                          60      0     18      0   100%
+app\services\pools\template_service.py                     118      2     44      1    98%   329->338, 335-337
+app\services\rent_roll_import.py                           101      0     24      0   100%
+app\services\reports\__init__.py                             4      0      0      0   100%
+app\services\reports\denominator_change_report.py           60      0      8      0   100%
+app\services\reports\excel_export.py                       119      0     32      1    99%   46->50
+app\services\reports\historical_report.py                  122      1     36      2    98%   123, 378->370
+app\services\sequencer.py                                   41     10     10      4    69%   22, 36-52, 103->112, 108
+app\services\tax_protest\__init__.py                         0      0      0      0   100%
+app\services\tax_protest\cover_sheet_generator.py           97      1     16      1    98%   191
+app\services\tax_protest\deadline_service.py                43      1     12      1    96%   106
+app\services\team_invitation.py                            129      5     50      4    95%   72-73, 93->99, 339, 344, 368
+app\services\tenant\__init__.py                              3      0      0      0   100%
+app\services\tenant\dispute_service.py                     122      2     38      0    99%   114-115
+app\services\tenant\notification_service.py                109      6     26      4    93%   166->147, 199, 218-219, 221->202, 230-231, 270
+app\services\tenant_invitation.py                           74      0     26      1    99%   87->93
+app\services\turnstile.py                                   50      0     22      1    99%   93->99
+----------------------------------------------------------------------------------------------------
+TOTAL                                                    20897    670   5162    427    96%
+Coverage HTML written to dir htmlcov
+Required test coverage of 95% reached. Total coverage: 95.51%
+7407 passed, 21 skipped, 1389 warnings in 379.06s (0:06:19)
+EXIT=0 ELAPSED=412s

@@ -1,0 +1,90 @@
+repos:
+  # Python formatting and linting
+  - repo: https://github.com/psf/black
+    rev: 25.12.0
+    hooks:
+      - id: black
+        files: ^backend/
+
+  - repo: https://github.com/pycqa/isort
+    rev: 7.0.0
+    hooks:
+      - id: isort
+        files: ^backend/
+        args: ["--profile", "black"]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.10
+    hooks:
+      - id: ruff
+        files: ^backend/
+        args: ["--fix"]
+
+  # Frontend formatting and linting
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier
+        entry: bash -c 'cd frontend && npm run format'
+        language: system
+        files: ^frontend/src/.*\.(ts|tsx|css|json)$
+        pass_filenames: false
+
+      - id: eslint
+        name: eslint
+        entry: bash -c 'cd frontend && npm run lint:fix'
+        language: system
+        files: ^frontend/src/.*\.(ts|tsx)$
+        pass_filenames: false
+
+      - id: frontend-build
+        name: frontend dev build
+        entry: bash -c 'cd frontend && npm run build:dev'
+        language: system
+        files: ^frontend/src/.*\.(ts|tsx|css)$
+        pass_filenames: false
+
+  # Backend build check
+  - repo: local
+    hooks:
+      - id: backend-requirements-sync
+        name: backend requirements sync check
+        entry: python backend/scripts/sync_requirements.py --check
+        language: system
+        files: ^backend/(pyproject\.toml|requirements\.txt)$
+        pass_filenames: false
+
+      - id: backend-compile
+        name: backend compile check
+        entry: bash -c 'cd backend && python -m compileall app -q'
+        language: system
+        files: ^backend/app/.*\.py$
+        pass_filenames: false
+
+  # Marketing context drift check
+  - repo: local
+    hooks:
+      - id: marketing-context-drift
+        name: marketing context drift check
+        entry: bash .githooks/check-marketing-context.sh
+        language: system
+        files: ^(frontend/src/pages/|frontend/src/features/|backend/app/api/v1/)
+        pass_filenames: false
+
+  # General hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      # portfolio/runs/ holds verbatim stdout from the test runs the
+      # portfolio documents cite as evidence. Normalising it would make the
+      # word "raw" a lie, so those files are left exactly as the runners
+      # printed them.
+      - id: trailing-whitespace
+        exclude: ^portfolio/runs/
+      - id: end-of-file-fixer
+        exclude: ^portfolio/runs/
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-added-large-files
+        args: ['--maxkb=1000']

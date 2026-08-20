@@ -1,0 +1,249 @@
+---
+title: "NNN Lease CAM Reconciliation: Step-by-Step Guide for Landlords"
+description: "How to perform annual CAM reconciliation for a triple net lease: expense pools, gross-up, caps, pro-rata allocation, and statement delivery."
+datePublished: "2026-03-21"
+dateModified: "2026-03-21"
+author: "Angel Campa"
+buttonText: "Read Guide"
+order: 98
+faq:
+  - q: "What is the deadline for delivering NNN reconciliation statements?"
+    a: "Most triple net leases require the landlord to deliver the annual reconciliation statement within 90 to 120 days after the close of the reconciliation year, which means statements covering calendar year 2025 are typically due by March 31 or April 30, 2026. Some leases specify an exact date (March 31 is common in multi-tenant retail). Missing the deadline does not automatically waive the landlord's right to collect a true-up balance, but several states (notably California under SB 1103) impose statutory consequences for late delivery. Review each lease for its specific deadline and any waiver language."
+
+  - q: "Can a tenant dispute a NNN CAM charge?"
+    a: "Yes. Most triple net leases include an audit rights clause that gives the tenant a window (typically 90 to 180 days after statement delivery) to request an audit of the landlord's expense records. The tenant or their representative reviews GL detail, vendor invoices, insurance certificates, property tax bills, and management fee calculations. If the audit reveals an overcharge, the landlord is generally obligated to refund the difference, often with interest. Landlords who maintain organized, year-round documentation resolve disputes faster and at lower cost than those who reconstruct records under a production deadline."
+
+  - q: "What is a gross-up adjustment and why does it matter in a NNN lease?"
+    a: "A gross-up adjustment normalizes variable operating expenses as if the building were at a standard occupancy level, typically 90% to 95%. Without gross-up, a tenant in a 60%-leased building subsidizes the landlord's vacancy by paying a pro-rata share of expenses that would have been higher if the building were full. Gross-up protects tenants from that distortion and protects landlords from under-recovering in low-occupancy years. The lease must specify which expenses are variable (subject to gross-up) and the target occupancy percentage used for the calculation."
+
+  - q: "What is an anchor exclusion in a NNN lease CAM pool?"
+    a: "Anchor exclusions are lease provisions (most common in retail properties) that remove a major anchor tenant from the pro-rata denominator while still including its square footage in the building's total rentable area. The effect is that the remaining tenants' pro-rata shares increase even though their actual space is unchanged. Inline tenants sometimes negotiate to have anchor RSF excluded from both the numerator and denominator to neutralize this effect. Landlords must track which tenants have anchor-exclusion protections and apply them consistently across all allocation calculations."
+
+  - q: "What is a CAM cap carryover and how does it affect reconciliation?"
+    a: "A cap carryover, also called a cumulative cap bank, allows the landlord to carry forward unused cap capacity from years when actual expense growth was below the cap ceiling. If a lease has a 5% cumulative cap and actual growth was 2% in Year 1, the landlord banks 3% for future use. In a high-expense year, the landlord can draw from the bank to recover expenses that would otherwise be blocked by the annual ceiling. Non-cumulative caps do not allow carryover: unused capacity expires at year end. The lease must specify which structure applies; courts generally treat a silent lease as non-cumulative."
+---
+
+<Alert type="info" title="Quick Answer">
+NNN lease CAM reconciliation is the annual process where a landlord calculates actual operating expenses, applies gross-up adjustments for occupancy, enforces lease cap provisions, and allocates each tenant's pro-rata share. It settles the difference between estimated payments collected and actual amounts owed.
+</Alert>
+
+## What Makes NNN Reconciliation Different
+
+A triple net lease shifts most property operating expenses directly to tenants. That transfer of cost creates a corresponding transfer of scrutiny: tenants pay close attention to what they are billed, lease audit clauses are standard, and billing errors hit tenant relationships and NOI directly.
+
+According to BOMA International, CAM reconciliation errors affect an estimated 25% to 30% of commercial leases in any given year. In a NNN structure, those errors are not absorbed by the landlord. They surface as disputes, audit demands, or tenant non-payment. Getting the reconciliation right from the start costs less than defending it afterward.
+
+The NNN reconciliation process has eight steps. Each step must be completed in sequence because errors compound: a mis-categorized expense in Step 2 flows through gross-up in Step 4, through caps in Step 5, and into every tenant's statement in Step 7.
+
+## The Core Formula
+
+Every NNN CAM allocation flows through one formula:
+
+```
+Tenant CAM = Grossed-Up CAM Pool × (Tenant RSF / Building Denominator RSF)
+```
+
+Where:
+- **Grossed-Up CAM Pool** = Total allowable CAM expenses after variable expense normalization and cap application
+- **Tenant RSF** = The tenant's rentable square footage as defined in the lease
+- **Building Denominator RSF** = The total rentable area used for allocation - which may exclude anchor tenant space, ground-floor retail, or other lease-defined exclusions
+- **Tenant CAM** = The tenant's gross annual CAM obligation before netting estimated payments collected
+
+The true-up balance is then:
+
+```
+True-Up Balance = Tenant CAM − Estimated Payments Collected During Year
+```
+
+A positive balance means the tenant owes additional payment. A negative balance means the landlord owes a refund.
+
+## The 8-Step NNN Reconciliation Process
+
+### Step 1: Close the GL and Categorize Expenses
+
+Pull the full general ledger for the reconciliation period (typically January 1 through December 31). Confirm that all invoices through December 31 have been posted and that no expenses from the prior year are included unless your lease uses an accrual basis.
+
+Categorize every GL line into one of three buckets:
+- **Includable CAM**: passes through to tenants per lease terms
+- **Excluded expenses**: expressly prohibited by lease (capital expenditures, management office improvements, leasing commissions)
+- **Allocated non-CAM**: property taxes and insurance if billed separately under the NNN structure
+
+Flag any late invoices received after year-end but covering in-year services. Most leases allow inclusion if posted within 60 to 90 days.
+
+### Step 2: Identify the Expense Pool and Apply Exclusions
+
+Review each lease for expense exclusions specific to that tenant. Common NNN exclusions include:
+
+- Capital expenditures (improvements with useful life greater than 1 year unless amortized per lease)
+- Depreciation on landlord equipment
+- Costs to lease vacant space (advertising, leasing commissions, tenant improvement allowances)
+- Environmental remediation from pre-existing conditions
+- Costs covered by insurance proceeds
+- Executive salaries above a specified threshold
+
+Build a master exclusion matrix listing every tenant and their specific excluded categories. An expense excluded for one tenant may be fully recoverable from another if their lease was negotiated differently.
+
+### Step 3: Separate Variable from Fixed Expenses
+
+Before applying gross-up, classify all includable CAM expenses as either variable or fixed:
+
+**Variable expenses** fluctuate with occupancy - cleaning, utilities, supplies, security in common areas used proportionally by occupants. These are subject to gross-up.
+
+**Fixed expenses** are the same regardless of occupancy - management fees (if percentage-based on a fixed structure), exterior lighting, landscaping of common areas not inside tenant spaces, parking lot maintenance. These are not grossed up.
+
+The lease should define which expenses are variable. When it does not, apply a reasonableness standard and document your classification rationale. Tenants' auditors will ask.
+
+### Step 4: Calculate Gross-Up for Variable Expenses
+
+Gross-up normalizes variable expenses to a standard occupancy level, protecting both landlord and tenant from occupancy-driven distortions.
+
+```
+Grossed-Up Variable Expenses = Actual Variable Expenses × (Target Occupancy % / Actual Occupancy %)
+```
+
+Where:
+- **Target Occupancy %** = The occupancy level specified in the lease, typically 90% or 95%
+- **Actual Occupancy %** = Average physical or economic occupancy during the reconciliation year
+
+Example: If actual variable expenses were $400,000, actual occupancy was 75%, and the lease specifies 95% gross-up target:
+
+```
+Grossed-Up Variable Expenses = $400,000 × (0.95 / 0.75) = $506,667
+```
+
+The gross-up adds $106,667 to the expense pool - but no tenant pays more than their proportionate share of the normalized pool. The adjustment ensures each tenant's share reflects what costs would have been at stabilized occupancy.
+
+### Step 5: Apply Cap Restrictions
+
+After gross-up, apply any cap provisions from individual leases. Caps limit how much a tenant's controllable CAM charges can increase year over year.
+
+**Non-cumulative cap**: Hard annual ceiling. If the cap is 5% and actual growth is 8%, the tenant pays only 5% more than last year's capped amount. Unused capacity does not carry forward.
+
+**Cumulative cap**: Unused capacity banks for future years. If actual growth is 2% against a 5% cap, the landlord banks 3% to draw down in a higher-expense year.
+
+Apply caps at the individual tenant level, not to the pool as a whole. Tenant A may have a 3% cap while Tenant B has no cap at all. Run the cap calculation for each tenant separately using their prior year's billable amount as the base.
+
+Document the cap calculation worksheet for every capped tenant - this is one of the most contested items in tenant audits.
+
+### Step 6: Update Pro-Rata Denominators
+
+The denominator - total building RSF used for allocation - must be verified before calculating any tenant's share. Changes that affect the denominator include:
+
+- New leases executed during the year
+- Lease expirations that removed tenants
+- Remeasurement under an updated BOMA standard
+- Recapture of tenant space by the landlord
+- Anchor exclusion adjustments per specific lease provisions
+
+Some leases require a fixed denominator set at lease commencement. Others specify that the denominator updates annually. Confirm which applies for each tenant before proceeding.
+
+If a tenant has an anchor exclusion clause, remove the anchor's RSF from the denominator before calculating that tenant's share. This increases their percentage and their bill. Make sure the exclusion is actually required by the lease language before applying it.
+
+### Step 7: Calculate Each Tenant's Allocation
+
+With the grossed-up, capped expense pool and verified denominators in place, calculate each tenant's annual CAM obligation:
+
+```
+Tenant CAM Obligation = Capped Grossed-Up Pool × (Tenant RSF / Denominator RSF)
+```
+
+Then net against estimated payments collected during the year:
+
+```
+True-Up Balance = Tenant CAM Obligation − Monthly Estimates Paid × 12
+```
+
+Run a sanity check: the sum of all tenant CAM obligations plus any landlord-retained vacancy load should reconcile back to the total includable expense pool before gross-up normalization. If it does not, a classification or denominator error exists.
+
+### Step 8: Prepare and Deliver the Reconciliation Statement
+
+Each tenant receives a statement that includes:
+
+1. Total includable CAM expenses for the reconciliation year, by category
+2. Gross-up calculation (if applicable), showing actual vs. target occupancy and the adjustment
+3. Cap calculation (if applicable), showing base year amount, cap ceiling, and actual expenses
+4. The denominator used for allocation and the tenant's RSF
+5. The tenant's resulting pro-rata percentage and gross annual obligation
+6. Monthly estimated payments collected during the year
+7. The true-up balance due or refund owed
+8. Payment due date and instructions
+9. The audit rights notice and window for the tenant to request documentation
+
+Deliver statements by the deadline specified in each lease. Most NNN leases require delivery within 90 to 120 days after year-end.
+
+## Reconciliation Timeline by Month
+
+| Month | Task |
+|-------|------|
+| January | Close December GL; confirm all year-end invoices posted; begin expense categorization |
+| February | Separate variable from fixed expenses; calculate gross-up; pull occupancy data |
+| February–March | Apply cap restrictions by tenant; verify denominators; calculate individual allocations |
+| March | Prepare draft statements; run reconciliation sanity checks; internal QA review |
+| March 31 / April 1 | Deliver final statements to tenants (confirm each lease's specific deadline) |
+| April–June | Handle tenant questions; process audit requests; collect true-up balances |
+
+## NNN-Specific Considerations
+
+### Anchor Exclusions
+
+Retail NNN properties frequently contain anchor tenants (major department stores, grocery chains) with lease provisions that exclude their RSF from the pro-rata denominator for inline tenants. The anchor pays its own separately negotiated CAM rate, often a flat dollar amount per square foot rather than a pro-rata share of actual expenses.
+
+The practical effect: inline tenants' denominator shrinks, raising their pro-rata percentage. A 50,000 RSF anchor in a 200,000 RSF building raises every inline tenant's share by 33% compared to what it would be if the anchor were in the denominator.
+
+Track anchor exclusions in your lease abstract database. They must be applied consistently every year and should be disclosed in the reconciliation statement so tenants can verify the calculation.
+
+### Tenant Audit Windows
+
+NNN leases almost universally include audit rights. The audit window (the period during which the tenant can demand an audit) typically begins at statement delivery and runs 90 to 180 days. Some leases specify 12 months.
+
+The landlord's production obligation during an audit typically includes:
+- GL detail by expense category
+- Vendor invoices and contracts
+- Insurance certificates and premium invoices
+- Property tax bills
+- Management fee calculation basis
+- Occupancy records used for gross-up
+- Cap calculation worksheets
+
+Production deadlines are usually 30 to 60 days from written audit notice. Landlords who cannot produce within that window risk waiver findings in arbitration.
+
+### Cap Carryover Across Years
+
+If any tenant has a cumulative cap, maintain a running bank balance that carries from year to year. The bank balance is not a liability on the landlord's books. It is a record of how much above-cap recovery has been earned but not yet billed.
+
+When a high-expense year allows drawing from the bank, document the draw in that year's reconciliation statement. Tenants who have tracked the bank themselves will verify it. Unexplained draws become audit findings.
+
+## Common NNN Reconciliation Errors
+
+| Error | Dollar Impact | Fix |
+|-------|--------------|-----|
+| Including capital expenditures in CAM pool without amortization | Overcharge; refund exposure plus interest | Review GL for items coded to repairs that should be capitalized; apply amortization per lease |
+| Gross-up applied to fixed expenses | Overcharge; inflates pool artificially | Re-categorize fixed vs. variable before calculating gross-up |
+| Using wrong denominator (ignoring anchor exclusion) | Undercharge to some tenants, overcharge to others | Pull exclusion clause from each lease; apply per lease terms |
+| Applying non-cumulative cap as cumulative | Landlord over-recovers; audit finding | Confirm cap type in lease language; do not assume cumulative unless stated |
+| Missing late invoices (posted after year-end close) | Under-recovery for landlord | Set a catch-up policy (60 to 90 days post-close); include or exclude per lease terms |
+| Using economic occupancy instead of physical occupancy for gross-up | Wrong gross-up denominator | Confirm lease definition of occupancy used for gross-up calculation |
+| Omitting the tenant audit rights notice | Procedural exposure; potential waiver argument by tenant | Include audit rights language in every statement delivery |
+
+## Preparing for Tenant Audit Requests
+
+The best defense against a costly tenant audit is documentation maintained year-round, not reconstructed under deadline. Build a reconciliation file for each property that includes:
+
+- Monthly GL exports (do not wait for year-end)
+- Vendor contracts with effective dates and rate schedules
+- Insurance renewal certificates and premium invoices as received
+- Property tax bills and any protest filings
+- Management fee calculation worksheets quarterly
+- Occupancy reports by month (used for gross-up)
+- Cap bank balance tracking sheet (for cumulative-cap tenants)
+
+When an audit notice arrives, you should be able to produce the full file within 30 days because it has been organized throughout the year.
+
+---
+
+**See how CapVeri automates reconciliation.** Upload your GL export and CapVeri runs the gross-up, cap, and allocation calculations, then generates tenant-ready statements with a full audit trail. [Start your free trial](/pricing)
+
+## Sources
+
+1. [Fiserv - Reconciliation whitepaper](https://www.fiserv.com/content/dam/fiserv-ent/archive-files/final-files/white-papers/Frontier-Reconciliation_whitepaper_1020.pdf)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

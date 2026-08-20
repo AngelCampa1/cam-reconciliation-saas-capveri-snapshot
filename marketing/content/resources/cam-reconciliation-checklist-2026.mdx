@@ -1,0 +1,210 @@
+---
+title: "CAM Reconciliation Checklist 2026: 25 Steps from GL Export to Tenant Statement"
+description: "A complete CAM reconciliation checklist covering every step from pulling the GL export to delivering tenant statements, built for property accountants managing commercial leases."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 230
+faq:
+  - q: "When should I start the CAM reconciliation checklist each year?"
+    a: "Most commercial leases require reconciliation statements within 90–120 days of year-end, so January 1 is your practical start date for December 31 fiscal-year properties. In practice, start the GL pull in the first week of January. If your lease pool includes tenants with fiscal years other than calendar year, stagger the checklist accordingly. Properties with March 31 or June 30 lease years need the same checklist applied to their GL period."
+  - q: "What GL accounts typically get excluded from CAM?"
+    a: "The most common exclusions are depreciation (non-cash), capital expenditures (one-time), ground rent paid by the landlord, executive salaries above the management fee cap, leasing commissions, and tenant improvement amortization. Your exclusion list should mirror the specific language in each lease. A grocery-anchored retail lease will have a much longer exclusion list than an office building lease, and the differences matter. Check the controllable vs non-controllable breakdown before you exclude anything."
+  - q: "How do I handle a mid-year lease commencement in the CAM reconciliation?"
+    a: "A tenant who commenced November 1 only owes CAM for November–December (2/12 of the annual pool, before pro-rata share math). Pull their lease commencement date from your lease abstract, compute days-in-period or months-in-period depending on lease language, and apply that fraction before calculating their pro-rata share of the annual pool. Most accounting systems handle this with a 'lease commencement' field. Verify the dates match your signed lease, not the system entry date."
+  - q: "What documentation should I retain after sending statements?"
+    a: "Keep the signed lease, all GL exports and supporting invoices, the gross-up calculation worksheet, the cap math worksheet, the pro-rata share denominator source (rent roll or GLA schedule), and a copy of the final statement with the delivery timestamp (email receipt or certified mail log). Most leases give tenants 12–24 months to dispute, and some jurisdictions give even longer. Store documentation for at least three years after the correction window closes."
+  - q: "Can CapVeri handle the full checklist workflow end-to-end?"
+    a: "Yes. CapVeri ingests your GL export (CSV from Yardi, MRI, or any system), maps expense accounts, applies lease-specific exclusions, runs gross-up math, computes pro-rata shares, and outputs a reconciliation package with an audit trail. You can run the entire checklist inside the platform and export tenant-ready statements directly. The audit trail documents every calculation step so you can respond to tenant disputes without rebuilding the spreadsheet."
+---
+
+<Alert type="info" title="Quick Answer">
+A complete CAM reconciliation checklist runs 25 steps from GL export to tenant statement delivery. The most frequently skipped steps are denominator verification (Step 11), gross-up application (Step 14), and cap carryforward math (Step 17). These are the three areas that generate the most tenant disputes.
+</Alert>
+
+## CAM Reconciliation Checklist: All 25 Steps
+
+CAM reconciliation is a sequential process. Skip a step early and you'll spend hours correcting downstream math. This checklist reflects the order that works in practice: GL first, lease terms second, math third, review last.
+
+If you're new to the process, start with [what is CAM reconciliation](/resources/common-area-maintenance-reconciliation-explained) before working through this checklist.
+
+---
+
+### Phase 1: Data Collection (Steps 1–6)
+
+**Step 1: Pull the full-year GL export**
+
+Export all expense accounts for the property for the full reconciliation year. Don't filter by account type yet. You need everything so you can verify exclusions against the raw data. Export format should include: account number, account name, transaction date, vendor, transaction amount, and any job or cost center codes.
+
+**Step 2: Confirm the reconciliation period**
+
+Check each lease for the reconciliation year definition. Most match the calendar year (January 1–December 31), but some use a fiscal year or the lease's own anniversary. A 50-tenant property might have three different reconciliation periods if you acquired it mid-year with prior-owner leases in place.
+
+**Step 3: Pull the rent roll with square footage**
+
+Get the rent roll as of the last day of the reconciliation period. You need each tenant's: name, suite number, lease square footage (rentable area), lease start and end date, and any co-tenancy provisions that affect their share. This is your denominator source.
+
+**Step 4: Pull signed lease abstracts for all tenants**
+
+Don't rely on the accounting system's lease flags. Go back to the signed lease abstract (or the lease itself) for each tenant and note:
+- Inclusion/exclusion list for CAM
+- Gross-up clause and occupancy threshold
+- Cap type (base year, fixed percentage, cumulative)
+- Audit rights window
+- Any carve-outs for anchor tenants or specific expense categories
+
+**Step 5: Identify prior-year reconciliation adjustments**
+
+If tenants received corrections from the prior year that weren't closed out, pull those figures. Prior-year credits applied against current-year CAM estimates need to be excluded from this year's reconciliation starting balance.
+
+**Step 6: Collect insurance and tax bills**
+
+Insurance and real estate taxes are almost always passed through but rarely sit in the same GL accounts as operating CAM. Pull the actual invoices for the year (not just the GL totals) so you can verify the amounts and confirm they match the property, not a neighboring parcel or corporate allocation.
+
+---
+
+### Phase 2: Expense Pool Preparation (Steps 7–13)
+
+**Step 7: Categorize expenses by inclusion/exclusion**
+
+Map every GL account against your standard inclusion/exclusion matrix. Flag accounts that are lease-specific. Some tenants exclude management fees, some don't. You'll split these later, but first get a full account-level classification. See [what is included in CAM expenses](/resources/what-is-included-in-cam-expenses) for a standard inclusion list.
+
+**Step 8: Remove capital expenditures**
+
+Capital items (roof replacements, HVAC system replacements, parking lot reconstruction) don't belong in operating CAM. If they're amortized and the lease permits amortized capex recovery, move them to a separate schedule. If not, remove them entirely. This is one of the [top 15 CAM billing errors](/resources/top-15-cam-billing-errors).
+
+**Step 9: Remove management fee overage**
+
+Many leases cap the management fee at 3–5% of operating expenses (sometimes 3% of gross revenues). Check the lease language. If actual management fees exceed the cap, remove the overage from the pool before any other math.
+
+**Step 10: Split controllable vs. non-controllable expenses**
+
+Some leases cap controllable expenses but not taxes or insurance. Separate your pool into: controllable (janitorial, landscaping, management, utilities, repairs) and non-controllable (insurance, real estate taxes, snow removal if specified). See [controllable vs non-controllable expenses](/resources/controllable-vs-non-controllable-expenses) for the standard breakdown.
+
+**Step 11: Verify the denominator (total leasable area)**
+
+This is the most common source of billing disputes. Your denominator is the total rentable area of the property used to compute each tenant's pro-rata share. Verify it against:
+- The lease definition (some leases use GLA, some use rentable area, some exclude anchor tenant space)
+- The current rent roll
+- The building's actual square footage certificate
+
+A 500,000 SF property where five tenants exclude their space from the denominator might have an effective denominator of 420,000 SF. Using 500,000 by default overbills every tenant. Review [pro-rata share calculation](/resources/pro-rata-share-calculation) for the full methodology.
+
+**Step 12: Compute each tenant's pro-rata share**
+
+Pro-rata share = tenant's rentable SF / denominator. For tenants with lease-specific denominator exclusions, compute a custom denominator for that tenant. Document the denominator used for each tenant. You'll need it if a tenant disputes their share.
+
+**Step 13: Check for partial-year tenants**
+
+Tenants who commenced or terminated mid-year owe CAM only for their occupancy period. Compute their fraction: days in occupancy / 365 (or months, per lease language). Apply this fraction to their pro-rata share before computing their final billing amount.
+
+---
+
+### Phase 3: Adjustments and Special Calculations (Steps 14–18)
+
+**Step 14: Apply gross-up if required**
+
+If the property was less than the occupancy threshold specified in the lease (typically 90–95%), and the lease has a gross-up clause, you must gross up variable CAM expenses to the threshold occupancy level. This prevents tenants from getting a windfall reduction just because the building had vacancies. The math: gross-up amount = (variable expense / actual occupancy %) × gross-up occupancy %.
+
+Example: $180,000 in variable janitorial expenses at 80% occupancy grossed up to 95%: ($180,000 / 0.80) × 0.95 = $213,750.
+
+See the [CAM gross-up calculation guide](/resources/cam-gross-up-calculation-guide) for worked examples with different expense categories.
+
+**Step 15: Apply CAM caps**
+
+Caps limit the year-over-year increase in controllable CAM. Three cap types exist: base year, fixed percentage, and cumulative. Each requires different math:
+
+- **Base year cap**: Current year expenses ÷ base year expenses = increase %. If that exceeds the cap %, apply the cap.
+- **Fixed percentage cap**: Current year controllable CAM cannot exceed prior year × (1 + cap %).
+- **Cumulative cap**: Track the compounded allowable increase from the base year.
+
+See [CAM cap types](/resources/cam-cap-types) for detailed math on each type.
+
+**Step 16: Apply gross-up before or after the cap?**
+
+Check the lease. Most leases specify "gross-up applies to the same expenses subject to the cap." If so, gross-up first, then test against the cap. If the lease is silent, apply the cap to actual expenses (not grossed-up). This is the tenant-favorable interpretation and avoids disputes.
+
+**Step 17: Compute cap carryforward if applicable**
+
+Cumulative caps create a carryforward bank. If the allowed increase this year exceeds the actual increase, the landlord can bank the difference and apply it in a future year. Track this in a separate schedule by lease. Losing the carryforward schedule is a common landlord error that leaves money on the table.
+
+**Step 18: Reconcile against estimated payments**
+
+Every tenant paid monthly CAM estimates throughout the year. Pull the total collected from each tenant. Their final settlement = actual CAM charge − total estimates paid. Positive = tenant owes a true-up. Negative = landlord owes a credit. Cross-reference with [CAM true-up](/resources/cam-true-up) for how to handle credits.
+
+---
+
+### Phase 4: Review and Quality Control (Steps 19–22)
+
+**Step 19: Run a variance analysis vs. prior year**
+
+Compare this year's per-SF CAM cost to last year's for each expense category. Flag any category that moved more than 15% without a known cause (new vendor contract, capital reclassification, property expansion). Unexplained variance is what tenants audit first. See [CAM variance analysis](/resources/cam-variance-analysis) for the full methodology.
+
+**Step 20: Cross-check the total pool against GL totals**
+
+Sum your post-adjustment pool and reconcile it back to the GL. The total of all tenant charges (adjusted for partial-year and cap) should not exceed your final pool amount. If it does, you have a denominator or math error. If it's less, verify you're not missing any tenants or that the anchor exclusions are correct.
+
+**Step 21: Verify the tenant statement format**
+
+Each tenant's statement should show:
+- Total CAM pool (and any excluded items, if the lease requires disclosure)
+- Tenant's pro-rata share percentage and its basis
+- Gross-up calculation (if applied)
+- Cap calculation (if applied)
+- Total actual CAM charge
+- Total estimated payments made
+- Net amount due or credit owed
+
+Check your [CAM statement](/resources/cam-statement) template against this list before mass-generating statements.
+
+**Step 22: Legal and lease deadline review**
+
+Pull the notification deadline from each lease. Most require statements within 90–120 days of year-end. Some leases specify that late statements are non-binding or that the tenant can withhold payment for late delivery. Mark the deadline on the cover page of every statement.
+
+---
+
+### Phase 5: Statement Delivery and Follow-Up (Steps 23–25)
+
+**Step 23: Generate the reconciliation package**
+
+A [defensible reconciliation package](/resources/defensible-reconciliation-package) includes: the statement, the GL backup, the cap calculation worksheet, the gross-up calculation worksheet, and the pro-rata share denominator documentation. Bundle these together. Tenants who receive complete backup dispute less often.
+
+**Step 24: Deliver statements with delivery confirmation**
+
+Send via email with read receipt or certified mail. Timestamp the delivery. For tenants with audit rights windows triggered by statement delivery (common in retail leases), the delivery date starts the clock. Log delivery confirmation for every tenant.
+
+**Step 25: Track settlement payments and credits**
+
+Set a receivables target date (usually 30 days after statement). Log payments received. For credit tenants, issue the credit against their next month's rent per the lease terms. Flag any tenant who hasn't paid or acknowledged within 45 days. They may be building toward a formal [CAM charges dispute](/resources/cam-charges-dispute-process).
+
+---
+
+## Common Failure Points
+
+Three steps account for most CAM reconciliation disputes:
+
+| Step | Common Error | Consequence |
+|------|-------------|-------------|
+| Step 11 (Denominator) | Using total building SF instead of lease-defined denominator | Systematic overbilling across all tenants |
+| Step 14 (Gross-up) | Grossing up fixed expenses (janitorial management, not just variable labor) | Overstatement of grossed-up pool |
+| Step 17 (Cap carryforward) | Losing the cumulative carryforward schedule | Under-recovery in low-increase years |
+
+For a deeper review of billing errors and how they generate disputes, see [common CAM reconciliation errors](/blog/cam-reconciliation-errors-guide) and [CAM reconciliation best practices](/blog/cam-reconciliation-best-practices-guide).
+
+---
+
+## Using This Checklist with CapVeri
+
+CapVeri structures the reconciliation process around this exact sequence. You import your GL export, map accounts to the inclusion/exclusion matrix, configure gross-up and cap parameters per lease, and the platform runs Steps 7–18 automatically, with a full audit trail for each calculation.
+
+The [CAM expense reconciliation process](/resources/cam-expense-reconciliation-process) resource walks through how each phase maps to the platform workflow.
+
+Start with the [CAM reconciliation template](/tools/cam-reconciliation-template) to see the checklist structure in a spreadsheet format before moving to the full platform.
+
+You can also use the [audit risk quiz](/tools/audit-risk-quiz) to identify which steps in your current process carry the highest dispute risk.
+
+## Sources
+
+1. [Fiserv - Reconciliation whitepaper](https://www.fiserv.com/content/dam/fiserv-ent/archive-files/final-files/white-papers/Frontier-Reconciliation_whitepaper_1020.pdf)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

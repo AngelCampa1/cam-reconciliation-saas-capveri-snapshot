@@ -1,0 +1,113 @@
+---
+title: "GL Coding Guide for CAM Recoverable Expenses"
+description: "GL coding guide for CAM recoverable expenses: categorized reference for property accountants covering recoverable costs, capital exclusions, and gray-area disputes."
+datePublished: "2026-01-15"
+dateModified: "2026-02-24"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+buttonText: "Fix Coding Errors"
+order: 5
+faq:
+  - question: "Which GL codes should stay out of the CAM pool by default?"
+    answer: "Capital replacements, landlord overhead, software subscriptions, leasing costs, and other non-operating items should default to non-recoverable unless the lease explicitly says otherwise."
+  - question: "What is the fastest way to challenge a suspicious CAM code?"
+    answer: "Pull the invoice, tie it to the GL code used in the reconciliation, and compare the scope of work against the lease plus IRS and BOMA treatment for repair versus capital."
+  - question: "Why does miscoding create multi-year CAM exposure?"
+    answer: "A miscoded expense inflates the recoverable base year or annual actuals, and that error compounds into later cap calculations, escalations, and audit disputes."
+---
+
+GL code is the first and last line of defense in a CAM dispute. One wrong account code turns a routine invoice into a multi-year liability.
+
+<Alert type="info" title="How to Use This Guide">
+Three sections: **Clearly Recoverable** (6000-series), **Non-Recoverable Capital** (1000/7000-series), and **Gray-Area** with decision rules. The governing standard cited for each row is the fastest path to audit defense. When in doubt, default to non-recoverable. The burden of proof sits with the landlord.
+</Alert>
+
+## 1. Clearly Recoverable Operating Expenses
+
+These expenses pass through to tenants under a standard NNN lease. They survive the IRS §162 / BOMA EER test because they keep the property in its ordinary operating condition without extending its designed useful life.
+
+| GL Code | Expense Category | Typical Examples | Governing Standard |
+|---------|-----------------|-----------------|-------------------|
+| `6110` | R&M: Roof | Patching, flashing repair, gutter clearing | IRS §162 routine maintenance |
+| `6120` | R&M: HVAC | Annual PM contracts, coil cleaning, single RTU in multi-unit system | IRS Routine Maintenance Safe Harbor (UOP doctrine: one of several units) |
+| `6130` | R&M: Parking Lot | Sealcoating, restriping, pothole fill, crack seal | IRS §162 |
+| `6140` | Landscaping | Mowing, weeds, seasonal annuals, mulch, irrigation PM | Industry standard / BOMA EER |
+| `6150` | Security Services | Guard wages, monthly monitoring, alarm response fees | BOMA EER |
+| `6510` | Real Estate Taxes | Municipal property taxes, special assessments | NNN lease standard; uncontrollable |
+| `6520` | Property Insurance | Hazard, fire, liability premiums | NNN lease standard; uncontrollable |
+| `6530` | Common Area Utilities | Lobby/lot electricity, water, gas | NNN lease standard; uncontrollable |
+| `6810` | Amortized Cost-Saving CapEx | Annual fraction of LED retrofit or efficient HVAC replacement | BOMA exception: cost-saving capital, amortized over useful life |
+
+<Alert type="warning" title="Note">
+Items 6100–6150 are controllable and typically subject to tenant-negotiated annual caps (3–5%). Items 6500–6530 are uncontrollable and pass through uncapped. Never commingle these in the same parent account.
+</Alert>
+
+## 2. Clearly Non-Recoverable Capital Expenses
+
+These must post to 1000-series asset accounts or 7000-series non-recoverable accounts. Under IRS §263(a), they represent a Betterment, Restoration, or Adaptation (BRA) to the Unit of Property. They are capitalized, not expensed.
+
+| GL Code | Expense Category | Typical Examples | Why It's Capital |
+|---------|-----------------|-----------------|-----------------|
+| `1510` | Roof & Structural Replacements | Full tear-off, new membrane, structural overhaul | IRS §263(a): Restoration of major building component |
+| `1520` | HVAC Capital | Sole-chiller replacement, complete ductwork overhaul, all RTUs replaced simultaneously | IRS §263(a): Restoration of HVAC UOP |
+| `1530` | Land & Parking Improvements | Mill-and-overlay, full-depth repave, new parking structure | IRS §263(a): Betterment/Restoration |
+| `1540` | Security Hardware | CCTV network, biometric turnstiles, access control wiring | Long-term fixed asset (MACRS 7 yr); not a service |
+| `1550` | Major Landscape Redesign | New irrigation system, mature trees, retaining walls, hardscape | Adaptation to new use (IRS BRA test) |
+| `7110` | Leasing Commissions | Broker fees, TI allowances, marketing | Landlord cost; no operating benefit to tenants |
+| `7120` | Software Subscriptions | Yardi/MRI SaaS, corporate IT | Admin overhead unless lease explicitly permits |
+| `7130` | Off-Site Management Payroll | Executive salaries, corporate accounting staff | Landlord overhead; double-dip risk with admin fee |
+
+<Alert type="warning" title="Rule">
+These must never land in a 6000-series recoverable pool. If they appear there, they are a misclassification. This is the most common finding in contested CAM audits.
+</Alert>
+
+## 3. Gray-Area Expenses
+
+Classification depends on the scope of work and the IRS Unit of Property (UOP) doctrine. The same category of work can be operating or capital, depending on magnitude and intent.
+
+| Expense | Recoverable If… | Non-Recoverable If… | Default GL Code |
+|---------|----------------|---------------------|----------------|
+| Roof work | Localized repair - patching, flashing, gutter clear | Full membrane replacement or structural scope | `6110 / 1510` |
+| HVAC work | Single component in multi-unit system; routine PM | Only chiller replaced or all units replaced simultaneously | `6120 / 1520` |
+| Parking lot | Sealcoat, restripe, potholes, crack seal | Mill-and-overlay or sub-base excavation | `6130 / 1530` |
+| Landscaping | Routine mowing, planting, mulch, irrigation PM | New irrigation system, hardscape redesign, or mature trees installed | `6140 / 1550` |
+| Security | Monthly monitoring contracts or guard wages | Initial hardware purchase and installation | `6150 / 1540` |
+| PropTech / SaaS | If lease explicitly lists "technology infrastructure" | No explicit lease language - default non-recoverable | `7120` |
+| Admin overhead | On-site maintenance/engineer wages, direct mgmt fee (3–5%) | Charging admin fee AND exec salaries simultaneously (double-dip) | `6140–7130` |
+
+<Alert type="info" title="Default rule">
+When in doubt, classify as non-recoverable. In a contested audit the burden of proof sits with the landlord, not the tenant.
+</Alert>
+
+## How Miscoding Snowballs
+
+**Year 1:** An $80,000 HVAC chiller replacement posts to 6120 R&M instead of 1520 Capital. It flows into the CAM pool. Tenant gets billed their pro-rata share.
+
+**Years 2–4:** Tenant pays without protest. The misclassified line is now embedded in prior-year actuals, forming the base against which cumulative CAM caps compound. Each year the landlord marks up from a fraudulently inflated base.
+
+**Year 5:** Tenant exercises audit rights (lease typically allows 1–3 year lookback). Auditor pulls the original invoice, sees the HVAC model number, cross-references capital asset life, and calls it capital. Flag is raised.
+
+**Dispute mechanics:** Landlord now owes: (a) principal refund for all open audit years, (b) interest on overbilled amounts, (c) tenant's audit costs if the lease so provides, and (d) attorney's fees if it goes to litigation.
+
+**Statute of limitations trap:** Many jurisdictions allow claims 3–6 years back. A single bad code in Year 1 can generate exposure through Year 6. The longer it compounds undetected, the larger the bleed.
+
+**The admin fee amplifier:** If a 15% administrative fee was applied on top of the misfiled expense, every dollar of principal error generated $1.15 of billed overcharge. Courts in litigated audits award the inflated amount back, including the markup.
+
+<Alert type="tip" title="Prevention">
+A clean chart of accounts (strict 1000/6000/7000 separation with no exceptions at invoice entry) eliminates all downstream compounding. The cost of one minute of correct GL coding at posting time is zero. The cost of correcting it in Year 5 of litigation is not.
+</Alert>
+
+See also: [CAM Pre-Send Checklist](/resources/cam-pre-send-packet-checklist) | [CAM Billing Error Estimator](/tools/cam-billing-error-estimator)
+
+<CTABox
+  title="Catch Misclassifications Before They Compound"
+  description="CapVeri cross-references every GL line against BOMA 2024 standards and IRS §263(a) rules to flag capital expenses hiding in your recoverable pool."
+  utmContent="u_cta"
+  buttonText="Fix Coding Errors"
+/>
+
+## Sources
+
+1. IRS §162 routine maintenance safe harbor - [Cornell Law](https://www.law.cornell.edu/uscode/text/26/162)
+2. IRS §263(a) capital expenditures - [Cornell Law](https://www.law.cornell.edu/uscode/text/26/263)
+3. BOMA EER standards - [BOMA](https://boma.org/boma-standards/)

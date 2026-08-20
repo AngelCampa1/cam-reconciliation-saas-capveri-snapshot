@@ -1,0 +1,12 @@
+{
+  "error_type": "structural",
+  "description": "Completely empty CSV file (0 bytes)",
+  "parseable": false,
+  "expected_behavior": "Parser should detect empty file and return error",
+  "expected_errors": [
+    "File is empty or could not be parsed"
+  ],
+  "expected_rows": 0,
+  "valid_rows": 0,
+  "invalid_rows": 0
+}

@@ -1,0 +1,731 @@
+{
+  "lastUpdated": "2026-05-08",
+  "categories": [
+    {
+      "slug": "property-taxes",
+      "name": "Property Taxes",
+      "definition": "Ad valorem taxes levied by local jurisdictions based on the assessed value of real property. Property taxes fund local government services including schools, fire departments, police, and infrastructure. They are assessed annually and typically paid in installments.",
+      "typicalGlCodes": [
+        "6110 - Real Estate Taxes",
+        "6115 - Special Assessments",
+        "6120 - Tax Protest Fees"
+      ],
+      "recoverableComponents": [
+        "Base property tax",
+        "Special assessments (if lease allows)",
+        "Tax protest fees (if successful)",
+        "Supplemental tax bills from reassessment"
+      ],
+      "nonRecoverableComponents": [
+        "Penalties for late payment",
+        "Interest on delinquent taxes",
+        "Tax attorney fees for unsuccessful protests"
+      ],
+      "commonLeaseLanguage": "Tenant shall pay Tenant's Proportionate Share of Real Estate Taxes, defined as all taxes, assessments, and governmental charges levied upon or with respect to the Building and Land, including any tax levied in whole or in part in lieu thereof.",
+      "allocationMethod": "Pro-rata by rentable square footage. Not subject to gross-up (taxes are a fixed cost that does not vary with occupancy). Some leases allocate property taxes based on assessed value allocation between retail, office, and other uses in mixed-use buildings.",
+      "benchmarksPerSF": {
+        "office": 4.5,
+        "retail": 3.25,
+        "industrial": 1.75,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Incorrectly grossing up property taxes (taxes are a fixed cost)",
+        "Failing to credit tax protest refunds back to tenants",
+        "Double-counting supplemental tax bills",
+        "Including land taxes for undeveloped parcels in the building's tax pool"
+      ],
+      "yoyTrends": "Property taxes have increased 5-8% annually in major metros since 2020, driven by rising assessed values. Some jurisdictions cap annual increases (California Prop 13, Texas SB 2) while others allow uncapped reassessment. Tenants are increasingly negotiating tax caps or base-year stops.",
+      "notes": "Property taxes are typically the largest single line item in CAM pools, comprising 30-40% of total operating expenses. Tax protest activity has increased significantly, and landlords should pass through refunds to tenants within 60 days of receipt. Many leases require landlords to make reasonable efforts to protest assessments.",
+      "relatedResources": [
+        "/blog/property-tax-appeal-cam-impact",
+        "/blog/2026-property-tax-increases",
+        "/resources/lease-clauses/cumulative-cam-cap"
+      ],
+      "relatedTools": [
+        "/tools/hcad-tax-normalizer",
+        "/tools/noi-impact-calculator"
+      ]
+    },
+    {
+      "slug": "building-insurance",
+      "name": "Building Insurance",
+      "definition": "Property and liability insurance coverage maintained by the landlord to protect the building, common areas, and the landlord's interest. Includes property (fire, wind, flood), general liability, umbrella/excess liability, and may include terrorism, earthquake, and environmental coverage.",
+      "typicalGlCodes": [
+        "6210 - Property Insurance",
+        "6215 - Liability Insurance",
+        "6220 - Umbrella/Excess Insurance",
+        "6225 - Terrorism Insurance"
+      ],
+      "recoverableComponents": [
+        "Property insurance premiums",
+        "General liability insurance",
+        "Umbrella/excess liability",
+        "Terrorism insurance (if required by lender)",
+        "Earthquake/flood insurance (if required)"
+      ],
+      "nonRecoverableComponents": [
+        "Landlord's loss of rent insurance (benefits landlord only)",
+        "Construction-period insurance",
+        "Insurance deductibles (varies by lease)",
+        "Director & officer insurance"
+      ],
+      "commonLeaseLanguage": "Tenant shall pay Tenant's Proportionate Share of Insurance Costs, defined as all premiums and costs for insurance maintained by Landlord with respect to the Building, including property, liability, umbrella, and such other coverages as Landlord reasonably determines necessary.",
+      "allocationMethod": "Pro-rata by rentable square footage. Insurance is a fixed cost, not subject to gross-up regardless of occupancy level. Some leases allow landlords to charge higher rates to tenants whose operations increase the building's risk profile (restaurants, chemical storage).",
+      "benchmarksPerSF": {
+        "office": 1.25,
+        "retail": 0.95,
+        "industrial": 0.65,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Grossing up insurance premiums (insurance is a fixed cost)",
+        "Including loss-of-rent insurance in recoverable costs",
+        "Passing through insurance deductibles as CAM without lease authority",
+        "Failing to rebid insurance competitively, resulting in above-market premiums"
+      ],
+      "yoyTrends": "Commercial property insurance rates increased 15-25% in 2023-2024, driven by catastrophic weather events, rising replacement costs, and insurer exits from high-risk markets. Coastal and wildfire-prone properties have seen 30-50% increases. Landlords are increasingly self-insuring higher deductibles to manage premium costs.",
+      "notes": "Insurance is the CAM line item most affected by factors beyond the landlord's control. Tenants should verify that the landlord is obtaining competitive quotes and not over-insuring the property. Some sophisticated tenants negotiate insurance audit rights or require the landlord to obtain at least three competitive bids annually.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    },
+    {
+      "slug": "janitorial",
+      "name": "Janitorial / Cleaning Services",
+      "definition": "Regular cleaning and maintenance of common areas and (in full-service leases) tenant suites. Includes nightly cleaning, restroom maintenance, floor care, window washing, and day porter services for lobbies and common areas.",
+      "typicalGlCodes": [
+        "6310 - Janitorial Services",
+        "6315 - Janitorial Supplies",
+        "6320 - Window Cleaning",
+        "6325 - Day Porter Services",
+        "6330 - Floor Care / Carpet Cleaning"
+      ],
+      "recoverableComponents": [
+        "Common area nightly cleaning",
+        "Restroom cleaning and supplies",
+        "Common area day porter services",
+        "Periodic floor care (stripping, waxing)",
+        "Window washing (interior and exterior)",
+        "Trash removal from common areas"
+      ],
+      "nonRecoverableComponents": [
+        "Above-standard cleaning (requested by specific tenants)",
+        "Construction cleanup",
+        "Move-in/move-out cleaning",
+        "Cleaning of vacant suites (varies by lease)"
+      ],
+      "commonLeaseLanguage": "Landlord shall provide janitorial services to the Common Areas and the Premises five (5) nights per week, exclusive of holidays, in accordance with the cleaning specifications attached as Exhibit C.",
+      "allocationMethod": "Pro-rata by rentable square footage for common area janitorial. Subject to gross-up: janitorial is a variable expense that decreases with vacancy (fewer occupied suites to clean, fewer restroom users). Standard gross-up to 90-95% occupancy.",
+      "benchmarksPerSF": {
+        "office": 2.75,
+        "retail": 0.85,
+        "industrial": 0.35,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Failing to gross up janitorial costs when occupancy drops below 90%",
+        "Including above-standard cleaning charges in the CAM pool",
+        "Charging for vacant-suite cleaning without lease authority",
+        "Not adjusting when the cleaning contract is renegotiated at lower rates"
+      ],
+      "yoyTrends": "Janitorial costs have increased 10-15% since 2020 due to labor shortages, minimum wage increases, and enhanced cleaning standards established during COVID-19. Day porter services have become standard in Class A buildings, adding $0.50-1.00/SF to janitorial costs.",
+      "notes": "Janitorial is the prototypical gross-up expense: it is clearly variable with occupancy. If a 100,000 SF building is 80% occupied, the janitorial contract may be $220,000 (cleaning 80,000 SF of suites plus common areas). Grossing up to 95% occupancy estimates $261,250, ensuring existing tenants pay their fair share rather than subsidizing vacant space.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "landscaping",
+      "name": "Landscaping & Grounds Maintenance",
+      "definition": "Maintenance of exterior grounds including lawn care, plant maintenance, irrigation, tree trimming, seasonal planting, and hardscape maintenance. Applies to office parks, retail centers, and any property with landscaped common areas.",
+      "typicalGlCodes": [
+        "6410 - Landscaping Contract",
+        "6415 - Irrigation System Maintenance",
+        "6420 - Tree Service",
+        "6425 - Seasonal Plantings"
+      ],
+      "recoverableComponents": [
+        "Regular lawn and plant maintenance",
+        "Irrigation system maintenance and water",
+        "Seasonal flower planting and mulching",
+        "Tree trimming and maintenance",
+        "Hardscape cleaning and repair"
+      ],
+      "nonRecoverableComponents": [
+        "Initial landscaping installation (capital)",
+        "Major irrigation system replacement (capital)",
+        "Landscape redesign or enhancement (capital)",
+        "Landscaping for undeveloped parcels"
+      ],
+      "commonLeaseLanguage": "Operating Expenses shall include all costs of maintaining and repairing the exterior grounds, landscaping, irrigation systems, walkways, and hardscape areas of the Property.",
+      "allocationMethod": "Pro-rata by rentable square footage across all building tenants. In multi-building campuses, landscaping may be allocated based on building frontage or lot area rather than interior SF. Semi-variable expense: may be subject to gross-up if contract scales with occupied buildings in a campus.",
+      "benchmarksPerSF": {
+        "office": 0.85,
+        "retail": 0.65,
+        "industrial": 0.3,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Including landscape capital improvements (new plantings, redesign) as operating expenses",
+        "Allocating campus landscaping only to occupied buildings rather than all buildings",
+        "Failing to separate irrigation water costs from building utility costs",
+        "Charging premium landscaping (water features, rooftop gardens) without lease authority"
+      ],
+      "yoyTrends": "Landscaping costs have risen moderately (3-5% annually) with labor inflation. Water costs have increased significantly in drought-prone regions (California, Southwest), driving adoption of xeriscaping and smart irrigation. ESG requirements are pushing landlords toward native plantings and reduced chemical use.",
+      "notes": "Landscaping is generally a fixed-cost contract that does not vary with occupancy, making gross-up inappropriate in most cases. However, in campus environments where landscaping contracts scale with the number of occupied buildings, it may have a variable component.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    },
+    {
+      "slug": "security",
+      "name": "Security Services",
+      "definition": "Physical security and access control for the building and common areas. Includes lobby security officers, patrol services, CCTV monitoring, access control systems, and visitor management. May include off-duty police for retail properties.",
+      "typicalGlCodes": [
+        "6510 - Security Guard Services",
+        "6515 - Security Systems Maintenance",
+        "6520 - Access Control",
+        "6525 - CCTV Monitoring"
+      ],
+      "recoverableComponents": [
+        "Lobby security officers",
+        "Patrol services (interior and exterior)",
+        "CCTV system monitoring and maintenance",
+        "Access control system maintenance",
+        "Visitor management system costs"
+      ],
+      "nonRecoverableComponents": [
+        "Capital security system installation",
+        "Security for construction projects",
+        "Tenant-specific security (executive protection)",
+        "Security system upgrades (capital vs. maintenance distinction)"
+      ],
+      "commonLeaseLanguage": "Operating Expenses shall include all costs of providing security services for the Building and Common Areas, including security personnel, monitoring systems, access control, and related equipment maintenance.",
+      "allocationMethod": "Pro-rata by rentable square footage. Security is generally a fixed cost (the guard is posted regardless of occupancy), so gross-up is typically not appropriate. However, in buildings where security staffing scales with occupancy (adding guards as floors are occupied), it may have a variable component.",
+      "benchmarksPerSF": {
+        "office": 1.5,
+        "retail": 1.25,
+        "industrial": 0.45,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Grossing up security costs when they are fixed regardless of occupancy",
+        "Including capital security upgrades (new camera system) as operating expenses",
+        "Charging tenants for security services in areas they cannot access",
+        "Failing to separate after-hours security charges from base building security"
+      ],
+      "yoyTrends": "Security costs have increased 8-12% annually, driven by wage increases for security personnel and rising technology costs. AI-powered surveillance and automated access control are beginning to reduce headcount in some buildings, but implementation costs are typically capital, not operating expenses.",
+      "notes": "Security is a nuanced CAM category because it straddles the line between fixed and variable costs. A building with 24/7 lobby security incurs the same cost at 60% occupancy as at 95% occupancy. However, buildings in high-crime areas or with retail components may scale security with occupancy or seasonal traffic.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    },
+    {
+      "slug": "utilities-common-area",
+      "name": "Utilities (Common Area)",
+      "definition": "Electricity, gas, water, and sewer charges for building common areas including lobbies, corridors, restrooms, parking structures, exterior lighting, and shared mechanical systems. Does not include individually metered tenant utilities.",
+      "typicalGlCodes": [
+        "6610 - Electricity (Common Area)",
+        "6615 - Gas (Common Area)",
+        "6620 - Water / Sewer (Common Area)",
+        "6625 - Exterior Lighting"
+      ],
+      "recoverableComponents": [
+        "Common area electricity (lobbies, corridors, restrooms)",
+        "Exterior and parking lighting",
+        "Common area HVAC energy costs",
+        "Elevator energy consumption",
+        "Water for landscaping irrigation and restrooms"
+      ],
+      "nonRecoverableComponents": [
+        "Individually metered tenant electricity",
+        "Utility deposits",
+        "Late payment penalties on utility bills",
+        "Utility costs for vacant suites (varies by lease)"
+      ],
+      "commonLeaseLanguage": "Operating Expenses shall include all costs of utilities furnished to the Common Areas of the Building and Property, including electricity, gas, water, sewer, and any energy surcharges or demand charges.",
+      "allocationMethod": "Pro-rata by rentable square footage for common area utilities. Subject to gross-up: common area utility consumption varies with occupancy (more restroom usage, more elevator trips, more lobby activity with higher occupancy). Typically grossed up to 90-95% occupancy.",
+      "benchmarksPerSF": {
+        "office": 2.5,
+        "retail": 1.75,
+        "industrial": 0.85,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Including individually metered tenant utility costs in common area CAM",
+        "Failing to gross up common area utilities when occupancy is below 90%",
+        "Misallocating HVAC energy between tenant-metered and common area portions",
+        "Including utility costs for building systems serving only vacant floors"
+      ],
+      "yoyTrends": "Common area utility costs have increased 6-10% annually due to energy price volatility and grid infrastructure surcharges. Many landlords are investing in LED retrofits, smart building systems, and on-site solar to reduce costs. Green lease provisions increasingly allow landlords to pass through capital energy investments that reduce operating costs.",
+      "notes": "Common area utilities are one of the most frequently disputed CAM items because the line between 'common area' and 'tenant' consumption is often blurred, especially in buildings without comprehensive sub-metering. Best practice is to install sub-meters on each floor and major system to accurately separate common area from tenant consumption.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    },
+    {
+      "slug": "hvac-maintenance",
+      "name": "HVAC Maintenance",
+      "definition": "Maintenance, repair, and operation of heating, ventilation, and air conditioning systems serving the building's common areas and base building infrastructure. Includes preventive maintenance contracts, filter replacement, coil cleaning, controls calibration, and non-capital repairs.",
+      "typicalGlCodes": [
+        "6710 - HVAC Maintenance Contract",
+        "6715 - HVAC Repairs",
+        "6720 - HVAC Filters and Supplies",
+        "6725 - Controls / BMS Maintenance"
+      ],
+      "recoverableComponents": [
+        "Preventive maintenance contracts",
+        "Filter replacement",
+        "Coil cleaning",
+        "Belt and motor replacement (non-capital)",
+        "Controls calibration and BMS maintenance",
+        "Refrigerant recharging"
+      ],
+      "nonRecoverableComponents": [
+        "HVAC system replacement (capital)",
+        "Chiller or boiler replacement (capital)",
+        "Rooftop unit replacement (capital)",
+        "Initial system commissioning"
+      ],
+      "commonLeaseLanguage": "Operating Expenses shall include all costs of maintaining, repairing, and operating the Building's heating, ventilation, and air conditioning systems, exclusive of capital replacements which shall be amortized over their useful life as permitted herein.",
+      "allocationMethod": "Pro-rata by rentable square footage for base building HVAC maintenance. Subject to gross-up: HVAC maintenance costs increase with occupancy (more runtime hours, faster filter fouling, higher demand on chillers). After-hours HVAC is typically billed directly to requesting tenants, not through CAM.",
+      "benchmarksPerSF": {
+        "office": 1.75,
+        "retail": 0.9,
+        "industrial": 0.4,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Including HVAC replacement costs (capital) in operating expenses without proper amortization",
+        "Failing to gross up HVAC maintenance when occupancy is low",
+        "Charging after-hours HVAC through CAM instead of directly to the requesting tenant",
+        "Including tenant-specific supplemental HVAC maintenance in the common CAM pool"
+      ],
+      "yoyTrends": "HVAC maintenance costs have risen 5-8% annually due to technician labor shortages, refrigerant regulation (HFC phase-down), and aging building systems. The transition from R-22 to newer refrigerants has increased costs for older systems. Smart building and IoT monitoring are reducing emergency repair costs through predictive maintenance.",
+      "notes": "HVAC is the most technically complex CAM category and the most common source of capital-vs-operating disputes. Landlords must carefully distinguish between maintenance (operating) and replacement (capital). Many leases allow amortization of capital HVAC expenditures over useful life, effectively smoothing major replacements into annual operating expenses.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    },
+    {
+      "slug": "elevator-maintenance",
+      "name": "Elevator & Escalator Maintenance",
+      "definition": "Maintenance, repair, and inspection of vertical transportation systems including passenger elevators, freight elevators, escalators, and moving walkways. Includes service contracts, annual inspections, code compliance, and non-capital repairs.",
+      "typicalGlCodes": [
+        "6810 - Elevator Maintenance Contract",
+        "6815 - Elevator Repairs",
+        "6820 - Escalator Maintenance",
+        "6825 - Elevator Inspection Fees"
+      ],
+      "recoverableComponents": [
+        "Full-service maintenance contracts",
+        "Annual state/local inspections",
+        "Code compliance upgrades (non-capital)",
+        "Emergency service calls",
+        "Cab interior maintenance and cleaning"
+      ],
+      "nonRecoverableComponents": [
+        "Elevator modernization (capital)",
+        "New elevator installation (capital)",
+        "Cab interior renovation (capital)",
+        "Machine room structural modifications"
+      ],
+      "commonLeaseLanguage": "Operating Expenses shall include all costs of maintaining, repairing, inspecting, and operating the Building's elevator and escalator systems, including service contracts, inspections, and emergency service, exclusive of capital modernization.",
+      "allocationMethod": "Pro-rata by rentable square footage for passenger elevators. Freight elevator costs may be allocated only to tenants with freight elevator access. Fixed cost, not subject to gross-up (the maintenance contract covers all elevators regardless of how many floors are occupied).",
+      "benchmarksPerSF": {
+        "office": 1.1,
+        "retail": 0.25,
+        "industrial": 0.15,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Grossing up elevator maintenance (it is a fixed-cost contract)",
+        "Including elevator modernization costs as operating expenses",
+        "Charging ground-floor retail tenants for elevator costs they do not use",
+        "Failing to separate freight elevator costs from passenger elevator costs when only some tenants use freight"
+      ],
+      "yoyTrends": "Elevator maintenance costs have increased 4-6% annually. The industry is consolidating, with four major manufacturers controlling most of the maintenance market. Proprietary parts and software lock-in create limited competitive bidding opportunities. Smart elevator systems (destination dispatch) are reducing wait times but increasing maintenance complexity.",
+      "notes": "Elevator maintenance is unique because it is almost always a fixed-cost contract with one of the major manufacturers (Otis, Schindler, KONE, TK Elevator). The cost does not vary with occupancy. Tenants should verify that the landlord is obtaining competitive bids, as proprietary systems can limit competition and inflate costs.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    },
+    {
+      "slug": "parking-maintenance",
+      "name": "Parking Maintenance",
+      "definition": "Maintenance and operation of parking facilities including surface lots, parking structures, and underground garages. Covers sweeping, striping, lighting, repairs, revenue control equipment, and structural maintenance for garages.",
+      "typicalGlCodes": [
+        "6910 - Parking Lot Maintenance",
+        "6915 - Parking Structure Maintenance",
+        "6920 - Parking Revenue Equipment",
+        "6925 - Parking Lighting"
+      ],
+      "recoverableComponents": [
+        "Sweeping and cleaning",
+        "Line striping and signage",
+        "Lighting maintenance",
+        "Elevator/stairwell maintenance (parking structures)",
+        "Revenue control equipment maintenance",
+        "Minor surface repairs (patching, crack sealing)"
+      ],
+      "nonRecoverableComponents": [
+        "Parking lot resurfacing (capital)",
+        "Structural repairs to parking garages (capital)",
+        "New parking construction",
+        "Revenue control system installation (capital)"
+      ],
+      "commonLeaseLanguage": "Operating Expenses shall include all costs of maintaining, repairing, cleaning, lighting, and operating the parking facilities serving the Building, including surface lots and structured parking.",
+      "allocationMethod": "Pro-rata by rentable square footage, or by allocated parking spaces if the lease specifies. In mixed-use properties, parking costs may be allocated based on the number of spaces assigned to each use (office, retail, residential). Not typically subject to gross-up unless parking staffing varies with occupancy.",
+      "benchmarksPerSF": {
+        "office": 0.75,
+        "retail": 0.55,
+        "industrial": 0.2,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Including parking lot resurfacing or garage structural repairs as operating expenses",
+        "Allocating parking costs to tenants without parking rights",
+        "Netting parking revenue against expenses without lease authority (or failing to net when required)",
+        "Charging tenants for parking areas reserved exclusively for other tenants"
+      ],
+      "yoyTrends": "Parking maintenance costs have increased moderately (3-5% annually). EV charging infrastructure is creating new cost allocation questions: is charger installation capital or operating? Is electricity for EV charging a common area utility or a tenant-specific cost? These questions are driving lease amendment activity.",
+      "notes": "Parking is increasingly complex as EV charging, ride-share staging areas, and autonomous vehicle drop-offs change how parking facilities are used. Landlords should address EV charging cost allocation in leases now to avoid disputes as adoption increases.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    },
+    {
+      "slug": "snow-ice-removal",
+      "name": "Snow & Ice Removal",
+      "definition": "Removal of snow and ice from parking lots, sidewalks, building entries, and loading areas. Includes plowing, salting/sanding, de-icing, and related services. A significant expense in northern climates that varies dramatically by winter severity.",
+      "typicalGlCodes": [
+        "7010 - Snow Removal Services",
+        "7015 - Ice Management / De-icing",
+        "7020 - Snow Removal Supplies (salt, sand)"
+      ],
+      "recoverableComponents": [
+        "Plowing and snow removal from common areas",
+        "Salting and de-icing sidewalks and entries",
+        "Snow hauling (when accumulation exceeds storage capacity)",
+        "Ice management supplies"
+      ],
+      "nonRecoverableComponents": [
+        "Snow removal from tenant-exclusive areas (unless lease specifies)",
+        "Damage repair from snow removal equipment (capital)",
+        "New snow removal equipment purchases (capital)"
+      ],
+      "commonLeaseLanguage": "Operating Expenses shall include all costs of snow and ice removal from the Common Areas, parking lots, sidewalks, and building entries, including plowing, salting, sanding, and related services.",
+      "allocationMethod": "Pro-rata by rentable square footage. Snow removal is a variable cost driven by weather, not occupancy, so gross-up is not appropriate. Some leases cap snow removal at a per-SF amount with excess borne by the landlord. In multi-building campuses, costs may be allocated by building based on parking lot and sidewalk area.",
+      "benchmarksPerSF": {
+        "office": 0.65,
+        "retail": 0.55,
+        "industrial": 0.35,
+        "source": "BOMA EER / IREM 2024 (northern markets)"
+      },
+      "commonBillingErrors": [
+        "Grossing up snow removal costs (they are weather-variable, not occupancy-variable)",
+        "Including snow removal equipment purchases as operating expenses",
+        "Failing to credit tenants when mild winters produce below-budget costs (if budget-based billing is used)",
+        "Charging tenants in a multi-building campus for plowing of unoccupied building parking lots"
+      ],
+      "yoyTrends": "Snow removal costs are inherently volatile, varying 50-100% year to year based on snowfall. The 2023-2024 winter produced below-average costs in the Midwest but above-average in the Northeast. Labor shortages for plow operators have increased per-event costs by 10-15%. Some landlords are switching to fixed-fee seasonal contracts to reduce volatility.",
+      "notes": "Snow and ice removal is the most volatile CAM line item in northern markets. Tenants should understand whether their lease uses actual costs or budget-based billing. Budget-based billing smooths costs but requires year-end reconciliation. Fixed-fee seasonal contracts eliminate volatility but may be above the multi-year average cost.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    },
+    {
+      "slug": "pest-control",
+      "name": "Pest Control",
+      "definition": "Regular pest management services for the building and common areas, including preventive treatments, monitoring, and response to infestations. Covers insects, rodents, birds, and wildlife management in and around the building.",
+      "typicalGlCodes": [
+        "7110 - Pest Control Services",
+        "7115 - Pest Control Supplies"
+      ],
+      "recoverableComponents": [
+        "Preventive treatment contracts (monthly/quarterly)",
+        "Common area pest monitoring",
+        "Bird deterrent maintenance",
+        "Rodent control for common areas and building perimeter"
+      ],
+      "nonRecoverableComponents": [
+        "Tenant-caused infestations (may be billed directly to responsible tenant)",
+        "Wildlife removal from undeveloped land",
+        "Fumigation of entire building (may be capital depending on scope)"
+      ],
+      "commonLeaseLanguage": "Operating Expenses shall include all costs of pest control and extermination services for the Common Areas and Building, including preventive treatments and monitoring.",
+      "allocationMethod": "Pro-rata by rentable square footage. Pest control is typically a fixed-cost contract (same monthly service regardless of occupancy), so gross-up is not appropriate. In retail centers with food tenants, pest control may be allocated more heavily to food-use tenants.",
+      "benchmarksPerSF": {
+        "office": 0.15,
+        "retail": 0.25,
+        "industrial": 0.1,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Grossing up a fixed-cost pest control contract",
+        "Charging the entire building for pest remediation caused by one tenant's operations",
+        "Including pest control for undeveloped areas of a campus in the building CAM pool",
+        "Failing to separate common area pest control from tenant-specific treatments"
+      ],
+      "yoyTrends": "Pest control costs have increased 3-5% annually, largely tracking labor inflation. Integrated pest management (IPM) approaches are reducing chemical use but may increase monitoring costs. Climate change is expanding the geographic range of certain pests, increasing treatment needs in previously unaffected areas.",
+      "notes": "Pest control is a small but important CAM line item. It becomes significant in retail properties with food tenants, where pest management costs can be 3-5x higher than standard office buildings. Lease clauses should address allocation when specific tenants (restaurants, food courts) drive disproportionate pest control needs.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    },
+    {
+      "slug": "fire-life-safety",
+      "name": "Fire & Life Safety Systems",
+      "definition": "Maintenance, inspection, and testing of fire protection and life safety systems including fire alarm, sprinkler systems, fire extinguishers, emergency lighting, stairwell pressurization, and smoke control systems. Required by local fire codes and insurance carriers.",
+      "typicalGlCodes": [
+        "7210 - Fire Alarm Maintenance",
+        "7215 - Sprinkler System Maintenance",
+        "7220 - Fire Extinguisher Service",
+        "7225 - Emergency Lighting Maintenance"
+      ],
+      "recoverableComponents": [
+        "Annual fire alarm inspection and testing",
+        "Sprinkler system inspection and maintenance",
+        "Fire extinguisher inspection and replacement",
+        "Emergency lighting testing and battery replacement",
+        "Fire pump maintenance and testing",
+        "Smoke control system maintenance"
+      ],
+      "nonRecoverableComponents": [
+        "Fire alarm system replacement (capital)",
+        "Sprinkler system upgrade or expansion (capital)",
+        "Fire code compliance upgrades (capital)",
+        "Fire department connection modifications (capital)"
+      ],
+      "commonLeaseLanguage": "Operating Expenses shall include all costs of maintaining, testing, inspecting, and monitoring the Building's fire protection and life safety systems as required by applicable codes, insurance carriers, and governmental authorities.",
+      "allocationMethod": "Pro-rata by rentable square footage. Fire and life safety maintenance is a fixed cost (inspections occur regardless of occupancy), so gross-up is not appropriate. Costs are consistent year to year unless code changes require additional testing or system modifications.",
+      "benchmarksPerSF": {
+        "office": 0.45,
+        "retail": 0.35,
+        "industrial": 0.25,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Including fire system upgrades required by code changes as operating expenses instead of capital",
+        "Charging tenants for fire alarm panel replacement (capital) as maintenance",
+        "Failing to distinguish between base building fire systems (CAM) and tenant-specific fire suppression (tenant cost)",
+        "Including fire department fines in CAM charges"
+      ],
+      "yoyTrends": "Fire and life safety costs have increased 4-6% annually due to more stringent inspection requirements, labor cost increases for certified technicians, and evolving code requirements. Many jurisdictions now require annual flow testing of fire pumps and five-year internal sprinkler pipe inspections, adding to recurring costs.",
+      "notes": "Fire and life safety is a regulatory-driven expense that provides limited negotiating flexibility. Landlords must comply with local fire codes and insurance carrier requirements regardless of cost. Tenants should verify that charges are for maintenance and inspection only, not for capital system upgrades that should be amortized.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    },
+    {
+      "slug": "roof-maintenance",
+      "name": "Roof Maintenance",
+      "definition": "Inspection, maintenance, and repair of the building's roof system, including membrane, flashing, drainage, skylights, and associated components. Excludes full roof replacement, which is a capital expenditure.",
+      "typicalGlCodes": [
+        "7310 - Roof Maintenance / Inspection",
+        "7315 - Roof Repairs",
+        "7320 - Gutter / Drainage Maintenance"
+      ],
+      "recoverableComponents": [
+        "Annual roof inspections",
+        "Patching and minor repairs",
+        "Flashing maintenance",
+        "Gutter and drainage cleaning",
+        "Skylight maintenance",
+        "Roof coating maintenance (if extending roof life)"
+      ],
+      "nonRecoverableComponents": [
+        "Full roof replacement (capital)",
+        "Structural roof repairs (capital)",
+        "Roof-mounted equipment installation (capital)",
+        "Green roof installation (capital)"
+      ],
+      "commonLeaseLanguage": "Operating Expenses shall include all costs of maintaining, inspecting, and making non-capital repairs to the Building's roof systems, including membranes, flashing, gutters, drains, and skylights.",
+      "allocationMethod": "Pro-rata by rentable square footage. Roof maintenance is a fixed cost that does not vary with occupancy, so gross-up is not appropriate. In multi-tenant retail or industrial properties, roof costs may be allocated based on the tenant's proportional share of roof area rather than interior SF.",
+      "benchmarksPerSF": {
+        "office": 0.3,
+        "retail": 0.35,
+        "industrial": 0.25,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Including full roof replacement costs as operating maintenance",
+        "Failing to amortize major roof repairs over their useful life",
+        "Charging roof repairs caused by a specific tenant's rooftop equipment to the CAM pool",
+        "Including roof warranty costs in CAM when the warranty covers defective installation"
+      ],
+      "yoyTrends": "Roof maintenance costs have increased 5-7% annually due to material cost inflation and increasing severe weather events. Extended manufacturer warranties (20-30 years) are reducing recurring costs for newer roofs but increasing initial capital outlay. Cool roof coatings and green roof maintenance are emerging cost categories.",
+      "notes": "Roof maintenance is one of the most contentious CAM categories because the line between 'maintenance' and 'capital replacement' is subjective. A $50,000 roof section repair could be classified as either maintenance (operating, passed through immediately) or capital (amortized over useful life). Lease language should clearly define this threshold.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    },
+    {
+      "slug": "management-fees",
+      "name": "Management Fees",
+      "definition": "Fees paid to the property management company (or charged internally by the landlord's management division) for day-to-day building operations, tenant relations, vendor oversight, budgeting, CAM reconciliation, and financial reporting.",
+      "typicalGlCodes": [
+        "7410 - Property Management Fee",
+        "7415 - Asset Management Fee (if recoverable)",
+        "7420 - Accounting / Bookkeeping"
+      ],
+      "recoverableComponents": [
+        "Property management fee (percentage of gross revenue or per-SF fee)",
+        "On-site management staff salaries",
+        "Management office expenses"
+      ],
+      "nonRecoverableComponents": [
+        "Asset management fees (investment-level decisions)",
+        "Leasing management fees",
+        "Construction management fees",
+        "Portfolio-level overhead"
+      ],
+      "commonLeaseLanguage": "Operating Expenses shall include management fees paid to the managing agent in an amount not to exceed [3-5]% of gross revenues, or such greater amount as is customary for comparable buildings in the market.",
+      "allocationMethod": "Pro-rata by rentable square footage. Management fees are typically calculated as a percentage of collected revenue (3-5% for office, 4-6% for retail) or as a fixed per-SF fee. Subject to gross-up if the fee is a percentage of revenue (lower occupancy means lower revenue means lower fee, but at full occupancy the fee would be higher).",
+      "benchmarksPerSF": {
+        "office": 1.5,
+        "retail": 1.25,
+        "industrial": 0.55,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Charging both a management fee percentage and separate line items for management staff salaries (double-counting)",
+        "Exceeding the lease cap on management fees without tenant consent",
+        "Including asset management fees (investment decisions) in operating expense management fees",
+        "Charging management fees on capital expenditure projects"
+      ],
+      "yoyTrends": "Management fees have remained relatively stable as a percentage of revenue (3-5% for office). However, the absolute dollar amount has increased as base rents and CAM charges increase. Technology investment by management companies (smart building systems, tenant experience apps) is increasing management costs but may reduce other operating expenses.",
+      "notes": "Management fees are the most scrutinized CAM line item because tenants perceive them as the landlord paying itself. Many leases cap management fees at a stated percentage or require that the fee be competitive with market rates. Self-managed properties (where the landlord manages directly) often charge an imputed management fee at market rates.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    },
+    {
+      "slug": "administrative-overhead",
+      "name": "Administrative Overhead",
+      "definition": "General administrative costs associated with building operations, including accounting, legal, audit, office supplies, telecommunications, and other overhead expenses that support the property management function but are not directly attributable to a specific service category.",
+      "typicalGlCodes": [
+        "7510 - Administrative Salaries",
+        "7515 - Office Supplies",
+        "7520 - Telecommunications",
+        "7525 - Professional Fees (accounting, legal)",
+        "7530 - Licenses and Permits"
+      ],
+      "recoverableComponents": [
+        "On-site administrative staff salaries and benefits",
+        "Office supplies for management office",
+        "Telecommunications for building operations",
+        "Annual audit fees for CAM reconciliation",
+        "Building licenses and permits"
+      ],
+      "nonRecoverableComponents": [
+        "Corporate overhead of the management company",
+        "Legal fees for lease negotiations",
+        "Legal fees for tenant disputes",
+        "Accounting fees for ownership-level tax returns",
+        "Political contributions or charitable donations"
+      ],
+      "commonLeaseLanguage": "Operating Expenses shall include reasonable administrative costs incurred in connection with the operation and management of the Building, including on-site administrative staff, office supplies, telecommunications, and professional fees directly related to Building operations.",
+      "allocationMethod": "Pro-rata by rentable square footage. Administrative overhead is generally fixed: the management office operates at the same staffing level regardless of occupancy. Not typically subject to gross-up unless the lease specifically identifies administrative costs as variable.",
+      "benchmarksPerSF": {
+        "office": 0.75,
+        "retail": 0.5,
+        "industrial": 0.25,
+        "source": "BOMA EER / IREM 2024"
+      },
+      "commonBillingErrors": [
+        "Including corporate overhead of the parent management company in building-level CAM",
+        "Double-counting administrative costs that are already included in the management fee",
+        "Passing through legal fees for tenant disputes as administrative overhead",
+        "Including accounting fees for partnership/ownership tax returns"
+      ],
+      "yoyTrends": "Administrative overhead has increased 3-5% annually, largely tracking general inflation and wage growth. Technology costs (property management software, cloud services, cybersecurity) are an increasing component. Some landlords are shifting to shared-service models across portfolios, potentially reducing per-building administrative costs.",
+      "notes": "Administrative overhead is the most difficult CAM category to audit because it encompasses many small, diverse expenses. Tenants should verify that administrative costs are not duplicating services already covered by the management fee. The management fee is intended to cover the management company's overhead. Charging additional administrative overhead on top of the fee may constitute double-dipping.",
+      "relatedResources": [
+        "/glossary/cam-reconciliation",
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/blog/cam-reconciliation-errors"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/cam-cap-calculator"
+      ]
+    }
+  ]
+}

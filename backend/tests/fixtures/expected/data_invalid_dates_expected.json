@@ -1,0 +1,12 @@
+{
+  "error_type": "data",
+  "description": "CSV with various invalid date formats",
+  "parseable": true,
+  "expected_behavior": "Parser should filter out rows with invalid/missing dates",
+  "expected_warnings": [
+    "Excluded 4 rows with missing required data"
+  ],
+  "expected_rows": 1,
+  "valid_rows": 1,
+  "invalid_rows": 0
+}

@@ -1,0 +1,271 @@
+---
+title: "CAM Reconciliation Software Buyer's Guide 2026"
+description: "Buyer's guide to CAM reconciliation software: key features, Yardi/MRI integration depth, pricing signals, and how to evaluate tools for your CRE finance workflow in 2026."
+excerpt: "The CAM reconciliation software market now has real differences in capability. Most buyers still evaluate on price alone. Here's what the features actually mean for the controller running 50 reconciliations in Q1."
+datePublished: "2026-04-24"
+dateModified: "2026-04-24"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "What is CAM reconciliation software and who uses it?"
+    a: "CAM reconciliation software is purpose-built tooling for reviewing and reconciling Common Area Maintenance (CAM) charges on commercial leases. It's used by tenant-side CRE finance teams - controllers, lease administrators, and property accountants - who receive annual CAM reconciliation statements from landlords and need to verify that the charges are accurate, consistent with the lease terms, and properly calculated. Landlords also use CAM reconciliation software on their side to generate the statements. Tenant-side use cases focus on importing the landlord's data, applying lease exclusion rules, and catching overbillings before payment."
+  - q: "What Yardi/MRI integration depth should I look for in CAM reconciliation software?"
+    a: "The integration question breaks into three levels. Level 1 is PDF import with OCR extraction - the tool reads the landlord's PDF statement and structures the data. This works but is error-prone on complex statements. Level 2 is CSV import from Yardi or MRI exports - the landlord runs a standard report and exports as CSV; the tool ingests the structured data directly. This is reliable and fast. Level 3 is a direct API connection to Yardi or MRI - real-time data pull without any export step. Level 3 exists but is uncommon for tenant-side tools because access to the landlord's Yardi API requires landlord cooperation. Most practical implementations run at Level 2. Verify the tool specifically handles Yardi Voyager's export format and MRI's standard CAM report format."
+  - q: "How does CAM reconciliation software handle lease-specific exclusion rules?"
+    a: "This is the core differentiator between purpose-built CAM tools and generic accounting software. Lease-specific exclusion rules are the list of expense categories that your lease says the landlord cannot pass through - things like capital expenditures, depreciation, executive salaries, leasing commissions, and ground floor retail expenses. A good CAM reconciliation tool lets you define these exclusions at the property-lease level, then automatically flags any landlord GL line items that match the excluded category when you import the reconciliation statement. Without this capability, you're doing the exclusion check manually in Excel - which is error-prone under time pressure."
+  - q: "What's a reasonable budget for CAM reconciliation software at a 50-property portfolio?"
+    a: "For a 50-property portfolio with annual reconciliation statements per property, expect software costs in the range of $5,000–$15,000 per year for purpose-built CAM tools, depending on feature depth. Some tools price per user; others price per property or per reconciliation processed. At the high end ($15K+/year), you're getting enterprise features: API-level integrations, custom reporting, dedicated implementation support, and multi-entity handling. At the low end ($3K–$5K/year), you'll typically get CSV import, standard exclusion rule templates, and basic reporting. The question is whether the software pays for itself in recovered overbillings - typically yes if you're processing more than 20 reconciliations per year with any meaningful CAM exposure."
+  - q: "Can CAM reconciliation software integrate with my lease accounting software?"
+    a: "Integration between lease accounting platforms (Visual Lease, LeaseQuery, CoStar Lease) and CAM reconciliation tools is available but varies by combination. The most common integration pattern: the lease accounting tool holds the lease abstract (terms, exclusion rules, fixed vs variable payment split), and the CAM reconciliation tool imports both the lease data and the landlord's statement. The output - the true-up journal entry - then exports to your ERP. End-to-end, this can eliminate manual data entry at every step. Check whether the specific combination of tools you're evaluating has a pre-built integration or whether you'd need to manage the data transfer manually."
+---
+
+The year-end CAM reconciliation crunch hits every CRE finance team the same way: February arrives, statements start coming in, and the controller needs to review, dispute if warranted, and close Q4 books at the same time. Most teams still run this in Excel.
+
+**CAM reconciliation software** automates the review workflow, reduces the error rate, and creates an audit trail. The market has real options now. Most buyers still evaluate on price alone, without asking whether the tool handles their Yardi export format or their lease's specific exclusion language.
+
+This guide covers the key features, how to evaluate Yardi/MRI integration depth, what pricing signals mean, and how to size the decision for your portfolio.
+
+## What CAM Reconciliation Software Actually Does
+
+The workflow that software needs to support:
+
+1. **Lease abstraction storage**: Terms, fixed vs variable payment structure, CAM exclusion list, pro-rata share formula, cap type and calculation base
+2. **Statement import**: Ingest the landlord's reconciliation from Yardi CSV, MRI export, or PDF
+3. **Line-item mapping**: Map each landlord GL code to a category (maintenance, management fees, insurance, taxes, etc.)
+4. **Exclusion rule application**: Flag items that violate the lease's exclusion list
+5. **Cap calculation**: Apply [controllable expense caps](/resources/cam-cap-types) and identify any overages
+6. **Pro-rata share verification**: Check the denominator and percentage against the lease and the landlord's calculation
+7. **Gross-up verification**: Confirm the [occupancy gross-up](/resources/cam-gross-up-calculation-guide) if applicable
+8. **Variance calculation**: What the lease says you owe vs what the landlord billed
+9. **True-up journal entry**: DR/CR entries for your ERP in the correct period
+10. **Audit documentation**: A package supporting your review, useful for disputes and for your auditors
+
+Most Excel workflows cover steps 5–9 adequately. They break down on steps 2–4 (import speed and accuracy) and step 10 (audit trail quality).
+
+---
+
+## Feature Evaluation Framework
+
+### 1. Import Capability (Critical)
+
+**What to test:**
+
+- Import a real Yardi Voyager CAM reconciliation export (ask your landlord for a test export)
+- Import a real MRI Software CAM report
+- Import a complex PDF from a smaller landlord's system
+
+**What to look for:**
+
+- Does the Yardi import map line items without manual column matching?
+- Does the MRI import handle the multi-tenant pool allocation format?
+- For PDFs: does OCR extract numbers accurately, or do you need to verify every line?
+- What's the import speed? A 50-line statement should import and map in about a minute
+
+**Red flags:**
+
+- Requires you to manually map columns every time (no saved mapping profiles)
+- PDF import requires manual correction more than 10% of the time
+- No Yardi or MRI import templates pre-built
+
+### 2. Lease Abstraction Depth
+
+The tool needs to store everything that drives the exclusion analysis:
+
+- Expense inclusions and exclusions (itemized, not just a notes field)
+- CAM cap type: base year, cumulative, non-cumulative ([cap types explained](/resources/cam-cap-types))
+- Pro-rata share: your SF, the denominator basis, the resulting percentage
+- Gross-up: occupancy threshold, calculation method
+- Controllable vs non-controllable expense definitions
+
+**What to test:** Can you import the key terms from your lease and have the software automatically apply them to the imported statement, without manually cross-referencing the lease PDF every time?
+
+### 3. Reporting and Audit Trail
+
+The reconciliation review memo needs to contain:
+
+- Summary: total billed vs total owed, variance by category
+- Line-item detail: each excluded or flagged item with the lease provision that applies
+- Cap calculation: step-by-step showing the cap application
+- Pro-rata share confirmation: denominator, your SF, your percentage, landlord's stated percentage
+
+**Audit trail needs:**
+
+- Timestamp on every import and every manual override
+- Who approved the final reconciliation
+- Document storage for the landlord's statement and your supporting analysis
+
+### 4. Journal Entry Export
+
+The tool should produce the true-up journal entry in a format your ERP accepts:
+
+```
+For a $4,400 additional CAM charge:
+
+DR  Variable Lease Cost (CAM)    4,400
+  CR  Accounts Payable                    4,400
+
+Journal date: [Period the reconciliation was finalized]
+Account codes: [Mapped to your chart of accounts]
+Reference: [Property code + lease ID + reconciliation year]
+```
+
+Good tools let you define the account mapping once and auto-apply it. Less capable tools give you a PDF of the suggested entry and make you key it manually into your ERP.
+
+### 5. Yardi/MRI Integration Depth
+
+The three integration levels:
+
+**Level 1: PDF extraction**
+
+- Tool reads the landlord's PDF, extracts numbers
+- Works for any landlord regardless of their system
+- Error rate 2–5% for complex statements; requires review
+- No structural understanding of the landlord's CAM pool allocation methodology
+
+**Level 2: CSV import** (the practical standard)
+
+- Landlord exports from Yardi/MRI in standard format; you upload the CSV
+- Reliable for structured data; no OCR errors
+- Requires the landlord to run a specific report in their system
+- Most purpose-built tools are optimized for this workflow
+
+**Level 3: API integration**
+
+- Real-time data pull from landlord's Yardi/MRI
+- Requires landlord cooperation and API access grant
+- Uncommon for tenant-side use; more relevant for landlord-side tools
+- If your company owns and leases to itself (e.g., REIT with some tenant relationships), this becomes more viable
+
+For most tenant-side teams, Level 2 is the target. Ask vendors: "Show me how to import a Yardi Voyager CAM reconciliation CSV." If they need to think about it, their Yardi integration isn't mature.
+
+---
+
+## The Market Landscape
+
+The CAM reconciliation software market sits at the intersection of lease administration, property accounting, and compliance tooling. No single vendor dominates this space the way Yardi dominates property management.
+
+### Purpose-Built CAM Reconciliation Tools
+
+**CapVeri**: Purpose-built for landlord-side CAM reconciliation. It ingests Yardi/MRI CSV exports. It applies lease-specific exclusion rules. It calculates cap overages. It creates audit-ready reconciliation packages. Built on CapVeri's CRE FinOps platform. No API integration required. Reconcile starts at $998/year with 80OFF; list price starts at $4,990/year for up to 25 rentable units, then scales by unit count.
+
+For the full CAM process context, see [what is CAM reconciliation](/resources/common-area-maintenance-reconciliation-explained) and the [NNN lease CAM reconciliation guide](/resources/nnn-lease-cam-reconciliation).
+
+**MRI Commercial Management (tenant module)**: MRI's tenant-facing module includes some reconciliation review capability, but it's primarily designed for landlords. Better than Yardi's tenant portal; still not built around the tenant audit workflow.
+
+### Lease Administration + CAM Hybrid Tools
+
+**Occupier**: Strong lease administration with CAM budget tracking. Better on the lease abstraction and ASC 842 compliance side; CAM reconciliation workflow is functional but less deep than purpose-built tools.
+
+**CoStar Lease**: Good for retail portfolios with many locations. CAM reconciliation features exist; integration with CoStar's market data is a unique differentiator.
+
+**LeaseQuery**: Strong ASC 842 compliance; CAM reconciliation is not its core focus. If you need the ASC 842 compliance ([lease accounting guide](/resources/asc-842-lease-accounting-guide)) and are comfortable handling CAM separately, LeaseQuery is a strong choice.
+
+### Excel (The Incumbent)
+
+Excel remains the default for teams under 20 leases or those unwilling to invest in dedicated software. The risks:
+
+- No version control (who changed the formula?)
+- No audit trail (when did we approve this?)
+- Copy-paste errors in high-volume periods
+- Formula errors in cap calculations that go undetected for years
+- No integration with ERP; manual journal entry keying
+
+See [CAM reconciliation errors](/blog/cam-reconciliation-errors) for the most common mistakes that happen in Excel-based reconciliations.
+
+---
+
+## Pricing Signals and What They Mean
+
+CAM reconciliation software pricing models:
+
+**Per property/month**: Common. $10–$50/property/month depending on features and contract volume. At 50 properties: $500–$2,500/month or $6,000–$30,000/year.
+
+**Per user/month**: Common for platforms where multiple team members need access. $50–$200/user/month for mid-market tools.
+
+**Per reconciliation processed**: Some tools price per statement imported and reviewed. $25–$75 per reconciliation is typical. At 50 properties: $1,250–$3,750 per year, reasonable if your volume is steady.
+
+**Annual flat fee**: Enterprise deals. Negotiate based on property count, users, and support level.
+
+**The ROI question:** A single caught overbilling that saves $5,000 in one property can cover years of a launch-priced CAM verification workflow. For a portfolio with meaningful CAM exposure ($3/SF+ in CAM charges on 100,000+ SF total), the math strongly favors dedicated software over Excel.
+
+---
+
+## Implementation and Onboarding Checklist
+
+Before signing a contract, verify:
+
+- [ ] Yardi Voyager import: can you demo with a real CSV file from your landlord?
+- [ ] Lease abstraction: can you import your full exclusion list from a representative lease?
+- [ ] Cap type support: does it handle your specific cap structure (base year, cumulative, non-cumulative)?
+- [ ] GL export: demo the journal entry output in your ERP's required format
+- [ ] Onboarding timeline: how long to get your full portfolio imported and configured?
+- [ ] Support model: is there a dedicated implementation manager or self-serve only?
+- [ ] Data portability: if you leave, can you export your full data (leases, reviews, history)?
+
+Common implementation timeline: 2–6 weeks for a 50-property portfolio, assuming lease data is organized. The bottleneck is usually lease abstraction: getting the exclusion rules, cap language, and pro-rata share terms out of PDF leases and into the system.
+
+---
+
+## The ASC 842 + CAM Reconciliation Integration Problem
+
+One thing most buyers overlook: lease accounting software (for [ASC 842 compliance](/resources/asc-842-lease-accounting-guide)) and CAM reconciliation software solve adjacent but different problems. Most lease accounting tools don't handle CAM reconciliation well. Most CAM tools don't handle ASC 842 well.
+
+The data that needs to flow:
+
+**From lease accounting → CAM tool:**
+
+- Lease terms (effective for exclusion rule configuration)
+- Fixed vs variable payment classification (so the CAM tool knows which charges to treat as variable)
+- IBR and lease classification (affects how the true-up is categorized)
+
+**From CAM tool → Lease accounting / ERP:**
+
+- Final true-up amount and period
+- Journal entry for the variable lease cost
+- Documentation of the variance analysis (audit support)
+
+If you're evaluating software, ask specifically: "How does your tool handle the interface between my ASC 842 lease schedules and my annual CAM reconciliation true-up entries?" The answer reveals whether they've thought about the end-to-end workflow.
+
+For the full accounting treatment, see [operating lease accounting entries](/resources/operating-lease-accounting-entries) and the [GAAP vs cash CAM reconciliation guide](/resources/gaap-vs-cash-cam-reconciliation).
+
+---
+
+## When to Stay with Excel (and When to Move On)
+
+**Stay with Excel if:**
+
+- Portfolio ≤ 10 leases
+- Reconciliation statements arrive in simple, consistent formats
+- CAM charges are low-risk (minimal overbilling history, landlords you trust)
+- Team has Excel-based controls that work (version control, formula audits)
+
+**Move to dedicated software if:**
+
+- Portfolio > 20 leases (especially growing)
+- Reconciliation processing consumes more than 2 weeks of staff time annually
+- You've missed overbillings in prior years that were caught only on audit
+- ASC 842 compliance documentation is getting hard to maintain in spreadsheets
+- Landlords use Yardi or MRI and can provide structured CSV exports
+
+The [CAM reconciliation template](/tools/cam-reconciliation-template) is a good starting point for teams still in the Excel phase. It includes the pro-rata share calculation, cap analysis, and true-up entry templates pre-built. Use it as a bridge until the portfolio scale justifies dedicated software.
+
+---
+
+## Related Resources
+
+- [What Is CAM Reconciliation](/resources/common-area-maintenance-reconciliation-explained): the process overview
+- [Best CAM Software 2026](/blog/best-cam-software-2026): platform-by-platform comparison
+- [Property Management Accounting Software](/blog/property-management-accounting-software): the broader software landscape
+- [ASC 842 Lease Accounting Guide](/resources/asc-842-lease-accounting-guide): compliance framework
+- [CAM Reconciliation Errors](/blog/cam-reconciliation-errors): what goes wrong in Excel
+- [CAM Overbilling Liability](/blog/cam-overbilling-liability): the financial exposure
+- [CAM True-Up](/resources/cam-true-up): how the year-end settlement works
+- [CAM Cap Types](/resources/cam-cap-types): understanding cap structures
+- [Download the CAM Reconciliation Template](/tools/cam-reconciliation-template)
+- [2026 Property Tax Increases](/blog/2026-property-tax-increases): a major driver of CAM variance in 2026
+
+## Sources
+
+1. [Fiserv - Reconciliation whitepaper](https://www.fiserv.com/content/dam/fiserv-ent/archive-files/final-files/white-papers/Frontier-Reconciliation_whitepaper_1020.pdf)
+2. [J.P. Morgan - What Are CAM Charges in CRE?](https://www.jpmorgan.com/insights/real-estate/commercial-term-lending/what-are-common-area-maintenance-cam-charges-in-cre)

@@ -1,0 +1,302 @@
+---
+title: "Finance Lease Accounting Under ASC 842: ROU Asset, Interest, and CAM"
+description: "Finance lease accounting under ASC 842: how to recognize the ROU asset, calculate interest, record amortization, and handle CAM interactions for financing leases."
+datePublished: "2026-04-24"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 272
+faq:
+  - q: "What is a finance lease under ASC 842 and how does it differ from ASC 840 capital leases?"
+    a: "ASC 842 renamed capital leases as finance leases and added a fifth classification criterion (specialized nature with no alternative use for the lessor). The accounting mechanics are substantially the same: you recognize a right-of-use asset and lease liability at commencement, amortize the ROU asset on a straight-line basis, and record interest expense separately from the amortization. The key income statement difference from operating leases: finance leases front-load total expense. In early periods, interest plus amortization exceeds what an equivalent operating lease would show, tapering off later. The balance sheet presentation is also separately labeled. Finance lease ROU assets and finance lease liabilities are disclosed distinctly from operating lease equivalents."
+  - q: "When does a commercial real estate lease qualify as a finance lease?"
+    a: "Very rarely. The five ASC 842 criteria are: (1) the lease transfers ownership before the end of the term; (2) the lessee has a purchase option they're reasonably certain to exercise; (3) the lease term covers a major part (typically 75%+) of the asset's remaining economic life; (4) the present value of lease payments is substantially all (typically 90%+) of the asset's fair value; (5) the asset has no alternative use to the lessor at the end of the term. Standard commercial office or retail leases with 5–10 year terms almost never satisfy any of these. Ground leases, build-to-suit arrangements with nominal purchase options, or very long-term leases relative to the asset's life are the common exceptions."
+  - q: "How do you calculate the ROU asset for a finance lease?"
+    a: "The initial ROU asset for a finance lease equals the initial lease liability, plus initial direct costs paid by the lessee, plus any prepaid lease payments, minus any lease incentives received. This is identical to the operating lease ROU asset formula. The difference is in subsequent amortization: the finance lease ROU asset is amortized on a straight-line basis over the shorter of the lease term or the asset's useful life (if ownership transfers or purchase option is reasonably certain, use the useful life). For an operating lease, the ROU asset amortizes as a plug to produce straight-line total lease cost, which means the amortization accelerates over time."
+  - q: "How are CAM charges treated under a finance lease?"
+    a: "Identical to operating leases. Variable CAM charges (amounts based on actual property operating expenses and reconciled annually) are excluded from the finance lease liability and expensed as incurred. Monthly estimates debit CAM expense, and the year-end true-up settles in the period the reconciliation is finalized. If any CAM amount is fixed (rare), it gets included in the payment stream used to calculate the initial liability. The same analysis applies: review lease language carefully to distinguish truly fixed CAM contributions from estimated amounts subject to reconciliation."
+  - q: "What are the balance sheet and income statement presentation differences between finance and operating leases?"
+    a: "Balance sheet: both create ROU assets and lease liabilities, but they are presented separately. 'Finance lease right-of-use assets' and 'Finance lease liabilities' are distinct from their operating counterparts. Many companies present four line items: Operating lease ROU asset, Finance lease ROU asset, Operating lease liability (current/non-current), Finance lease liability (current/non-current). Income statement: operating leases post single straight-line lease cost; finance leases post separate 'amortization of ROU asset' (often in D&A) and 'interest expense on finance lease liability.' Cash flow: finance lease principal payments appear in financing activities; operating lease payments are in operating activities. Finance lease interest flows through operating activities, same as other interest."
+---
+
+<Alert type="info" title="Quick Answer">
+Finance lease accounting under ASC 842 works like the old capital lease: recognize ROU asset and lease liability at commencement, amortize the ROU asset straight-line, and record interest expense on the liability separately. Total expense is front-loaded in early periods. Variable CAM charges are excluded from the liability and expensed as incurred, exactly the same as for operating leases.
+</Alert>
+
+## Finance Lease Accounting Under ASC 842
+
+Finance leases are rare in standard commercial real estate. Most office, retail, and industrial leases are operating leases. But when the criteria are met (long ground leases, build-to-suit with purchase options, specialized buildouts), the accounting diverges meaningfully from the operating lease model.
+
+This guide covers the full finance lease accounting lifecycle with journal entries, the interest calculation, and the CAM interaction. For the classification question, start with [operating lease vs finance lease](/resources/operating-lease-vs-finance-lease). For operating lease entries specifically, see [operating lease accounting entries](/resources/operating-lease-accounting-entries).
+
+---
+
+## When You Have a Finance Lease in CRE
+
+Finance lease triggers in commercial real estate:
+
+**Ground leases**: A 40-year ground lease on a 50-year building satisfies criterion 3 (major part of economic life). Many ground leases also transfer ownership at expiration, triggering criterion 1.
+
+**Build-to-suit with nominal purchase option**: If the landlord built to your specifications and the purchase price at lease end is nominal (say, $1), you are almost certainly reasonably certain to exercise it (criterion 2).
+
+**Long-term leases approaching building life**: A 30-year lease on a 40-year-old building covers 75%+ of remaining economic life.
+
+**PV near fair value**: Rare for market-rate leases, but possible in sale-leaseback arrangements where the seller-lessee retains the property economically through the lease payments.
+
+For sale-leaseback structures specifically, see our [sale and leaseback CAM implications](/blog/sale-leaseback-cre-finops) post.
+
+---
+
+## Initial Measurement: Same Formula as Operating Leases
+
+At commencement, the initial measurement is identical for both classifications:
+
+**Lease liability** = PV of all future fixed lease payments, discounted at the implicit rate in the lease or IBR.
+
+**ROU asset** = Initial lease liability + IDC + prepaid payments − lease incentives received.
+
+**Example setup:**
+- 40-year ground lease commencing January 1, 2026
+- Annual rent: $120,000/year ($10,000/month), flat for the first 10 years
+- Escalation: CPI-based adjustments every 5 years (variable; excluded from initial PV)
+- IBR: 7% (long-term collateralized borrowing rate)
+- No TIA or IDC
+
+For simplicity, this example looks at just the first 10 years of fixed payments:
+
+PV of $10,000/month for 120 months at 7%/12 (0.5833%) = **$861,290**
+
+(PV annuity = $10,000 × [1 − (1.005833)^(−120)] / 0.005833 = $10,000 × 86.13 = $861,290. For a true 40-year calculation, include all determinable fixed payments; CPI adjustments are variable and excluded.)
+
+```
+DR  Finance Lease Right-of-Use Asset    $861,290
+  CR  Finance Lease Liability                        $861,290
+```
+
+---
+
+## Subsequent Measurement: Two P&L Lines
+
+This is where finance leases differ from operating leases. The income statement shows **two separate expense lines**:
+
+1. **Amortization of finance lease ROU asset**: straight-line over the lease term (or useful life if ownership transfers)
+2. **Interest expense on finance lease liability**: effective interest method
+
+### ROU Asset Amortization
+
+**Straight-line over lease term:**
+$861,290 / 120 months (10 years of fixed payments used in this illustration) = **$7,177/month**
+
+For a 40-year ground lease where ownership transfers at expiration, amortize over the building's useful life instead.
+
+### Interest Expense Calculation (Effective Interest Method)
+
+Monthly interest = Opening liability balance × monthly rate
+
+Month 1: $861,290 × (7% / 12) = $861,290 × 0.5833% = **$5,024**
+
+### Month 1 Journal Entries
+
+**Entry 1 - Interest expense on lease liability:**
+```
+DR  Interest Expense (Finance Lease)    $5,024
+  CR  Finance Lease Liability                       $5,024
+```
+
+**Entry 2 - ROU asset amortization:**
+```
+DR  Amortization Expense (Finance Lease ROU Asset)    $7,177
+  CR  Finance Lease Right-of-Use Asset                          $7,177
+```
+
+**Entry 3 - Cash payment:**
+```
+DR  Finance Lease Liability             $10,000
+  CR  Cash                                          $10,000
+```
+
+**Net liability movement - Month 1:**
+- Opening: $861,290
+- + Interest: $5,024
+- − Cash payment: $10,000
+- = Closing: **$856,314**
+
+**Total expense - Month 1:**
+Interest ($5,024) + Amortization ($7,177) = **$12,201**
+
+Compare this to what an equivalent operating lease would show: the operating lease would post straight-line total cost of $10,000/month. The finance lease front-loads $2,201 more expense in Month 1.
+
+---
+
+## Amortization Schedule - First 6 Months
+
+| Month | Opening Liability | Interest Expense | Cash Payment | Principal Reduction | Closing Liability | ROU Amortization | Total Expense |
+|---|---|---|---|---|---|---|---|
+| 1 | $861,290 | $5,024 | $10,000 | $4,976 | $856,314 | $7,177 | $12,201 |
+| 2 | $856,314 | $4,995 | $10,000 | $5,005 | $851,309 | $7,177 | $12,172 |
+| 3 | $851,309 | $4,966 | $10,000 | $5,034 | $846,275 | $7,177 | $12,143 |
+| 4 | $846,275 | $4,936 | $10,000 | $5,064 | $841,211 | $7,177 | $12,113 |
+| 5 | $841,211 | $4,907 | $10,000 | $5,093 | $836,118 | $7,177 | $12,084 |
+| 6 | $836,118 | $4,877 | $10,000 | $5,123 | $830,995 | $7,177 | $12,054 |
+
+Notice: total expense declines month by month as interest decreases. By Month 120 (end of Year 10), interest will be near zero and total monthly expense will be just the $7,177 amortization. This is the front-loading effect that distinguishes finance from operating leases.
+
+---
+
+## Contrast with Operating Lease Treatment
+
+For the same $10,000/month, 120-month lease classified as an **operating** lease:
+
+- Straight-line cost per month: **$10,000** (flat throughout)
+- No separate interest expense line
+- ROU asset amortization is the plug (accelerates over time)
+- Total expense is always $10,000/month
+
+Finance lease (Month 1): **$12,201**
+Operating lease (Month 1): **$10,000**
+Finance lease (Month 120): **~$7,177**
+Operating lease (Month 120): **$10,000**
+
+The total expense over the full 120 months is the same in both cases ($10,000 × 120 = $1,200,000 cash out; plus imputed interest in both). But the timing profile differs, which affects period-by-period earnings.
+
+---
+
+## CAM Charges Under Finance Leases
+
+The treatment is the same as operating leases. Variable CAM is excluded from the finance lease liability and expensed as incurred.
+
+**Monthly CAM estimate:**
+```
+DR  Variable Lease Cost / CAM Expense    $1,200
+  CR  Cash                                          $1,200
+```
+
+**Year-end CAM true-up (additional charge):**
+```
+DR  Variable Lease Cost / CAM Expense    $2,800
+  CR  Accounts Payable                             $2,800
+```
+
+No adjustment to the finance lease ROU asset or lease liability. The true-up goes directly to the income statement in the period the [CAM reconciliation](/resources/common-area-maintenance-reconciliation-explained) is finalized.
+
+If your ground lease or long-term lease has fixed CAM contributions written into the contract as a hard dollar commitment per month, those amounts go into the lease liability calculation alongside the base rent.
+
+For the full CAM analysis under either lease type, see our [NNN lease CAM reconciliation guide](/resources/nnn-lease-cam-reconciliation).
+
+---
+
+## Balance Sheet Presentation
+
+Finance lease assets and liabilities must be presented separately from operating leases, either on the face of the balance sheet or in the footnotes.
+
+**Common balance sheet presentation** (after Year 1 of the ground lease example, combined with the operating lease from the ASC 842 example):
+
+| Account | Amount |
+|---|---|
+| **Assets** | |
+| Finance lease right-of-use assets, net | $775,166 |
+| Operating lease right-of-use assets, net | $251,407 |
+| **Liabilities** | |
+| Finance lease liability - current | $63,800 |
+| Finance lease liability - non-current | $735,825 |
+| Operating lease liability - current | $57,440 |
+| Operating lease liability - non-current | $232,657 |
+
+The current/non-current split for the finance lease liability uses the next 12 months of **principal** reduction (not cash payments, which include interest).
+
+---
+
+## Cash Flow Statement
+
+Finance lease cash flows classify differently from operating leases:
+
+| Cash Flow | Finance Lease | Operating Lease |
+|---|---|---|
+| Principal repayment | **Financing activities** | Operating activities |
+| Interest payment | Operating activities | Operating activities |
+| Variable CAM paid | Operating activities | Operating activities |
+
+This matters for cash flow analysis and covenant compliance. A company that reclassifies a lease from operating to finance (through modification) will see cash flows shift from operating to financing, improving operating cash flow metrics while increasing financing outflows.
+
+---
+
+## Reassessment and Modification
+
+Finance leases are reassessed using the same triggers as operating leases. When a reassessment event occurs:
+
+1. Remeasure the lease liability at revised terms using a revised discount rate (or original rate, depending on the nature of the change per ASC 842-20-35-4)
+2. Adjust the ROU asset by the liability change
+3. No P&L impact at modification unless the modification involves partial termination
+
+For a partial reduction in finance lease space, derecognize the proportionate share of both the ROU asset and liability, with gain/loss for any difference. This is identical to the operating lease modification treatment.
+
+---
+
+## Impairment
+
+Finance lease ROU assets are tested for impairment under ASC 360 (long-lived assets), the same framework as operating lease ROU assets. Since finance lease ROU assets amortize at a flat rate (unlike operating lease ROU assets), the carrying value at a given point in time may be higher or lower than an equivalent operating lease asset depending on timing.
+
+Triggering events (cease-use, sublease decisions, space consolidation) should prompt impairment testing for both asset types.
+
+---
+
+## Disclosure Requirements - Finance Leases
+
+Finance leases require more granular disclosure than operating leases:
+
+| Disclosure | Operating | Finance |
+|---|---|---|
+| Lease cost by component | Single line | Amortization + interest separately |
+| Cash paid - operating activities | Total payment | Interest only |
+| Cash paid - financing activities | N/A | Principal repayment |
+| ROU assets obtained for new liabilities | Yes | Yes |
+| Weighted-average remaining term | Yes | Yes |
+| Weighted-average discount rate | Yes | Yes |
+| Maturity schedule | Yes | Yes |
+
+**Sample finance lease disclosure (Year 1):**
+
+> Finance lease cost:
+> - Amortization of right-of-use assets: $86,124
+> - Interest on lease liabilities: $58,335
+> - Total finance lease cost: $144,459
+>
+> Cash paid for finance leases:
+> - Operating activities (interest): $58,335
+> - Financing activities (principal): $61,665
+>
+> Weighted-average remaining term: 9.0 years
+> Weighted-average discount rate: 7.0%
+
+---
+
+## Comparing Finance Leases to the Full ASC 842 Framework
+
+| Feature | Finance Lease | Operating Lease |
+|---|---|---|
+| Balance sheet recognition | Yes | Yes |
+| ROU asset amortization | Straight-line (accelerating cost) | Plug (decelerating) |
+| Interest expense | Separate P&L line | Embedded in single lease cost |
+| Total early-period expense | Higher | Lower |
+| Total late-period expense | Lower | Higher |
+| Cash flow - principal | Financing activities | Operating activities |
+| Variable CAM treatment | Expensed as incurred | Expensed as incurred |
+
+For the comprehensive framework covering both classifications, see the [ASC 842 lease accounting guide](/resources/asc-842-lease-accounting-guide). For a full end-to-end example with CAM variable payments, see our [ASC 842 lease accounting example](/resources/asc-842-lease-accounting-example).
+
+---
+
+## Related Resources
+
+- [Operating Lease vs Finance Lease](/resources/operating-lease-vs-finance-lease): classification side-by-side
+- [Operating Lease Accounting Entries](/resources/operating-lease-accounting-entries): full entry templates
+- [ASC 842 Lease Accounting Guide](/resources/asc-842-lease-accounting-guide): comprehensive guide
+- [US GAAP Lease Accounting Guide](/resources/us-gaap-lease-accounting-guide): GAAP vs IFRS comparison
+- [Sale and Leaseback CRE FinOps](/blog/sale-leaseback-cre-finops): how sale-leaseback affects lease classification
+- [CAM Reconciliation Guide](/resources/common-area-maintenance-reconciliation-explained): understanding CAM charges
+- [CAM Cap Calculator](/tools/cam-cap-calculator): verify if CAM caps were applied
+
+## Sources
+
+1. [Deloitte DART - Roadmap: Leases](https://dart.deloitte.com/USDART/home/publications/roadmap/leasing?id=us%3A2el%3A3dp%3Armleases%3Aeng%3Aaud%3A121823%3Aiaspl)
+2. [Deloitte - Lease Accounting Guide: Roadmap for ASC 842](https://www.deloitte.com/us/en/services/audit-assurance/articles/roadmap-to-applying-the-new-leasing-standard.html?icid=top_roadmap-to-applying-the-new-leasing-standard)

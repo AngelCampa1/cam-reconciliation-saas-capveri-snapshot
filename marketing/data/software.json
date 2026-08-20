@@ -1,0 +1,797 @@
+{
+  "lastUpdated": "2026-05-08",
+  "software": [
+    {
+      "slug": "yardi-voyager",
+      "name": "Yardi Voyager Commercial",
+      "vendor": "Yardi Systems",
+      "camModuleName": "Recovery Reconciliation / CAM Reconciliation Module",
+      "moduleNavigation": "Navigate to Commercial > Recovery > Recovery Reconciliation. Select the property, fiscal year, and recovery pool. From the Recovery Reconciliation screen you can review estimated vs. actual expenses, tenant share calculations, and generate reconciliation statements.",
+      "recoveryPoolConfig": "Recovery pools define which expense GL accounts are included in each CAM category. Set up under Commercial > Setup > Recovery Pool Setup. Each pool needs: expense accounts, recovery type (pro-rata, direct, metered), and gross-up rules. Use the 'Expense Account Assignment' tab to map GL accounts to pools. Variable vs. fixed classification is set per account - this drives gross-up eligibility.",
+      "chargeCodeSetup": "Charge codes map to tenant billing. Under Setup > Charge Codes, define codes for each recoverable expense category (CAM, Tax, Insurance). Link charge codes to recovery pools for automated billing. Each charge code has a billing frequency (monthly/quarterly/annual) and a recovery method. Ensure the charge code's 'Recovery Pool' field matches the pool you configured.",
+      "exportProcedure": "Run Recovery Reconciliation Report: Commercial > Reports > Recovery > Reconciliation Statement. Export to Excel via the Export button. For CapVeri import, export the GL Detail Report filtered by recovery pool expense accounts as CSV. Path: Reports > Financial > GL Detail, set date range to fiscal year, filter by CAM expense account range (e.g., 5000-5999), and click Export > CSV.",
+      "commonMistakes": [
+        "Applying gross-up to the entire recovery pool instead of only variable expense categories",
+        "Not updating the recovery pool when new expense GL accounts are added mid-year",
+        "Misconfigured tenant square footage in lease setup causing pro-rata share errors",
+        "Running reconciliation before all year-end accrual entries are posted",
+        "Using 'Recovery Code' instead of 'Charge Code' - they serve different purposes in Voyager",
+        "Forgetting to set the occupancy gross-up threshold (defaults to 100%, effectively disabling gross-up)",
+        "Not excluding capital expenditure GL accounts from the operating expense recovery pool"
+      ],
+      "capveriIntegration": "Export your GL Detail Report as CSV filtered by CAM expense accounts. Upload directly to CapVeri - no API connection needed. CapVeri reads Yardi's standard CSV export format natively, mapping GL account numbers, descriptions, and amounts automatically. For multi-property portfolios, export one CSV per property or use the consolidated export with the property column included.",
+      "notes": "Yardi Voyager is the most common ERP among mid-market PMCs (20-50 properties). The Recovery Reconciliation module is powerful but complex - most errors stem from pool configuration, not the math engine itself. Voyager's reconciliation engine handles pro-rata, direct allocation, and metered recovery types. The system can auto-generate tenant reconciliation statements, but many firms export and reformat in Excel before sending to tenants.",
+      "troubleshooting": [
+        {
+          "q": "Why is my Yardi recovery pool not calculating correctly?",
+          "a": "The most common causes: (1) Occupancy Type set to Physical instead of Economic in Recovery Pool Setup - change to Economic for weighted-average gross-up. (2) Fixed expenses flagged as Variable, causing incorrect gross-up. (3) GL accounts added mid-year not mapped to the recovery pool. (4) Wrong gross-up threshold - pool set to 90% but lease specifies 95%. Check Recovery Pool Setup -> Calculation tab for each of these settings."
+        },
+        {
+          "q": "Why does my Yardi GL export not balance to my financial statements?",
+          "a": "GL export balance issues have five common causes: wrong date range (accrual cutoff vs. fiscal year end), excluded account ranges in your export filter, accrual vs. cash basis mismatch between the export and financial statements, intercompany elimination entries included at entity level, or closed-period adjusting entries not captured. Compare your export total to the trial balance for the same period to identify the gap."
+        },
+        {
+          "q": "What is the difference between a Yardi charge code and recovery code?",
+          "a": "Charge codes control how Yardi generates tenant billing invoices - they define billing frequency, amount, and GL revenue account. Recovery codes link tenants to specific recovery pools and determine which expense pool drives their CAM calculation. A tenant needs both: the recovery code to pull expenses from the right pool, and the charge code to invoice them. Confusing them causes expenses to flow to the wrong pool or tenants to be billed from incorrect data."
+        },
+        {
+          "q": "How do I fix a CAM calculation error in Yardi Voyager?",
+          "a": "Start at the recovery pool configuration (Recovery Pool Setup -> Calculation tab) and work outward: verify expense GL account assignments, gross-up settings, and occupancy type. Then check charge code settings and their link to the recovery pool. Check tenant lease setup for correct pro-rata denominator and square footage. Finally, look for any manual overrides at the tenant billing level. Errors in the pool propagate to all tenants; tenant-level errors affect only that tenant."
+        }
+      ],
+      "relatedResources": [
+        "/blog/cam-numbers-not-matching-yardi",
+        "/blog/yardi-cam-recovery-pool-setup",
+        "/blog/yardi-charge-code-vs-recovery-code",
+        "/cam-reconciliation-guide",
+        "/blog/cam-software-works-with-yardi"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "yardi-breeze",
+      "name": "Yardi Breeze Premier",
+      "vendor": "Yardi Systems",
+      "camModuleName": "CAM Charges / Operating Expense Recovery",
+      "moduleNavigation": "From the main dashboard, go to Charges > CAM Charges. Breeze uses a simplified charge-based model rather than Voyager's recovery pool architecture. Select the property, then manage CAM charge templates under Settings > Charge Templates > CAM.",
+      "recoveryPoolConfig": "Breeze does not use formal recovery pools like Voyager. Instead, CAM is managed through charge templates that define which expense categories are recoverable. Under Settings > Charge Templates, create a CAM template and add expense line items. Each line maps to a GL expense category with an allocation method (pro-rata by SF, fixed, or percentage).",
+      "chargeCodeSetup": "Charge codes in Breeze are simplified. Go to Settings > Charge Codes and create entries for CAM, Tax, Insurance, etc. Each code links to a revenue GL account for billing and an expense tracking category. Breeze auto-generates monthly estimates based on the prior year's actuals divided by 12.",
+      "exportProcedure": "Navigate to Reports > Financial Reports > General Ledger Detail. Set the date range to your fiscal year, filter by expense accounts, and click Download CSV. Alternatively, use Reports > CAM Reconciliation Summary for a pre-formatted reconciliation export. Both formats are compatible with CapVeri.",
+      "commonMistakes": [
+        "Confusing Breeze's simplified CAM templates with Voyager's recovery pools - they work differently",
+        "Not updating charge templates when mid-year lease amendments change recoverable categories",
+        "Using the wrong allocation method (pro-rata vs. percentage) for different expense types",
+        "Failing to exclude management fees from CAM pools when the lease restricts them",
+        "Generating reconciliation statements before verifying all vendor invoices are posted for the year"
+      ],
+      "capveriIntegration": "Export the GL Detail report or CAM Reconciliation Summary as CSV from Breeze. Upload to CapVeri for automated validation. CapVeri detects the Breeze CSV format and maps columns automatically. No manual column mapping required.",
+      "notes": "Yardi Breeze Premier is designed for smaller portfolios (under 20 properties) that need commercial CAM tracking without Voyager's complexity. The simplified charge template model works well for straightforward NNN leases but can be limiting for complex multi-pool recoveries. Firms that outgrow Breeze's CAM capabilities typically upgrade to Voyager.",
+      "relatedResources": [
+        "/blog/cam-numbers-not-matching-yardi",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "mri-software",
+      "name": "MRI Commercial Management",
+      "vendor": "MRI Software",
+      "camModuleName": "Recovery Billing / Expense Recovery Module",
+      "moduleNavigation": "In MRI Commercial Management, navigate to Lease Administration > Recovery Billing. Select the property and recovery group. The Recovery Billing module handles pool setup, estimate generation, and year-end reconciliation. For configuration, go to System Administration > Recovery Setup.",
+      "recoveryPoolConfig": "MRI uses 'Recovery Groups' to define expense pools. Under Recovery Setup > Recovery Groups, create groups for each CAM category (Operating, Tax, Insurance). Within each group, assign GL account ranges that feed into the pool. Set the recovery method per group: pro-rata share, direct bill, or metered. MRI's 'Expense Participation' settings control gross-up rules - configure the occupancy threshold and which expense types are eligible.",
+      "chargeCodeSetup": "Under Lease Administration > Charge Code Setup, create charge codes linked to recovery groups. Each charge code defines: billing frequency, recovery group association, estimate calculation method (prior year, budget, or fixed), and the tenant's proportionate share basis (rentable SF, usable SF, or custom). MRI's 'Share Type' field is critical - it determines whether the tenant pays on building-level or floor-level pro-rata share.",
+      "exportProcedure": "Go to Reports > Financial > General Ledger Detail Report. Filter by property, date range, and account range for CAM expenses. Export as CSV or Excel. For reconciliation-specific output, use Reports > Recovery > Recovery Reconciliation Report, which shows estimated vs. actual by tenant. Export to Excel for CapVeri import.",
+      "commonMistakes": [
+        "Misconfiguring the 'Share Type' field - building-level vs. floor-level pro-rata produces materially different tenant shares",
+        "Not linking new GL accounts to the correct recovery group after chart of accounts changes",
+        "Setting the gross-up occupancy threshold incorrectly in Expense Participation settings",
+        "Forgetting to run the 'Actual Expense Update' process before generating reconciliation statements",
+        "Using the wrong fiscal year calendar in recovery group setup for properties with non-calendar fiscal years",
+        "Not excluding below-grade or storage areas from the rentable area used in pro-rata calculations"
+      ],
+      "capveriIntegration": "Export the GL Detail Report as CSV with property, account, description, and amount columns. Upload to CapVeri - MRI's standard export format is auto-detected. For multi-entity portfolios, ensure the property identifier column is included so CapVeri can separate property-level expenses.",
+      "notes": "MRI Commercial Management is the second most popular CRE ERP after Yardi. Its Recovery Billing module is powerful but uses different terminology than Yardi (recovery groups vs. recovery pools, share types vs. allocation methods). Firms migrating between MRI and Yardi frequently encounter reconciliation differences due to these naming and configuration differences.",
+      "troubleshooting": [
+        {
+          "q": "How does MRI Share Type affect CAM calculations?",
+          "a": "MRI's Share Type field determines whether a tenant's pro-rata share is calculated against building-level or floor-level total rentable area. Building-level uses total building RSF as denominator; floor-level uses only the RSF for the floor where the tenant is located. If a tenant has dedicated floor access (e.g., a single-tenant floor in a multi-tenant building), floor-level is usually correct. Wrong share type causes systematic over- or under-billing for every affected tenant."
+        },
+        {
+          "q": "Why is my MRI recovery billing producing wrong tenant shares?",
+          "a": "Check three things in order: (1) Share Type - building vs. floor level. (2) Expense Participation settings for the recovery group - verify the gross-up threshold and which expense types are eligible. (3) Recovery group GL account assignments - confirm all operating expense accounts are mapped and no mid-year additions are missing. The 'Actual Expense Update' process must also be run before generating reconciliation statements."
+        },
+        {
+          "q": "How do I fix gross-up errors in MRI recovery billing?",
+          "a": "MRI gross-up is controlled in Recovery Setup -> Recovery Groups -> Expense Participation tab. Verify: (1) the occupancy threshold matches lease terms (typically 90-95%), (2) only variable expense types are eligible for gross-up (not fixed expenses like property taxes and insurance), and (3) the economic occupancy calculation method is selected. After changing settings, re-run the Actual Expense Update and regenerate reconciliation statements."
+        }
+      ],
+      "relatedResources": [
+        "/blog/mri-recovery-billing-gross-up-errors",
+        "/blog/mri-share-type-building-vs-floor",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "realpage",
+      "name": "RealPage Commercial",
+      "vendor": "RealPage (Thoma Bravo)",
+      "camModuleName": "Commercial Billing / CAM Recovery Module",
+      "moduleNavigation": "Navigate to Commercial > CAM Billing from the main menu. Select the property and billing period. For setup, go to Administration > Commercial Setup > CAM Configuration. RealPage uses a wizard-based setup flow for new CAM pools.",
+      "recoveryPoolConfig": "RealPage uses 'CAM Pools' configured under Commercial Setup > CAM Configuration > Pool Setup. Each pool contains: included GL accounts, allocation basis (rentable SF, usable SF, or custom), gross-up settings, and cap rules. RealPage allows per-pool cap configuration - both cumulative and compounding year-over-year caps are supported natively.",
+      "chargeCodeSetup": "Under Commercial Setup > Billing Codes, create codes for each recoverable category. Link billing codes to CAM pools. RealPage's 'Billing Schedule' feature lets you define estimate frequency (monthly, quarterly) and reconciliation timing. Each billing code can have tenant-level overrides for custom share percentages or fixed-amount recoveries.",
+      "exportProcedure": "Go to Reports > Financial > General Ledger Export. Select the property, fiscal year, and GL account range. Choose CSV format. For CAM-specific exports, use Reports > Commercial > CAM Reconciliation Export, which pre-formats data with pool assignments and tenant shares. Both exports work with CapVeri.",
+      "commonMistakes": [
+        "Not configuring cap rules at the pool level - RealPage defaults to no cap, which may violate lease terms",
+        "Mixing residential and commercial GL accounts in the same CAM pool for mixed-use properties",
+        "Forgetting to update the allocation basis when a tenant's rentable area changes due to expansion or contraction",
+        "Running the CAM reconciliation process before the GL close is finalized for the period",
+        "Not verifying that the 'Exclude from CAM' flag is set on capital improvement GL accounts"
+      ],
+      "capveriIntegration": "Export the GL Detail or CAM Reconciliation Export as CSV. Upload to CapVeri for validation. CapVeri auto-detects RealPage's column format. For properties using RealPage's native cap calculations, CapVeri will independently verify cap compliance against your lease terms.",
+      "notes": "RealPage's commercial module has improved significantly since the Thoma Bravo acquisition. Native cap support is a differentiator - most competitors require manual cap tracking. However, the commercial module is less mature than its residential offerings, and some firms find the CAM configuration wizard limiting for complex multi-pool scenarios.",
+      "troubleshooting": [
+        {
+          "q": "How do I configure CAM pool cap rules in RealPage?",
+          "a": "CAM pool cap rules are configured in Administration > Commercial Setup > CAM Configuration > Pool Setup, under the Cap Rules tab. RealPage defaults to no cap - you must explicitly configure cap type (cumulative or compounding), the base year, and the cap percentage for each pool. Cumulative caps allow unused capacity to carry forward; compounding caps apply the percentage to the prior year's capped amount. Missing cap rules are the most common RealPage compliance issue."
+        },
+        {
+          "q": "Why are my RealPage CAM calculations wrong for mixed-use properties?",
+          "a": "Mixed-use properties in RealPage require separate CAM pools for residential and commercial components. If residential operating expenses (lobbies, amenity spaces, residential common areas) flow into the commercial CAM pool, commercial tenants are being charged for expenses they should not bear. Verify GL account assignments in CAM Configuration > Pool Setup and ensure residential expense accounts are excluded from commercial pools."
+        },
+        {
+          "q": "How do I update tenant allocation basis in RealPage after a lease change?",
+          "a": "Tenant allocation basis changes - caused by expansions, contractions, or lease amendments - must be updated in the tenant's billing record under Commercial > CAM Billing > Tenant Setup. Update the RSF and effective date of the change. RealPage does not automatically detect or prompt for lease-related changes, so allocation basis errors can persist for an entire reconciliation year if not updated promptly after the lease event."
+        }
+      ],
+      "relatedResources": [
+        "/blog/realpage-cam-pool-configuration-guide",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "appfolio",
+      "name": "AppFolio Investment Manager",
+      "vendor": "AppFolio",
+      "camModuleName": "Commercial Lease Management / CAM Reconciliation",
+      "moduleNavigation": "From the main menu, go to Accounting > Commercial CAM. Select the property and fiscal year. AppFolio's CAM module is under Accounting rather than a dedicated Commercial section. For setup, navigate to Settings > Commercial Properties > CAM Configuration.",
+      "recoveryPoolConfig": "AppFolio uses a simplified 'Expense Pool' model. Under CAM Configuration, create pools by selecting GL accounts to include. Each pool has an allocation method (pro-rata by SF or custom percentage). Gross-up is configured per pool with an occupancy threshold percentage. AppFolio does not support multiple recovery types (pro-rata, direct, metered) within a single pool - create separate pools for each.",
+      "chargeCodeSetup": "Under Settings > Charge Types, create CAM-related charge types. Link each to an expense pool and set the billing frequency. AppFolio auto-calculates monthly estimates based on the budget or prior year actuals. Each charge type has a 'Recoverable' toggle that must be enabled for it to appear in CAM reconciliation.",
+      "exportProcedure": "Go to Reports > Accounting > General Ledger. Filter by property, date range, and account type (expenses). Click Export to CSV. AppFolio also offers a CAM Reconciliation Report under Reports > Commercial that shows estimated vs. actual expenses by tenant - export this for a reconciliation-ready format.",
+      "commonMistakes": [
+        "Not enabling the 'Recoverable' toggle on charge types, causing expenses to be excluded from CAM",
+        "Using a single pool for all expenses instead of separating CAM, Tax, and Insurance into distinct pools",
+        "Forgetting to update the prior year base when calculating year-over-year cap compliance",
+        "Not reconciling the GL detail against the CAM report - AppFolio occasionally has timing differences",
+        "Applying commercial CAM settings to residential units in mixed-use properties"
+      ],
+      "capveriIntegration": "Export the General Ledger report as CSV from AppFolio. Upload to CapVeri for automated validation. CapVeri maps AppFolio's GL export columns (Date, Account, Description, Amount) automatically. The CAM Reconciliation Report export also works but contains pre-calculated shares that CapVeri will independently verify.",
+      "notes": "AppFolio Investment Manager added commercial CAM capabilities in 2023. The module is functional for straightforward NNN leases but lacks the depth of Yardi or MRI for complex multi-pool recoveries. Best suited for firms with mixed residential/commercial portfolios under 50 units total. Firms with 10+ commercial properties often find they need more granular pool configuration than AppFolio provides.",
+      "relatedResources": [
+        "/cam-reconciliation-guide",
+        "/blog/cam-numbers-not-matching-yardi"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "buildium",
+      "name": "Buildium",
+      "vendor": "Buildium (RealPage)",
+      "camModuleName": "Commercial Lease Charges / Common Area Maintenance Tracking",
+      "moduleNavigation": "Go to Leases & Tenants > Commercial Leases. Select the lease, then navigate to the Charges tab. Buildium handles CAM through recurring charge templates rather than a dedicated recovery module. For expense tracking, use Accounting > Chart of Accounts to tag CAM-related expense accounts.",
+      "recoveryPoolConfig": "Buildium does not have formal recovery pools or expense pools. CAM tracking is done manually by tagging expense GL accounts as 'CAM-related' in the Chart of Accounts, then creating recurring charges on commercial leases that correspond to estimated CAM. Year-end reconciliation requires a manual GL report comparing actual expenses to billed estimates.",
+      "chargeCodeSetup": "Under Settings > Lease Charges, create charge templates for CAM, Tax, and Insurance. Each template has a fixed monthly amount (the estimate). Link each template to a revenue GL account. At year-end, manually calculate the true-up by comparing actual GL expenses to total estimates billed, then create a one-time charge or credit on each lease.",
+      "exportProcedure": "Navigate to Accounting > Reports > General Ledger. Filter by CAM-related expense accounts and the fiscal year. Export to CSV via the download button. Buildium does not have a pre-built CAM reconciliation report - the GL detail export is the primary data source for reconciliation.",
+      "commonMistakes": [
+        "Relying on Buildium's recurring charges as the reconciliation mechanism - they are estimates only and need manual true-up",
+        "Not tagging all CAM-related GL accounts consistently, causing expenses to be missed in year-end analysis",
+        "Forgetting to create the year-end true-up charge or credit after reconciliation",
+        "Mixing property-level and portfolio-level GL accounts, making per-property CAM allocation difficult",
+        "Not maintaining a separate spreadsheet to track pro-rata share calculations since Buildium does not compute them"
+      ],
+      "capveriIntegration": "Export the General Ledger report as CSV filtered by CAM expense accounts. Upload to CapVeri, which will calculate pro-rata shares, apply gross-up, and verify cap compliance - filling the gap that Buildium's manual process leaves. CapVeri replaces the Excel reconciliation spreadsheet that most Buildium users maintain separately.",
+      "notes": "Buildium is primarily a residential property management platform with basic commercial capabilities. It lacks a dedicated CAM reconciliation module, so most commercial landlords using Buildium maintain Excel reconciliation spreadsheets alongside the system. This manual process is error-prone and is a primary reason firms seek tools like CapVeri. Best suited for firms with fewer than 5 commercial properties.",
+      "relatedResources": [
+        "/blog/cam-numbers-not-matching-yardi",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "rent-manager",
+      "name": "Rent Manager",
+      "vendor": "London Computer Systems (LCS)",
+      "camModuleName": "Commercial Charge Manager / CAM Reconciliation Utility",
+      "moduleNavigation": "From the main menu, go to Charges > Commercial Charge Manager. Select the property and configure CAM pools. For reconciliation, navigate to Tools > CAM Reconciliation Utility. Rent Manager separates pool setup (Charge Manager) from reconciliation execution (Utility).",
+      "recoveryPoolConfig": "Under Commercial Charge Manager > Pool Setup, create CAM pools by assigning GL expense accounts. Each pool supports pro-rata allocation by rentable or usable square footage. Gross-up is configured per pool with a 'Minimum Occupancy' field that sets the threshold. Rent Manager supports cap tracking per pool with both cumulative and compounding cap types.",
+      "chargeCodeSetup": "Under Setup > Charge Types, create commercial charge types for each recovery category. Link charge types to CAM pools. Set the billing cycle (monthly, quarterly, annual) and estimate calculation method. Rent Manager's 'Auto-Estimate' feature calculates monthly estimates from the prior year's actuals or a manual budget amount.",
+      "exportProcedure": "Go to Reports > Accounting > General Ledger Detail. Filter by property, date range, and GL account range for CAM expenses. Export to CSV or Excel. Rent Manager also has a CAM Reconciliation Report under Reports > Commercial that shows pool-level actual vs. estimated breakdowns - export this for a reconciliation-ready format.",
+      "commonMistakes": [
+        "Confusing the Commercial Charge Manager (setup) with the CAM Reconciliation Utility (execution) - they are separate modules",
+        "Not running the CAM Reconciliation Utility after year-end close, relying on manual calculations instead",
+        "Setting the 'Minimum Occupancy' gross-up threshold to 0%, which effectively applies gross-up to all expenses regardless of occupancy",
+        "Not updating pool GL account assignments when the chart of accounts is restructured",
+        "Forgetting to verify that tenant square footage in the lease record matches the actual lease agreement"
+      ],
+      "capveriIntegration": "Export the GL Detail Report or CAM Reconciliation Report as CSV. Upload to CapVeri for independent validation. CapVeri auto-detects Rent Manager's CSV column format and maps property, account, and amount fields automatically.",
+      "notes": "Rent Manager is popular among mid-size PMCs managing mixed portfolios (residential + commercial). Its CAM Reconciliation Utility is more capable than Buildium's manual approach but less sophisticated than Yardi or MRI. The dual-module approach (Charge Manager + Reconciliation Utility) can cause confusion for new users.",
+      "relatedResources": [
+        "/blog/cam-numbers-not-matching-yardi",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "sage-intacct",
+      "name": "Sage Intacct Real Estate",
+      "vendor": "Sage Group",
+      "camModuleName": "Real Estate Expense Pools / Recovery Billing",
+      "moduleNavigation": "Navigate to Real Estate > Expense Pools from the top menu. Select the entity and property. Sage Intacct uses dimension-based accounting - CAM pools are defined by combining Location, Property, and GL Account dimensions. For recovery billing, go to Real Estate > Recovery Billing > Reconciliation.",
+      "recoveryPoolConfig": "Sage Intacct defines expense pools using its multi-dimensional GL structure. Under Real Estate > Expense Pool Setup, create pools by selecting dimension combinations (Location + Department + GL Account). Each pool supports pro-rata, direct, and metered allocation methods. Gross-up rules are configured in the 'Occupancy Adjustment' section of each pool. Intacct's dimensional approach allows sophisticated pool definitions but requires careful dimension planning.",
+      "chargeCodeSetup": "Under Real Estate > Billing Setup > Recovery Charge Codes, create codes for each recoverable category. Link charge codes to expense pools and define the billing frequency. Intacct's 'Smart Events' can automate estimate recalculation when actuals are posted. Each charge code has a 'Tenant Share Basis' field - set to rentable area, usable area, or custom allocation.",
+      "exportProcedure": "Go to Reports > Real Estate > General Ledger Detail. Use Intacct's report builder to filter by property dimension, date range, and expense account range. Export to CSV or Excel. For reconciliation output, use Reports > Real Estate > Recovery Reconciliation, which shows pool-level detail with estimated vs. actual comparisons.",
+      "commonMistakes": [
+        "Misconfiguring GL dimensions, causing expenses to land in the wrong expense pool or be excluded entirely",
+        "Not setting up the Location dimension consistently across all expense entries, breaking property-level reporting",
+        "Forgetting to activate 'Smart Events' for automatic estimate recalculation, leading to stale monthly estimates",
+        "Using Intacct's standard (non-real-estate) GL reports instead of the Real Estate module reports, which miss dimensional context",
+        "Not reconciling the expense pool totals against the GL trial balance - dimension mismatches can cause silent discrepancies"
+      ],
+      "capveriIntegration": "Export the GL Detail Report as CSV using Intacct's report builder. Include the Location/Property dimension, GL Account, Description, and Amount columns. Upload to CapVeri - Intacct's CSV format is auto-detected. For multi-entity portfolios, include the Entity column so CapVeri can separate property-level data.",
+      "notes": "Sage Intacct Real Estate is popular among institutional owners and REITs because of its multi-dimensional GL and consolidation capabilities. The dimensional approach is powerful but adds complexity to CAM pool configuration compared to Yardi or MRI. Firms migrating from QuickBooks to Intacct often underestimate the dimensional setup effort required for accurate CAM tracking.",
+      "relatedResources": [
+        "/blog/cam-numbers-not-matching-yardi",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "quickbooks-manual",
+      "name": "QuickBooks (Manual CAM Tracking)",
+      "vendor": "Intuit",
+      "camModuleName": "No dedicated CAM module - tracked via GL accounts and Excel",
+      "moduleNavigation": "QuickBooks does not have a CAM reconciliation module. CAM tracking is done by: (1) creating GL expense accounts for each CAM category in Chart of Accounts, (2) recording CAM-related expenses against those accounts, and (3) exporting the GL detail to Excel for manual reconciliation and tenant share calculations.",
+      "recoveryPoolConfig": "There are no recovery pools in QuickBooks. Instead, create a GL account structure that mirrors your CAM categories: a parent account (e.g., '5000 - CAM Expenses') with sub-accounts for each category (Maintenance, Landscaping, Utilities, Insurance, Taxes, etc.). Use Classes or Locations in QuickBooks Online to separate expenses by property.",
+      "chargeCodeSetup": "QuickBooks does not have charge codes for CAM recovery. To track estimates billed to tenants, create a revenue sub-account (e.g., '4200 - CAM Recoveries') with sub-accounts per tenant or use the Customer field on invoices. Monthly CAM estimates are billed as manual invoices. Year-end true-ups are separate invoices or credit memos.",
+      "exportProcedure": "Go to Reports > Accounting > General Ledger (QBO) or Reports > Accountant & Taxes > General Ledger (Desktop). Filter by date range and CAM expense accounts. Export to Excel or CSV. In QBO, click the Export button; in Desktop, use File > Export to Excel. Ensure the property Class/Location column is included for multi-property portfolios.",
+      "commonMistakes": [
+        "Not using Classes or Locations to separate expenses by property, making per-property CAM allocation impossible",
+        "Posting CAM expenses to generic accounts (e.g., 'Miscellaneous Expense') instead of specific CAM sub-accounts",
+        "Forgetting to exclude capital expenditures from CAM - QuickBooks does not enforce this automatically",
+        "Not reconciling invoiced CAM estimates against actual GL expenses, leading to missed true-ups",
+        "Losing the Excel reconciliation spreadsheet or using an outdated version with wrong square footage data",
+        "Applying the same pro-rata share to all tenants without verifying each lease's specific allocation method"
+      ],
+      "capveriIntegration": "Export your General Ledger detail as CSV from QuickBooks. Upload to CapVeri, which replaces the manual Excel reconciliation process entirely. CapVeri calculates pro-rata shares, applies gross-up, tracks caps, and generates tenant reconciliation statements - all from your QuickBooks GL export. This is the highest-impact integration for firms still using spreadsheets.",
+      "notes": "QuickBooks is used by smaller CRE firms (1-10 properties) that lack the budget or complexity to justify Yardi or MRI. CAM reconciliation in QuickBooks is entirely manual - all calculations happen in Excel. This is the most error-prone setup in the industry and the use case where CapVeri provides the greatest value. Common errors include wrong square footage, missed expenses, incorrect gross-up, and no cap tracking.",
+      "relatedResources": [
+        "/blog/cam-numbers-not-matching-yardi",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "entrata",
+      "name": "Entrata Commercial",
+      "vendor": "Entrata",
+      "camModuleName": "Commercial Recovery Management / CAM Billing",
+      "moduleNavigation": "Navigate to Commercial > Recovery Management from the main menu. Select the property and recovery period. Entrata's commercial module is separate from its residential platform. For setup, go to Administration > Commercial Settings > Recovery Configuration.",
+      "recoveryPoolConfig": "Under Recovery Configuration > Pool Setup, create recovery pools by assigning GL expense accounts. Each pool has: allocation basis (rentable SF, usable SF, custom), gross-up settings with occupancy threshold, and optional year-over-year cap configuration. Entrata supports both 'base year stop' and 'expense stop' lease structures with per-pool stop settings.",
+      "chargeCodeSetup": "Under Commercial Settings > Charge Codes, create codes for each recovery type. Link charge codes to recovery pools and set billing parameters. Entrata's 'Estimate Engine' auto-calculates monthly estimates from budget or prior-year data. Each charge code can have tenant-level overrides for custom share percentages, fixed amounts, or lease-specific exclusions.",
+      "exportProcedure": "Go to Reports > Financial > General Ledger Detail. Filter by property, date range, and account category. Export to CSV or Excel using the Download button. For reconciliation output, use Reports > Commercial > Recovery Reconciliation Report, which shows pool-level actual vs. estimated with tenant shares. Both formats are compatible with CapVeri.",
+      "commonMistakes": [
+        "Not configuring 'base year stop' or 'expense stop' correctly for each lease - wrong stop amounts cause significant over/under-billing",
+        "Failing to separate residential and commercial GL accounts in mixed-use properties using Entrata for both",
+        "Not running the 'Actual Expense Sync' process before generating reconciliation, causing the module to use stale data",
+        "Misconfiguring the gross-up occupancy threshold - Entrata defaults to 95%, which may not match your lease terms",
+        "Using the residential CAM features instead of the Commercial Recovery Management module for commercial leases"
+      ],
+      "capveriIntegration": "Export the GL Detail or Recovery Reconciliation Report as CSV from Entrata. Upload to CapVeri for independent validation. CapVeri auto-detects Entrata's export format and maps columns automatically. For properties with complex stop structures, CapVeri will verify stop calculations against your lease terms.",
+      "notes": "Entrata is primarily known for multifamily but has expanded into commercial with dedicated Recovery Management. The commercial module is relatively new and best suited for firms managing mixed residential/commercial portfolios on a single platform. Native support for base year stops and expense stops is a differentiator. Firms with pure commercial portfolios typically prefer Yardi or MRI for their deeper commercial feature sets.",
+      "relatedResources": [
+        "/blog/cam-numbers-not-matching-yardi",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "doorloop",
+      "name": "DoorLoop",
+      "vendor": "DoorLoop Inc.",
+      "camModuleName": "Recurring Charges / Expense Tracking",
+      "moduleNavigation": "From the main dashboard, go to Properties > select the property > Leases. Select the commercial lease and navigate to the Charges tab for recurring charge setup. For expense tracking, go to Accounting > Expenses and filter by property. DoorLoop does not have a dedicated CAM module - CAM is managed through recurring charge templates combined with manual expense tracking.",
+      "recoveryPoolConfig": "DoorLoop has no formal recovery pool system. To approximate CAM pool tracking, create expense categories in Accounting > Chart of Accounts for each recoverable cost type (Maintenance, Landscaping, Utilities, Insurance, Property Tax). Tag all CAM-related expense transactions to these categories. Year-end reconciliation requires exporting these categorized expenses and calculating tenant shares manually or via CapVeri.",
+      "chargeCodeSetup": "Under Accounting > Charge Types, create charge types for CAM, Tax, and Insurance. For each commercial lease, add recurring charges on the lease Charges tab with the estimated monthly amount. Set billing frequency to monthly. DoorLoop does not auto-calculate CAM estimates from actuals - enter the estimated amount manually based on your budget. Year-end true-ups are posted as one-time charges or credits on each lease.",
+      "exportProcedure": "Navigate to Accounting > Reports > General Ledger. Set the date range to the full fiscal year and filter by property. Export to CSV using the Export button. DoorLoop does not have a CAM reconciliation report - the GL detail export is the source of truth for actual expenses. For a clean dataset, filter the export by the CAM expense categories you configured in your chart of accounts.",
+      "commonMistakes": [
+        "Not creating distinct expense categories for each CAM cost type, making it impossible to identify recoverable vs. non-recoverable expenses at year-end",
+        "Setting recurring charge amounts and never updating them as actual costs increase, leading to chronic under-collection",
+        "Forgetting to post the year-end true-up as a charge or credit on each lease after reconciliation is complete",
+        "Using DoorLoop's residential property features for commercial leases, which omits commercial-specific fields",
+        "Not tagging expenses to the correct property when managing multiple properties, making per-property CAM calculations impossible",
+        "Relying on DoorLoop's cash-basis expense reports without reconciling to bank statements and vendor invoices"
+      ],
+      "capveriIntegration": "Export the General Ledger report as CSV from DoorLoop, filtered by property and CAM expense categories. Upload to CapVeri to automate the reconciliation process DoorLoop does not provide natively. CapVeri calculates pro-rata shares by tenant based on lease square footage, applies gross-up if required, and generates reconciliation statements - replacing the manual Excel workflow most DoorLoop commercial users maintain.",
+      "notes": "DoorLoop launched in 2019 and has grown rapidly among small-to-medium residential landlords. Commercial CAM capabilities are basic - the platform excels at lease tracking, maintenance requests, and payment collection, but has no dedicated CAM reconciliation module. Landlords managing simple NNN leases with 5 or fewer commercial tenants can make DoorLoop work with manual effort. Larger or more complex commercial portfolios require a dedicated property management platform.",
+      "troubleshooting": [
+        {
+          "q": "How do I track CAM expenses by property in DoorLoop?",
+          "a": "In DoorLoop, every expense transaction has a Property field - always assign it to the correct property when recording expenses. Create a chart of accounts structure with CAM sub-categories (Maintenance, Landscaping, Utilities, etc.) under a parent CAM Expenses account. When you run the General Ledger report, filter by property and these accounts to isolate recoverable expenses for reconciliation."
+        },
+        {
+          "q": "DoorLoop doesn't calculate pro-rata shares - how do I reconcile?",
+          "a": "DoorLoop does not compute pro-rata shares natively. Export your GL detail for the fiscal year, then either use CapVeri (which calculates shares automatically from your lease square footage data) or perform the calculation manually in Excel: divide each tenant's RSF by the total leasable building RSF to get their pro-rata percentage, then multiply by total pool expenses. CapVeri eliminates this manual step and applies gross-up and cap rules automatically."
+        }
+      ],
+      "relatedResources": [
+        "/blog/cam-reconciliation-errors",
+        "/cam-reconciliation-guide",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "resman",
+      "name": "ResMan Commercial",
+      "vendor": "ResMan",
+      "camModuleName": "Commercial Recovery Module",
+      "moduleNavigation": "Navigate to Commercial > Recovery from the left sidebar. Select the property and the recovery period. ResMan's Commercial Recovery module is separate from its multifamily features. For configuration, go to Administration > Commercial Settings > Recovery Setup. ResMan uses a wizard-based flow to create recovery groups and assign tenants.",
+      "recoveryPoolConfig": "Under Recovery Setup > Recovery Groups, create groups for each CAM category (Operating Expenses, Property Tax, Insurance). Assign GL expense accounts to each group from the chart of accounts. Each group has an allocation basis (rentable SF, usable SF, or custom percentage) and an occupancy gross-up threshold. ResMan's commercial recovery module supports basic pro-rata and direct allocation but does not support metered recovery types natively.",
+      "chargeCodeSetup": "Under Commercial Settings > Charge Codes, create codes linked to recovery groups. Set billing frequency (monthly estimates, annual reconciliation) and estimate calculation method (prior year actuals, budget, or fixed amount). Each tenant's lease record must have the correct RSF entered for pro-rata share calculations to be accurate. ResMan does not auto-update RSF from lease amendments - this must be maintained manually.",
+      "exportProcedure": "Go to Reports > Accounting > General Ledger Detail. Filter by property, fiscal year, and expense account range. Export to CSV or Excel. ResMan also offers a Recovery Reconciliation Summary under Reports > Commercial > Recovery that shows estimated vs. actual by recovery group and tenant. Export the reconciliation summary for a pre-formatted view of CAM actuals.",
+      "commonMistakes": [
+        "Using multifamily CAM charge templates for commercial leases instead of the dedicated Commercial Recovery module, which lacks gross-up and pool logic",
+        "Not entering or updating tenant RSF in the lease record after expansions or contractions, causing pro-rata share errors for the entire year",
+        "Assigning residential common area expenses to the commercial recovery group in mixed-use properties",
+        "Running reconciliation before all year-end vendor invoices are posted and the GL period is closed",
+        "Misunderstanding the gross-up threshold default (ResMan may default to 100%, effectively disabling gross-up) - verify per recovery group"
+      ],
+      "capveriIntegration": "Export the GL Detail or Recovery Reconciliation Summary as CSV from ResMan. Upload to CapVeri for independent validation of tenant shares, gross-up application, and cap compliance. CapVeri auto-detects ResMan's CSV format. For mixed residential/commercial portfolios, filter the export to commercial expense accounts only before uploading to CapVeri.",
+      "notes": "ResMan built its reputation in multifamily property management and added a commercial recovery module around 2022. The commercial features are functional for standard NNN leases and basic gross lease structures but lack the depth of Yardi or MRI for complex multi-pool, multi-allocation-method scenarios. Best suited for firms with predominantly multifamily portfolios that have a minority of commercial properties and want a single platform. Pure commercial operators typically find ResMan's commercial module limiting.",
+      "troubleshooting": [
+        {
+          "q": "Why is ResMan showing different tenant shares than I expect?",
+          "a": "The two most common causes are: (1) incorrect RSF entered on the tenant's lease record - verify this against the signed lease document and update if needed; and (2) the wrong recovery group assigned to the tenant's charge code. Check Commercial Settings > Charge Codes to confirm the charge code links to the correct recovery group, then verify the recovery group's GL account assignments are complete and current."
+        },
+        {
+          "q": "How do I separate residential and commercial expenses in ResMan for a mixed-use property?",
+          "a": "Create separate GL accounts or account ranges for residential and commercial operating expenses. In Recovery Setup, configure your commercial recovery groups to reference only the commercial GL account range. Residential expense accounts should never appear in commercial recovery groups. Run the GL Detail report filtered by commercial accounts only to verify no cross-contamination before generating reconciliation statements."
+        }
+      ],
+      "relatedResources": [
+        "/blog/cam-reconciliation-errors",
+        "/cam-reconciliation-guide",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/recovery-gap-analyzer",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "propertyware",
+      "name": "Propertyware",
+      "vendor": "RealPage (acquired 2018)",
+      "camModuleName": "Commercial Lease Charges / GL-Based Expense Tracking",
+      "moduleNavigation": "Navigate to Leases > Commercial Leases from the main menu. Select the lease and go to the Charges tab for recurring CAM charge setup. For expense tracking, go to Accounting > General Ledger. Propertyware does not have a dedicated CAM reconciliation module - the workflow relies on GL account categorization for actuals and recurring charges for estimates.",
+      "recoveryPoolConfig": "Propertyware has no native recovery pool concept. Structure your chart of accounts to group CAM-recoverable expenses by category: create a parent GL account (e.g., 6000 - Operating Expenses) with sub-accounts for Maintenance, Landscaping, Utilities, Insurance, and Property Tax. Use Propertyware's property-level filtering when running expense reports to isolate each property's CAM expenses for reconciliation.",
+      "chargeCodeSetup": "Under Accounting > Charge Types, create charge types for CAM, Tax, and Insurance. Apply these as recurring charges on commercial leases with estimated monthly amounts. Propertyware does not auto-calculate estimates from actuals - determine the monthly estimate from your budget and enter it manually. For year-end true-ups, post a one-time additional charge or credit to each lease reflecting the difference between actual expenses and billed estimates.",
+      "exportProcedure": "Go to Reports > Accounting > General Ledger Report. Filter by property and date range (full fiscal year). Add account filters to include only CAM-related expense accounts. Export to CSV or Excel. Propertyware's export includes Date, Account, Description, Reference, and Amount columns - all fields CapVeri uses for reconciliation. For multi-property portfolios, include the Property column in the export.",
+      "commonMistakes": [
+        "Failing to organize the chart of accounts by CAM category, making it impossible to identify which expenses are recoverable without manual review",
+        "Setting recurring CAM estimates at lease inception and never adjusting them, resulting in significant true-up amounts at year-end",
+        "Posting capital improvement expenses (roof replacement, HVAC systems) to operating expense accounts, inflating CAM charges",
+        "Not filtering the GL export by property when managing multiple properties, causing expenses from one property to contaminate another's CAM calculation",
+        "Skipping the year-end true-up entirely due to the manual effort required, leaving CAM amounts unreconciled"
+      ],
+      "capveriIntegration": "Export the General Ledger report as CSV from Propertyware, filtered by property and CAM expense account ranges. Upload to CapVeri to automate pro-rata share calculations, gross-up application, and tenant statement generation - all of which require manual effort in Propertyware's workflow. CapVeri is particularly valuable for Propertyware users managing NNN leases, replacing the Excel-based reconciliation process most Propertyware commercial operators maintain.",
+      "notes": "Propertyware is a RealPage-owned platform originally focused on single-family rentals, with limited commercial capabilities added over time. It is used by smaller operators managing simple NNN commercial leases alongside residential properties. Compared to RealPage's commercial platform, Propertyware lacks dedicated CAM recovery logic - making it suitable only for landlords with straightforward lease structures. Operators needing cap tracking, gross-up, or multi-pool recoveries typically outgrow Propertyware quickly.",
+      "troubleshooting": [
+        {
+          "q": "How do I identify which Propertyware expenses are CAM-recoverable?",
+          "a": "Propertyware does not have a 'recoverable' flag on expense accounts. The cleanest approach is to structure your chart of accounts so recoverable expenses have account numbers in a defined range (e.g., 6000-6499 for CAM, 6500-6599 for non-recoverable). When running the GL report, filter by this account range. Alternatively, add a naming convention to account names (e.g., prefix with [CAM]) and manually sort when exporting. CapVeri allows you to specify which GL accounts are recoverable during the upload configuration step."
+        },
+        {
+          "q": "Propertyware does not track cap compliance - how do I manage this?",
+          "a": "Propertyware has no native cap tracking. You must maintain lease-level cap information outside the system, typically in Excel. For each tenant, track: the base year CAM amount, the applicable cap percentage, the cumulative cap ceiling for each year, and actual charges billed. CapVeri automates this entire workflow - upload your Propertyware GL export and enter your lease cap terms, and CapVeri calculates whether each tenant's charges are within their cap for each reconciliation year."
+        }
+      ],
+      "relatedResources": [
+        "/blog/cam-reconciliation-errors",
+        "/cam-reconciliation-guide",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/pro-rata-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "visual-lease",
+      "name": "Visual Lease",
+      "vendor": "Visual Lease (Accruent company)",
+      "camModuleName": "Operating Expense / CAM Clause Management",
+      "moduleNavigation": "Navigate to Lease Administration > Leases from the main menu. Select a lease and go to the Operating Expenses tab to view abstracted CAM provisions. For portfolio-level CAM obligation tracking, go to Reports > Operating Expenses. Visual Lease manages CAM through lease clause abstraction rather than a live GL integration - CAM data lives in the lease record as abstracted terms.",
+      "recoveryPoolConfig": "Visual Lease does not use recovery pools in the traditional property management sense. Instead, CAM obligations are captured during lease abstraction in the Operating Expenses section of each lease record. For each lease, abstract the CAM provision fields: expense stop amount or base year, cap percentage and type, excluded expense categories, gross-up provisions, and audit rights. These abstracted terms are the reference data for reconciliation - actual GL expenses come from your ERP separately.",
+      "chargeCodeSetup": "Visual Lease tracks CAM obligations through the lease record's Operating Expense Provision fields rather than charge codes. Each lease has fields for: estimated monthly CAM (the estimate billed), CAM provision type (NNN, modified gross, gross with stops), expense categories included and excluded, and reconciliation schedule. Payment tracking uses the Lease Payments module, where recurring CAM estimates are entered as payment line items with the appropriate CAM payment type.",
+      "exportProcedure": "Navigate to Reports > Lease Reports > Operating Expense Summary. Filter by property, lease status, and date range. Export to CSV or Excel. For CAM reconciliation purposes, export the Operating Expense Detail report which includes abstracted provision terms (base year, cap, gross-up flag) alongside payment amounts. Visual Lease also supports scheduled reports delivered via email for year-end reconciliation workflows.",
+      "commonMistakes": [
+        "Treating Visual Lease as a full property management ERP - it does not post GL journal entries or manage payables, so actual CAM expenses must come from a separate accounting system",
+        "Not abstracting CAM exclusion clauses from leases, causing reconciliation disputes when tenants challenge non-allowable expenses",
+        "Failing to enter the correct base year stop amount during lease abstraction, causing incorrect stop calculations throughout the lease term",
+        "Not updating lease records after CAM-related lease amendments, leading to stale provision data used in reconciliation comparisons",
+        "Ignoring the audit rights fields in lease abstraction - these define deadlines for tenants to dispute CAM charges"
+      ],
+      "capveriIntegration": "Export the Operating Expense Detail report from Visual Lease as CSV to get lease-level CAM provision terms. Separately export your GL actuals from your accounting system (Yardi, MRI, QuickBooks, etc.). Upload both to CapVeri: CapVeri uses the Visual Lease export to understand each lease's CAM terms (caps, stops, exclusions, gross-up), and the GL export to calculate actual costs. This two-source workflow is the standard approach for Visual Lease customers using CapVeri.",
+      "notes": "Visual Lease is primarily a lease accounting and administration platform, not a property management system. Its strength is ASC 842 / IFRS 16 compliance and lease obligation tracking. CAM management is through lease abstraction - tenants use Visual Lease to understand what they owe; landlords use it to track what they can recover per lease terms. Actual reconciliation requires a separate GL data source. Popular with mid-market corporate real estate teams and tenants managing complex lease portfolios.",
+      "troubleshooting": [
+        {
+          "q": "How do I use Visual Lease data for CAM reconciliation when it has no GL integration?",
+          "a": "Visual Lease holds your lease terms (caps, stops, exclusions, gross-up provisions) but not your actual GL expenses. For reconciliation, use a two-source approach: export lease terms from Visual Lease and actual expenses from your accounting system. CapVeri accepts both exports simultaneously - it applies the Visual Lease lease terms to the GL expense data to compute each tenant's reconciled amount, enforcing caps, stops, and exclusions automatically."
+        },
+        {
+          "q": "What Visual Lease fields are most important for CAM reconciliation accuracy?",
+          "a": "The five most critical fields to abstract correctly are: (1) Expense Stop or Base Year Amount, (2) CAM Cap Percentage and Type (cumulative vs. compounding), (3) CAM Exclusions (capital expenditures, above-standard services, management fee limits), (4) Gross-Up Provision (yes/no and threshold percentage), and (5) Pro-Rata Share Method (RSF basis and building denominator). Errors in any of these fields propagate to every reconciliation for the life of the lease."
+        }
+      ],
+      "relatedResources": [
+        "/blog/cam-reconciliation-errors",
+        "/cam-reconciliation-guide",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "leasequery",
+      "name": "LeaseQuery",
+      "vendor": "LeaseQuery (GreatSoft / Netgain company)",
+      "camModuleName": "Operating Expense Provisions / CAM Obligation Tracking",
+      "moduleNavigation": "Navigate to Leases from the main dashboard. Select a lease and go to the Operating Expenses tab to view abstracted CAM provisions. LeaseQuery manages CAM through lease abstraction similar to Visual Lease - CAM terms are stored in the lease record as provision data. For portfolio-level reporting, use Reports > Operating Expenses > CAM Summary.",
+      "recoveryPoolConfig": "LeaseQuery does not use recovery pools. CAM obligations are captured during the lease abstraction workflow in each lease's Operating Expense section. Abstract the following for accurate CAM tracking: recoverable expense categories, expense stop or base year amount, gross-up provision (yes/no and occupancy threshold), annual cap provisions (cumulative or compounding), and any landlord obligation exclusions. These provision terms are what LeaseQuery uses to calculate CAM obligations and compare to actual charges.",
+      "chargeCodeSetup": "CAM is tracked in LeaseQuery through Operating Expense payment entries rather than charge codes. For each lease, create payment items of type 'Operating Expense Reimbursement' or 'CAM' on the lease payment schedule. Enter the monthly estimate amount and frequency. LeaseQuery tracks estimated payments against actual charges when reconciliation data is entered. The lease record's CAM provision fields drive the calculation logic for overage or credit amounts.",
+      "exportProcedure": "Go to Reports > Lease Reports > Operating Expense Detail. Filter by property portfolio, date range, and lease status. Export to CSV. The report includes lease-level CAM provision terms alongside payment history. For a format suitable for CapVeri, include the following columns in the export: Lease ID, Tenant, Property, Pro-Rata Share, Base Year/Stop Amount, Cap Percentage, and Monthly Estimate. LeaseQuery also supports data export via its API for automated workflows.",
+      "commonMistakes": [
+        "Not abstracting CAM cap provisions during lease entry, causing the system to show no cap limits when caps actually exist in the lease",
+        "Entering incorrect expense stop amounts during abstraction - even small errors compound over multi-year leases",
+        "Using LeaseQuery as the sole CAM reconciliation tool without importing actual GL expense data from the accounting system",
+        "Failing to update lease records after lease amendments that modify CAM terms, leading to incorrect obligation calculations",
+        "Not linking operating expense payments to the correct lease provision type, causing payment history to appear disconnected from CAM tracking"
+      ],
+      "capveriIntegration": "Export the Operating Expense Detail report from LeaseQuery as CSV to capture lease-level CAM provision terms. Pair this with a GL expense export from your accounting system (Yardi, MRI, Sage Intacct, QuickBooks, etc.). Upload both files to CapVeri: the LeaseQuery export provides the provision terms (caps, stops, gross-up), and the GL export provides actual costs. CapVeri reconciles the two sources and generates tenant statements reflecting each lease's specific terms.",
+      "notes": "LeaseQuery is a lease accounting platform focused on ASC 842 / IFRS 16 compliance for both lessees and lessors. Like Visual Lease, it is not a property management system - it does not manage payables or post GL entries. Its strength is lease obligation accounting and compliance reporting. CAM tracking is through provision abstraction, and actual reconciliation requires a separate GL data source. Used by mid-market and enterprise companies for lease compliance across both real estate and equipment leases.",
+      "troubleshooting": [
+        {
+          "q": "LeaseQuery shows a different CAM obligation than my Yardi reconciliation - which is correct?",
+          "a": "The discrepancy likely stems from a mismatch between the lease terms abstracted in LeaseQuery and the recovery pool configuration in Yardi. Check four things: (1) Does LeaseQuery's base year stop amount match what's in the signed lease? (2) Does Yardi's gross-up setting match the lease's gross-up provision? (3) Are the same expense categories included in both systems? (4) Does the pro-rata share percentage match between systems? The signed lease document is the arbiter - correct whichever system has the error."
+        },
+        {
+          "q": "How do I track CAM audit rights in LeaseQuery?",
+          "a": "LeaseQuery includes audit rights fields in the lease abstraction workflow under Operating Expenses > Audit Rights. Abstract the audit deadline (typically 90-180 days after receiving the reconciliation statement), the audit methodology permitted (agreed-upon procedures, full audit, etc.), and any audit cost reimbursement provisions. Set up critical date alerts in LeaseQuery for audit deadlines - missed audit windows forfeit tenants' rights to dispute charges, which is a significant liability risk."
+        }
+      ],
+      "relatedResources": [
+        "/blog/cam-reconciliation-errors",
+        "/cam-reconciliation-guide",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "prolease",
+      "name": "ProLease",
+      "vendor": "Tango (ProLease acquired by Tango Analytics)",
+      "camModuleName": "Operating Expense / CAM Provision Management",
+      "moduleNavigation": "Navigate to Lease Administration > Portfolio from the main menu. Select a lease and go to the Operating Expenses section to view and edit CAM provision data. ProLease organizes lease data by portfolio, property, and lease - drill down from portfolio to access individual lease CAM terms. For reporting, use Reports > Operating Expenses > CAM Recovery Summary.",
+      "recoveryPoolConfig": "ProLease does not use recovery pools in the property management sense. CAM provisions are abstracted per lease in the Operating Expenses section, capturing: recoverable expense categories (with include/exclude lists), pro-rata share method and denominator, base year or expense stop amount, gross-up provision and threshold, and annual cap terms. The abstracted data is the reference framework - actual expenses flow from your ERP or accounting system separately.",
+      "chargeCodeSetup": "ProLease tracks CAM payments through the lease payment schedule rather than charge codes. In the lease record, add payment items of type 'CAM Reimbursement' or 'Operating Expense' with the monthly estimate amount. ProLease's CAM provision fields define the rules that should govern the reconciliation - the payment schedule tracks estimated payments actually made. Year-end reconciliation requires comparing payment totals to actual expenses calculated outside ProLease.",
+      "exportProcedure": "Go to Reports > Lease Reports > Operating Expense Detail Report. Configure the report to include CAM provision fields: base year amount, gross-up flag, cap percentage, pro-rata share. Export to Excel or CSV. ProLease supports custom report configurations - save a CAM reconciliation template report with these fields for repeatable year-end exports. ProLease also supports data export via scheduled reports or API for automated workflows.",
+      "commonMistakes": [
+        "Treating ProLease as a CAM reconciliation engine rather than a lease administration system - it tracks what leases allow, not what has been spent",
+        "Not fully abstracting the CAM exclusion list from each lease, leading to disputes when non-allowable expenses appear in reconciliation statements",
+        "Entering the pro-rata share denominator incorrectly - using gross building area instead of net rentable area, or total GLA instead of occupied GLA for gross-up purposes",
+        "Failing to flag capital expenditure clauses in the lease abstraction, causing CapEx to appear as recoverable in the CAM provision record",
+        "Not updating ProLease lease records after CAM-related amendments, so the provision data becomes stale and unreliable for reconciliation reference"
+      ],
+      "capveriIntegration": "Export the Operating Expense Detail report from ProLease as CSV to obtain abstracted CAM provision terms for each lease. Export actual GL expenses from your ERP separately. Upload both to CapVeri: CapVeri reads the ProLease export to understand each lease's CAM structure (caps, stops, exclusions, gross-up provisions) and applies those rules when calculating reconciliation amounts from your GL data. This pairing eliminates the manual step of cross-referencing lease terms during reconciliation.",
+      "notes": "ProLease was acquired by Tango Analytics, an IWMS (Integrated Workplace Management System) platform. ProLease's strength is lease abstraction, critical date tracking, and IWMS integration for space and facility management. CAM provision management is detailed enough for lease administration purposes but requires a separate GL data source for actual reconciliation. Used by corporate real estate teams, tenants, and landlords who need IWMS capabilities alongside lease administration. Pure property managers typically prefer dedicated PM platforms.",
+      "troubleshooting": [
+        {
+          "q": "How do I export ProLease CAM provision data for use in reconciliation?",
+          "a": "In ProLease, run the Operating Expense Detail report and configure it to include all CAM provision fields: base year amount, expense stop type, gross-up provision, cap percentage and type, recoverable categories, excluded categories, and pro-rata share basis. Export to Excel. This becomes your lease terms reference file. Pair it with your accounting system's GL export and upload both to CapVeri, which will apply the lease terms from ProLease to the GL actuals automatically."
+        },
+        {
+          "q": "ProLease shows a CAM cap but my reconciliation shows the tenant owes more than the cap allows - what is wrong?",
+          "a": "This usually means the cap in ProLease was not applied in the reconciliation calculation. If you are reconciling manually or in Excel, verify that you are: (1) calculating the cap against the correct base year amount, (2) using the correct cap type (cumulative caps allow unused capacity to roll forward; compounding caps apply to the prior year's capped amount), and (3) applying the cap at the correct level (total CAM, controllable CAM only, or specific pool). CapVeri automates cap type logic to prevent this error."
+        }
+      ],
+      "relatedResources": [
+        "/blog/cam-reconciliation-errors",
+        "/cam-reconciliation-guide",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "lease-harbor",
+      "name": "Lease Harbor",
+      "vendor": "Lease Harbor LLC",
+      "camModuleName": "CAM Recovery Pools / Reconciliation Module",
+      "moduleNavigation": "Navigate to Properties from the main menu, select a property, and go to the Recovery tab. Lease Harbor's recovery module is organized by property and reconciliation year. Set up recovery pools under Recovery > Pool Configuration. Run reconciliation under Recovery > Reconciliation Workbench, which shows estimated vs. actual by pool and tenant.",
+      "recoveryPoolConfig": "Lease Harbor uses a dedicated recovery pool system purpose-built for CRE CAM workflows. Under Pool Configuration, create pools for each CAM category (Operating, Tax, Insurance). Assign GL account ranges to each pool. Configure per-pool settings: allocation basis (rentable SF, usable SF, or custom), gross-up occupancy threshold, gross-up eligible expense types (variable only), and year-over-year cap rules. Lease Harbor supports both cumulative and compounding caps at the pool level and tenant level. Exclusion lists can be defined at the pool or tenant level to handle lease-specific carve-outs.",
+      "chargeCodeSetup": "Under Administration > Charge Codes, create codes for each recovery category and link them to recovery pools. Lease Harbor's billing engine auto-generates monthly estimate invoices based on the current budget or prior year actuals. Each tenant's charge code assignment is maintained in the lease record with the effective date of any changes. Charge codes support tenant-level overrides for fixed recovery amounts, custom percentage shares, or lease-specific billing exclusions.",
+      "exportProcedure": "Navigate to Reports > Financial > GL Expense Detail. Filter by property, fiscal year, and pool assignment. Export to CSV or Excel. Lease Harbor also provides a Reconciliation Statement export under Reports > Recovery > Tenant Reconciliation Statements that generates tenant-ready documents showing estimated charges, actual expenses, and the true-up amount. For CapVeri cross-validation, use the GL Expense Detail export rather than the pre-calculated reconciliation output.",
+      "commonMistakes": [
+        "Assigning the wrong gross-up type to expenses - Lease Harbor distinguishes fixed (non-grossable) from variable (grossable) expenses, and mislabeling inflates gross-up amounts",
+        "Configuring pool-level caps without also setting tenant-level cap overrides for leases with unique cap terms that differ from the property-wide cap",
+        "Not importing actual GL data into Lease Harbor at year-end close - the system can only reconcile if actuals are loaded, and delay causes statement generation delays",
+        "Using the prior year actuals as estimates without adjusting for known budget changes, resulting in significant true-up amounts",
+        "Not reviewing the exclusion list when adding new tenants - a new tenant's lease may have exclusions not covered by the default pool exclusion list"
+      ],
+      "capveriIntegration": "Export the GL Expense Detail report from Lease Harbor as CSV and upload to CapVeri for independent cross-validation of pool allocations, gross-up calculations, and cap compliance. Because Lease Harbor is itself a purpose-built CAM system, you can use CapVeri as a second-opinion validation layer before issuing tenant statements, particularly for large or contested reconciliations. CapVeri's independent calculation confirms or flags discrepancies in Lease Harbor's output.",
+      "notes": "Lease Harbor is one of the few software platforms built specifically for commercial real estate CAM reconciliation rather than adapted from a broader property management or lease accounting system. Its purpose-built design means the recovery pool model, gross-up logic, and cap tracking are native - not bolted on. Used primarily by mid-market to institutional commercial landlords managing office, retail, and industrial portfolios. Smaller firms may find the implementation effort and subscription cost disproportionate for simple NNN portfolios.",
+      "troubleshooting": [
+        {
+          "q": "How do I handle lease-specific exclusions that differ from my property-wide exclusion list in Lease Harbor?",
+          "a": "Lease Harbor supports exclusion overrides at the tenant level. In the lease record, navigate to Recovery Settings > Exclusion Overrides. Add the specific expense categories or GL accounts to exclude for this tenant. Tenant-level exclusions are applied in addition to (or in place of) the pool-level exclusions, depending on your configuration. Document each tenant-level exclusion with the corresponding lease clause reference for audit purposes."
+        },
+        {
+          "q": "Why does my Lease Harbor gross-up calculation differ from my manual calculation?",
+          "a": "Verify two settings: (1) the occupancy calculation method (economic vs. physical occupancy) in Pool Configuration > Gross-Up Settings, and (2) which expenses are classified as Variable vs. Fixed. Lease Harbor only grosses up Variable expenses. If expenses are miscategorized as Fixed, gross-up is not applied. Also verify the occupancy threshold - if the property exceeds the threshold, gross-up is triggered; if not, no adjustment is made. Compare your manual calculation assumptions to these three settings to identify the discrepancy."
+        }
+      ],
+      "relatedResources": [
+        "/blog/cam-reconciliation-errors",
+        "/cam-reconciliation-guide",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/cam-gross-up-calculator",
+        "/tools/recovery-gap-analyzer",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "kardin",
+      "name": "Kardin Budget and Reforecast",
+      "vendor": "Kardin Systems",
+      "camModuleName": "Recovery / CAM Budget and Reforecast Module",
+      "moduleNavigation": "Navigate to Recovery from the main dashboard. Select the property and budget period. Kardin's recovery module sits alongside its budgeting and reforecast tools - it is designed for budget vs. actual CAM variance tracking and preliminary reconciliation estimates, not for final year-end tenant statement generation. For CAM-specific reporting, use Reports > Recovery > Budget vs. Actual by Pool.",
+      "recoveryPoolConfig": "Kardin connects to Yardi or MRI to pull actual GL expense data via integration. Recovery pool definitions in Kardin mirror the pool configurations in your source ERP (Yardi recovery pools or MRI recovery groups). Within Kardin, pools are configured under Recovery > Pool Setup with budget amounts per expense category. The integration syncs actuals from the ERP, and Kardin uses those actuals alongside pool definitions to produce budget vs. actual variance reports used in preliminary reconciliation estimation.",
+      "chargeCodeSetup": "Kardin does not issue tenant billing - charge codes live in the connected ERP (Yardi or MRI). In Kardin, recovery charge types are configured to match ERP charge codes for reporting alignment. Under Recovery > Charge Type Setup, map Kardin charge types to the ERP charge codes to ensure budget vs. actual variance reports use consistent terminology across both systems. This mapping is critical for firms using Kardin dashboards alongside Yardi or MRI billing outputs.",
+      "exportProcedure": "Navigate to Reports > Recovery > CAM Budget vs. Actual. Configure the report for the property, fiscal year, and recovery pools. Export to Excel. Kardin's recovery reports include budget amounts, actual amounts synced from the ERP, variance amounts, and percent variance by pool and expense category. For CapVeri, use the actual GL data from your ERP (Yardi, MRI) rather than Kardin's export - Kardin's value is in the budget/reforecast analysis, not as the primary GL source for reconciliation.",
+      "commonMistakes": [
+        "Using Kardin's budget amounts instead of ERP actuals for year-end reconciliation - Kardin shows budgeted figures; final reconciliation must use posted GL actuals from Yardi or MRI",
+        "Not keeping Kardin's recovery pool definitions in sync with ERP recovery pool changes, causing budget vs. actual comparisons to misalign",
+        "Treating Kardin's preliminary reconciliation estimates as final tenant statements - Kardin provides directional estimates, not auditable reconciliation outputs",
+        "Overlooking the Yardi/MRI sync frequency - if actuals are not synced recently, Kardin's variance reports lag behind actual GL postings",
+        "Configuring Kardin pool budgets without reviewing the prior year's actual pool composition for mid-year expense account additions or deletions"
+      ],
+      "capveriIntegration": "Kardin is a budgeting and analysis tool, not the primary data source for CapVeri reconciliation. Export actual GL data from your connected ERP (Yardi or MRI) and upload that to CapVeri. Use Kardin's budget vs. actual variance reports alongside CapVeri's reconciliation output to identify whether variances stem from budget assumptions or from actual expense composition changes. The combination of Kardin (budget analysis) and CapVeri (reconciliation validation) provides a complete CRE financial oversight workflow.",
+      "notes": "Kardin is used by institutional CRE owners and portfolio managers who need detailed budget vs. actual tracking alongside Yardi or MRI. Its recovery module provides visibility into CAM budget variance throughout the year, enabling proactive reforecasting of year-end tenant obligations. It is a complement to - not a replacement for - the ERP's reconciliation module. Firms using Kardin typically have 20+ properties and require financial reporting that bridges property management ERP data with institutional-grade analysis.",
+      "troubleshooting": [
+        {
+          "q": "Kardin's recovery actuals don't match my Yardi GL - what causes this?",
+          "a": "The most common causes are: (1) the Yardi-to-Kardin sync has not run since the latest GL postings - check the last sync timestamp in Kardin's integration settings; (2) the account mapping between Yardi GL accounts and Kardin recovery pool categories is incomplete, leaving some accounts unmapped; and (3) accrual period differences - Kardin may be pulling data on a different accrual basis than your Yardi GL Detail report uses. Reconcile the Kardin actuals to the Yardi GL trial balance for the same period to identify the specific gap."
+        },
+        {
+          "q": "How should I use Kardin alongside CapVeri for year-end reconciliation?",
+          "a": "Use Kardin for budget variance monitoring throughout the year - it tells you whether CAM expenses are tracking above or below budget and enables proactive tenant communication. At year-end, export actuals from Yardi or MRI (not from Kardin) and upload to CapVeri for final reconciliation calculation and tenant statement generation. After CapVeri produces reconciled amounts, compare them to Kardin's year-end reforecast estimates to validate that your budget process is producing accurate CAM predictions."
+        }
+      ],
+      "relatedResources": [
+        "/blog/yardi-cam-recovery-pool-setup",
+        "/cam-reconciliation-guide",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "skyline",
+      "name": "SKYLINE Property Management",
+      "vendor": "SS&C Technologies (SKYLINE Software)",
+      "camModuleName": "CAM Recovery and Reconciliation Module",
+      "moduleNavigation": "Navigate to Commercial > CAM Recovery from the main menu. Select the property and recovery period. SKYLINE's CAM module is under the Commercial section and includes pool setup, estimate generation, and year-end reconciliation functions. For configuration, go to Administration > Commercial Setup > CAM Recovery Setup.",
+      "recoveryPoolConfig": "SKYLINE uses 'Recovery Pools' under CAM Recovery Setup. Create pools for each expense category (Operating, Tax, Insurance) and assign GL account ranges. Configure per-pool allocation method (pro-rata by RSF or custom percentage), gross-up settings with occupancy threshold, and cap rules. SKYLINE's pool architecture is similar to MRI's recovery group model - expense accounts are assigned to pools, and tenants are linked to pools through charge code assignments. Fixed vs. variable expense classification drives gross-up eligibility.",
+      "chargeCodeSetup": "Under Administration > Charge Code Setup, create charge codes linked to recovery pools. Each charge code defines billing frequency, estimate calculation method (prior year, budget, or fixed), and tenant share basis. SKYLINE supports tenant-level billing overrides for custom share percentages or fixed recovery amounts. Charge codes are assigned to tenant lease records in the Lease Administration module.",
+      "exportProcedure": "Go to Reports > Financial > General Ledger Detail Report. Filter by property, date range, and expense account range for CAM. Export to CSV or Excel. For reconciliation output, use Reports > Commercial > CAM Reconciliation Report, which shows pool-level actual vs. estimated expenses with tenant shares. Both export formats are compatible with CapVeri.",
+      "commonMistakes": [
+        "Misclassifying fixed expenses (property tax, insurance) as variable, causing those expenses to be incorrectly included in gross-up calculations",
+        "Not updating tenant lease records when RSF changes due to lease expansions or contractions, causing pro-rata share errors",
+        "Failing to run the period-end GL close before generating CAM reconciliation reports, capturing incomplete expense data",
+        "Not verifying cap rule settings at year-end - SKYLINE may default to no cap if cap configuration is not explicitly set for the pool",
+        "Assigning tenants to the wrong recovery pool, causing them to share in expenses from a pool their lease does not include"
+      ],
+      "capveriIntegration": "Export the GL Detail or CAM Reconciliation Report as CSV from SKYLINE. Upload to CapVeri for independent validation. CapVeri auto-detects SKYLINE's export format and maps property, account, and amount fields. For SKYLINE customers, CapVeri is most commonly used as a cross-check before issuing tenant statements - particularly for properties with complex cap structures or gross-up provisions.",
+      "notes": "SKYLINE is a mid-market commercial property management platform owned by SS&C Technologies. It has a dedicated CAM Recovery and Reconciliation module with recovery pool architecture comparable to MRI. Market share is smaller than Yardi or MRI - SKYLINE is most common among mid-market commercial landlords managing office and retail portfolios in the 10-30 property range. The platform has a long history in commercial real estate but has seen slower feature development compared to larger competitors.",
+      "troubleshooting": [
+        {
+          "q": "How do I fix SKYLINE CAM pool assignment errors for existing tenants?",
+          "a": "Tenant-to-pool assignments in SKYLINE are maintained in the lease record under Lease Administration > Lease Details > Charge Codes. If a tenant is assigned to the wrong recovery pool, update the charge code assignment to point to the correct pool. If the error has persisted through the year, you will need to regenerate the reconciliation for that tenant after correcting the assignment. Document the correction with the effective date for audit trail purposes."
+        },
+        {
+          "q": "Why does my SKYLINE CAM reconciliation not match my GL trial balance?",
+          "a": "Three common causes: (1) the GL period has not been closed - SKYLINE's reconciliation pulls from posted transactions, and if year-end adjusting entries were posted after you ran the reconciliation, rerun it after the final close; (2) account mapping gaps - check the pool's GL account assignments for any accounts added mid-year that are not mapped to the pool; (3) intercompany entries included in the property-level GL but excluded from the CAM calculation - verify whether your intercompany entries should be included or excluded from the recoverable expense pool."
+        }
+      ],
+      "relatedResources": [
+        "/blog/cam-reconciliation-errors",
+        "/cam-reconciliation-guide",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/recovery-gap-analyzer",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "planon",
+      "name": "Planon Real Estate Management",
+      "vendor": "Planon",
+      "camModuleName": "Service Charge / Lease Management Recovery Module",
+      "moduleNavigation": "Navigate to Real Estate Management > Service Charges from the main menu. Select the property and service charge period. Planon refers to CAM as 'Service Charges' in its European-origin terminology. For configuration, go to Administration > Real Estate Setup > Service Charge Configuration. Planon's CAM/service charge module is part of its broader lease management and IWMS platform.",
+      "recoveryPoolConfig": "Planon uses 'Service Charge Pools' (equivalent to CAM recovery pools) configured under Service Charge Configuration. Create pools for each cost category (Operating, Tax, Utilities, Insurance). Assign GL cost accounts to each pool. Configure allocation keys - Planon's term for the pro-rata allocation method - which can be based on rentable area, usable area, custom percentages, or headcount. Gross-up rules are configured per pool under Occupancy Adjustment settings. Planon supports multi-currency pools for international portfolios.",
+      "chargeCodeSetup": "Under Administration > Charge Code Setup, create codes for each service charge category. Link charge codes to service charge pools and define billing frequency. Planon's 'Turnover Rent' and 'Service Charge' billing modules work together - ensure CAM charges are configured under Service Charge rather than Turnover Rent. Each charge code has a tenant-level contract mapping in the lease record that defines the share basis and any lease-specific overrides.",
+      "exportProcedure": "Navigate to Reports > Real Estate > Service Charge Detail Report. Filter by property portfolio, fiscal year, and cost category. Export to CSV or Excel. Planon also supports reporting via Crystal Reports and Power BI integrations for institutional users. For CapVeri upload, use the Service Charge Detail export which includes cost pool assignments, actual amounts, and tenant allocation data. Alternatively, export the GL Cost Detail from the financial module with property and cost category filters.",
+      "commonMistakes": [
+        "Confusing Planon's 'allocation keys' with static pro-rata shares - allocation keys can be formula-driven and must be validated annually when tenant RSF changes",
+        "Not configuring multi-currency rounding rules correctly for international portfolios, causing small but cumulative billing discrepancies",
+        "Treating Planon's IWMS facilities data as automatically reconciled to financial data - facilities management costs require manual GL mapping to service charge pools",
+        "Failing to update service charge pool configurations when the lease administration team adds new tenants with unique CAM exclusion terms",
+        "Not running the service charge period close before generating tenant statements, capturing incomplete cost postings"
+      ],
+      "capveriIntegration": "Export the Service Charge Detail report or GL Cost Detail from Planon as CSV. Upload to CapVeri for independent reconciliation validation. Planon's export format includes property, cost pool, category, and amount fields that CapVeri maps automatically. For international portfolios using multi-currency, export amounts in the functional currency (USD or your reporting currency) to ensure CapVeri's calculations use consistent units.",
+      "notes": "Planon is a Dutch IWMS/CAFM platform with strong adoption in Europe and growing presence in North America among large corporate real estate teams. Its real estate management module handles lease administration, space management, and service charge (CAM) billing in an integrated platform. Multi-currency and multi-country capabilities make it suitable for global real estate portfolios that most US-centric PM platforms cannot serve. Implementation is complex - typically 6-18 months for enterprise deployments. Used primarily by large corporations, universities, and institutional landlords with international portfolios.",
+      "troubleshooting": [
+        {
+          "q": "How do I configure Planon service charge pools for US-style NNN CAM reconciliation?",
+          "a": "Planon's service charge module is designed for European 'turnover rent' and service charge structures, which differ from US NNN CAM conventions. To configure for US NNN: (1) create service charge pools for Operating, Tax, and Insurance separately; (2) set the allocation key to Rentable Area (not Gross Area - a common European default); (3) configure the reconciliation period to match the US calendar or fiscal year; (4) enable the gross-up adjustment if leases contain gross-up provisions; and (5) configure cap rules per pool if leases include controllable CAM caps. Document the US-specific configuration separately from Planon's default European setup."
+        },
+        {
+          "q": "Why do Planon service charge allocations differ from my expected pro-rata shares?",
+          "a": "Planon uses 'allocation keys' which can be static (fixed percentage) or dynamic (formula-based on current occupancy data). If tenants have changed space or RSF has been updated in Planon's space management module, the allocation key may have changed automatically. Check the allocation key configuration for the service charge pool under Service Charge Configuration > Allocation Keys and verify that the RSF values match your lease records. Dynamic allocation keys recalculate when space data changes - this is a feature but can cause unexpected share shifts."
+        }
+      ],
+      "relatedResources": [
+        "/blog/cam-reconciliation-errors",
+        "/cam-reconciliation-guide",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/cam-billing-error-estimator",
+        "/tools/pro-rata-calculator",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "costar-lease",
+      "name": "CoStar Lease",
+      "vendor": "CoStar Group",
+      "camModuleName": "Operating Expense / CAM Clause Administration",
+      "moduleNavigation": "Navigate to Lease Administration from the CoStar platform menu. Select a property and then a lease to access the lease record. CAM provisions are managed in the Operating Expenses section of each lease record. Portfolio-level CAM obligation reporting is available under Reports > Lease Reports > Operating Expense Summary. CoStar Lease manages CAM through lease clause abstraction, not GL integration.",
+      "recoveryPoolConfig": "CoStar Lease does not use recovery pools. CAM obligations are captured during lease abstraction in the Operating Expenses section of each lease record. Abstract the following for each lease: expense recovery type (NNN, modified gross, gross with stop), recoverable expense categories with any exclusions, base year or expense stop amount, gross-up provision details, annual cap percentage and type, and reconciliation frequency. These abstracted terms define what each tenant owes - actual expense amounts come from your property management ERP or accounting system.",
+      "chargeCodeSetup": "CAM in CoStar Lease is tracked through the lease payment schedule under the Operating Expenses module. Add recurring payment items of type 'CAM Reimbursement' or 'Operating Expense Estimate' with the estimated monthly amount. CoStar Lease tracks scheduled payments, actual payments received, and variance from lease terms - but does not calculate CAM obligations from GL expense data. The lease record's abstracted provision terms are the reference for what tenants owe.",
+      "exportProcedure": "Navigate to Reports > Lease Reports > Operating Expense Detail. Configure the report to include CAM provision fields: expense stop type and amount, gross-up provision, cap percentage, pro-rata share basis. Export to CSV or Excel. CoStar also provides a CAM Obligation Summary report that aggregates estimated annual CAM obligations across the portfolio - useful for cash flow forecasting but not for tenant statement generation. For CapVeri, pair the CoStar Lease provision export with a GL expense export from your ERP.",
+      "commonMistakes": [
+        "Assuming CoStar Lease can produce final CAM reconciliation statements - it tracks lease terms and payment obligations but cannot calculate reconciliation amounts from GL data independently",
+        "Not abstracting all CAM exclusion clauses from lease documents during lease entry, leading to overstated CAM obligations when excluded expenses are included",
+        "Entering pro-rata share as a fixed percentage rather than RSF and total leasable area, causing shares to become stale when building occupancy changes",
+        "Not setting up critical date alerts for CAM reconciliation deadlines and audit windows specified in each lease",
+        "Using CoStar market data square footage figures instead of lease-specific RSF for pro-rata calculations"
+      ],
+      "capveriIntegration": "Export the Operating Expense Detail report from CoStar Lease as CSV to capture abstracted CAM provision terms. Export actual GL expenses from your ERP (Yardi, MRI, Sage Intacct, etc.) separately. Upload both files to CapVeri: the CoStar Lease export provides lease-level CAM terms (stops, caps, exclusions, gross-up), and the ERP export provides actual costs. CapVeri applies the lease terms to the actual costs to calculate reconciled tenant obligations and generate statements.",
+      "notes": "CoStar Lease is the lease administration component of the CoStar commercial real estate intelligence platform. Its primary value is integrating lease administration with CoStar's market data, property research, and portfolio analytics - not as a standalone property management or CAM reconciliation system. Used by institutional landlords, asset managers, and corporate tenants who already subscribe to CoStar for market intelligence and want lease administration on the same platform. For CAM reconciliation, CoStar Lease functions as a provision repository that must be paired with a GL data source.",
+      "troubleshooting": [
+        {
+          "q": "How do I use CoStar Lease for CAM reconciliation without a built-in GL integration?",
+          "a": "CoStar Lease is a lease provision repository, not a GL-connected reconciliation engine. Use it as the source of CAM terms (base year, cap, exclusions, gross-up) and pull actual GL expenses from your accounting system. Export both datasets and upload to CapVeri, which applies the CoStar Lease provision terms to your GL actuals to produce reconciliation calculations and tenant statements. This two-source workflow is the standard approach for CoStar Lease customers who need formal CAM reconciliation output."
+        },
+        {
+          "q": "CoStar Lease shows a different pro-rata share than our reconciliation - which is correct?",
+          "a": "Check whether CoStar Lease is using a fixed pro-rata percentage or an RSF-based calculation. If the lease RSF or building total leasable area has changed since the lease was first abstracted, the percentage may be outdated. Verify: (1) the tenant's RSF per the signed lease and any amendments; (2) the building's total leasable area (verify the denominator against the lease - some leases use occupied area, others use total leasable area regardless of vacancy); and (3) whether any co-tenancy or major tenant exclusions affect the denominator. The signed lease controls - update CoStar Lease to reflect current lease terms."
+        }
+      ],
+      "relatedResources": [
+        "/blog/cam-reconciliation-errors",
+        "/cam-reconciliation-guide",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/pro-rata-calculator",
+        "/tools/cam-gross-up-calculator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    },
+    {
+      "slug": "vts",
+      "name": "VTS Lease Management",
+      "vendor": "VTS",
+      "camModuleName": "Lease Administration / Operating Expense Clause Tracking",
+      "moduleNavigation": "Navigate to Lease Administration from the VTS dashboard. Select a property and then a deal or lease to access the lease record. CAM provisions are tracked in the Operating Expenses section under Lease Details. Portfolio-level CAM reporting is under Analytics > Lease Reports. VTS primarily manages CAM through lease abstraction - it is a leasing CRM and asset management platform, not a full-featured CAM reconciliation system.",
+      "recoveryPoolConfig": "VTS does not use recovery pools. CAM obligations are captured during lease abstraction in each lease record's Operating Expenses section. For each lease, abstract: recovery type (NNN, gross, modified gross), CAM expense categories included and excluded, base year or expense stop amount, gross-up provision and threshold, and annual cap terms. These abstracted terms feed into VTS's portfolio analytics for estimated CAM obligation forecasting - actual reconciliation requires a separate GL data source.",
+      "chargeCodeSetup": "VTS tracks CAM through lease obligations and payment schedules rather than charge codes. In the lease record, add operating expense payment items with estimated monthly amounts to track estimated vs. actual CAM receipts. VTS's leasing CRM features focus on deal pipeline, touring, and lease execution - the lease administration features, including CAM tracking, are newer additions to the platform and less feature-rich than dedicated lease administration tools.",
+      "exportProcedure": "Navigate to Analytics > Reports > Lease Detail Report. Configure the report to include operating expense fields: estimated annual CAM, CAM provision type, base year amount, cap percentage, and pro-rata share. Export to CSV or Excel. VTS also supports data export via API for enterprise customers with data warehouse integrations. For CapVeri, pair the VTS lease provision export with a GL expense export from your accounting system or ERP.",
+      "commonMistakes": [
+        "Using VTS as a CAM reconciliation tool - VTS tracks lease terms and deal pipeline, not GL-level expense data; actual reconciliation requires a separate process",
+        "Not abstracting CAM exclusion clauses during deal execution when the lease is being abstracted in VTS, requiring expensive retroactive lease re-abstraction",
+        "Entering estimated CAM amounts in VTS without documenting the basis for the estimate (budget, prior year, market rate), making year-end variance analysis difficult",
+        "Conflating VTS deal pipeline data with actual executed lease terms - ensure lease terms are updated in VTS after lease execution and any subsequent amendments",
+        "Ignoring VTS's CAM critical date tracking features, missing reconciliation deadlines or tenant audit rights windows documented in the platform"
+      ],
+      "capveriIntegration": "Export lease provision data from VTS (Operating Expense Detail or Lease Detail report) as CSV to capture CAM terms for each lease. Export GL actual expenses from your accounting system separately. Upload both to CapVeri: the VTS export provides the lease terms (base year, cap, exclusions, gross-up) that govern the reconciliation, and the accounting system export provides actual costs. CapVeri applies lease terms to actuals and generates tenant reconciliation statements. This two-source workflow is the standard approach for institutional VTS customers using CapVeri.",
+      "notes": "VTS is primarily a commercial real estate leasing and asset management platform used by institutional landlords, REITs, and asset managers. It excels at deal pipeline management, leasing CRM, and portfolio analytics - not at property-level accounting or CAM reconciliation. Lease administration features including CAM clause tracking have been added over time but remain secondary to VTS's leasing CRM core. Large institutional landlords often use VTS alongside Yardi or MRI - VTS for leasing and asset management, Yardi/MRI for accounting and CAM billing. For those customers, CapVeri validates the CAM output from Yardi/MRI using the lease terms tracked in VTS.",
+      "troubleshooting": [
+        {
+          "q": "How do I reconcile VTS lease data with our Yardi CAM calculations?",
+          "a": "Export the lease provision data from VTS (base year, cap, exclusions, pro-rata share) and the recovery pool reconciliation data from Yardi. Compare the two to identify discrepancies: (1) pro-rata share percentage - VTS lease terms vs. Yardi recovery pool allocation; (2) CAM exclusions - items excluded in the VTS lease abstract that may be included in the Yardi recovery pool; (3) gross-up provision - whether VTS and Yardi agree on whether gross-up applies and the threshold. Discrepancies usually mean either the lease was abstracted incorrectly in VTS or the Yardi pool is configured incorrectly. The signed lease is the authoritative source."
+        },
+        {
+          "q": "VTS does not calculate CAM reconciliation amounts - how do institutional landlords handle reconciliation?",
+          "a": "Institutional landlords using VTS typically run a three-system workflow: (1) VTS for lease abstraction and asset management; (2) Yardi or MRI for GL accounting, recovery pool billing, and estimate generation; (3) CapVeri or a dedicated reconciliation tool to cross-validate the Yardi/MRI reconciliation output against the lease terms in VTS. CapVeri accepts exports from all three systems and automates the cross-validation step, flagging discrepancies between what leases permit (from VTS) and what Yardi/MRI calculated."
+        }
+      ],
+      "relatedResources": [
+        "/blog/cam-reconciliation-errors",
+        "/cam-reconciliation-guide",
+        "/cam-reconciliation-guide"
+      ],
+      "relatedTools": [
+        "/tools/pro-rata-calculator",
+        "/tools/cam-gross-up-calculator",
+        "/tools/recovery-gap-analyzer"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+---
+title: "US GAAP Lease Accounting Guide: ASC 842 vs IFRS 16 and CAM Treatment"
+description: "US GAAP lease accounting under ASC 842 - dual model vs IFRS 16, key differences in income statement presentation, CAM variable payment treatment, and disclosure requirements."
+datePublished: "2026-04-24"
+dateModified: "2026-06-01"
+author: "Angel Campa"
+buttonText: "Start Free Trial"
+order: 274
+faq:
+  - q: "What is the US GAAP lease accounting standard and when did it take effect?"
+    a: "US GAAP lease accounting is governed by ASC 842, issued by FASB in 2016. It replaced ASC 840 (the old standard under which operating leases stayed off the balance sheet). ASC 842 was effective for public companies for fiscal years beginning after December 15, 2018, and for private companies for fiscal years beginning after December 15, 2021. The standard requires all leases with terms over 12 months to be recognized as a right-of-use asset and lease liability on the balance sheet. US GAAP keeps the operating/finance lease distinction; IFRS 16 (the IASB equivalent) eliminates it for lessees and uses a single model."
+  - q: "What's the biggest difference between ASC 842 and IFRS 16 for CRE tenants?"
+    a: "The income statement treatment is the most significant difference. Under ASC 842, operating leases - which covers virtually all commercial real estate - show a single flat lease cost on the income statement each period. Under IFRS 16, all leases are accounted for like finance leases: separate depreciation (straight-line) and interest expense (front-loaded, declining over time). This means IFRS 16 gives the same income statement treatment for a 10-year office lease that ASC 842 would give only for a finance lease. The EBITDA impact is substantial: IFRS 16 moves lease costs below EBITDA (into D&A and interest), artificially inflating EBITDA vs the US GAAP presentation where operating lease cost stays above EBITDA."
+  - q: "How does each standard treat variable CAM charges?"
+    a: "Both ASC 842 and IFRS 16 exclude variable lease payments from the balance sheet and recognize them in profit or loss in the period incurred. Under ASC 842-20-30-5, variable payments not based on an index or rate are excluded from the lease liability. Under IFRS 16 paragraph 38(b), variable lease payments not included in the measurement of the lease liability are recognized in profit or loss in the period they are incurred. The practical accounting for monthly CAM estimates and year-end true-ups is functionally identical under both standards: expense as incurred, no ROU asset or liability adjustment."
+  - q: "Does US GAAP require more or fewer disclosures than IFRS 16 for leases?"
+    a: "ASC 842 and IFRS 16 have similar disclosure requirements at a high level, but with some differences. Both require quantitative disclosures of lease costs, cash paid, maturity schedules, weighted-average rates and terms. ASC 842 requires separate presentation of operating vs finance lease costs; IFRS 16 requires a single model with depreciation plus interest disclosed separately. IFRS 16 also requires disclosure of total cash outflow for leases (more comprehensive than the ASC 842 requirement). Public companies under either standard face more granular requirements than private companies."
+  - q: "Can a company report under both ASC 842 and IFRS 16 simultaneously?"
+    a: "Yes, if a company has operations in multiple jurisdictions and reports under both GAAP standards (e.g., a US-listed company with a significant foreign subsidiary that files local statutory reports under IFRS). The entity would maintain two sets of lease accounting records - one under ASC 842 and one under IFRS 16. The reconciling differences primarily arise from: (a) income statement classification (single cost line vs depreciation/interest), (b) any operating/finance lease classification differences, and (c) different practical expedient elections. CAM treatment is functionally the same under both, so no reconciliation is needed for variable lease payments."
+---
+
+<Alert type="info" title="Quick Answer">
+US GAAP lease accounting under ASC 842 uses a dual model: operating leases show a single flat lease cost; finance leases show separate amortization and interest. IFRS 16 uses a single model for all leases: depreciation plus interest for every lease, which inflates EBITDA relative to ASC 842. Variable CAM charges are excluded from the balance sheet under both standards and expensed as incurred.
+</Alert>
+
+## US GAAP Lease Accounting: The Framework
+
+ASC 842 is the US GAAP lease accounting standard. Its core mechanics:
+
+1. **All leases over 12 months** go on the balance sheet as a right-of-use (ROU) asset and lease liability
+2. **Operating leases** (the vast majority of CRE leases) show a single straight-line lease cost on the income statement
+3. **Finance leases** (formerly capital leases) show separate amortization and interest expense
+4. **Variable lease payments** (including most CAM charges) are excluded from the balance sheet and expensed as incurred
+
+This is the framework that CRE tenants in the US work within. For implementation details, see the [ASC 842 lease accounting guide](/resources/asc-842-lease-accounting-guide). For journal entry templates, see [operating lease accounting entries](/resources/operating-lease-accounting-entries).
+
+---
+
+## ASC 842 vs IFRS 16: The Core Structural Difference
+
+IFRS 16, issued by the IASB in 2016 (effective 2019), took a different philosophical approach: eliminate the operating/finance lease distinction for lessees entirely. Under IFRS 16, every lessee accounts for every lease (over 12 months) the same way ASC 842 accounts for finance leases.
+
+| Feature | ASC 842 (US GAAP) | IFRS 16 (IFRS) |
+|---|---|---|
+| Lessee model | Dual (operating + finance) | Single model |
+| Operating lease balance sheet | Yes - ROU asset + liability | N/A (no operating leases) |
+| Income statement - "operating" lease | Single flat lease cost | Depreciation + interest (front-loaded) |
+| Income statement - "finance" lease | Amortization + interest | Same as all leases |
+| Variable CAM treatment | Excluded from liability; expensed | Excluded from liability; expensed |
+| Short-term exemption | ≤12 months | ≤12 months |
+| Low-value asset exemption | No | Yes (assets ≤ ~$5,000 underlying value) |
+| Lessor accounting | Similar to ASC 840 | Different - IFRS 16 requires different lessor model |
+
+### The EBITDA Distortion Under IFRS 16
+
+This is the most consequential difference for CRE finance teams and analysts comparing US and international companies.
+
+Under **ASC 842** (operating lease): lease cost appears in operating expenses above EBITDA. EBITDA is unchanged relative to the old ASC 840 treatment for operating leases.
+
+Under **IFRS 16**: depreciation of the ROU asset flows through D&A (below EBITDA or split out). Interest on the lease liability flows through interest expense (below EBIT). Neither flows through operating expenses. **EBITDA is higher under IFRS 16 than it would be for the same company under ASC 842.**
+
+**Concrete example:**
+
+Assume $1,200,000 annual rent ($100,000/month) on a 10-year operating lease; IBR 6%.
+
+Initial lease liability (PV of 10 annual payments at 6%): $1,200,000 × 7.360 = **$8,832,000**
+
+Under ASC 842 (US GAAP):
+- Operating expenses: +$1,200,000 (single straight-line lease cost)
+- D&A: no change from lease
+- Interest: no change from lease
+- EBITDA impact: −$1,200,000
+
+Under IFRS 16:
+- Operating expenses: +$0 from lease
+- D&A: +$883,200 (ROU asset depreciation: $8,832,000 / 10 years, Year 1)
+- Interest: +$529,920 (lease liability interest: $8,832,000 × 6%, Year 1)
+- EBITDA impact: **$0** (both D&A and interest are below EBITDA)
+
+Same economic transaction; EBITDA differs by $1,200,000. Note: under IFRS 16, total Year 1 expense ($1,413,120) exceeds the cash payment ($1,200,000) because interest front-loads the cost. This reverses in later years as interest declines. Analysts must adjust for this when comparing companies across standards.
+
+---
+
+## CAM Variable Payment Treatment: Identical Under Both Standards
+
+Despite the structural differences, US GAAP and IFRS reach the same result for variable CAM:
+
+**ASC 842-20-30-5:** Variable lease payments that do not depend on an index or rate shall be excluded from the measurement of the lease liability.
+
+**IFRS 16 paragraph 38(b):** Variable lease payments not included in the measurement of the lease liability are recognized in profit or loss in the period in which the event or condition that triggers those payments occurs.
+
+The practical accounting is the same:
+
+**Monthly CAM estimate:**
+```
+DR  Variable Lease Cost / CAM Expense    [estimate]
+  CR  Cash                                           [estimate]
+```
+
+**Year-end true-up (additional charge):**
+```
+DR  Variable Lease Cost / CAM Expense    [true-up amount]
+  CR  Accounts Payable                              [true-up amount]
+```
+
+No ROU asset adjustment. No lease liability adjustment. The [CAM reconciliation process](/resources/common-area-maintenance-reconciliation-explained) is operationally identical regardless of which standard you apply.
+
+---
+
+## Index-Based vs Non-Index-Based Variable Payments
+
+One nuance: both ASC 842 and IFRS 16 distinguish between payments that vary based on an index (like CPI) and payments that vary based on performance or usage.
+
+**CPI-linked rent escalations**: These are initially measured using the index at commencement. If the lease says rent increases by CPI annually, the initial liability uses the current CPI rate applied throughout the term. When the CPI adjustment actually occurs, you remeasure the liability if the payments change. This is a variable payment based on an index. It goes into the initial liability at commencement and is remeasured when the index changes.
+
+**CAM charges based on actual costs**: These are variable payments not based on an index. They depend on actual annual property operating expenses. Neither standard includes these in the initial liability. They're expensed as incurred.
+
+**Practical implication**: If your [NNN lease](/resources/nnn-lease-cam-reconciliation) has both CPI-linked rent escalations and variable CAM, you include the CPI-escalated rent in the initial liability (at the current CPI rate), but exclude the CAM. This split is the same under both ASC 842 and IFRS 16.
+
+---
+
+## IBR Determination: GAAP vs IFRS
+
+The IBR concept exists under both standards, but the definition differs slightly:
+
+**ASC 842**: Rate the lessee would incur to borrow funds over a similar term, in a similar amount, with similar collateral, in the same economic environment.
+
+**IFRS 16**: Rate of interest that a lessee would have to pay to borrow, over a similar term, with a similar security, the funds necessary to obtain an asset of a similar value to the right-of-use asset in a similar economic environment.
+
+The practical difference: IFRS 16's IBR is defined as the rate to borrow funds **necessary to obtain an asset of similar value**, implying the collateral is the ROU asset itself, which has value equal to the lease payments. ASC 842 speaks more generally about similar collateral in the same economic environment. The calculations often converge to the same number, but the IFRS 16 formulation can imply a slightly different collateral assumption.
+
+For companies applying both standards, document the IBR determination under each standard separately if there's any difference.
+
+---
+
+## Practical Expedients Comparison
+
+| Expedient | ASC 842 | IFRS 16 |
+|---|---|---|
+| Short-term (≤12 months) | Yes - skip ROU recognition | Yes - skip ROU recognition |
+| Low-value assets | No | Yes - assets with value ≤ ~$5,000 |
+| Lease/non-lease combination | Yes (by asset class) | Yes (by asset class) |
+| Portfolio approach | Yes | Implicit (not explicitly called out) |
+| Hindsight at transition | Yes | Yes |
+| Transition relief (not reassessing existing contracts) | Yes | Yes |
+
+The low-value asset exemption is IFRS 16-only. For small equipment leases (laptops, copiers), IFRS 16 companies can skip ROU recognition even if the term exceeds 12 months. Under ASC 842, there is no equivalent. You would need to qualify for the short-term exemption.
+
+---
+
+## Balance Sheet Presentation: GAAP vs IFRS
+
+Both standards require the lease assets and liabilities on the balance sheet, but the labeling and line-item grouping differ.
+
+**ASC 842 (US GAAP):**
+- Requires separate presentation of operating lease ROU assets from finance lease ROU assets
+- Same for liabilities (operating current, operating non-current, finance current, finance non-current)
+- Can be presented on the face or in footnotes with a cross-reference
+
+**IFRS 16:**
+- Single "right-of-use assets" line (no operating/finance split; all leases are the same model)
+- Single "lease liabilities" line (current/non-current split required)
+- Companies often present ROU assets within property, plant and equipment
+
+---
+
+## Disclosure Comparison
+
+**Both require:**
+- Lease cost by component (though components differ: GAAP separates operating from finance; IFRS shows depreciation and interest for all leases)
+- Cash paid for leases
+- Weighted-average remaining term
+- Weighted-average discount rate
+- Maturity schedule of lease liabilities
+
+**IFRS 16 additionally requires:**
+- Total cash outflow for leases (including short-term and low-value leases)
+- Income from subleases (if applicable)
+- Gains/losses on sale-leaseback transactions
+- Carrying amount of ROU assets by class
+
+**ASC 842 additionally requires (for finance leases):**
+- Separate disclosure of amortization expense and interest expense
+- Separate cash flow disclosure (principal in financing, interest in operating)
+
+---
+
+## CAM Reconciliation and Cross-Border Lease Accounting
+
+For CRE finance teams managing leases across US and international markets, the good news: the [CAM reconciliation workflow](/resources/common-area-maintenance-reconciliation-explained) is the same regardless of which accounting standard governs. Variable CAM is variable under both ASC 842 and IFRS 16.
+
+The accounting differences are in the fixed rent treatment and income statement presentation. Focus your reconciliation review process on what matters regardless of standard:
+
+- Is the [pro-rata share calculation](/resources/pro-rata-share-calculation) correct?
+- Were [controllable expenses](/resources/controllable-vs-non-controllable-expenses) subject to the contractual cap?
+- Was the [gross-up calculation](/resources/cam-gross-up-calculation-guide) applied correctly?
+- Are any capital items being amortized through operating CAM?
+
+These questions apply whether you're reconciling a US operating lease or a UK property lease under IFRS 16.
+
+For the full ASC 842 implementation workflow, see the [ASC 842 lease accounting guide](/resources/asc-842-lease-accounting-guide). For a worked example with CAM payments, see [ASC 842 lease accounting example](/resources/asc-842-lease-accounting-example).
+
+---
+
+## GAAP vs IFRS Reconciliation for Dual Reporters
+
+Companies reporting under both US GAAP and IFRS (often through SEC reporting plus IFRS statutory accounts) need a reconciliation memo. Key items:
+
+| Item | ASC 842 | IFRS 16 | Reconciling Difference |
+|---|---|---|---|
+| Operating lease - income statement | Single lease cost above EBITDA | Depreciation + interest below EBITDA | Entire lease cost shifts below EBITDA |
+| ROU asset presentation | Separate operating/finance | Single class | Classification only; same total |
+| EBITDA impact | Negative (lease cost above) | Neutral (depreciation + interest) | Can be large for lease-heavy businesses |
+| Cash flow - operating | Full payment (operating leases) | Interest only | Principal shifts to financing |
+| Short-term exemption | ≤12 months | ≤12 months | Same |
+| Low-value exemption | Not available | Available | May differ for small equipment |
+
+---
+
+## Related Resources
+
+- [ASC 842 Lease Accounting Guide](/resources/asc-842-lease-accounting-guide): comprehensive US GAAP implementation
+- [Operating Lease vs Finance Lease](/resources/operating-lease-vs-finance-lease): dual model classification
+- [Operating Lease Accounting Entries](/resources/operating-lease-accounting-entries): US GAAP journal entry templates
+- [Finance Lease Accounting ASC 842](/resources/finance-lease-accounting-asc-842): finance lease mechanics
+- [GAAP vs Cash CAM Reconciliation](/resources/gaap-vs-cash-cam-reconciliation): timing differences in CAM recognition
+- [Lease Accounting Standards ASC 842](/blog/lease-accounting-standards-asc-842): how the standard changed CAM treatment
+- [CAM Reconciliation Template](/tools/cam-reconciliation-template): start your reconciliation
+
+## Sources
+
+1. [Deloitte DART - Roadmap: Leases](https://dart.deloitte.com/USDART/home/publications/roadmap/leasing?id=us%3A2el%3A3dp%3Armleases%3Aeng%3Aaud%3A121823%3Aiaspl)
+2. [Deloitte - Lease Accounting Guide: Roadmap for ASC 842](https://www.deloitte.com/us/en/services/audit-assurance/articles/roadmap-to-applying-the-new-leasing-standard.html?icid=top_roadmap-to-applying-the-new-leasing-standard)

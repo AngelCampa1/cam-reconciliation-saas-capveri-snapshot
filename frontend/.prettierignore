@@ -1,0 +1,6 @@
+dist
+coverage
+node_modules
+*.config.js
+*.config.ts
+src/generated

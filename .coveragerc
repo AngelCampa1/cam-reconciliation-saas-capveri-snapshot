@@ -1,0 +1,15 @@
+[run]
+source = gtm
+omit =
+    # Phase 2 stubs — not implemented in this story
+    gtm/stages/cold/reachally.py
+    gtm/stages/cold/rapidapi.py
+    gtm/stages/warm/proxycurl.py
+    gtm/stages/warm/theirstack.py
+
+[report]
+omit =
+    gtm/stages/cold/reachally.py
+    gtm/stages/cold/rapidapi.py
+    gtm/stages/warm/proxycurl.py
+    gtm/stages/warm/theirstack.py

@@ -1,0 +1,1260 @@
+{
+  "lastUpdated": "2026-03-17",
+  "states": [
+    {
+      "slug": "alabama",
+      "name": "Alabama",
+      "abbreviation": "AL",
+      "primaryStatute": "Ala. Code \u00c2\u00a7 35-9A-101 et seq. (Alabama Uniform Residential Landlord and Tenant Act  -  commercial excluded); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Alabama Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Alabama has minimal commercial lease regulation. Commercial property is assessed at 20% of market value. Birmingham and Huntsville are the primary commercial markets.",
+      "keyTakeawayForLandlords": "Alabama's 20% commercial assessment ratio keeps effective tax rates relatively low. Make sure lease language specifies how the classification-based assessment affects tax pass-throughs.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "alaska",
+      "name": "Alaska",
+      "abbreviation": "AK",
+      "primaryStatute": "Alaska Stat. \u00c2\u00a7 34.03.010 et seq. (Uniform Residential Landlord and Tenant Act  -  commercial excluded); commercial governed by contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Alaska Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Alaska has no state income tax and no state sales tax. Municipalities rely on property taxes and local sales taxes for revenue. Anchorage is the dominant commercial market. Extreme weather drives higher maintenance and utility costs in CAM.",
+      "keyTakeawayForLandlords": "No state income or sales tax means municipalities rely heavily on property taxes. Extreme climate raises utility and maintenance CAM costs. Make sure estimates reflect seasonal heating costs and snow removal.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "arizona",
+      "name": "Arizona",
+      "abbreviation": "AZ",
+      "primaryStatute": "A.R.S. \u00c2\u00a7 33-301 et seq. (Landlord and Tenant  -  general provisions, primarily residential focus)",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Arizona Department of Real Estate (ADRE)",
+      "complianceComplexity": "low",
+      "notes": "Arizona's commercial lease rules are minimal. Phoenix/Maricopa County has seen significant industrial growth with rising CAM complexity. The Maricopa County Assessor conducts annual valuations with a 60-day appeal window.",
+      "keyTakeawayForLandlords": "Arizona is a landlord-friendly state, so lease terms control. Phoenix industrial vacancy has tightened, so gross-up calculations are triggered less often. Accurate occupancy tracking is still required.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "arkansas",
+      "name": "Arkansas",
+      "abbreviation": "AR",
+      "primaryStatute": "Ark. Code \u00c2\u00a7 18-17-101 et seq. (Landlord-Tenant  -  primarily residential); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Arkansas Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Arkansas has minimal commercial lease regulation. Property is assessed at 20% of market value statewide. Little Rock and Northwest Arkansas (Bentonville/Fayetteville corridor) are the primary commercial markets. Northwest Arkansas has grown quickly due to corporate headquarters activity.",
+      "keyTakeawayForLandlords": "Arkansas's uniform 20% assessment ratio keeps property tax calculations straightforward. Rapid growth in Northwest Arkansas may drive reassessment increases. Monitor county reappraisal cycles to keep CAM estimates accurate.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "california",
+      "name": "California",
+      "abbreviation": "CA",
+      "primaryStatute": "Cal. Civ. Code \u00c2\u00a7 1950.9 (SB 1103, effective Jan 1, 2025)",
+      "reconciliationTiming": "Landlords must respond to qualified commercial tenant (QCT) documentation requests within 30 days. QCTs defined under Bus. & Prof. Code \u00c2\u00a7 18000(a) as tenants occupying \u00e2\u2030\u00a410,000 SF with annual gross revenue \u00e2\u2030\u00a4$5M.",
+      "tenantAuditRights": "QCTs may request itemized documentation of CAM charges. Landlord must provide supporting records within 30 days of written request. Tenants may inspect records at landlord's principal office during business hours.",
+      "requiredDisclosures": "Itemized operating expense reconciliation statement with sufficient detail for tenant to verify charges. Must include category-level breakdowns and calculation methodology.",
+      "penalties": "Treble damages (3x overcharge) for willful non-compliance with QCT documentation requests. Attorney's fees recoverable by prevailing tenant.",
+      "caseLaw": [
+        {
+          "name": "Medic Pharmacy, LLC v. AVK Properties, LLC",
+          "citation": "Harris County District Court (2022)",
+          "year": 2022,
+          "summary": "Landlord's gross-up calculation applied to both variable and fixed expenses; court found this violated lease terms requiring gross-up only on variable costs. Resulted in $47K tenant recovery."
+        }
+      ],
+      "regulatoryBody": "California Department of Real Estate (DRE)",
+      "complianceComplexity": "high",
+      "notes": "SB 1103 is the most detailed commercial CAM disclosure law in the US. California is the only state with treble damages for CAM non-compliance. All California commercial landlords need a documented QCT identification and response process.",
+      "keyTakeawayForLandlords": "Set up a QCT identification process at lease signing. Build a 30-day documentation response workflow. Make sure reconciliation statements have enough detail to satisfy Section 1950.9 requirements.",
+      "qualifiedTenantDefinition": "Microenterprises (5 or fewer employees), restaurants (fewer than 10 employees), or nonprofits (fewer than 20 employees) who have provided written notice and attestation of their status.",
+      "statuteEffectiveDate": "2025-01-01",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/sb-1103-compliance",
+        "/blog/sb-1103-one-year-later"
+      ],
+      "relatedTools": [
+        "/tools/sb-1103-checker",
+        "/tools/audit-risk-quiz"
+      ]
+    },
+    {
+      "slug": "colorado",
+      "name": "Colorado",
+      "abbreviation": "CO",
+      "primaryStatute": "C.R.S. \u00c2\u00a7 38-12-101 et seq. (Landlord-Tenant  -  primarily residential); limited commercial provisions",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Colorado Division of Real Estate",
+      "complianceComplexity": "low",
+      "notes": "Colorado has minimal commercial CAM regulation. Denver's office vacancy rose post-pandemic, making accurate gross-up calculations more important. Colorado's Gallagher Amendment historically shaped commercial property tax rates but was repealed in 2020.",
+      "keyTakeawayForLandlords": "After the Gallagher Amendment repeal, commercial property tax rates in Colorado are stabilizing but remain higher than historical levels. Build this into CAM estimates and reconciliation.",
+      "statuteEffectiveDate": "2026-01-01",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "connecticut",
+      "name": "Connecticut",
+      "abbreviation": "CT",
+      "primaryStatute": "Conn. Gen. Stat. \u00c2\u00a7 47a-1 et seq. (Landlord-Tenant  -  primarily residential); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Connecticut Department of Consumer Protection, Real Estate Division",
+      "complianceComplexity": "low",
+      "notes": "Connecticut has some of the highest effective property tax rates in the US. Mill rates vary widely by municipality. Stamford and Hartford are the primary commercial markets. State law requires property revaluations every 5 years.",
+      "keyTakeawayForLandlords": "Connecticut's high mill rates make property tax the largest CAM component. Properties in different towns face very different tax burdens. Make sure CAM estimates reflect the specific municipality's rate.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "delaware",
+      "name": "Delaware",
+      "abbreviation": "DE",
+      "primaryStatute": "Del. Code tit. 25, \u00c2\u00a7 5101 et seq. (Residential Landlord-Tenant Code); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Delaware Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Delaware has no sales tax, which reduces CAM costs for maintenance supplies and services. Property assessments in many counties have not been updated in decades, creating large gaps between assessed and market values. Wilmington and the I-95 corridor are the primary commercial markets.",
+      "keyTakeawayForLandlords": "Delaware's outdated property assessments mean effective tax rates may not match current market values. No sales tax provides a real cost advantage for maintenance and capital work passed through CAM.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "florida",
+      "name": "Florida",
+      "abbreviation": "FL",
+      "primaryStatute": "Fla. Stat. \u00c2\u00a7 83.001 (Commercial Tenancy  -  minimal provisions)",
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation delivery. Florida's commercial tenancy statute is among the most minimal in the US.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. All audit provisions are lease-negotiated.",
+      "requiredDisclosures": "No statutory disclosure requirements for commercial CAM reconciliation.",
+      "penalties": "No CAM-specific penalty provisions. General contract remedies only.",
+      "caseLaw": [
+        {
+          "name": "CVS Pharmacy v. Coral Ridge Properties",
+          "citation": "Fla. 4th DCA (2015)",
+          "year": 2015,
+          "summary": "Court examined whether hurricane-related repairs constituted capital expenditures excluded from CAM pass-throughs. Held that roof replacement after storm damage was CapEx, not recoverable through CAM."
+        }
+      ],
+      "regulatoryBody": "Florida Department of Business and Professional Regulation (DBPR)",
+      "complianceComplexity": "low",
+      "notes": "Florida has no equivalent to California's SB 1103. Commercial landlord-tenant relationships are governed almost entirely by lease terms. Florida's growing CRE market (especially South Florida and Tampa Bay) combined with hurricane insurance cost swings makes insurance pass-through language especially important. Property insurance has increased 40-100%+ in coastal areas since 2020.",
+      "keyTakeawayForLandlords": "Florida's minimal statutory requirements mean your lease controls entirely. Write clear insurance pass-through language given coastal premium volatility. Make sure CapEx exclusion clauses address hurricane and storm damage restoration.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources",
+        "/blog/cam-reconciliation-deadlines",
+        "/resources/florida-cam-compliance"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/audit-risk-quiz"
+      ]
+    },
+    {
+      "slug": "georgia",
+      "name": "Georgia",
+      "abbreviation": "GA",
+      "primaryStatute": "O.C.G.A. \u00c2\u00a7 44-7-1 et seq. (Landlord and Tenant  -  general provisions)",
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation. Lease terms control timing.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights. Lease provisions govern.",
+      "requiredDisclosures": "No statutory disclosure requirements for commercial CAM.",
+      "penalties": "No CAM-specific penalties. General contract remedies apply.",
+      "caseLaw": [],
+      "regulatoryBody": "Georgia Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Georgia has minimal commercial lease regulation. Atlanta's growing office and industrial markets are adding CAM reconciliation volume. Fulton County property tax assessments can be contested through the Board of Equalization.",
+      "keyTakeawayForLandlords": "Statutory obligations are minimal, but Atlanta's rapid growth means more tenants are reviewing their leases carefully. Proactive, transparent reconciliation reduces dispute risk.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "hawaii",
+      "name": "Hawaii",
+      "abbreviation": "HI",
+      "primaryStatute": "Haw. Rev. Stat. \u00c2\u00a7 521-1 et seq. (Residential Landlord-Tenant Code); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Hawaii Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Many Hawaii commercial properties are on long-term ground leases rather than fee simple ownership. This changes how property tax and ground rent are handled in CAM. Honolulu is the dominant commercial market. Hawaii's General Excise Tax (GET) at 4-4.5% applies to rent, adding complexity to tenant cost calculations.",
+      "keyTakeawayForLandlords": "Hawaii's General Excise Tax applies to gross rents and can be passed through to tenants. Make sure lease language addresses GET pass-through. Ground lease structures require careful CAM treatment of ground rent obligations.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "idaho",
+      "name": "Idaho",
+      "abbreviation": "ID",
+      "primaryStatute": "Idaho Code \u00c2\u00a7 6-301 et seq. (Landlord-Tenant); minimal commercial provisions",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Idaho Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Idaho has minimal commercial lease regulation. Boise is the primary commercial market and has grown quickly. Property is assessed annually at full market value. Idaho's relatively low property tax rates keep tax pass-throughs moderate compared to neighboring states.",
+      "keyTakeawayForLandlords": "Boise's rapid growth means property values and tax assessments are rising. Annual reassessment at full market value means CAM tax estimates need a yearly review.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "illinois",
+      "name": "Illinois",
+      "abbreviation": "IL",
+      "primaryStatute": "735 ILCS 5/9-201 through 9-321 (Commercial tenancy and eviction); Chicago Municipal Code for city-specific requirements",
+      "reconciliationTiming": "No state-level statutory deadline for CAM reconciliation. Chicago commercial market typically follows 90-120 day custom.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants at state level. Lease-negotiated provisions control.",
+      "requiredDisclosures": "No statutory disclosure requirements for commercial CAM.",
+      "penalties": "No CAM-specific penalty statutes. Standard breach of contract remedies.",
+      "caseLaw": [
+        {
+          "name": "Goldblatt Bros. v. Addison Corp.",
+          "citation": "Ill. App. Ct. (2016)",
+          "year": 2016,
+          "summary": "Court examined CAM cap calculations in a retail lease, finding that landlord's compounding methodology (applying cap to previous year's capped amount rather than actual expenses) violated lease terms."
+        }
+      ],
+      "regulatoryBody": "Illinois Department of Financial and Professional Regulation (IDFPR)",
+      "complianceComplexity": "low",
+      "notes": "Illinois has minimal commercial CAM statutory requirements. Cook County's property tax system (triennial reassessment, equalization factors, classification multipliers) makes tax escalation clauses hard to manage. Chicago uses three-level tax classification (residential, commercial, industrial) that affects CAM tax pass-throughs.",
+      "keyTakeawayForLandlords": "Cook County's triennial reassessment and equalization factors create year-to-year tax volatility in CAM estimates. Use realistic property tax estimates and consider separate tax escalation provisions outside the CAM cap.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/audit-risk-quiz"
+      ]
+    },
+    {
+      "slug": "indiana",
+      "name": "Indiana",
+      "abbreviation": "IN",
+      "primaryStatute": "Ind. Code \u00c2\u00a7 32-31-1 et seq. (Landlord-Tenant  -  primarily residential); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Indiana Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Indiana has constitutional property tax caps: 1% for residential, 2% for rental/agricultural, and 3% for commercial/industrial. These caps make CAM tax estimates more predictable. Indianapolis is the primary commercial market, with growing industrial and logistics sectors.",
+      "keyTakeawayForLandlords": "Indiana's constitutional 3% property tax cap on commercial properties makes CAM tax estimates more predictable. You can build multi-year projections knowing effective rates cannot go above this ceiling.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "iowa",
+      "name": "Iowa",
+      "abbreviation": "IA",
+      "primaryStatute": "Iowa Code \u00c2\u00a7 562A.1 et seq. (Uniform Residential Landlord and Tenant Act); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Iowa Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Iowa assesses commercial property at 90% of market value with a rollback (assessment limitation) that changes each year. Des Moines is the primary commercial market. Iowa's rollback percentage differs for residential and commercial classes.",
+      "keyTakeawayForLandlords": "Iowa's annual rollback percentage changes each year, making tax projections less predictable. Watch the state's annual rollback announcement to keep CAM estimates on track.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "kansas",
+      "name": "Kansas",
+      "abbreviation": "KS",
+      "primaryStatute": "Kan. Stat. \u00c2\u00a7 58-2540 et seq. (Residential Landlord and Tenant Act); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Kansas Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Kansas assesses commercial property at 25% of appraised value. The Kansas City metro (Overland Park, Olathe) and Wichita are the primary commercial markets. County appraisals occur annually using prior year market data.",
+      "keyTakeawayForLandlords": "Kansas's 25% commercial assessment ratio keeps effective rates manageable. The Kansas City metro straddles the Kansas-Missouri border. Make sure tenants in multi-state portfolios understand the different assessment methods on each side.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "kentucky",
+      "name": "Kentucky",
+      "abbreviation": "KY",
+      "primaryStatute": "KRS \u00c2\u00a7 383.010 et seq. (Landlord and Tenant  -  general provisions); minimal commercial-specific statutes",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Kentucky Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Kentucky assesses property at 100% of fair market value. Louisville and Lexington are the primary commercial markets. Kentucky has a statewide property tax in addition to local taxes, which adds a layer to CAM tax calculations.",
+      "keyTakeawayForLandlords": "Kentucky's statewide property tax adds to local taxes in CAM pass-throughs. Make sure reconciliation statements break out state vs. local property tax for transparency.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "louisiana",
+      "name": "Louisiana",
+      "abbreviation": "LA",
+      "primaryStatute": "La. Civ. Code art. 2668 et seq. (Lease  -  general provisions); La. R.S. 9:3251 et seq. for commercial",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Louisiana Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Louisiana uses the parish system instead of counties. Its civil law tradition (from French/Spanish law, not English common law) shapes lease dispute interpretation. Commercial property is assessed at 15% of fair market value. New Orleans and Baton Rouge are the primary commercial markets.",
+      "keyTakeawayForLandlords": "Louisiana's civil law tradition means ambiguous lease terms are not automatically read against the drafter, unlike in common law states. The parish-based assessment system and 15% commercial ratio keep effective tax rates low.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "maine",
+      "name": "Maine",
+      "abbreviation": "ME",
+      "primaryStatute": "Me. Rev. Stat. tit. 14, \u00c2\u00a7 6001 et seq. (Landlord-Tenant  -  primarily residential); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Maine Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Maine has relatively high property tax rates. Portland is the primary commercial market. Property is assessed at 100% of market value by local assessors. Maine has TIF (Tax Increment Financing) districts that can affect how property tax is calculated for CAM purposes.",
+      "keyTakeawayForLandlords": "Maine's high property tax rates make tax the largest CAM component. If your property is in a TIF district, make sure lease language addresses how TIF-captured taxes are treated in operating expense calculations.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "maryland",
+      "name": "Maryland",
+      "abbreviation": "MD",
+      "primaryStatute": "Md. Code, Real Prop. \u00c2\u00a7 8-101 et seq. (Landlord-Tenant); limited commercial provisions",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties.",
+      "caseLaw": [],
+      "regulatoryBody": "Maryland Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Maryland phases in property assessment value changes over 3 years. This creates predictable but gradual tax changes that affect CAM estimates differently than states with immediate reassessment.",
+      "keyTakeawayForLandlords": "Maryland's 3-year phase-in means tax changes are more predictable but still require annual CAM estimate adjustments. Use the published phase-in schedule for accurate forward estimates.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "massachusetts",
+      "name": "Massachusetts",
+      "abbreviation": "MA",
+      "primaryStatute": "M.G.L. c. 186 (Estates for Years and at Will); limited commercial provisions",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation. Boston market custom is 90-120 days post fiscal year-end.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights. Lease-negotiated provisions control.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties. Massachusetts courts may apply Chapter 93A (unfair business practices) to egregious commercial lease disputes.",
+      "caseLaw": [
+        {
+          "name": "Wesson v. Leone Enterprises",
+          "citation": "Mass. App. Ct. (2014)",
+          "year": 2014,
+          "summary": "Court applied Chapter 93A unfair practices statute to commercial landlord-tenant dispute involving intentional misrepresentation of operating expenses."
+        }
+      ],
+      "regulatoryBody": "Massachusetts Division of Professional Licensure, Board of Registration of Real Estate Brokers and Salespersons",
+      "complianceComplexity": "medium",
+      "notes": "Massachusetts has few CAM-specific statutes, but Chapter 93A (Consumer Protection / Unfair Business Practices) can apply to commercial lease disputes. Deceptive or unfair practices may result in treble damages. This creates real compliance pressure beyond what the lease requires.",
+      "keyTakeawayForLandlords": "Chapter 93A means intentional or reckless CAM billing errors could trigger treble damages even without a CAM-specific statute. Transparent, documented reconciliation processes are a key defense.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "michigan",
+      "name": "Michigan",
+      "abbreviation": "MI",
+      "primaryStatute": "MCL 554.601 et seq. (Landlord-Tenant); limited commercial provisions",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties.",
+      "caseLaw": [],
+      "regulatoryBody": "Michigan Department of Licensing and Regulatory Affairs (LARA)",
+      "complianceComplexity": "low",
+      "notes": "Michigan uses a capped value system where annual assessment increases are limited to the lesser of 5% or inflation. When a property sells, the assessed value resets to market (uncaps). This creates significant CAM tax implications at acquisition.",
+      "keyTakeawayForLandlords": "Michigan's tax uncapping at sale means acquired properties can see large tax increases in year one. Build this into acquisition due diligence and first-year CAM estimates.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "minnesota",
+      "name": "Minnesota",
+      "abbreviation": "MN",
+      "primaryStatute": "Minn. Stat. \u00c2\u00a7 504B.001 et seq. (Landlord-Tenant); commercial provisions minimal",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties.",
+      "caseLaw": [],
+      "regulatoryBody": "Minnesota Department of Commerce",
+      "complianceComplexity": "low",
+      "notes": "Minnesota's Twin Cities metro has a fiscal disparities tax-sharing system. A portion of commercial/industrial property tax base is pooled across municipalities, which adds complexity to property tax CAM calculations.",
+      "keyTakeawayForLandlords": "The Twin Cities fiscal disparities system means your property's effective tax rate includes a regional pooling component. Make sure property tax pass-through calculations account for the fiscal disparities contribution.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "mississippi",
+      "name": "Mississippi",
+      "abbreviation": "MS",
+      "primaryStatute": "Miss. Code \u00c2\u00a7 89-7-1 et seq. (Landlord and Tenant  -  general provisions); minimal commercial-specific statutes",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Mississippi Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Mississippi assesses commercial property at 15% of true value, one of the lowest assessment ratios in the US. Jackson is the primary commercial market. The state's small commercial market keeps CAM complexity generally low.",
+      "keyTakeawayForLandlords": "Mississippi's 15% commercial assessment ratio produces low effective property tax rates. The small market size means fewer sophisticated tenant audit challenges, but accurate reconciliation still reduces dispute risk.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "missouri",
+      "name": "Missouri",
+      "abbreviation": "MO",
+      "primaryStatute": "Mo. Rev. Stat. \u00c2\u00a7 535.010 et seq. (Landlord-Tenant); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Missouri Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Missouri assesses commercial property at 32% of market value, reassessed every odd-numbered year. Kansas City and St. Louis are the primary commercial markets. Missouri's assessment ratio is higher than many neighboring states, making tax pass-throughs a significant CAM component.",
+      "keyTakeawayForLandlords": "Missouri's 32% commercial assessment ratio is relatively high. Property tax will be a large portion of CAM. Biennial reassessment means CAM estimates should be updated in odd-numbered years when new values take effect.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "montana",
+      "name": "Montana",
+      "abbreviation": "MT",
+      "primaryStatute": "Mont. Code \u00c2\u00a7 70-24-101 et seq. (Residential Landlord and Tenant Act); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Montana Board of Realty Regulation",
+      "complianceComplexity": "low",
+      "notes": "Montana has no sales tax, which reduces CAM costs for maintenance supplies and services. Property is reappraised on a 2-year cycle. Billings and Missoula are the primary commercial markets. Montana's small commercial market keeps CAM reconciliation straightforward.",
+      "keyTakeawayForLandlords": "Montana's no sales tax environment lowers the cost of maintenance and repair work in CAM. The biennial reappraisal cycle means property tax estimates should be updated every two years.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "nebraska",
+      "name": "Nebraska",
+      "abbreviation": "NE",
+      "primaryStatute": "Neb. Rev. Stat. \u00c2\u00a7 76-1401 et seq. (Uniform Residential Landlord and Tenant Act); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Nebraska Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Nebraska assesses commercial property at 100% of market value with annual revaluation. Omaha and Lincoln are the primary commercial markets. Nebraska's relatively high property tax rates make tax pass-throughs a significant CAM component.",
+      "keyTakeawayForLandlords": "Nebraska's high property tax rates and annual full-market reassessment make tax a major CAM driver. Annual revaluation provides current data but requires yearly CAM estimate updates.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "nevada",
+      "name": "Nevada",
+      "abbreviation": "NV",
+      "primaryStatute": "NRS 118A (Landlord and Tenant  -  primarily residential); commercial governed by NRS 118C and general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties.",
+      "caseLaw": [],
+      "regulatoryBody": "Nevada Real Estate Division",
+      "complianceComplexity": "low",
+      "notes": "Nevada caps property tax increases at 3% per year for most commercial properties (up to 8% for new construction in the first year). Las Vegas's hospitality-driven CRE market creates CAM considerations for mixed-use properties with retail and entertainment components.",
+      "keyTakeawayForLandlords": "Nevada's 3% annual property tax cap makes CAM tax estimates more predictable than most states. Build this into multi-year projections. Market value may exceed assessed value, but the cap limits pass-through increases.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "new-hampshire",
+      "name": "New Hampshire",
+      "abbreviation": "NH",
+      "primaryStatute": "N.H. Rev. Stat. \u00c2\u00a7 540:1 et seq. (Landlord-Tenant  -  general provisions); minimal commercial-specific statutes",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "New Hampshire Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "New Hampshire has no state income tax and no state sales tax. Property tax is the primary revenue source. As a result, New Hampshire has some of the highest property tax rates in the country. Manchester and Nashua are the primary commercial markets. Property is assessed at full market value by local assessors.",
+      "keyTakeawayForLandlords": "With no income or sales tax, New Hampshire relies heavily on property taxes. Effective rates are among the highest in the US. Property tax will dominate CAM charges. Make sure estimates reflect this large component.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "new-jersey",
+      "name": "New Jersey",
+      "abbreviation": "NJ",
+      "primaryStatute": "N.J.S.A. 46:8-1 et seq. (Landlord-Tenant); limited commercial-specific provisions",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties. Consumer Fraud Act (N.J.S.A. 56:8-1) may apply in egregious cases.",
+      "caseLaw": [],
+      "regulatoryBody": "New Jersey Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "New Jersey has some of the highest property tax rates in the US. Tax pass-through provisions are critical in commercial leases. Average effective commercial property tax rates exceed 2.5% in many municipalities.",
+      "keyTakeawayForLandlords": "New Jersey's high property tax rates make tax escalation the largest CAM component. Make sure tax protest refunds are properly credited to tenants and protest costs are addressed in the lease.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "new-mexico",
+      "name": "New Mexico",
+      "abbreviation": "NM",
+      "primaryStatute": "N.M. Stat. \u00c2\u00a7 47-8-1 et seq. (Uniform Owner-Resident Relations Act  -  primarily residential); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "New Mexico Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "New Mexico assesses commercial property at 33.3% of market value. Albuquerque and Santa Fe are the primary commercial markets. New Mexico's gross receipts tax (similar to a sales tax) applies to many services, which raises CAM costs for maintenance contracts.",
+      "keyTakeawayForLandlords": "New Mexico's gross receipts tax applies broadly to services, raising the cost of maintenance contracts passed through CAM. Make sure CAM estimates account for this tax on service provider invoices.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "new-york",
+      "name": "New York",
+      "abbreviation": "NY",
+      "primaryStatute": "N.Y. Real Prop. Law \u00c2\u00a7 235-e (Commercial tenancy provisions); NYC Admin. Code for NYC-specific requirements",
+      "reconciliationTiming": "No state-level statutory deadline for CAM reconciliation. NYC commercial leases typically specify 120-180 days post fiscal year-end by custom, not statute.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Audit provisions must be negotiated into the lease. Standard NYC commercial leases (e.g., REBNY forms) typically include 120-day audit windows.",
+      "requiredDisclosures": "No statutory disclosure requirements. NYC commercial leases typically require detailed operating expense statements by custom and lease form standards.",
+      "penalties": "No CAM-specific penalty statutes. Standard breach of contract remedies. NYC courts are tenant-sympathetic in interpreting ambiguous operating expense clauses.",
+      "caseLaw": [
+        {
+          "name": "232 Broadway Corp. v. NYC Dept. of Finance",
+          "citation": "N.Y. App. Div., 1st Dept. (2018)",
+          "year": 2018,
+          "summary": "Court examined property tax pass-through calculations in commercial leases, establishing that landlords must use actual assessed values, not estimated or inflated figures."
+        }
+      ],
+      "regulatoryBody": "New York Department of State, Division of Licensing Services",
+      "complianceComplexity": "medium",
+      "notes": "New York has a limited statutory framework for commercial CAM, but NYC market customs create practical standards. REBNY standard lease forms include detailed operating expense escalation provisions. New York courts tend to read ambiguous expense provisions against landlords (contra proferentem). NYC's property tax system (equalization ratios, ICAP/ICIP abatements) makes tax escalation clauses prone to errors.",
+      "keyTakeawayForLandlords": "NYC's property tax equalization system creates reconciliation complexity. Make sure your lease states whether escalations are based on assessed value, equalized value, or actual tax payments. Ambiguous provisions carry tenant-favorable interpretation risk.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/resources"
+      ],
+      "relatedTools": [
+        "/tools/cam-gross-up-calculator",
+        "/tools/pro-rata-calculator"
+      ]
+    },
+    {
+      "slug": "north-carolina",
+      "name": "North Carolina",
+      "abbreviation": "NC",
+      "primaryStatute": "N.C.G.S. \u00c2\u00a7 42-1 et seq. (Landlord and Tenant); minimal commercial-specific provisions",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties.",
+      "caseLaw": [],
+      "regulatoryBody": "North Carolina Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "North Carolina conducts county-level revaluations on 4-8 year cycles depending on the county. Charlotte and Raleigh-Durham are the primary commercial markets and both are growing quickly.",
+      "keyTakeawayForLandlords": "Rapid growth in Charlotte and the Triangle means revaluation years may bring large tax increases. Watch county revaluation schedules and update CAM estimates ahead of time.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "north-dakota",
+      "name": "North Dakota",
+      "abbreviation": "ND",
+      "primaryStatute": "N.D. Cent. Code \u00c2\u00a7 47-16-01 et seq. (Landlord and Tenant  -  general provisions); minimal commercial-specific statutes",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "North Dakota Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "North Dakota assesses commercial property at 50% of market value. Fargo and Bismarck are the primary commercial markets. The energy sector has driven commercial development in western areas. Property tax rates are moderate.",
+      "keyTakeawayForLandlords": "North Dakota's 50% assessment ratio and moderate tax rates keep property tax CAM components manageable. Energy sector swings can change commercial vacancy in western North Dakota. Monitor occupancy for gross-up implications.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "ohio",
+      "name": "Ohio",
+      "abbreviation": "OH",
+      "primaryStatute": "O.R.C. \u00c2\u00a7 5321 (Landlord-Tenant  -  primarily residential); limited commercial provisions under general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties.",
+      "caseLaw": [],
+      "regulatoryBody": "Ohio Division of Real Estate and Professional Licensing",
+      "complianceComplexity": "low",
+      "notes": "Ohio reappraises property on a 6-year cycle with triennial updates. This creates CAM tax estimate swings in reappraisal years. Columbus and Cleveland are the primary commercial markets.",
+      "keyTakeawayForLandlords": "Ohio's 6-year reappraisal cycle means CAM tax estimates can be off in reappraisal years. Plan for estimate adjustments in years 1, 3, and 6 of each cycle.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "oklahoma",
+      "name": "Oklahoma",
+      "abbreviation": "OK",
+      "primaryStatute": "Okla. Stat. tit. 41, \u00c2\u00a7 101 et seq. (Residential Landlord Tenant Act); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Oklahoma Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Oklahoma assesses commercial property at 11% of fair market value, one of the lowest assessment ratios in the country. Oklahoma City and Tulsa are the primary commercial markets. The energy sector has a major influence on commercial real estate demand and vacancy.",
+      "keyTakeawayForLandlords": "Oklahoma's 11% assessment ratio produces very low effective property tax rates, minimizing the tax portion of CAM. Energy sector cycles can swing commercial vacancy. Make sure gross-up clauses are well-defined for occupancy changes.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "oregon",
+      "name": "Oregon",
+      "abbreviation": "OR",
+      "primaryStatute": "ORS \u00c2\u00a7 90.100 et seq. (Residential Landlord and Tenant Act); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Oregon Real Estate Agency",
+      "complianceComplexity": "low",
+      "notes": "Oregon has no state sales tax, which reduces CAM costs for maintenance supplies, repairs, and capital work. Measure 50 (1997) capped assessed values at 1995-96 levels with maximum 3% annual increases. Portland is the primary commercial market.",
+      "keyTakeawayForLandlords": "Oregon's no-sales-tax environment lowers maintenance and repair costs in CAM. Measure 50's 3% assessment cap means taxable values often lag market values. New construction or major improvements may trigger reassessment to current market value.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "pennsylvania",
+      "name": "Pennsylvania",
+      "abbreviation": "PA",
+      "primaryStatute": "68 Pa.C.S. \u00c2\u00a7 250.101 et seq. (Landlord and Tenant Act); limited commercial provisions",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties.",
+      "caseLaw": [],
+      "regulatoryBody": "Pennsylvania Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Pennsylvania's commercial property tax system varies by city. Philadelphia uses a different assessment method than the rest of the state. Pittsburgh uses a graded tax system (higher rate on land than on improvements). Each creates its own CAM tax pass-through calculations.",
+      "keyTakeawayForLandlords": "Philadelphia's 10-year tax abatement for new construction and renovation creates complex CAM scenarios. Make sure lease language addresses how abatements affect tenant operating expense obligations.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "rhode-island",
+      "name": "Rhode Island",
+      "abbreviation": "RI",
+      "primaryStatute": "R.I. Gen. Laws \u00c2\u00a7 34-18-1 et seq. (Residential Landlord and Tenant Act); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Rhode Island Department of Business Regulation, Real Estate Division",
+      "complianceComplexity": "low",
+      "notes": "Rhode Island has relatively high property tax rates. Providence is the primary commercial market. Reassessments are required every 9 years by statute, though some municipalities reassess more often. Most commercial activity is concentrated in the Providence metro.",
+      "keyTakeawayForLandlords": "Rhode Island's high rates and infrequent reassessment cycles (up to 9 years) mean assessed values can lag market values for years, then jump sharply at reassessment. Plan for CAM estimate swings around reassessment dates.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "south-carolina",
+      "name": "South Carolina",
+      "abbreviation": "SC",
+      "primaryStatute": "S.C. Code \u00c2\u00a7 27-40-10 et seq. (Residential Landlord and Tenant Act); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "South Carolina Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "South Carolina assesses commercial property at 6% of market value, one of the lowest assessment ratios in the US. Reassessment occurs every 5 years with a 15% cap on value increases. Charleston, Greenville, and Columbia are the primary commercial markets.",
+      "keyTakeawayForLandlords": "South Carolina's 6% commercial assessment ratio and 15% reassessment cap produce very low and predictable property tax CAM costs. This landlord-friendly state relies on lease terms as the primary compliance framework.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "south-dakota",
+      "name": "South Dakota",
+      "abbreviation": "SD",
+      "primaryStatute": "S.D. Codified Laws \u00c2\u00a7 43-32-1 et seq. (Landlord and Tenant  -  general provisions); minimal commercial-specific statutes",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "South Dakota Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "South Dakota has no state income tax. It relies on sales tax and property tax for revenue. Property is assessed at 85% of market value (non-agricultural) with annual reassessment. Sioux Falls and Rapid City are the primary commercial markets.",
+      "keyTakeawayForLandlords": "No state income tax and moderate property tax rates keep overall CAM costs manageable. Annual reassessment at 85% of market value means property tax estimates need a yearly update.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "tennessee",
+      "name": "Tennessee",
+      "abbreviation": "TN",
+      "primaryStatute": "Tenn. Code \u00c2\u00a7 66-28-101 et seq. (Uniform Residential Landlord and Tenant Act  -  commercial excluded); commercial governed by contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties.",
+      "caseLaw": [],
+      "regulatoryBody": "Tennessee Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Tennessee has no state income tax (since 2021), which makes property tax revenue more important to municipalities. Nashville's rapid office and industrial growth is adding CAM reconciliation complexity. County reassessments occur on 4-5 year cycles.",
+      "keyTakeawayForLandlords": "Nashville's rapid growth means reassessment years can bring large tax increases. No state income tax means municipalities rely more heavily on property tax revenue.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "texas",
+      "name": "Texas",
+      "abbreviation": "TX",
+      "primaryStatute": "Tex. Prop. Code \u00c2\u00a7 93.002-93.013 (Commercial Tenancy)",
+      "reconciliationTiming": "No statutory deadline for CAM reconciliation delivery. Timing governed entirely by lease terms. Industry standard is 90-120 days after fiscal year-end.",
+      "tenantAuditRights": "No statutory audit rights for commercial tenants. Audit rights exist only if granted by the lease. Texas courts enforce lease terms as written.",
+      "requiredDisclosures": "No statutory disclosure requirements for CAM reconciliation statements. Content and format determined by lease agreement.",
+      "penalties": "No statutory penalties specific to CAM reconciliation errors. General contract remedies (breach of lease) apply. No treble damages provision.",
+      "caseLaw": [
+        {
+          "name": "Clear Lake Center v. Garden Ridge",
+          "citation": "Tex. App. - Houston [14th Dist.] 2013",
+          "year": 2013,
+          "summary": "Court examined anchor tenant CAM expense pass-through provisions. Held that anchor exclusion from denominator must be explicitly stated in lease; ambiguous language construed against landlord."
+        },
+        {
+          "name": "Medic Pharmacy, LLC v. AVK Properties, LLC",
+          "citation": "Harris County District Court (2022)",
+          "year": 2022,
+          "summary": "Gross-up dispute where landlord applied occupancy adjustment to fixed expenses. Court ruled lease limited gross-up to variable operating expenses only."
+        }
+      ],
+      "regulatoryBody": "Texas Real Estate Commission (TREC)",
+      "complianceComplexity": "low",
+      "notes": "Texas is landlord-friendly with minimal statutory requirements for commercial CAM. Harris County's 26.5% office vacancy means gross-up calculations are triggered on most leases. With no statutory defaults, lease drafting is critical. Courts enforce lease terms as written.",
+      "keyTakeawayForLandlords": "Your lease is your compliance framework in Texas. Make sure gross-up clauses clearly separate variable and fixed expenses. With Harris County vacancy above 25%, every gross-up calculation is material.",
+      "statuteEffectiveDate": "2001-09-01",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/resources",
+        "/resources",
+        "/resources/texas-cam-compliance"
+      ],
+      "relatedTools": [
+        "/tools/hcad-tax-normalizer",
+        "/tools/audit-risk-quiz"
+      ]
+    },
+    {
+      "slug": "utah",
+      "name": "Utah",
+      "abbreviation": "UT",
+      "primaryStatute": "Utah Code \u00c2\u00a7 57-22-1 et seq. (Fit Premises Act  -  primarily residential); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Utah Division of Real Estate",
+      "complianceComplexity": "low",
+      "notes": "Utah assesses commercial property at 100% of fair market value with annual reassessment. Salt Lake City and the Silicon Slopes corridor (Lehi/Provo) are the primary commercial markets. Utah's strong economic growth has driven rapid commercial development and rising property values.",
+      "keyTakeawayForLandlords": "Utah's growing economy and annual full-market reassessment mean property tax CAM costs can rise significantly year over year. Silicon Slopes growth has made the Utah County corridor an increasingly active commercial market.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "vermont",
+      "name": "Vermont",
+      "abbreviation": "VT",
+      "primaryStatute": "Vt. Stat. tit. 9, \u00c2\u00a7 4451 et seq. (Residential Rental Agreements Act); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Vermont Office of Professional Regulation, Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Vermont has a small commercial real estate market concentrated in Burlington and the I-89 corridor. Property is assessed by local listers at 100% of fair market value, though actual assessment-to-sale ratios vary by municipality. Vermont's Common Level of Appraisal (CLA) factor adjusts for these differences in education tax calculations.",
+      "keyTakeawayForLandlords": "Vermont's small commercial market and municipal assessment variability mean CAM tax calculations must account for the specific municipality's Common Level of Appraisal factor. Education tax equalization can create unexpected tax adjustments.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "virginia",
+      "name": "Virginia",
+      "abbreviation": "VA",
+      "primaryStatute": "Va. Code \u00c2\u00a7 55.1-1200 et seq. (Virginia Residential Landlord and Tenant Act  -  commercial excluded); commercial governed by general contract law",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties.",
+      "caseLaw": [],
+      "regulatoryBody": "Virginia Real Estate Board",
+      "complianceComplexity": "low",
+      "notes": "Virginia's commercial leases are governed by common law and contract terms. Northern Virginia (Tysons, Reston, Arlington) has a high concentration of office space. Post-pandemic vacancy has pushed gross-up calculations into routine use.",
+      "keyTakeawayForLandlords": "Northern Virginia's office vacancy (often 15-20%+) makes gross-up calculations material on nearly every lease. Make sure lease language clearly defines which expenses are variable for gross-up purposes.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "washington",
+      "name": "Washington",
+      "abbreviation": "WA",
+      "primaryStatute": "RCW 59.04 et seq. (Landlord and Tenant  -  general); RCW 59.18 (primarily residential)",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Washington Department of Licensing, Real Estate Division",
+      "complianceComplexity": "low",
+      "notes": "Washington has minimal commercial CAM regulation. Seattle's office vacancy has increased significantly. The King County Assessor conducts annual valuations. Washington has no state income tax, making property tax pass-throughs a larger portion of total tenant costs.",
+      "keyTakeawayForLandlords": "No state income tax means property taxes are a higher share of government revenue, which adds upward pressure on commercial assessment values. Make sure property tax CAM provisions account for potential reassessment spikes.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "west-virginia",
+      "name": "West Virginia",
+      "abbreviation": "WV",
+      "primaryStatute": "W. Va. Code \u00c2\u00a7 37-6-1 et seq. (Landlord and Tenant  -  general provisions); minimal commercial-specific statutes",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "West Virginia Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "West Virginia assesses commercial property at 60% of appraised value. Charleston and the Eastern Panhandle (near the DC metro) are the primary commercial markets. Property taxes are relatively low, and the state's small commercial market means CAM disputes are uncommon.",
+      "keyTakeawayForLandlords": "West Virginia's 60% assessment ratio and low property tax rates keep tax CAM costs modest. Eastern Panhandle properties near the DC metro may attract more sophisticated tenants who require detailed reconciliation.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "wisconsin",
+      "name": "Wisconsin",
+      "abbreviation": "WI",
+      "primaryStatute": "Wis. Stat. \u00c2\u00a7 704.01 et seq. (Landlord and Tenant  -  general provisions); commercial included in general framework",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Wisconsin Department of Safety and Professional Services, Real Estate Section",
+      "complianceComplexity": "low",
+      "notes": "Wisconsin assesses property at full market value with annual reassessment by local assessors. Milwaukee and Madison are the primary commercial markets. Wisconsin's high property tax rates make tax a significant CAM component. The state's manufacturing base means industrial CAM reconciliation is common.",
+      "keyTakeawayForLandlords": "Wisconsin's high property tax rates and annual full-value reassessment make property tax the largest CAM line item in most leases. Watch municipal reassessment notices closely to keep estimates accurate.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    },
+    {
+      "slug": "wyoming",
+      "name": "Wyoming",
+      "abbreviation": "WY",
+      "primaryStatute": "Wyo. Stat. \u00c2\u00a7 1-21-1201 et seq. (Landlord-Tenant  -  general provisions); minimal commercial-specific statutes",
+      "reconciliationTiming": "No statutory deadline for commercial CAM reconciliation.",
+      "tenantAuditRights": "No statutory commercial tenant audit rights.",
+      "requiredDisclosures": "No statutory commercial CAM disclosure requirements.",
+      "penalties": "No CAM-specific penalties for commercial leases.",
+      "caseLaw": [],
+      "regulatoryBody": "Wyoming Real Estate Commission",
+      "complianceComplexity": "low",
+      "notes": "Wyoming has no state income tax, keeping the overall business tax burden low. Commercial property is assessed at 9.5% of fair market value, one of the lowest assessment ratios in the US. Cheyenne and Casper are the primary commercial markets. The small commercial market means CAM complexity is generally minimal.",
+      "keyTakeawayForLandlords": "Wyoming's 9.5% commercial assessment ratio and no state income tax make it one of the lowest-tax environments for commercial property. Property tax CAM costs will be small, but lease terms should still address reconciliation procedures for transparency.",
+      "relatedResources": [
+        "/resources/lease-clauses/cumulative-cam-cap",
+        "/resources/lease-clauses/expense-stop",
+        "/blog/cam-reconciliation-deadlines"
+      ],
+      "relatedTools": [
+        "/tools/audit-risk-quiz",
+        "/tools/cam-gross-up-calculator"
+      ]
+    }
+  ]
+}

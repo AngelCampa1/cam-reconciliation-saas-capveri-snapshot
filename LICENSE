@@ -1,0 +1,45 @@
+CapVeri — Source-Available Notice
+
+Copyright (c) 2025-2026 Angel Campa. All rights reserved.
+
+This repository is published for the sole purpose of allowing others to read and
+evaluate the work it contains. It is a portfolio artifact and a record of a
+project that has been sunset.
+
+WHAT YOU MAY DO
+
+You may view, read, clone, and privately run this source code for the purposes of
+evaluation, study, and reference. You may quote short excerpts when discussing or
+reviewing the work, with attribution.
+
+WHAT IS NOT GRANTED
+
+No license is granted to copy, modify, merge, publish, distribute, sublicense,
+sell, or create derivative works from this software or any substantial portion of
+it, nor to use it in any product or service, commercial or otherwise. No patent
+license and no trademark license are granted. The name "CapVeri" and any
+associated branding are not licensed for use.
+
+This is not an open-source license. Absent a separate written agreement, all
+rights not expressly granted above are reserved.
+
+THIRD-PARTY MATERIAL
+
+Dependencies retain their own licenses. Lease documents under
+backend/tests/fixtures/real-world/ are sourced from public SEC EDGAR filings and
+U.S. GSA standard forms, which are public domain; see the MANIFEST.md in that
+directory for per-file provenance.
+
+NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE
+LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+This software computes financial amounts. It must not be relied upon for any
+actual billing, reconciliation, accounting, legal, or financial decision.
+
+For permissions beyond this notice, contact the copyright holder.

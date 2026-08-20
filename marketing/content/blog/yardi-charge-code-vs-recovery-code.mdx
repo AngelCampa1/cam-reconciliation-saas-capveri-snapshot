@@ -1,0 +1,140 @@
+---
+title: "Yardi Charge Code vs Recovery Code: How to Map Them for CAM Billing"
+description: "Yardi charge codes control tenant invoices. Recovery codes control expense pools. See how to map them for CAM billing without systematic errors."
+excerpt: "Charge codes and recovery codes in Yardi Voyager are frequently confused. Confusing them creates billing errors that are hard to trace back to the source."
+datePublished: "2026-03-19"
+dateModified: "2026-05-08"
+author: "Angel Campa"
+authorRole: "Founder, CapVeri"
+category: "how-to"
+faq:
+  - q: "What is the difference between a charge code and a recovery code in Yardi?"
+    a: "A charge code in Yardi controls the billing side: it defines the line item that appears on a tenant's invoice, the GL account it posts to, and how the charge is calculated. A recovery code controls the expense pooling side: it defines which recovery pool the charge draws from and which recovery methodology (gross-up, cap, pro-rata) applies. Every CAM charge code should link to a recovery code, which in turn links to a recovery pool."
+  - q: "What happens if a tenant has a charge code without a linked recovery code in Yardi?"
+    a: "If a charge code has no recovery code assigned, Yardi cannot calculate the charge amount automatically using recovery pool data. The system will either produce a zero amount, carry forward the prior year's charge, or require manual input, depending on your billing configuration. This is a common source of 'stuck' CAM estimates where amounts never update year over year."
+  - q: "Should I fix a Yardi CAM error by editing the charge code first?"
+    a: "Usually no. Start with the recovery pool and recovery code because they drive the calculation. The charge code mainly controls invoice presentation and billing setup. If the recovery pool, GL account mapping, gross-up setting, or tenant recovery profile is wrong, changing the invoice charge code will not fix the calculation."
+---
+
+If you've ever tried to trace a CAM billing error in Yardi Voyager back to its source, you've likely encountered the charge code / recovery code distinction and found it more confusing than it should be. These two concepts are documented separately in Yardi's help system, configured in different menu locations, and interact in ways that aren't immediately obvious. Here's how they actually work and how to map them correctly.
+
+## What Charge Codes Do
+
+A charge code in Yardi is a billing object. It controls:
+
+- **What appears on the tenant's invoice:** The line item description the tenant sees (e.g., "CAM Charges," "Operating Expenses," "Tax Recovery")
+- **Which GL account the revenue posts to:** When a tenant pays, which account receives the credit
+- **The billing frequency:** Monthly, quarterly, annual
+- **The charge calculation method:** Fixed amount, formula-based, or recovery-pool-driven
+
+Charge codes live in the Charge Code Setup table (Administration > Setup > Charge Codes). They are referenced in the lease under the Billing tab: each billing row on the lease points to a charge code.
+
+Charge codes answer the question: *How do we bill this to the tenant, and how do we record it?*
+
+They do not answer: *How do we calculate the amount?*
+
+## What Recovery Codes Do
+
+A recovery code is a calculation object. It controls:
+
+- **Which recovery pool the calculation draws from:** The expense pool containing CAM expenses
+- **The recovery methodology:** Pro-rata share calculation method, gross-up settings, cap application
+- **The expense categories included:** Which pool expenses flow into this tenant's calculation
+
+Recovery codes live under Administration > Setup > Recovery Codes. They are assigned at two points: (1) in the recovery pool as the default, and (2) in the tenant's billing record as a tenant-specific override.
+
+Recovery codes answer the question: *How do we calculate the amount the tenant owes?*
+
+They do not control billing frequency, invoice line item descriptions, or GL posting.
+
+## Charge Code vs Recovery Code vs Recovery Pool
+
+These objects sit in different layers of the CAM billing workflow. Treating them as synonyms is what makes Yardi troubleshooting slow.
+
+| Object | Primary job | Typical setup question |
+|---|---|---|
+| GL account | Records actual expenses and revenue postings | Did the expense hit the correct account and property? |
+| Recovery pool | Groups recoverable expense accounts | Which expenses are included in this CAM pool? |
+| Recovery code | Applies the recovery method to a tenant or tenant group | Which pool, gross-up rule, cap, and pro-rata basis apply? |
+| Charge code | Creates the tenant billing line item | What appears on the invoice and where does the charge post? |
+
+In a clean setup, the GL account feeds the pool, the pool feeds the recovery code, and the recovery code feeds the charge code. If one layer points to the wrong object, the invoice can look normal while the calculation is wrong.
+
+## The Mapping Relationship
+
+The full data flow for a CAM charge in Yardi is:
+
+```
+GL Expenses → Recovery Pool → Recovery Code → Charge Code → Tenant Invoice
+```
+
+1. Expenses post to GL accounts mapped to a recovery pool
+2. The recovery pool calculates total recoverable expenses
+3. The recovery code defines how each tenant's share is calculated from the pool
+4. The charge code generates the invoice line item using the recovery code's output
+5. The invoice is posted to the tenant's billing record
+
+A correctly configured charge code has a Recovery Code field populated. This is where the two systems link. If this field is blank, the charge code is not connected to any recovery pool calculation.
+
+## Charge Code vs Recovery Code: Quick Diagnostic Table
+
+Use this table when a tenant's CAM estimate, true-up, or reconciliation line item does not match the recovery pool.
+
+| Symptom | Likely source | What to check first |
+|---|---|---|
+| Tenant invoice shows CAM, but the amount is stale year over year | Charge code | Confirm the charge code points to an active recovery code instead of a fixed amount. |
+| Expense pool is correct, but the wrong tenant group is billed | Recovery code | Verify the recovery code points to the correct recovery pool and tenant recovery profile. |
+| Tax, insurance, and CAM duplicate each other | Charge and recovery code mapping | Check whether multiple charge codes are drawing from one all-in recovery code. |
+| One amended tenant bills differently from peers | Lease billing row | Compare the active lease charge code to the recovery code expected after the amendment. |
+| Recovery reconciliation creates exceptions before statements are generated | Recovery setup | Review recovery pool assignments before changing invoice charge codes. |
+
+Do not start by changing the invoice description. The description is cosmetic. The calculation usually fails one level upstream, where the charge code links to the recovery code and the recovery code links to the pool.
+
+## Common Mapping Errors
+
+**Error 1: Charge code without a recovery code**
+
+The charge code exists and generates invoices, but the Recovery Code field is empty. Yardi cannot calculate the amount from pool data, so it falls back to a fixed amount or manual entry. This is the most common cause of CAM estimates that never update automatically.
+
+**How to find it:** Run a Charge Code List report and add the Recovery Code column. Any CAM-related charge code showing blank in the Recovery Code column has this problem.
+
+**Error 2: Wrong recovery pool assigned to recovery code**
+
+The charge code links to a recovery code, but that recovery code points to the wrong recovery pool. This often happens when a property has multiple pools (base building, retail anchor, office) and the assignment was made incorrectly during initial setup.
+
+**How to identify it:** Compare the tenants assigned to each charge code against the expected expense pool. A retail tenant assigned to an office recovery code is billing from the wrong pool.
+
+**Error 3: Multiple charge codes, one recovery code**
+
+Some properties bill CAM expenses as multiple line items (operating expenses, taxes, insurance separately) but use a single recovery code that covers all three categories. The recovery code total gets applied to the first charge code that runs the calculation, and subsequent charge codes either duplicate or zero out.
+
+**How to fix it:** For separate billing line items, create separate recovery codes linked to separate pools (or sub-pools), each covering only the expenses relevant to that charge code.
+
+**Error 4: Recovery code exists but isn't linked to the active lease**
+
+A recovery code was set up correctly, but the lease amendment added a new charge code that doesn't reference it. The tenant is being billed from the old charge code (with the old recovery code) while the amended lease expects the new structure.
+
+## How to Audit Your Setup
+
+A charge code / recovery code audit should run before every reconciliation cycle:
+
+1. **Export the charge code list** (Administration > Setup > Charge Codes) with the Recovery Code column visible
+2. For each CAM-related charge code, verify the Recovery Code field is populated
+3. **Export the recovery code list** (Administration > Setup > Recovery Codes) with the Pool Name column visible
+4. For each recovery code, verify it points to the correct pool for that property and tenant type
+5. **Spot-check three leases** (your largest tenant, smallest tenant, and any tenant with recent lease amendments) and verify the charge code and recovery code assignments match lease terms
+
+If you find a charge code without a recovery code, assign the correct recovery code before running the next billing cycle. Do not create a workaround by hardcoding amounts. That masks the configuration problem and creates a maintenance burden every year.
+
+CapVeri's configuration audit tool analyzes your Yardi export and flags charge codes without linked recovery codes, recovery codes pointing to incorrect pools, and tenants whose billing setup diverges from their lease terms, before reconciliation statements go out.
+
+## Related Resources
+
+- [CAM Reconciliation Guide](/cam-reconciliation-guide): Complete step-by-step reconciliation process
+- [Yardi CAM Recovery Pool Setup Guide](/resources/software/yardi-voyager/cam-setup)
+- [Yardi Recovery Pool Not Calculating Correctly](/blog/yardi-recovery-pool-not-calculating)
+
+## Sources
+
+1. [Yardi - Voyager Commercial property management](https://www.yardi.com/products/yardi-voyager-commercial/)
+2. [CapVeri Sources & Research - Yardi interface program pricing](/sources#yardi-interface-program-pricing)
